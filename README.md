@@ -31,3 +31,7 @@ npm run build
 这是出发前预检，不是政府或航空公司的决定系统，不保证登机或入境。首版只对 `docs/RULES_AND_SOURCES.md` 中列明的窄规则给出受控结论，其他情况路由到官方核验。
 
 完整学习过程见 `docs/BUILD_LOG.md`。
+
+## 全球数据库阶段
+
+Phase 02 已加入联合国 M49 全球法域目录、官方来源注册表、5 条种子政策、D1/SQLite 数据模型、Drizzle 迁移和 `/coverage` 覆盖率控制台。真实范围与扩展方法见 `docs/GLOBAL_DATABASE_PLAN.md`。

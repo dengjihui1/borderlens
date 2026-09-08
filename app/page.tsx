@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import {
   AlertTriangle,
   ArrowRight,
@@ -139,7 +140,7 @@ export default function Home() {
       <header className="topbar">
         <a className="brand" href="#top" aria-label="BorderLens 首页"><span className="brand-mark"><Route size={19} /></span><span>BorderLens</span></a>
         <div className="source-note"><ShieldCheck size={15} /> 规则来自官方来源 · 核验于 {DATA_CHECKED_AT}</div>
-        <a className="plain-link" href="#method">工作原理 <ArrowRight size={14} /></a>
+        <Link className="plain-link" href="/coverage">全球数据 <ArrowRight size={14} /></Link>
       </header>
 
       <section className="intro" id="top">
