@@ -10,7 +10,7 @@ export default function CoveragePage() {
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 03</div>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 04</div>
         <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
       </header>
 
@@ -35,7 +35,7 @@ export default function CoveragePage() {
 
         <section className="coverage-warning">
           <ShieldAlert size={22} />
-          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增新西兰、申根、新加坡、澳大利亚和英国的窄规则，并把 {coverageSummary.schengenMemberCount} 个申根成员建模为政策区域。只有状态为“规则已核验”的来源可以支撑明确结论，其余仍输出 REVIEW。</p></div>
+          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增韩国、阿联酋、中国内地、美国和加拿大的窄规则；加拿大按航空、陆路与海路拆分，港澳通行证按中国籍与非中国籍拆分。只有状态为“规则已核验”的来源可以支撑明确结论，其余仍输出 REVIEW。</p></div>
         </section>
 
         <section className="batch-card">
@@ -68,7 +68,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · Phase 03</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 04</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }

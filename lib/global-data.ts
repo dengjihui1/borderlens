@@ -26,11 +26,11 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
-  { id: 'nz', label: '新西兰', ruleCount: rulesByDestination('nz').length, note: 'NZeTA 与中国护照澳洲出发例外' },
-  { id: 'eu-schengen', label: '申根区', ruleCount: rulesByDestination('eu-schengen', true).length, note: '中国签证要求与港澳 90/180' },
-  { id: 'sg', label: '新加坡', ruleCount: rulesByDestination('sg').length, note: '普通护照与身份书/旅行证分流' },
-  { id: 'au', label: '澳大利亚', ruleCount: rulesByDestination('au').length, note: 'ETA 601 与 Visitor 600 路由' },
-  { id: 'gb', label: '英国', ruleCount: rulesByDestination('gb').length, note: '官方问答路径逐项复现' },
+  { id: 'kr', label: '韩国', ruleCount: rulesByDestination('kr').length, note: 'K-ETA、C-3-9 与香港身份书分流' },
+  { id: 'ae', label: '阿联酋', ruleCount: rulesByDestination('ae').length, note: '落地签与预先担保签证分流' },
+  { id: 'cn', label: '中国内地', ruleCount: rulesByDestination('cn').length, note: '中国籍与非中国籍港澳居民通行证' },
+  { id: 'us', label: '美国', ruleCount: rulesByDestination('us').length, note: 'CBP / DHS 官方 VWP 边界' },
+  { id: 'ca', label: '加拿大', ruleCount: rulesByDestination('ca').length, note: '香港护照按航空、陆路、海路拆分' },
 ];
 
 export const coverageSummary = {
