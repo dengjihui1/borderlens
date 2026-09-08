@@ -41,7 +41,7 @@ test('来源发现状态不被误写成规则已验证', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const reachable = registry.sources.filter((source: { status: string }) => source.status === 'reachable');
   const blocked = registry.sources.filter((source: { status: string }) => source.status === 'blocked');
-  assert.ok(reachable.length >= 6);
+  assert.ok(reachable.length >= 8);
   assert.equal(blocked.length, 5);
 });
 
@@ -278,5 +278,24 @@ test('马尔代夫三类护照均为落地签并保留 IMUGA 申报', async () =
     assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_on_arrival', null]);
     assert.ok(rule.conditions.some((condition: string) => condition.includes('IMUGA')));
     assert.ok(rule.conditions.some((condition: string) => condition.includes('不输出具体天数')));
+  }
+});
+
+test('中东第一批保留签证产品、证件边界与人工复核状态', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
+  for (const destination of ['qa', 'sa', 'bh']) {
+    const rules = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === destination);
+    assert.equal(rules.length, 3);
+    assert.ok(rules.every((rule: PolicyFixture) => rule.status === 'verified'));
+    assert.ok(rules.every((rule: PolicyFixture) => rule.conditions.length >= 2));
+  }
+  assert.deepEqual([byId.get('qa-cn-prc-ordinary-tourism-voa')!.outcome, byId.get('qa-cn-prc-ordinary-tourism-voa')!.maxStayDays], ['visa_on_arrival', null]);
+  assert.deepEqual([byId.get('sa-cn-prc-ordinary-tourism-evisa')!.outcome, byId.get('sa-cn-prc-ordinary-tourism-evisa')!.maxStayDays], ['visa_required', 90]);
+  assert.equal(byId.get('sa-hk-hksar-tourism-evisa')!.conditions.some((condition: string) => condition.includes('Hong Kong')), true);
+  for (const destination of ['om', 'jo']) {
+    const rules = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === destination);
+    assert.equal(rules.length, 3);
+    for (const rule of rules) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
   }
 });

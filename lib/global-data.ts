@@ -26,6 +26,12 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
+  { id: 'qa', label: '卡塔尔', note: '中国、港澳列入官方 A1-3 路线；机场落地签或 Hayya A1' },
+  { id: 'sa', label: '沙特', note: '中国（含港澳）列入官方旅游电子签合资格国家，最多 90 天' },
+  { id: 'bh', label: '巴林', note: '中国、香港、澳门列入官方在线签证国家名单' },
+  { id: 'om', label: '阿曼', note: '官方列出 Tourist Visit Visa，但目标国籍资格待复核' },
+  { id: 'jo', label: '约旦', note: '官方预先批准页与旅行证件限制存在边界，保留 REVIEW' },
+/* PHASE_06_BATCH */
   { id: 'in', label: '印度', note: '目标证件不在 eVisa 名单，普通签证路线待复核' },
   { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },
   { id: 'np', label: '尼泊尔', note: '原落地签官方页 404，保留 REVIEW' },

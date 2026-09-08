@@ -2014,6 +2014,315 @@
       "evidenceExcerpt": "Tourist visa is granted on arrival to the Maldives. Foreigners traveling as tourists do not require pre-approval. The Traveller Declaration is completely free and should be submitted through the official IMUGA portal.",
       "checkedAt": "2026-09-08",
       "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "qa-cn-prc-ordinary-tourism-voa",
+      "destinationJurisdictionId": "qa",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": null,
+      "visaProductName": "Qatar Visa on Arrival / Hayya A1 e-visa",
+      "conditions": [
+        "Visit Qatar 官方 Visa Check 将 China 列入 A1-3 路线；官方页面摘要说明可在机场以 QAR 100 申请落地签，或在线选择 Hayya A1 电子签。",
+        "本条只覆盖短期旅游的签证路线，不推断停留天数；出发前需按当前官方页面和承运人要求复核。"
+      ],
+      "status": "verified",
+      "sourceIds": ["qa-visitqatar-visa-check"],
+      "evidenceLocator": "Visit Qatar > Visa Check: China; official page result text: Visa on arrival QAR 100 or Hayya A1",
+      "evidenceExcerpt": "The official Visa Check lists China under A1-3. The Visit Qatar page states: Visa on arrival for a fee (QAR 100) at the airport; alternatively apply for a Hayya A1 visa online.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "qa-hk-hksar-tourism-voa",
+      "destinationJurisdictionId": "qa",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": null,
+      "visaProductName": "Qatar Visa on Arrival / Hayya A1 e-visa",
+      "conditions": [
+        "Visit Qatar 官方 Visa Check 将 Hong Kong 列入 A1-3 路线；官方页面摘要说明可在机场以 QAR 100 申请落地签，或在线选择 Hayya A1 电子签。",
+        "本条只覆盖短期旅游的签证路线，不推断停留天数；出发前需按当前官方页面和承运人要求复核。"
+      ],
+      "status": "verified",
+      "sourceIds": ["qa-visitqatar-visa-check"],
+      "evidenceLocator": "Visit Qatar > Visa Check: Hong Kong; official page result text: Visa on arrival QAR 100 or Hayya A1",
+      "evidenceExcerpt": "The official Visa Check lists Hong Kong under A1-3. The Visit Qatar page states: Visa on arrival for a fee (QAR 100) at the airport; alternatively apply for a Hayya A1 visa online.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "qa-mo-macao-sar-tourism-voa",
+      "destinationJurisdictionId": "qa",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": null,
+      "visaProductName": "Qatar Visa on Arrival / Hayya A1 e-visa",
+      "conditions": [
+        "Visit Qatar 官方 Visa Check 将 Macau 列入 A1-3 路线；官方页面摘要说明可在机场以 QAR 100 申请落地签，或在线选择 Hayya A1 电子签。",
+        "本条只覆盖短期旅游的签证路线，不推断停留天数；出发前需按当前官方页面和承运人要求复核。"
+      ],
+      "status": "verified",
+      "sourceIds": ["qa-visitqatar-visa-check"],
+      "evidenceLocator": "Visit Qatar > Visa Check: Macau; official page result text: Visa on arrival QAR 100 or Hayya A1",
+      "evidenceExcerpt": "The official Visa Check lists Macau under A1-3. The Visit Qatar page states: Visa on arrival for a fee (QAR 100) at the airport; alternatively apply for a Hayya A1 visa online.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "sa-cn-prc-ordinary-tourism-evisa",
+      "destinationJurisdictionId": "sa",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 90,
+      "visaProductName": "Saudi tourist eVisa",
+      "conditions": [
+        "沙特官方 eVisa 门户的 Eligible Countries 明确列出 China（including Hong Kong and Macau）。",
+        "旅游电子签为一年多次入境，允许在沙特停留最多 90 天；适用于旅游、活动、探亲访友和 Umrah（不含 Hajj），不覆盖学习等活动。"
+      ],
+      "status": "verified",
+      "sourceIds": ["sa-visitsaudi-evisa"],
+      "evidenceLocator": "Saudi eVisa official portal > What is the Saudi eVisa? and Eligible Countries > Asia",
+      "evidenceExcerpt": "The official portal lists CHINA (INCLUDING HONG KONG AND MACAU) as an eligible Asian country. The eVisa is one-year, multiple-entry and allows tourists to spend up to 90 days in the country.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "sa-hk-hksar-tourism-evisa",
+      "destinationJurisdictionId": "sa",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 90,
+      "visaProductName": "Saudi tourist eVisa",
+      "conditions": [
+        "沙特官方 eVisa 门户将 Hong Kong 纳入 China（including Hong Kong and Macau）的合资格范围。",
+        "旅游电子签为一年多次入境，允许在沙特停留最多 90 天；适用于旅游、活动、探亲访友和 Umrah（不含 Hajj），不覆盖学习等活动。"
+      ],
+      "status": "verified",
+      "sourceIds": ["sa-visitsaudi-evisa"],
+      "evidenceLocator": "Saudi eVisa official portal > Eligible Countries > Asia: China (including Hong Kong and Macau)",
+      "evidenceExcerpt": "The official portal lists CHINA (INCLUDING HONG KONG AND MACAU) as an eligible Asian country. The eVisa is one-year, multiple-entry and allows tourists to spend up to 90 days in the country.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "sa-mo-macao-sar-tourism-evisa",
+      "destinationJurisdictionId": "sa",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 90,
+      "visaProductName": "Saudi tourist eVisa",
+      "conditions": [
+        "沙特官方 eVisa 门户将 Macau 纳入 China（including Hong Kong and Macau）的合资格范围。",
+        "旅游电子签为一年多次入境，允许在沙特停留最多 90 天；适用于旅游、活动、探亲访友和 Umrah（不含 Hajj），不覆盖学习等活动。"
+      ],
+      "status": "verified",
+      "sourceIds": ["sa-visitsaudi-evisa"],
+      "evidenceLocator": "Saudi eVisa official portal > Eligible Countries > Asia: China (including Hong Kong and Macau)",
+      "evidenceExcerpt": "The official portal lists CHINA (INCLUDING HONG KONG AND MACAU) as an eligible Asian country. The eVisa is one-year, multiple-entry and allows tourists to spend up to 90 days in the country.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "bh-cn-prc-ordinary-tourism-evisa",
+      "destinationJurisdictionId": "bh",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Bahrain online visa",
+      "conditions": [
+        "巴林 NPRA 官方在线签证国家名单明确列出 China；在线名单页面提示须点击国家名称查看具体资格和条款。",
+        "巴林官方免责声明说明签证不保证入境，最终仍须满足抵达时的全部入境条件；本条不猜测停留天数。"
+      ],
+      "status": "verified",
+      "sourceIds": ["bh-npra-online-visa-countries"],
+      "evidenceLocator": "Bahrain eVisa > Countries Eligible to Get Visa Online > China",
+      "evidenceExcerpt": "The official online-visa country list includes China and says terms and conditions apply; the official disclaimer states that holding a visa does not guarantee entry.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "bh-hk-hksar-tourism-evisa",
+      "destinationJurisdictionId": "bh",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Bahrain online visa",
+      "conditions": [
+        "巴林 NPRA 官方在线签证国家名单明确列出 Hong Kong, China；在线名单页面提示须点击国家名称查看具体资格和条款。",
+        "巴林官方免责声明说明签证不保证入境，最终仍须满足抵达时的全部入境条件；本条不猜测停留天数。"
+      ],
+      "status": "verified",
+      "sourceIds": ["bh-npra-online-visa-countries"],
+      "evidenceLocator": "Bahrain eVisa > Countries Eligible to Get Visa Online > Hong Kong, China",
+      "evidenceExcerpt": "The official online-visa country list includes Hong Kong, China and says terms and conditions apply; the official disclaimer states that holding a visa does not guarantee entry.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "bh-mo-macao-sar-tourism-evisa",
+      "destinationJurisdictionId": "bh",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Bahrain online visa",
+      "conditions": [
+        "巴林 NPRA 官方在线签证国家名单明确列出 Macao, China；在线名单页面提示须点击国家名称查看具体资格和条款。",
+        "巴林官方免责声明说明签证不保证入境，最终仍须满足抵达时的全部入境条件；本条不猜测停留天数。"
+      ],
+      "status": "verified",
+      "sourceIds": ["bh-npra-online-visa-countries"],
+      "evidenceLocator": "Bahrain eVisa > Countries Eligible to Get Visa Online > Macao, China",
+      "evidenceExcerpt": "The official online-visa country list includes Macao, China and says terms and conditions apply; the official disclaimer states that holding a visa does not guarantee entry.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "om-cn-prc-ordinary-tourism-review",
+      "destinationJurisdictionId": "om",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "阿曼皇家警察 eVisa 官方类型页列出 Tourist Visit Visa，但只说明适用于 approved nationalities， reviewed page 未显示中国普通护照的资格清单。",
+        "在官方资格路由器直接确认国籍、停留期和申请条件前保持 REVIEW。"
+      ],
+      "status": "draft",
+      "sourceIds": ["om-rop-visa-types"],
+      "evidenceLocator": "Royal Oman Police eVisa > Visit Unsponsored visas > Tourist Visit Visa",
+      "evidenceExcerpt": "The official list describes a Tourist Visit Visa for a person on the list of approved nationalities, but the reviewed page does not expose whether an ordinary Chinese passport is on that list.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "om-hk-hksar-tourism-review",
+      "destinationJurisdictionId": "om",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "阿曼皇家警察 eVisa 官方类型页列出 Tourist Visit Visa，但只说明适用于 approved nationalities， reviewed page 未显示香港特区护照的资格清单。",
+        "在官方资格路由器直接确认国籍、停留期和申请条件前保持 REVIEW。"
+      ],
+      "status": "draft",
+      "sourceIds": ["om-rop-visa-types"],
+      "evidenceLocator": "Royal Oman Police eVisa > Visit Unsponsored visas > Tourist Visit Visa",
+      "evidenceExcerpt": "The official list describes a Tourist Visit Visa for a person on the list of approved nationalities, but the reviewed page does not expose whether a Hong Kong SAR passport is on that list.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "om-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "om",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "阿曼皇家警察 eVisa 官方类型页列出 Tourist Visit Visa，但只说明适用于 approved nationalities， reviewed page 未显示澳门特区护照的资格清单。",
+        "在官方资格路由器直接确认国籍、停留期和申请条件前保持 REVIEW。"
+      ],
+      "status": "draft",
+      "sourceIds": ["om-rop-visa-types"],
+      "evidenceLocator": "Royal Oman Police eVisa > Visit Unsponsored visas > Tourist Visit Visa",
+      "evidenceExcerpt": "The official list describes a Tourist Visit Visa for a person on the list of approved nationalities, but the reviewed page does not expose whether a Macao SAR passport is on that list.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "jo-cn-prc-ordinary-tourism-review",
+      "destinationJurisdictionId": "jo",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "约旦内政部官方亚洲预先批准名单当前未列出 China，但同页另行说明除梵蒂冈外的所有国家旅行证件均受限制；这两段规则不能合并推导完整签证结论。",
+        "在官方签证服务中确认普通护照的签证、预先批准和停留条件前保持 REVIEW。"
+      ],
+      "status": "draft",
+      "sourceIds": ["jo-moi-prior-approval"],
+      "evidenceLocator": "Jordan Ministry of Interior > Countries requiring prior approval > Asia table and travel-document note",
+      "evidenceExcerpt": "China is absent from the displayed Asian prior-approval list, while the same official page warns that travel documents from all countries except Vatican are restricted; the page does not establish the complete visa outcome.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "jo-hk-hksar-tourism-review",
+      "destinationJurisdictionId": "jo",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "约旦内政部官方亚洲预先批准名单当前未列出 Hong Kong，但同页另行说明除梵蒂冈外的所有国家旅行证件均受限制；这两段规则不能合并推导完整签证结论。",
+        "在官方签证服务中确认香港特区护照的签证、预先批准和停留条件前保持 REVIEW。"
+      ],
+      "status": "draft",
+      "sourceIds": ["jo-moi-prior-approval"],
+      "evidenceLocator": "Jordan Ministry of Interior > Countries requiring prior approval > Asia table and travel-document note",
+      "evidenceExcerpt": "Hong Kong is absent from the displayed Asian prior-approval list, while the same official page warns that travel documents from all countries except Vatican are restricted; the page does not establish the complete visa outcome.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "jo-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "jo",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "约旦内政部官方亚洲预先批准名单当前未列出 Macau，但同页另行说明除梵蒂冈外的所有国家旅行证件均受限制；这两段规则不能合并推导完整签证结论。",
+        "在官方签证服务中确认澳门特区护照的签证、预先批准和停留条件前保持 REVIEW。"
+      ],
+      "status": "draft",
+      "sourceIds": ["jo-moi-prior-approval"],
+      "evidenceLocator": "Jordan Ministry of Interior > Countries requiring prior approval > Asia table and travel-document note",
+      "evidenceExcerpt": "Macau is absent from the displayed Asian prior-approval list, while the same official page warns that travel documents from all countries except Vatican are restricted; the page does not establish the complete visa outcome.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
     }
   ]
 }
