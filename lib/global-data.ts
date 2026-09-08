@@ -26,11 +26,11 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
-  { id: 'kh', label: '柬埔寨', note: 'Visa T 电子签与 e-Arrival 双步骤' },
-  { id: 'la', label: '老挝', note: 'T-B3 电子签限制为 9 个指定口岸' },
-  { id: 'mm', label: '缅甸', note: '28 天电子签且旅行证件不适用' },
-  { id: 'bn', label: '文莱', note: '港澳 14 天免签；中国路线保留 REVIEW' },
-  { id: 'tl', label: '东帝汶', note: '航空、陆路、海路口岸均可申请落地签' },
+  { id: 'in', label: '印度', note: '目标证件不在 eVisa 名单，普通签证路线待复核' },
+  { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },
+  { id: 'np', label: '尼泊尔', note: '原落地签官方页 404，保留 REVIEW' },
+  { id: 'bd', label: '孟加拉国', note: 'MRV 门户可用，国籍资格仍待复核' },
+  { id: 'mv', label: '马尔代夫', note: '旅游落地签与免费 IMUGA 申报并存' },
 ].map((item) => {
   const rules = rulesByDestination(item.id);
   return {

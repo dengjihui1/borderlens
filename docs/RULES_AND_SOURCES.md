@@ -47,6 +47,12 @@
 | 文莱 | 香港/澳门特区护照 | 免签，最多 14 天 | 超期、商务或专业访问需另办签证 |
 | 文莱 | 中国普通护照 | REVIEW | 官方国家路由器为多分支控件，本轮未获得可审阅的最终类别 |
 | 东帝汶 | 中国普通护照、香港/澳门特区护照 | 旅游落地签，停留 30 天 | 正式航空、陆路、海路口岸均可申请；USD 30 现金；护照至少 6 个月；通常可延长一次 30 天 |
+| 印度 | 中国普通护照、香港/澳门特区护照 | REVIEW | 当前 eVisa 资格弹窗没有列出三类证件，但该页面不足以证明完整普通签证或豁免路线 |
+| 斯里兰卡 | 中国普通护照 | ETA，30 天内两次入境 | 2026-05-25 起列入 40 国免费旅游 ETA 名单 |
+| 斯里兰卡 | 香港/澳门特区护照 | ETA，30 天内两次入境 | 未列入免费名单，按其他国家费用分支；第二次入境只使用 30 天总期限的余额 |
+| 尼泊尔 | 中国普通护照、香港/澳门特区护照 | REVIEW | 原 Visa on Arrival 英文官方页返回 404，期限、费用与排除名单待新入口复核 |
+| 孟加拉国 | 中国普通护照、香港/澳门特区护照 | REVIEW | MRV 门户只证明可填新签证/落地签表格，未给出目标证件的国籍资格 |
+| 马尔代夫 | 中国普通护照、香港/澳门特区护照 | 旅游落地签 | 无需预先签证批准；另通过官方 IMUGA 免费提交 Traveller Declaration；官网正文未稳定显示天数，本轮不猜期限 |
 | 其他组合 | 任意 | REVIEW | 不根据模型记忆或第三方聚合器猜测 |
 
 完整结构化条目、证据定位和原文摘录见 `data/policies.seed.json`。
@@ -93,6 +99,13 @@
 - [Brunei MFA：Category D3 — 14-day visa waiver](https://www.mfa.gov.bn/Pages/D3---D14.aspx)
 - [Timor-Leste Migration Service：Tourist Visa](https://migracao.gov.tl/wp/tourist-visa/)
 - [Timor-Leste Migration Service：Visa exemptions](https://migracao.gov.tl/wp/visa-exemptions/)
+- [India Bureau of Immigration：Indian e-Visa](https://indianvisaonline.gov.in/evisa/tvoa.html)（目标证件普通签证路线仍待复核）
+- [Sri Lanka Department of Immigration and Emigration：ETA official website](https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US)
+- [Sri Lanka Department of Immigration and Emigration：Tourist ETA fees](https://www.eta.gov.lk/slvisa/visainfo/fees.jsp?locale=en_US)
+- [Nepal Department of Immigration：Visa on Arrival](https://www.immigration.gov.np/en/page/visa-on-arrival)（本轮返回 404，`blocked`）
+- [Bangladesh Department of Immigration and Passports：Online MRV Portal](https://visa.gov.bd/)
+- [Maldives Immigration：Tourist Visa — On Arrival](https://www.immigration.gov.mv/visa/tourist-visa)
+- [Maldives Immigration：Traveller Declaration](https://www.immigration.gov.mv/traveller-declaration)
 
 ## 核验方法
 

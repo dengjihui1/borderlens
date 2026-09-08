@@ -1666,6 +1666,354 @@
       "evidenceExcerpt": "The tourist visa may be obtained on arrival at official air, land or sea border posts. It allows a 30-day single entry, costs US$30 cash, requires a travel document valid at least 6 months, and may normally be extended once for 30 days. China, Hong Kong SAR and Macao SAR are not in the published exemption groups.",
       "checkedAt": "2026-09-08",
       "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "in-cn-prc-ordinary-tourism-review",
+      "destinationJurisdictionId": "in",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "印度官方 e-Visa 当前资格弹窗未列出 China、Hong Kong 或 Macao。",
+        "该事实只证明不能直接套用当前 eVisa 名单；在核实普通签证或其他豁免路线前保持 REVIEW。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "in-boi-evisa"
+      ],
+      "evidenceLocator": "Indian e-Visa > Countries/Regions who are eligible to avail eVisa; target documents absent from the displayed list",
+      "evidenceExcerpt": "The current official eVisa eligibility dialog lists 174 countries/regions but does not list China, Hong Kong or Macao. The page alone does not establish the complete regular-visa outcome.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "in-hk-hksar-tourism-review",
+      "destinationJurisdictionId": "in",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "印度官方 e-Visa 当前资格弹窗未列出 China、Hong Kong 或 Macao。",
+        "该事实只证明不能直接套用当前 eVisa 名单；在核实普通签证或其他豁免路线前保持 REVIEW。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "in-boi-evisa"
+      ],
+      "evidenceLocator": "Indian e-Visa > Countries/Regions who are eligible to avail eVisa; target documents absent from the displayed list",
+      "evidenceExcerpt": "The current official eVisa eligibility dialog lists 174 countries/regions but does not list China, Hong Kong or Macao. The page alone does not establish the complete regular-visa outcome.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "in-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "in",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "印度官方 e-Visa 当前资格弹窗未列出 China、Hong Kong 或 Macao。",
+        "该事实只证明不能直接套用当前 eVisa 名单；在核实普通签证或其他豁免路线前保持 REVIEW。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "in-boi-evisa"
+      ],
+      "evidenceLocator": "Indian e-Visa > Countries/Regions who are eligible to avail eVisa; target documents absent from the displayed list",
+      "evidenceExcerpt": "The current official eVisa eligibility dialog lists 174 countries/regions but does not list China, Hong Kong or Macao. The page alone does not establish the complete regular-visa outcome.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "lk-cn-prc-ordinary-tourism-eta",
+      "destinationJurisdictionId": "lk",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "eta_required",
+      "maxStayDays": 30,
+      "visaProductName": "Sri Lanka Tourist ETA",
+      "conditions": [
+        "所有外国游客（官方外交/公务例外除外）应在抵达斯里兰卡前取得 ETA；30 天旅游 ETA 为两次入境。",
+        "中国列入自 2026-05-25 起的 40 国免费 ETA 名单，30 天内免 ETA 费用。",
+        "第二次入境只能使用首次抵达后 30 天总期限中的剩余天数。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "lk-eta-home",
+        "lk-eta-fees"
+      ],
+      "evidenceLocator": "Sri Lanka ETA official site > Home requirement; Fees > 40-country free list: CHINA and 30-day double-entry table",
+      "evidenceExcerpt": "All foreign nationals are required to obtain ETA prior to arrival. CHINA is in the 40-country free-of-charge list; Tourist ETA is valid for 30 days with double entry.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "lk-hk-hksar-tourism-eta",
+      "destinationJurisdictionId": "lk",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "eta_required",
+      "maxStayDays": 30,
+      "visaProductName": "Sri Lanka Tourist ETA",
+      "conditions": [
+        "所有外国游客（官方外交/公务例外除外）应在抵达斯里兰卡前取得 ETA；30 天旅游 ETA 为两次入境。",
+        "香港和澳门未列入 40 国免费名单，按“all other countries”适用在线旅游 ETA 费用；费用可能变化，付款前重新核验。",
+        "第二次入境只能使用首次抵达后 30 天总期限中的剩余天数。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "lk-eta-home",
+        "lk-eta-fees"
+      ],
+      "evidenceLocator": "Sri Lanka ETA official site > Home requirement; Fees > all other countries tourist ETA and 30-day double-entry table",
+      "evidenceExcerpt": "All foreign nationals are required to obtain ETA prior to arrival. ETA charges for all other countries apply; Tourist Visa with Double Entry is for 30 days.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "lk-mo-macao-sar-tourism-eta",
+      "destinationJurisdictionId": "lk",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "eta_required",
+      "maxStayDays": 30,
+      "visaProductName": "Sri Lanka Tourist ETA",
+      "conditions": [
+        "所有外国游客（官方外交/公务例外除外）应在抵达斯里兰卡前取得 ETA；30 天旅游 ETA 为两次入境。",
+        "香港和澳门未列入 40 国免费名单，按“all other countries”适用在线旅游 ETA 费用；费用可能变化，付款前重新核验。",
+        "第二次入境只能使用首次抵达后 30 天总期限中的剩余天数。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "lk-eta-home",
+        "lk-eta-fees"
+      ],
+      "evidenceLocator": "Sri Lanka ETA official site > Home requirement; Fees > all other countries tourist ETA and 30-day double-entry table",
+      "evidenceExcerpt": "All foreign nationals are required to obtain ETA prior to arrival. ETA charges for all other countries apply; Tourist Visa with Double Entry is for 30 days.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "np-cn-prc-ordinary-tourism-review",
+      "destinationJurisdictionId": "np",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "尼泊尔移民局此前索引的 Visa on Arrival 英文页面当前返回 404。",
+        "在官方新页面直接核实资格排除、期限与费用前，不把通行的落地签印象写成确定结论。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "np-immigration-voa"
+      ],
+      "evidenceLocator": "Nepal Department of Immigration > former Visa on Arrival page; direct request returned 404",
+      "evidenceExcerpt": "The identified official visa-on-arrival route currently returns PAGE NOT FOUND, so nationality eligibility, exclusions, stay periods and fees remain REVIEW.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "np-hk-hksar-tourism-review",
+      "destinationJurisdictionId": "np",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "尼泊尔移民局此前索引的 Visa on Arrival 英文页面当前返回 404。",
+        "在官方新页面直接核实资格排除、期限与费用前，不把通行的落地签印象写成确定结论。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "np-immigration-voa"
+      ],
+      "evidenceLocator": "Nepal Department of Immigration > former Visa on Arrival page; direct request returned 404",
+      "evidenceExcerpt": "The identified official visa-on-arrival route currently returns PAGE NOT FOUND, so nationality eligibility, exclusions, stay periods and fees remain REVIEW.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "np-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "np",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "尼泊尔移民局此前索引的 Visa on Arrival 英文页面当前返回 404。",
+        "在官方新页面直接核实资格排除、期限与费用前，不把通行的落地签印象写成确定结论。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "np-immigration-voa"
+      ],
+      "evidenceLocator": "Nepal Department of Immigration > former Visa on Arrival page; direct request returned 404",
+      "evidenceExcerpt": "The identified official visa-on-arrival route currently returns PAGE NOT FOUND, so nationality eligibility, exclusions, stay periods and fees remain REVIEW.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "bd-cn-prc-ordinary-tourism-review",
+      "destinationJurisdictionId": "bd",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "孟加拉国官方在线 MRV 门户支持新签证、延期、NVR 与落地签表格，但当前页面没有给出目标证件的国籍结论。",
+        "一般在线流程要求填表、打印并携材料和费用到最近的孟加拉国签证处或使团；具体路线仍需人工复核。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "bd-online-mrv"
+      ],
+      "evidenceLocator": "Bangladesh Online MRV Portal > What you need and online application process; nationality-specific outcome unavailable",
+      "evidenceExcerpt": "The official portal supports NEW VISA and ON ARRIVAL VISA forms, but its visible instructions only establish application, printing and mission-submission steps, not a passport-specific eligibility outcome.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "bd-hk-hksar-tourism-review",
+      "destinationJurisdictionId": "bd",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "孟加拉国官方在线 MRV 门户支持新签证、延期、NVR 与落地签表格，但当前页面没有给出目标证件的国籍结论。",
+        "一般在线流程要求填表、打印并携材料和费用到最近的孟加拉国签证处或使团；具体路线仍需人工复核。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "bd-online-mrv"
+      ],
+      "evidenceLocator": "Bangladesh Online MRV Portal > What you need and online application process; nationality-specific outcome unavailable",
+      "evidenceExcerpt": "The official portal supports NEW VISA and ON ARRIVAL VISA forms, but its visible instructions only establish application, printing and mission-submission steps, not a passport-specific eligibility outcome.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "bd-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "bd",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "孟加拉国官方在线 MRV 门户支持新签证、延期、NVR 与落地签表格，但当前页面没有给出目标证件的国籍结论。",
+        "一般在线流程要求填表、打印并携材料和费用到最近的孟加拉国签证处或使团；具体路线仍需人工复核。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "bd-online-mrv"
+      ],
+      "evidenceLocator": "Bangladesh Online MRV Portal > What you need and online application process; nationality-specific outcome unavailable",
+      "evidenceExcerpt": "The official portal supports NEW VISA and ON ARRIVAL VISA forms, but its visible instructions only establish application, printing and mission-submission steps, not a passport-specific eligibility outcome.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "mv-cn-prc-ordinary-tourism-voa",
+      "destinationJurisdictionId": "mv",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": null,
+      "visaProductName": "Maldives Tourist Visa on Arrival",
+      "conditions": [
+        "马尔代夫移民局明确：外国游客无需预先取得旅游签证批准，旅游签证在抵达时签发，但仍须满足基础入境要求。",
+        "通过官方 IMUGA 门户自行提交 Traveller Declaration；该申报免费。",
+        "本轮直接页面未稳定呈现获准停留天数，因此不输出具体天数；以抵达时签发和当前入境要求为准。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mv-immigration-tourist",
+        "mv-immigration-declaration"
+      ],
+      "evidenceLocator": "Maldives Immigration > Tourist Visa On Arrival; Traveller Declaration > FREE Self-Declaration Form",
+      "evidenceExcerpt": "Tourist visa is granted on arrival to the Maldives. Foreigners traveling as tourists do not require pre-approval. The Traveller Declaration is completely free and should be submitted through the official IMUGA portal.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "mv-hk-hksar-tourism-voa",
+      "destinationJurisdictionId": "mv",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": null,
+      "visaProductName": "Maldives Tourist Visa on Arrival",
+      "conditions": [
+        "马尔代夫移民局明确：外国游客无需预先取得旅游签证批准，旅游签证在抵达时签发，但仍须满足基础入境要求。",
+        "通过官方 IMUGA 门户自行提交 Traveller Declaration；该申报免费。",
+        "本轮直接页面未稳定呈现获准停留天数，因此不输出具体天数；以抵达时签发和当前入境要求为准。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mv-immigration-tourist",
+        "mv-immigration-declaration"
+      ],
+      "evidenceLocator": "Maldives Immigration > Tourist Visa On Arrival; Traveller Declaration > FREE Self-Declaration Form",
+      "evidenceExcerpt": "Tourist visa is granted on arrival to the Maldives. Foreigners traveling as tourists do not require pre-approval. The Traveller Declaration is completely free and should be submitted through the official IMUGA portal.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "mv-mo-macao-sar-tourism-voa",
+      "destinationJurisdictionId": "mv",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": null,
+      "visaProductName": "Maldives Tourist Visa on Arrival",
+      "conditions": [
+        "马尔代夫移民局明确：外国游客无需预先取得旅游签证批准，旅游签证在抵达时签发，但仍须满足基础入境要求。",
+        "通过官方 IMUGA 门户自行提交 Traveller Declaration；该申报免费。",
+        "本轮直接页面未稳定呈现获准停留天数，因此不输出具体天数；以抵达时签发和当前入境要求为准。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mv-immigration-tourist",
+        "mv-immigration-declaration"
+      ],
+      "evidenceLocator": "Maldives Immigration > Tourist Visa On Arrival; Traveller Declaration > FREE Self-Declaration Form",
+      "evidenceExcerpt": "Tourist visa is granted on arrival to the Maldives. Foreigners traveling as tourists do not require pre-approval. The Traveller Declaration is completely free and should be submitted through the official IMUGA portal.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
     }
   ]
 }

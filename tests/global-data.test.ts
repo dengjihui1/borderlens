@@ -41,8 +41,8 @@ test('来源发现状态不被误写成规则已验证', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const reachable = registry.sources.filter((source: { status: string }) => source.status === 'reachable');
   const blocked = registry.sources.filter((source: { status: string }) => source.status === 'blocked');
-  assert.ok(reachable.length >= 4);
-  assert.equal(blocked.length, 4);
+  assert.ok(reachable.length >= 6);
+  assert.equal(blocked.length, 5);
 });
 
 test('申根作为政策区域建模，当前成员范围不混入爱尔兰与塞浦路斯', async () => {
@@ -235,5 +235,48 @@ test('东帝汶三类护照均保留落地签、30 天与全口岸条件', async
     assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_on_arrival', 30]);
     assert.ok(rule.conditions.some((condition: string) => condition.includes('航空') && condition.includes('陆路') && condition.includes('海路')));
     assert.ok(rule.conditions.some((condition: string) => condition.includes('USD 30')));
+  }
+});
+
+test('印度目标证件不在当前 eVisa 名单时不推断普通签证结论', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const india = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'in');
+  assert.equal(india.length, 3);
+  for (const rule of india) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
+});
+
+test('斯里兰卡三类护照均需 ETA 且保留 30 天双次入境', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const sriLanka = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'lk');
+  assert.equal(sriLanka.length, 3);
+  for (const rule of sriLanka) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'eta_required', 30]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('两次入境')));
+  }
+  assert.ok(sriLanka.find((rule: PolicyFixture) => rule.documentType === 'ordinary_passport')!.conditions.some((condition: string) => condition.includes('免费')));
+});
+
+test('尼泊尔官方落地签页 404 时保持 REVIEW', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const nepal = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'np');
+  assert.equal(nepal.length, 3);
+  for (const rule of nepal) assert.deepEqual([rule.status, rule.outcome], ['draft', 'manual_review']);
+});
+
+test('孟加拉国通用 MRV 说明不被误写成国籍政策', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const bangladesh = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'bd');
+  assert.equal(bangladesh.length, 3);
+  for (const rule of bangladesh) assert.deepEqual([rule.status, rule.outcome], ['draft', 'manual_review']);
+});
+
+test('马尔代夫三类护照均为落地签并保留 IMUGA 申报', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const maldives = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'mv');
+  assert.equal(maldives.length, 3);
+  for (const rule of maldives) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_on_arrival', null]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('IMUGA')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('不输出具体天数')));
   }
 });
