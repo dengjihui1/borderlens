@@ -41,6 +41,12 @@
 | 印度尼西亚 | 香港/澳门特区护照 | A1 Tourism Visa Exemption | 官方选择器已确认产品；本轮不输出未稳定呈现的具体停留天数 |
 | 越南 | 中国普通护照、香港/澳门特区护照 | REVIEW | 国家 eVisa 页面返回空白，资格、期限和口岸需直接复核 |
 | 菲律宾 | 中国普通护照、香港/澳门特区护照 | REVIEW | DFA 页面被安全验证阻挡，索引摘要不作政策证据 |
+| 柬埔寨 | 中国普通护照、香港/澳门特区护照 | Visa T 电子签，单次入境，停留 1 个月 | USD 30；签发日起 3 个月有效；护照超过 6 个月有效；另填 Cambodia e-Arrival |
+| 老挝 | 中国普通护照、香港/澳门特区护照 | T-B3 旅游电子签，停留 30 天 | 批准信 60 天有效；只接受普通护照；须从 9 个指定口岸之一入境并打印批准信 |
+| 缅甸 | 中国普通护照、香港/澳门特区护照 | 旅游电子签，停留 28 天 | 批准信 90 天有效；单次入境；仅 3 个国际机场与 Kawthaung 陆路口岸，海港不适用；旅行证件不接受 |
+| 文莱 | 香港/澳门特区护照 | 免签，最多 14 天 | 超期、商务或专业访问需另办签证 |
+| 文莱 | 中国普通护照 | REVIEW | 官方国家路由器为多分支控件，本轮未获得可审阅的最终类别 |
+| 东帝汶 | 中国普通护照、香港/澳门特区护照 | 旅游落地签，停留 30 天 | 正式航空、陆路、海路口岸均可申请；USD 30 现金；护照至少 6 个月；通常可延长一次 30 天 |
 | 其他组合 | 任意 | REVIEW | 不根据模型记忆或第三方聚合器猜测 |
 
 完整结构化条目、证据定位和原文摘录见 `data/policies.seed.json`。
@@ -78,6 +84,15 @@
 - [Indonesia Immigration：Official visa selection](https://evisa.imigrasi.go.id/web/visa-selection)
 - [Vietnam Immigration：National Electronic Visa system](https://evisa.gov.vn/e-visa/foreigners)（本轮空白响应，`blocked`）
 - [Philippines DFA Beijing：General Information](https://beijingpe.dfa.gov.ph/general-information)（本轮安全验证阻挡，`blocked`）
+- [Cambodia MFAIC：e-Visa Visa Type Information](https://www.evisa.gov.kh/information/visa_type/4)
+- [Cambodia MFAIC：Official e-Visa service](https://www.evisa.gov.kh/home)
+- [Lao PDR MOFA：Who can apply for Lao eVisa](https://laoevisa.gov.la/article/who_can_apply)
+- [Lao PDR MOFA：eVisa Terms and Conditions](https://laoevisa.gov.la/term)
+- [Myanmar Ministry of Immigration and Population：Notice to Tourist](https://evisa.moip.gov.mm/notice/tourist)
+- [Brunei MFA：Visa Information by Country / Region](https://www.mfa.gov.bn/Pages/visa-information.aspx)
+- [Brunei MFA：Category D3 — 14-day visa waiver](https://www.mfa.gov.bn/Pages/D3---D14.aspx)
+- [Timor-Leste Migration Service：Tourist Visa](https://migracao.gov.tl/wp/tourist-visa/)
+- [Timor-Leste Migration Service：Visa exemptions](https://migracao.gov.tl/wp/visa-exemptions/)
 
 ## 核验方法
 

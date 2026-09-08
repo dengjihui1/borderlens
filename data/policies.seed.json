@@ -11,9 +11,14 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 90,
-      "conditions": ["仅适用于日本外务省 Note 5 所限定的香港特区护照，或具有香港居留权的 BNO。"],
+      "conditions": [
+        "仅适用于日本外务省 Note 5 所限定的香港特区护照，或具有香港居留权的 BNO。"
+      ],
       "status": "verified",
-      "sourceIds": ["jp-mofa-waiver", "global-iata-timatic"],
+      "sourceIds": [
+        "jp-mofa-waiver",
+        "global-iata-timatic"
+      ],
       "evidenceLocator": "Japan MOFA visa exemption list, Hong Kong row, Note 5",
       "evidenceExcerpt": "For nationals of Hong Kong, visas are not required only for holders of SAR passports issued by the Hong Kong SAR of the PRC or British National Overseas passports who have the right of residence in Hong Kong.",
       "checkedAt": "2026-09-08",
@@ -28,9 +33,14 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 90,
-      "conditions": ["仅适用于日本外务省 Note 6 所限定的澳门特区护照。"],
+      "conditions": [
+        "仅适用于日本外务省 Note 6 所限定的澳门特区护照。"
+      ],
       "status": "verified",
-      "sourceIds": ["jp-mofa-waiver", "global-iata-timatic"],
+      "sourceIds": [
+        "jp-mofa-waiver",
+        "global-iata-timatic"
+      ],
       "evidenceLocator": "Japan MOFA visa exemption list, Macao row, Note 6",
       "evidenceExcerpt": "For nationals of Macao, visas are not required only for holders of SAR passports issued by the Macao SAR of the PRC.",
       "checkedAt": "2026-09-08",
@@ -45,9 +55,14 @@
       "borderMode": "any",
       "outcome": "visa_required",
       "maxStayDays": null,
-      "conditions": ["中国普通护照不适用香港或澳门证件条目；签证类别与材料需转日本使领馆核验。"],
+      "conditions": [
+        "中国普通护照不适用香港或澳门证件条目；签证类别与材料需转日本使领馆核验。"
+      ],
       "status": "verified",
-      "sourceIds": ["jp-mofa-waiver", "global-iata-timatic"],
+      "sourceIds": [
+        "jp-mofa-waiver",
+        "global-iata-timatic"
+      ],
       "evidenceLocator": "Japan MOFA visa exemption list; China is not included in the ordinary-passport short-stay exemption table",
       "evidenceExcerpt": "The exemption table lists Hong Kong and Macao only under their passport-specific notes; ordinary PRC passports are not included.",
       "checkedAt": "2026-09-08",
@@ -62,9 +77,17 @@
       "borderMode": "any",
       "outcome": "manual_review",
       "maxStayDays": null,
-      "conditions": ["仅适用于具有中国国籍并符合回乡证申领条件的香港居民。", "香港居民身份证、香港特区护照与港澳居民来往内地通行证是不同证件，不能互相替代。", "系统当前仍需结合实际口岸与证件有效状态人工确认。"],
+      "conditions": [
+        "仅适用于具有中国国籍并符合回乡证申领条件的香港居民。",
+        "香港居民身份证、香港特区护照与港澳居民来往内地通行证是不同证件，不能互相替代。",
+        "系统当前仍需结合实际口岸与证件有效状态人工确认。"
+      ],
       "status": "verified",
-      "sourceIds": ["cn-nia-mainland-travel-permit", "hk-immd-travel-doc", "global-iata-timatic"],
+      "sourceIds": [
+        "cn-nia-mainland-travel-permit",
+        "hk-immd-travel-doc",
+        "global-iata-timatic"
+      ],
       "evidenceLocator": "国家移民管理局政务服务平台 > 港澳居民来往内地通行证签发服务指南 > 适用范围、申请条件及申请材料",
       "evidenceExcerpt": "本指南适用于港澳居民申请港澳居民来往内地通行证；申请条件分别列明具有中国国籍的香港或澳门居民，并将居民身份证、特区护照和通行证作为不同证件处理。",
       "checkedAt": "2026-09-08",
@@ -79,9 +102,17 @@
       "borderMode": "any",
       "outcome": "manual_review",
       "maxStayDays": null,
-      "conditions": ["仅适用于具有中国国籍并符合回乡证申领条件的澳门居民。", "澳门居民身份证、澳门特区护照与港澳居民来往内地通行证是不同证件，不能互相替代。", "实际口岸、通道及自动通关登记仍需复核。"],
+      "conditions": [
+        "仅适用于具有中国国籍并符合回乡证申领条件的澳门居民。",
+        "澳门居民身份证、澳门特区护照与港澳居民来往内地通行证是不同证件，不能互相替代。",
+        "实际口岸、通道及自动通关登记仍需复核。"
+      ],
       "status": "verified",
-      "sourceIds": ["cn-nia-mainland-travel-permit", "mo-gov-immigration", "global-iata-timatic"],
+      "sourceIds": [
+        "cn-nia-mainland-travel-permit",
+        "mo-gov-immigration",
+        "global-iata-timatic"
+      ],
       "evidenceLocator": "国家移民管理局政务服务平台 > 港澳居民来往内地通行证签发服务指南 > 适用范围、申请条件及申请材料",
       "evidenceExcerpt": "本指南适用于港澳居民申请港澳居民来往内地通行证；申请条件分别列明具有中国国籍的香港或澳门居民，并将居民身份证、特区护照和通行证作为不同证件处理。",
       "checkedAt": "2026-09-08",
@@ -97,9 +128,15 @@
       "outcome": "eta_required",
       "maxStayDays": 90,
       "visaProductName": "New Zealand Electronic Travel Authority (NZeTA)",
-      "conditions": ["仅适用于香港居民使用香港特区护照。", "出发前必须取得 NZeTA，并使用申请 NZeTA 时的同一本护照旅行。", "最终入境许可由新西兰边境决定。"],
+      "conditions": [
+        "仅适用于香港居民使用香港特区护照。",
+        "出发前必须取得 NZeTA，并使用申请 NZeTA 时的同一本护照旅行。",
+        "最终入境许可由新西兰边境决定。"
+      ],
       "status": "verified",
-      "sourceIds": ["nz-immigration-waiver"],
+      "sourceIds": [
+        "nz-immigration-waiver"
+      ],
       "evidenceLocator": "Visa waiver countries and territories > Applicants from Hong Kong; Authority to travel; How long you can stay",
       "evidenceExcerpt": "You can only travel visa waiver if you are a resident and travel on ... Hong Kong Special Administrative Region [passport]. You must have an NZeTA before you travel to New Zealand. You can stay for up to 3 months.",
       "checkedAt": "2026-09-08",
@@ -115,9 +152,15 @@
       "outcome": "eta_required",
       "maxStayDays": 90,
       "visaProductName": "New Zealand Electronic Travel Authority (NZeTA)",
-      "conditions": ["仅适用于澳门居民使用澳门特区护照。", "出发前必须取得 NZeTA，并使用申请 NZeTA 时的同一本护照旅行。", "最终入境许可由新西兰边境决定。"],
+      "conditions": [
+        "仅适用于澳门居民使用澳门特区护照。",
+        "出发前必须取得 NZeTA，并使用申请 NZeTA 时的同一本护照旅行。",
+        "最终入境许可由新西兰边境决定。"
+      ],
       "status": "verified",
-      "sourceIds": ["nz-immigration-waiver"],
+      "sourceIds": [
+        "nz-immigration-waiver"
+      ],
       "evidenceLocator": "Visa waiver countries and territories > Applicants from Macau; Authority to travel; How long you can stay",
       "evidenceExcerpt": "You can only travel visa waiver if you are a resident and travel on a Macau Special Administrative Region passport. You must have an NZeTA before you travel to New Zealand. You can stay for up to 3 months.",
       "checkedAt": "2026-09-08",
@@ -132,9 +175,15 @@
       "borderMode": "any",
       "outcome": "manual_review",
       "maxStayDays": null,
-      "conditions": ["中国普通护照不能仅按国籍直接判定。", "只有从澳大利亚前往新西兰且持符合条件的澳大利亚签证时，才可能进入该页的签证豁免分支。", "其他情况必须改查适用访客签证。"],
+      "conditions": [
+        "中国普通护照不能仅按国籍直接判定。",
+        "只有从澳大利亚前往新西兰且持符合条件的澳大利亚签证时，才可能进入该页的签证豁免分支。",
+        "其他情况必须改查适用访客签证。"
+      ],
       "status": "verified",
-      "sourceIds": ["nz-immigration-waiver"],
+      "sourceIds": [
+        "nz-immigration-waiver"
+      ],
       "evidenceLocator": "Visa Waiver Visitor Visa overview and eligibility > Chinese visitors travelling from Australia",
       "evidenceExcerpt": "To apply you must be travelling on a passport from a visa waiver country or territory, or travelling from Australia on a passport from China and with an eligible Australian visa.",
       "checkedAt": "2026-09-08",
@@ -150,9 +199,14 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Schengen short-stay visa",
-      "conditions": ["仅表示跨越申根成员国外部边境的短期旅游签证要求；居留许可、长期停留和特殊身份另行核验。"],
+      "conditions": [
+        "仅表示跨越申根成员国外部边境的短期旅游签证要求；居留许可、长期停留和特殊身份另行核验。"
+      ],
       "status": "verified",
-      "sourceIds": ["eu-schengen-policy", "eu-regulation-2018-1806-pdf"],
+      "sourceIds": [
+        "eu-schengen-policy",
+        "eu-regulation-2018-1806-pdf"
+      ],
       "evidenceLocator": "Regulation (EU) 2018/1806, Article 3(1) and Annex I, PDF page 13",
       "evidenceExcerpt": "Nationals of third countries listed in Annex I shall be required to be in possession of a visa when crossing the external borders of the Member States. Annex I lists China.",
       "checkedAt": "2026-09-08",
@@ -167,9 +221,16 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 90,
-      "conditions": ["任何连续 180 天内累计不超过 90 天。", "豁免仅适用于香港特别行政区护照。", "不等同于保证入境，仍须满足外部边境入境条件。"],
+      "conditions": [
+        "任何连续 180 天内累计不超过 90 天。",
+        "豁免仅适用于香港特别行政区护照。",
+        "不等同于保证入境，仍须满足外部边境入境条件。"
+      ],
       "status": "verified",
-      "sourceIds": ["eu-schengen-policy", "eu-regulation-2018-1806-pdf"],
+      "sourceIds": [
+        "eu-schengen-policy",
+        "eu-regulation-2018-1806-pdf"
+      ],
       "evidenceLocator": "Regulation (EU) 2018/1806, Article 4(1), Annex II and footnote (1), PDF pages 5, 16 and 18",
       "evidenceExcerpt": "Nationals listed in Annex II are exempt for stays of no more than 90 days in any 180-day period. The exemption for Hong Kong SAR shall only apply to holders of a Hong Kong Special Administrative Region passport.",
       "checkedAt": "2026-09-08",
@@ -184,9 +245,16 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 90,
-      "conditions": ["任何连续 180 天内累计不超过 90 天。", "豁免仅适用于澳门特别行政区护照。", "不等同于保证入境，仍须满足外部边境入境条件。"],
+      "conditions": [
+        "任何连续 180 天内累计不超过 90 天。",
+        "豁免仅适用于澳门特别行政区护照。",
+        "不等同于保证入境，仍须满足外部边境入境条件。"
+      ],
       "status": "verified",
-      "sourceIds": ["eu-schengen-policy", "eu-regulation-2018-1806-pdf"],
+      "sourceIds": [
+        "eu-schengen-policy",
+        "eu-regulation-2018-1806-pdf"
+      ],
       "evidenceLocator": "Regulation (EU) 2018/1806, Article 4(1), Annex II and footnote (2), PDF pages 5, 16 and 18",
       "evidenceExcerpt": "Nationals listed in Annex II are exempt for stays of no more than 90 days in any 180-day period. The exemption for Macao SAR shall only apply to holders of a Região Administrativa Especial de Macau passport.",
       "checkedAt": "2026-09-08",
@@ -201,9 +269,16 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 30,
-      "conditions": ["仅适用于中华人民共和国签发的普通护照。", "应在抵达前 3 天内提交 SG Arrival Card。", "实际准许入境和停留期由 ICA 官员在口岸决定。"],
+      "conditions": [
+        "仅适用于中华人民共和国签发的普通护照。",
+        "应在抵达前 3 天内提交 SG Arrival Card。",
+        "实际准许入境和停留期由 ICA 官员在口岸决定。"
+      ],
       "status": "verified",
-      "sourceIds": ["sg-mfa-beijing-visa", "sg-ica-entry"],
+      "sourceIds": [
+        "sg-mfa-beijing-visa",
+        "sg-ica-entry"
+      ],
       "evidenceLocator": "Singapore Embassy in Beijing > Entry and visa requirements; Important notices",
       "evidenceExcerpt": "With effect from 9 February 2024, holders of Ordinary Passports issued by the People's Republic of China will be exempted from visa requirements for a stay of up to 30 days in Singapore. Visitors are required to submit their SG Arrival Card within 3 days before arriving.",
       "checkedAt": "2026-09-08",
@@ -218,9 +293,17 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 30,
-      "conditions": ["仅适用于香港特区护照，不适用于香港特区签证身份书。", "应在抵达前 3 天内提交 SG Arrival Card。", "实际准许入境和停留期由 ICA 官员在口岸决定。"],
+      "conditions": [
+        "仅适用于香港特区护照，不适用于香港特区签证身份书。",
+        "应在抵达前 3 天内提交 SG Arrival Card。",
+        "实际准许入境和停留期由 ICA 官员在口岸决定。"
+      ],
       "status": "verified",
-      "sourceIds": ["sg-mfa-hong-kong-visa", "sg-ica-entry", "sg-ica-visa-requirements"],
+      "sourceIds": [
+        "sg-mfa-hong-kong-visa",
+        "sg-ica-entry",
+        "sg-ica-visa-requirements"
+      ],
       "evidenceLocator": "Singapore Consulate-General in Hong Kong > Visa information; ICA entry requirements",
       "evidenceExcerpt": "Hong Kong SAR and Macao SAR passports holders do not require a visa to enter Singapore for business or social visit purpose for up to 30 days. The visa requirement is necessary for HKSAR Document of Identity holders.",
       "checkedAt": "2026-09-08",
@@ -235,9 +318,17 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 30,
-      "conditions": ["仅适用于澳门特区护照，不适用于澳门特区旅行证。", "应在抵达前 3 天内提交 SG Arrival Card。", "实际准许入境和停留期由 ICA 官员在口岸决定。"],
+      "conditions": [
+        "仅适用于澳门特区护照，不适用于澳门特区旅行证。",
+        "应在抵达前 3 天内提交 SG Arrival Card。",
+        "实际准许入境和停留期由 ICA 官员在口岸决定。"
+      ],
       "status": "verified",
-      "sourceIds": ["sg-mfa-hong-kong-visa", "sg-ica-entry", "sg-ica-visa-requirements"],
+      "sourceIds": [
+        "sg-mfa-hong-kong-visa",
+        "sg-ica-entry",
+        "sg-ica-visa-requirements"
+      ],
       "evidenceLocator": "Singapore Consulate-General in Hong Kong > Visa information; ICA entry requirements",
       "evidenceExcerpt": "Hong Kong SAR and Macao SAR passports holders do not require a visa to enter Singapore for business or social visit purpose for up to 30 days. ICA separately lists a Macao SAR Travel Permit as a visa-required document.",
       "checkedAt": "2026-09-08",
@@ -252,9 +343,14 @@
       "borderMode": "any",
       "outcome": "visa_required",
       "maxStayDays": null,
-      "conditions": ["香港特区签证身份书与香港特区护照是不同旅行证件，不能继承护照的 30 天免签。"],
+      "conditions": [
+        "香港特区签证身份书与香港特区护照是不同旅行证件，不能继承护照的 30 天免签。"
+      ],
       "status": "verified",
-      "sourceIds": ["sg-mfa-hong-kong-visa", "sg-ica-visa-requirements"],
+      "sourceIds": [
+        "sg-mfa-hong-kong-visa",
+        "sg-ica-visa-requirements"
+      ],
       "evidenceLocator": "Singapore Consulate-General in Hong Kong > Visa information; ICA visa-required travel documents list",
       "evidenceExcerpt": "The visa requirement is necessary for HKSAR Document of Identity (DOI) holders as HKSAR passports and HKSAR DOIs are different sets of travel documents.",
       "checkedAt": "2026-09-08",
@@ -269,9 +365,14 @@
       "borderMode": "any",
       "outcome": "visa_required",
       "maxStayDays": null,
-      "conditions": ["澳门特区旅行证与澳门特区护照是不同旅行证件，不能继承护照的 30 天免签。"],
+      "conditions": [
+        "澳门特区旅行证与澳门特区护照是不同旅行证件，不能继承护照的 30 天免签。"
+      ],
       "status": "verified",
-      "sourceIds": ["sg-mfa-beijing-visa", "sg-ica-visa-requirements"],
+      "sourceIds": [
+        "sg-mfa-beijing-visa",
+        "sg-ica-visa-requirements"
+      ],
       "evidenceLocator": "Singapore Embassy in Beijing > Entry and visa requirements; ICA visa-required travel documents list",
       "evidenceExcerpt": "Holders of all other travel documents issued by the PRC must continue to apply for an entry visa before travel into Singapore. These include ... Macau SAR Travel Permit.",
       "checkedAt": "2026-09-08",
@@ -287,9 +388,15 @@
       "outcome": "eta_required",
       "maxStayDays": 90,
       "visaProductName": "Electronic Travel Authority (subclass 601)",
-      "conditions": ["须持有效香港特区护照，从澳大利亚境外通过 Australian ETA App 申请。", "ETA 通常 12 个月内可多次入境，每次最多停留 3 个月；护照更早到期时以护照有效期为限。", "刑事定罪、健康要求等情况可能需要 Visitor visa 600。"],
+      "conditions": [
+        "须持有效香港特区护照，从澳大利亚境外通过 Australian ETA App 申请。",
+        "ETA 通常 12 个月内可多次入境，每次最多停留 3 个月；护照更早到期时以护照有效期为限。",
+        "刑事定罪、健康要求等情况可能需要 Visitor visa 600。"
+      ],
       "status": "verified",
-      "sourceIds": ["au-home-affairs-eta-601"],
+      "sourceIds": [
+        "au-home-affairs-eta-601"
+      ],
       "evidenceLocator": "Subclass 601 > Overview, How long you can stay and Eligibility > Have an eligible passport",
       "evidenceExcerpt": "You must hold a valid passport from one of these countries or jurisdictions ... Hong Kong (SAR of China). You can remain in Australia for 3 months after each entry.",
       "checkedAt": "2026-09-08",
@@ -305,9 +412,17 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Visitor visa (subclass 600) candidate route",
-      "conditions": ["中国普通护照不在 ETA 601 合资格护照名单内。", "应通过 Visa Finder 核对适用签证；Visitor visa 600 是官方列出的可能路线，具体 stream、期限与批准条件不能自动推断。"],
+      "conditions": [
+        "中国普通护照不在 ETA 601 合资格护照名单内。",
+        "应通过 Visa Finder 核对适用签证；Visitor visa 600 是官方列出的可能路线，具体 stream、期限与批准条件不能自动推断。"
+      ],
       "status": "verified",
-      "sourceIds": ["au-home-affairs-entry-eligibility", "au-home-affairs-eta-601", "au-home-affairs-visitor-600", "au-home-affairs-visa-finder"],
+      "sourceIds": [
+        "au-home-affairs-entry-eligibility",
+        "au-home-affairs-eta-601",
+        "au-home-affairs-visitor-600",
+        "au-home-affairs-visa-finder"
+      ],
       "evidenceLocator": "Can I go to Australia? > visa requirement; Subclass 601 > Eligibility passport list and Step by step > Other ways to apply",
       "evidenceExcerpt": "All other passport holders need the right visa to come to Australia. You also need to get your visa before you travel to Australia. The ETA-eligible passport list does not include China; other passport holders may be eligible for Visitor 600.",
       "checkedAt": "2026-09-08",
@@ -323,9 +438,17 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Visitor visa (subclass 600) candidate route",
-      "conditions": ["澳门特区护照不在 ETA 601 合资格护照名单内。", "应通过 Visa Finder 核对适用签证；Visitor visa 600 是官方列出的可能路线，具体 stream、期限与批准条件不能自动推断。"],
+      "conditions": [
+        "澳门特区护照不在 ETA 601 合资格护照名单内。",
+        "应通过 Visa Finder 核对适用签证；Visitor visa 600 是官方列出的可能路线，具体 stream、期限与批准条件不能自动推断。"
+      ],
       "status": "verified",
-      "sourceIds": ["au-home-affairs-entry-eligibility", "au-home-affairs-eta-601", "au-home-affairs-visitor-600", "au-home-affairs-visa-finder"],
+      "sourceIds": [
+        "au-home-affairs-entry-eligibility",
+        "au-home-affairs-eta-601",
+        "au-home-affairs-visitor-600",
+        "au-home-affairs-visa-finder"
+      ],
       "evidenceLocator": "Can I go to Australia? > visa requirement; Subclass 601 > Eligibility passport list and Step by step > Other ways to apply",
       "evidenceExcerpt": "All other passport holders need the right visa to come to Australia. You also need to get your visa before you travel to Australia. The ETA-eligible passport list does not include Macao; other passport holders may be eligible for Visitor 600.",
       "checkedAt": "2026-09-08",
@@ -341,9 +464,14 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Standard Visitor visa",
-      "conditions": ["官方问答路径假设：护照国籍为 China、非英爱双重公民、旅游/探亲目的，且不是与伴侣或家人同行或前往探访伴侣/家人。", "家庭关系或其他目的必须重新运行官方检查器。"],
+      "conditions": [
+        "官方问答路径假设：护照国籍为 China、非英爱双重公民、旅游/探亲目的，且不是与伴侣或家人同行或前往探访伴侣/家人。",
+        "家庭关系或其他目的必须重新运行官方检查器。"
+      ],
       "status": "verified",
-      "sourceIds": ["gb-visa-checker"],
+      "sourceIds": [
+        "gb-visa-checker"
+      ],
       "evidenceLocator": "/check-uk-visa/y/china/no/tourism/no",
       "evidenceExcerpt": "You'll need a visa to come to the UK. Apply for a Standard Visitor visa.",
       "checkedAt": "2026-09-08",
@@ -359,9 +487,14 @@
       "outcome": "eta_required",
       "maxStayDays": null,
       "visaProductName": "UK Electronic Travel Authorisation or Standard Visitor visa",
-      "conditions": ["官方问答路径假设：Hong Kong nationality、非英爱双重公民、使用 Hong Kong passport、旅游或探亲目的。", "有犯罪记录或曾被拒绝入境等情况，官方提示可改申请 Standard Visitor visa。"],
+      "conditions": [
+        "官方问答路径假设：Hong Kong nationality、非英爱双重公民、使用 Hong Kong passport、旅游或探亲目的。",
+        "有犯罪记录或曾被拒绝入境等情况，官方提示可改申请 Standard Visitor visa。"
+      ],
       "status": "verified",
-      "sourceIds": ["gb-visa-checker"],
+      "sourceIds": [
+        "gb-visa-checker"
+      ],
       "evidenceLocator": "/check-uk-visa/y/hong-kong/no/passport/tourism",
       "evidenceExcerpt": "You'll need an electronic travel authorisation (ETA) or a visa. You must apply for either an electronic travel authorisation (ETA) or a Standard Visitor visa.",
       "checkedAt": "2026-09-08",
@@ -377,9 +510,14 @@
       "outcome": "eta_required",
       "maxStayDays": null,
       "visaProductName": "UK Electronic Travel Authorisation or Standard Visitor visa",
-      "conditions": ["官方问答路径假设：Macao nationality、非英爱双重公民、使用 Macao passport、旅游或探亲目的。", "有犯罪记录或曾被拒绝入境等情况，官方提示可改申请 Standard Visitor visa。"],
+      "conditions": [
+        "官方问答路径假设：Macao nationality、非英爱双重公民、使用 Macao passport、旅游或探亲目的。",
+        "有犯罪记录或曾被拒绝入境等情况，官方提示可改申请 Standard Visitor visa。"
+      ],
       "status": "verified",
-      "sourceIds": ["gb-visa-checker"],
+      "sourceIds": [
+        "gb-visa-checker"
+      ],
       "evidenceLocator": "/check-uk-visa/y/macao/no/passport/tourism",
       "evidenceExcerpt": "You'll need an electronic travel authorisation (ETA) or a visa. You must apply for either an electronic travel authorisation (ETA) or a Standard Visitor visa.",
       "checkedAt": "2026-09-08",
@@ -395,9 +533,14 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "General Tourist (C-3-9) visa",
-      "conditions": ["韩国签证门户按 CHINA P. R.、短期旅游、90 日以内查询时列出一般旅游 C-3-9。", "外交或公务护照、济州特别安排、过境和团体旅游不属于本条普通护照一般旅游规则。"],
+      "conditions": [
+        "韩国签证门户按 CHINA P. R.、短期旅游、90 日以内查询时列出一般旅游 C-3-9。",
+        "外交或公务护照、济州特别安排、过境和团体旅游不属于本条普通护照一般旅游规则。"
+      ],
       "status": "verified",
-      "sourceIds": ["kr-visa-portal"],
+      "sourceIds": [
+        "kr-visa-portal"
+      ],
       "evidenceLocator": "Visa Navigator > CHINA P. R. > 관광 등 단기방문 > 90일이하 > 일반관광 C-3-9",
       "evidenceExcerpt": "일반관광 C-3-9: 휴가 또는 여가를 이용하여 대한민국을 관광할 목적으로 방문하는 자. The detailed result lists an embassy application route and passport among required documents.",
       "checkedAt": "2026-09-08",
@@ -413,9 +556,15 @@
       "outcome": "eta_required",
       "maxStayDays": 90,
       "visaProductName": "Korea Electronic Travel Authorization (K-ETA)",
-      "conditions": ["仅适用于 K-ETA 页面列出的 CHINA P. R.(HONG KONG) 护照分支。", "17 岁及以下、65 岁及以上，以及外交公务护照、ABTC、转机旅客、已持韩国签证或完成外国人登记等官方列明情形可能豁免申请 K-ETA。", "K-ETA 不保证最终准予入境。"],
+      "conditions": [
+        "仅适用于 K-ETA 页面列出的 CHINA P. R.(HONG KONG) 护照分支。",
+        "17 岁及以下、65 岁及以上，以及外交公务护照、ABTC、转机旅客、已持韩国签证或完成外国人登记等官方列明情形可能豁免申请 K-ETA。",
+        "K-ETA 不保证最终准予入境。"
+      ],
       "status": "verified",
-      "sourceIds": ["kr-keta-eligibility"],
+      "sourceIds": [
+        "kr-keta-eligibility"
+      ],
       "evidenceLocator": "Eligible Countries / Applicants table > CHINA P. R.(HONG KONG); Applicant; Those eligible for application exemption",
       "evidenceExcerpt": "You can apply for K-ETA if you hold a passport from countries or regions listed below. CHINA P. R.(HONG KONG) — Allowed Period of Stay: 90 Days. Applicants are foreigners intending to enter without a visa for a short period and not eligible for an application exemption.",
       "checkedAt": "2026-09-08",
@@ -431,9 +580,15 @@
       "outcome": "eta_required",
       "maxStayDays": 90,
       "visaProductName": "Korea Electronic Travel Authorization (K-ETA)",
-      "conditions": ["仅适用于 K-ETA 页面列出的 CHINA P. R.(MACAO) 护照分支。", "17 岁及以下、65 岁及以上，以及外交公务护照、ABTC、转机旅客、已持韩国签证或完成外国人登记等官方列明情形可能豁免申请 K-ETA。", "K-ETA 不保证最终准予入境。"],
+      "conditions": [
+        "仅适用于 K-ETA 页面列出的 CHINA P. R.(MACAO) 护照分支。",
+        "17 岁及以下、65 岁及以上，以及外交公务护照、ABTC、转机旅客、已持韩国签证或完成外国人登记等官方列明情形可能豁免申请 K-ETA。",
+        "K-ETA 不保证最终准予入境。"
+      ],
       "status": "verified",
-      "sourceIds": ["kr-keta-eligibility"],
+      "sourceIds": [
+        "kr-keta-eligibility"
+      ],
       "evidenceLocator": "Eligible Countries / Applicants table > CHINA P. R.(MACAO); Applicant; Those eligible for application exemption",
       "evidenceExcerpt": "You can apply for K-ETA if you hold a passport from countries or regions listed below. CHINA P. R.(MACAO) — Allowed Period of Stay: 90 Days. Applicants are foreigners intending to enter without a visa for a short period and not eligible for an application exemption.",
       "checkedAt": "2026-09-08",
@@ -449,9 +604,15 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "General Tourist (C-3-9) visa",
-      "conditions": ["韩国签证门户把 HONG KONG D.I. 与 CHINA P. R.(HONG KONG) 分成不同查询项。", "香港签证身份书不在 K-ETA 合资格护照名单中，不能继承香港特区护照的 K-ETA 路线。"],
+      "conditions": [
+        "韩国签证门户把 HONG KONG D.I. 与 CHINA P. R.(HONG KONG) 分成不同查询项。",
+        "香港签证身份书不在 K-ETA 合资格护照名单中，不能继承香港特区护照的 K-ETA 路线。"
+      ],
       "status": "verified",
-      "sourceIds": ["kr-visa-portal", "kr-keta-eligibility"],
+      "sourceIds": [
+        "kr-visa-portal",
+        "kr-keta-eligibility"
+      ],
       "evidenceLocator": "Visa Navigator > HONG KONG D.I. > 관광 등 단기방문 > 90일이하; K-ETA eligible-country table",
       "evidenceExcerpt": "The Visa Navigator returns 일반관광 C-3-9 for HONG KONG D.I., while the K-ETA table separately lists CHINA P. R.(HONG KONG) and does not list HONG KONG D.I.",
       "checkedAt": "2026-09-08",
@@ -466,9 +627,15 @@
       "borderMode": "any",
       "outcome": "visa_on_arrival",
       "maxStayDays": 30,
-      "conditions": ["中国普通护照须至少还有 6 个月有效期。", "官方驻上海总领馆页面称首次 30 天免费，并可按阿联酋规定付费延长一次相同期限；延期不能视为自动获准。"],
+      "conditions": [
+        "中国普通护照须至少还有 6 个月有效期。",
+        "官方驻上海总领馆页面称首次 30 天免费，并可按阿联酋规定付费延长一次相同期限；延期不能视为自动获准。"
+      ],
       "status": "verified",
-      "sourceIds": ["ae-mofa-shanghai-visas", "ae-icp-visas"],
+      "sourceIds": [
+        "ae-mofa-shanghai-visas",
+        "ae-icp-visas"
+      ],
       "evidenceLocator": "Holders of Ordinary Passports > first paragraph; application steps",
       "evidenceExcerpt": "Chinese nationals holding ordinary passports are exempted from prior visa to enter the UAE ... free of charge for staying 30 days and can be extended ... for a similar period once. Minimum validity of the passport should not be less than 6 months.",
       "checkedAt": "2026-09-08",
@@ -483,9 +650,15 @@
       "borderMode": "any",
       "outcome": "visa_on_arrival",
       "maxStayDays": 30,
-      "conditions": ["仅适用于官方普通护照列表中的 Hong Kong 条目。", "该页将此分支描述为抵达后一个月、不可续期的签证；护照须至少还有 6 个月有效期。"],
+      "conditions": [
+        "仅适用于官方普通护照列表中的 Hong Kong 条目。",
+        "该页将此分支描述为抵达后一个月、不可续期的签证；护照须至少还有 6 个月有效期。"
+      ],
       "status": "verified",
-      "sourceIds": ["ae-mofa-shanghai-visas", "ae-icp-visas"],
+      "sourceIds": [
+        "ae-mofa-shanghai-visas",
+        "ae-icp-visas"
+      ],
       "evidenceLocator": "Holders of Ordinary Passports > one-month non-renewable visa country list",
       "evidenceExcerpt": "Nationals of the countries listed below do not require a prior visa ... Those visitors will be granted upon arrival a one-month non-renewable visa. The list includes Hong Kong.",
       "checkedAt": "2026-09-08",
@@ -501,9 +674,15 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Pre-arranged visit visa",
-      "conditions": ["澳门未列入该官方页面的免预先签证普通护照名单。", "需在出发前通过旅行社、酒店、阿联酋境内个人或其他符合条件的担保人办理；实际产品和期限应在 ICP 再核验。"],
+      "conditions": [
+        "澳门未列入该官方页面的免预先签证普通护照名单。",
+        "需在出发前通过旅行社、酒店、阿联酋境内个人或其他符合条件的担保人办理；实际产品和期限应在 ICP 再核验。"
+      ],
       "status": "verified",
-      "sourceIds": ["ae-mofa-shanghai-visas", "ae-icp-visas"],
+      "sourceIds": [
+        "ae-mofa-shanghai-visas",
+        "ae-icp-visas"
+      ],
       "evidenceLocator": "Holders of Ordinary Passports > country list and 'All other nationalities' paragraph",
       "evidenceExcerpt": "All other nationalities who wish to visit the UAE must obtain a visit visa in advance through a sponsor. Macao is not included in the preceding ordinary-passport visa-on-arrival list.",
       "checkedAt": "2026-09-08",
@@ -519,9 +698,15 @@
       "outcome": "visa_free",
       "maxStayDays": 90,
       "visaProductName": "Mainland Travel Permit for Hong Kong and Macao Residents (Non-Chinese Citizens)",
-      "conditions": ["仅适用于香港永久性居民中的非中国籍人员，并须已经取得有效通行证。", "通行证有效期为 5 年，可多次来往内地，每次停留不超过 90 日。", "不得凭该通行证在内地工作、学习或从事新闻采访；这些目的需另办签证或停居留证件。"],
+      "conditions": [
+        "仅适用于香港永久性居民中的非中国籍人员，并须已经取得有效通行证。",
+        "通行证有效期为 5 年，可多次来往内地，每次停留不超过 90 日。",
+        "不得凭该通行证在内地工作、学习或从事新闻采访；这些目的需另办签证或停居留证件。"
+      ],
       "status": "verified",
-      "sourceIds": ["cn-nia-non-chinese-mainland-permit"],
+      "sourceIds": [
+        "cn-nia-non-chinese-mainland-permit"
+      ],
       "evidenceLocator": "政策问与答 Q1、Q3、Q5",
       "evidenceExcerpt": "非中国籍港澳永久性居民因旅游等短期入境事由可申请通行证；通行证有效期5年，持证人可以在证件有效期内多次来往内地，每次停留不超过90日。",
       "checkedAt": "2026-09-08",
@@ -537,9 +722,15 @@
       "outcome": "visa_free",
       "maxStayDays": 90,
       "visaProductName": "Mainland Travel Permit for Hong Kong and Macao Residents (Non-Chinese Citizens)",
-      "conditions": ["仅适用于澳门永久性居民中的非中国籍人员，并须已经取得有效通行证。", "通行证有效期为 5 年，可多次来往内地，每次停留不超过 90 日。", "不得凭该通行证在内地工作、学习或从事新闻采访；这些目的需另办签证或停居留证件。"],
+      "conditions": [
+        "仅适用于澳门永久性居民中的非中国籍人员，并须已经取得有效通行证。",
+        "通行证有效期为 5 年，可多次来往内地，每次停留不超过 90 日。",
+        "不得凭该通行证在内地工作、学习或从事新闻采访；这些目的需另办签证或停居留证件。"
+      ],
       "status": "verified",
-      "sourceIds": ["cn-nia-non-chinese-mainland-permit"],
+      "sourceIds": [
+        "cn-nia-non-chinese-mainland-permit"
+      ],
       "evidenceLocator": "政策问与答 Q1、Q3、Q5",
       "evidenceExcerpt": "非中国籍港澳永久性居民因旅游等短期入境事由可申请通行证；通行证有效期5年，持证人可以在证件有效期内多次来往内地，每次停留不超过90日。",
       "checkedAt": "2026-09-08",
@@ -555,9 +746,15 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Visitor visa",
-      "conditions": ["中国不在 DHS 当前 42 个 Visa Waiver Program 国家名单中。", "本条不覆盖关岛—北马里亚纳群岛的单独免签计划，也不覆盖已持有效美国签证者的 EVUS 等后续要求。"],
+      "conditions": [
+        "中国不在 DHS 当前 42 个 Visa Waiver Program 国家名单中。",
+        "本条不覆盖关岛—北马里亚纳群岛的单独免签计划，也不覆盖已持有效美国签证者的 EVUS 等后续要求。"
+      ],
       "status": "verified",
-      "sourceIds": ["us-dhs-vwp-countries", "us-cbp-esta"],
+      "sourceIds": [
+        "us-dhs-vwp-countries",
+        "us-cbp-esta"
+      ],
       "evidenceLocator": "DHS U.S. Visa Waiver Program > Current Program Countries; CBP ESTA overview",
       "evidenceExcerpt": "The VWP permits citizens of designated countries to travel for business or tourism for up to 90 days without a visa. The current-country table does not include China; ESTA only determines eligibility to travel under the VWP.",
       "checkedAt": "2026-09-08",
@@ -573,9 +770,15 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Visitor visa",
-      "conditions": ["Hong Kong 不在 DHS 当前 42 个 Visa Waiver Program 国家名单中，因此不能申请 ESTA 代替签证。", "本条不覆盖关岛—北马里亚纳群岛的单独免签计划。"],
+      "conditions": [
+        "Hong Kong 不在 DHS 当前 42 个 Visa Waiver Program 国家名单中，因此不能申请 ESTA 代替签证。",
+        "本条不覆盖关岛—北马里亚纳群岛的单独免签计划。"
+      ],
       "status": "verified",
-      "sourceIds": ["us-dhs-vwp-countries", "us-cbp-esta"],
+      "sourceIds": [
+        "us-dhs-vwp-countries",
+        "us-cbp-esta"
+      ],
       "evidenceLocator": "DHS U.S. Visa Waiver Program > Current Program Countries; CBP ESTA overview",
       "evidenceExcerpt": "The VWP country table does not include Hong Kong. ESTA determines eligibility only for travel under the VWP and does not determine admissibility.",
       "checkedAt": "2026-09-08",
@@ -591,9 +794,15 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Visitor visa",
-      "conditions": ["Macao 不在 DHS 当前 42 个 Visa Waiver Program 国家名单中，因此不能申请 ESTA 代替签证。", "本条不覆盖关岛—北马里亚纳群岛的单独免签计划。"],
+      "conditions": [
+        "Macao 不在 DHS 当前 42 个 Visa Waiver Program 国家名单中，因此不能申请 ESTA 代替签证。",
+        "本条不覆盖关岛—北马里亚纳群岛的单独免签计划。"
+      ],
       "status": "verified",
-      "sourceIds": ["us-dhs-vwp-countries", "us-cbp-esta"],
+      "sourceIds": [
+        "us-dhs-vwp-countries",
+        "us-cbp-esta"
+      ],
       "evidenceLocator": "DHS U.S. Visa Waiver Program > Current Program Countries; CBP ESTA overview",
       "evidenceExcerpt": "The VWP country table does not include Macao. ESTA determines eligibility only for travel under the VWP and does not determine admissibility.",
       "checkedAt": "2026-09-08",
@@ -609,9 +818,14 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Canadian visitor visa",
-      "conditions": ["Canada.ca 的需签证名单明确列出 China, People's Republic of，且没有附加可改走 eTA 的条件标记。", "访客签证适用于航空、陆路和海路；符合特定无签证过境项目者不属于本条普通旅游规则。"],
+      "conditions": [
+        "Canada.ca 的需签证名单明确列出 China, People's Republic of，且没有附加可改走 eTA 的条件标记。",
+        "访客签证适用于航空、陆路和海路；符合特定无签证过境项目者不属于本条普通旅游规则。"
+      ],
       "status": "verified",
-      "sourceIds": ["ca-ircc-entry-requirements"],
+      "sourceIds": [
+        "ca-ircc-entry-requirements"
+      ],
       "evidenceLocator": "Travellers who need a visa > Visa-required countries or territories > China, People's Republic of",
       "evidenceExcerpt": "If you're a citizen of any of the countries or territories listed below, you need a valid visitor visa and a valid passport to visit or transit through Canada. The list includes China, People's Republic of.",
       "checkedAt": "2026-09-08",
@@ -627,9 +841,14 @@
       "outcome": "visa_required",
       "maxStayDays": null,
       "visaProductName": "Canadian visitor visa",
-      "conditions": ["Canada.ca 的需签证名单明确列出 Macao Special Administrative Region。", "访客签证适用于航空、陆路和海路。"],
+      "conditions": [
+        "Canada.ca 的需签证名单明确列出 Macao Special Administrative Region。",
+        "访客签证适用于航空、陆路和海路。"
+      ],
       "status": "verified",
-      "sourceIds": ["ca-ircc-entry-requirements"],
+      "sourceIds": [
+        "ca-ircc-entry-requirements"
+      ],
       "evidenceLocator": "Travellers who need a visa > Visa-required countries or territories > Macao Special Administrative Region",
       "evidenceExcerpt": "If you're a citizen of any of the countries or territories listed below, you need a valid visitor visa and a valid passport to visit or transit through Canada. The list includes Macao Special Administrative Region.",
       "checkedAt": "2026-09-08",
@@ -645,9 +864,14 @@
       "outcome": "eta_required",
       "maxStayDays": null,
       "visaProductName": "Canadian electronic travel authorization (eTA)",
-      "conditions": ["仅适用于香港特区签发的护照。", "乘飞机前往或经加拿大机场转机时需要 eTA 和有效护照；eTA 不保证准予入境。"],
+      "conditions": [
+        "仅适用于香港特区签发的护照。",
+        "乘飞机前往或经加拿大机场转机时需要 eTA 和有效护照；eTA 不保证准予入境。"
+      ],
       "status": "verified",
-      "sourceIds": ["ca-ircc-entry-requirements"],
+      "sourceIds": [
+        "ca-ircc-entry-requirements"
+      ],
       "evidenceLocator": "Travellers who need an eTA > If you're travelling by air > eTA-required countries > Hong Kong SAR",
       "evidenceExcerpt": "You need an eTA and a valid passport to board your flight to Canada. The list includes Hong Kong Special Administrative Region ... must have a passport issued by Hong Kong SAR.",
       "checkedAt": "2026-09-08",
@@ -662,9 +886,14 @@
       "borderMode": "land",
       "outcome": "visa_free",
       "maxStayDays": null,
-      "conditions": ["仅适用于香港特区签发的护照。", "从陆路抵达不需要 eTA，但仍需有效护照并接受边境审查。"],
+      "conditions": [
+        "仅适用于香港特区签发的护照。",
+        "从陆路抵达不需要 eTA，但仍需有效护照并接受边境审查。"
+      ],
       "status": "verified",
-      "sourceIds": ["ca-ircc-entry-requirements"],
+      "sourceIds": [
+        "ca-ircc-entry-requirements"
+      ],
       "evidenceLocator": "Travellers who need an eTA > If you're travelling by land or sea; eTA-required countries > Hong Kong SAR",
       "evidenceExcerpt": "If you're a citizen of an eTA-required country ... and arriving by car, bus or train, you don't need an eTA to enter Canada. You still need a valid passport.",
       "checkedAt": "2026-09-08",
@@ -679,9 +908,14 @@
       "borderMode": "sea",
       "outcome": "visa_free",
       "maxStayDays": null,
-      "conditions": ["仅适用于香港特区签发的护照。", "一般从海路抵达不需要 eTA，但仍需有效护照；从 Saint-Pierre-et-Miquelon 乘船的特殊分支另行核验。"],
+      "conditions": [
+        "仅适用于香港特区签发的护照。",
+        "一般从海路抵达不需要 eTA，但仍需有效护照；从 Saint-Pierre-et-Miquelon 乘船的特殊分支另行核验。"
+      ],
       "status": "verified",
-      "sourceIds": ["ca-ircc-entry-requirements"],
+      "sourceIds": [
+        "ca-ircc-entry-requirements"
+      ],
       "evidenceLocator": "Travellers who need an eTA > If you're travelling by land or sea; sea from Saint-Pierre-et-Miquelon exception",
       "evidenceExcerpt": "If you're a citizen of an eTA-required country ... and arriving by boat (including a cruise ship), you don't need an eTA to enter Canada. You still need a valid passport. A separate rule applies to boats from Saint-Pierre-et-Miquelon.",
       "checkedAt": "2026-09-08",
@@ -696,9 +930,16 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 60,
-      "conditions": ["仅适用于泰国外交部 60-day Visa Exemption 清单中的中国普通护照短期旅游分支。", "所有非泰国籍旅客经航空、陆路或海路入境前均须按规定提交 Thailand Digital Arrival Card；可在抵达日之前 3 天内提交。", "就业、长期停留和其他非旅游目的不适用本条。"],
+      "conditions": [
+        "仅适用于泰国外交部 60-day Visa Exemption 清单中的中国普通护照短期旅游分支。",
+        "所有非泰国籍旅客经航空、陆路或海路入境前均须按规定提交 Thailand Digital Arrival Card；可在抵达日之前 3 天内提交。",
+        "就业、长期停留和其他非旅游目的不适用本条。"
+      ],
       "status": "verified",
-      "sourceIds": ["th-mfa-visa-exemption-60", "th-immigration-tdac"],
+      "sourceIds": [
+        "th-mfa-visa-exemption-60",
+        "th-immigration-tdac"
+      ],
       "evidenceLocator": "Thailand MFA Visa Exemption (60 Days), country list: China; TDAC Guide and FAQ",
       "evidenceExcerpt": "China appears in the Ministry of Foreign Affairs list of countries and territories entitled to the 60-day Visa Exemption Scheme. Foreigners are required to submit arrival card information within 3 days before arrival in Thailand.",
       "checkedAt": "2026-09-08",
@@ -713,9 +954,15 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 60,
-      "conditions": ["仅适用于香港特区护照；香港签证身份书不得继承该结论。", "所有非泰国籍旅客经航空、陆路或海路入境前均须按规定提交 TDAC。"],
+      "conditions": [
+        "仅适用于香港特区护照；香港签证身份书不得继承该结论。",
+        "所有非泰国籍旅客经航空、陆路或海路入境前均须按规定提交 TDAC。"
+      ],
       "status": "verified",
-      "sourceIds": ["th-mfa-visa-exemption-60", "th-immigration-tdac"],
+      "sourceIds": [
+        "th-mfa-visa-exemption-60",
+        "th-immigration-tdac"
+      ],
       "evidenceLocator": "Thailand MFA Visa Exemption (60 Days), country list: Hong Kong; TDAC Guide",
       "evidenceExcerpt": "Hong Kong appears in the Ministry of Foreign Affairs list of countries and territories entitled to the 60-day Visa Exemption Scheme; TDAC applies to non-Thai nationals entering by air, land or sea.",
       "checkedAt": "2026-09-08",
@@ -730,9 +977,15 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 60,
-      "conditions": ["仅适用于澳门特区护照；澳门旅行证不得继承该结论。", "所有非泰国籍旅客经航空、陆路或海路入境前均须按规定提交 TDAC。"],
+      "conditions": [
+        "仅适用于澳门特区护照；澳门旅行证不得继承该结论。",
+        "所有非泰国籍旅客经航空、陆路或海路入境前均须按规定提交 TDAC。"
+      ],
       "status": "verified",
-      "sourceIds": ["th-mfa-visa-exemption-60", "th-immigration-tdac"],
+      "sourceIds": [
+        "th-mfa-visa-exemption-60",
+        "th-immigration-tdac"
+      ],
       "evidenceLocator": "Thailand MFA Visa Exemption (60 Days), country list: Macao; TDAC Guide",
       "evidenceExcerpt": "Macao appears in the Ministry of Foreign Affairs list of countries and territories entitled to the 60-day Visa Exemption Scheme; TDAC applies to non-Thai nationals entering by air, land or sea.",
       "checkedAt": "2026-09-08",
@@ -747,9 +1000,14 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 30,
-      "conditions": ["适用于马来西亚—中国互免签证安排下的短期旅游，每次入境最多 30 天。", "仍需满足入境审查、返程或续程安排等要求；本条不覆盖工作或长期居留。"],
+      "conditions": [
+        "适用于马来西亚—中国互免签证安排下的短期旅游，每次入境最多 30 天。",
+        "仍需满足入境审查、返程或续程安排等要求；本条不覆盖工作或长期居留。"
+      ],
       "status": "verified",
-      "sourceIds": ["my-immigration-cn-waiver"],
+      "sourceIds": [
+        "my-immigration-cn-waiver"
+      ],
       "evidenceLocator": "Immigration Department FAQ Malaysia–China mutual visa exemption agreement > permitted stay and purposes",
       "evidenceExcerpt": "Visa-free entry is allowed for up to 30 days per entry for the listed short-visit purposes under the Malaysia-China mutual visa exemption agreement.",
       "checkedAt": "2026-09-08",
@@ -764,9 +1022,14 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 90,
-      "conditions": ["护照自入境日起须有超过 6 个月有效期。", "MDAC 最迟须在预定抵达前三天内完成，登记国籍时选择 Hong Kong，并向移民官出示有效护照与已完成的 MDAC。"],
+      "conditions": [
+        "护照自入境日起须有超过 6 个月有效期。",
+        "MDAC 最迟须在预定抵达前三天内完成，登记国籍时选择 Hong Kong，并向移民官出示有效护照与已完成的 MDAC。"
+      ],
       "status": "verified",
-      "sourceIds": ["my-mofa-hk-entry"],
+      "sourceIds": [
+        "my-mofa-hk-entry"
+      ],
       "evidenceLocator": "Visa Requirement Information table > HONG KONG / PASSPORT; Important Notes",
       "evidenceExcerpt": "HONG KONG — PASSPORT — 90 days. Passport MUST remain valid for more than 6 months from the entry date. The MDAC must be completed no later than three days before scheduled arrival.",
       "checkedAt": "2026-09-08",
@@ -781,9 +1044,14 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 30,
-      "conditions": ["护照自入境日起须有超过 6 个月有效期。", "MDAC 登记国籍时选择 Macao，并向移民官出示有效护照与已完成的 MDAC。"],
+      "conditions": [
+        "护照自入境日起须有超过 6 个月有效期。",
+        "MDAC 登记国籍时选择 Macao，并向移民官出示有效护照与已完成的 MDAC。"
+      ],
       "status": "verified",
-      "sourceIds": ["my-mofa-hk-entry"],
+      "sourceIds": [
+        "my-mofa-hk-entry"
+      ],
       "evidenceLocator": "Visa Requirement Information table > MACAO / PASSPORT; Important Notes",
       "evidenceExcerpt": "MACAO — PASSPORT — 30 days. Hong Kong and Macao passport holders must select Hong Kong or Macao as nationality during MDAC registration.",
       "checkedAt": "2026-09-08",
@@ -798,9 +1066,13 @@
       "borderMode": "any",
       "outcome": "visa_required",
       "maxStayDays": null,
-      "conditions": ["香港签证身份书和旧式身份证明书被单独列为需要签证，不能继承香港特区护照的 90 天免签。"],
+      "conditions": [
+        "香港签证身份书和旧式身份证明书被单独列为需要签证，不能继承香港特区护照的 90 天免签。"
+      ],
       "status": "verified",
-      "sourceIds": ["my-mofa-hk-entry"],
+      "sourceIds": [
+        "my-mofa-hk-entry"
+      ],
       "evidenceLocator": "Visa Requirement Information table > HONG KONG / CERTIFICATE OF IDENTITY or DOCUMENT OF IDENTITY",
       "evidenceExcerpt": "HONG KONG — CERTIFICATE OF IDENTITY (C.I) or DOCUMENT OF IDENTITY (D.I) — VISA IS REQUIRED.",
       "checkedAt": "2026-09-08",
@@ -815,9 +1087,14 @@
       "borderMode": "any",
       "outcome": "visa_free",
       "maxStayDays": 14,
-      "conditions": ["仅适用于马来西亚外交部表中明确列出的 Macao Travel Permit 或 Portugal Certificate of Identity。", "不能把该 14 天结论泛化为澳门特区护照；澳门特区护照是独立的 30 天分支。"],
+      "conditions": [
+        "仅适用于马来西亚外交部表中明确列出的 Macao Travel Permit 或 Portugal Certificate of Identity。",
+        "不能把该 14 天结论泛化为澳门特区护照；澳门特区护照是独立的 30 天分支。"
+      ],
       "status": "verified",
-      "sourceIds": ["my-mofa-hk-entry"],
+      "sourceIds": [
+        "my-mofa-hk-entry"
+      ],
       "evidenceLocator": "Visa Requirement Information table > MACAO / TRAVEL PERMIT or PORTUGAL CERTIFICATE OF IDENTITY",
       "evidenceExcerpt": "MACAO — TRAVEL PERMIT or PORTUGAL CERTIFICATE OF IDENTITY (C.I) — 14 days.",
       "checkedAt": "2026-09-08",
@@ -833,9 +1110,15 @@
       "outcome": "visa_on_arrival",
       "maxStayDays": 30,
       "visaProductName": "B1 Tourist (Visa on Arrival)",
-      "conditions": ["印尼官方选择器路径为 CHINA → General, Family, or Social → Tourism, Family Visit, and Transit → B1。", "最多停留 30 天，可再延长 30 天；费用为 Rp500,000。", "入境查验时护照须至少还有 6 个月有效期，并出示离开印尼的机票或其他离境票据。"],
+      "conditions": [
+        "印尼官方选择器路径为 CHINA → General, Family, or Social → Tourism, Family Visit, and Transit → B1。",
+        "最多停留 30 天，可再延长 30 天；费用为 Rp500,000。",
+        "入境查验时护照须至少还有 6 个月有效期，并出示离开印尼的机票或其他离境票据。"
+      ],
       "status": "verified",
-      "sourceIds": ["id-immigration-visa-selector"],
+      "sourceIds": [
+        "id-immigration-visa-selector"
+      ],
       "evidenceLocator": "Official e-Visa selector path CHINA > General, Family, or Social > Tourism, Family Visit, and Transit > B1 > Detail & Apply",
       "evidenceExcerpt": "Type of Visa B1 — Stay up to 30 days (extendable for another 30 days); cost Rp500,000. Document Requirement: passport valid for at least 6 months and outbound ticket from Indonesia.",
       "checkedAt": "2026-09-08",
@@ -851,9 +1134,14 @@
       "outcome": "visa_free",
       "maxStayDays": null,
       "visaProductName": "A1 Visa Exemption Tourism",
-      "conditions": ["印尼官方选择器在 HONG KONG SAR 的旅游路径中提供 A1 Visa Exemption Tourism。", "本次直接页面未稳定呈现 A1 的停留期限，因此不输出具体天数；出发前仍需复核当前 A1 条件和适用口岸。"],
+      "conditions": [
+        "印尼官方选择器在 HONG KONG SAR 的旅游路径中提供 A1 Visa Exemption Tourism。",
+        "本次直接页面未稳定呈现 A1 的停留期限，因此不输出具体天数；出发前仍需复核当前 A1 条件和适用口岸。"
+      ],
       "status": "verified",
-      "sourceIds": ["id-immigration-visa-selector"],
+      "sourceIds": [
+        "id-immigration-visa-selector"
+      ],
       "evidenceLocator": "Official e-Visa selector path HONG KONG SAR > General, Family, or Social > Tourism, Family Visit, and Transit > visa product list",
       "evidenceExcerpt": "For HONG KONG SAR, the official selector lists A1 - Visa Exemption Tourism as an available tourism product.",
       "checkedAt": "2026-09-08",
@@ -869,9 +1157,14 @@
       "outcome": "visa_free",
       "maxStayDays": null,
       "visaProductName": "A1 Visa Exemption Tourism",
-      "conditions": ["印尼官方选择器在 MACAO SAR 的旅游路径中提供 A1 Visa Exemption Tourism。", "本次直接页面未稳定呈现 A1 的停留期限，因此不输出具体天数；出发前仍需复核当前 A1 条件和适用口岸。"],
+      "conditions": [
+        "印尼官方选择器在 MACAO SAR 的旅游路径中提供 A1 Visa Exemption Tourism。",
+        "本次直接页面未稳定呈现 A1 的停留期限，因此不输出具体天数；出发前仍需复核当前 A1 条件和适用口岸。"
+      ],
       "status": "verified",
-      "sourceIds": ["id-immigration-visa-selector"],
+      "sourceIds": [
+        "id-immigration-visa-selector"
+      ],
       "evidenceLocator": "Official e-Visa selector path MACAO SAR > General, Family, or Social > Tourism, Family Visit, and Transit > visa product list",
       "evidenceExcerpt": "For MACAO SAR, the official selector lists A1 - Visa Exemption Tourism as an available tourism product.",
       "checkedAt": "2026-09-08",
@@ -886,9 +1179,14 @@
       "borderMode": "any",
       "outcome": "manual_review",
       "maxStayDays": null,
-      "conditions": ["越南国家电子签证入口在本次受支持浏览器中返回空白内容，无法直接核实当前资格、有效期和准入境口岸。", "不得仅依据搜索引擎摘要或旧外交部驻外页面生成电子签结论。"],
+      "conditions": [
+        "越南国家电子签证入口在本次受支持浏览器中返回空白内容，无法直接核实当前资格、有效期和准入境口岸。",
+        "不得仅依据搜索引擎摘要或旧外交部驻外页面生成电子签结论。"
+      ],
       "status": "draft",
-      "sourceIds": ["vn-immigration-evisa"],
+      "sourceIds": [
+        "vn-immigration-evisa"
+      ],
       "evidenceLocator": "Vietnam National Electronic Visa system > For outside Viet Nam > Foreigners personally applying for e-Visa; direct page blocked in current review",
       "evidenceExcerpt": "The official e-Visa route was identified, but the application page returned no reviewable content in the supported browser, so the route remains REVIEW.",
       "checkedAt": "2026-09-08",
@@ -903,9 +1201,14 @@
       "borderMode": "any",
       "outcome": "manual_review",
       "maxStayDays": null,
-      "conditions": ["需在越南国家电子签证系统直接复核 Hong Kong SAR 证件资格、签证有效期和获准口岸。", "在完成直接核验前不输出搜索摘要中出现的天数。"],
+      "conditions": [
+        "需在越南国家电子签证系统直接复核 Hong Kong SAR 证件资格、签证有效期和获准口岸。",
+        "在完成直接核验前不输出搜索摘要中出现的天数。"
+      ],
       "status": "draft",
-      "sourceIds": ["vn-immigration-evisa"],
+      "sourceIds": [
+        "vn-immigration-evisa"
+      ],
       "evidenceLocator": "Vietnam National Electronic Visa system; passport-specific eligibility pending direct review",
       "evidenceExcerpt": "The official e-Visa route is registered, but passport-specific eligibility could not be directly reviewed in this session.",
       "checkedAt": "2026-09-08",
@@ -920,9 +1223,14 @@
       "borderMode": "any",
       "outcome": "manual_review",
       "maxStayDays": null,
-      "conditions": ["需在越南国家电子签证系统直接复核 Macao SAR 证件资格、签证有效期和获准口岸。", "在完成直接核验前不输出搜索摘要中出现的天数。"],
+      "conditions": [
+        "需在越南国家电子签证系统直接复核 Macao SAR 证件资格、签证有效期和获准口岸。",
+        "在完成直接核验前不输出搜索摘要中出现的天数。"
+      ],
       "status": "draft",
-      "sourceIds": ["vn-immigration-evisa"],
+      "sourceIds": [
+        "vn-immigration-evisa"
+      ],
       "evidenceLocator": "Vietnam National Electronic Visa system; passport-specific eligibility pending direct review",
       "evidenceExcerpt": "The official e-Visa route is registered, but passport-specific eligibility could not be directly reviewed in this session.",
       "checkedAt": "2026-09-08",
@@ -937,9 +1245,14 @@
       "borderMode": "any",
       "outcome": "manual_review",
       "maxStayDays": null,
-      "conditions": ["菲律宾外交部驻北京使馆页面当前停在 Cloudflare 安全验证，无法直接复核普通旅游签证与 AJACSSUK 等例外条件。", "在例外签证、使用历史和停留期均未核实前不输出确定结论。"],
+      "conditions": [
+        "菲律宾外交部驻北京使馆页面当前停在 Cloudflare 安全验证，无法直接复核普通旅游签证与 AJACSSUK 等例外条件。",
+        "在例外签证、使用历史和停留期均未核实前不输出确定结论。"
+      ],
       "status": "draft",
-      "sourceIds": ["ph-dfa-beijing-general"],
+      "sourceIds": [
+        "ph-dfa-beijing-general"
+      ],
       "evidenceLocator": "Embassy of the Philippines in Beijing > General Information; direct page blocked by security verification",
       "evidenceExcerpt": "The official page could not be reviewed beyond its security challenge, so the ordinary-passport route and any third-country-visa exception remain REVIEW.",
       "checkedAt": "2026-09-08",
@@ -954,9 +1267,14 @@
       "borderMode": "any",
       "outcome": "manual_review",
       "maxStayDays": null,
-      "conditions": ["官方页面的搜索索引提示存在香港特区护照短期免签分支，但直接页面被安全验证阻止。", "停留天数、续程票和护照有效期未直接核验前维持 REVIEW。"],
+      "conditions": [
+        "官方页面的搜索索引提示存在香港特区护照短期免签分支，但直接页面被安全验证阻止。",
+        "停留天数、续程票和护照有效期未直接核验前维持 REVIEW。"
+      ],
       "status": "draft",
-      "sourceIds": ["ph-dfa-beijing-general"],
+      "sourceIds": [
+        "ph-dfa-beijing-general"
+      ],
       "evidenceLocator": "Embassy of the Philippines in Beijing > General Information; HKSAR branch pending direct page review",
       "evidenceExcerpt": "An indexed official snippet points to an HKSAR passport branch, but direct official-page evidence was unavailable; no visa-free duration is asserted.",
       "checkedAt": "2026-09-08",
@@ -971,11 +1289,381 @@
       "borderMode": "any",
       "outcome": "manual_review",
       "maxStayDays": null,
-      "conditions": ["官方页面的搜索索引提示存在澳门特区护照短期免签分支，但直接页面被安全验证阻止。", "停留天数、续程票和护照有效期未直接核验前维持 REVIEW。"],
+      "conditions": [
+        "官方页面的搜索索引提示存在澳门特区护照短期免签分支，但直接页面被安全验证阻止。",
+        "停留天数、续程票和护照有效期未直接核验前维持 REVIEW。"
+      ],
       "status": "draft",
-      "sourceIds": ["ph-dfa-beijing-general"],
+      "sourceIds": [
+        "ph-dfa-beijing-general"
+      ],
       "evidenceLocator": "Embassy of the Philippines in Beijing > General Information; Macao SAR branch pending direct page review",
       "evidenceExcerpt": "An indexed official snippet points to a Macao SAR passport branch, but direct official-page evidence was unavailable; no visa-free duration is asserted.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "kh-cn-prc-ordinary-tourism-evisa",
+      "destinationJurisdictionId": "kh",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Visa T (Tourist e-Visa)",
+      "conditions": [
+        "柬埔寨官方 e-Visa 的 Visa T 为单次入境，签发日起 3 个月内有效，入境后停留 1 个月，费用 USD 30。",
+        "入境时护照剩余有效期须超过 6 个月，并准备近期电子证件照和在线支付卡。",
+        "所有旅客（包括已获签证者）仍须提交 Cambodia e-Arrival；官方建议抵达前 7 天内在线完成。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "kh-evisa-tourist-type",
+        "kh-evisa-home"
+      ],
+      "evidenceLocator": "Cambodia e-Visa > Visa Type Information > Visa T; official home > Get e-Visa Approval / Submit e-Arrival",
+      "evidenceExcerpt": "Visa T: single entry, USD 30, validity 3 months, length of stay 1 month, passport validity of more than six months. The exemption list does not include China, Hong Kong SAR or Macao SAR; all travelers are required to fill in Cambodia e-Arrival.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "kh-hk-hksar-tourism-evisa",
+      "destinationJurisdictionId": "kh",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Visa T (Tourist e-Visa)",
+      "conditions": [
+        "柬埔寨官方 e-Visa 的 Visa T 为单次入境，签发日起 3 个月内有效，入境后停留 1 个月，费用 USD 30。",
+        "入境时护照剩余有效期须超过 6 个月，并准备近期电子证件照和在线支付卡。",
+        "所有旅客（包括已获签证者）仍须提交 Cambodia e-Arrival；官方建议抵达前 7 天内在线完成。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "kh-evisa-tourist-type",
+        "kh-evisa-home"
+      ],
+      "evidenceLocator": "Cambodia e-Visa > Visa Type Information > Visa T; official home > Get e-Visa Approval / Submit e-Arrival",
+      "evidenceExcerpt": "Visa T: single entry, USD 30, validity 3 months, length of stay 1 month, passport validity of more than six months. The exemption list does not include China, Hong Kong SAR or Macao SAR; all travelers are required to fill in Cambodia e-Arrival.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "kh-mo-macao-sar-tourism-evisa",
+      "destinationJurisdictionId": "kh",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Visa T (Tourist e-Visa)",
+      "conditions": [
+        "柬埔寨官方 e-Visa 的 Visa T 为单次入境，签发日起 3 个月内有效，入境后停留 1 个月，费用 USD 30。",
+        "入境时护照剩余有效期须超过 6 个月，并准备近期电子证件照和在线支付卡。",
+        "所有旅客（包括已获签证者）仍须提交 Cambodia e-Arrival；官方建议抵达前 7 天内在线完成。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "kh-evisa-tourist-type",
+        "kh-evisa-home"
+      ],
+      "evidenceLocator": "Cambodia e-Visa > Visa Type Information > Visa T; official home > Get e-Visa Approval / Submit e-Arrival",
+      "evidenceExcerpt": "Visa T: single entry, USD 30, validity 3 months, length of stay 1 month, passport validity of more than six months. The exemption list does not include China, Hong Kong SAR or Macao SAR; all travelers are required to fill in Cambodia e-Arrival.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "la-cn-prc-ordinary-tourism-evisa",
+      "destinationJurisdictionId": "la",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Tourist Visa (T-B3) eVisa",
+      "conditions": [
+        "官方资格名单明确包含 China。",
+        "只接受普通护照；护照须从抵达日起至少还有 6 个月有效期并至少留 1 页空白页。",
+        "eVisa 批准信自收到起 60 天有效，入境后停留 30 天；须打印批准信并使用 9 个指定航空、陆路或铁路口岸之一。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "la-evisa-eligibility",
+        "la-evisa-terms"
+      ],
+      "evidenceLocator": "Lao eVisa > Who can apply: China; Terms IV, VI, VIII and IX",
+      "evidenceExcerpt": "China appears in the official eligible-country list. Only ordinary passports are applicable; passport validity must be at least 6 months. Tourist Visa T-B3 permits 30 days, the approval letter is valid for 60 days, and entry is limited to designated ports.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "la-hk-hksar-tourism-evisa",
+      "destinationJurisdictionId": "la",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Tourist Visa (T-B3) eVisa",
+      "conditions": [
+        "官方资格名单明确包含 Hongkong SAR, China。",
+        "只接受普通护照；护照须从抵达日起至少还有 6 个月有效期并至少留 1 页空白页。",
+        "eVisa 批准信自收到起 60 天有效，入境后停留 30 天；须打印批准信并使用 9 个指定航空、陆路或铁路口岸之一。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "la-evisa-eligibility",
+        "la-evisa-terms"
+      ],
+      "evidenceLocator": "Lao eVisa > Who can apply: Hongkong SAR, China; Terms IV, VI, VIII and IX",
+      "evidenceExcerpt": "Hongkong SAR, China appears in the official eligible-country list. Only ordinary passports are applicable; passport validity must be at least 6 months. Tourist Visa T-B3 permits 30 days, the approval letter is valid for 60 days, and entry is limited to designated ports.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "la-mo-macao-sar-tourism-evisa",
+      "destinationJurisdictionId": "la",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Tourist Visa (T-B3) eVisa",
+      "conditions": [
+        "官方资格名单明确包含 Macao SAR, China。",
+        "只接受普通护照；护照须从抵达日起至少还有 6 个月有效期并至少留 1 页空白页。",
+        "eVisa 批准信自收到起 60 天有效，入境后停留 30 天；须打印批准信并使用 9 个指定航空、陆路或铁路口岸之一。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "la-evisa-eligibility",
+        "la-evisa-terms"
+      ],
+      "evidenceLocator": "Lao eVisa > Who can apply: Macao SAR, China; Terms IV, VI, VIII and IX",
+      "evidenceExcerpt": "Macao SAR, China appears in the official eligible-country list. Only ordinary passports are applicable; passport validity must be at least 6 months. Tourist Visa T-B3 permits 30 days, the approval letter is valid for 60 days, and entry is limited to designated ports.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "mm-cn-prc-ordinary-tourism-evisa",
+      "destinationJurisdictionId": "mm",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 28,
+      "visaProductName": "Myanmar Tourist eVisa",
+      "conditions": [
+        "缅甸官方 Tourist eVisa 资格说明明确包含 China。",
+        "护照至少有 6 个月有效期，并上传护照资料页、近期照片、离境票和住宿证明；旅行证件不获接受。",
+        "批准信自签发起 90 天有效，入境后停留 28 天，单次入境；只可从仰光、曼德勒、内比都国际机场或 Kawthaung 陆路口岸进入，海港不接受 eVisa。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mm-evisa-tourist"
+      ],
+      "evidenceLocator": "Myanmar eVisa > Notice to Tourist > eligibility list (China), processing information and permitted ports",
+      "evidenceExcerpt": "China is eligible to apply Tourist Visa. The approval letter is valid 90 days; length of stay is 28 days; eVisa is single entry and accepted only at the listed three airports and Kawthaung land checkpoint, not seaports.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "mm-hk-hksar-tourism-evisa",
+      "destinationJurisdictionId": "mm",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 28,
+      "visaProductName": "Myanmar Tourist eVisa",
+      "conditions": [
+        "缅甸官方 Tourist eVisa 资格说明明确包含 Hong Kong Special Administrative Region of China。",
+        "护照至少有 6 个月有效期，并上传护照资料页、近期照片、离境票和住宿证明；旅行证件不获接受。",
+        "批准信自签发起 90 天有效，入境后停留 28 天，单次入境；只可从仰光、曼德勒、内比都国际机场或 Kawthaung 陆路口岸进入，海港不接受 eVisa。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mm-evisa-tourist"
+      ],
+      "evidenceLocator": "Myanmar eVisa > Notice to Tourist > eligibility list (Hong Kong Special Administrative Region of China), processing information and permitted ports",
+      "evidenceExcerpt": "Hong Kong Special Administrative Region of China is eligible to apply Tourist Visa. The approval letter is valid 90 days; length of stay is 28 days; eVisa is single entry and accepted only at the listed three airports and Kawthaung land checkpoint, not seaports.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "mm-mo-macao-sar-tourism-evisa",
+      "destinationJurisdictionId": "mm",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": 28,
+      "visaProductName": "Myanmar Tourist eVisa",
+      "conditions": [
+        "缅甸官方 Tourist eVisa 资格说明明确包含 Macao Special Administrative Region of China。",
+        "护照至少有 6 个月有效期，并上传护照资料页、近期照片、离境票和住宿证明；旅行证件不获接受。",
+        "批准信自签发起 90 天有效，入境后停留 28 天，单次入境；只可从仰光、曼德勒、内比都国际机场或 Kawthaung 陆路口岸进入，海港不接受 eVisa。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mm-evisa-tourist"
+      ],
+      "evidenceLocator": "Myanmar eVisa > Notice to Tourist > eligibility list (Macao Special Administrative Region of China), processing information and permitted ports",
+      "evidenceExcerpt": "Macao Special Administrative Region of China is eligible to apply Tourist Visa. The approval letter is valid 90 days; length of stay is 28 days; eVisa is single entry and accepted only at the listed three airports and Kawthaung land checkpoint, not seaports.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "bn-cn-prc-ordinary-tourism-review",
+      "destinationJurisdictionId": "bn",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "文莱外交部国家路由器中的 China 行为多分支控件，本轮未出现可审阅的最终类别页面。",
+        "在直接确认中国普通护照属于预先签证、落地签或其他安排之前维持 REVIEW，不依据搜索摘要升级。"
+      ],
+      "status": "draft",
+      "sourceIds": [
+        "bn-mfa-visa-category"
+      ],
+      "evidenceLocator": "Brunei MFA > Visa Application by Country / Region > China multi-branch row; final branch unresolved",
+      "evidenceExcerpt": "The official router exposes China as a multi-branch row but did not reveal a reviewable final category in this session; no visa outcome or stay period is asserted.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "bn-hk-hksar-tourism-visa-waiver",
+      "destinationJurisdictionId": "bn",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 14,
+      "conditions": [
+        "仅适用于文莱外交部国家路由器中 Hongkong 对应的护照分支。",
+        "超过 14 天、商务访问或专业访问需要另行申请相应签证。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "bn-mfa-visa-category",
+        "bn-mfa-waiver-14"
+      ],
+      "evidenceLocator": "Brunei MFA > Visa Application by Country / Region > Hongkong > D3; Category D3 waiver page",
+      "evidenceExcerpt": "Hongkong links to Category D3. Foreign nationals under Category D3 do not require a visa and are allowed to stay for up to 14 days; a visa is required for a longer stay or business/professional visits.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "bn-mo-macao-sar-tourism-visa-waiver",
+      "destinationJurisdictionId": "bn",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 14,
+      "conditions": [
+        "仅适用于文莱外交部国家路由器中 Macau 对应的护照分支。",
+        "超过 14 天、商务访问或专业访问需要另行申请相应签证。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "bn-mfa-visa-category",
+        "bn-mfa-waiver-14"
+      ],
+      "evidenceLocator": "Brunei MFA > Visa Application by Country / Region > Macau > D3; Category D3 waiver page",
+      "evidenceExcerpt": "Macau links to Category D3. Foreign nationals under Category D3 do not require a visa and are allowed to stay for up to 14 days; a visa is required for a longer stay or business/professional visits.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "tl-cn-prc-ordinary-tourism-voa",
+      "destinationJurisdictionId": "tl",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": 30,
+      "visaProductName": "Timor-Leste Tourist Visa on Arrival",
+      "conditions": [
+        "可在设有移民服务的正式航空、陆路或海路口岸申请；曾被拒绝入境、遣返、排除或有未缴罚款者须提前申请。",
+        "护照入境时至少还有 6 个月有效期，完成入境申报；必要时出示住宿、离境安排和足够资金。",
+        "费用为 USD 30 现金，停留 30 天，通常可再延长一次 30 天；旅游签证不得从事任何有偿或无偿职业活动。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "tl-immigration-tourist-visa",
+        "tl-immigration-exemptions"
+      ],
+      "evidenceLocator": "Timor-Leste Migration Service > Tourist Visa > How and where to apply, Documentary requirements, Fee and Conditions; Visa exemptions lists",
+      "evidenceExcerpt": "The tourist visa may be obtained on arrival at official air, land or sea border posts. It allows a 30-day single entry, costs US$30 cash, requires a travel document valid at least 6 months, and may normally be extended once for 30 days. China, Hong Kong SAR and Macao SAR are not in the published exemption groups.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "tl-hk-hksar-tourism-voa",
+      "destinationJurisdictionId": "tl",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": 30,
+      "visaProductName": "Timor-Leste Tourist Visa on Arrival",
+      "conditions": [
+        "可在设有移民服务的正式航空、陆路或海路口岸申请；曾被拒绝入境、遣返、排除或有未缴罚款者须提前申请。",
+        "护照入境时至少还有 6 个月有效期，完成入境申报；必要时出示住宿、离境安排和足够资金。",
+        "费用为 USD 30 现金，停留 30 天，通常可再延长一次 30 天；旅游签证不得从事任何有偿或无偿职业活动。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "tl-immigration-tourist-visa",
+        "tl-immigration-exemptions"
+      ],
+      "evidenceLocator": "Timor-Leste Migration Service > Tourist Visa > How and where to apply, Documentary requirements, Fee and Conditions; Visa exemptions lists",
+      "evidenceExcerpt": "The tourist visa may be obtained on arrival at official air, land or sea border posts. It allows a 30-day single entry, costs US$30 cash, requires a travel document valid at least 6 months, and may normally be extended once for 30 days. China, Hong Kong SAR and Macao SAR are not in the published exemption groups.",
+      "checkedAt": "2026-09-08",
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "tl-mo-macao-sar-tourism-voa",
+      "destinationJurisdictionId": "tl",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": 30,
+      "visaProductName": "Timor-Leste Tourist Visa on Arrival",
+      "conditions": [
+        "可在设有移民服务的正式航空、陆路或海路口岸申请；曾被拒绝入境、遣返、排除或有未缴罚款者须提前申请。",
+        "护照入境时至少还有 6 个月有效期，完成入境申报；必要时出示住宿、离境安排和足够资金。",
+        "费用为 USD 30 现金，停留 30 天，通常可再延长一次 30 天；旅游签证不得从事任何有偿或无偿职业活动。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "tl-immigration-tourist-visa",
+        "tl-immigration-exemptions"
+      ],
+      "evidenceLocator": "Timor-Leste Migration Service > Tourist Visa > How and where to apply, Documentary requirements, Fee and Conditions; Visa exemptions lists",
+      "evidenceExcerpt": "The tourist visa may be obtained on arrival at official air, land or sea border posts. It allows a 30-day single entry, costs US$30 cash, requires a travel document valid at least 6 months, and may normally be extended once for 30 days. China, Hong Kong SAR and Macao SAR are not in the published exemption groups.",
       "checkedAt": "2026-09-08",
       "reviewDueAt": "2026-10-08"
     }

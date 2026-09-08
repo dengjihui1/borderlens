@@ -186,3 +186,54 @@ test('越南与菲律宾在官方页面受阻时保持 draft REVIEW', async () =
     for (const rule of rules) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
   }
 });
+
+test('柬埔寨 Visa T 保留电子签、护照有效期与 e-Arrival 要求', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const cambodia = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'kh');
+  assert.equal(cambodia.length, 3);
+  for (const rule of cambodia) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', 30]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('e-Arrival')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('6 个月')));
+  }
+});
+
+test('老挝电子签对中国与港澳特区护照保留 30 天和指定口岸限制', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const laos = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'la');
+  assert.equal(laos.length, 3);
+  for (const rule of laos) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', 30]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('指定') && condition.includes('口岸')));
+  }
+});
+
+test('缅甸电子签区分护照与旅行证并限制入境口岸', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const myanmar = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'mm');
+  assert.equal(myanmar.length, 3);
+  for (const rule of myanmar) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', 28]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('旅行证件') && condition.includes('不获接受')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('海港')));
+  }
+});
+
+test('文莱港澳护照为 14 天免签而中国普通护照保持 REVIEW', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
+  assert.deepEqual([byId.get('bn-hk-hksar-tourism-visa-waiver')!.outcome, byId.get('bn-hk-hksar-tourism-visa-waiver')!.maxStayDays], ['visa_free', 14]);
+  assert.deepEqual([byId.get('bn-mo-macao-sar-tourism-visa-waiver')!.outcome, byId.get('bn-mo-macao-sar-tourism-visa-waiver')!.maxStayDays], ['visa_free', 14]);
+  assert.deepEqual([byId.get('bn-cn-prc-ordinary-tourism-review')!.status, byId.get('bn-cn-prc-ordinary-tourism-review')!.outcome], ['draft', 'manual_review']);
+});
+
+test('东帝汶三类护照均保留落地签、30 天与全口岸条件', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const timorLeste = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'tl');
+  assert.equal(timorLeste.length, 3);
+  for (const rule of timorLeste) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_on_arrival', 30]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('航空') && condition.includes('陆路') && condition.includes('海路')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('USD 30')));
+  }
+});

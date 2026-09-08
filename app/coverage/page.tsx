@@ -10,7 +10,7 @@ export default function CoveragePage() {
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 04</div>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 05</div>
         <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
       </header>
 
@@ -35,7 +35,7 @@ export default function CoveragePage() {
 
         <section className="coverage-warning">
           <ShieldAlert size={22} />
-          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增泰国、马来西亚和印度尼西亚的已核验规则，并为越南、菲律宾建立 REVIEW 路由。官网空白或安全验证阻挡时，不依据搜索摘要升级结论。</p></div>
+          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增柬埔寨、老挝、缅甸、文莱和东帝汶的结构化路线；其中中国普通护照赴文莱仍保持 REVIEW。官网多分支没有出现可审阅结论时，不依据搜索摘要升级。</p></div>
         </section>
 
         <section className="batch-card">
@@ -68,7 +68,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · Phase 04</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 05</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }

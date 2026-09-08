@@ -26,11 +26,11 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
-  { id: 'th', label: '泰国', note: '60 天免签与 TDAC 入境卡并存' },
-  { id: 'my', label: '马来西亚', note: '港澳护照、身份书与旅行证分流' },
-  { id: 'id', label: '印度尼西亚', note: 'A1 免签与 B1 落地签分流' },
-  { id: 'vn', label: '越南', note: '官方 eVisa 页面空白，保留 REVIEW' },
-  { id: 'ph', label: '菲律宾', note: 'DFA 安全验证阻挡，保留 REVIEW' },
+  { id: 'kh', label: '柬埔寨', note: 'Visa T 电子签与 e-Arrival 双步骤' },
+  { id: 'la', label: '老挝', note: 'T-B3 电子签限制为 9 个指定口岸' },
+  { id: 'mm', label: '缅甸', note: '28 天电子签且旅行证件不适用' },
+  { id: 'bn', label: '文莱', note: '港澳 14 天免签；中国路线保留 REVIEW' },
+  { id: 'tl', label: '东帝汶', note: '航空、陆路、海路口岸均可申请落地签' },
 ].map((item) => {
   const rules = rulesByDestination(item.id);
   return {
