@@ -1,4 +1,5 @@
-import { index, integer, primaryKey, sqliteTable, text, uniqueIndex } from 'drizzle-orm/sqlite-core';
+import { sql } from 'drizzle-orm';
+import { check, index, integer, primaryKey, sqliteTable, text, uniqueIndex } from 'drizzle-orm/sqlite-core';
 
 export const jurisdictions = sqliteTable('jurisdictions', {
   id: text('id').primaryKey(),
@@ -46,9 +47,30 @@ export const travelDocuments = sqliteTable('travel_documents', {
   active: integer('active', { mode: 'boolean' }).notNull().default(true),
 }, (table) => [index('idx_travel_documents_issuer_type').on(table.issuerJurisdictionId, table.documentType)]);
 
+export const policyZones = sqliteTable('policy_zones', {
+  id: text('id').primaryKey(),
+  label: text('label').notNull(),
+  authority: text('authority').notNull(),
+  kind: text('kind', { enum: ['shared_border_and_visa_area'] }).notNull(),
+  checkedAt: text('checked_at').notNull(),
+  reviewDueAt: text('review_due_at').notNull(),
+  active: integer('active', { mode: 'boolean' }).notNull().default(true),
+});
+
+export const policyZoneMembers = sqliteTable('policy_zone_members', {
+  zoneId: text('zone_id').notNull().references(() => policyZones.id),
+  jurisdictionId: text('jurisdiction_id').notNull().references(() => jurisdictions.id),
+  sourceId: text('source_id').notNull().references(() => officialSources.id),
+  checkedAt: text('checked_at').notNull(),
+}, (table) => [
+  primaryKey({ columns: [table.zoneId, table.jurisdictionId] }),
+  index('idx_policy_zone_members_jurisdiction').on(table.jurisdictionId, table.zoneId),
+]);
+
 export const policyRules = sqliteTable('policy_rules', {
   id: text('id').primaryKey(),
-  destinationJurisdictionId: text('destination_jurisdiction_id').notNull().references(() => jurisdictions.id),
+  destinationJurisdictionId: text('destination_jurisdiction_id').references(() => jurisdictions.id),
+  destinationPolicyZoneId: text('destination_policy_zone_id').references(() => policyZones.id),
   documentIssuerJurisdictionId: text('document_issuer_jurisdiction_id').notNull().references(() => jurisdictions.id),
   documentType: text('document_type').notNull(),
   purpose: text('purpose', { enum: ['tourism', 'business', 'study', 'work', 'family', 'transit', 'other'] }).notNull(),
@@ -65,7 +87,9 @@ export const policyRules = sqliteTable('policy_rules', {
   createdAt: text('created_at').notNull(),
   updatedAt: text('updated_at').notNull(),
 }, (table) => [
-  index('idx_policy_lookup').on(table.destinationJurisdictionId, table.documentIssuerJurisdictionId, table.documentType, table.purpose, table.status),
+  check('check_policy_rules_one_destination', sql`(${table.destinationJurisdictionId} is not null) <> (${table.destinationPolicyZoneId} is not null)`),
+  index('idx_policy_lookup_jurisdiction').on(table.destinationJurisdictionId, table.documentIssuerJurisdictionId, table.documentType, table.purpose, table.status),
+  index('idx_policy_lookup_zone').on(table.destinationPolicyZoneId, table.documentIssuerJurisdictionId, table.documentType, table.purpose, table.status),
   index('idx_policy_review_due').on(table.status, table.reviewDueAt),
 ]);
 

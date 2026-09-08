@@ -1,7 +1,7 @@
 import { ArrowLeft, Database, ExternalLink, FileSearch, Globe2, ShieldAlert } from 'lucide-react';
 import Link from 'next/link';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { coverageSummary, registeredSources, sourceStatusCopy } from '@/lib/global-data';
+import { coverageSummary, latestPolicyBatch, registeredSources, sourceStatusCopy } from '@/lib/global-data';
 
 const format = new Intl.NumberFormat('zh-CN');
 
@@ -10,7 +10,7 @@ export default function CoveragePage() {
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 02</div>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 03</div>
         <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
       </header>
 
@@ -27,19 +27,24 @@ export default function CoveragePage() {
 
       <section className="coverage-content">
         <div className="metric-grid">
-          <article><span><Globe2 /></span><strong>{coverageSummary.jurisdictionCount}</strong><p>联合国 M49 国家与地区</p><small>全球主目录已建立</small></article>
-          <article><span><FileSearch /></span><strong>{coverageSummary.officialSourceCount}</strong><p>首批官方来源入口</p><small>覆盖 12 个重点法域及全球系统</small></article>
+          <article><span><Globe2 /></span><strong>{coverageSummary.jurisdictionCount}</strong><p>联合国 M49 国家与地区</p><small>另建 {coverageSummary.policyZoneCount} 个跨境政策区域</small></article>
+          <article><span><FileSearch /></span><strong>{coverageSummary.officialSourceCount}</strong><p>官方来源入口</p><small>只记录政府、超国家与许可系统</small></article>
           <article><span><Database /></span><strong>{coverageSummary.verifiedPolicyRuleCount}</strong><p>已结构化的受控规则</p><small>与“仅能访问”严格分开</small></article>
           <article><span><ShieldAlert /></span><strong>{format.format(coverageSummary.minimumPolicyCells)}</strong><p>最低政策组合规模</p><small>目的地 × 证件签发地 × 7 类目的</small></article>
         </div>
 
         <section className="coverage-warning">
           <ShieldAlert size={22} />
-          <div><strong>当前不是“全球签证政策已完成”。</strong><p>已完成的是全球数据库骨架、248 个法域目录和第一批官方来源注册。只有状态为“规则已核验”的来源可以支撑明确结论，其余仍输出 REVIEW。</p></div>
+          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增新西兰、申根、新加坡、澳大利亚和英国的窄规则，并把 {coverageSummary.schengenMemberCount} 个申根成员建模为政策区域。只有状态为“规则已核验”的来源可以支撑明确结论，其余仍输出 REVIEW。</p></div>
+        </section>
+
+        <section className="batch-card">
+          <div><p className="step-kicker">LATEST VERIFIED BATCH</p><h2>本批已经能回答什么</h2></div>
+          <div className="batch-grid">{latestPolicyBatch.map((item) => <article key={item.id}><strong>{item.label}</strong><span>{item.ruleCount} 条规则</span><p>{item.note}</p></article>)}</div>
         </section>
 
         <section className="registry-card">
-          <div className="registry-heading"><div><p className="step-kicker">OFFICIAL SOURCE REGISTRY</p><h2>第一批官方来源队列</h2></div><div className="registry-counts"><span>{coverageSummary.reachableSourceCount} 待转录</span><span>{coverageSummary.blockedSourceCount} 需浏览器</span></div></div>
+          <div className="registry-heading"><div><p className="step-kicker">OFFICIAL SOURCE REGISTRY</p><h2>官方来源采集队列</h2></div><div className="registry-counts"><span>{coverageSummary.reachableSourceCount} 待转录</span><span>{coverageSummary.blockedSourceCount} 需浏览器</span></div></div>
           <Table className="registry-table">
             <TableHeader><TableRow><TableHead>法域 / 系统</TableHead><TableHead>官方机构</TableHead><TableHead>覆盖范围</TableHead><TableHead>状态</TableHead><TableHead>来源</TableHead></TableRow></TableHeader>
             <TableBody>{registeredSources.map((source) => <TableRow key={source.id}>
@@ -63,7 +68,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · foundation</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 03</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }

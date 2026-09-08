@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-08",
+  "zones": [
+    {
+      "id": "eu-schengen",
+      "label": "Schengen area",
+      "authority": "European Commission, Migration and Home Affairs",
+      "kind": "shared_border_and_visa_area",
+      "members": [
+        "at", "be", "bg", "hr", "cz", "dk", "ee", "fi", "fr", "de",
+        "gr", "hu", "is", "it", "lv", "li", "lt", "lu", "mt", "nl",
+        "no", "pl", "pt", "ro", "sk", "si", "es", "se", "ch"
+      ],
+      "sourceIds": ["eu-schengen-area"],
+      "evidenceLocator": "Schengen area overview, composition paragraph",
+      "evidenceExcerpt": "The Schengen area is composed of 29 countries: 25 EU Member States and 4 non-EU countries (Iceland, Norway, Switzerland and Liechtenstein). Bulgaria and Romania were the last countries to join on 1 January 2025; Cyprus is still integrating and Ireland applies an opt-out.",
+      "reviewDueAt": "2026-10-08"
+    }
+  ]
+}
