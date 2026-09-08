@@ -63,4 +63,4 @@ if (errors.length) {
 }
 
 const statusCounts = Object.groupBy(registry.sources, (source) => source.status);
-console.log(JSON.stringify({ jurisdictions: countries.count, policyZones: policyZones.zones.length, sources: registry.sources.length, verifiedPolicyRules: policies.rules.length, sourceStatuses: Object.fromEntries(Object.entries(statusCounts).map(([key, value]) => [key, value.length])) }, null, 2));
+console.log(JSON.stringify({ jurisdictions: countries.count, policyZones: policyZones.zones.length, sources: registry.sources.length, verifiedPolicyRules: policies.rules.filter((rule) => rule.status === 'verified').length, reviewPolicyRules: policies.rules.filter((rule) => rule.status !== 'verified').length, sourceStatuses: Object.fromEntries(Object.entries(statusCounts).map(([key, value]) => [key, value.length])) }, null, 2));

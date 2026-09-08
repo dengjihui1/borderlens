@@ -29,18 +29,18 @@ export default function CoveragePage() {
         <div className="metric-grid">
           <article><span><Globe2 /></span><strong>{coverageSummary.jurisdictionCount}</strong><p>联合国 M49 国家与地区</p><small>另建 {coverageSummary.policyZoneCount} 个跨境政策区域</small></article>
           <article><span><FileSearch /></span><strong>{coverageSummary.officialSourceCount}</strong><p>官方来源入口</p><small>只记录政府、超国家与许可系统</small></article>
-          <article><span><Database /></span><strong>{coverageSummary.verifiedPolicyRuleCount}</strong><p>已结构化的受控规则</p><small>与“仅能访问”严格分开</small></article>
+          <article><span><Database /></span><strong>{coverageSummary.verifiedPolicyRuleCount}</strong><p>已核验的受控规则</p><small>另有 {coverageSummary.reviewPolicyRuleCount} 条明确留在 REVIEW</small></article>
           <article><span><ShieldAlert /></span><strong>{format.format(coverageSummary.minimumPolicyCells)}</strong><p>最低政策组合规模</p><small>目的地 × 证件签发地 × 7 类目的</small></article>
         </div>
 
         <section className="coverage-warning">
           <ShieldAlert size={22} />
-          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增韩国、阿联酋、中国内地、美国和加拿大的窄规则；加拿大按航空、陆路与海路拆分，港澳通行证按中国籍与非中国籍拆分。只有状态为“规则已核验”的来源可以支撑明确结论，其余仍输出 REVIEW。</p></div>
+          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增泰国、马来西亚和印度尼西亚的已核验规则，并为越南、菲律宾建立 REVIEW 路由。官网空白或安全验证阻挡时，不依据搜索摘要升级结论。</p></div>
         </section>
 
         <section className="batch-card">
           <div><p className="step-kicker">LATEST VERIFIED BATCH</p><h2>本批已经能回答什么</h2></div>
-          <div className="batch-grid">{latestPolicyBatch.map((item) => <article key={item.id}><strong>{item.label}</strong><span>{item.ruleCount} 条规则</span><p>{item.note}</p></article>)}</div>
+          <div className="batch-grid">{latestPolicyBatch.map((item) => <article key={item.id}><strong>{item.label}</strong><span>{item.verifiedRuleCount} 已核验 · {item.reviewRuleCount} 待复核</span><p>{item.note}</p></article>)}</div>
         </section>
 
         <section className="registry-card">

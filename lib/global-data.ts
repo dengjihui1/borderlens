@@ -26,12 +26,19 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
-  { id: 'kr', label: '韩国', ruleCount: rulesByDestination('kr').length, note: 'K-ETA、C-3-9 与香港身份书分流' },
-  { id: 'ae', label: '阿联酋', ruleCount: rulesByDestination('ae').length, note: '落地签与预先担保签证分流' },
-  { id: 'cn', label: '中国内地', ruleCount: rulesByDestination('cn').length, note: '中国籍与非中国籍港澳居民通行证' },
-  { id: 'us', label: '美国', ruleCount: rulesByDestination('us').length, note: 'CBP / DHS 官方 VWP 边界' },
-  { id: 'ca', label: '加拿大', ruleCount: rulesByDestination('ca').length, note: '香港护照按航空、陆路、海路拆分' },
-];
+  { id: 'th', label: '泰国', note: '60 天免签与 TDAC 入境卡并存' },
+  { id: 'my', label: '马来西亚', note: '港澳护照、身份书与旅行证分流' },
+  { id: 'id', label: '印度尼西亚', note: 'A1 免签与 B1 落地签分流' },
+  { id: 'vn', label: '越南', note: '官方 eVisa 页面空白，保留 REVIEW' },
+  { id: 'ph', label: '菲律宾', note: 'DFA 安全验证阻挡，保留 REVIEW' },
+].map((item) => {
+  const rules = rulesByDestination(item.id);
+  return {
+    ...item,
+    verifiedRuleCount: rules.filter((rule) => rule.status === 'verified').length,
+    reviewRuleCount: rules.filter((rule) => rule.status !== 'verified').length,
+  };
+});
 
 export const coverageSummary = {
   jurisdictionCount: countryCatalog.count,
@@ -42,12 +49,13 @@ export const coverageSummary = {
   reachableSourceCount: registeredSources.filter((source) => source.status === 'reachable').length,
   blockedSourceCount: registeredSources.filter((source) => source.status === 'blocked').length,
   checkedAt: sourceRegistry.checkedAt,
-  verifiedPolicyRuleCount: policySeed.rules.length,
+  verifiedPolicyRuleCount: policySeed.rules.filter((rule) => rule.status === 'verified').length,
+  reviewPolicyRuleCount: policySeed.rules.filter((rule) => rule.status !== 'verified').length,
   minimumPolicyCells: countryCatalog.count * countryCatalog.count * 7,
 };
 
 export const sourceStatusCopy: Record<SourceStatus, { label: string; description: string }> = {
   verified: { label: '规则已核验', description: '至少一条实际规则已经从该官方来源转录并检查。' },
   reachable: { label: '入口可访问', description: '已确认官方页面可访问，具体政策仍在采集队列中。' },
-  blocked: { label: '需浏览器核验', description: '官方入口存在，但自动请求被阻止，不能假装已经验证。' },
+  blocked: { label: '需人工复核', description: '官方入口存在，但空白响应或安全验证阻止了直接核验。' },
 };

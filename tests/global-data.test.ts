@@ -7,6 +7,7 @@ const readJson = async (relativePath: string) => JSON.parse(await readFile(new U
 interface PolicyFixture {
   id: string;
   outcome: string;
+  status: string;
   maxStayDays: number | null;
   conditions: string[];
   documentType: string;
@@ -21,17 +22,18 @@ test('联合国 M49 目录包含全球法域且代码唯一', async () => {
   assert.ok(catalog.territories.some((item: { iso2: string; nameEn: string }) => item.iso2 === 'JP' && item.nameEn === 'Japan'));
 });
 
-test('所有已验证种子规则都连接到已注册官方来源', async () => {
+test('所有种子规则都可追溯，已验证规则至少连接一个已验证官方来源', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
   const sourceIds = new Set(registry.sources.map((source: { id: string }) => source.id));
+  const verifiedSourceIds = new Set(registry.sources.filter((source: { status: string }) => source.status === 'verified').map((source: { id: string }) => source.id));
   for (const rule of policies.rules) {
-    assert.equal(rule.status, 'verified');
     assert.ok(rule.sourceIds.length > 0);
     assert.ok(rule.evidenceLocator.length > 0);
     assert.ok(rule.evidenceExcerpt.length > 0);
     assert.ok(rule.checkedAt <= rule.reviewDueAt);
     for (const sourceId of rule.sourceIds) assert.ok(sourceIds.has(sourceId), `${rule.id} references ${sourceId}`);
+    if (rule.status === 'verified') assert.ok(rule.sourceIds.some((sourceId: string) => verifiedSourceIds.has(sourceId)), `${rule.id} has no verified source`);
   }
 });
 
@@ -40,7 +42,7 @@ test('来源发现状态不被误写成规则已验证', async () => {
   const reachable = registry.sources.filter((source: { status: string }) => source.status === 'reachable');
   const blocked = registry.sources.filter((source: { status: string }) => source.status === 'blocked');
   assert.ok(reachable.length >= 4);
-  assert.equal(blocked.length, 2);
+  assert.equal(blocked.length, 4);
 });
 
 test('申根作为政策区域建模，当前成员范围不混入爱尔兰与塞浦路斯', async () => {
@@ -146,4 +148,41 @@ test('加拿大规则按航空、陆路与海路区分香港特区护照', async
   assert.equal(hksar.find((rule: { borderMode: string }) => rule.borderMode === 'air')!.outcome, 'eta_required');
   assert.equal(hksar.find((rule: { borderMode: string }) => rule.borderMode === 'land')!.outcome, 'visa_free');
   assert.equal(hksar.find((rule: { borderMode: string }) => rule.borderMode === 'sea')!.outcome, 'visa_free');
+});
+
+test('泰国规则把 60 天免签与 TDAC 要求同时保留', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const thailand = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'th');
+  assert.equal(thailand.length, 3);
+  for (const rule of thailand) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_free', 60]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('TDAC') || condition.includes('Thailand Digital Arrival Card')));
+  }
+});
+
+test('马来西亚按港澳证件类型拆分停留期与签证要求', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
+  assert.deepEqual([byId.get('my-cn-prc-ordinary-tourism-visa-exemption')!.outcome, byId.get('my-cn-prc-ordinary-tourism-visa-exemption')!.maxStayDays], ['visa_free', 30]);
+  assert.deepEqual([byId.get('my-hk-hksar-tourism-visa-exemption')!.outcome, byId.get('my-hk-hksar-tourism-visa-exemption')!.maxStayDays], ['visa_free', 90]);
+  assert.deepEqual([byId.get('my-mo-macao-sar-tourism-visa-exemption')!.outcome, byId.get('my-mo-macao-sar-tourism-visa-exemption')!.maxStayDays], ['visa_free', 30]);
+  assert.equal(byId.get('my-hk-document-of-identity-tourism')!.outcome, 'visa_required');
+  assert.deepEqual([byId.get('my-mo-macao-travel-permit-tourism')!.outcome, byId.get('my-mo-macao-travel-permit-tourism')!.maxStayDays], ['visa_free', 14]);
+});
+
+test('印度尼西亚区分中国普通护照 B1 落地签与港澳 A1 免签', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
+  assert.deepEqual([byId.get('id-cn-prc-ordinary-tourism-b1-voa')!.outcome, byId.get('id-cn-prc-ordinary-tourism-b1-voa')!.maxStayDays], ['visa_on_arrival', 30]);
+  assert.deepEqual([byId.get('id-hk-hksar-tourism-a1-exemption')!.outcome, byId.get('id-hk-hksar-tourism-a1-exemption')!.maxStayDays], ['visa_free', null]);
+  assert.deepEqual([byId.get('id-mo-macao-sar-tourism-a1-exemption')!.outcome, byId.get('id-mo-macao-sar-tourism-a1-exemption')!.maxStayDays], ['visa_free', null]);
+});
+
+test('越南与菲律宾在官方页面受阻时保持 draft REVIEW', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  for (const destination of ['vn', 'ph']) {
+    const rules = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === destination);
+    assert.equal(rules.length, 3);
+    for (const rule of rules) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
+  }
 });

@@ -33,6 +33,14 @@
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
 | 加拿大 | 香港特区护照 | 航空需 eTA；一般陆路/海路免 eTA | 必须是香港特区签发护照；圣皮埃尔和密克隆海路分支另查 |
+| 泰国 | 中国普通护照、香港/澳门特区护照 | 免签，最多 60 天 | 所有非泰国籍旅客按规定提交 TDAC；身份书/旅行证不继承护照结论 |
+| 马来西亚 | 中国普通护照 | 免签，每次最多 30 天 | 互免安排的短期旅游分支；不覆盖工作或长期居留 |
+| 马来西亚 | 香港特区护照 / 澳门特区护照 | 免签，分别最多 90 / 30 天 | 护照超过 6 个月有效；完成 MDAC 并选择正确国籍 |
+| 马来西亚 | 香港签证身份书 / 澳门旅行证 | 前者需签证；后者最多 14 天免签 | 两类证件均不能继承对应特区护照待遇 |
+| 印度尼西亚 | 中国普通护照 | B1 落地签，最多 30 天，可延长一次 30 天 | 护照至少 6 个月有效、离境票据、Rp500,000 |
+| 印度尼西亚 | 香港/澳门特区护照 | A1 Tourism Visa Exemption | 官方选择器已确认产品；本轮不输出未稳定呈现的具体停留天数 |
+| 越南 | 中国普通护照、香港/澳门特区护照 | REVIEW | 国家 eVisa 页面返回空白，资格、期限和口岸需直接复核 |
+| 菲律宾 | 中国普通护照、香港/澳门特区护照 | REVIEW | DFA 页面被安全验证阻挡，索引摘要不作政策证据 |
 | 其他组合 | 任意 | REVIEW | 不根据模型记忆或第三方聚合器猜测 |
 
 完整结构化条目、证据定位和原文摘录见 `data/policies.seed.json`。
@@ -63,6 +71,13 @@
 - [U.S. CBP：Electronic System for Travel Authorization](https://www.cbp.gov/travel/international-visitors/esta)
 - [U.S. DHS：Visa Waiver Program country list](https://www.dhs.gov/visa-waiver-program)
 - [Canada.ca / IRCC：What you need to enter Canada](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/entry-requirements-country.html)
+- [Thailand MFA：Visa Exemption (60 Days)](https://image.mfa.go.th/mfa/0/91fPdh6NtO/VISA_Information/Visa_Exemption_Revised_16_July_2024.pdf)
+- [Thailand Immigration Bureau：Thailand Digital Arrival Card](https://tdac.immigration.go.th/manual/en/)
+- [Malaysia Immigration：Malaysia–China mutual visa exemption FAQ](https://www.imi.gov.my/index.php/en/https-www-imi-gov-my-index-php-f-a-q-malaysia-china-visa-exemption-agreement/)
+- [Malaysia MFA Hong Kong：Visa requirement information for foreigners](https://www.kln.gov.my/web/chn_hong-kong/requirement_foreigner)
+- [Indonesia Immigration：Official visa selection](https://evisa.imigrasi.go.id/web/visa-selection)
+- [Vietnam Immigration：National Electronic Visa system](https://evisa.gov.vn/e-visa/foreigners)（本轮空白响应，`blocked`）
+- [Philippines DFA Beijing：General Information](https://beijingpe.dfa.gov.ph/general-information)（本轮安全验证阻挡，`blocked`）
 
 ## 核验方法
 
