@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-08",
+  "rules": [
+    {
+      "id": "jp-hk-hksar-tourism-short-stay",
+      "destinationJurisdictionId": "jp",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": ["仅适用于日本外务省 Note 5 所限定的香港特区护照，或具有香港居留权的 BNO。"],
+      "status": "verified",
+      "sourceIds": ["jp-mofa-waiver", "global-iata-timatic"],
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "jp-mo-macao-sar-tourism-short-stay",
+      "destinationJurisdictionId": "jp",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": ["仅适用于日本外务省 Note 6 所限定的澳门特区护照。"],
+      "status": "verified",
+      "sourceIds": ["jp-mofa-waiver", "global-iata-timatic"],
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "jp-cn-prc-ordinary-tourism",
+      "destinationJurisdictionId": "jp",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "conditions": ["中国普通护照不适用香港或澳门证件条目；签证类别与材料需转日本使领馆核验。"],
+      "status": "verified",
+      "sourceIds": ["jp-mofa-waiver", "global-iata-timatic"],
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "cn-hk-home-return-permit-route",
+      "destinationJurisdictionId": "cn",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "home_return_permit",
+      "purpose": "other",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": ["香港管制站身份证明与进入内地所需证件必须分别检查。"],
+      "status": "verified",
+      "sourceIds": ["hk-immd-travel-doc", "global-iata-timatic"],
+      "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "cn-mo-home-return-permit-route",
+      "destinationJurisdictionId": "cn",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "home_return_permit",
+      "purpose": "other",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": ["澳门居民身份证和通行证是基础组合；实际口岸、通道及自动通关登记仍需复核。"],
+      "status": "verified",
+      "sourceIds": ["mo-gov-immigration", "global-iata-timatic"],
+      "reviewDueAt": "2026-10-08"
+    }
+  ]
+}
