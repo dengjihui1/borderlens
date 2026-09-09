@@ -293,11 +293,16 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
   assert.deepEqual([byId.get('qa-cn-prc-ordinary-tourism-voa')!.outcome, byId.get('qa-cn-prc-ordinary-tourism-voa')!.maxStayDays], ['visa_on_arrival', null]);
   assert.deepEqual([byId.get('sa-cn-prc-ordinary-tourism-evisa')!.outcome, byId.get('sa-cn-prc-ordinary-tourism-evisa')!.maxStayDays], ['visa_required', 90]);
   assert.equal(byId.get('sa-hk-hksar-tourism-evisa')!.conditions.some((condition: string) => condition.includes('Hong Kong')), true);
-  for (const destination of ['om', 'jo']) {
-    const rules = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === destination);
-    assert.equal(rules.length, 3);
-    for (const rule of rules) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
-  }
+  const oman = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'om');
+  assert.equal(oman.length, 3);
+  assert.deepEqual([byId.get('om-cn-prc-ordinary-tourism-review')!.status, byId.get('om-cn-prc-ordinary-tourism-review')!.outcome, byId.get('om-cn-prc-ordinary-tourism-review')!.maxStayDays], ['verified', 'visa_required', 30]);
+  assert.deepEqual([byId.get('om-hk-hksar-tourism-review')!.status, byId.get('om-hk-hksar-tourism-review')!.outcome, byId.get('om-hk-hksar-tourism-review')!.maxStayDays], ['verified', 'visa_required', 30]);
+  assert.deepEqual([byId.get('om-mo-macao-sar-tourism-review')!.status, byId.get('om-mo-macao-sar-tourism-review')!.outcome, byId.get('om-mo-macao-sar-tourism-review')!.maxStayDays], ['draft', 'manual_review', null]);
+  assert.ok(byId.get('om-cn-prc-ordinary-tourism-review')!.conditions.some((condition: string) => condition.includes('26A')));
+  assert.ok(byId.get('om-mo-macao-sar-tourism-review')!.conditions.some((condition: string) => condition.includes('未返回')));
+  const jordan = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'jo');
+  assert.equal(jordan.length, 3);
+  for (const rule of jordan) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
 });
 
 test('土耳其规则区分中国普通、香港特区与澳门特区护照免签期限', async () => {

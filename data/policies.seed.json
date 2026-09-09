@@ -2211,18 +2211,19 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Oman 26A/26B Tourist Visit Visa",
       "conditions": [
-        "阿曼皇家警察 eVisa 官方类型页列出 Tourist Visit Visa，但只说明适用于 approved nationalities， reviewed page 未显示中国普通护照的资格清单。",
-        "在官方资格路由器直接确认国籍、停留期和申请条件前保持 REVIEW。"
+        "阿曼皇家警察官方 Visa Eligibility Wizard 选择 CHINA、GCC 居民 No 后返回 26A Tourist Visit Visa（10 天，OMR 5）和 26B Tourist Visit Visa（30 天，OMR 20）。",
+        "26A 官方条件要求申请人在阿曼境外、护照入境时至少还有 6 个月有效期且无需担保人；26A/26B 均须按官方申请页选择对应产品，签证不保证入境，最终由口岸 ROP 官员决定。"
       ],
-      "status": "draft",
-      "sourceIds": ["om-rop-visa-types"],
-      "evidenceLocator": "Royal Oman Police eVisa > Visit Unsponsored visas > Tourist Visit Visa",
-      "evidenceExcerpt": "The official list describes a Tourist Visit Visa for a person on the list of approved nationalities, but the reviewed page does not expose whether an ordinary Chinese passport is on that list.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "status": "verified",
+      "sourceIds": ["om-rop-visa-types", "om-rop-visa-eligibility"],
+      "evidenceLocator": "Royal Oman Police eVisa > Visa Eligibility Wizard > CHINA > GCC resident: No",
+      "evidenceExcerpt": "The official wizard returns 26A Tourist Visit Visa (10 days, OMR 5) and 26B Tourist Visit Visa (30 days, OMR 20) after selecting CHINA and No for GCC residence.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
     },
     {
       "id": "om-hk-hksar-tourism-review",
@@ -2231,18 +2232,19 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Oman 26A/26B Tourist Visit Visa",
       "conditions": [
-        "阿曼皇家警察 eVisa 官方类型页列出 Tourist Visit Visa，但只说明适用于 approved nationalities， reviewed page 未显示香港特区护照的资格清单。",
-        "在官方资格路由器直接确认国籍、停留期和申请条件前保持 REVIEW。"
+        "阿曼皇家警察官方 Visa Eligibility Wizard 选择 HONG KONG、GCC 居民 No 后返回 26A Tourist Visit Visa（10 天，OMR 5）和 26B Tourist Visit Visa（30 天，OMR 20）。",
+        "26A 官方条件要求申请人在阿曼境外、护照入境时至少还有 6 个月有效期且无需担保人；26A/26B 均须按官方申请页选择对应产品，签证不保证入境，最终由口岸 ROP 官员决定。"
       ],
-      "status": "draft",
-      "sourceIds": ["om-rop-visa-types"],
-      "evidenceLocator": "Royal Oman Police eVisa > Visit Unsponsored visas > Tourist Visit Visa",
-      "evidenceExcerpt": "The official list describes a Tourist Visit Visa for a person on the list of approved nationalities, but the reviewed page does not expose whether a Hong Kong SAR passport is on that list.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "status": "verified",
+      "sourceIds": ["om-rop-visa-types", "om-rop-visa-eligibility"],
+      "evidenceLocator": "Royal Oman Police eVisa > Visa Eligibility Wizard > HONG KONG > GCC resident: No",
+      "evidenceExcerpt": "The official wizard returns 26A Tourist Visit Visa (10 days, OMR 5) and 26B Tourist Visit Visa (30 days, OMR 20) after selecting HONG KONG and No for GCC residence.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
     },
     {
       "id": "om-mo-macao-sar-tourism-review",
@@ -2254,15 +2256,15 @@
       "outcome": "manual_review",
       "maxStayDays": null,
       "conditions": [
-        "阿曼皇家警察 eVisa 官方类型页列出 Tourist Visit Visa，但只说明适用于 approved nationalities， reviewed page 未显示澳门特区护照的资格清单。",
-        "在官方资格路由器直接确认国籍、停留期和申请条件前保持 REVIEW。"
+        "阿曼皇家警察官方 Visa Eligibility Wizard 选择 MACAU、GCC 居民 No 后只返回 12B Truck Driver Visa 和 33A Property Owner Visa，未返回 26A/26B Tourist Visit Visa。",
+        "当前结果只能证明该分支没有显示普通旅游产品；名单或结果缺席不能推出免签、全面拒签或其他普通签证结论，因此澳门特区护照旅游路线继续保留 REVIEW。"
       ],
       "status": "draft",
-      "sourceIds": ["om-rop-visa-types"],
-      "evidenceLocator": "Royal Oman Police eVisa > Visit Unsponsored visas > Tourist Visit Visa",
-      "evidenceExcerpt": "The official list describes a Tourist Visit Visa for a person on the list of approved nationalities, but the reviewed page does not expose whether a Macao SAR passport is on that list.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["om-rop-visa-types", "om-rop-visa-eligibility"],
+      "evidenceLocator": "Royal Oman Police eVisa > Visa Eligibility Wizard > MACAU > GCC resident: No",
+      "evidenceExcerpt": "The official wizard returns 12B Truck Driver Visa and 33A Property Owner Visa, but does not return 26A/26B Tourist Visit Visa for MACAU in the reviewed non-GCC-resident path.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
     },
     {
       "id": "jo-cn-prc-ordinary-tourism-review",

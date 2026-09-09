@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-09（第八批土耳其规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-09（第十批阿曼规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -32,7 +32,9 @@
 | 卡塔尔 | 中国普通护照、香港/澳门特区护照 | 机场落地签 QAR 100，或在线申请 Hayya A1 | Visit Qatar 官方 Visa Check 将三类证件列入 A1-3；本轮不猜停留天数 |
 | 沙特 | 中国普通护照、香港/澳门特区护照 | 旅游电子签，最多 90 天 | 官方 Eligible Countries 写明 China including Hong Kong and Macau；一年多次入境，Umrah 不含 Hajj |
 | 巴林 | 中国普通护照、香港/澳门特区护照 | 官方在线签证路线 | NPRA 在线国家名单分别列出 China、Hong Kong, China、Macao, China；具体条款和入境仍需复核 |
-| 阿曼 | 中国普通护照、香港/澳门特区护照 | REVIEW | 官方类型页只有 approved nationalities 的 Tourist Visit Visa，未在当前页面显示目标国籍清单 |
+| 阿曼 | 中国普通护照 | 26A/26B Tourist Visit Visa，10 或 30 天 | 官方资格向导在 CHINA + GCC 居民 No 分支返回 26A（OMR 5）和 26B（OMR 20）；26A 条件含境外申请、护照至少 6 个月有效、无需担保人，签证不保证入境 |
+| 阿曼 | 香港特区护照 | 26A/26B Tourist Visit Visa，10 或 30 天 | 官方资格向导在 HONG KONG + GCC 居民 No 分支返回 26A（OMR 5）和 26B（OMR 20）；不扩展到其他证件 |
+| 阿曼 | 澳门特区护照 | REVIEW | 官方资格向导在 MACAU + GCC 居民 No 分支只返回 12B、33A，未返回 26A/26B；结果缺席不足以推出免签、全面拒签或其他普通签证结论 |
 | 约旦 | 中国普通护照、香港/澳门特区护照 | REVIEW | 官方预先批准名单与“旅行证件限制”分开表述，当前页面不足以推出完整签证结果 |
 | 土耳其 | 中国普通护照 | 免签，任何 180 天内最多 90 天 | 土耳其外交部表格注明自 2026-01-02 起生效；仅普通护照旅游路线 |
 | 土耳其 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；BNO 与香港签证身份书另行处理 |
@@ -120,6 +122,7 @@
 - [Saudi eVisa：Official tourist visa portal](https://visa.visitsaudi.com/)
 - [Bahrain eVisa / NPRA：Countries Eligible to Get Visa Online](https://www.evisa.gov.bh/list-of-online-visa-country.html)
 - [Royal Oman Police：eVisa View Visa Types](https://evisa.rop.gov.om/en/types-of-visa)
+- [Royal Oman Police：eVisa Visa Eligibility Wizard](https://evisa.rop.gov.om/en/visa-eligibility)
 - [Jordan Ministry of Interior：Countries requiring prior approval](https://moi.gov.jo/Ar/Pages/%D8%A7%D9%84%D8%AF%D9%88%D9%84_%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9_%D9%88%D8%BA%D9%8A%D8%B1_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9)
 - [Türkiye MFA：Visa Information For Foreigners](https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa)
 - [Egypt Electronic Visa Portal：FAQ eligibility list](https://visa2egypt.gov.eg/eVisa/FAQ)

@@ -29,7 +29,7 @@ export const latestPolicyBatch = [
   { id: 'qa', label: '卡塔尔', note: '中国、港澳列入官方 A1-3 路线；机场落地签或 Hayya A1' },
   { id: 'sa', label: '沙特', note: '中国（含港澳）列入官方旅游电子签合资格国家，最多 90 天' },
   { id: 'bh', label: '巴林', note: '中国、香港、澳门列入官方在线签证国家名单' },
-  { id: 'om', label: '阿曼', note: '官方列出 Tourist Visit Visa，但目标国籍资格待复核' },
+  { id: 'om', label: '阿曼', note: '中国与香港返回 26A/26B 旅游签；澳门旅游分支继续 REVIEW' },
   { id: 'jo', label: '约旦', note: '官方预先批准页与旅行证件限制存在边界，保留 REVIEW' },
   { id: 'tr', label: '土耳其', note: '中国普通护照 90 天、香港特区护照 90 天、澳门特区护照 30 天免签' },
   { id: 'eg', label: '埃及', note: '中国普通护照列入官方电子签资格表；港澳证件仍待完整路线复核' },
