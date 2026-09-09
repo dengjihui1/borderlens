@@ -32,6 +32,7 @@ export const latestPolicyBatch = [
   { id: 'om', label: '阿曼', note: '官方列出 Tourist Visit Visa，但目标国籍资格待复核' },
   { id: 'jo', label: '约旦', note: '官方预先批准页与旅行证件限制存在边界，保留 REVIEW' },
   { id: 'tr', label: '土耳其', note: '中国普通护照 90 天、香港特区护照 90 天、澳门特区护照 30 天免签' },
+  { id: 'eg', label: '埃及', note: '中国普通护照列入官方电子签资格表；港澳证件仍待完整路线复核' },
 /* PHASE_06_BATCH */
   { id: 'in', label: '印度', note: '目标证件不在 eVisa 名单，普通签证路线待复核' },
   { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },

@@ -310,3 +310,16 @@ test('土耳其规则区分中国普通、香港特区与澳门特区护照免�
   assert.deepEqual([byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['visa_free', 30]);
   assert.ok(turkey.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('6 个月'))));
 });
+
+test('埃及电子签资格表只确认中国路线，港澳名单缺席保持 REVIEW', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const egypt = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'eg');
+  assert.equal(egypt.length, 3);
+  const byType = new Map(egypt.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
+  assert.equal(byType.get('ordinary_passport')!.maxStayDays, null);
+  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
+    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome], ['draft', 'manual_review']);
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('名单缺席')));
+  }
+});

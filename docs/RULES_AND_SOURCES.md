@@ -37,6 +37,8 @@
 | 土耳其 | 中国普通护照 | 免签，任何 180 天内最多 90 天 | 土耳其外交部表格注明自 2026-01-02 起生效；仅普通护照旅游路线 |
 | 土耳其 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；BNO 与香港签证身份书另行处理 |
 | 土耳其 | 澳门特区护照 | 免签，最多 30 天 | 仅澳门特区护照，不扩展到澳门旅行证 |
+| 埃及 | 中国普通护照 | 埃及电子签路线 | 官方电子签 FAQ 资格表列出中国；本轮不猜停留期限 |
+| 埃及 | 香港/澳门特区护照 | REVIEW | 官方电子签资格表未显示港澳，但名单缺席不能推出普通签证或免签结论 |
 | 中国内地 | 非中国籍香港/澳门永久居民通行证 | 5 年内多次来往，每次最多 90 天 | 仅短期旅游、探亲、商务等；工作、学习、采访需另办许可 |
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
@@ -120,6 +122,7 @@
 - [Royal Oman Police：eVisa View Visa Types](https://evisa.rop.gov.om/en/types-of-visa)
 - [Jordan Ministry of Interior：Countries requiring prior approval](https://moi.gov.jo/Ar/Pages/%D8%A7%D9%84%D8%AF%D9%88%D9%84_%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9_%D9%88%D8%BA%D9%8A%D8%B1_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9)
 - [Türkiye MFA：Visa Information For Foreigners](https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa)
+- [Egypt Electronic Visa Portal：FAQ eligibility list](https://visa2egypt.gov.eg/eVisa/FAQ)
 
 ## 核验方法
 

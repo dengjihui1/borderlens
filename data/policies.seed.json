@@ -2386,6 +2386,67 @@
       "evidenceExcerpt": "Ordinary and official Macao Special Administrative Region of the People's Republic of China passport holders are exempt from visa for their travels up to 30 days.",
       "checkedAt": "2026-09-09",
       "reviewDueAt": "2026-10-09"
+    },
+    {
+      "id": "eg-cn-prc-ordinary-tourism-evisa",
+      "destinationJurisdictionId": "eg",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Egyptian electronic visa",
+      "conditions": [
+        "埃及内政部官方电子签证门户 FAQ 的签证资格表将中国列入可在该门户申请电子签证的国家。",
+        "本轮页面没有稳定显示中国普通护照路线的具体停留期限，因此不填写天数；出发前仍需按官方申请页面确认签证有效期、费用和入境条件。"
+      ],
+      "status": "verified",
+      "sourceIds": ["eg-evisa-faq-eligibility"],
+      "evidenceLocator": "Egypt Electronic Visa Portal > FAQ > Which people need a visa? > eligible nationality table",
+      "evidenceExcerpt": "The official eligibility table lists China among the nationalities whose citizens can apply for an Egyptian e-Visa through the portal.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
+    },
+    {
+      "id": "eg-hk-hksar-tourism-review",
+      "destinationJurisdictionId": "eg",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "埃及官方电子签资格表在本次审阅中未显示 Hong Kong，但名单缺席只说明当前电子签通道没有直接证据。",
+        "不能据此推出香港特区护照需要普通签证、免签或被禁止入境；应在官方签证服务或使领馆渠道继续核验。"
+      ],
+      "status": "draft",
+      "sourceIds": ["eg-evisa-faq-eligibility"],
+      "evidenceLocator": "Egypt Electronic Visa Portal > FAQ > eligible nationality table; Hong Kong not displayed",
+      "evidenceExcerpt": "The reviewed official e-Visa nationality table does not display Hong Kong; this absence does not establish the complete regular-visa or exemption route.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
+    },
+    {
+      "id": "eg-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "eg",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "埃及官方电子签资格表在本次审阅中未显示 Macao，但名单缺席只说明当前电子签通道没有直接证据。",
+        "不能据此推出澳门特区护照需要普通签证、免签或被禁止入境；应在官方签证服务或使领馆渠道继续核验。"
+      ],
+      "status": "draft",
+      "sourceIds": ["eg-evisa-faq-eligibility"],
+      "evidenceLocator": "Egypt Electronic Visa Portal > FAQ > eligible nationality table; Macao not displayed",
+      "evidenceExcerpt": "The reviewed official e-Visa nationality table does not display Macao; this absence does not establish the complete regular-visa or exemption route.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
     }
   ]
 }
