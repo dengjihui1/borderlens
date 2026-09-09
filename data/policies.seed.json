@@ -2276,15 +2276,15 @@
       "outcome": "manual_review",
       "maxStayDays": null,
       "conditions": [
-        "约旦内政部官方亚洲预先批准名单当前未列出 China，但同页另行说明除梵蒂冈外的所有国家旅行证件均受限制；这两段规则不能合并推导完整签证结论。",
-        "在官方签证服务中确认普通护照的签证、预先批准和停留条件前保持 REVIEW。"
+        "约旦内政部英文 Restricted and Non Restricted Countries 页面将“不需预先批准”定义为非受限国家；其亚洲受限名单当前未列出 China，但同页另行说明除梵蒂冈外的 Travel Pass 旅行证件均受限制。",
+        "约旦内政部电子签服务页说明该服务面向不需预先批准的外国人，申请须在境外提交，并列出 3 个月单次 40 JOD 等费用；公开页面未给出中国普通护照的完整签证结果、停留期与 Travel Pass/普通护照边界，因此继续 REVIEW。"
       ],
       "status": "draft",
-      "sourceIds": ["jo-moi-prior-approval"],
-      "evidenceLocator": "Jordan Ministry of Interior > Countries requiring prior approval > Asia table and travel-document note",
-      "evidenceExcerpt": "China is absent from the displayed Asian prior-approval list, while the same official page warns that travel documents from all countries except Vatican are restricted; the page does not establish the complete visa outcome.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["jo-moi-prior-approval", "jo-moi-evisa-services"],
+      "evidenceLocator": "Jordan Ministry of Interior > Restricted and Non Restricted Countries (Nationalities) > Asia table; E Applications for Visa and Residence Permits",
+      "evidenceExcerpt": "China is absent from the displayed Asian restricted-country list, while the same official page warns that Travel Pass documents from all countries except Vatican are restricted. The official e-visa service page is for foreigners who do not need prior approval and lists fees, but it does not provide the complete passport-specific outcome here.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
     },
     {
       "id": "jo-hk-hksar-tourism-review",
@@ -2296,15 +2296,15 @@
       "outcome": "manual_review",
       "maxStayDays": null,
       "conditions": [
-        "约旦内政部官方亚洲预先批准名单当前未列出 Hong Kong，但同页另行说明除梵蒂冈外的所有国家旅行证件均受限制；这两段规则不能合并推导完整签证结论。",
-        "在官方签证服务中确认香港特区护照的签证、预先批准和停留条件前保持 REVIEW。"
+        "约旦内政部英文 Restricted and Non Restricted Countries 页面将“不需预先批准”定义为非受限国家；其亚洲受限名单当前未列出 Hong Kong，但同页另行说明除梵蒂冈外的 Travel Pass 旅行证件均受限制。",
+        "约旦内政部电子签服务页说明该服务面向不需预先批准的外国人，申请须在境外提交，并列出 3 个月单次 40 JOD 等费用；公开页面未给出香港特区护照的完整签证结果、停留期与 Travel Pass/普通护照边界，因此继续 REVIEW。"
       ],
       "status": "draft",
-      "sourceIds": ["jo-moi-prior-approval"],
-      "evidenceLocator": "Jordan Ministry of Interior > Countries requiring prior approval > Asia table and travel-document note",
-      "evidenceExcerpt": "Hong Kong is absent from the displayed Asian prior-approval list, while the same official page warns that travel documents from all countries except Vatican are restricted; the page does not establish the complete visa outcome.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["jo-moi-prior-approval", "jo-moi-evisa-services"],
+      "evidenceLocator": "Jordan Ministry of Interior > Restricted and Non Restricted Countries (Nationalities) > Asia table; E Applications for Visa and Residence Permits",
+      "evidenceExcerpt": "Hong Kong is absent from the displayed Asian restricted-country list, while the same official page warns that Travel Pass documents from all countries except Vatican are restricted. The official e-visa service page is for foreigners who do not need prior approval and lists fees, but it does not provide the complete passport-specific outcome here.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
     },
     {
       "id": "jo-mo-macao-sar-tourism-review",
@@ -2316,15 +2316,15 @@
       "outcome": "manual_review",
       "maxStayDays": null,
       "conditions": [
-        "约旦内政部官方亚洲预先批准名单当前未列出 Macau，但同页另行说明除梵蒂冈外的所有国家旅行证件均受限制；这两段规则不能合并推导完整签证结论。",
-        "在官方签证服务中确认澳门特区护照的签证、预先批准和停留条件前保持 REVIEW。"
+        "约旦内政部英文 Restricted and Non Restricted Countries 页面将“不需预先批准”定义为非受限国家；其亚洲受限名单当前未列出 Macau，但同页另行说明除梵蒂冈外的 Travel Pass 旅行证件均受限制。",
+        "约旦内政部电子签服务页说明该服务面向不需预先批准的外国人，申请须在境外提交，并列出 3 个月单次 40 JOD 等费用；公开页面未给出澳门特区护照的完整签证结果、停留期与 Travel Pass/普通护照边界，因此继续 REVIEW。"
       ],
       "status": "draft",
-      "sourceIds": ["jo-moi-prior-approval"],
-      "evidenceLocator": "Jordan Ministry of Interior > Countries requiring prior approval > Asia table and travel-document note",
-      "evidenceExcerpt": "Macau is absent from the displayed Asian prior-approval list, while the same official page warns that travel documents from all countries except Vatican are restricted; the page does not establish the complete visa outcome.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["jo-moi-prior-approval", "jo-moi-evisa-services"],
+      "evidenceLocator": "Jordan Ministry of Interior > Restricted and Non Restricted Countries (Nationalities) > Asia table; E Applications for Visa and Residence Permits",
+      "evidenceExcerpt": "Macao is absent from the displayed Asian restricted-country list, while the same official page warns that Travel Pass documents from all countries except Vatican are restricted. The official e-visa service page is for foreigners who do not need prior approval and lists fees, but it does not provide the complete passport-specific outcome here.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
     },
     {
       "id": "tr-cn-prc-ordinary-tourism-visa-waiver",

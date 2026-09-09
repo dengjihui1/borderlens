@@ -302,7 +302,10 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
   assert.ok(byId.get('om-mo-macao-sar-tourism-review')!.conditions.some((condition: string) => condition.includes('未返回')));
   const jordan = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'jo');
   assert.equal(jordan.length, 3);
-  for (const rule of jordan) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
+  for (const rule of jordan) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('电子签')));
+  }
 });
 
 test('土耳其规则区分中国普通、香港特区与澳门特区护照免签期限', async () => {
