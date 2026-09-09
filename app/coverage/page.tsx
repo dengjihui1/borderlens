@@ -10,7 +10,7 @@ export default function CoveragePage() {
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 07</div>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 08</div>
         <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
       </header>
 
@@ -35,7 +35,7 @@ export default function CoveragePage() {
 
         <section className="coverage-warning">
           <ShieldAlert size={22} />
-          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增卡塔尔、沙特、巴林、阿曼和约旦路线。前三国已形成窄规则；阿曼与约旦因官方页面不足以证明完整签证结论，仍保留 REVIEW。</p></div>
+          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增土耳其三条证件路线：中国普通护照与香港特区护照最多 90 天免签，澳门特区护照最多 30 天免签；其他证件和未核验路线仍保留 REVIEW。</p></div>
         </section>
 
         <section className="batch-card">
@@ -68,7 +68,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · Phase 07</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 08</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }

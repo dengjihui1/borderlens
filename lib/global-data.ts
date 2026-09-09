@@ -31,6 +31,7 @@ export const latestPolicyBatch = [
   { id: 'bh', label: '巴林', note: '中国、香港、澳门列入官方在线签证国家名单' },
   { id: 'om', label: '阿曼', note: '官方列出 Tourist Visit Visa，但目标国籍资格待复核' },
   { id: 'jo', label: '约旦', note: '官方预先批准页与旅行证件限制存在边界，保留 REVIEW' },
+  { id: 'tr', label: '土耳其', note: '中国普通护照 90 天、香港特区护照 90 天、澳门特区护照 30 天免签' },
 /* PHASE_06_BATCH */
   { id: 'in', label: '印度', note: '目标证件不在 eVisa 名单，普通签证路线待复核' },
   { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },

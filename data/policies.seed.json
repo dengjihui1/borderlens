@@ -2323,6 +2323,69 @@
       "evidenceExcerpt": "Macau is absent from the displayed Asian prior-approval list, while the same official page warns that travel documents from all countries except Vatican are restricted; the page does not establish the complete visa outcome.",
       "checkedAt": "2026-09-08",
       "reviewDueAt": "2026-10-08"
+    },
+    {
+      "id": "tr-cn-prc-ordinary-tourism-visa-waiver",
+      "destinationJurisdictionId": "tr",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": [
+        "土耳其外交部官方国家表明确写明，中华人民共和国普通护照持有人自 2026-01-02 起可在任何 180 天内免签停留最多 90 天。",
+        "本条仅适用于普通护照的短期旅游路线；外交、公务等官方护照不混入本条。",
+        "土耳其外交部通用说明建议抵达土耳其时护照至少还有 6 个月有效期。"
+      ],
+      "status": "verified",
+      "sourceIds": ["tr-mfa-visa-regime"],
+      "evidenceLocator": "Türkiye MFA > Visa Information For Foreigners > People's Republic of China",
+      "evidenceExcerpt": "Ordinary passport holder People's Republic of China nationals are exempt from visa up to 90 days in any 180 day period as of 2 January 2026.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
+    },
+    {
+      "id": "tr-hk-hksar-tourism-visa-waiver",
+      "destinationJurisdictionId": "tr",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": [
+        "土耳其外交部官方国家表明确写明，香港特别行政区签发的香港特区护照持有人旅游免签最多 90 天。",
+        "本条不覆盖 BNO 护照或香港签证身份书；官方页面对这些证件另有签证要求。",
+        "土耳其外交部通用说明建议抵达土耳其时护照至少还有 6 个月有效期。"
+      ],
+      "status": "verified",
+      "sourceIds": ["tr-mfa-visa-regime"],
+      "evidenceLocator": "Türkiye MFA > Visa Information For Foreigners > Hong Kong Special Administrative Region of PRC",
+      "evidenceExcerpt": "Ordinary and official Hong Kong Special Administrative Region passport holders are exempted from visa for their travels up to 90 days.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
+    },
+    {
+      "id": "tr-mo-macao-sar-tourism-visa-waiver",
+      "destinationJurisdictionId": "tr",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 30,
+      "conditions": [
+        "土耳其外交部官方国家表明确写明，澳门特别行政区签发的澳门特区普通护照持有人旅游免签最多 30 天。",
+        "本条仅适用于澳门特区护照，不扩展到澳门旅行证或其他旅行证件。",
+        "土耳其外交部通用说明建议抵达土耳其时护照至少还有 6 个月有效期。"
+      ],
+      "status": "verified",
+      "sourceIds": ["tr-mfa-visa-regime"],
+      "evidenceLocator": "Türkiye MFA > Visa Information For Foreigners > Macao Special Administration",
+      "evidenceExcerpt": "Ordinary and official Macao Special Administrative Region of the People's Republic of China passport holders are exempt from visa for their travels up to 30 days.",
+      "checkedAt": "2026-09-09",
+      "reviewDueAt": "2026-10-09"
     }
   ]
 }

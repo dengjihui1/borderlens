@@ -299,3 +299,14 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
     for (const rule of rules) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
   }
 });
+
+test('土耳其规则区分中国普通、香港特区与澳门特区护照免签期限', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const turkey = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'tr');
+  assert.equal(turkey.length, 3);
+  const byType = new Map(turkey.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['visa_free', 90]);
+  assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', 90]);
+  assert.deepEqual([byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['visa_free', 30]);
+  assert.ok(turkey.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('6 个月'))));
+});

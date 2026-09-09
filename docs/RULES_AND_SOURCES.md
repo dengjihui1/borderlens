@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-08。所有规则最迟在 2026-10-08 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-09（第八批土耳其规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -34,6 +34,9 @@
 | 巴林 | 中国普通护照、香港/澳门特区护照 | 官方在线签证路线 | NPRA 在线国家名单分别列出 China、Hong Kong, China、Macao, China；具体条款和入境仍需复核 |
 | 阿曼 | 中国普通护照、香港/澳门特区护照 | REVIEW | 官方类型页只有 approved nationalities 的 Tourist Visit Visa，未在当前页面显示目标国籍清单 |
 | 约旦 | 中国普通护照、香港/澳门特区护照 | REVIEW | 官方预先批准名单与“旅行证件限制”分开表述，当前页面不足以推出完整签证结果 |
+| 土耳其 | 中国普通护照 | 免签，任何 180 天内最多 90 天 | 土耳其外交部表格注明自 2026-01-02 起生效；仅普通护照旅游路线 |
+| 土耳其 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；BNO 与香港签证身份书另行处理 |
+| 土耳其 | 澳门特区护照 | 免签，最多 30 天 | 仅澳门特区护照，不扩展到澳门旅行证 |
 | 中国内地 | 非中国籍香港/澳门永久居民通行证 | 5 年内多次来往，每次最多 90 天 | 仅短期旅游、探亲、商务等；工作、学习、采访需另办许可 |
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
@@ -116,6 +119,7 @@
 - [Bahrain eVisa / NPRA：Countries Eligible to Get Visa Online](https://www.evisa.gov.bh/list-of-online-visa-country.html)
 - [Royal Oman Police：eVisa View Visa Types](https://evisa.rop.gov.om/en/types-of-visa)
 - [Jordan Ministry of Interior：Countries requiring prior approval](https://moi.gov.jo/Ar/Pages/%D8%A7%D9%84%D8%AF%D9%88%D9%84_%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9_%D9%88%D8%BA%D9%8A%D8%B1_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9)
+- [Türkiye MFA：Visa Information For Foreigners](https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa)
 
 ## 核验方法
 
