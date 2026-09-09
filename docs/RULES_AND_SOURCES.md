@@ -29,6 +29,11 @@
 | 阿联酋 | 中国普通护照 | 抵达时 30 天免费签证 | 护照至少 6 个月有效；延长一次需付费且受当地规定约束 |
 | 阿联酋 | 香港特区护照 | 抵达时一个月签证 | 官方页面描述为不可续期，且不扩展到香港签证身份书 |
 | 阿联酋 | 澳门特区护照 | 出发前办理访问签证 | 澳门未列入该页落地签名单，需担保人渠道 |
+| 卡塔尔 | 中国普通护照、香港/澳门特区护照 | 机场落地签 QAR 100，或在线申请 Hayya A1 | Visit Qatar 官方 Visa Check 将三类证件列入 A1-3；本轮不猜停留天数 |
+| 沙特 | 中国普通护照、香港/澳门特区护照 | 旅游电子签，最多 90 天 | 官方 Eligible Countries 写明 China including Hong Kong and Macau；一年多次入境，Umrah 不含 Hajj |
+| 巴林 | 中国普通护照、香港/澳门特区护照 | 官方在线签证路线 | NPRA 在线国家名单分别列出 China、Hong Kong, China、Macao, China；具体条款和入境仍需复核 |
+| 阿曼 | 中国普通护照、香港/澳门特区护照 | REVIEW | 官方类型页只有 approved nationalities 的 Tourist Visit Visa，未在当前页面显示目标国籍清单 |
+| 约旦 | 中国普通护照、香港/澳门特区护照 | REVIEW | 官方预先批准名单与“旅行证件限制”分开表述，当前页面不足以推出完整签证结果 |
 | 中国内地 | 非中国籍香港/澳门永久居民通行证 | 5 年内多次来往，每次最多 90 天 | 仅短期旅游、探亲、商务等；工作、学习、采访需另办许可 |
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
@@ -106,6 +111,11 @@
 - [Bangladesh Department of Immigration and Passports：Online MRV Portal](https://visa.gov.bd/)
 - [Maldives Immigration：Tourist Visa — On Arrival](https://www.immigration.gov.mv/visa/tourist-visa)
 - [Maldives Immigration：Traveller Declaration](https://www.immigration.gov.mv/traveller-declaration)
+- [Visit Qatar：Qatar Visa Check](https://visitqatar.com/intl-en/plan-your-trip/visas)
+- [Saudi eVisa：Official tourist visa portal](https://visa.visitsaudi.com/)
+- [Bahrain eVisa / NPRA：Countries Eligible to Get Visa Online](https://www.evisa.gov.bh/list-of-online-visa-country.html)
+- [Royal Oman Police：eVisa View Visa Types](https://evisa.rop.gov.om/en/types-of-visa)
+- [Jordan Ministry of Interior：Countries requiring prior approval](https://moi.gov.jo/Ar/Pages/%D8%A7%D9%84%D8%AF%D9%88%D9%84_%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9_%D9%88%D8%BA%D9%8A%D8%B1_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9)
 
 ## 核验方法
 
