@@ -339,3 +339,9 @@ Phase 02 从联合国统计司 M49 官方页面生成了 248 个国家与地区�
 重新审阅文莱外交部当前 `Visa Information by Country / Region` 页面后，China 行已直接展开为 `Ordinary Passport`、`Diplomatic Passport` 和 `Official Passport`，其中普通护照链接到官方 `Category D3` 页面。D3 正文说明该类别外国人无需签证进入文莱，并允许最多停留 14 天；超过期限以及商务或专业访问需要另行申请签证。
 
 因此，中国普通护照赴文莱旅游路线从 `draft/REVIEW` 升级为 `verified / visa_free / 14 days`，并保留普通护照、D3 类别和访问目的边界。港澳特区护照原有 D3 路线不变。完成后数据库达到 248 个法域、143 条结构化路线，其中 118 条已核验、25 条待复核；回归检查新增文莱中国普通护照 D3 免签断言。
+
+## 38｜第三十批复核：尼泊尔驻港总领事馆确认中国及 HKSAR 需签证但免费
+
+本批审阅尼泊尔驻香港总领事馆官方 `Nepal Visa` 页面。页面明确写明 `Chinese and HKSAR passport holders require visas but is free of cost`，并在旅游签证说明中写明一个签证年度内游客在尼泊尔累计停留不得超过 150 天；页面另说明当前签发 Electronic Travel Authorisation（ETA）Visa。该页面没有给出澳门特区护照的独立普通旅游结论。
+
+因此，中国普通护照和 HKSAR 护照路线升级为 `verified / visa_required`，记录免费签证和年度累计 150 天上限；澳门特区护照继续 `draft/REVIEW`。该结论不把移民局仅限外交及官方/服务护照的免签表套用于普通护照，也不把年度累计上限误写成单次签证有效期。完成后数据库达到 248 个法域、83 个官方/国际来源、143 条结构化路线，其中 120 条已核验、23 条待复核；回归检查新增尼泊尔中国及 HKSAR 需签证边界。
