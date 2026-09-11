@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-11（第三十四批约旦复核证据）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第五十六批印度港澳旅游签证复核证据）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -95,7 +95,8 @@
 | 文莱 | 中国普通护照 | D3 免签，最多 14 天 | 外交部当前 China > Ordinary Passport 直接链接 Category D3；D3 正文确认无需签证、最多停留 14 天 |
 | 东帝汶 | 中国普通护照、香港/澳门特区护照 | 旅游落地签，停留 30 天 | 正式航空、陆路、海路口岸均可申请；USD 30 现金；护照至少 6 个月；通常可延长一次 30 天 |
 | 印度 | 中国普通护照 | 需旅游签证 | 驻北京大使馆官方 Tourist Visa-Info 页面明确旅游签证用途和中国申请人材料；电子签名单缺席不影响普通签证页面的直接结论 |
-| 印度 | 香港/澳门特区护照 | REVIEW | 电子签资格页未列出目标证件；驻港总领馆 Tourist Visa 页及费用表确认正规申请路线，但未直接给出港澳特区护照最终免签/需签证结论 |
+| 印度 | 香港特区护照 | 需旅游签证，Indian Tourist Visa | 驻港总领事馆 General Instructions 要求签证申请人是香港或澳门特区居民；Tourist Visa 页面与费用表确认 Hong Kong Tourist Visa 路线，费用 HKD 335，通常签发 3 个月单次入境；不把签证有效期写成停留期 |
+| 印度 | 澳门特区护照 | 需旅游签证，Indian Tourist Visa | 驻港总领事馆 General Instructions 要求签证申请人是香港或澳门特区居民；Tourist Visa 页面与费用表确认 Macau Tourist Visa 路线，费用 HKD 335，通常签发 3 个月单次入境；不把签证有效期写成停留期 |
 | 斯里兰卡 | 中国普通护照 | ETA，30 天内两次入境 | 2026-05-25 起列入 40 国免费旅游 ETA 名单 |
 | 斯里兰卡 | 香港/澳门特区护照 | ETA，30 天内两次入境 | 未列入免费名单，按其他国家费用分支；第二次入境只使用 30 天总期限的余额 |
 | 尼泊尔 | 中国普通护照 | 需签证，免费；年度累计最多 150 天 | 驻港总领事馆官方页面明确中国护照需签证但免费，并说明旅游者每个签证年度累计不得超过 150 天 |
@@ -158,9 +159,10 @@
 - [Brunei MFA：Category D3 — 14-day visa waiver](https://www.mfa.gov.bn/Pages/D3---D14.aspx)
 - [Timor-Leste Migration Service：Tourist Visa](https://migracao.gov.tl/wp/tourist-visa/)
 - [Timor-Leste Migration Service：Visa exemptions](https://migracao.gov.tl/wp/visa-exemptions/)
-- [India Bureau of Immigration：Indian e-Visa](https://indianvisaonline.gov.in/evisa/tvoa.html)（目标证件普通签证路线仍待复核）
-- [Consulate General of India, Hong Kong：Visa Information](https://cgihk.gov.in/page/visa-information/)（Tourist Visa 申请材料；港澳护照最终路线仍待复核）
-- [Consulate General of India, Hong Kong：Indian Visa fee schedule for all nationalities](https://cgihk.gov.in/pdf/indian-visa-fee-schedule-for-all-nationalities.pdf)（Hong Kong/Macau Tourist Visa 费用与通常签发期；不单独决定完整入境制度）
+- [India Bureau of Immigration：Indian e-Visa](https://indianvisaonline.gov.in/evisa/tvoa.html)（电子签资格与普通签证路线分开记录）
+- [Consulate General of India, Hong Kong：General Instructions](https://cgihk.gov.in/page/General_Information/)（港澳居民签证申请资格与非居民逐案审查）
+- [Consulate General of India, Hong Kong：Visa Information](https://cgihk.gov.in/page/visa-information/)（Hong Kong/Macau Tourist Visa 申请材料）
+- [Consulate General of India, Hong Kong：Indian Visa fee schedule for all nationalities](https://cgihk.gov.in/pdf/indian-visa-fee-schedule-for-all-nationalities.pdf)（Hong Kong/Macau Tourist Visa 均为 HKD 335，通常签发 3 个月单次；不把签证有效期写成停留期）
 - [Sri Lanka Department of Immigration and Emigration：ETA official website](https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US)
 - [Sri Lanka Department of Immigration and Emigration：Tourist ETA fees](https://www.eta.gov.lk/slvisa/visainfo/fees.jsp?locale=en_US)
 - [Nepal Department of Immigration：Visa on Arrival](https://www.immigration.gov.np/en/page/visa-on-arrival)（本轮返回 404，`blocked`）

@@ -1780,22 +1780,23 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_required",
       "maxStayDays": null,
+      "visaProductName": "Indian Tourist Visa",
       "conditions": [
-        "印度官方 e-Visa 当前资格弹窗未列出 China、Hong Kong 或 Macao。",
-        "印度驻港总领事馆 Tourist Visa 页面提供香港/澳门申请受理与材料路线：需护照资料、香港/澳门身份证明或当地有效签证，原护照至少还有 180 天有效期并有连续两页空白页。",
-        "印度驻港总领事馆官方费用表将 Hong Kong 和 Macau 列入 Tourist Visa 费用表，费用为 HKD 335，并说明签证通常签发 3 个月、单次入境；这确认正规签证申请路线，但不单独证明所有港澳特区护照均无免签或其他例外。",
-        "该页面没有直接确认香港特区护照的最终免签/需签证结论或停留期；与 e-Visa 名单缺席一起仅作为普通签证复核证据，继续 REVIEW。"
+        "印度驻港总领事馆官方 General Instructions 要求签证申请人填写印度签证申请、提交打印申请表和相关类别要求的支持材料，并明确申请人应为香港或澳门特区居民；非居民申请须逐案审查。",
+        "该总领事馆 Tourist Visa 页面提供香港/澳门领区的旅游签证申请路线：需护照资料、香港/澳门身份证明或当地有效签证，原护照至少还有 180 天有效期并有连续两页空白页。",
+        "印度驻港总领事馆官方费用表将 Hong Kong 列入 Tourist Visa 费用表，费用为 HKD 335，并说明签证通常签发 3 个月、单次入境；本条确认香港特区普通护照应走正规印度旅游签证路线，但不把签证有效期误写成入境后的准许停留期。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
         "in-boi-evisa",
         "in-cgihk-tourist-visa",
-        "in-cgihk-visa-fee-schedule"
+        "in-cgihk-visa-fee-schedule",
+        "in-cgihk-general-info"
       ],
-      "evidenceLocator": "Consulate General of India, Hong Kong > Visa Information > Tourist Visa > J(i). (T-1) Tourist Visa for recreation; Indian visa fee schedule for all nationalities > Tourist Visa Fee Schedule",
-      "evidenceExcerpt": "The consulate's tourist-visa route covers recreation and short visits and requires a passport profile-page copy, Hong Kong / Macau ID or a valid visa issued by the Hong Kong / Macau Immigration Department, and an original passport valid at least 180 days with two consecutive blank pages. The official fee schedule lists Hong Kong and Macau at HKD 335 for a tourist visa and says visas are normally issued for 3 months with a single entry; this does not by itself establish the complete HKSAR passport entry outcome.",
+      "evidenceLocator": "Consulate General of India, Hong Kong > General Instructions; Visa Information > Tourist Visa > J(i). (T-1); Indian visa fee schedule for all nationalities > Tourist Visa Fee Schedule > Hong Kong",
+      "evidenceExcerpt": "The official consulate requires visa applicants to complete and print the Indian visa application, states that applicants must be residents of Hong Kong or Macau SARs, and publishes a Tourist Visa route requiring passport and local identity evidence. Its fee schedule lists Hong Kong at HKD 335 and says tourist visas are normally issued for 3 months with a single entry.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -1806,22 +1807,23 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_required",
       "maxStayDays": null,
+      "visaProductName": "Indian Tourist Visa",
       "conditions": [
-        "印度官方 e-Visa 当前资格弹窗未列出 China、Hong Kong 或 Macao。",
-        "印度驻港总领事馆 Tourist Visa 页面提供香港/澳门申请受理与材料路线：需护照资料、香港/澳门身份证明或当地有效签证，原护照至少还有 180 天有效期并有连续两页空白页。",
-        "印度驻港总领事馆官方费用表将 Hong Kong 和 Macau 列入 Tourist Visa 费用表，费用为 HKD 335，并说明签证通常签发 3 个月、单次入境；这确认正规签证申请路线，但不单独证明所有港澳特区护照均无免签或其他例外。",
-        "该页面没有直接确认澳门特区护照的最终免签/需签证结论或停留期；与 e-Visa 名单缺席一起仅作为普通签证复核证据，继续 REVIEW。"
+        "印度驻港总领事馆官方 General Instructions 要求签证申请人填写印度签证申请、提交打印申请表和相关类别要求的支持材料，并明确申请人应为香港或澳门特区居民；非居民申请须逐案审查。",
+        "该总领事馆 Tourist Visa 页面提供香港/澳门领区的旅游签证申请路线：需护照资料、香港/澳门身份证明或当地有效签证，原护照至少还有 180 天有效期并有连续两页空白页。",
+        "印度驻港总领事馆官方费用表将 Macau 列入 Tourist Visa 费用表，费用为 HKD 335，并说明签证通常签发 3 个月、单次入境；本条确认澳门特区普通护照应走正规印度旅游签证路线，但不把签证有效期误写成入境后的准许停留期。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
         "in-boi-evisa",
         "in-cgihk-tourist-visa",
-        "in-cgihk-visa-fee-schedule"
+        "in-cgihk-visa-fee-schedule",
+        "in-cgihk-general-info"
       ],
-      "evidenceLocator": "Consulate General of India, Hong Kong > Visa Information > Tourist Visa > J(i). (T-1) Tourist Visa for recreation; Indian visa fee schedule for all nationalities > Tourist Visa Fee Schedule",
-      "evidenceExcerpt": "The consulate's tourist-visa route covers recreation and short visits and requires a passport profile-page copy, Hong Kong / Macau ID or a valid visa issued by the Hong Kong / Macau Immigration Department, and an original passport valid at least 180 days with two consecutive blank pages. The official fee schedule lists Hong Kong and Macau at HKD 335 for a tourist visa and says visas are normally issued for 3 months with a single entry; this does not by itself establish the complete Macao SAR passport entry outcome.",
+      "evidenceLocator": "Consulate General of India, Hong Kong > General Instructions; Visa Information > Tourist Visa > J(i). (T-1); Indian visa fee schedule for all nationalities > Tourist Visa Fee Schedule > Macau",
+      "evidenceExcerpt": "The official consulate requires visa applicants to complete and print the Indian visa application, states that applicants must be residents of Hong Kong or Macau SARs, and publishes a Tourist Visa route requiring passport and local identity evidence. Its fee schedule lists Macau at HKD 335 and says tourist visas are normally issued for 3 months with a single entry.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
