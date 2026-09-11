@@ -42,7 +42,7 @@ test('来源发现状态不被误写成规则已验证', async () => {
   const reachable = registry.sources.filter((source: { status: string }) => source.status === 'reachable');
   const blocked = registry.sources.filter((source: { status: string }) => source.status === 'blocked');
   assert.ok(reachable.length >= 8);
-  assert.equal(blocked.length, 5);
+  assert.equal(blocked.length, 4);
 });
 
 test('申根作为政策区域建模，当前成员范围不混入爱尔兰与塞浦路斯', async () => {
@@ -178,13 +178,23 @@ test('印度尼西亚区分中国普通护照 B1 落地签与港澳 A1 免签', 
   assert.deepEqual([byId.get('id-mo-macao-sar-tourism-a1-exemption')!.outcome, byId.get('id-mo-macao-sar-tourism-a1-exemption')!.maxStayDays], ['visa_free', null]);
 });
 
-test('越南与菲律宾在官方页面受阻时保持 draft REVIEW', async () => {
+test('越南官方电子签接口确认中国普通护照路线，港澳缺少独立结果仍保持 REVIEW', async () => {
   const policies = await readJson('../data/policies.seed.json');
-  for (const destination of ['vn', 'ph']) {
-    const rules = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === destination);
-    assert.equal(rules.length, 3);
-    for (const rule of rules) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
+  const vietnam = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'vn');
+  assert.equal(vietnam.length, 3);
+  const byType = new Map(vietnam.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_required', 90]);
+  assert.equal(byType.get('ordinary_passport')!.visaProductName, 'Vietnam e-Visa');
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('CHN') && condition.includes('EVISA')));
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('指定的国际边境口岸')));
+  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
+    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('缺席不能推出')));
   }
+
+  const philippines = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ph');
+  assert.equal(philippines.length, 3);
+  for (const rule of philippines) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
 });
 
 test('柬埔寨 Visa T 保留电子签、护照有效期与 e-Arrival 要求', async () => {

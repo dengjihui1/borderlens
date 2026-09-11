@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-11（第二十二批哥斯达黎加规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第二十三批越南规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -76,7 +76,8 @@
 | 马来西亚 | 香港签证身份书 / 澳门旅行证 | 前者需签证；后者最多 14 天免签 | 两类证件均不能继承对应特区护照待遇 |
 | 印度尼西亚 | 中国普通护照 | B1 落地签，最多 30 天，可延长一次 30 天 | 护照至少 6 个月有效、离境票据、Rp500,000 |
 | 印度尼西亚 | 香港/澳门特区护照 | A1 Tourism Visa Exemption | 官方选择器已确认产品；本轮不输出未稳定呈现的具体停留天数 |
-| 越南 | 中国普通护照、香港/澳门特区护照 | REVIEW | 国家 eVisa 页面返回空白，资格、期限和口岸需直接复核 |
+| 越南 | 中国普通护照 | Vietnam e-Visa，最长 90 天，可单次或多次入境 | 官方国籍 API 将 CHN / China 标为 EVISA；申请须在越南境外，需有效护照或国际旅行证件，并经政府指定国际边境口岸出入 |
+| 越南 | 香港/澳门特区护照 | REVIEW | 官方国籍 API 本轮没有返回 HKG 或 MAC 独立记录；名单缺席不能推出免签、普通签证或禁止入境结论 |
 | 菲律宾 | 中国普通护照、香港/澳门特区护照 | REVIEW | DFA 页面被安全验证阻挡，索引摘要不作政策证据 |
 | 柬埔寨 | 中国普通护照、香港/澳门特区护照 | Visa T 电子签，单次入境，停留 1 个月 | USD 30；签发日起 3 个月有效；护照超过 6 个月有效；另填 Cambodia e-Arrival |
 | 老挝 | 中国普通护照、香港/澳门特区护照 | T-B3 旅游电子签，停留 30 天 | 批准信 60 天有效；只接受普通护照；须从 9 个指定口岸之一入境并打印批准信 |
@@ -125,7 +126,8 @@
 - [Malaysia Immigration：Malaysia–China mutual visa exemption FAQ](https://www.imi.gov.my/index.php/en/https-www-imi-gov-my-index-php-f-a-q-malaysia-china-visa-exemption-agreement/)
 - [Malaysia MFA Hong Kong：Visa requirement information for foreigners](https://www.kln.gov.my/web/chn_hong-kong/requirement_foreigner)
 - [Indonesia Immigration：Official visa selection](https://evisa.imigrasi.go.id/web/visa-selection)
-- [Vietnam Immigration：National Electronic Visa system](https://evisa.gov.vn/e-visa/foreigners)（本轮空白响应，`blocked`）
+- [Vietnam Immigration：National Electronic Visa system](https://evisa.gov.vn/e-visa/foreigners)
+- [Vietnam Immigration：public nationality and border-gate APIs](https://api.evisa.gov.vn/client-service/public/dm-qt/get-all)
 - [Philippines DFA Beijing：General Information](https://beijingpe.dfa.gov.ph/general-information)（本轮安全验证阻挡，`blocked`）
 - [Cambodia MFAIC：e-Visa Visa Type Information](https://www.evisa.gov.kh/information/visa_type/4)
 - [Cambodia MFAIC：Official e-Visa service](https://www.evisa.gov.kh/home)
