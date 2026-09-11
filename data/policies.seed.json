@@ -2513,6 +2513,70 @@
       "evidenceExcerpt": "Hong Kong and Macao passport holders do not require a visa to enter Mexico for up to 90 days for tourism, transit or business purposes.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "br-cn-prc-ordinary-tourism-visa-required",
+      "destinationJurisdictionId": "br",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Visitor Visa (VIVIS)",
+      "conditions": [
+        "巴西外交部官方国别签证要求页在 China 条目中明确：外交护照和公务护照有特定免签例外，除此以外其他所有类型护照持有人入境巴西前都需要签证。",
+        "旅游、休闲、探亲等不领取巴西公司报酬的访问活动使用 Visitor Visa（VIVIS）路线；本条不推断签证签发期限。",
+        "具体材料、领区、有效期和最终入境条件仍须按巴西外交部及对应领事馆的最新要求核验。"
+      ],
+      "status": "verified",
+      "sourceIds": ["br-mre-visa-requirements-country-list", "br-mre-hk-tourist-visa"],
+      "evidenceLocator": "Brazil MFA > Visa requirements by country > China; Consulate General of Brazil in Hong Kong > Tourist Visa > Who can apply",
+      "evidenceExcerpt": "The official China entry says diplomatic and official passport holders have a stated exemption, while all other passport types require a visa before entering Brazil. The official tourist-visa page identifies VIVIS for tourism and other unpaid visitor activities.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "br-hk-hksar-tourism-visa-exemption",
+      "destinationJurisdictionId": "br",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": [
+        "巴西驻香港总领事馆官方旅游签证页明确适用于 Hong Kong SAR passport holders；本条仅覆盖香港特区护照，不扩展到香港特区签证身份书。",
+        "旅游、过境或商务访问最多 90 天免 Visitor Visa；工作、学习或有报酬活动另行核验。",
+        "官方页面明确香港特区签证身份书持有人仍需申请入境签证。"
+      ],
+      "status": "verified",
+      "sourceIds": ["br-mre-hk-tourist-visa"],
+      "evidenceLocator": "Consulate General of Brazil in Hong Kong > Tourist Visa > Exemptions",
+      "evidenceExcerpt": "Holders of Hong Kong SAR passports are exempt from Visitor Visa for tourism, transit or business purposes for stays of up to 90 days; holders of the Hong Kong SAR Document of Identity for Visa Purposes require an entry visa.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "br-mo-macao-sar-tourism-visa-exemption",
+      "destinationJurisdictionId": "br",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": [
+        "巴西驻香港总领事馆官方旅游签证页明确适用于 Macao SAR passport holders；本条仅覆盖澳门特区护照，不扩展到澳门旅行证。",
+        "旅游、过境或商务访问最多 90 天免 Visitor Visa；工作、学习或有报酬活动另行核验。",
+        "官方页面明确澳门旅行证持有人仍需申请入境签证。"
+      ],
+      "status": "verified",
+      "sourceIds": ["br-mre-hk-tourist-visa"],
+      "evidenceLocator": "Consulate General of Brazil in Hong Kong > Tourist Visa > Exemptions",
+      "evidenceExcerpt": "Holders of Macao SAR passports are exempt from Visitor Visa for tourism, transit or business purposes for stays of up to 90 days; holders of a Macao Travel Permit require an entry visa.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }

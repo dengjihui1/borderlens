@@ -343,3 +343,15 @@ test('墨西哥按中国普通、香港和澳门特区护照区分路线', async
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('护照')));
   }
 });
+
+test('巴西按中国普通、香港和澳门特区护照区分路线', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const brazil = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'br');
+  assert.equal(brazil.length, 3);
+  const byType = new Map(brazil.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['visa_required', null]);
+  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
+    assert.deepEqual([byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['visa_free', 90]);
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('旅行证') || condition.includes('身份书')));
+  }
+});

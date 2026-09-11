@@ -26,6 +26,7 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
+  { id: 'br', label: '巴西', note: '中国普通护照需 VIVIS 访问签证；港澳特区护照旅游最多 90 天免签' },
   { id: 'mx', label: '墨西哥', note: '中国普通护照需访问签证；香港与澳门特区护照旅游最多 90 天免签' },
   { id: 'qa', label: '卡塔尔', note: '中国、港澳列入官方 A1-3 路线；机场落地签或 Hayya A1' },
   { id: 'sa', label: '沙特', note: '中国（含港澳）列入官方旅游电子签合资格国家，最多 90 天' },

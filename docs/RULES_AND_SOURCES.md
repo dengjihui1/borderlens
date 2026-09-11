@@ -44,6 +44,9 @@
 | 墨西哥 | 中国普通护照 | 需要访问签证 | 官方需签证名单包含 China；旅游应申请不允许从事有报酬活动的访问者签证 |
 | 墨西哥 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；适用于旅游、过境或商务 |
 | 墨西哥 | 澳门特区护照 | 免签，最多 90 天 | 仅澳门特区护照；适用于旅游、过境或商务 |
+| 巴西 | 中国普通护照 | 需要 Visitor Visa（VIVIS） | 巴西外交部中国条目仅对外交/公务护照设例外，其他护照入境前需签证 |
+| 巴西 | 香港特区护照 | 免 Visitor Visa，最多 90 天 | 仅香港特区护照；旅游、过境或商务适用 |
+| 巴西 | 澳门特区护照 | 免 Visitor Visa，最多 90 天 | 仅澳门特区护照；旅游、过境或商务适用 |
 | 中国内地 | 非中国籍香港/澳门永久居民通行证 | 5 年内多次来往，每次最多 90 天 | 仅短期旅游、探亲、商务等；工作、学习、采访需另办许可 |
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
@@ -133,6 +136,8 @@
 - [Egypt Electronic Visa Portal：FAQ eligibility list](https://visa2egypt.gov.eg/eVisa/FAQ)
 - [Mexico National Institute of Migration：Countries and regions requiring a visa](https://www.inm.gob.mx/gobmx/word/index.php/paises-requieren-visa-para-mexico/)
 - [Consulate General of Mexico in Hong Kong：Mexican Visa Exemptions](https://consulmex.sre.gob.mx/hongkong/index.php/for-foreigners/visa-exemptions)
+- [Brazil Ministry of Foreign Affairs：Visa requirements by country](https://www.gov.br/mre/pt-br/embaixada-abu-dhabi/abu-dhabi-arquivos/english/consular-services/visa/visa-requirements-by-country/visa-requirements-by-country-list-of-countries)
+- [Consulate General of Brazil in Hong Kong：Tourist Visa](https://www.gov.br/mre/pt-br/consulado-hong-kong/english/consular-services/visas/tourist-visa)
 
 ## 核验方法
 
