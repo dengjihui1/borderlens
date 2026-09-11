@@ -385,20 +385,20 @@ test('土耳其规则区分中国普通、香港特区与澳门特区护照免�
   assert.ok(turkey.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('6 个月'))));
 });
 
-test('埃及电子签资格表只确认中国路线，港澳名单缺席保持 REVIEW', async () => {
+test('埃及按中国普通、香港和澳门特区护照区分旅游路线', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const egypt = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'eg');
   assert.equal(egypt.length, 3);
   const byType = new Map(egypt.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.equal(byType.get('ordinary_passport')!.maxStayDays, null);
-  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
-    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome], ['draft', 'manual_review']);
-    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('名单缺席')));
-    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('30 美元') && condition.includes('65 美元') && condition.includes('6 个月')));
-  }
+  assert.deepEqual([byType.get('hksar_passport')!.status, byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['verified', 'visa_free', 90]);
+  assert.ok(byType.get('hksar_passport')!.sourceIds.includes('hk-gov-egypt-visa-free-90'));
   assert.ok(byType.get('hksar_passport')!.sourceIds.includes('hk-immd-visa-free-arrival-list'));
-  assert.ok(byType.get('hksar_passport')!.conditions.some((condition: string) => condition.includes('90 天') && condition.includes('免签或落地签')));
+  assert.ok(byType.get('hksar_passport')!.conditions.some((condition: string) => condition.includes('香港特区普通护照')));
+  assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['verified', 'visa_free', 90]);
+  assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('mo-yearbook-2025-visa-treatment'));
+  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('澳门旅行证不适用')));
 });
 
 test('墨西哥按中国普通、香港和澳门特区护照区分路线', async () => {

@@ -46,7 +46,7 @@ export const latestPolicyBatch = [
   { id: 'om', label: '阿曼', note: '中国与香港返回 26A/26B 旅游签；澳门旅游分支继续 REVIEW' },
   { id: 'jo', label: '约旦', note: '中国、香港、澳门未列入官方亚洲受限名单；电子签服务可用但最终路线继续 REVIEW' },
   { id: 'tr', label: '土耳其', note: '中国普通护照 90 天、香港特区护照 90 天、澳门特区护照 30 天免签' },
-  { id: 'eg', label: '埃及', note: '中国普通护照列入官方电子签资格表；港澳官方参考表列 90 天免签或落地签，但产品仍待埃及官方确认' },
+  { id: 'eg', label: '埃及', note: '中国普通护照可走官方电子签；香港与澳门特区普通护照均有官方 90 天免签证据' },
 /* PHASE_06_BATCH */
   { id: 'in', label: '印度', note: '中国普通、香港和澳门特区普通护照均需 Indian Tourist Visa；港澳费用表均列 HKD 335' },
   { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },
