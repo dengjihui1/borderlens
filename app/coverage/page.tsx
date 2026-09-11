@@ -10,7 +10,7 @@ export default function CoveragePage() {
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 22</div>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 30</div>
         <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
       </header>
 
@@ -35,7 +35,7 @@ export default function CoveragePage() {
 
         <section className="coverage-warning">
           <ShieldAlert size={22} />
-          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增哥斯达黎加三条证件路线：官方移民局已确认按国籍适用 General Visa Guidelines，并公开特定美国/加拿大、欧洲居留及申根签证例外；中国、香港和澳门三类目标护照的基础组别与停留期仍保留 REVIEW。</p></div>
+          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本页将已核验规则与明确保留 REVIEW 的路线分开呈现；证据不足、证件范围不明或需要实时官方判断时，不输出确定签证结论。</p></div>
         </section>
 
         <section className="batch-card">
@@ -68,7 +68,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · Phase 22</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 30</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }

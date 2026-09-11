@@ -34,7 +34,6 @@ export const latestPolicyBatch = [
   { id: 'bo', label: '玻利维亚', note: '中国、香港、澳门特区普通护照列入 Tourist Visa Group II，需申请旅游签证' },
   { id: 'py', label: '巴拉圭', note: '中国、香港、澳门特区普通护照均需出发前签证' },
   { id: 'ec', label: '厄瓜多尔', note: '中国普通护照需预先签证；港澳特区护照路线继续 REVIEW' },
-  { id: 'uy', label: '乌拉圭', note: '官方领事页仅提供申请要求，三类护照国籍资格继续 REVIEW' },
   { id: 'ar', label: '阿根廷', note: '中国普通护照需签证；港澳特区护照表格未标需签证，停留期继续核验' },
   { id: 'cl', label: '智利', note: '中国普通护照有美/加签证条件免签；香港 90 天免签；澳门 30 天免签' },
   { id: 'co', label: '哥伦比亚', note: '中国普通护照有美国/申根条件免签；香港短期免签；澳门路线继续 REVIEW' },
@@ -51,7 +50,7 @@ export const latestPolicyBatch = [
 /* PHASE_06_BATCH */
   { id: 'in', label: '印度', note: '目标证件不在 eVisa 名单，普通签证路线待复核' },
   { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },
-  { id: 'np', label: '尼泊尔', note: '官方免签页仅覆盖外交及官方/服务护照；中国普通及港澳特区护照继续 REVIEW' },
+  { id: 'np', label: '尼泊尔', note: '中国普通及 HKSAR 护照需签证但免费，年度累计最多 150 天；澳门继续 REVIEW' },
   { id: 'bd', label: '孟加拉国', note: 'MRV 门户可用，国籍资格仍待复核' },
   { id: 'mv', label: '马尔代夫', note: '旅游落地签与免费 IMUGA 申报并存' },
 ].map((item) => {
