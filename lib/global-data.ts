@@ -44,7 +44,7 @@ export const latestPolicyBatch = [
   { id: 'sa', label: '沙特', note: '中国（含港澳）列入官方旅游电子签合资格国家，最多 90 天' },
   { id: 'bh', label: '巴林', note: '中国、香港、澳门列入官方在线签证国家名单' },
   { id: 'om', label: '阿曼', note: '中国与香港返回 26A/26B 旅游签；澳门旅游分支继续 REVIEW' },
-  { id: 'jo', label: '约旦', note: '官方区分受限/非受限国籍；电子签公开页未给目标护照完整结果，保留 REVIEW' },
+  { id: 'jo', label: '约旦', note: '中国、香港、澳门未列入官方亚洲受限名单；电子签服务可用但最终路线继续 REVIEW' },
   { id: 'tr', label: '土耳其', note: '中国普通护照 90 天、香港特区护照 90 天、澳门特区护照 30 天免签' },
   { id: 'eg', label: '埃及', note: '中国普通护照列入官方电子签资格表；港澳证件仍待完整路线复核' },
 /* PHASE_06_BATCH */
