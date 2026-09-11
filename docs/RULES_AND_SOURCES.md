@@ -98,7 +98,7 @@
 | 斯里兰卡 | 香港/澳门特区护照 | ETA，30 天内两次入境 | 未列入免费名单，按其他国家费用分支；第二次入境只使用 30 天总期限的余额 |
 | 尼泊尔 | 中国普通护照 | 需签证，免费；年度累计最多 150 天 | 驻港总领事馆官方页面明确中国护照需签证但免费，并说明旅游者每个签证年度累计不得超过 150 天 |
 | 尼泊尔 | 香港特区护照 | 需签证，免费；年度累计最多 150 天 | 驻港总领事馆官方页面明确 HKSAR 护照需签证但免费；澳门特区护照没有独立结论 |
-| 尼泊尔 | 澳门特区护照 | REVIEW | 免签页和驻港总领事馆页面均未给出澳门特区护照独立普通旅游结果；不从名单缺席推断结论 |
+| 尼泊尔 | 澳门特区护照 | REVIEW | 免签页和驻港总领事馆页面均未给出澳门特区护照独立普通旅游结果；Nepaliport 落地签选择器检索 Macau 返回 No data available，但不从该缺席推断结论 |
 | 孟加拉国 | 中国普通护照 | 旅游落地签，最多 30 天 | 官方驻北京使馆页面列明中国属于可按条件申请落地签的国籍；需返程票、访问证明、至少 500 美元或等值资金，最终由移民机关审查 |
 | 孟加拉国 | 香港/澳门特区护照 | REVIEW | 驻港总领馆 Tourist Visa 页面给出申请材料，但未证明港澳特区护照没有免签或其他入境路线 |
 | 马尔代夫 | 中国普通护照、香港/澳门特区护照 | 旅游落地签 | 无需预先签证批准；另通过官方 IMUGA 免费提交 Traveller Declaration；官网正文未稳定显示天数，本轮不猜期限 |
@@ -159,6 +159,7 @@
 - [Sri Lanka Department of Immigration and Emigration：ETA official website](https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US)
 - [Sri Lanka Department of Immigration and Emigration：Tourist ETA fees](https://www.eta.gov.lk/slvisa/visainfo/fees.jsp?locale=en_US)
 - [Nepal Department of Immigration：Visa on Arrival](https://www.immigration.gov.np/en/page/visa-on-arrival)（本轮返回 404，`blocked`）
+- [Nepaliport：On-arrival Visa Application](https://nepaliport.immigration.gov.np/on-arrival/IO01)（澳门检索返回 `No data available`；不据此推断完整结果）
 - [Bangladesh Department of Immigration and Passports：Online MRV Portal](https://visa.gov.bd/)
 - [Bangladesh Embassy in Beijing：Visa on Arrival](https://beijing.mofa.gov.bd/pages/static-pages/6952668b35ce18e1c05a9eb1)
 - [Bangladesh Consulate General in Hong Kong：Tourist Visa](https://hongkong.mofa.gov.bd/pages/static-pages/6952668735ce18e1c05a9d33)

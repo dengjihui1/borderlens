@@ -303,6 +303,8 @@ test('尼泊尔中国及 HKSAR 护照需免费签证，澳门路线保持 REVIEW
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('需签证') && condition.includes('免费')));
   }
   assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome], ['draft', 'manual_review']);
+  assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('np-nepaliport-on-arrival'));
+  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('No data available')));
 });
 
 test('孟加拉国中国普通护照落地签与港澳路线边界', async () => {
