@@ -266,7 +266,7 @@ test('东帝汶三类护照均保留落地签、30 天与全口岸条件', async
   }
 });
 
-test('印度驻北京大使馆确认中国普通护照旅游签证，港澳仍保持 REVIEW', async () => {
+test('印度官方来源确认中国普通护照旅游签证，港澳补充驻港申请证据但仍保持 REVIEW', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const india = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'in');
   assert.equal(india.length, 3);
@@ -276,6 +276,9 @@ test('印度驻北京大使馆确认中国普通护照旅游签证，港澳仍�
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('Tourist Visa')));
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
     assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
+    assert.ok(byType.get(documentType)!.sourceIds.includes('in-cgihk-tourist-visa'));
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('180 天')));
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('继续 REVIEW')));
   }
 });
 

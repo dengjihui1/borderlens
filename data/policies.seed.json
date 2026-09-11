@@ -1778,16 +1778,18 @@
       "maxStayDays": null,
       "conditions": [
         "印度官方 e-Visa 当前资格弹窗未列出 China、Hong Kong 或 Macao。",
-        "该事实只证明不能直接套用当前 eVisa 名单；在核实普通签证或其他豁免路线前保持 REVIEW。"
+        "印度驻港总领事馆 Tourist Visa 页面提供香港/澳门申请受理与材料路线：需护照资料、香港/澳门身份证明或当地有效签证，原护照至少还有 180 天有效期并有连续两页空白页。",
+        "该页面没有直接确认香港特区护照的最终免签/需签证结论或停留期；与 e-Visa 名单缺席一起仅作为普通签证复核证据，继续 REVIEW。"
       ],
       "status": "draft",
       "sourceIds": [
-        "in-boi-evisa"
+        "in-boi-evisa",
+        "in-cgihk-tourist-visa"
       ],
-      "evidenceLocator": "Indian e-Visa > Countries/Regions who are eligible to avail eVisa; target documents absent from the displayed list",
-      "evidenceExcerpt": "The current official eVisa eligibility dialog lists 174 countries/regions but does not list China, Hong Kong or Macao. The page alone does not establish the complete regular-visa outcome.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Consulate General of India, Hong Kong > Visa Information > Tourist Visa > J(i). (T-1) Tourist Visa for recreation; alongside Indian e-Visa eligibility dialog",
+      "evidenceExcerpt": "The consulate's tourist-visa route covers recreation and short visits and requires a passport profile-page copy, Hong Kong / Macau ID or a valid visa issued by the Hong Kong / Macau Immigration Department, and an original passport valid at least 180 days with two consecutive blank pages. The page does not state the complete HKSAR passport outcome.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "in-mo-macao-sar-tourism-review",
@@ -1800,16 +1802,18 @@
       "maxStayDays": null,
       "conditions": [
         "印度官方 e-Visa 当前资格弹窗未列出 China、Hong Kong 或 Macao。",
-        "该事实只证明不能直接套用当前 eVisa 名单；在核实普通签证或其他豁免路线前保持 REVIEW。"
+        "印度驻港总领事馆 Tourist Visa 页面提供香港/澳门申请受理与材料路线：需护照资料、香港/澳门身份证明或当地有效签证，原护照至少还有 180 天有效期并有连续两页空白页。",
+        "该页面没有直接确认澳门特区护照的最终免签/需签证结论或停留期；与 e-Visa 名单缺席一起仅作为普通签证复核证据，继续 REVIEW。"
       ],
       "status": "draft",
       "sourceIds": [
-        "in-boi-evisa"
+        "in-boi-evisa",
+        "in-cgihk-tourist-visa"
       ],
-      "evidenceLocator": "Indian e-Visa > Countries/Regions who are eligible to avail eVisa; target documents absent from the displayed list",
-      "evidenceExcerpt": "The current official eVisa eligibility dialog lists 174 countries/regions but does not list China, Hong Kong or Macao. The page alone does not establish the complete regular-visa outcome.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Consulate General of India, Hong Kong > Visa Information > Tourist Visa > J(i). (T-1) Tourist Visa for recreation; alongside Indian e-Visa eligibility dialog",
+      "evidenceExcerpt": "The consulate's tourist-visa route covers recreation and short visits and requires a passport profile-page copy, Hong Kong / Macau ID or a valid visa issued by the Hong Kong / Macau Immigration Department, and an original passport valid at least 180 days with two consecutive blank pages. The page does not state the complete Macao SAR passport outcome.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "lk-cn-prc-ordinary-tourism-eta",
