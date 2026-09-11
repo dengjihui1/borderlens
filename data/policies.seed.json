@@ -3031,6 +3031,72 @@
       "evidenceExcerpt": "Macao is not in the official short-visit visa-exemption list; the page states that nationals of countries not mentioned there must obtain a visa before travel and includes Macao in the consular application requirements.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "bo-cn-prc-ordinary-tourism-visa-required",
+      "destinationJurisdictionId": "bo",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Bolivia tourist visa — Group II",
+      "conditions": [
+        "玻利维亚驻英国大使馆官方 Tourist Visa Group II 名单将 CHINA（包括 Hong Kong、Taiwan、Macao）列为需按 Group II 申请的对象；不属于 Group I 免签路线。",
+        "Group II 官方要求包括申请表、航班信息、酒店预订或玻利维亚公证邀请函、近三个月银行流水、黄热病接种证明、护照至少六个月有效和照片，并要求向领事馆提交材料预约签证申请。",
+        "本条仅确认中国普通护照的旅游签证申请路线；该页面没有给出 Group II 获准停留期或确定费用，因此不补填天数。"
+      ],
+      "status": "verified",
+      "sourceIds": ["bo-embassy-uk-visa-groups"],
+      "evidenceLocator": "Embassy of Bolivia in London > Visa Grupos 1-2-3 > Tourist Visa Group II; country table row China (including Hong Kong, Taiwan, Macao)",
+      "evidenceExcerpt": "The official embassy page lists CHINA (INCLUDING HONG KONG, TAIWAN, MACAO) under Tourist Visa Group II and provides the Group II application requirements and consular appointment process.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "bo-hk-hksar-tourism-visa-required",
+      "destinationJurisdictionId": "bo",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Bolivia tourist visa — Group II",
+      "conditions": [
+        "玻利维亚驻英国大使馆官方 Tourist Visa Group II 名单在 China 条目中明确包含 Hong Kong；该条目对应 Group II 旅游签证申请流程。",
+        "Group II 官方要求包括申请表、航班信息、酒店预订或玻利维亚公证邀请函、近三个月银行流水、黄热病接种证明、护照至少六个月有效和照片，并要求向领事馆提交材料预约签证申请。",
+        "本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件；页面没有给出 Group II 获准停留期，因此不补填天数。"
+      ],
+      "status": "verified",
+      "sourceIds": ["bo-embassy-uk-visa-groups"],
+      "evidenceLocator": "Embassy of Bolivia in London > Visa Grupos 1-2-3 > Tourist Visa Group II; country table row China (including Hong Kong, Taiwan, Macao)",
+      "evidenceExcerpt": "The official embassy page lists CHINA (INCLUDING HONG KONG, TAIWAN, MACAO) under Tourist Visa Group II and provides the Group II application requirements and consular appointment process.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "bo-mo-macao-sar-tourism-visa-required",
+      "destinationJurisdictionId": "bo",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Bolivia tourist visa — Group II",
+      "conditions": [
+        "玻利维亚驻英国大使馆官方 Tourist Visa Group II 名单在 China 条目中明确包含 Macao；该条目对应 Group II 旅游签证申请流程。",
+        "Group II 官方要求包括申请表、航班信息、酒店预订或玻利维亚公证邀请函、近三个月银行流水、黄热病接种证明、护照至少六个月有效和照片，并要求向领事馆提交材料预约签证申请。",
+        "本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件；页面没有给出 Group II 获准停留期，因此不补填天数。"
+      ],
+      "status": "verified",
+      "sourceIds": ["bo-embassy-uk-visa-groups"],
+      "evidenceLocator": "Embassy of Bolivia in London > Visa Grupos 1-2-3 > Tourist Visa Group II; country table row China (including Hong Kong, Taiwan, Macao)",
+      "evidenceExcerpt": "The official embassy page lists CHINA (INCLUDING HONG KONG, TAIWAN, MACAO) under Tourist Visa Group II and provides the Group II application requirements and consular appointment process.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }

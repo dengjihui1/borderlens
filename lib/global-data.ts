@@ -26,6 +26,7 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
+  { id: 'bo', label: '玻利维亚', note: '中国、香港、澳门特区普通护照列入 Tourist Visa Group II，需申请旅游签证' },
   { id: 'py', label: '巴拉圭', note: '中国、香港、澳门特区普通护照均需出发前签证' },
   { id: 'ec', label: '厄瓜多尔', note: '中国普通护照需预先签证；港澳特区护照路线继续 REVIEW' },
   { id: 'uy', label: '乌拉圭', note: '官方领事页仅提供申请要求，三类护照国籍资格继续 REVIEW' },

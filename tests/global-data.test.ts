@@ -431,3 +431,14 @@ test('巴拉圭官方使馆页确认三类普通护照均需出发前签证', as
   }
   assert.ok(paraguay.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('不扩展')) || rule.documentType === 'ordinary_passport'));
 });
+
+test('玻利维亚官方使馆页确认三类普通护照属于 Tourist Visa Group II', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const bolivia = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'bo');
+  assert.equal(bolivia.length, 3);
+  for (const rule of bolivia) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', null]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('Group II')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('六个月')));
+  }
+});

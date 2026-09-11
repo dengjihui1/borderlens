@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-11（第十九批厄瓜多尔规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第二十一批玻利维亚规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -64,6 +64,7 @@
 | 厄瓜多尔 | 香港/澳门特区护照 | REVIEW | 官方材料未提供特区护照单独旅游结果；不能从中国普通护照路线或名单缺席推断 |
 | 巴拉圭 | 中国普通护照 | 需要出发前签证 | 驻日使馆官方页规定免签名单之外的国籍必须出发前取得签证；不推断签发期限与停留期 |
 | 巴拉圭 | 香港/澳门特区护照 | 需要出发前签证 | 官方短期免签名单未列港澳，且签证申请要求明确提到 Hong Kong、Macao；仅覆盖对应特区护照 |
+| 玻利维亚 | 中国普通护照、香港/澳门特区护照 | Tourist Visa Group II，需要旅游签证 | 驻英使馆官方分组表将 China（包括 Hong Kong、Taiwan、Macao）列入 Group II，并给出材料与领事预约流程；页面未给出停留期 |
 | 中国内地 | 非中国籍香港/澳门永久居民通行证 | 5 年内多次来往，每次最多 90 天 | 仅短期旅游、探亲、商务等；工作、学习、采访需另办许可 |
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
@@ -163,6 +164,7 @@
 - [Ecuador Ministry of Foreign Affairs：List of countries requiring a visa to enter Ecuador](https://www.cancilleria.gob.ec/2020/06/30/lista-de-paises-que-deben-presentar-visa-al-ingresar-al-ecuador/)
 - [Ecuador Ministry of Foreign Affairs：Ministerial Agreement No. 0000064](https://www.cancilleria.gob.ec/wp-content/uploads/2024/07/0000064.pdf)
 - [Embassy of the Republic of Paraguay in Japan：Visa](https://embapar.jp/en/sc/visa/)
+- [Embassy of Bolivia in London：Visa Grupos 1-2-3](https://bolivianembassy.co.uk/visa-grupos-1-2-3/)
 
 ## 核验方法
 
