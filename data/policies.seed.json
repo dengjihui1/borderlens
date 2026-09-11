@@ -2705,6 +2705,70 @@
       "evidenceExcerpt": "The reviewed official special-territory section lists Hong Kong but does not display Macao; that absence does not establish a complete Macao passport visa outcome.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "cl-cn-prc-ordinary-tourism-visa-conditional-exemption",
+      "destinationJurisdictionId": "cl",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Chile temporary stay visa / prior authorization",
+      "conditions": [
+        "智利外交部领事服务官方国籍选择器将 China, Rep. Popular 标为需要签证；普通护照旅游应先确认适用的临时停留签证或授权路线。",
+        "官方备注显示，持加拿大或美国签发的签证（除 C 类或过境签）或 Green Card，且自 2019-04-01 起至少还有 6 个月有效期的中国公民可适用临时停留免签例外。",
+        "第三国签证类别、剩余有效期和入境时证明必须逐项核验；该例外不扩展到其他签发地或其他旅行证件。"
+      ],
+      "status": "verified",
+      "sourceIds": ["cl-consular-visa-selector"],
+      "evidenceLocator": "Chile Consular Services > Visas para ingresar a Chile > China, Rep. Popular",
+      "evidenceExcerpt": "China, Rep. Popular: visa required; the official note exempts nationals holding a visa issued by Canada or the United States, except C or transit visas, or a Green Card, with at least 6 months validity from 2019-04-01.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "cl-hk-hksar-tourism-visa-exemption",
+      "destinationJurisdictionId": "cl",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": [
+        "智利外交部领事服务官方国籍选择器将 Hong Kong 标为不需要签证，并注明该行适用于香港特别行政区国民。",
+        "临时停留许可官方说明适用于旅游等非定居目的，期限最多 90 天；工作、定居或其他受限活动另行核验。",
+        "本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件。"
+      ],
+      "status": "verified",
+      "sourceIds": ["cl-consular-visa-selector"],
+      "evidenceLocator": "Chile Consular Services > Visas para ingresar a Chile > Hong Kong",
+      "evidenceExcerpt": "Hong Kong: visa not required, 90-day simple and multiple-entry stay rows; the official note states the route is for nationals of the Hong Kong Special Administrative Region.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "cl-mo-macao-sar-tourism-visa-exemption",
+      "destinationJurisdictionId": "cl",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 30,
+      "conditions": [
+        "智利外交部领事服务官方国籍选择器将 Macao 标为不需要签证，并注明该行适用于澳门特别行政区国民。",
+        "官方数据将单次和多次入境的最长临时停留期列为 30 天；工作、定居或其他受限活动另行核验。",
+        "本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件。"
+      ],
+      "status": "verified",
+      "sourceIds": ["cl-consular-visa-selector"],
+      "evidenceLocator": "Chile Consular Services > Visas para ingresar a Chile > Macao",
+      "evidenceExcerpt": "Macao: visa not required; the official selector lists a maximum transitory-stay period of 30 days for both simple and multiple entry and notes that the row applies to nationals of the Macao Special Administrative Region.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }

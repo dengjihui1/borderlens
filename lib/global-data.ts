@@ -26,6 +26,7 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
+  { id: 'cl', label: '智利', note: '中国普通护照有美/加签证条件免签；香港 90 天免签；澳门 30 天免签' },
   { id: 'co', label: '哥伦比亚', note: '中国普通护照有美国/申根条件免签；香港短期免签；澳门路线继续 REVIEW' },
   { id: 'pe', label: '秘鲁', note: '中国普通护照有第三国签证例外；香港免签；澳门路线继续 REVIEW' },
   { id: 'br', label: '巴西', note: '中国普通护照需 VIVIS 访问签证；港澳特区护照旅游最多 90 天免签' },

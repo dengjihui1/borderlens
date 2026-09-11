@@ -377,3 +377,14 @@ test('哥伦比亚保留中国条件免签、香港短期免签与澳门 REVIEW'
   assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', 90]);
   assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome], ['draft', 'manual_review']);
 });
+
+test('智利区分中国条件免签与港澳特区护照停留期', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const chile = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'cl');
+  assert.equal(chile.length, 3);
+  const byType = new Map(chile.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('加拿大或美国') && condition.includes('6 个月')));
+  assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', 90]);
+  assert.deepEqual([byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['visa_free', 30]);
+});
