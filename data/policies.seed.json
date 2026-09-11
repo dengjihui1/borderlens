@@ -2965,6 +2965,72 @@
       "evidenceExcerpt": "The reviewed official list and ministerial order address República Popular China but do not state a separate Macao SAR passport tourism outcome; absence of a separate row does not establish visa-free entry or a stay period.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "py-cn-prc-ordinary-tourism-visa-required",
+      "destinationJurisdictionId": "py",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Paraguay non-resident visa (tourist)",
+      "conditions": [
+        "巴拉圭驻日本大使馆官方签证页列出短期免签国籍名单，并规定未列入名单的国籍必须在出发前取得签证。",
+        "该官方页面将 People's Republic of China 列入签证申请要求所覆盖的居住地/申请人范围；中国普通护照旅游应按巴拉圭非居民签证路线办理。",
+        "本条只确认普通护照基础路线需要预先签证，不推断签证签发期限、获准停留期或最终入境裁量。"
+      ],
+      "status": "verified",
+      "sourceIds": ["py-embassy-japan-visa"],
+      "evidenceLocator": "Paraguay Embassy in Japan > Visa > Non-resident visa > III. Countries not mentioned above",
+      "evidenceExcerpt": "The official embassy page says nationals of countries not listed in the short-visit exemption section must obtain a visa before travel, and names the People's Republic of China among places covered by the consular application requirements.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "py-hk-hksar-tourism-visa-required",
+      "destinationJurisdictionId": "py",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Paraguay non-resident visa (tourist)",
+      "conditions": [
+        "巴拉圭驻日本大使馆官方短期免签名单未列 Hong Kong；同一页面规定未列入名单的国籍必须在出发前取得签证。",
+        "该官方页面在签证申请要求中明确提到 Hong Kong；本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件。",
+        "页面未给出本路线签发期限或获准停留期，因此不填写天数；最终入境仍由巴拉圭边境机关决定。"
+      ],
+      "status": "verified",
+      "sourceIds": ["py-embassy-japan-visa"],
+      "evidenceLocator": "Paraguay Embassy in Japan > Visa > Non-resident visa > III. Countries not mentioned above; application requirements mention Hong Kong",
+      "evidenceExcerpt": "Hong Kong is not in the official short-visit visa-exemption list; the page states that nationals of countries not mentioned there must obtain a visa before travel and includes Hong Kong in the consular application requirements.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "py-mo-macao-sar-tourism-visa-required",
+      "destinationJurisdictionId": "py",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Paraguay non-resident visa (tourist)",
+      "conditions": [
+        "巴拉圭驻日本大使馆官方短期免签名单未列 Macao；同一页面规定未列入名单的国籍必须在出发前取得签证。",
+        "该官方页面在签证申请要求中明确提到 Macao；本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件。",
+        "页面未给出本路线签发期限或获准停留期，因此不填写天数；最终入境仍由巴拉圭边境机关决定。"
+      ],
+      "status": "verified",
+      "sourceIds": ["py-embassy-japan-visa"],
+      "evidenceLocator": "Paraguay Embassy in Japan > Visa > Non-resident visa > III. Countries not mentioned above; application requirements mention Macao",
+      "evidenceExcerpt": "Macao is not in the official short-visit visa-exemption list; the page states that nationals of countries not mentioned there must obtain a visa before travel and includes Macao in the consular application requirements.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }

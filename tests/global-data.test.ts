@@ -420,3 +420,14 @@ test('厄瓜多尔确认中国普通护照需签证并保留港澳特区护照 R
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('不能把') && condition.includes('自动套')));
   }
 });
+
+test('巴拉圭官方使馆页确认三类普通护照均需出发前签证', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const paraguay = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'py');
+  assert.equal(paraguay.length, 3);
+  for (const rule of paraguay) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', null]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('出发前') && condition.includes('签证')));
+  }
+  assert.ok(paraguay.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('不扩展')) || rule.documentType === 'ordinary_passport'));
+});
