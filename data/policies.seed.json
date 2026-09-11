@@ -2321,9 +2321,9 @@
       "status": "verified",
       "sourceIds": ["om-rop-visa-types", "om-rop-visa-eligibility"],
       "evidenceLocator": "Royal Oman Police eVisa > Visa Eligibility Wizard > CHINA > GCC resident: No",
-      "evidenceExcerpt": "The official wizard returns 26A Tourist Visit Visa (10 days, OMR 5) and 26B Tourist Visit Visa (30 days, OMR 20) after selecting CHINA and No for GCC residence.",
-      "checkedAt": "2026-09-09",
-      "reviewDueAt": "2026-10-09"
+      "evidenceExcerpt": "The official wizard returns 26A Tourist Visit Visa (10 days, OMR 5) and 26B Tourist Visit Visa (30 days, OMR 20) after selecting CHINA and No for GCC residence; the same route was rechecked on 2026-09-11.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "om-hk-hksar-tourism-review",
@@ -2342,9 +2342,9 @@
       "status": "verified",
       "sourceIds": ["om-rop-visa-types", "om-rop-visa-eligibility"],
       "evidenceLocator": "Royal Oman Police eVisa > Visa Eligibility Wizard > HONG KONG > GCC resident: No",
-      "evidenceExcerpt": "The official wizard returns 26A Tourist Visit Visa (10 days, OMR 5) and 26B Tourist Visit Visa (30 days, OMR 20) after selecting HONG KONG and No for GCC residence.",
-      "checkedAt": "2026-09-09",
-      "reviewDueAt": "2026-10-09"
+      "evidenceExcerpt": "The official wizard returns 26A Tourist Visit Visa (10 days, OMR 5) and 26B Tourist Visit Visa (30 days, OMR 20) after selecting HONG KONG and No for GCC residence; the same route was rechecked on 2026-09-11.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "om-mo-macao-sar-tourism-review",
@@ -2356,15 +2356,15 @@
       "outcome": "manual_review",
       "maxStayDays": null,
       "conditions": [
-        "阿曼皇家警察官方 Visa Eligibility Wizard 选择 MACAU、GCC 居民 No 后只返回 12B Truck Driver Visa 和 33A Property Owner Visa，未返回 26A/26B Tourist Visit Visa。",
+        "阿曼皇家警察官方 Visa Eligibility Wizard 于 2026-09-11 选择 MACAU、GCC 居民 No 后只返回 12B Truck Driver Visa 和 33A Property Owner Visa，未返回 26A/26B Tourist Visit Visa。",
         "当前结果只能证明该分支没有显示普通旅游产品；名单或结果缺席不能推出免签、全面拒签或其他普通签证结论，因此澳门特区护照旅游路线继续保留 REVIEW。"
       ],
       "status": "draft",
       "sourceIds": ["om-rop-visa-types", "om-rop-visa-eligibility"],
       "evidenceLocator": "Royal Oman Police eVisa > Visa Eligibility Wizard > MACAU > GCC resident: No",
-      "evidenceExcerpt": "The official wizard returns 12B Truck Driver Visa and 33A Property Owner Visa, but does not return 26A/26B Tourist Visit Visa for MACAU in the reviewed non-GCC-resident path.",
-      "checkedAt": "2026-09-09",
-      "reviewDueAt": "2026-10-09"
+      "evidenceExcerpt": "The official wizard returns 12B Truck Driver Visa and 33A Property Owner Visa, but does not return 26A/26B Tourist Visit Visa for MACAU in the reviewed non-GCC-resident path; the result was rechecked on 2026-09-11.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "jo-cn-prc-ordinary-tourism-review",
