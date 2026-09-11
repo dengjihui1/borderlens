@@ -52,7 +52,7 @@
 | 秘鲁 | 澳门特区护照 | REVIEW | 官方亚洲名单未显示 Macao；名单缺席不足以推出完整结论 |
 | 哥伦比亚 | 中国普通护照 | 通常需要 Visitor (V) 签证；持美国/申根永久居留许可或入境时有效期超过 6 个月的相关签证可适用条件免签 | 仅覆盖官方条件分支，不扩展到其他第三国签证或其他护照类型 |
 | 哥伦比亚 | 香港特区护照 | 短期免 Visitor (V) 签证，少于 90 天 | 官方特殊地区名单列出 Hong Kong；不扩展到香港签证身份书 |
-| 哥伦比亚 | 澳门特区护照 | REVIEW | 官方特殊地区段落列出 Hong Kong 但未显示 Macao；名单缺席不足以推出完整结论 |
+| 哥伦比亚 | 澳门特区护照 | 需要 Visitor 签证 | 哥伦比亚驻港总领馆 FAQ 直接要求澳门签发护照持有人在入境前申请签证；不扩展到澳门旅行证 |
 | 智利 | 中国普通护照 | 通常需要临时停留签证/授权；持符合条件的美国或加拿大签证、或 Green Card 且至少还有 6 个月有效期时可适用免签 | 官方备注排除美国 C 类或过境签；第三国条件需逐项核验 |
 | 智利 | 香港特区护照 | 免签，最多 90 天 | 官方领事选择器注明 Hong Kong 特别行政区国民；不扩展到香港签证身份书 |
 | 智利 | 澳门特区护照 | 免签，最多 30 天 | 官方领事选择器注明 Macao 特别行政区国民；不扩展到澳门旅行证 |
@@ -182,6 +182,7 @@
 - [Consulate General of Brazil in Hong Kong：Tourist Visa](https://www.gov.br/mre/pt-br/consulado-hong-kong/english/consular-services/visas/tourist-visa)
 - [Consulate General of Peru in London：Tourism Visas](https://www.consulado.pe/es/londres/tramite/Paginas/Visas/Issuance-of-Tourist-Visa.aspx)
 - [Colombia Ministry of Foreign Affairs：Entry to Colombia and Courtesy Visa Information](https://www.cancilleria.gov.co/sites/default/files/FOTOS2024/ENTRY%20TO%20COLOMBIA%20AND%20COURTESY%20VISA%20INFORMATION.pdf)
+- [Consulate General of Colombia in Hong Kong：30 frequently asked questions regarding visa applications and issuance for foreigners](https://hongkong.consulado.gov.co/sala-de-prensa/noticias/30-preguntas-frecuentes-relativas-la-solicitud-y-expedicion-de-visas-extranjeros-para-colombia)
 - [Chile Ministry of Foreign Affairs, Consular Services：Visas para ingresar a Chile](https://serviciosconsulares.cl/tramites/site/tax/port/all/taxport_14___1.html)
 - [Argentina National Migration Directorate：Regimen de Visas](https://www.migraciones.gob.ar/accesos/regimenvisas.php)
 - [Uruguay Ministry of Foreign Affairs, Consulate General in Hong Kong：Visas](https://www.gub.uy/ministerio-relaciones-exteriores/en/consulate-general-of-the-oriental-republic-of-uruguay-in-hong-kong/consular-services/visas)

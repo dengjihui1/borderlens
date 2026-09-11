@@ -2781,23 +2781,24 @@
       "reviewDueAt": "2026-10-11"
     },
     {
-      "id": "co-mo-macao-sar-tourism-review",
+      "id": "co-mo-macao-sar-tourism-visa-required",
       "destinationJurisdictionId": "co",
       "documentIssuerJurisdictionId": "mo",
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_required",
       "maxStayDays": null,
+      "visaProductName": "Colombia Visitor visa",
       "conditions": [
-        "哥伦比亚外交部官方入境信息的特殊地区免签段落在本次审阅中列出 Hong Kong，但未列出 Macao。",
-        "官方名单缺席只能说明当前材料没有给出澳门特区护照的直接结论，不能据此推出免签、需签证或禁止入境。",
-        "应继续通过哥伦比亚外交部、对应领事馆或官方签证系统核验澳门特区护照的完整旅游路线。"
+        "哥伦比亚驻香港总领事馆官方 FAQ 直接说明，澳门签发的护照持有人赴哥伦比亚旅游、参加活动、商务或过境，均须在入境前申请签证。",
+        "签证申请应通过哥伦比亚外交部官方平台办理；本条不推断签证类别、签发期限或获准停留期。",
+        "本条仅适用于澳门特区护照，不扩展到澳门旅行证、其他旅行证件或外交/公务护照。"
       ],
-      "status": "draft",
-      "sourceIds": ["co-mre-entry-visa-information"],
-      "evidenceLocator": "Colombia MFA > Entry to Colombia and Courtesy Visa Information > Special territories list; Macao not displayed",
-      "evidenceExcerpt": "The reviewed official special-territory section lists Hong Kong but does not display Macao; that absence does not establish a complete Macao passport visa outcome.",
+      "status": "verified",
+      "sourceIds": ["co-hk-consulate-visa-faq"],
+      "evidenceLocator": "Colombia Consulate General in Hong Kong > 30 frequently asked questions > 'My passport is issued by Macau. Do I need a visa for Colombia?'",
+      "evidenceExcerpt": "My passport is issued by Macau. Do I need a visa for Colombia? Yes. Whether you are traveling for tourism, to attend events, on business, or in transit, you must apply for a visa at the Colombian consulate in Hong Kong prior to entering Colombia.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },

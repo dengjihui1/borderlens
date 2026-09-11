@@ -422,7 +422,7 @@ test('秘鲁保留中国第三国签证例外、香港免签与澳门 REVIEW', a
   assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome], ['draft', 'manual_review']);
 });
 
-test('哥伦比亚保留中国条件免签、香港短期免签与澳门 REVIEW', async () => {
+test('哥伦比亚区分中国条件免签、香港短期免签与澳门需签证', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const colombia = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'co');
   assert.equal(colombia.length, 3);
@@ -430,7 +430,9 @@ test('哥伦比亚保留中国条件免签、香港短期免签与澳门 REVIEW'
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('美国或申根')));
   assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', 90]);
-  assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome], ['draft', 'manual_review']);
+  assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['verified', 'visa_required', null]);
+  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('旅游、参加活动、商务或过境')));
+  assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('co-hk-consulate-visa-faq'));
 });
 
 test('智利区分中国条件免签与港澳特区护照停留期', async () => {
