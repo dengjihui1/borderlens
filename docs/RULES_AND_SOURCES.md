@@ -35,7 +35,9 @@
 | 阿曼 | 中国普通护照 | 26A/26B Tourist Visit Visa，10 或 30 天 | 官方资格向导在 CHINA + GCC 居民 No 分支返回 26A（OMR 5）和 26B（OMR 20）；26A 条件含境外申请、护照至少 6 个月有效、无需担保人，签证不保证入境 |
 | 阿曼 | 香港特区护照 | 26A/26B Tourist Visit Visa，10 或 30 天 | 官方资格向导在 HONG KONG + GCC 居民 No 分支返回 26A（OMR 5）和 26B（OMR 20）；不扩展到其他证件 |
 | 阿曼 | 澳门特区护照 | 免签，最多 14 天 | 阿曼外交部 Entry visas 页面将 China（包括 Hong Kong 和 Macau）列入第一组；需满足护照、返程票、酒店、保险和资金条件，14 天不可延期或转换；不扩展到澳门旅行证 |
-| 约旦 | 中国普通护照、香港/澳门特区护照 | REVIEW | 当前英文官方页面未将三者列入亚洲受限名单；电子签服务页列有 Visit/Transit Visa 和境外申请，但未给出三类普通护照的完整最终路线；香港入境处参考表另列 HKSAR 14 天但不区分免签/落地签，仍须目的地官方确认 |
+| 约旦 | 中国普通护照 | 落地签，费用 40 JOD，停留期限待确认 | 约旦旅游局官方 Visas To Jordan 表将 China 列为 On-Arrival Applicable，并写明抵达办理、40 JOD；页面未给出准许停留天数；仅普通护照，不扩展到旅行证件 |
+| 约旦 | 香港特区护照 | 落地签，费用 40 JOD，停留期限待确认 | 约旦旅游局官方表将 Hong Kong 列为 On-Arrival Applicable，并写明抵达办理、40 JOD；页面未给出准许停留天数；仅 HKSAR 普通护照，不扩展到签证身份书或旅行证件 |
+| 约旦 | 澳门特区护照 | 落地签，费用 40 JOD，停留期限待确认 | 约旦旅游局官方表将 Macau 列为 On-Arrival Applicable，并写明抵达办理、40 JOD；页面未给出准许停留天数；仅澳门特区普通护照，不扩展到澳门旅行证或其他旅行证件 |
 | 土耳其 | 中国普通护照 | 免签，任何 180 天内最多 90 天 | 土耳其外交部表格注明自 2026-01-02 起生效；仅普通护照旅游路线 |
 | 土耳其 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；BNO 与香港签证身份书另行处理 |
 | 土耳其 | 澳门特区护照 | 免签，最多 30 天 | 仅澳门特区护照，不扩展到澳门旅行证 |
@@ -183,6 +185,7 @@
 - [Jordan Ministry of Interior：Countries requiring prior approval](https://moi.gov.jo/Ar/Pages/%D8%A7%D9%84%D8%AF%D9%88%D9%84_%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9_%D9%88%D8%BA%D9%8A%D8%B1_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9)
 - [Jordan Ministry of Interior：Restricted and Non Restricted Countries (Nationalities)](https://moi.gov.jo/EN/Pages/Restricted_and_Non_Restricted_Countries_Nationalities)
 - [Jordan Ministry of Interior：E Applications for Visa and Residence Permits](https://moi.gov.jo/EN/Pages/E_Applications_for_Visa_and_Residence_Permits)
+- [Jordan Tourism Board：Visas To Jordan](https://fr.visitjordan.com/page/4/visas-to-jordan/)（官方国籍表：China、Hong Kong、Macau 均可抵达办理签证，费用 40 JOD；页面未列停留期限）
 - [Türkiye MFA：Visa Information For Foreigners](https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa)
 - [Egypt Electronic Visa Portal：FAQ eligibility list](https://visa2egypt.gov.eg/eVisa/FAQ)（中国列入电子签资格表；旅游电子签 30/65 美元及入境材料；港澳缺席仍不作最终推断）
 - [Mexico National Institute of Migration：Countries and regions requiring a visa](https://www.inm.gob.mx/gobmx/word/index.php/paises-requieren-visa-para-mexico/)

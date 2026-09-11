@@ -2381,16 +2381,17 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_on_arrival",
       "maxStayDays": null,
       "conditions": [
-        "约旦内政部英文 Restricted and Non-Restricted Countries 页面将“不需预先批准”定义为非受限国家；其亚洲受限名单当前未列出 China，但同页另行说明除梵蒂冈外的 Travel Pass 旅行证件均受限制。",
-        "约旦内政部电子签服务页说明该服务面向不需预先批准的外国人，申请须在境外提交，并列出 Visit Visa、Transit Visa 等服务和费用；公开页面未给出中国普通护照的完整签证结果、停留期与 Travel Pass/普通护照边界，因此继续 REVIEW。"
+        "约旦旅游局官方 Visas To Jordan 表将 China 列为 On-Arrival Applicable，并说明签证可在抵达时取得，费用为 40 JOD。",
+        "该官方表没有给出中国普通护照的准许停留天数，因此本条不填期限；落地签签发与最终入境仍须由约旦主管机关按抵达时规则决定。",
+        "约旦内政部官方页面另说明除梵蒂冈外的 Travel Pass 旅行证件受限制；本条仅适用于中国普通护照，不扩展到旅行证件或其他证件。"
       ],
-      "status": "draft",
-      "sourceIds": ["jo-moi-prior-approval", "jo-moi-evisa-services"],
-      "evidenceLocator": "Jordan Ministry of Interior > Restricted and Non-Restricted Countries (Nationalities) > Asia table; E Applications for Visa and Residence Permits",
-      "evidenceExcerpt": "The current English official page defines non-restricted countries as those not needing prior approval and does not list China among the restricted Asian nationalities; it separately restricts Travel Pass documents. The e-visa service page lists visit and transit services for foreigners who do not need prior approval, but neither page gives the complete ordinary-passport outcome, stay period or final admission route.",
+      "status": "verified",
+      "sourceIds": ["jo-visitjordan-visas", "jo-moi-prior-approval"],
+      "evidenceLocator": "Jordan Tourism Board > Visas To Jordan > nationality table > China",
+      "evidenceExcerpt": "The official table lists China as On-Arrival Applicable and states: Visa can be obtained upon arrival, it will cost a total of 40 JOD. The table does not state the permitted stay period.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -2401,17 +2402,17 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_on_arrival",
       "maxStayDays": null,
       "conditions": [
-        "约旦内政部英文 Restricted and Non-Restricted Countries 页面将“不需预先批准”定义为非受限国家；其亚洲受限名单当前未列出 Hong Kong，但同页另行说明除梵蒂冈外的 Travel Pass 旅行证件均受限制。",
-        "约旦内政部电子签服务页说明该服务面向不需预先批准的外国人，申请须在境外提交，并列出 Visit Visa、Transit Visa 等服务和费用；公开页面未给出香港特区护照的完整签证结果、停留期与 Travel Pass/普通护照边界。",
-        "香港入境处官方 HKSAR Passport 参考表将 Jordan 列为 14 天的“免签或落地签”参考项，但该表不区分具体产品并要求向目的地官方确认，因此只能缩小范围，路线继续 REVIEW。"
+        "约旦旅游局官方 Visas To Jordan 表将 Hong Kong 列为 On-Arrival Applicable，并说明签证可在抵达时取得，费用为 40 JOD。",
+        "该官方表没有给出香港特区护照的准许停留天数，因此本条不填期限；落地签签发与最终入境仍须由约旦主管机关按抵达时规则决定。",
+        "约旦内政部官方页面另说明除梵蒂冈外的 Travel Pass 旅行证件受限制；本条仅适用于香港特区普通护照，不扩展到香港签证身份书、旅行证件或其他证件。"
       ],
-      "status": "draft",
-        "sourceIds": ["jo-moi-prior-approval", "jo-moi-evisa-services", "hk-immd-visa-free-arrival-list"],
-        "evidenceLocator": "Jordan Ministry of Interior > Restricted and Non Restricted Countries (Nationalities) > Asia table; E Applications for Visa and Residence Permits; Hong Kong Immigration Department > HKSAR Passport reference table > Jordan",
-        "evidenceExcerpt": "Jordan's official pages define the non-restricted category and expose Visit/Transit Visa services but do not give the complete HKSAR passport route. The HKSAR Immigration Department's official reference lists Jordan as 14 days under a combined visa-free-or-visa-on-arrival table, without distinguishing the product and while directing travellers to confirm with Jordanian authorities; the route therefore remains REVIEW.",
+      "status": "verified",
+      "sourceIds": ["jo-visitjordan-visas", "jo-moi-prior-approval"],
+      "evidenceLocator": "Jordan Tourism Board > Visas To Jordan > nationality table > Hong Kong",
+      "evidenceExcerpt": "The official table lists Hong Kong as On-Arrival Applicable and states: Visa can be obtained upon arrival, it will cost a total of 40 JOD. The table does not state the permitted stay period.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -2422,16 +2423,17 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_on_arrival",
       "maxStayDays": null,
       "conditions": [
-        "约旦内政部英文 Restricted and Non-Restricted Countries 页面将“不需预先批准”定义为非受限国家；其亚洲受限名单当前未列出 Macau，但同页另行说明除梵蒂冈外的 Travel Pass 旅行证件均受限制。",
-        "约旦内政部电子签服务页说明该服务面向不需预先批准的外国人，申请须在境外提交，并列出 Visit Visa、Transit Visa 等服务和费用；公开页面未给出澳门特区护照的完整签证结果、停留期与 Travel Pass/普通护照边界，因此继续 REVIEW。"
+        "约旦旅游局官方 Visas To Jordan 表将 Macau 列为 On-Arrival Applicable，并说明签证可在抵达时取得，费用为 40 JOD。",
+        "该官方表没有给出澳门特区护照的准许停留天数，因此本条不填期限；落地签签发与最终入境仍须由约旦主管机关按抵达时规则决定。",
+        "约旦内政部官方页面另说明除梵蒂冈外的 Travel Pass 旅行证件受限制；本条仅适用于澳门特区普通护照，不扩展到澳门旅行证、旅行证件或其他证件。"
       ],
-      "status": "draft",
-      "sourceIds": ["jo-moi-prior-approval", "jo-moi-evisa-services"],
-      "evidenceLocator": "Jordan Ministry of Interior > Restricted and Non Restricted Countries (Nationalities) > Asia table; E Applications for Visa and Residence Permits",
-      "evidenceExcerpt": "The current English official page defines non-restricted countries as those not needing prior approval and does not list Macao among the restricted Asian nationalities; it separately restricts Travel Pass documents. The e-visa service page lists visit and transit services for foreigners who do not need prior approval, but neither page gives the complete ordinary-passport outcome, stay period or final admission route.",
+      "status": "verified",
+      "sourceIds": ["jo-visitjordan-visas", "jo-moi-prior-approval"],
+      "evidenceLocator": "Jordan Tourism Board > Visas To Jordan > nationality table > Macau",
+      "evidenceExcerpt": "The official table lists Macau as On-Arrival Applicable and states: Visa can be obtained upon arrival, it will cost a total of 40 JOD. The table does not state the permitted stay period.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },

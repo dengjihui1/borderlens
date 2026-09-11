@@ -366,13 +366,13 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
   const jordan = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'jo');
   assert.equal(jordan.length, 3);
   for (const rule of jordan) {
-    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
-    assert.ok(rule.conditions.some((condition: string) => condition.includes('电子签')));
-    assert.ok(rule.conditions.some((condition: string) => condition.includes('Visit Visa') && condition.includes('Transit Visa')));
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_on_arrival', null]);
+    assert.ok(rule.sourceIds.includes('jo-visitjordan-visas'));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('40 JOD') && condition.includes('抵达')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('没有给出') && condition.includes('停留天数')));
   }
   const jordanHksar = byId.get('jo-hk-hksar-tourism-review')!;
-  assert.ok(jordanHksar.sourceIds.includes('hk-immd-visa-free-arrival-list'));
-  assert.ok(jordanHksar.conditions.some((condition: string) => condition.includes('14 天') && condition.includes('免签或落地签')));
+  assert.ok(jordanHksar.conditions.some((condition: string) => condition.includes('香港特区普通护照')));
 });
 
 test('土耳其规则区分中国普通、香港特区与澳门特区护照免签期限', async () => {
