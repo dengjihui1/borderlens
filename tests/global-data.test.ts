@@ -351,6 +351,7 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
   for (const rule of jordan) {
     assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
     assert.ok(rule.conditions.some((condition: string) => condition.includes('电子签')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('Visit Visa') && condition.includes('Transit Visa')));
   }
 });
 
