@@ -1888,20 +1888,21 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_free",
+      "maxStayDays": 30,
       "conditions": [
-        "尼泊尔移民局此前索引的 Visa on Arrival 英文页面当前返回 404。",
-        "在官方新页面直接核实资格排除、期限与费用前，不把通行的落地签印象写成确定结论。"
+        "尼泊尔移民局当前官方 Visa Exemption 页面列出 People's Republic of China，免签期为 Up to 30 Days，适用于入境、停留、离境和过境。",
+        "本条仅覆盖中国普通护照的窄路线；页面按国籍列出免签期，未在该条目中单独说明外交、公务或其他特殊证件。",
+        "超过 30 天后适用尼泊尔标准签证规则；实际入境仍须满足护照、口岸和边境机关要求。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
-        "np-immigration-voa"
+        "np-immigration-visa-exemption"
       ],
-      "evidenceLocator": "Nepal Department of Immigration > former Visa on Arrival page; direct request returned 404",
-      "evidenceExcerpt": "The identified official visa-on-arrival route currently returns PAGE NOT FOUND, so nationality eligibility, exclusions, stay periods and fees remain REVIEW.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Nepal Department of Immigration > Visa Exemption; People's Republic of China row",
+      "evidenceExcerpt": "People's Republic of China — Up to 30 Days. The exemption applies to entry, stay, exit and transit through Nepal for the specified period.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "np-hk-hksar-tourism-review",

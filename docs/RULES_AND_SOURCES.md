@@ -95,7 +95,8 @@
 | 印度 | 中国普通护照、香港/澳门特区护照 | REVIEW | 当前 eVisa 资格弹窗没有列出三类证件，但该页面不足以证明完整普通签证或豁免路线 |
 | 斯里兰卡 | 中国普通护照 | ETA，30 天内两次入境 | 2026-05-25 起列入 40 国免费旅游 ETA 名单 |
 | 斯里兰卡 | 香港/澳门特区护照 | ETA，30 天内两次入境 | 未列入免费名单，按其他国家费用分支；第二次入境只使用 30 天总期限的余额 |
-| 尼泊尔 | 中国普通护照、香港/澳门特区护照 | REVIEW | 原 Visa on Arrival 英文官方页返回 404，期限、费用与排除名单待新入口复核 |
+| 尼泊尔 | 中国普通护照 | 免签，最多 30 天 | 移民局当前 Visa Exemption 页面列出 People's Republic of China；适用于入境、停留、离境和过境 |
+| 尼泊尔 | 香港/澳门特区护照 | REVIEW | 当前免签页未列出 HKSAR 或 Macao 独立条目；不从名单缺席推断完整结论 |
 | 孟加拉国 | 中国普通护照、香港/澳门特区护照 | REVIEW | MRV 门户只证明可填新签证/落地签表格，未给出目标证件的国籍资格 |
 | 马尔代夫 | 中国普通护照、香港/澳门特区护照 | 旅游落地签 | 无需预先签证批准；另通过官方 IMUGA 免费提交 Traveller Declaration；官网正文未稳定显示天数，本轮不猜期限 |
 | 其他组合 | 任意 | REVIEW | 不根据模型记忆或第三方聚合器猜测 |
@@ -139,6 +140,7 @@
 - [Philippines Bureau of Immigration：Visa Waiver](https://immigration.gov.ph/visas/visa-waiver/)
 - [Mongolia Electronic Visa Application System：Visa Free Countries](https://evisa.mn/en)
 - [Uruguay Ministry of the Interior：Régimen de visas de admisión](https://www.gub.uy/ministerio-interior/comunicacion/publicaciones/regimen-visas-admision)
+- [Nepal Department of Immigration：Visa Exemption](https://immigration.gov.np/visa-exemption)
 - [Cambodia MFAIC：e-Visa Visa Type Information](https://www.evisa.gov.kh/information/visa_type/4)
 - [Cambodia MFAIC：Official e-Visa service](https://www.evisa.gov.kh/home)
 - [Lao PDR MOFA：Who can apply for Lao eVisa](https://laoevisa.gov.la/article/who_can_apply)

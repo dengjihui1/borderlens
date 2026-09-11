@@ -51,7 +51,7 @@ export const latestPolicyBatch = [
 /* PHASE_06_BATCH */
   { id: 'in', label: '印度', note: '目标证件不在 eVisa 名单，普通签证路线待复核' },
   { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },
-  { id: 'np', label: '尼泊尔', note: '原落地签官方页 404，保留 REVIEW' },
+  { id: 'np', label: '尼泊尔', note: '中国普通护照官方免签最多 30 天；港澳特区护照继续 REVIEW' },
   { id: 'bd', label: '孟加拉国', note: 'MRV 门户可用，国籍资格仍待复核' },
   { id: 'mv', label: '马尔代夫', note: '旅游落地签与免费 IMUGA 申报并存' },
 ].map((item) => {

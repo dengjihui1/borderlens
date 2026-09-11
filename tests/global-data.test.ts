@@ -281,11 +281,16 @@ test('斯里兰卡三类护照均需 ETA 且保留 30 天双次入境', async ()
   assert.ok(sriLanka.find((rule: PolicyFixture) => rule.documentType === 'ordinary_passport')!.conditions.some((condition: string) => condition.includes('免费')));
 });
 
-test('尼泊尔官方落地签页 404 时保持 REVIEW', async () => {
+test('尼泊尔官方免签页确认中国普通护照最多 30 天，港澳仍保持 REVIEW', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const nepal = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'np');
   assert.equal(nepal.length, 3);
-  for (const rule of nepal) assert.deepEqual([rule.status, rule.outcome], ['draft', 'manual_review']);
+  const byType = new Map(nepal.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_free', 30]);
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('People') && condition.includes('30 Days')));
+  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
+    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome], ['draft', 'manual_review']);
+  }
 });
 
 test('孟加拉国通用 MRV 说明不被误写成国籍政策', async () => {
