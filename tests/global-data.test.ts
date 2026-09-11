@@ -359,9 +359,10 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
   assert.equal(oman.length, 3);
   assert.deepEqual([byId.get('om-cn-prc-ordinary-tourism-review')!.status, byId.get('om-cn-prc-ordinary-tourism-review')!.outcome, byId.get('om-cn-prc-ordinary-tourism-review')!.maxStayDays], ['verified', 'visa_required', 30]);
   assert.deepEqual([byId.get('om-hk-hksar-tourism-review')!.status, byId.get('om-hk-hksar-tourism-review')!.outcome, byId.get('om-hk-hksar-tourism-review')!.maxStayDays], ['verified', 'visa_required', 30]);
-  assert.deepEqual([byId.get('om-mo-macao-sar-tourism-review')!.status, byId.get('om-mo-macao-sar-tourism-review')!.outcome, byId.get('om-mo-macao-sar-tourism-review')!.maxStayDays], ['draft', 'manual_review', null]);
+  assert.deepEqual([byId.get('om-mo-macao-sar-tourism-review')!.status, byId.get('om-mo-macao-sar-tourism-review')!.outcome, byId.get('om-mo-macao-sar-tourism-review')!.maxStayDays], ['verified', 'visa_free', 14]);
   assert.ok(byId.get('om-cn-prc-ordinary-tourism-review')!.conditions.some((condition: string) => condition.includes('26A')));
-  assert.ok(byId.get('om-mo-macao-sar-tourism-review')!.conditions.some((condition: string) => condition.includes('12B') && condition.includes('33A') && condition.includes('未返回')));
+  assert.ok(byId.get('om-mo-macao-sar-tourism-review')!.conditions.some((condition: string) => condition.includes('第一组') && condition.includes('14 天')));
+  assert.ok(byId.get('om-mo-macao-sar-tourism-review')!.conditions.some((condition: string) => condition.includes('12B') && condition.includes('33A') && condition.includes('电子签产品路径')));
   const jordan = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'jo');
   assert.equal(jordan.length, 3);
   for (const rule of jordan) {
