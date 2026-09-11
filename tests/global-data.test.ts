@@ -178,7 +178,7 @@ test('印度尼西亚区分中国普通护照 B1 落地签与港澳 A1 免签', 
   assert.deepEqual([byId.get('id-mo-macao-sar-tourism-a1-exemption')!.outcome, byId.get('id-mo-macao-sar-tourism-a1-exemption')!.maxStayDays], ['visa_free', null]);
 });
 
-test('越南官方电子签接口确认中国普通护照路线，港澳缺少独立结果仍保持 REVIEW', async () => {
+test('越南官方电子签接口确认中国普通护照路线，菲律宾港澳 9A 免签路线已核验', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const vietnam = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'vn');
   assert.equal(vietnam.length, 3);
@@ -194,7 +194,12 @@ test('越南官方电子签接口确认中国普通护照路线，港澳缺少�
 
   const philippines = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ph');
   assert.equal(philippines.length, 3);
-  for (const rule of philippines) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
+  const philippinesByType = new Map(philippines.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([philippinesByType.get('ordinary_passport')!.status, philippinesByType.get('ordinary_passport')!.outcome, philippinesByType.get('ordinary_passport')!.maxStayDays], ['draft', 'manual_review', null]);
+  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
+    assert.deepEqual([philippinesByType.get(documentType)!.status, philippinesByType.get(documentType)!.outcome, philippinesByType.get(documentType)!.maxStayDays], ['verified', 'visa_free', 14]);
+    assert.ok(philippinesByType.get(documentType)!.conditions.some((condition: string) => condition.includes('9A') && condition.includes('14 天')));
+  }
 });
 
 test('柬埔寨 Visa T 保留电子签、护照有效期与 e-Arrival 要求', async () => {

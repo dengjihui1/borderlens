@@ -1270,20 +1270,21 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_free",
+      "maxStayDays": 14,
       "conditions": [
-        "官方页面的搜索索引提示存在香港特区护照短期免签分支，但直接页面被安全验证阻止。",
-        "停留天数、续程票和护照有效期未直接核验前维持 REVIEW。"
+        "仅适用于香港特别行政区护照；菲律宾移民局 Visa Waiver 页面将其列为 HONG KONG / MACAU SAR PASSPORT。",
+        "菲律宾移民局页面列明 9A 免签初始准许停留 14 天；实际入境仍须满足口岸和边境官员要求。",
+        "如需延长，官方页面另列首次延长 7 天的收费与办理项，是否批准以菲律宾移民局为准。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
-        "ph-dfa-beijing-general"
+        "ph-bi-visa-waiver"
       ],
-      "evidenceLocator": "Embassy of the Philippines in Beijing > General Information; HKSAR branch pending direct page review",
-      "evidenceExcerpt": "An indexed official snippet points to an HKSAR passport branch, but direct official-page evidence was unavailable; no visa-free duration is asserted.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Philippines Bureau of Immigration > Visa Waiver; HONG KONG / MACAU SAR PASSPORT row and Note 1",
+      "evidenceExcerpt": "HONG KONG / MACAU SAR PASSPORT — 14 days initial admission; Note 1 states Hong Kong SAR — 9A 14 days under FSC Circular 125-10 (year 2010).",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "ph-mo-macao-sar-tourism-review",
@@ -1292,20 +1293,21 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_free",
+      "maxStayDays": 14,
       "conditions": [
-        "官方页面的搜索索引提示存在澳门特区护照短期免签分支，但直接页面被安全验证阻止。",
-        "停留天数、续程票和护照有效期未直接核验前维持 REVIEW。"
+        "仅适用于澳门特别行政区护照；菲律宾移民局 Visa Waiver 页面将其列为 HONG KONG / MACAU SAR PASSPORT。",
+        "菲律宾移民局页面列明 9A 免签初始准许停留 14 天；实际入境仍须满足口岸和边境官员要求。",
+        "如需延长，官方页面另列首次延长 7 天的收费与办理项，是否批准以菲律宾移民局为准。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
-        "ph-dfa-beijing-general"
+        "ph-bi-visa-waiver"
       ],
-      "evidenceLocator": "Embassy of the Philippines in Beijing > General Information; Macao SAR branch pending direct page review",
-      "evidenceExcerpt": "An indexed official snippet points to a Macao SAR passport branch, but direct official-page evidence was unavailable; no visa-free duration is asserted.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Philippines Bureau of Immigration > Visa Waiver; HONG KONG / MACAU SAR PASSPORT row and Note 2",
+      "evidenceExcerpt": "HONG KONG / MACAU SAR PASSPORT — 14 days initial admission; Note 2 states Macau SAR — 9A 14 days under FSC Circular 112-11 (year 2011).",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "kh-cn-prc-ordinary-tourism-evisa",

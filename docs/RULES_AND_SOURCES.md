@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-11（第二十三批越南规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第二十四批菲律宾规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -78,7 +78,9 @@
 | 印度尼西亚 | 香港/澳门特区护照 | A1 Tourism Visa Exemption | 官方选择器已确认产品；本轮不输出未稳定呈现的具体停留天数 |
 | 越南 | 中国普通护照 | Vietnam e-Visa，最长 90 天，可单次或多次入境 | 官方国籍 API 将 CHN / China 标为 EVISA；申请须在越南境外，需有效护照或国际旅行证件，并经政府指定国际边境口岸出入 |
 | 越南 | 香港/澳门特区护照 | REVIEW | 官方国籍 API 本轮没有返回 HKG 或 MAC 独立记录；名单缺席不能推出免签、普通签证或禁止入境结论 |
-| 菲律宾 | 中国普通护照、香港/澳门特区护照 | REVIEW | DFA 页面被安全验证阻挡，索引摘要不作政策证据 |
+| 菲律宾 | 中国普通护照 | REVIEW | DFA 页面被安全验证阻挡，例外签证与普通旅游路线未直接核验 |
+| 菲律宾 | 香港特区护照 | 9A 免签，初始准许停留 14 天 | 菲律宾移民局 Visa Waiver 页面直接列出 HONG KONG / MACAU SAR PASSPORT；首次延长项目另行办理 |
+| 菲律宾 | 澳门特区护照 | 9A 免签，初始准许停留 14 天 | 菲律宾移民局 Visa Waiver 页面直接列出 HONG KONG / MACAU SAR PASSPORT；首次延长项目另行办理 |
 | 柬埔寨 | 中国普通护照、香港/澳门特区护照 | Visa T 电子签，单次入境，停留 1 个月 | USD 30；签发日起 3 个月有效；护照超过 6 个月有效；另填 Cambodia e-Arrival |
 | 老挝 | 中国普通护照、香港/澳门特区护照 | T-B3 旅游电子签，停留 30 天 | 批准信 60 天有效；只接受普通护照；须从 9 个指定口岸之一入境并打印批准信 |
 | 缅甸 | 中国普通护照、香港/澳门特区护照 | 旅游电子签，停留 28 天 | 批准信 90 天有效；单次入境；仅 3 个国际机场与 Kawthaung 陆路口岸，海港不适用；旅行证件不接受 |
@@ -129,6 +131,7 @@
 - [Vietnam Immigration：National Electronic Visa system](https://evisa.gov.vn/e-visa/foreigners)
 - [Vietnam Immigration：public nationality and border-gate APIs](https://api.evisa.gov.vn/client-service/public/dm-qt/get-all)
 - [Philippines DFA Beijing：General Information](https://beijingpe.dfa.gov.ph/general-information)（本轮安全验证阻挡，`blocked`）
+- [Philippines Bureau of Immigration：Visa Waiver](https://immigration.gov.ph/visas/visa-waiver/)
 - [Cambodia MFAIC：e-Visa Visa Type Information](https://www.evisa.gov.kh/information/visa_type/4)
 - [Cambodia MFAIC：Official e-Visa service](https://www.evisa.gov.kh/home)
 - [Lao PDR MOFA：Who can apply for Lao eVisa](https://laoevisa.gov.la/article/who_can_apply)

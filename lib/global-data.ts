@@ -26,6 +26,7 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
+  { id: 'ph', label: '菲律宾', note: '香港与澳门特区护照 9A 免签，初始准许停留 14 天；中国普通护照继续 REVIEW' },
   { id: 'vn', label: '越南', note: '中国普通护照可申请 Vietnam e-Visa，最长 90 天；港澳特区护照接口结果继续 REVIEW' },
   { id: 'cr', label: '哥斯达黎加', note: '官方移民局已登记签证指引入口，并公开特定美国/加拿大、欧洲居留及申根签证例外；目标护照基础组别与停留期继续 REVIEW' },
   { id: 'bo', label: '玻利维亚', note: '中国、香港、澳门特区普通护照列入 Tourist Visa Group II，需申请旅游签证' },
