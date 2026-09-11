@@ -514,11 +514,15 @@ test('玻利维亚官方使馆页确认三类普通护照属于 Tourist Visa Gro
   }
 });
 
-test('哥斯达黎加官方移民局仅提供签证指引入口时保留三类护照 REVIEW', async () => {
+test('哥斯达黎加官方公报核验中国及港澳普通护照领事签证路线', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const costaRica = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'cr');
   assert.equal(costaRica.length, 3);
-  assert.ok(costaRica.every((rule: PolicyFixture) => rule.status === 'draft' && rule.outcome === 'manual_review' && rule.maxStayDays === null));
-  assert.ok(costaRica.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('Directriz'))));
+  assert.ok(costaRica.every((rule: PolicyFixture) => rule.status === 'verified' && rule.outcome === 'visa_required' && rule.maxStayDays === null));
+  assert.ok(costaRica.every((rule: PolicyFixture) => rule.sourceIds.includes('cr-gaceta-directrices-2025')));
+  assert.ok(costaRica.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('领事签证'))));
   assert.ok(costaRica.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('美国/加拿大') && condition.includes('申根'))));
+  assert.ok(costaRica.find((rule: PolicyFixture) => rule.documentType === 'ordinary_passport')!.conditions.some((condition: string) => condition.includes('北京或上海') && condition.includes('30 天')));
+  assert.ok(costaRica.find((rule: PolicyFixture) => rule.documentType === 'hksar_passport')!.conditions.some((condition: string) => condition.includes('有效英国护照')));
+  assert.ok(costaRica.find((rule: PolicyFixture) => rule.documentType === 'macao_sar_passport')!.conditions.some((condition: string) => condition.includes('有效葡萄牙护照')));
 });
