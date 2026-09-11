@@ -102,7 +102,8 @@
 | 尼泊尔 | 香港特区护照 | 需签证，免费；年度累计最多 150 天 | 驻港总领事馆官方页面明确 HKSAR 护照需签证但免费；澳门特区护照另有 Nepaliport 落地签申请路线 |
 | 尼泊尔 | 澳门特区护照 | 旅游落地签申请路线 | Nepaliport 官方 On-arrival Visa Application 的护照签发国列表列出 Macao Special Administrative Region of China（MAC，blacklisted=false）；确认可进入申请路线，但不保证签发、入境或停留天数 |
 | 孟加拉国 | 中国普通护照 | 旅游落地签，最多 30 天 | 官方驻北京使馆页面列明中国属于可按条件申请落地签的国籍；需返程票、访问证明、至少 500 美元或等值资金，最终由移民机关审查 |
-| 孟加拉国 | 香港/澳门特区护照 | REVIEW | 驻港总领馆 Tourist Visa 页面给出申请材料，官方 MRV 费用表分别列出 Hong Kong 与 Macau，但仍未证明港澳特区护照没有免签或其他入境路线 |
+| 孟加拉国 | 香港特区护照 | 需旅游签证 | 驻港总领馆 Tourist Visa 页面给出旅游签证申请材料；官方 Visa Fees 表将 Hong Kong 列为有金额的签证费行；本轮不补填统一停留期 |
+| 孟加拉国 | 澳门特区护照 | 需旅游签证 | 驻港总领馆 Tourist Visa 页面给出旅游签证申请材料；官方 Visa Fees 表将 Macau 列为有金额的签证费行；本轮不补填统一停留期 |
 | 马尔代夫 | 中国普通护照、香港/澳门特区护照 | 旅游落地签 | 无需预先签证批准；另通过官方 IMUGA 免费提交 Traveller Declaration；官网正文未稳定显示天数，本轮不猜期限 |
 | 其他组合 | 任意 | REVIEW | 不根据模型记忆或第三方聚合器猜测 |
 
@@ -167,6 +168,7 @@
 - [Bangladesh Department of Immigration and Passports：Online MRV Portal](https://visa.gov.bd/)（含 Hong Kong/Macau 当前费用记录；不单独决定入境制度）
 - [Bangladesh Embassy in Beijing：Visa on Arrival](https://beijing.mofa.gov.bd/pages/static-pages/6952668b35ce18e1c05a9eb1)
 - [Bangladesh Consulate General in Hong Kong：Tourist Visa](https://hongkong.mofa.gov.bd/pages/static-pages/6952668735ce18e1c05a9d33)
+- [Bangladesh Consulate General in Hong Kong：Visa Fees](https://hongkong.mofa.gov.bd/pages/static-pages/6952667c35ce18e1c05a97fc)（Hong Kong/Macau 签证费率行；不补填统一停留期）
 - [Maldives Immigration：Tourist Visa — On Arrival](https://www.immigration.gov.mv/visa/tourist-visa)
 - [Maldives Immigration：Traveller Declaration](https://www.immigration.gov.mv/traveller-declaration)
 - [Visit Qatar：Qatar Visa Check](https://visitqatar.com/intl-en/plan-your-trip/visas)

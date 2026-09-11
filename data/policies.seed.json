@@ -1999,20 +1999,22 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_required",
       "maxStayDays": null,
+      "visaProductName": "Bangladesh Tourist Visa",
       "conditions": [
-        "孟加拉国官方在线 MRV 门户支持新签证、延期、NVR 与落地签表格，但当前页面没有给出目标证件的国籍结论。",
-        "孟加拉驻港总领事馆官方 Tourist Visa 页面列出香港/澳门身份证明、往返行程、住宿、银行流水和护照材料，但这只证明存在旅游签证申请路线，不能证明香港特区护照没有免签或其他入境安排；具体路线仍需人工复核。"
+        "孟加拉驻港总领事馆官方 Tourist Visa 页面规定，具有与孟加拉国外交关系国家的外国人以及旅游者可申请旅游签证；材料包括在线申请、往返行程、住宿、银行流水、护照资料和香港/澳门身份证明。",
+        "同一总领事馆官方 Rate of Visa Fees 表将 Hong Kong 单列为有金额的单次/双次入境签证费行；该表把 Visa on Arrival、No visa required 和有金额的签证行分开列示，因此本条确认香港特区普通护照的正规旅游签证路线。",
+        "官方材料未给出该旅游签证的统一准许停留期；签证费、签发和最终入境仍须按申请时的官方流程及边境审查确认。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
         "bd-online-mrv",
         "bd-hk-tourist-visa",
-        "bd-online-mrv"
+        "bd-hk-visa-fees"
       ],
-      "evidenceLocator": "Bangladesh Online MRV Portal > current visa fee table; Consulate General of Bangladesh in Hong Kong > Tourist Visa",
-      "evidenceExcerpt": "The official MRV portal fee table lists Hong Kong at USD 21 for single and re-entry and USD 30 for multiple entry; the Hong Kong consulate's tourist-visa page lists Hong Kong identity-card evidence and supporting documents. These records confirm an application/fee route but do not establish the complete HKSAR passport entry outcome, so the route remains REVIEW.",
+      "evidenceLocator": "Consulate General of Bangladesh in Hong Kong > Tourist Visa; Visa Fees > Rate of Visa Fees > Hong Kong",
+      "evidenceExcerpt": "The official consulate states that foreign nationals of countries having diplomatic relations with Bangladesh and people travelling for tourism are eligible for a Tourist Visa, and requires passport and Hong Kong / Macau identity evidence. Its fee table lists Hong Kong with numeric single-entry and double-entry visa fees, rather than a Visa on Arrival or No visa required label.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -2023,20 +2025,22 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_required",
       "maxStayDays": null,
+      "visaProductName": "Bangladesh Tourist Visa",
       "conditions": [
-        "孟加拉国官方在线 MRV 门户支持新签证、延期、NVR 与落地签表格，但当前页面没有给出目标证件的国籍结论。",
-        "孟加拉驻港总领事馆官方 Tourist Visa 页面列出香港/澳门身份证明、往返行程、住宿、银行流水和护照材料，但这只证明存在旅游签证申请路线，不能证明澳门特区护照没有免签或其他入境安排；具体路线仍需人工复核。"
+        "孟加拉驻港总领事馆官方 Tourist Visa 页面规定，具有与孟加拉国外交关系国家的外国人以及旅游者可申请旅游签证；材料包括在线申请、往返行程、住宿、银行流水、护照资料和香港/澳门身份证明。",
+        "同一总领事馆官方 Rate of Visa Fees 表将 Macau 单列为有金额的单次/双次/多次入境签证费行；该表把 Visa on Arrival、No visa required 和有金额的签证行分开列示，因此本条确认澳门特区普通护照的正规旅游签证路线。",
+        "官方材料未给出该旅游签证的统一准许停留期；签证费、签发和最终入境仍须按申请时的官方流程及边境审查确认。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
         "bd-online-mrv",
         "bd-hk-tourist-visa",
-        "bd-online-mrv"
+        "bd-hk-visa-fees"
       ],
-      "evidenceLocator": "Bangladesh Online MRV Portal > current visa fee table; Consulate General of Bangladesh in Hong Kong > Tourist Visa",
-      "evidenceExcerpt": "The official MRV portal fee table lists Macau at HKD 100 for single, HKD 177 for re-entry and HKD 350 for multiple entry; the Hong Kong consulate's tourist-visa page lists Macau identity-card evidence and supporting documents. These records confirm an application/fee route but do not establish the complete Macao SAR passport entry outcome, so the route remains REVIEW.",
+      "evidenceLocator": "Consulate General of Bangladesh in Hong Kong > Tourist Visa; Visa Fees > Rate of Visa Fees > Macau",
+      "evidenceExcerpt": "The official consulate states that foreign nationals of countries having diplomatic relations with Bangladesh and people travelling for tourism are eligible for a Tourist Visa, and requires passport and Hong Kong / Macau identity evidence. Its fee table lists Macau with numeric single-entry, double-entry and multiple-entry visa fees, rather than a Visa on Arrival or No visa required label.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
