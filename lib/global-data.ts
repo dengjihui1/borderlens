@@ -48,7 +48,7 @@ export const latestPolicyBatch = [
   { id: 'tr', label: '土耳其', note: '中国普通护照 90 天、香港特区护照 90 天、澳门特区护照 30 天免签' },
   { id: 'eg', label: '埃及', note: '中国普通护照列入官方电子签资格表；港澳证件仍待完整路线复核' },
 /* PHASE_06_BATCH */
-  { id: 'in', label: '印度', note: '目标证件不在 eVisa 名单，普通签证路线待复核' },
+  { id: 'in', label: '印度', note: '中国普通护照需旅游签证；港澳特区护照继续 REVIEW' },
   { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },
   { id: 'np', label: '尼泊尔', note: '中国普通及 HKSAR 护照需签证但免费，年度累计最多 150 天；澳门继续 REVIEW' },
   { id: 'bd', label: '孟加拉国', note: 'MRV 门户可用，国籍资格仍待复核' },

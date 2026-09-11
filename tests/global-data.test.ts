@@ -263,11 +263,17 @@ test('东帝汶三类护照均保留落地签、30 天与全口岸条件', async
   }
 });
 
-test('印度目标证件不在当前 eVisa 名单时不推断普通签证结论', async () => {
+test('印度驻北京大使馆确认中国普通护照旅游签证，港澳仍保持 REVIEW', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const india = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'in');
   assert.equal(india.length, 3);
-  for (const rule of india) assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['draft', 'manual_review', null]);
+  const byType = new Map(india.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_required', null]);
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('中国身份证')));
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('Tourist Visa')));
+  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
+    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
+  }
 });
 
 test('斯里兰卡三类护照均需 ETA 且保留 30 天双次入境', async () => {

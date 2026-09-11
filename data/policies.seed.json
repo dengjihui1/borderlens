@@ -1749,20 +1749,21 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_required",
       "maxStayDays": null,
       "conditions": [
-        "印度官方 e-Visa 当前资格弹窗未列出 China、Hong Kong 或 Macao。",
-        "该事实只证明不能直接套用当前 eVisa 名单；在核实普通签证或其他豁免路线前保持 REVIEW。"
+        "印度驻北京大使馆官方 Tourist Visa-Info 页面明确说明 Tourist Visa 用于旅游、观光、探亲访友等短期旅游目的。",
+        "该页面针对中国申请人列出中国身份证、护照复印件、返程/联程机票、资金承诺、行程和银行资金证明等材料，并要求普通护照至少 6 个月有效、本人递交申请。",
+        "本条仅适用于中国普通护照；该使馆页面未给出香港或澳门特区护照的独立结论，电子签名单缺席也不被扩展为其他证件结论。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
-        "in-boi-evisa"
+        "in-eoi-beijing-tourist-visa"
       ],
-      "evidenceLocator": "Indian e-Visa > Countries/Regions who are eligible to avail eVisa; target documents absent from the displayed list",
-      "evidenceExcerpt": "The current official eVisa eligibility dialog lists 174 countries/regions but does not list China, Hong Kong or Macao. The page alone does not establish the complete regular-visa outcome.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Embassy of India, Beijing > Tourist Visa-Info > General requirements and Documents Required for Chinese applicants",
+      "evidenceExcerpt": "Tourist Visa is issued for tourism and related short visits. The China-specific checklist includes a Chinese ID card, passport copy, return/onward ticket, financial undertaking, itinerary and financial evidence; the passport must be valid for at least six months.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "in-hk-hksar-tourism-review",
