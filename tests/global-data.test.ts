@@ -324,7 +324,10 @@ test('孟加拉国中国普通护照落地签与港澳路线边界', async () =>
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
     assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('不能证明') && condition.includes('其他入境安排')));
+    assert.ok(byType.get(documentType)!.sourceIds.includes('bd-online-mrv'));
   }
+  assert.ok(byType.get('hksar_passport')!.evidenceExcerpt.includes('USD 21'));
+  assert.ok(byType.get('macao_sar_passport')!.evidenceExcerpt.includes('HKD 100'));
 });
 
 test('马尔代夫三类护照均为落地签并保留 IMUGA 申报', async () => {

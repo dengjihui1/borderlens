@@ -2008,10 +2008,11 @@
       "status": "draft",
       "sourceIds": [
         "bd-online-mrv",
-        "bd-hk-tourist-visa"
+        "bd-hk-tourist-visa",
+        "bd-online-mrv"
       ],
-      "evidenceLocator": "Bangladesh Online MRV Portal; Consulate General of Bangladesh in Hong Kong > Tourist Visa",
-      "evidenceExcerpt": "The official MRV portal provides general application forms, while the Hong Kong consulate's tourist-visa page lists Hong Kong / Macau identity-card evidence and supporting documents. Neither page establishes the complete HKSAR passport entry outcome, so the route remains REVIEW.",
+      "evidenceLocator": "Bangladesh Online MRV Portal > current visa fee table; Consulate General of Bangladesh in Hong Kong > Tourist Visa",
+      "evidenceExcerpt": "The official MRV portal fee table lists Hong Kong at USD 21 for single and re-entry and USD 30 for multiple entry; the Hong Kong consulate's tourist-visa page lists Hong Kong identity-card evidence and supporting documents. These records confirm an application/fee route but do not establish the complete HKSAR passport entry outcome, so the route remains REVIEW.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -2031,10 +2032,11 @@
       "status": "draft",
       "sourceIds": [
         "bd-online-mrv",
-        "bd-hk-tourist-visa"
+        "bd-hk-tourist-visa",
+        "bd-online-mrv"
       ],
-      "evidenceLocator": "Bangladesh Online MRV Portal; Consulate General of Bangladesh in Hong Kong > Tourist Visa",
-      "evidenceExcerpt": "The official MRV portal provides general application forms, while the Hong Kong consulate's tourist-visa page lists Hong Kong / Macau identity-card evidence and supporting documents. Neither page establishes the complete Macao SAR passport entry outcome, so the route remains REVIEW.",
+      "evidenceLocator": "Bangladesh Online MRV Portal > current visa fee table; Consulate General of Bangladesh in Hong Kong > Tourist Visa",
+      "evidenceExcerpt": "The official MRV portal fee table lists Macau at HKD 100 for single, HKD 177 for re-entry and HKD 350 for multiple entry; the Hong Kong consulate's tourist-visa page lists Macau identity-card evidence and supporting documents. These records confirm an application/fee route but do not establish the complete Macao SAR passport entry outcome, so the route remains REVIEW.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
