@@ -38,3 +38,7 @@ next-env.d.ts
 /work/
 /tmp/
 *.tsbuildinfo
+
+# release archives stay outside source history
+/*.zip
+/_archive/
