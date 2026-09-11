@@ -202,6 +202,16 @@ test('越南官方电子签接口确认中国普通护照路线，菲律宾港�
   }
 });
 
+test('蒙古官方电子签系统将中国、香港和澳门列入免签名单但不补填停留期限', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const mongolia = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'mn');
+  assert.equal(mongolia.length, 3);
+  for (const rule of mongolia) {
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_free', null]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('未给出') && condition.includes('最长停留天数')));
+  }
+});
+
 test('柬埔寨 Visa T 保留电子签、护照有效期与 e-Arrival 要求', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const cambodia = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'kh');

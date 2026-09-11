@@ -1310,6 +1310,72 @@
       "reviewDueAt": "2026-10-11"
     },
     {
+      "id": "mn-cn-prc-ordinary-tourism-visa-free",
+      "destinationJurisdictionId": "mn",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": null,
+      "conditions": [
+        "蒙古电子签官方系统的 VISA FREE COUNTRIES 名单列出 The People's Republic of China。",
+        "当前页面未给出该名单对应的最长停留天数，也未单独说明特殊旅行证件；本条仅覆盖中国普通护照的窄路线，期限需以蒙古官方入口进一步确认。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mn-evisa-visa-free-countries"
+      ],
+      "evidenceLocator": "Mongolia Electronic Visa Application System > VISA FREE COUNTRIES list; The People's Republic of China entry",
+      "evidenceExcerpt": "The People's Republic of China is listed in the official system's VISA FREE COUNTRIES list.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "mn-hk-hksar-tourism-visa-free",
+      "destinationJurisdictionId": "mn",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": null,
+      "conditions": [
+        "蒙古电子签官方系统的 VISA FREE COUNTRIES 名单列出 Hong Kong SAR (China)。",
+        "当前页面未给出该名单对应的最长停留天数，也未单独说明香港签证身份书；本条仅覆盖香港特区护照，期限需以蒙古官方入口进一步确认。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mn-evisa-visa-free-countries"
+      ],
+      "evidenceLocator": "Mongolia Electronic Visa Application System > VISA FREE COUNTRIES list; Hong Kong SAR (China) entry",
+      "evidenceExcerpt": "Hong Kong SAR (China) is listed in the official system's VISA FREE COUNTRIES list.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "mn-mo-macao-sar-tourism-visa-free",
+      "destinationJurisdictionId": "mn",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": null,
+      "conditions": [
+        "蒙古电子签官方系统的 VISA FREE COUNTRIES 名单列出 Macau SAR (China)。",
+        "当前页面未给出该名单对应的最长停留天数，也未单独说明澳门旅行证；本条仅覆盖澳门特区护照，期限需以蒙古官方入口进一步确认。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mn-evisa-visa-free-countries"
+      ],
+      "evidenceLocator": "Mongolia Electronic Visa Application System > VISA FREE COUNTRIES list; Macau SAR (China) entry",
+      "evidenceExcerpt": "Macau SAR (China) is listed in the official system's VISA FREE COUNTRIES list.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
       "id": "kh-cn-prc-ordinary-tourism-evisa",
       "destinationJurisdictionId": "kh",
       "documentIssuerJurisdictionId": "cn",
