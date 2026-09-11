@@ -51,7 +51,7 @@ export const latestPolicyBatch = [
   { id: 'in', label: '印度', note: '中国普通护照需旅游签证；港澳特区护照继续 REVIEW' },
   { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },
   { id: 'np', label: '尼泊尔', note: '中国普通及 HKSAR 护照需签证但免费，年度累计最多 150 天；澳门继续 REVIEW' },
-  { id: 'bd', label: '孟加拉国', note: 'MRV 门户可用，国籍资格仍待复核' },
+  { id: 'bd', label: '孟加拉国', note: '中国普通护照可按官方条件申请最多 30 天落地签；港澳特区护照路线继续 REVIEW' },
   { id: 'mv', label: '马尔代夫', note: '旅游落地签与免费 IMUGA 申报并存' },
 ].map((item) => {
   const rules = rulesByDestination(item.id);

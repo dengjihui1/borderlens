@@ -99,7 +99,8 @@
 | 尼泊尔 | 中国普通护照 | 需签证，免费；年度累计最多 150 天 | 驻港总领事馆官方页面明确中国护照需签证但免费，并说明旅游者每个签证年度累计不得超过 150 天 |
 | 尼泊尔 | 香港特区护照 | 需签证，免费；年度累计最多 150 天 | 驻港总领事馆官方页面明确 HKSAR 护照需签证但免费；澳门特区护照没有独立结论 |
 | 尼泊尔 | 澳门特区护照 | REVIEW | 免签页和驻港总领事馆页面均未给出澳门特区护照独立普通旅游结果；不从名单缺席推断结论 |
-| 孟加拉国 | 中国普通护照、香港/澳门特区护照 | REVIEW | MRV 门户只证明可填新签证/落地签表格，未给出目标证件的国籍资格 |
+| 孟加拉国 | 中国普通护照 | 旅游落地签，最多 30 天 | 官方驻北京使馆页面列明中国属于可按条件申请落地签的国籍；需返程票、访问证明、至少 500 美元或等值资金，最终由移民机关审查 |
+| 孟加拉国 | 香港/澳门特区护照 | REVIEW | 驻港总领馆 Tourist Visa 页面给出申请材料，但未证明港澳特区护照没有免签或其他入境路线 |
 | 马尔代夫 | 中国普通护照、香港/澳门特区护照 | 旅游落地签 | 无需预先签证批准；另通过官方 IMUGA 免费提交 Traveller Declaration；官网正文未稳定显示天数，本轮不猜期限 |
 | 其他组合 | 任意 | REVIEW | 不根据模型记忆或第三方聚合器猜测 |
 
@@ -158,6 +159,8 @@
 - [Sri Lanka Department of Immigration and Emigration：Tourist ETA fees](https://www.eta.gov.lk/slvisa/visainfo/fees.jsp?locale=en_US)
 - [Nepal Department of Immigration：Visa on Arrival](https://www.immigration.gov.np/en/page/visa-on-arrival)（本轮返回 404，`blocked`）
 - [Bangladesh Department of Immigration and Passports：Online MRV Portal](https://visa.gov.bd/)
+- [Bangladesh Embassy in Beijing：Visa on Arrival](https://beijing.mofa.gov.bd/pages/static-pages/6952668b35ce18e1c05a9eb1)
+- [Bangladesh Consulate General in Hong Kong：Tourist Visa](https://hongkong.mofa.gov.bd/pages/static-pages/6952668735ce18e1c05a9d33)
 - [Maldives Immigration：Tourist Visa — On Arrival](https://www.immigration.gov.mv/visa/tourist-visa)
 - [Maldives Immigration：Traveller Declaration](https://www.immigration.gov.mv/traveller-declaration)
 - [Visit Qatar：Qatar Visa Check](https://visitqatar.com/intl-en/plan-your-trip/visas)

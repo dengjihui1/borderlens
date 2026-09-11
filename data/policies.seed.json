@@ -1961,20 +1961,21 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_on_arrival",
+      "maxStayDays": 30,
       "conditions": [
-        "孟加拉国官方在线 MRV 门户支持新签证、延期、NVR 与落地签表格，但当前页面没有给出目标证件的国籍结论。",
-        "一般在线流程要求填表、打印并携材料和费用到最近的孟加拉国签证处或使团；具体路线仍需人工复核。"
+        "孟加拉驻北京使馆官方 Visa on Arrival 页面规定，符合条件的外国人可在孟加拉国国际机场和陆路口岸申请最长 30 天的落地签；页面明确把中国列入可因旅游、官方公务、商务或投资申请的国籍。",
+        "落地签不是自动准入：须接受移民机关对旅行文件和访问真实性的审查；通常需持返程票、能够证明访问目的的材料，以及至少 500 美元或等值外币现金或信用卡。",
+        "签证费以外币支付并按互惠原则适用；抵达时是否签发及后续延期仍由孟加拉国移民与护照主管机关按现行政策决定。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
-        "bd-online-mrv"
+        "bd-beijing-visa-on-arrival"
       ],
-      "evidenceLocator": "Bangladesh Online MRV Portal > What you need and online application process; nationality-specific outcome unavailable",
-      "evidenceExcerpt": "The official portal supports NEW VISA and ON ARRIVAL VISA forms, but its visible instructions only establish application, printing and mission-submission steps, not a passport-specific eligibility outcome.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Embassy of Bangladesh in Beijing > Visa on Arrival > Eligibility item 3 and requirements",
+      "evidenceExcerpt": "The official embassy page states that certain foreign nationals may receive a visa on arrival for a maximum of 30 days at international airports and land ports, and item 3 expressly includes citizens of China for tourism, official duty, business and investment, subject to document, return-ticket, funds and immigration-authority conditions.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "bd-hk-hksar-tourism-review",
@@ -1987,16 +1988,17 @@
       "maxStayDays": null,
       "conditions": [
         "孟加拉国官方在线 MRV 门户支持新签证、延期、NVR 与落地签表格，但当前页面没有给出目标证件的国籍结论。",
-        "一般在线流程要求填表、打印并携材料和费用到最近的孟加拉国签证处或使团；具体路线仍需人工复核。"
+        "孟加拉驻港总领事馆官方 Tourist Visa 页面列出香港/澳门身份证明、往返行程、住宿、银行流水和护照材料，但这只证明存在旅游签证申请路线，不能证明香港特区护照没有免签或其他入境安排；具体路线仍需人工复核。"
       ],
       "status": "draft",
       "sourceIds": [
-        "bd-online-mrv"
+        "bd-online-mrv",
+        "bd-hk-tourist-visa"
       ],
-      "evidenceLocator": "Bangladesh Online MRV Portal > What you need and online application process; nationality-specific outcome unavailable",
-      "evidenceExcerpt": "The official portal supports NEW VISA and ON ARRIVAL VISA forms, but its visible instructions only establish application, printing and mission-submission steps, not a passport-specific eligibility outcome.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Bangladesh Online MRV Portal; Consulate General of Bangladesh in Hong Kong > Tourist Visa",
+      "evidenceExcerpt": "The official MRV portal provides general application forms, while the Hong Kong consulate's tourist-visa page lists Hong Kong / Macau identity-card evidence and supporting documents. Neither page establishes the complete HKSAR passport entry outcome, so the route remains REVIEW.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "bd-mo-macao-sar-tourism-review",
@@ -2009,16 +2011,17 @@
       "maxStayDays": null,
       "conditions": [
         "孟加拉国官方在线 MRV 门户支持新签证、延期、NVR 与落地签表格，但当前页面没有给出目标证件的国籍结论。",
-        "一般在线流程要求填表、打印并携材料和费用到最近的孟加拉国签证处或使团；具体路线仍需人工复核。"
+        "孟加拉驻港总领事馆官方 Tourist Visa 页面列出香港/澳门身份证明、往返行程、住宿、银行流水和护照材料，但这只证明存在旅游签证申请路线，不能证明澳门特区护照没有免签或其他入境安排；具体路线仍需人工复核。"
       ],
       "status": "draft",
       "sourceIds": [
-        "bd-online-mrv"
+        "bd-online-mrv",
+        "bd-hk-tourist-visa"
       ],
-      "evidenceLocator": "Bangladesh Online MRV Portal > What you need and online application process; nationality-specific outcome unavailable",
-      "evidenceExcerpt": "The official portal supports NEW VISA and ON ARRIVAL VISA forms, but its visible instructions only establish application, printing and mission-submission steps, not a passport-specific eligibility outcome.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Bangladesh Online MRV Portal; Consulate General of Bangladesh in Hong Kong > Tourist Visa",
+      "evidenceExcerpt": "The official MRV portal provides general application forms, while the Hong Kong consulate's tourist-visa page lists Hong Kong / Macau identity-card evidence and supporting documents. Neither page establishes the complete Macao SAR passport entry outcome, so the route remains REVIEW.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "mv-cn-prc-ordinary-tourism-voa",

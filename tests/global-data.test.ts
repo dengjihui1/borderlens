@@ -302,11 +302,18 @@ test('尼泊尔中国及 HKSAR 护照需免费签证，澳门路线保持 REVIEW
   assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome], ['draft', 'manual_review']);
 });
 
-test('孟加拉国通用 MRV 说明不被误写成国籍政策', async () => {
+test('孟加拉国中国普通护照落地签与港澳路线边界', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const bangladesh = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'bd');
   assert.equal(bangladesh.length, 3);
-  for (const rule of bangladesh) assert.deepEqual([rule.status, rule.outcome], ['draft', 'manual_review']);
+  const byType = new Map(bangladesh.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_on_arrival', 30]);
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('中国') && condition.includes('30 天')));
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('500 美元') && condition.includes('返程票')));
+  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
+    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('不能证明') && condition.includes('其他入境安排')));
+  }
 });
 
 test('马尔代夫三类护照均为落地签并保留 IMUGA 申报', async () => {
