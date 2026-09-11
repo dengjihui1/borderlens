@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-11（第二十四批菲律宾规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第三十二批菲律宾中国普通护照规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -83,7 +83,7 @@
 | 蒙古 | 中国普通护照 | 免签，期限待官方入口进一步核验 | 蒙古电子签官方系统的 VISA FREE COUNTRIES 名单列出 The People's Republic of China；当前页未说明停留天数与特殊证件 |
 | 蒙古 | 香港特区护照 | 免签，期限待官方入口进一步核验 | 官方名单列出 Hong Kong SAR (China)；当前页未说明停留天数与香港签证身份书 |
 | 蒙古 | 澳门特区护照 | 免签，期限待官方入口进一步核验 | 官方名单列出 Macau SAR (China)；当前页未说明停留天数与澳门旅行证 |
-| 菲律宾 | 中国普通护照 | REVIEW | DFA 页面被安全验证阻挡，例外签证与普通旅游路线未直接核验 |
+| 菲律宾 | 中国普通护照 | 旅游/商务免签，最多 14 天 | 2026-01-16 生效；仅限马尼拉与宿务两个机场；不可延期或转换，前往第三国过境需签证 |
 | 菲律宾 | 香港特区护照 | 9A 免签，初始准许停留 14 天 | 菲律宾移民局 Visa Waiver 页面直接列出 HONG KONG / MACAU SAR PASSPORT；首次延长项目另行办理 |
 | 菲律宾 | 澳门特区护照 | 9A 免签，初始准许停留 14 天 | 菲律宾移民局 Visa Waiver 页面直接列出 HONG KONG / MACAU SAR PASSPORT；首次延长项目另行办理 |
 | 柬埔寨 | 中国普通护照、香港/澳门特区护照 | Visa T 电子签，单次入境，停留 1 个月 | USD 30；签发日起 3 个月有效；护照超过 6 个月有效；另填 Cambodia e-Arrival |
@@ -140,6 +140,7 @@
 - [Vietnam Immigration：public nationality and border-gate APIs](https://api.evisa.gov.vn/client-service/public/dm-qt/get-all)
 - [Philippines DFA Beijing：General Information](https://beijingpe.dfa.gov.ph/general-information)（本轮安全验证阻挡，`blocked`）
 - [Philippines Bureau of Immigration：Visa Waiver](https://immigration.gov.ph/visas/visa-waiver/)
+- [Philippine eVisa：Visa Policy](https://evisa.gov.ph/page/policy)
 - [Mongolia Electronic Visa Application System：Visa Free Countries](https://evisa.mn/en)
 - [Uruguay Ministry of the Interior：Régimen de visas de admisión](https://www.gub.uy/ministerio-interior/comunicacion/publicaciones/regimen-visas-admision)
 - [Nepal Department of Immigration：Visa Exemption](https://immigration.gov.np/visa-exemption)

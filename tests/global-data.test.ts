@@ -178,7 +178,7 @@ test('印度尼西亚区分中国普通护照 B1 落地签与港澳 A1 免签', 
   assert.deepEqual([byId.get('id-mo-macao-sar-tourism-a1-exemption')!.outcome, byId.get('id-mo-macao-sar-tourism-a1-exemption')!.maxStayDays], ['visa_free', null]);
 });
 
-test('越南官方电子签接口确认中国普通护照路线，菲律宾港澳 9A 免签路线已核验', async () => {
+test('越南官方电子签接口与菲律宾 eVisa 政策确认中国普通护照路线', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const vietnam = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'vn');
   assert.equal(vietnam.length, 3);
@@ -195,7 +195,10 @@ test('越南官方电子签接口确认中国普通护照路线，菲律宾港�
   const philippines = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ph');
   assert.equal(philippines.length, 3);
   const philippinesByType = new Map(philippines.map((rule: PolicyFixture) => [rule.documentType, rule]));
-  assert.deepEqual([philippinesByType.get('ordinary_passport')!.status, philippinesByType.get('ordinary_passport')!.outcome, philippinesByType.get('ordinary_passport')!.maxStayDays], ['draft', 'manual_review', null]);
+  assert.deepEqual([philippinesByType.get('ordinary_passport')!.status, philippinesByType.get('ordinary_passport')!.outcome, philippinesByType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_free', 14]);
+  assert.ok(philippinesByType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('2026 年 1 月 16 日') && condition.includes('非延期')));
+  assert.ok(philippinesByType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('马尼拉') && condition.includes('宿务')));
+  assert.ok(philippinesByType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('第三国') && condition.includes('过境签')));
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
     assert.deepEqual([philippinesByType.get(documentType)!.status, philippinesByType.get(documentType)!.outcome, philippinesByType.get(documentType)!.maxStayDays], ['verified', 'visa_free', 14]);
     assert.ok(philippinesByType.get(documentType)!.conditions.some((condition: string) => condition.includes('9A') && condition.includes('14 天')));

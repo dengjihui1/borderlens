@@ -1248,20 +1248,22 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_free",
+      "maxStayDays": 14,
       "conditions": [
-        "菲律宾外交部驻北京使馆页面当前停在 Cloudflare 安全验证，无法直接复核普通旅游签证与 AJACSSUK 等例外条件。",
-        "在例外签证、使用历史和停留期均未核实前不输出确定结论。"
+        "菲律宾外交部领事事务办公室官方 eVisa 政策自 2026 年 1 月 16 日起允许中国公民以旅游或商务目的免签入境，非延期、非转换，最多 14 天。",
+        "须持离计划离开菲律宾之日起至少 6 个月有效的护照、确认的酒店住宿或预订，以及返回或前往下一目的地的机票。",
+        "免签入境仅限尼诺伊·阿基诺国际机场（马尼拉）和麦克坦—宿务国际机场；经菲律宾前往第三国的中国公民须在入境前取得菲律宾过境签。",
+        "所有适用免签待遇的中国公民不得有菲律宾移民局不良记录；该路线不可延期或转换为其他停留身份，最终准入仍由口岸移民机关决定。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
-        "ph-dfa-beijing-general"
+        "ph-dfa-evisa-policy"
       ],
-      "evidenceLocator": "Embassy of the Philippines in Beijing > General Information; direct page blocked by security verification",
-      "evidenceExcerpt": "The official page could not be reviewed beyond its security challenge, so the ordinary-passport route and any third-country-visa exception remain REVIEW.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Philippine eVisa official website > Visa Policy > Visa Policy for Chinese Nationals > Visa-Free Entry for Chinese Nationals Effective 16 January 2026",
+      "evidenceExcerpt": "The official eVisa policy states that effective 16 January 2026 Chinese nationals may enter visa-free for tourism and business for a non-extendible and non-convertible 14-day period, through Ninoy Aquino International Airport or Mactan-Cebu International Airport, subject to passport, hotel, onward-ticket and immigration-record conditions; transit to a third country requires a Philippine transit visa.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "ph-hk-hksar-tourism-review",
