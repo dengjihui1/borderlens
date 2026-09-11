@@ -2506,9 +2506,9 @@
       "status": "verified",
       "sourceIds": ["eg-evisa-faq-eligibility"],
       "evidenceLocator": "Egypt Electronic Visa Portal > FAQ > Which people need a visa? > eligible nationality table",
-      "evidenceExcerpt": "The official eligibility table lists China among the nationalities whose citizens can apply for an Egyptian e-Visa through the portal.",
-      "checkedAt": "2026-09-09",
-      "reviewDueAt": "2026-10-09"
+      "evidenceExcerpt": "The official eligibility table lists China among the nationalities whose citizens can apply for an Egyptian e-Visa through the portal; the FAQ lists USD 30 single-entry and USD 65 multiple-entry tourism fees and requires a passport valid at least 6 months, e-Visa printout and travel itinerary.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "eg-hk-hksar-tourism-review",
@@ -2521,14 +2521,15 @@
       "maxStayDays": null,
       "conditions": [
         "埃及官方电子签资格表在本次审阅中未显示 Hong Kong，但名单缺席只说明当前电子签通道没有直接证据。",
+        "同一官方 FAQ 公布旅游电子签费用为单次 30 美元、多次 65 美元，并列出护照至少还有 6 个月有效期、电子签打印件和行程单等入境材料；这些是电子签产品信息，不等于香港特区护照已被确认可申请。",
         "不能据此推出香港特区护照需要普通签证、免签或被禁止入境；应在官方签证服务或使领馆渠道继续核验。"
       ],
       "status": "draft",
       "sourceIds": ["eg-evisa-faq-eligibility"],
       "evidenceLocator": "Egypt Electronic Visa Portal > FAQ > eligible nationality table; Hong Kong not displayed",
       "evidenceExcerpt": "The reviewed official e-Visa nationality table does not display Hong Kong; this absence does not establish the complete regular-visa or exemption route.",
-      "checkedAt": "2026-09-09",
-      "reviewDueAt": "2026-10-09"
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "eg-mo-macao-sar-tourism-review",
@@ -2541,14 +2542,15 @@
       "maxStayDays": null,
       "conditions": [
         "埃及官方电子签资格表在本次审阅中未显示 Macao，但名单缺席只说明当前电子签通道没有直接证据。",
+        "同一官方 FAQ 公布旅游电子签费用为单次 30 美元、多次 65 美元，并列出护照至少还有 6 个月有效期、电子签打印件和行程单等入境材料；这些是电子签产品信息，不等于澳门特区护照已被确认可申请。",
         "不能据此推出澳门特区护照需要普通签证、免签或被禁止入境；应在官方签证服务或使领馆渠道继续核验。"
       ],
       "status": "draft",
       "sourceIds": ["eg-evisa-faq-eligibility"],
       "evidenceLocator": "Egypt Electronic Visa Portal > FAQ > eligible nationality table; Macao not displayed",
       "evidenceExcerpt": "The reviewed official e-Visa nationality table does not display Macao; this absence does not establish the complete regular-visa or exemption route.",
-      "checkedAt": "2026-09-09",
-      "reviewDueAt": "2026-10-09"
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "mx-cn-prc-ordinary-tourism-visa-required",

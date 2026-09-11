@@ -40,7 +40,7 @@
 | 土耳其 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；BNO 与香港签证身份书另行处理 |
 | 土耳其 | 澳门特区护照 | 免签，最多 30 天 | 仅澳门特区护照，不扩展到澳门旅行证 |
 | 埃及 | 中国普通护照 | 埃及电子签路线 | 官方电子签 FAQ 资格表列出中国；本轮不猜停留期限 |
-| 埃及 | 香港/澳门特区护照 | REVIEW | 官方电子签资格表未显示港澳，但名单缺席不能推出普通签证或免签结论 |
+| 埃及 | 香港/澳门特区护照 | REVIEW | 官方电子签资格表未显示港澳；FAQ 另列旅游电子签 30/65 美元及入境材料，但这些信息不能推出港澳最终签证结论 |
 | 墨西哥 | 中国普通护照 | 需要访问签证 | 官方需签证名单包含 China；旅游应申请不允许从事有报酬活动的访问者签证 |
 | 墨西哥 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；适用于旅游、过境或商务 |
 | 墨西哥 | 澳门特区护照 | 免签，最多 90 天 | 仅澳门特区护照；适用于旅游、过境或商务 |
@@ -176,7 +176,7 @@
 - [Jordan Ministry of Interior：Restricted and Non Restricted Countries (Nationalities)](https://moi.gov.jo/EN/Pages/Restricted_and_Non_Restricted_Countries_Nationalities)
 - [Jordan Ministry of Interior：E Applications for Visa and Residence Permits](https://moi.gov.jo/EN/Pages/E_Applications_for_Visa_and_Residence_Permits)
 - [Türkiye MFA：Visa Information For Foreigners](https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa)
-- [Egypt Electronic Visa Portal：FAQ eligibility list](https://visa2egypt.gov.eg/eVisa/FAQ)
+- [Egypt Electronic Visa Portal：FAQ eligibility list](https://visa2egypt.gov.eg/eVisa/FAQ)（中国列入电子签资格表；旅游电子签 30/65 美元及入境材料；港澳缺席仍不作最终推断）
 - [Mexico National Institute of Migration：Countries and regions requiring a visa](https://www.inm.gob.mx/gobmx/word/index.php/paises-requieren-visa-para-mexico/)
 - [Consulate General of Mexico in Hong Kong：Mexican Visa Exemptions](https://consulmex.sre.gob.mx/hongkong/index.php/for-foreigners/visa-exemptions)
 - [Brazil Ministry of Foreign Affairs：Visa requirements by country](https://www.gov.br/mre/pt-br/embaixada-abu-dhabi/abu-dhabi-arquivos/english/consular-services/visa/visa-requirements-by-country/visa-requirements-by-country-list-of-countries)

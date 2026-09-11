@@ -390,6 +390,7 @@ test('埃及电子签资格表只确认中国路线，港澳名单缺席保持 R
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
     assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome], ['draft', 'manual_review']);
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('名单缺席')));
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('30 美元') && condition.includes('65 美元') && condition.includes('6 个月')));
   }
 });
 
