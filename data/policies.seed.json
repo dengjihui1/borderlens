@@ -2449,6 +2449,70 @@
       "evidenceExcerpt": "The reviewed official e-Visa nationality table does not display Macao; this absence does not establish the complete regular-visa or exemption route.",
       "checkedAt": "2026-09-09",
       "reviewDueAt": "2026-10-09"
+    },
+    {
+      "id": "mx-cn-prc-ordinary-tourism-visa-required",
+      "destinationJurisdictionId": "mx",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Visitor visa without permission to perform remunerated activities",
+      "conditions": [
+        "墨西哥国家移民局官方页面的需签证国家名单包含 China，并说明名单所列国家国民在任何入境条件下前往墨西哥均须取得签证。",
+        "旅游、商务或其他非营利活动应按官方说明申请不允许从事有报酬活动的访问者签证；本条不推断具体签发期限。",
+        "官方页面同时要求抵达时持有效护照或符合国际法的旅行证件，并提示陆路入境需填写 FMM；具体入境材料由移民官按行程核验。"
+      ],
+      "status": "verified",
+      "sourceIds": ["mx-inm-visa-required"],
+      "evidenceLocator": "Mexico INM > Países y regiones que requieren visa para viajar a México > official country-list image; visitor without permission for remunerated activities",
+      "evidenceExcerpt": "The official INM page says nationals of the listed countries or regions must obtain a visa under any entry condition; the attached list includes China. For tourism, business or other unpaid activities it directs applicants to a visitor visa without permission to perform remunerated activities.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "mx-hk-hksar-tourism-visa-exemption",
+      "destinationJurisdictionId": "mx",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": [
+        "墨西哥驻香港总领事馆官方页面明确适用于 Hong Kong passport holders；本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件。",
+        "旅游、过境或商务访问最多 90 天免签；工作、学习或其他需许可活动另行核验。",
+        "免签不等于保证入境，仍须在口岸满足墨西哥移民机关的入境条件。"
+      ],
+      "status": "verified",
+      "sourceIds": ["mx-consulate-hk-visa-exemptions"],
+      "evidenceLocator": "Consulate General of Mexico in Hong Kong > Mexican Visa Exemptions",
+      "evidenceExcerpt": "Hong Kong and Macao passport holders do not require a visa to enter Mexico for up to 90 days for tourism, transit or business purposes.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "mx-mo-macao-sar-tourism-visa-exemption",
+      "destinationJurisdictionId": "mx",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": [
+        "墨西哥驻香港总领事馆官方页面明确适用于 Macao passport holders；本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件。",
+        "旅游、过境或商务访问最多 90 天免签；工作、学习或其他需许可活动另行核验。",
+        "免签不等于保证入境，仍须在口岸满足墨西哥移民机关的入境条件。"
+      ],
+      "status": "verified",
+      "sourceIds": ["mx-consulate-hk-visa-exemptions"],
+      "evidenceLocator": "Consulate General of Mexico in Hong Kong > Mexican Visa Exemptions",
+      "evidenceExcerpt": "Hong Kong and Macao passport holders do not require a visa to enter Mexico for up to 90 days for tourism, transit or business purposes.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }

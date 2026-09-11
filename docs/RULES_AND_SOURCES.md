@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-09（第十批阿曼规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第十二批墨西哥规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -41,6 +41,9 @@
 | 土耳其 | 澳门特区护照 | 免签，最多 30 天 | 仅澳门特区护照，不扩展到澳门旅行证 |
 | 埃及 | 中国普通护照 | 埃及电子签路线 | 官方电子签 FAQ 资格表列出中国；本轮不猜停留期限 |
 | 埃及 | 香港/澳门特区护照 | REVIEW | 官方电子签资格表未显示港澳，但名单缺席不能推出普通签证或免签结论 |
+| 墨西哥 | 中国普通护照 | 需要访问签证 | 官方需签证名单包含 China；旅游应申请不允许从事有报酬活动的访问者签证 |
+| 墨西哥 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；适用于旅游、过境或商务 |
+| 墨西哥 | 澳门特区护照 | 免签，最多 90 天 | 仅澳门特区护照；适用于旅游、过境或商务 |
 | 中国内地 | 非中国籍香港/澳门永久居民通行证 | 5 年内多次来往，每次最多 90 天 | 仅短期旅游、探亲、商务等；工作、学习、采访需另办许可 |
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
@@ -128,6 +131,8 @@
 - [Jordan Ministry of Interior：E Applications for Visa and Residence Permits](https://moi.gov.jo/EN/Pages/E_Applications_for_Visa_and_Residence_Permits)
 - [Türkiye MFA：Visa Information For Foreigners](https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa)
 - [Egypt Electronic Visa Portal：FAQ eligibility list](https://visa2egypt.gov.eg/eVisa/FAQ)
+- [Mexico National Institute of Migration：Countries and regions requiring a visa](https://www.inm.gob.mx/gobmx/word/index.php/paises-requieren-visa-para-mexico/)
+- [Consulate General of Mexico in Hong Kong：Mexican Visa Exemptions](https://consulmex.sre.gob.mx/hongkong/index.php/for-foreigners/visa-exemptions)
 
 ## 核验方法
 

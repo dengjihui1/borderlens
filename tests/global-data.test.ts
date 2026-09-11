@@ -331,3 +331,15 @@ test('埃及电子签资格表只确认中国路线，港澳名单缺席保持 R
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('名单缺席')));
   }
 });
+
+test('墨西哥按中国普通、香港和澳门特区护照区分路线', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const mexico = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'mx');
+  assert.equal(mexico.length, 3);
+  const byType = new Map(mexico.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['visa_required', null]);
+  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
+    assert.deepEqual([byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['visa_free', 90]);
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('护照')));
+  }
+});
