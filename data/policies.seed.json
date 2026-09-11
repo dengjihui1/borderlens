@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-08",
+  "checkedAt": "2026-09-11",
   "rules": [
     {
       "id": "jp-hk-hksar-tourism-short-stay",
@@ -2897,6 +2897,72 @@
       "sourceIds": ["uy-mrree-hk-visa-information"],
       "evidenceLocator": "Uruguay Consulate General in Hong Kong > Visas > Ministry of the Interior Visa Policy for Foreign Nationals",
       "evidenceExcerpt": "The official consular page provides tourist-visa requirements but directs nationality-specific visa checks to the Ministry of the Interior policy; it does not state the Macao SAR passport outcome.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "ec-cn-prc-ordinary-tourism-visa-required",
+      "destinationJurisdictionId": "ec",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": null,
+      "conditions": [
+        "厄瓜多尔外交部官方入境需签证名单将 República Popular China 列为入境前必须提交签证的国籍。",
+        "2024 年 7 月 1 日生效的外交部部长令进一步规定，中国公民入境厄瓜多尔前须取得签证；公务、官方或外交护照，以及现行双边免签协定适用的情形属于独立例外，本条不扩展到中国普通护照。",
+        "本条只确认中国普通护照旅游基础路线需要预先签证，不推断签证类别、签发期限、准许停留期或最终入境裁量。"
+      ],
+      "status": "verified",
+      "sourceIds": ["ec-mre-visa-required-list", "ec-mre-ministerial-decree-0000064"],
+      "evidenceLocator": "Ecuador MFA > Entry visa list > República Popular China; Ministerial Agreement No. 0000064, 1 July 2024",
+      "evidenceExcerpt": "The official list includes República Popular China among countries whose nationals must present a visa to enter Ecuador. The 2024 ministerial order establishes a prior visa requirement for nationals of the People's Republic of China and separately excepts public, official or diplomatic passports and applicable visa-exemption agreements.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "ec-hk-hksar-tourism-review",
+      "destinationJurisdictionId": "ec",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": null,
+      "conditions": [
+        "本次审阅的厄瓜多尔外交部入境需签证名单与 2024 年部长令均以中国国籍或 República Popular China 表述，没有单独给出香港特区护照的旅游签证结果。",
+        "不能把中国普通护照的需签证结论自动套用于香港特区护照，也不能因香港未单列就推出免签或最长停留期。",
+        "应继续通过厄瓜多尔外交部、对应领事馆或官方签证系统按香港特区护照核验完整旅游路线。"
+      ],
+      "status": "draft",
+      "sourceIds": ["ec-mre-visa-required-list", "ec-mre-ministerial-decree-0000064"],
+      "evidenceLocator": "Ecuador MFA > Entry visa list and Ministerial Agreement No. 0000064; no Hong Kong SAR passport-specific tourist result displayed",
+      "evidenceExcerpt": "The reviewed official list and ministerial order address República Popular China but do not state a separate Hong Kong SAR passport tourism outcome; absence of a separate row does not establish visa-free entry or a stay period.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "ec-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "ec",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": null,
+      "conditions": [
+        "本次审阅的厄瓜多尔外交部入境需签证名单与 2024 年部长令均以中国国籍或 República Popular China 表述，没有单独给出澳门特区护照的旅游签证结果。",
+        "不能把中国普通护照的需签证结论自动套用于澳门特区护照，也不能因澳门未单列就推出免签或最长停留期。",
+        "应继续通过厄瓜多尔外交部、对应领事馆或官方签证系统按澳门特区护照核验完整旅游路线。"
+      ],
+      "status": "draft",
+      "sourceIds": ["ec-mre-visa-required-list", "ec-mre-ministerial-decree-0000064"],
+      "evidenceLocator": "Ecuador MFA > Entry visa list and Ministerial Agreement No. 0000064; no Macao SAR passport-specific tourist result displayed",
+      "evidenceExcerpt": "The reviewed official list and ministerial order address República Popular China but do not state a separate Macao SAR passport tourism outcome; absence of a separate row does not establish visa-free entry or a stay period.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     }

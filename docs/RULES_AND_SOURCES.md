@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-11（第十五批哥伦比亚规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第十九批厄瓜多尔规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -60,6 +60,8 @@
 | 阿根廷 | 香港特区护照 | 官方普通游客表格未标需签证 | 本次官方表格未显示具体最长停留期；不扩展到香港签证身份书 |
 | 阿根廷 | 澳门特区护照 | 官方普通游客表格未标需签证 | 本次官方表格未显示具体最长停留期；不扩展到澳门旅行证 |
 | 乌拉圭 | 中国普通护照、香港/澳门特区护照 | REVIEW | 驻港总领事馆页面仅提供旅游签证申请要求，并要求另查内政部国籍签证政策，当前未给出三类证件的直接结论 |
+| 厄瓜多尔 | 中国普通护照 | 需要预先签证 | 外交部入境需签证名单与 2024 年部长令均支持普通护照基础路线；不推断签证类别与停留期 |
+| 厄瓜多尔 | 香港/澳门特区护照 | REVIEW | 官方材料未提供特区护照单独旅游结果；不能从中国普通护照路线或名单缺席推断 |
 | 中国内地 | 非中国籍香港/澳门永久居民通行证 | 5 年内多次来往，每次最多 90 天 | 仅短期旅游、探亲、商务等；工作、学习、采访需另办许可 |
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
@@ -156,6 +158,8 @@
 - [Chile Ministry of Foreign Affairs, Consular Services：Visas para ingresar a Chile](https://serviciosconsulares.cl/tramites/site/tax/port/all/taxport_14___1.html)
 - [Argentina National Migration Directorate：Regimen de Visas](https://www.migraciones.gob.ar/accesos/regimenvisas.php)
 - [Uruguay Ministry of Foreign Affairs, Consulate General in Hong Kong：Visas](https://www.gub.uy/ministerio-relaciones-exteriores/en/consulate-general-of-the-oriental-republic-of-uruguay-in-hong-kong/consular-services/visas)
+- [Ecuador Ministry of Foreign Affairs：List of countries requiring a visa to enter Ecuador](https://www.cancilleria.gob.ec/2020/06/30/lista-de-paises-que-deben-presentar-visa-al-ingresar-al-ecuador/)
+- [Ecuador Ministry of Foreign Affairs：Ministerial Agreement No. 0000064](https://www.cancilleria.gob.ec/wp-content/uploads/2024/07/0000064.pdf)
 
 ## 核验方法
 

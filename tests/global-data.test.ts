@@ -407,3 +407,16 @@ test('乌拉圭官方领事页不足以给出三类护照结论时保留 REVIEW'
   assert.ok(uruguay.every((rule: PolicyFixture) => rule.status === 'draft' && rule.outcome === 'manual_review' && rule.maxStayDays === null));
   assert.ok(uruguay.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('内政部'))));
 });
+
+test('厄瓜多尔确认中国普通护照需签证并保留港澳特区护照 REVIEW', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const ecuador = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ec');
+  assert.equal(ecuador.length, 3);
+  const byType = new Map(ecuador.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('República Popular China')));
+  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
+    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('不能把') && condition.includes('自动套')));
+  }
+});

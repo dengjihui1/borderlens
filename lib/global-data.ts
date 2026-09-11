@@ -26,6 +26,7 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
+  { id: 'ec', label: '厄瓜多尔', note: '中国普通护照需预先签证；港澳特区护照路线继续 REVIEW' },
   { id: 'uy', label: '乌拉圭', note: '官方领事页仅提供申请要求，三类护照国籍资格继续 REVIEW' },
   { id: 'ar', label: '阿根廷', note: '中国普通护照需签证；港澳特区护照表格未标需签证，停留期继续核验' },
   { id: 'cl', label: '智利', note: '中国普通护照有美/加签证条件免签；香港 90 天免签；澳门 30 天免签' },
