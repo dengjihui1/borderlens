@@ -1,6 +1,6 @@
 # 全球签证政策数据库方案
 
-状态：Phase 57 HKSAR outbound cross-check for Jordan/Egypt/Ecuador，2026-09-11。
+状态：Phase 58 data presentation audit，2026-09-11。
 
 ## 1. “全球覆盖”到底有多大
 
@@ -97,6 +97,8 @@
 第五十六批复核印度：驻港总领事馆 General Instructions 明确签证申请人须为香港或澳门特区居民，非居民申请逐案审查；Tourist Visa 页面给出港澳领区旅游签证材料，官方费用表分别列出 Hong Kong 和 Macau 的 HKD 335 Tourist Visa 行，并说明通常签发 3 个月、单次入境。因此香港及澳门特区普通护照路线升级为 `verified / visa_required / Indian Tourist Visa`，不把签证有效期误写成准许停留期；约旦、尼泊尔澳门特区护照和埃及港澳仍保留 REVIEW。
 
 第五十七批复核 HKSAR 交叉信息：香港入境处官方参考表列出 Jordan 14 天、Egypt 90 天和 Ecuador 90 天，但以“免签或落地签”合并展示且要求向目的地官方确认，因此只补充交叉证据和停留期线索，相关路线继续 REVIEW。
+
+第五十八批项目审计：同步 `/coverage` 的阶段标识和政策批次说明，使其反映当前 97 个来源、135 条已核验规则与 8 条 REVIEW；同时纠正越南、哥斯达黎加、哥伦比亚、秘鲁、印度、尼泊尔和孟加拉国等已完成路线仍显示旧 REVIEW 的说明。该批不改变政策结论，只修复展示层与数据层不一致。
 
 ## 7. 扩展顺序
 
