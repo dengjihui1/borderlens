@@ -10,7 +10,7 @@ export default function CoveragePage() {
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 09</div>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 22</div>
         <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
       </header>
 
@@ -35,11 +35,11 @@ export default function CoveragePage() {
 
         <section className="coverage-warning">
           <ShieldAlert size={22} />
-          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增埃及三条证件路线：中国普通护照列入官方电子签资格表；港澳证件因官方名单缺席但缺少完整签证证据，仍保留 REVIEW。</p></div>
+          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增哥斯达黎加三条证件路线：官方移民局已确认按国籍适用 General Visa Guidelines；中国、香港和澳门三类目标护照的具体旅游结果仍保留 REVIEW。</p></div>
         </section>
 
         <section className="batch-card">
-          <div><p className="step-kicker">LATEST VERIFIED BATCH</p><h2>本批已经能回答什么</h2></div>
+          <div><p className="step-kicker">LATEST POLICY BATCH</p><h2>本批已经能回答什么</h2></div>
           <div className="batch-grid">{latestPolicyBatch.map((item) => <article key={item.id}><strong>{item.label}</strong><span>{item.verifiedRuleCount} 已核验 · {item.reviewRuleCount} 待复核</span><p>{item.note}</p></article>)}</div>
         </section>
 
@@ -68,7 +68,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · Phase 09</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 22</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }
