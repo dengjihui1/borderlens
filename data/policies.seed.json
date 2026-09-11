@@ -2577,6 +2577,70 @@
       "evidenceExcerpt": "Holders of Macao SAR passports are exempt from Visitor Visa for tourism, transit or business purposes for stays of up to 90 days; holders of a Macao Travel Permit require an entry visa.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "pe-cn-prc-ordinary-tourism-visa-exception",
+      "destinationJurisdictionId": "pe",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Peru tourist visa",
+      "conditions": [
+        "秘鲁官方领事页面说明，中国公民只有在入境秘鲁时持有入境前至少还有 6 个月有效期的英国、加拿大、澳大利亚、申根或美国签证，才可免旅游签证入境。",
+        "未满足该例外时，中国普通护照应按秘鲁旅游签证路线继续办理；本条不推断签证签发期限。",
+        "第三国签证例外必须与实际护照、有效期和入境时状态同时核验，不能仅凭持有过相关签证推断免签。"
+      ],
+      "status": "verified",
+      "sourceIds": ["pe-consulado-tourism-visas"],
+      "evidenceLocator": "Peru Consulate in London > Tourism Visas > Asia > Chinese nationals",
+      "evidenceExcerpt": "Chinese nationals may enter Peru without a visa only if they have a UK, Canada, Australia, Schengen or US visa valid for a minimum of 6 months at the moment of entry to Peru.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "pe-hk-hksar-tourism-visa-exemption",
+      "destinationJurisdictionId": "pe",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": null,
+      "conditions": [
+        "秘鲁官方领事页面将 Hong Kong 列入亚洲旅游免签国家；本条仅覆盖香港特区护照，不扩展到香港签证身份书。",
+        "该页面未在本次审阅中稳定给出香港路线的具体最长停留天数，因此不填写天数，出行前应按秘鲁官方领事渠道确认。",
+        "免签不等于保证入境，仍须满足护照、行程和抵达时移民审查条件。"
+      ],
+      "status": "verified",
+      "sourceIds": ["pe-consulado-tourism-visas"],
+      "evidenceLocator": "Peru Consulate in London > Tourism Visas > Asia country list > Hong Kong",
+      "evidenceExcerpt": "The official tourism-visa page includes Hong Kong in the Asia list of nationalities that do not require a tourist visa; the page does not provide a stable Hong Kong-specific maximum stay in the reviewed text.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "pe-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "pe",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "秘鲁官方旅游签证页面的亚洲名单在本次审阅中未显示 Macao。",
+        "名单缺席只能说明当前页面没有给出澳门特区护照的直接结论，不能据此推出免签、需签证或禁止入境。",
+        "应继续通过秘鲁外交部、对应领事馆或官方签证系统核验澳门特区护照的完整路线。"
+      ],
+      "status": "draft",
+      "sourceIds": ["pe-consulado-tourism-visas"],
+      "evidenceLocator": "Peru Consulate in London > Tourism Visas > Asia country list; Macao not displayed",
+      "evidenceExcerpt": "The reviewed official Asia list includes Hong Kong but does not display Macao; that absence does not establish a complete Macao passport visa outcome.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }

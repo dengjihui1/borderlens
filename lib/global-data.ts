@@ -26,6 +26,7 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
+  { id: 'pe', label: '秘鲁', note: '中国普通护照有第三国签证例外；香港免签；澳门路线继续 REVIEW' },
   { id: 'br', label: '巴西', note: '中国普通护照需 VIVIS 访问签证；港澳特区护照旅游最多 90 天免签' },
   { id: 'mx', label: '墨西哥', note: '中国普通护照需访问签证；香港与澳门特区护照旅游最多 90 天免签' },
   { id: 'qa', label: '卡塔尔', note: '中国、港澳列入官方 A1-3 路线；机场落地签或 Hayya A1' },
