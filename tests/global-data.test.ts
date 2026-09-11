@@ -244,12 +244,12 @@ test('缅甸电子签区分护照与旅行证并限制入境口岸', async () =>
   }
 });
 
-test('文莱港澳护照为 14 天免签而中国普通护照保持 REVIEW', async () => {
+test('文莱中国普通及港澳特区护照均为 D3 14 天免签', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
   assert.deepEqual([byId.get('bn-hk-hksar-tourism-visa-waiver')!.outcome, byId.get('bn-hk-hksar-tourism-visa-waiver')!.maxStayDays], ['visa_free', 14]);
   assert.deepEqual([byId.get('bn-mo-macao-sar-tourism-visa-waiver')!.outcome, byId.get('bn-mo-macao-sar-tourism-visa-waiver')!.maxStayDays], ['visa_free', 14]);
-  assert.deepEqual([byId.get('bn-cn-prc-ordinary-tourism-review')!.status, byId.get('bn-cn-prc-ordinary-tourism-review')!.outcome], ['draft', 'manual_review']);
+  assert.deepEqual([byId.get('bn-cn-prc-ordinary-tourism-review')!.status, byId.get('bn-cn-prc-ordinary-tourism-review')!.outcome, byId.get('bn-cn-prc-ordinary-tourism-review')!.maxStayDays], ['verified', 'visa_free', 14]);
 });
 
 test('东帝汶三类护照均保留落地签、30 天与全口岸条件', async () => {

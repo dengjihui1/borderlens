@@ -1604,20 +1604,22 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_free",
+      "maxStayDays": 14,
       "conditions": [
-        "文莱外交部国家路由器中的 China 行为多分支控件，本轮未出现可审阅的最终类别页面。",
-        "在直接确认中国普通护照属于预先签证、落地签或其他安排之前维持 REVIEW，不依据搜索摘要升级。"
+        "文莱外交部当前 Visa Information by Country / Region 页面将 China 的 Ordinary Passport 分支直接链接到 Category D3。",
+        "Category D3 官方页面说明该类别外国人无需签证进入文莱，并允许停留最多 14 天。",
+        "本条仅适用于中国普通护照；超过 14 天以及商务或专业访问需要另行申请相应签证。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
-        "bn-mfa-visa-category"
+        "bn-mfa-visa-category",
+        "bn-mfa-waiver-14"
       ],
-      "evidenceLocator": "Brunei MFA > Visa Application by Country / Region > China multi-branch row; final branch unresolved",
-      "evidenceExcerpt": "The official router exposes China as a multi-branch row but did not reveal a reviewable final category in this session; no visa outcome or stay period is asserted.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Brunei MFA > Visa Information by Country / Region > China > Ordinary Passport > Category D3; Category D3 page",
+      "evidenceExcerpt": "The current official country router links China's Ordinary Passport to Category D3. The Category D3 page states that foreign nationals under this category do not require visas to enter Brunei Darussalam and may stay up to 14 days.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     },
     {
       "id": "bn-hk-hksar-tourism-visa-waiver",
