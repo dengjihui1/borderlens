@@ -388,3 +388,14 @@ test('智利区分中国条件免签与港澳特区护照停留期', async () =>
   assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', 90]);
   assert.deepEqual([byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['visa_free', 30]);
 });
+
+test('阿根廷区分中国普通护照签证与港澳普通游客路线', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const argentina = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ar');
+  assert.equal(argentina.length, 3);
+  const byType = new Map(argentina.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('Visa EEUU') && condition.includes('Green CARD')));
+  assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', null]);
+  assert.deepEqual([byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['visa_free', null]);
+});

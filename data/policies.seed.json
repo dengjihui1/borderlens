@@ -2769,6 +2769,70 @@
       "evidenceExcerpt": "Macao: visa not required; the official selector lists a maximum transitory-stay period of 30 days for both simple and multiple entry and notes that the row applies to nationals of the Macao Special Administrative Region.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "ar-cn-prc-ordinary-tourism-visa-required",
+      "destinationJurisdictionId": "ar",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Argentina tourist visa",
+      "conditions": [
+        "阿根廷国家移民局官方 Regimen de Visas 表格将 REPUBLICA POPULAR CHINA 在 Pasaporte Ordinario (Turista) 栏标为 REQUIERE VISA。",
+        "同一官方表格在 Visa EEUU 与 Green CARD (EEUU) 栏对中国标为 HABILITADO；这只说明存在对应的美国签证或 Green Card 资格分支，具体条件、停留期和是否需要预先授权仍须按官方路线确认。",
+        "本条只覆盖中国普通护照旅游基础路线，不把外交/服务护照或美国证件分支误套为普遍免签。"
+      ],
+      "status": "verified",
+      "sourceIds": ["ar-dnm-regimen-visas"],
+      "evidenceLocator": "Argentina National Migration Directorate > Regimen de Visas > REPUBLICA POPULAR CHINA",
+      "evidenceExcerpt": "The official table marks REPUBLICA POPULAR CHINA as REQUIERE VISA under Pasaporte Ordinario (Turista), while the Visa EEUU and Green CARD (EEUU) columns are marked HABILITADO.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "ar-hk-hksar-tourism-visa-exemption",
+      "destinationJurisdictionId": "ar",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": null,
+      "conditions": [
+        "阿根廷国家移民局官方 Regimen de Visas 表格列出 HONG KONG (REPUBLICA CHINA)，其 Pasaporte Ordinario (Turista) 栏没有 REQUIERE VISA 标记。",
+        "本次审阅的官方表格未给出香港特区护照的具体最长停留期，因此不填写天数；短期旅游的准入期限须按阿根廷官方入境许可核验。",
+        "本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件。"
+      ],
+      "status": "verified",
+      "sourceIds": ["ar-dnm-regimen-visas"],
+      "evidenceLocator": "Argentina National Migration Directorate > Regimen de Visas > HONG KONG (REPUBLICA CHINA)",
+      "evidenceExcerpt": "The official visa-regime table lists HONG KONG (REPUBLICA CHINA) and shows no REQUIERE VISA marker in the Pasaporte Ordinario (Turista) column; no stay period is shown for this row.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "ar-mo-macao-sar-tourism-visa-exemption",
+      "destinationJurisdictionId": "ar",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": null,
+      "conditions": [
+        "阿根廷国家移民局官方 Regimen de Visas 表格列出 MACAO (REPUBLICA CHINA)，其 Pasaporte Ordinario (Turista) 栏没有 REQUIERE VISA 标记。",
+        "本次审阅的官方表格未给出澳门特区护照的具体最长停留期，因此不填写天数；短期旅游的准入期限须按阿根廷官方入境许可核验。",
+        "本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件。"
+      ],
+      "status": "verified",
+      "sourceIds": ["ar-dnm-regimen-visas"],
+      "evidenceLocator": "Argentina National Migration Directorate > Regimen de Visas > MACAO (REPUBLICA CHINA)",
+      "evidenceExcerpt": "The official visa-regime table lists MACAO (REPUBLICA CHINA) and shows no REQUIERE VISA marker in the Pasaporte Ordinario (Turista) column; no stay period is shown for this row.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }
