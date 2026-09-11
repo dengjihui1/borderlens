@@ -59,6 +59,7 @@
 | 阿根廷 | 中国普通护照 | 需要旅游签证；官方表格另有美国签证/Green Card 资格列 | 具体美国证件条件、停留期和是否需要预先授权仍须按官方路线确认 |
 | 阿根廷 | 香港特区护照 | 官方普通游客表格未标需签证 | 本次官方表格未显示具体最长停留期；不扩展到香港签证身份书 |
 | 阿根廷 | 澳门特区护照 | 官方普通游客表格未标需签证 | 本次官方表格未显示具体最长停留期；不扩展到澳门旅行证 |
+| 乌拉圭 | 中国普通护照、香港/澳门特区护照 | REVIEW | 驻港总领事馆页面仅提供旅游签证申请要求，并要求另查内政部国籍签证政策，当前未给出三类证件的直接结论 |
 | 中国内地 | 非中国籍香港/澳门永久居民通行证 | 5 年内多次来往，每次最多 90 天 | 仅短期旅游、探亲、商务等；工作、学习、采访需另办许可 |
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
@@ -154,6 +155,7 @@
 - [Colombia Ministry of Foreign Affairs：Entry to Colombia and Courtesy Visa Information](https://www.cancilleria.gov.co/sites/default/files/FOTOS2024/ENTRY%20TO%20COLOMBIA%20AND%20COURTESY%20VISA%20INFORMATION.pdf)
 - [Chile Ministry of Foreign Affairs, Consular Services：Visas para ingresar a Chile](https://serviciosconsulares.cl/tramites/site/tax/port/all/taxport_14___1.html)
 - [Argentina National Migration Directorate：Regimen de Visas](https://www.migraciones.gob.ar/accesos/regimenvisas.php)
+- [Uruguay Ministry of Foreign Affairs, Consulate General in Hong Kong：Visas](https://www.gub.uy/ministerio-relaciones-exteriores/en/consulate-general-of-the-oriental-republic-of-uruguay-in-hong-kong/consular-services/visas)
 
 ## 核验方法
 

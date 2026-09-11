@@ -2833,6 +2833,72 @@
       "evidenceExcerpt": "The official visa-regime table lists MACAO (REPUBLICA CHINA) and shows no REQUIERE VISA marker in the Pasaporte Ordinario (Turista) column; no stay period is shown for this row.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "uy-cn-prc-ordinary-tourism-review",
+      "destinationJurisdictionId": "uy",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": null,
+      "conditions": [
+        "乌拉圭外交部驻港总领事馆官方页面要求申请前查询乌拉圭内政部 Visa Policy for Foreign Nationals，但该页面本身没有给出中国普通护照的直接签证结果。",
+        "旅游签证申请材料和提前申请时间不能替代国籍签证资格结论；当前不推断免签、需签证或停留期限。",
+        "应继续通过乌拉圭内政部国籍签证政策或乌拉圭外交部对应领事馆核验中国普通护照路线。"
+      ],
+      "status": "draft",
+      "sourceIds": ["uy-mrree-hk-visa-information"],
+      "evidenceLocator": "Uruguay Consulate General in Hong Kong > Visas > Ministry of the Interior Visa Policy for Foreign Nationals",
+      "evidenceExcerpt": "Before applying, check whether your nationality requires a visa by consulting the Uruguayan Ministry of the Interior's Visa Policy for Foreign Nationals; the reviewed consular page does not state the China passport outcome.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "uy-hk-hksar-tourism-review",
+      "destinationJurisdictionId": "uy",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": null,
+      "conditions": [
+        "乌拉圭外交部驻港总领事馆官方页面提供旅游签证申请要求，但将国籍是否需要签证转交乌拉圭内政部 Visa Policy for Foreign Nationals 查询。",
+        "当前官方领事页面没有直接给出香港特区护照的免签状态或最长停留期，因此不根据驻港地点或普通旅行常识补全结论。",
+        "应继续通过乌拉圭内政部国籍签证政策或乌拉圭外交部对应领事馆核验香港特区护照路线。"
+      ],
+      "status": "draft",
+      "sourceIds": ["uy-mrree-hk-visa-information"],
+      "evidenceLocator": "Uruguay Consulate General in Hong Kong > Visas > Ministry of the Interior Visa Policy for Foreign Nationals",
+      "evidenceExcerpt": "The official consular page provides tourist-visa requirements but directs nationality-specific visa checks to the Ministry of the Interior policy; it does not state the Hong Kong SAR passport outcome.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "uy-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "uy",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": null,
+      "conditions": [
+        "乌拉圭外交部驻港总领事馆官方页面提供旅游签证申请要求，但将国籍是否需要签证转交乌拉圭内政部 Visa Policy for Foreign Nationals 查询。",
+        "当前官方领事页面没有直接给出澳门特区护照的免签状态或最长停留期，因此不根据名单缺席或普通旅行常识补全结论。",
+        "应继续通过乌拉圭内政部国籍签证政策或乌拉圭外交部对应领事馆核验澳门特区护照路线。"
+      ],
+      "status": "draft",
+      "sourceIds": ["uy-mrree-hk-visa-information"],
+      "evidenceLocator": "Uruguay Consulate General in Hong Kong > Visas > Ministry of the Interior Visa Policy for Foreign Nationals",
+      "evidenceExcerpt": "The official consular page provides tourist-visa requirements but directs nationality-specific visa checks to the Ministry of the Interior policy; it does not state the Macao SAR passport outcome.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }
