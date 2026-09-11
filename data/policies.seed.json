@@ -2641,6 +2641,70 @@
       "evidenceExcerpt": "The reviewed official Asia list includes Hong Kong but does not display Macao; that absence does not establish a complete Macao passport visa outcome.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "co-cn-prc-ordinary-tourism-visa-conditional-exemption",
+      "destinationJurisdictionId": "co",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_required",
+      "maxStayDays": null,
+      "visaProductName": "Colombia Visitor (V) visa",
+      "conditions": [
+        "哥伦比亚外交部官方入境信息将中国列入有条件免 Visitor (V) 签证的国籍；入境时必须证明持有美国或申根区国家签发的永久居留许可，或有效期超过 6 个月的签证。",
+        "未满足上述条件时，中国普通护照应按哥伦比亚 Visitor (V) 签证路线办理；本条不把外交、官方或公务护照协定例外扩展到普通护照。",
+        "第三国居留或签证的签发地、剩余有效期和入境时证明必须逐项核验，不能仅凭曾经持有相关签证推断免签。"
+      ],
+      "status": "verified",
+      "sourceIds": ["co-mre-entry-visa-information"],
+      "evidenceLocator": "Colombia MFA > Entry to Colombia and Courtesy Visa Information > Conditional Visa Exemption",
+      "evidenceExcerpt": "The visa exemption is applicable to nationals of the People's Republic of China who prove at arrival a permanent residence permit or a visa valid for more than six months issued by the United States or a Schengen country; otherwise they must obtain a visa.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "co-hk-hksar-tourism-visa-exemption",
+      "destinationJurisdictionId": "co",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_free",
+      "maxStayDays": 90,
+      "conditions": [
+        "哥伦比亚外交部官方入境信息将 Hong Kong — SAR Special Administrative Region of the People's Republic of China 列为短期 Visitor (V) 免签的特殊地区；本条仅覆盖香港特区护照。",
+        "该官方材料将短期访问描述为少于 90 天，适用于不领取哥伦比亚境内报酬的访问；工作、学习或其他活动另行核验。",
+        "香港签证身份书等其他旅行证件不能自动继承香港特区护照待遇，仍须按证件类型核验。"
+      ],
+      "status": "verified",
+      "sourceIds": ["co-mre-entry-visa-information"],
+      "evidenceLocator": "Colombia MFA > Entry to Colombia and Courtesy Visa Information > Passports from special territories exempt from Visitor (V) visa",
+      "evidenceExcerpt": "Hong Kong — SAR Special Administrative Region of the People's Republic of China is listed among special territories exempt from the Visitor (V) visa for short stay; short stay is described as less than 90 days.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "co-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "co",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "conditions": [
+        "哥伦比亚外交部官方入境信息的特殊地区免签段落在本次审阅中列出 Hong Kong，但未列出 Macao。",
+        "官方名单缺席只能说明当前材料没有给出澳门特区护照的直接结论，不能据此推出免签、需签证或禁止入境。",
+        "应继续通过哥伦比亚外交部、对应领事馆或官方签证系统核验澳门特区护照的完整旅游路线。"
+      ],
+      "status": "draft",
+      "sourceIds": ["co-mre-entry-visa-information"],
+      "evidenceLocator": "Colombia MFA > Entry to Colombia and Courtesy Visa Information > Special territories list; Macao not displayed",
+      "evidenceExcerpt": "The reviewed official special-territory section lists Hong Kong but does not display Macao; that absence does not establish a complete Macao passport visa outcome.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }

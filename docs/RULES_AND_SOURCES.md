@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-11（第十二批墨西哥规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第十五批哥伦比亚规则）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -50,6 +50,9 @@
 | 秘鲁 | 中国普通护照 | 通常需要旅游签证；符合条件的第三国签证可免签 | 英/加/澳/申根/美签证在入境时至少还有 6 个月有效期时存在例外 |
 | 秘鲁 | 香港特区护照 | 免旅游签证 | 官方亚洲免签名单列出 Hong Kong；本轮未稳定显示具体最长停留天数 |
 | 秘鲁 | 澳门特区护照 | REVIEW | 官方亚洲名单未显示 Macao；名单缺席不足以推出完整结论 |
+| 哥伦比亚 | 中国普通护照 | 通常需要 Visitor (V) 签证；持美国/申根永久居留许可或入境时有效期超过 6 个月的相关签证可适用条件免签 | 仅覆盖官方条件分支，不扩展到其他第三国签证或其他护照类型 |
+| 哥伦比亚 | 香港特区护照 | 短期免 Visitor (V) 签证，少于 90 天 | 官方特殊地区名单列出 Hong Kong；不扩展到香港签证身份书 |
+| 哥伦比亚 | 澳门特区护照 | REVIEW | 官方特殊地区段落列出 Hong Kong 但未显示 Macao；名单缺席不足以推出完整结论 |
 | 中国内地 | 非中国籍香港/澳门永久居民通行证 | 5 年内多次来往，每次最多 90 天 | 仅短期旅游、探亲、商务等；工作、学习、采访需另办许可 |
 | 美国 | 中国普通护照、香港/澳门特区护照 | 需要访客签证 | 三者均不在 DHS 当前 42 个 VWP 国家名单；关岛—北马里亚纳另查 |
 | 加拿大 | 中国普通护照 / 澳门特区护照 | 需要访客签证 | 航空、陆路、海路均需要；特定无签证过境项目另查 |
@@ -142,6 +145,7 @@
 - [Brazil Ministry of Foreign Affairs：Visa requirements by country](https://www.gov.br/mre/pt-br/embaixada-abu-dhabi/abu-dhabi-arquivos/english/consular-services/visa/visa-requirements-by-country/visa-requirements-by-country-list-of-countries)
 - [Consulate General of Brazil in Hong Kong：Tourist Visa](https://www.gov.br/mre/pt-br/consulado-hong-kong/english/consular-services/visas/tourist-visa)
 - [Consulate General of Peru in London：Tourism Visas](https://www.consulado.pe/es/londres/tramite/Paginas/Visas/Issuance-of-Tourist-Visa.aspx)
+- [Colombia Ministry of Foreign Affairs：Entry to Colombia and Courtesy Visa Information](https://www.cancilleria.gov.co/sites/default/files/FOTOS2024/ENTRY%20TO%20COLOMBIA%20AND%20COURTESY%20VISA%20INFORMATION.pdf)
 
 ## 核验方法
 
