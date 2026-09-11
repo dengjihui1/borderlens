@@ -3097,6 +3097,72 @@
       "evidenceExcerpt": "The official embassy page lists CHINA (INCLUDING HONG KONG, TAIWAN, MACAO) under Tourist Visa Group II and provides the Group II application requirements and consular appointment process.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "cr-cn-prc-ordinary-tourism-review",
+      "destinationJurisdictionId": "cr",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": null,
+      "conditions": [
+        "哥斯达黎加移民局官方 Visas 页面说明，签证指引按外国人国籍决定是否需要签证、适用例外和入境要求，并链接 2025 年 11 月官方 Directriz General de Visas PDF。",
+        "当前可访问的官方页面没有直接展示中国普通护照的最终旅游路线；不能用搜索摘要、第三方页面或未读取的 PDF 条目补全需签证、免签或停留期。",
+        "应继续通过哥斯达黎加移民局官方指引或对应使领馆，按中国普通护照核验旅游签证类别、例外条件和最长停留期。"
+      ],
+      "status": "draft",
+      "sourceIds": ["cr-dgme-visas"],
+      "evidenceLocator": "Costa Rica DGME > Visas > Directriz General de Visas Noviembre 2025 PDF",
+      "evidenceExcerpt": "The official immigration page states that the General Visa Guidelines determine, according to the foreign person's nationality, whether a visa is required, visa exceptions and entry requirements, and links the official November 2025 guideline PDF; it does not display the China ordinary-passport tourism outcome on the page itself.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "cr-hk-hksar-tourism-review",
+      "destinationJurisdictionId": "cr",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": null,
+      "conditions": [
+        "哥斯达黎加移民局官方 Visas 页面说明，签证指引按外国人国籍决定是否需要签证、适用例外和入境要求，并链接 2025 年 11 月官方 Directriz General de Visas PDF。",
+        "当前可访问的官方页面没有直接展示香港特区护照的最终旅游路线；不能因页面未显示结果或使用第三方摘要而推出免签、需签证或停留期。",
+        "应继续通过哥斯达黎加移民局官方指引或对应使领馆，按香港特区护照核验旅游路线；不扩展到香港签证身份书或其他旅行证件。"
+      ],
+      "status": "draft",
+      "sourceIds": ["cr-dgme-visas"],
+      "evidenceLocator": "Costa Rica DGME > Visas > Directriz General de Visas Noviembre 2025 PDF",
+      "evidenceExcerpt": "The official immigration page explains that the General Visa Guidelines determine nationality-based visa requirements, exemptions and entry requirements, and links the official November 2025 guideline PDF; it does not display a Hong Kong SAR passport tourism outcome on the page itself.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
+    },
+    {
+      "id": "cr-mo-macao-sar-tourism-review",
+      "destinationJurisdictionId": "cr",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": null,
+      "conditions": [
+        "哥斯达黎加移民局官方 Visas 页面说明，签证指引按外国人国籍决定是否需要签证、适用例外和入境要求，并链接 2025 年 11 月官方 Directriz General de Visas PDF。",
+        "当前可访问的官方页面没有直接展示澳门特区护照的最终旅游路线；不能因页面未显示结果或使用第三方摘要而推出免签、需签证或停留期。",
+        "应继续通过哥斯达黎加移民局官方指引或对应使领馆，按澳门特区护照核验旅游路线；不扩展到澳门旅行证或其他旅行证件。"
+      ],
+      "status": "draft",
+      "sourceIds": ["cr-dgme-visas"],
+      "evidenceLocator": "Costa Rica DGME > Visas > Directriz General de Visas Noviembre 2025 PDF",
+      "evidenceExcerpt": "The official immigration page explains that the General Visa Guidelines determine nationality-based visa requirements, exemptions and entry requirements, and links the official November 2025 guideline PDF; it does not display a Macao SAR passport tourism outcome on the page itself.",
+      "checkedAt": "2026-09-11",
+      "reviewDueAt": "2026-10-11"
     }
   ]
 }

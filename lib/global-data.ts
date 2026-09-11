@@ -26,6 +26,7 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
+  { id: 'cr', label: '哥斯达黎加', note: '官方移民局已登记签证指引入口，目标护照具体结果继续 REVIEW' },
   { id: 'bo', label: '玻利维亚', note: '中国、香港、澳门特区普通护照列入 Tourist Visa Group II，需申请旅游签证' },
   { id: 'py', label: '巴拉圭', note: '中国、香港、澳门特区普通护照均需出发前签证' },
   { id: 'ec', label: '厄瓜多尔', note: '中国普通护照需预先签证；港澳特区护照路线继续 REVIEW' },

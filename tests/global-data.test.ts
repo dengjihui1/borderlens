@@ -442,3 +442,11 @@ test('玻利维亚官方使馆页确认三类普通护照属于 Tourist Visa Gro
     assert.ok(rule.conditions.some((condition: string) => condition.includes('六个月')));
   }
 });
+
+test('哥斯达黎加官方移民局仅提供签证指引入口时保留三类护照 REVIEW', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const costaRica = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'cr');
+  assert.equal(costaRica.length, 3);
+  assert.ok(costaRica.every((rule: PolicyFixture) => rule.status === 'draft' && rule.outcome === 'manual_review' && rule.maxStayDays === null));
+  assert.ok(costaRica.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('Directriz'))));
+});
