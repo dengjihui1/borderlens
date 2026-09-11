@@ -411,3 +411,9 @@ Phase 02 从联合国统计司 M49 官方页面生成了 248 个国家与地区�
 本批继续处理秘鲁—澳门特区护照路线。秘鲁外交部官方《Requerimientos y exoneración de visas para ciudadanos extranjeros en pasaportes ordinarios》在“其他地区（OTROS TERRITORIOS）”表中将 `Macao` 的 `TURISTA` 栏标为 `SI`，并在表格注释中定义 `SI` 为需要签证；同一表格将香港列为旅游免签，但没有把香港待遇扩展到澳门。
 
 因此，澳门特区普通护照路线从 `draft/REVIEW` 升级为 `verified / visa_required`，记录秘鲁旅游签证方向但不猜准许停留期；不把结论扩展到澳门旅行证、其他旅行证件或外交/公务护照。数据库达到 248 个法域、92 个官方或国际来源、143 条结构化路线，其中 127 条已核验、16 条待复核；回归检查新增澳门 `SI` 需签证、普通护照表和不补填停留期边界。
+
+## 48｜第四十批复核：印度官方费用表补充港澳正规旅游签证路线
+
+本批继续处理印度—香港及澳门特区护照路线。印度驻香港总领事馆官方《Indian Visa fee schedule for all nationalities》在 Tourist Visa Fee Schedule 中分别列出 Hong Kong 和 Macau，费用均为 HKD 335，并说明旅游签证通常签发 3 个月、单次入境；同一领馆的 Tourist Visa 页面仍提供申请材料和递交路线。
+
+这组证据确认港澳居民存在正规的印度旅游签证申请路线，并补足费用与通常签发期，但费用表不是完整的入境免签/需签证清单，不能排除其他免签或特殊路线。因此香港和澳门特区护照两条规则继续保持 `draft / REVIEW`，仅补充官方证据；数据库保持 248 个法域、143 条结构化路线，其中 127 条已核验、16 条待复核，官方来源增至 93 个；回归检查新增 HKD 335、通常 3 个月单次签证和 REVIEW 边界。

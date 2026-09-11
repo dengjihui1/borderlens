@@ -280,7 +280,9 @@ test('印度官方来源确认中国普通护照旅游签证，港澳补充驻�
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
     assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
     assert.ok(byType.get(documentType)!.sourceIds.includes('in-cgihk-tourist-visa'));
+    assert.ok(byType.get(documentType)!.sourceIds.includes('in-cgihk-visa-fee-schedule'));
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('180 天')));
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('HKD 335') && condition.includes('3 个月')));
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('继续 REVIEW')));
   }
 });
