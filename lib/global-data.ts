@@ -26,6 +26,7 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 export const latestPolicyBatch = [
+  { id: 'uy', label: '乌拉圭', note: '中国普通护照需签证但有条件例外；香港与澳门特区护照免签，期限待官方表格进一步确认' },
   { id: 'mn', label: '蒙古', note: '中国、香港、澳门列入官方 VISA FREE COUNTRIES；页面未给出停留天数' },
   { id: 'ph', label: '菲律宾', note: '香港与澳门特区护照 9A 免签，初始准许停留 14 天；中国普通护照继续 REVIEW' },
   { id: 'vn', label: '越南', note: '中国普通护照可申请 Vietnam e-Visa，最长 90 天；港澳特区护照接口结果继续 REVIEW' },

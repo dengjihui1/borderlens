@@ -425,12 +425,17 @@ test('阿根廷区分中国普通护照签证与港澳普通游客路线', async
   assert.deepEqual([byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['visa_free', null]);
 });
 
-test('乌拉圭官方领事页不足以给出三类护照结论时保留 REVIEW', async () => {
+test('乌拉圭内政部官方签证制度表核验中国及港澳普通护照路线', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const uruguay = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'uy');
   assert.equal(uruguay.length, 3);
-  assert.ok(uruguay.every((rule: PolicyFixture) => rule.status === 'draft' && rule.outcome === 'manual_review' && rule.maxStayDays === null));
-  assert.ok(uruguay.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('内政部'))));
+  const byType = new Map(uruguay.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_required', null]);
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('Carrasco') && condition.includes('Montevideo')));
+  assert.deepEqual([byType.get('hksar_passport')!.status, byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['verified', 'visa_free', null]);
+  assert.ok(byType.get('hksar_passport')!.conditions.some((condition: string) => condition.includes('HKSAR') && condition.includes('OVERSEAS')));
+  assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['verified', 'visa_free', null]);
+  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('脚注 (11)')));
 });
 
 test('厄瓜多尔确认中国普通护照需签证并保留港澳特区护照 REVIEW', async () => {

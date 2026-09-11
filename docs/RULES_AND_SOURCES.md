@@ -59,7 +59,9 @@
 | 阿根廷 | 中国普通护照 | 需要旅游签证；官方表格另有美国签证/Green Card 资格列 | 具体美国证件条件、停留期和是否需要预先授权仍须按官方路线确认 |
 | 阿根廷 | 香港特区护照 | 官方普通游客表格未标需签证 | 本次官方表格未显示具体最长停留期；不扩展到香港签证身份书 |
 | 阿根廷 | 澳门特区护照 | 官方普通游客表格未标需签证 | 本次官方表格未显示具体最长停留期；不扩展到澳门旅行证 |
-| 乌拉圭 | 中国普通护照、香港/澳门特区护照 | REVIEW | 驻港总领事馆页面仅提供旅游签证申请要求，并要求另查内政部国籍签证政策，当前未给出三类证件的直接结论 |
+| 乌拉圭 | 中国普通护照 | 需要签证；符合条件的第三国签证与指定首入港口可触发例外 | 内政部表格将中国普通护照列为需签证；脚注 (10) 列出美国、加拿大、英国或欧盟签证及指定首入港口条件 |
+| 乌拉圭 | 香港特区护照 | 免签，期限待官方表格进一步确认 | 仅 Pte. HKSAR；脚注 (4) 要求护照显示 HKSAR 或 OVERSEAS |
+| 乌拉圭 | 澳门特区护照 | 免签，期限待官方表格进一步确认 | 脚注 (11) 明确澳门特区普通护照免签；本条不扩展到其他证件 |
 | 厄瓜多尔 | 中国普通护照 | 需要预先签证 | 外交部入境需签证名单与 2024 年部长令均支持普通护照基础路线；不推断签证类别与停留期 |
 | 厄瓜多尔 | 香港/澳门特区护照 | REVIEW | 官方材料未提供特区护照单独旅游结果；不能从中国普通护照路线或名单缺席推断 |
 | 巴拉圭 | 中国普通护照 | 需要出发前签证 | 驻日使馆官方页规定免签名单之外的国籍必须出发前取得签证；不推断签发期限与停留期 |
@@ -136,6 +138,7 @@
 - [Philippines DFA Beijing：General Information](https://beijingpe.dfa.gov.ph/general-information)（本轮安全验证阻挡，`blocked`）
 - [Philippines Bureau of Immigration：Visa Waiver](https://immigration.gov.ph/visas/visa-waiver/)
 - [Mongolia Electronic Visa Application System：Visa Free Countries](https://evisa.mn/en)
+- [Uruguay Ministry of the Interior：Régimen de visas de admisión](https://www.gub.uy/ministerio-interior/comunicacion/publicaciones/regimen-visas-admision)
 - [Cambodia MFAIC：e-Visa Visa Type Information](https://www.evisa.gov.kh/information/visa_type/4)
 - [Cambodia MFAIC：Official e-Visa service](https://www.evisa.gov.kh/home)
 - [Lao PDR MOFA：Who can apply for Lao eVisa](https://laoevisa.gov.la/article/who_can_apply)
