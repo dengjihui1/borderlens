@@ -1202,19 +1202,22 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_required",
+      "maxStayDays": 90,
+      "visaProductName": "Vietnam e-Visa",
       "conditions": [
-        "当前官方国籍接口审阅结果没有返回 HKG / Hong Kong SAR 的独立记录；该缺席不能推出免签、普通签证或禁止入境结论。",
-        "仍需由越南移民局或越南驻外使领馆直接确认 Hong Kong SAR 护照的适用路线、有效期和获准口岸；在确认前不输出天数。"
+        "越南移民局官方 e-Visa 国籍名单的 CHN / China 行明确包含 Hong Kong SAR passport holders；同一行排除 Chinese e-passport holders，因此本条仅适用于香港特区普通护照，不扩展到中国电子普通护照。",
+        "官方电子签页面说明最长 90 天，可单次或多次入境；电子签申请人为越南境外外国人，须持有效护照或国际旅行证件。",
+        "电子签只能经越南政府指定的国际边境口岸出入；获签不等于保证入境，仍须满足越南法律规定的入境条件。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
         "vn-immigration-evisa",
-        "vn-immigration-evisa-api"
+        "vn-immigration-evisa-api",
+        "vn-immigration-evisa-nationality-list"
       ],
-      "evidenceLocator": "Vietnam National Electronic Visa system; public nationality API review for HKG / Hong Kong SAR",
-      "evidenceExcerpt": "The official API list reviewed on 2026-09-11 did not return an HKG / Hong Kong SAR record. Absence from this e-Visa list is insufficient to establish the complete ordinary-visa or visa-exemption outcome.",
+      "evidenceLocator": "Vietnam Immigration Department > official e-Visa nationality list, PDF p. 3, CHN / China row; official e-Visa page and public API",
+      "evidenceExcerpt": "The official list is titled 'List of countries whose citizens may be granted e-Visas'. Its CHN / China row says 'Including Hong Kong SAR and Macao SAR passport holders' and 'Not apply to Chinese e-passport holders'. The official e-Visa page states a maximum of 90 days, single or multiple entry, outside-Viet-Nam application and designated international border gates.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -1225,19 +1228,22 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
+      "outcome": "visa_required",
+      "maxStayDays": 90,
+      "visaProductName": "Vietnam e-Visa",
       "conditions": [
-        "当前官方国籍接口审阅结果没有返回 MAC / Macao SAR 的独立记录；该缺席不能推出免签、普通签证或禁止入境结论。",
-        "仍需由越南移民局或越南驻外使领馆直接确认 Macao SAR 护照的适用路线、有效期和获准口岸；在确认前不输出天数。"
+        "越南移民局官方 e-Visa 国籍名单的 CHN / China 行明确包含 Macao SAR passport holders；同一行排除 Chinese e-passport holders，因此本条仅适用于澳门特区普通护照，不扩展到中国电子普通护照。",
+        "官方电子签页面说明最长 90 天，可单次或多次入境；电子签申请人为越南境外外国人，须持有效护照或国际旅行证件。",
+        "电子签只能经越南政府指定的国际边境口岸出入；获签不等于保证入境，仍须满足越南法律规定的入境条件。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
         "vn-immigration-evisa",
-        "vn-immigration-evisa-api"
+        "vn-immigration-evisa-api",
+        "vn-immigration-evisa-nationality-list"
       ],
-      "evidenceLocator": "Vietnam National Electronic Visa system; public nationality API review for MAC / Macao SAR",
-      "evidenceExcerpt": "The official API list reviewed on 2026-09-11 did not return a MAC / Macao SAR record. Absence from this e-Visa list is insufficient to establish the complete ordinary-visa or visa-exemption outcome.",
+      "evidenceLocator": "Vietnam Immigration Department > official e-Visa nationality list, PDF p. 3, CHN / China row; official e-Visa page and public API",
+      "evidenceExcerpt": "The official list is titled 'List of countries whose citizens may be granted e-Visas'. Its CHN / China row says 'Including Hong Kong SAR and Macao SAR passport holders' and 'Not apply to Chinese e-passport holders'. The official e-Visa page states a maximum of 90 days, single or multiple entry, outside-Viet-Nam application and designated international border gates.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },

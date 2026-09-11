@@ -188,8 +188,11 @@ test('越南官方电子签接口与菲律宾 eVisa 政策确认中国普通护�
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('CHN') && condition.includes('EVISA')));
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('指定的国际边境口岸')));
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
-    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
-    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('缺席不能推出')));
+    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['verified', 'visa_required', 90]);
+    assert.equal(byType.get(documentType)!.visaProductName, 'Vietnam e-Visa');
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('明确包含') && condition.includes('passport holders')));
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('Chinese e-passport holders')));
+    assert.ok(byType.get(documentType)!.sourceIds.includes('vn-immigration-evisa-nationality-list'));
   }
 
   const philippines = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ph');

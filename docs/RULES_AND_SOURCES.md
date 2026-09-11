@@ -79,7 +79,7 @@
 | 印度尼西亚 | 中国普通护照 | B1 落地签，最多 30 天，可延长一次 30 天 | 护照至少 6 个月有效、离境票据、Rp500,000 |
 | 印度尼西亚 | 香港/澳门特区护照 | A1 Tourism Visa Exemption | 官方选择器已确认产品；本轮不输出未稳定呈现的具体停留天数 |
 | 越南 | 中国普通护照 | Vietnam e-Visa，最长 90 天，可单次或多次入境 | 官方国籍 API 将 CHN / China 标为 EVISA；申请须在越南境外，需有效护照或国际旅行证件，并经政府指定国际边境口岸出入 |
-| 越南 | 香港/澳门特区护照 | REVIEW | 官方国籍 API 本轮没有返回 HKG 或 MAC 独立记录；名单缺席不能推出免签、普通签证或禁止入境结论 |
+| 越南 | 香港/澳门特区护照 | Vietnam e-Visa，最长 90 天，可单次或多次入境 | 官方 e-Visa 国籍名单的 CHN 行明确包含 Hong Kong SAR 和 Macao SAR passport holders，并排除 Chinese e-passport holders；仍须从指定国际口岸出入 |
 | 蒙古 | 中国普通护照 | 免签，期限待官方入口进一步核验 | 蒙古电子签官方系统的 VISA FREE COUNTRIES 名单列出 The People's Republic of China；当前页未说明停留天数与特殊证件 |
 | 蒙古 | 香港特区护照 | 免签，期限待官方入口进一步核验 | 官方名单列出 Hong Kong SAR (China)；当前页未说明停留天数与香港签证身份书 |
 | 蒙古 | 澳门特区护照 | 免签，期限待官方入口进一步核验 | 官方名单列出 Macau SAR (China)；当前页未说明停留天数与澳门旅行证 |
@@ -139,6 +139,7 @@
 - [Indonesia Immigration：Official visa selection](https://evisa.imigrasi.go.id/web/visa-selection)
 - [Vietnam Immigration：National Electronic Visa system](https://evisa.gov.vn/e-visa/foreigners)
 - [Vietnam Immigration：public nationality and border-gate APIs](https://api.evisa.gov.vn/client-service/public/dm-qt/get-all)
+- [Vietnam Immigration：e-Visa nationality list](https://evisa.xuatnhapcanh.gov.vn/documents/20181/117155/Vietnam-Evisa-nation-list-Vi.pdf/7611c905-0370-45e9-8080-cd0dec11df95)
 - [Philippines DFA Beijing：General Information](https://beijingpe.dfa.gov.ph/general-information)（本轮安全验证阻挡，`blocked`）
 - [Philippines Bureau of Immigration：Visa Waiver](https://immigration.gov.ph/visas/visa-waiver/)
 - [Philippine eVisa：Visa Policy](https://evisa.gov.ph/page/policy)
