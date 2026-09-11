@@ -49,7 +49,7 @@
 | 巴西 | 澳门特区护照 | 免 Visitor Visa，最多 90 天 | 仅澳门特区护照；旅游、过境或商务适用 |
 | 秘鲁 | 中国普通护照 | 通常需要旅游签证；符合条件的第三国签证可免签 | 英/加/澳/申根/美签证在入境时至少还有 6 个月有效期时存在例外 |
 | 秘鲁 | 香港特区护照 | 免旅游签证 | 官方亚洲免签名单列出 Hong Kong；本轮未稳定显示具体最长停留天数 |
-| 秘鲁 | 澳门特区护照 | REVIEW | 官方亚洲名单未显示 Macao；名单缺席不足以推出完整结论 |
+| 秘鲁 | 澳门特区护照 | 需要旅游签证 | 秘鲁外交部普通护照表在“其他地区”将 Macao 的 Tourist 标为 SI；不扩展到澳门旅行证 |
 | 哥伦比亚 | 中国普通护照 | 通常需要 Visitor (V) 签证；持美国/申根永久居留许可或入境时有效期超过 6 个月的相关签证可适用条件免签 | 仅覆盖官方条件分支，不扩展到其他第三国签证或其他护照类型 |
 | 哥伦比亚 | 香港特区护照 | 短期免 Visitor (V) 签证，少于 90 天 | 官方特殊地区名单列出 Hong Kong；不扩展到香港签证身份书 |
 | 哥伦比亚 | 澳门特区护照 | 需要 Visitor 签证 | 哥伦比亚驻港总领馆 FAQ 直接要求澳门签发护照持有人在入境前申请签证；不扩展到澳门旅行证 |
@@ -181,6 +181,7 @@
 - [Brazil Ministry of Foreign Affairs：Visa requirements by country](https://www.gov.br/mre/pt-br/embaixada-abu-dhabi/abu-dhabi-arquivos/english/consular-services/visa/visa-requirements-by-country/visa-requirements-by-country-list-of-countries)
 - [Consulate General of Brazil in Hong Kong：Tourist Visa](https://www.gov.br/mre/pt-br/consulado-hong-kong/english/consular-services/visas/tourist-visa)
 - [Consulate General of Peru in London：Tourism Visas](https://www.consulado.pe/es/londres/tramite/Paginas/Visas/Issuance-of-Tourist-Visa.aspx)
+- [Peru Ministry of Foreign Affairs：Requerimientos y exoneración de visas para ciudadanos extranjeros en pasaportes ordinarios](https://www.consulado.pe/Documents/visas/Requerimientos_de_visa_para_ciudadanos_extranjeros.pdf)
 - [Colombia Ministry of Foreign Affairs：Entry to Colombia and Courtesy Visa Information](https://www.cancilleria.gov.co/sites/default/files/FOTOS2024/ENTRY%20TO%20COLOMBIA%20AND%20COURTESY%20VISA%20INFORMATION.pdf)
 - [Consulate General of Colombia in Hong Kong：30 frequently asked questions regarding visa applications and issuance for foreigners](https://hongkong.consulado.gov.co/sala-de-prensa/noticias/30-preguntas-frecuentes-relativas-la-solicitud-y-expedicion-de-visas-extranjeros-para-colombia)
 - [Chile Ministry of Foreign Affairs, Consular Services：Visas para ingresar a Chile](https://serviciosconsulares.cl/tramites/site/tax/port/all/taxport_14___1.html)

@@ -2717,23 +2717,24 @@
       "reviewDueAt": "2026-10-11"
     },
     {
-      "id": "pe-mo-macao-sar-tourism-review",
+      "id": "pe-mo-macao-sar-tourism-visa-required",
       "destinationJurisdictionId": "pe",
       "documentIssuerJurisdictionId": "mo",
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_required",
       "maxStayDays": null,
+      "visaProductName": "Peru tourist visa",
       "conditions": [
-        "秘鲁官方旅游签证页面的亚洲名单在本次审阅中未显示 Macao。",
-        "名单缺席只能说明当前页面没有给出澳门特区护照的直接结论，不能据此推出免签、需签证或禁止入境。",
-        "应继续通过秘鲁外交部、对应领事馆或官方签证系统核验澳门特区护照的完整路线。"
+        "秘鲁外交部官方普通护照签证表在“其他地区”部分将 Macao 的 Tourist 栏标为 SI，即需要旅游签证。",
+        "该官方表格没有为 Macao 旅游签证路线给出准许停留期，因此不填写天数；签证签发期限和材料仍须按秘鲁官方领事渠道确认。",
+        "本条仅适用于澳门特区普通护照，不扩展到澳门旅行证、其他旅行证件或外交/公务护照。"
       ],
-      "status": "draft",
-      "sourceIds": ["pe-consulado-tourism-visas"],
-      "evidenceLocator": "Peru Consulate in London > Tourism Visas > Asia country list; Macao not displayed",
-      "evidenceExcerpt": "The reviewed official Asia list includes Hong Kong but does not display Macao; that absence does not establish a complete Macao passport visa outcome.",
+      "status": "verified",
+      "sourceIds": ["pe-mre-ordinary-passport-visa-table"],
+      "evidenceLocator": "Peru Ministry of Foreign Affairs > Requerimientos y exoneración de visas para ciudadanos extranjeros en pasaportes ordinarios > Otros territorios > Macao > Turista",
+      "evidenceExcerpt": "In the official ordinary-passport table under OTROS TERRITORIOS, Macao is marked SI in the TURISTA column; SI means that a visa is required.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
