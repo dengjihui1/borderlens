@@ -449,4 +449,5 @@ test('哥斯达黎加官方移民局仅提供签证指引入口时保留三类�
   assert.equal(costaRica.length, 3);
   assert.ok(costaRica.every((rule: PolicyFixture) => rule.status === 'draft' && rule.outcome === 'manual_review' && rule.maxStayDays === null));
   assert.ok(costaRica.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('Directriz'))));
+  assert.ok(costaRica.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('美国/加拿大') && condition.includes('申根'))));
 });

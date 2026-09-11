@@ -3110,13 +3110,14 @@
       "visaProductName": null,
       "conditions": [
         "哥斯达黎加移民局官方 Visas 页面说明，签证指引按外国人国籍决定是否需要签证、适用例外和入境要求，并链接 2025 年 11 月官方 Directriz General de Visas PDF。",
+        "官方页面展开的例外说明：若正式指引将该国籍归入领事或受限签证组，持符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家的符合条件居留，或申根 C/D 类多次入境签证，可能免办哥斯达黎加领事/受限签证；美国 C1/C2/C3 过境签不接受，是否适用于中国普通护照仍须按国籍分组核验。",
         "当前可访问的官方页面没有直接展示中国普通护照的最终旅游路线；不能用搜索摘要、第三方页面或未读取的 PDF 条目补全需签证、免签或停留期。",
         "应继续通过哥斯达黎加移民局官方指引或对应使领馆，按中国普通护照核验旅游签证类别、例外条件和最长停留期。"
       ],
       "status": "draft",
       "sourceIds": ["cr-dgme-visas"],
       "evidenceLocator": "Costa Rica DGME > Visas > Directriz General de Visas Noviembre 2025 PDF",
-      "evidenceExcerpt": "The official immigration page states that the General Visa Guidelines determine, according to the foreign person's nationality, whether a visa is required, visa exceptions and entry requirements, and links the official November 2025 guideline PDF; it does not display the China ordinary-passport tourism outcome on the page itself.",
+      "evidenceExcerpt": "The official immigration page states that the General Visa Guidelines determine nationality-based visa requirements, exemptions and entry requirements, links the official November 2025 guideline PDF, and separately describes conditional exceptions for certain US/Canada, UK/European residence and multi-entry Schengen visas; it does not display the China ordinary-passport tourism outcome.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -3132,13 +3133,14 @@
       "visaProductName": null,
       "conditions": [
         "哥斯达黎加移民局官方 Visas 页面说明，签证指引按外国人国籍决定是否需要签证、适用例外和入境要求，并链接 2025 年 11 月官方 Directriz General de Visas PDF。",
+        "官方页面展开的例外说明：若正式指引将该国籍归入领事或受限签证组，持符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家的符合条件居留，或申根 C/D 类多次入境签证，可能免办哥斯达黎加领事/受限签证；美国 C1/C2/C3 过境签不接受，是否适用于香港特区护照仍须按国籍分组核验。",
         "当前可访问的官方页面没有直接展示香港特区护照的最终旅游路线；不能因页面未显示结果或使用第三方摘要而推出免签、需签证或停留期。",
         "应继续通过哥斯达黎加移民局官方指引或对应使领馆，按香港特区护照核验旅游路线；不扩展到香港签证身份书或其他旅行证件。"
       ],
       "status": "draft",
       "sourceIds": ["cr-dgme-visas"],
       "evidenceLocator": "Costa Rica DGME > Visas > Directriz General de Visas Noviembre 2025 PDF",
-      "evidenceExcerpt": "The official immigration page explains that the General Visa Guidelines determine nationality-based visa requirements, exemptions and entry requirements, and links the official November 2025 guideline PDF; it does not display a Hong Kong SAR passport tourism outcome on the page itself.",
+      "evidenceExcerpt": "The official immigration page explains nationality-based visa requirements, exemptions and entry requirements, links the official November 2025 guideline PDF, and separately describes conditional exceptions for certain US/Canada, UK/European residence and multi-entry Schengen visas; it does not display a Hong Kong SAR passport tourism outcome.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -3154,13 +3156,14 @@
       "visaProductName": null,
       "conditions": [
         "哥斯达黎加移民局官方 Visas 页面说明，签证指引按外国人国籍决定是否需要签证、适用例外和入境要求，并链接 2025 年 11 月官方 Directriz General de Visas PDF。",
+        "官方页面展开的例外说明：若正式指引将该国籍归入领事或受限签证组，持符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家的符合条件居留，或申根 C/D 类多次入境签证，可能免办哥斯达黎加领事/受限签证；美国 C1/C2/C3 过境签不接受，是否适用于澳门特区护照仍须按国籍分组核验。",
         "当前可访问的官方页面没有直接展示澳门特区护照的最终旅游路线；不能因页面未显示结果或使用第三方摘要而推出免签、需签证或停留期。",
         "应继续通过哥斯达黎加移民局官方指引或对应使领馆，按澳门特区护照核验旅游路线；不扩展到澳门旅行证或其他旅行证件。"
       ],
       "status": "draft",
       "sourceIds": ["cr-dgme-visas"],
       "evidenceLocator": "Costa Rica DGME > Visas > Directriz General de Visas Noviembre 2025 PDF",
-      "evidenceExcerpt": "The official immigration page explains that the General Visa Guidelines determine nationality-based visa requirements, exemptions and entry requirements, and links the official November 2025 guideline PDF; it does not display a Macao SAR passport tourism outcome on the page itself.",
+      "evidenceExcerpt": "The official immigration page explains nationality-based visa requirements, exemptions and entry requirements, links the official November 2025 guideline PDF, and separately describes conditional exceptions for certain US/Canada, UK/European residence and multi-entry Schengen visas; it does not display a Macao SAR passport tourism outcome.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     }

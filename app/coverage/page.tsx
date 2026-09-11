@@ -35,7 +35,7 @@ export default function CoveragePage() {
 
         <section className="coverage-warning">
           <ShieldAlert size={22} />
-          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增哥斯达黎加三条证件路线：官方移民局已确认按国籍适用 General Visa Guidelines；中国、香港和澳门三类目标护照的具体旅游结果仍保留 REVIEW。</p></div>
+          <div><strong>当前不是“全球签证政策已完成”。</strong><p>本批新增哥斯达黎加三条证件路线：官方移民局已确认按国籍适用 General Visa Guidelines，并公开特定美国/加拿大、欧洲居留及申根签证例外；中国、香港和澳门三类目标护照的基础组别与停留期仍保留 REVIEW。</p></div>
         </section>
 
         <section className="batch-card">
