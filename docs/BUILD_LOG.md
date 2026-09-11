@@ -417,3 +417,9 @@ Phase 02 从联合国统计司 M49 官方页面生成了 248 个国家与地区�
 本批继续处理印度—香港及澳门特区护照路线。印度驻香港总领事馆官方《Indian Visa fee schedule for all nationalities》在 Tourist Visa Fee Schedule 中分别列出 Hong Kong 和 Macau，费用均为 HKD 335，并说明旅游签证通常签发 3 个月、单次入境；同一领馆的 Tourist Visa 页面仍提供申请材料和递交路线。
 
 这组证据确认港澳居民存在正规的印度旅游签证申请路线，并补足费用与通常签发期，但费用表不是完整的入境免签/需签证清单，不能排除其他免签或特殊路线。因此香港和澳门特区护照两条规则继续保持 `draft / REVIEW`，仅补充官方证据；数据库保持 248 个法域、143 条结构化路线，其中 127 条已核验、16 条待复核，官方来源增至 93 个；回归检查新增 HKD 335、通常 3 个月单次签证和 REVIEW 边界。
+
+## 49｜第四十一批复核：尼泊尔官方 Nepaliport 确认澳门特区护照落地签申请路线
+
+本批继续处理尼泊尔—澳门特区护照路线。尼泊尔政府 Nepaliport 官方 On-arrival Visa Application 入口按“护照签发国”提供旅游落地签申请表；其官方 `countries-for-tourist-visa` 接口列出 `Macao Special Administrative Region of China`（代码 `MAC`、`id=44`），且 `blacklisted=false`。这比此前的缺席检索更直接，确认澳门特区护照可进入旅游落地签申请路线。
+
+该列表只证明官方申请入口接受该护照签发地，不保证抵达时一定签发或入境，也没有稳定提供澳门特区护照专属停留天数。因此本条升级为 `verified / visa_on_arrival`，保留停留期为空；移除旧的 404 来源关联，避免把失效页面作为已验证证据。数据库保持 248 个法域、143 条结构化路线，官方来源 93 个，已核验规则增至 128 条、REVIEW 降至 15 条；回归检查 MAC、`blacklisted=false` 和不补填停留期边界。

@@ -298,7 +298,7 @@ test('斯里兰卡三类护照均需 ETA 且保留 30 天双次入境', async ()
   assert.ok(sriLanka.find((rule: PolicyFixture) => rule.documentType === 'ordinary_passport')!.conditions.some((condition: string) => condition.includes('免费')));
 });
 
-test('尼泊尔中国及 HKSAR 护照需免费签证，澳门路线保持 REVIEW', async () => {
+test('尼泊尔中国及 HKSAR 护照需免费签证，澳门走官方落地签申请路线', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const nepal = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'np');
   assert.equal(nepal.length, 3);
@@ -307,9 +307,10 @@ test('尼泊尔中国及 HKSAR 护照需免费签证，澳门路线保持 REVIEW
     assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['verified', 'visa_required', 150]);
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('需签证') && condition.includes('免费')));
   }
-  assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome], ['draft', 'manual_review']);
+  assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['verified', 'visa_on_arrival', null]);
   assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('np-nepaliport-on-arrival'));
-  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('No data available')));
+  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('MAC') && condition.includes('blacklisted')));
+  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('不等于自动签发') && condition.includes('停留天数')));
 });
 
 test('孟加拉国中国普通护照落地签与港澳路线边界', async () => {
