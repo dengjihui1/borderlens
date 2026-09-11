@@ -369,6 +369,9 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
     assert.ok(rule.conditions.some((condition: string) => condition.includes('电子签')));
     assert.ok(rule.conditions.some((condition: string) => condition.includes('Visit Visa') && condition.includes('Transit Visa')));
   }
+  const jordanHksar = byId.get('jo-hk-hksar-tourism-review')!;
+  assert.ok(jordanHksar.sourceIds.includes('hk-immd-visa-free-arrival-list'));
+  assert.ok(jordanHksar.conditions.some((condition: string) => condition.includes('14 天') && condition.includes('免签或落地签')));
 });
 
 test('土耳其规则区分中国普通、香港特区与澳门特区护照免签期限', async () => {
@@ -394,6 +397,8 @@ test('埃及电子签资格表只确认中国路线，港澳名单缺席保持 R
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('名单缺席')));
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('30 美元') && condition.includes('65 美元') && condition.includes('6 个月')));
   }
+  assert.ok(byType.get('hksar_passport')!.sourceIds.includes('hk-immd-visa-free-arrival-list'));
+  assert.ok(byType.get('hksar_passport')!.conditions.some((condition: string) => condition.includes('90 天') && condition.includes('免签或落地签')));
 });
 
 test('墨西哥按中国普通、香港和澳门特区护照区分路线', async () => {
@@ -492,6 +497,8 @@ test('厄瓜多尔确认中国普通护照需签证并保留港澳特区护照 R
     assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('不能把') && condition.includes('自动套')));
   }
+  assert.ok(byType.get('hksar_passport')!.sourceIds.includes('hk-immd-visa-free-arrival-list'));
+  assert.ok(byType.get('hksar_passport')!.conditions.some((condition: string) => condition.includes('90 天') && condition.includes('免签或落地签')));
 });
 
 test('巴拉圭官方使馆页确认三类普通护照均需出发前签证', async () => {

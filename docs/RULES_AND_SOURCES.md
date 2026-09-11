@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-11（第五十六批印度港澳旅游签证复核证据）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第五十七批 HKSAR 港澳外部交叉核对证据）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -35,12 +35,12 @@
 | 阿曼 | 中国普通护照 | 26A/26B Tourist Visit Visa，10 或 30 天 | 官方资格向导在 CHINA + GCC 居民 No 分支返回 26A（OMR 5）和 26B（OMR 20）；26A 条件含境外申请、护照至少 6 个月有效、无需担保人，签证不保证入境 |
 | 阿曼 | 香港特区护照 | 26A/26B Tourist Visit Visa，10 或 30 天 | 官方资格向导在 HONG KONG + GCC 居民 No 分支返回 26A（OMR 5）和 26B（OMR 20）；不扩展到其他证件 |
 | 阿曼 | 澳门特区护照 | REVIEW | 官方资格向导在 MACAU + GCC 居民 No 分支只返回 12B、33A，未返回 26A/26B；结果缺席不足以推出免签、全面拒签或其他普通签证结论 |
-| 约旦 | 中国普通护照、香港/澳门特区护照 | REVIEW | 当前英文官方页面未将三者列入亚洲受限名单；电子签服务页列有 Visit/Transit Visa 和境外申请，但未给出三类普通护照的完整最终路线，Travel Pass 另有限制 |
+| 约旦 | 中国普通护照、香港/澳门特区护照 | REVIEW | 当前英文官方页面未将三者列入亚洲受限名单；电子签服务页列有 Visit/Transit Visa 和境外申请，但未给出三类普通护照的完整最终路线；香港入境处参考表另列 HKSAR 14 天但不区分免签/落地签，仍须目的地官方确认 |
 | 土耳其 | 中国普通护照 | 免签，任何 180 天内最多 90 天 | 土耳其外交部表格注明自 2026-01-02 起生效；仅普通护照旅游路线 |
 | 土耳其 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；BNO 与香港签证身份书另行处理 |
 | 土耳其 | 澳门特区护照 | 免签，最多 30 天 | 仅澳门特区护照，不扩展到澳门旅行证 |
 | 埃及 | 中国普通护照 | 埃及电子签路线 | 官方电子签 FAQ 资格表列出中国；本轮不猜停留期限 |
-| 埃及 | 香港/澳门特区护照 | REVIEW | 官方电子签资格表未显示港澳；FAQ 另列旅游电子签 30/65 美元及入境材料，但这些信息不能推出港澳最终签证结论 |
+| 埃及 | 香港/澳门特区护照 | REVIEW | 官方电子签资格表未显示港澳；FAQ 另列旅游电子签 30/65 美元及入境材料；香港入境处参考表另列 HKSAR 90 天但不区分免签/落地签，仍须目的地官方确认 |
 | 墨西哥 | 中国普通护照 | 需要访问签证 | 官方需签证名单包含 China；旅游应申请不允许从事有报酬活动的访问者签证 |
 | 墨西哥 | 香港特区护照 | 免签，最多 90 天 | 仅香港特区护照；适用于旅游、过境或商务 |
 | 墨西哥 | 澳门特区护照 | 免签，最多 90 天 | 仅澳门特区护照；适用于旅游、过境或商务 |
@@ -63,7 +63,7 @@
 | 乌拉圭 | 香港特区护照 | 免签，期限待官方表格进一步确认 | 仅 Pte. HKSAR；脚注 (4) 要求护照显示 HKSAR 或 OVERSEAS |
 | 乌拉圭 | 澳门特区护照 | 免签，期限待官方表格进一步确认 | 脚注 (11) 明确澳门特区普通护照免签；本条不扩展到其他证件 |
 | 厄瓜多尔 | 中国普通护照 | 需要预先签证 | 外交部入境需签证名单与 2024 年部长令均支持普通护照基础路线；不推断签证类别与停留期 |
-| 厄瓜多尔 | 香港/澳门特区护照 | REVIEW | 官方材料未提供特区护照单独旅游结果；不能从中国普通护照路线或名单缺席推断 |
+| 厄瓜多尔 | 香港/澳门特区护照 | REVIEW | 官方材料未提供特区护照单独旅游结果；香港入境处参考表另列 HKSAR 90 天但不区分免签/落地签，仍须目的地官方确认；不能从中国普通护照路线或名单缺席推断 |
 | 巴拉圭 | 中国普通护照 | 需要出发前签证 | 驻日使馆官方页规定免签名单之外的国籍必须出发前取得签证；不推断签发期限与停留期 |
 | 巴拉圭 | 香港/澳门特区护照 | 需要出发前签证 | 官方短期免签名单未列港澳，且签证申请要求明确提到 Hong Kong、Macao；仅覆盖对应特区护照 |
 | 玻利维亚 | 中国普通护照、香港/澳门特区护照 | Tourist Visa Group II，需要旅游签证 | 驻英使馆官方分组表将 China（包括 Hong Kong、Taiwan、Macao）列入 Group II，并给出材料与领事预约流程；页面未给出停留期 |
@@ -163,6 +163,7 @@
 - [Consulate General of India, Hong Kong：General Instructions](https://cgihk.gov.in/page/General_Information/)（港澳居民签证申请资格与非居民逐案审查）
 - [Consulate General of India, Hong Kong：Visa Information](https://cgihk.gov.in/page/visa-information/)（Hong Kong/Macau Tourist Visa 申请材料）
 - [Consulate General of India, Hong Kong：Indian Visa fee schedule for all nationalities](https://cgihk.gov.in/pdf/indian-visa-fee-schedule-for-all-nationalities.pdf)（Hong Kong/Macau Tourist Visa 均为 HKD 335，通常签发 3 个月单次；不把签证有效期写成停留期）
+- [Hong Kong Immigration Department：Visa-free access or visa-on-arrival for HKSAR Passport](https://www.immd.gov.hk/eng/service/travel_document/visa_free_access.html)（官方参考表：Jordan 14 天、Egypt 90 天、Ecuador 90 天；合并免签/落地签显示，需向目的地官方确认）
 - [Sri Lanka Department of Immigration and Emigration：ETA official website](https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US)
 - [Sri Lanka Department of Immigration and Emigration：Tourist ETA fees](https://www.eta.gov.lk/slvisa/visainfo/fees.jsp?locale=en_US)
 - [Nepal Department of Immigration：Visa on Arrival](https://www.immigration.gov.np/en/page/visa-on-arrival)（本轮返回 404，`blocked`）
