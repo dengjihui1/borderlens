@@ -1,6 +1,6 @@
 # 规则与来源台账
 
-核验日期：2026-09-11（第五十九批复核埃及港澳官方免签证据）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
+核验日期：2026-09-11（第六十二批复核厄瓜多尔港澳官方免签证据）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；超过 30 天未复核时必须降级，不继续输出确定结论。
 
 ## 当前受控规则
 
@@ -66,7 +66,8 @@
 | 乌拉圭 | 香港特区护照 | 免签，期限待官方表格进一步确认 | 仅 Pte. HKSAR；脚注 (4) 要求护照显示 HKSAR 或 OVERSEAS |
 | 乌拉圭 | 澳门特区护照 | 免签，期限待官方表格进一步确认 | 脚注 (11) 明确澳门特区普通护照免签；本条不扩展到其他证件 |
 | 厄瓜多尔 | 中国普通护照 | 需要预先签证 | 外交部入境需签证名单与 2024 年部长令均支持普通护照基础路线；不推断签证类别与停留期 |
-| 厄瓜多尔 | 香港/澳门特区护照 | REVIEW | 官方材料未提供特区护照单独旅游结果；香港入境处参考表另列 HKSAR 90 天但不区分免签/落地签，仍须目的地官方确认；不能从中国普通护照路线或名单缺席推断 |
+| 厄瓜多尔 | 香港特区普通护照 | 免签，最多 90 天 | 香港特区政府公告确认厄瓜多尔免签协定；香港入境处当前参考表交叉列出 90 天；不扩展到香港签证身份书或其他证件 |
+| 厄瓜多尔 | 澳门特区普通护照 | 免签，最多 90 天 | 《澳门年鉴 2025》官方签证待遇表列出 Ecuador 90 天；澳门旅行证不适用，出发前仍应按厄瓜多尔官方最新要求核对 |
 | 巴拉圭 | 中国普通护照 | 需要出发前签证 | 驻日使馆官方页规定免签名单之外的国籍必须出发前取得签证；不推断签发期限与停留期 |
 | 巴拉圭 | 香港/澳门特区护照 | 需要出发前签证 | 官方短期免签名单未列港澳，且签证申请要求明确提到 Hong Kong、Macao；仅覆盖对应特区护照 |
 | 玻利维亚 | 中国普通护照、香港/澳门特区护照 | Tourist Visa Group II，需要旅游签证 | 驻英使馆官方分组表将 China（包括 Hong Kong、Taiwan、Macao）列入 Group II，并给出材料与领事预约流程；页面未给出停留期 |
@@ -167,6 +168,7 @@
 - [Consulate General of India, Hong Kong：Visa Information](https://cgihk.gov.in/page/visa-information/)（Hong Kong/Macau Tourist Visa 申请材料）
 - [Consulate General of India, Hong Kong：Indian Visa fee schedule for all nationalities](https://cgihk.gov.in/pdf/indian-visa-fee-schedule-for-all-nationalities.pdf)（Hong Kong/Macau Tourist Visa 均为 HKD 335，通常签发 3 个月单次；不把签证有效期写成停留期）
 - [Hong Kong Immigration Department：Visa-free access or visa-on-arrival for HKSAR Passport](https://www.immd.gov.hk/eng/service/travel_document/visa_free_access.html)（官方参考表：Jordan 14 天、Egypt 90 天、Ecuador 90 天；合并免签/落地签显示，需向目的地官方确认）
+- [Hong Kong Government：Visa-free arrangement for HKSAR passport holders](https://www.info.gov.hk/gia/general/199909/03/0903152.htm)（厄瓜多尔与 HKSAR 护照免签协定，最多 90 天，自 1999-10-03 生效）
 - [Sri Lanka Department of Immigration and Emigration：ETA official website](https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US)
 - [Sri Lanka Department of Immigration and Emigration：Tourist ETA fees](https://www.eta.gov.lk/slvisa/visainfo/fees.jsp?locale=en_US)
 - [Nepal Department of Immigration：Visa on Arrival](https://www.immigration.gov.np/en/page/visa-on-arrival)（本轮返回 404，`blocked`）
@@ -201,6 +203,7 @@
 - [Uruguay Ministry of Foreign Affairs, Consulate General in Hong Kong：Visas](https://www.gub.uy/ministerio-relaciones-exteriores/en/consulate-general-of-the-oriental-republic-of-uruguay-in-hong-kong/consular-services/visas)
 - [Ecuador Ministry of Foreign Affairs：List of countries requiring a visa to enter Ecuador](https://www.cancilleria.gob.ec/2020/06/30/lista-de-paises-que-deben-presentar-visa-al-ingresar-al-ecuador/)
 - [Ecuador Ministry of Foreign Affairs：Ministerial Agreement No. 0000064](https://www.cancilleria.gob.ec/wp-content/uploads/2024/07/0000064.pdf)
+- [Macao Government Information Bureau：Macao Yearbook 2025 — Visa treatment table](https://yearbook.gcs.gov.mo/yearbook_pdf/2025/myb2025cAP09.pdf)（Ecuador 对澳门特区护照 90 天免签；澳门旅行证不适用）
 - [Embassy of the Republic of Paraguay in Japan：Visa](https://embapar.jp/en/sc/visa/)
 - [Embassy of Bolivia in London：Visa Grupos 1-2-3](https://bolivianembassy.co.uk/visa-grupos-1-2-3/)
 - [Costa Rica Dirección General de Migración y Extranjería：Visas](https://migracion.go.cr/visas/)

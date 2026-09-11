@@ -487,19 +487,31 @@ test('乌拉圭内政部官方签证制度表核验中国及港澳普通护照�
   assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('脚注 (11)')));
 });
 
-test('厄瓜多尔确认中国普通护照需签证并保留港澳特区护照 REVIEW', async () => {
+test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免签', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const ecuador = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ec');
   assert.equal(ecuador.length, 3);
   const byType = new Map(ecuador.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('República Popular China')));
-  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
-    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
-    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('不能把') && condition.includes('自动套')));
-  }
+  assert.deepEqual([byType.get('hksar_passport')!.status, byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['verified', 'visa_free', 90]);
+  assert.ok(byType.get('hksar_passport')!.sourceIds.includes('hk-gov-ecuador-visa-free-90'));
   assert.ok(byType.get('hksar_passport')!.sourceIds.includes('hk-immd-visa-free-arrival-list'));
-  assert.ok(byType.get('hksar_passport')!.conditions.some((condition: string) => condition.includes('90 天') && condition.includes('免签或落地签')));
+  assert.ok(byType.get('hksar_passport')!.conditions.some((condition: string) => condition.includes('HKSAR 护照') && condition.includes('免签') && condition.includes('90 天')));
+  assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['verified', 'visa_free', 90]);
+  assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('mo-yearbook-2025-visa-treatment'));
+  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('Ecuador') && condition.includes('90 天')));
+  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('澳门旅行证') && condition.includes('不扩展')));
+});
+
+test('厄瓜多尔升级后全库统计与来源注册表保持一致', async () => {
+  const registry = await readJson('../data/official-source-registry.json');
+  const policies = await readJson('../data/policies.seed.json');
+  assert.equal(registry.sources.length, 102);
+  assert.equal(policies.rules.length, 143);
+  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 143);
+  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').length, 0);
+  assert.equal(registry.sources.filter((source: { id: string }) => source.id === 'hk-gov-ecuador-visa-free-90').length, 1);
 });
 
 test('巴拉圭官方使馆页确认三类普通护照均需出发前签证', async () => {
