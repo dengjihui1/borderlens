@@ -1,5 +1,7 @@
 # BorderLens
 
+![Jihui](assets/brand/jihui-wordmark.png)
+
 BorderLens 是一个多身份、多证件、逐段行程的旅行入境准备 Agent。它不把“国籍 + 目的地”简化成一句免签判断，而是把出发、转机、目的地和返程拆成边境节点，再告诉用户每一段应携带、应办理和仍需核验的事项。
 
 ## 当前 MVP
