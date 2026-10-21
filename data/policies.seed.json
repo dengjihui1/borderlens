@@ -3255,8 +3255,8 @@
       "sourceIds": ["hk-gov-ecuador-visa-free-90", "hk-immd-visa-free-arrival-list"],
       "evidenceLocator": "Hong Kong Government > Visa-free arrangement for HKSAR passport holders, 3 September 1999; Hong Kong Immigration Department > HKSAR Passport reference table > Ecuador",
       "evidenceExcerpt": "The Hong Kong Government announcement states that the Ecuador agreement gives HKSAR passport holders visa-free access for up to 90 days and took effect on 3 October 1999. The current HKSAR Immigration Department reference also lists Ecuador for 90 days, while advising travellers to confirm current destination requirements.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ec-mo-macao-sar-tourism-review",
@@ -3277,8 +3277,8 @@
       "sourceIds": ["mo-yearbook-2025-visa-treatment"],
       "evidenceLocator": "Macao Yearbook 2025, Appendix 9 > America > Ecuador row",
       "evidenceExcerpt": "The official Macao Yearbook 2025 visa-treatment table lists Ecuador with a maximum stay of 90 days in the Macao SAR Passport column and marks the Macao SAR Travel Permit column as not applicable; the table advises checking the destination authority for policy changes.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "py-cn-prc-ordinary-tourism-visa-required",

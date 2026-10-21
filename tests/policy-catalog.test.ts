@@ -84,17 +84,22 @@ test('复核队列按证据问题、到期、个体条件排序且稳定', () =>
   assert.deepEqual(getReviewQueue(entries).map((entry) => entry.id), ['draft', 'expired', 'manual']);
 });
 
-test('真实库 146 条全部可查；122 条证据有效不等于 122 个自动结论', async () => {
+test('真实库 146 条全部可查；124 条证据有效不等于 124 个自动结论', async () => {
   const readJson = async (path: string) => JSON.parse(await readFile(new URL(path, import.meta.url), 'utf8'));
   const [policies, registry] = await Promise.all([readJson('../data/policies.seed.json'), readJson('../data/official-source-registry.json')]);
   const entries = buildPolicyCatalog(policies.rules, registry.sources, now);
   assert.equal(entries.length, 146);
-  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 122);
-  assert.equal(entries.filter((entry) => entry.conclusion).length, 119);
-  assert.equal(getReviewQueue(entries).length, 27);
+  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 124);
+  assert.equal(entries.filter((entry) => entry.conclusion).length, 121);
+  assert.equal(getReviewQueue(entries).length, 25);
   assert.equal(entries.filter((entry) => entry.reason === 'conditional_review').length, 3);
   assert.equal(entries.find((entry) => entry.id === 'cn-hk-home-return-permit-route')!.conclusion, null);
   assert.equal(entries.find((entry) => entry.id === 'bd-hk-hksar-tourism-review')!.evidence, null);
+  for (const id of ['ec-hk-hksar-tourism-review', 'ec-mo-macao-sar-tourism-review']) {
+    const entry = entries.find((candidate) => candidate.id === id)!;
+    assert.equal(entry.conclusion?.label, '免签路线');
+    assert.match(entry.conclusion?.stay.join(' ') ?? '', /90 天/);
+  }
   assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T00:00:00Z')).filter((entry) => entry.conclusion).length, 0);
 });
 
