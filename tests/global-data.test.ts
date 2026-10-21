@@ -189,8 +189,10 @@ test('韩国港澳护照的临时 K-ETA 豁免不扩展到普通护照或香港�
     assert.ok(rule.conditions.some((condition) => condition.includes('自愿') && condition.includes('不能写成必办')));
     assert.ok(rule.conditions.some((condition) => condition.includes('韩国时间之后') && condition.includes('重新核对')));
   }
-  assert.equal(byId.get('kr-cn-prc-ordinary-tourism')!.outcome, 'visa_required');
-  assert.equal(byId.get('kr-hk-document-of-identity-tourism')!.outcome, 'visa_required');
+  const china = byId.get('kr-cn-prc-ordinary-tourism')!;
+  assert.deepEqual([china.outcome, china.checkedAt, china.reviewDueAt], ['visa_required', '2026-10-21', '2026-11-20']);
+  const identityDocument = byId.get('kr-hk-document-of-identity-tourism')!;
+  assert.deepEqual([identityDocument.outcome, identityDocument.checkedAt, identityDocument.reviewDueAt], ['visa_required', '2026-10-21', '2026-11-20']);
 });
 
 test('阿联酋按当前外交部卡片核验，澳门官方来源冲突必须 REVIEW', async () => {

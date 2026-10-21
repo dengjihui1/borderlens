@@ -1,5 +1,11 @@
 # BorderLens 规则重新核验日志
 
+## Phase 76 · 韩国普通旅游路线与临时 K-ETA 豁免复核（2026-10-21）
+
+韩国签证门户 Visa Navigator 本轮再次返回中国普通护照普通旅游 C-3-9、香港签证身份书 C-3-9；仅续期对应来源/证据日期，不把签证申请资格或个案申请材料扩大为未证实的身份权益。港澳特区护照的 K-ETA 合资格表仍分别列 90 天；韩国法务部 2025-12-23 公告把临时 K-ETA 豁免延长至 2026-12-31（韩国时间），韩国驻瑞士使馆当前名单明确包括 Hong Kong 与 Macao。因此港澳两条继续 90 天免签，并保留 `effectiveUntil`，到期后必须重核。官方驻华使馆 FAQ 确认中国公民普通旅游一般应申请签证；不将只针对公务/外交护照的免签表、济州或过境例外应用到普通旅游基线。
+
+来源：[Korea Visa Portal](https://www.visa.go.kr/openPage.do?MENU_ID=10101)、[K-ETA 资格表](https://www.k-eta.go.kr/portal/guide/viewetaalification.do)、[韩国法务部临时豁免延期公告](https://www.k-eta.go.kr/portal/board/viewboarddetail.do?bbsSn=299707&esntlPnotiMtYn=Y&locale=EN)、[韩国驻瑞士使馆豁免名单](https://overseas.mofa.go.kr/ch-en/brd/m_23429/view.do?seq=22)、[韩国驻华使馆签证 FAQ](https://overseas.mofa.go.kr/cn-zh/wpge/m_1199/contents.do)。其余韩国路线不改。
+
 ## Phase 75 · 阿联酋/孟加拉国冲突复查与柬埔寨临时豁免到期（2026-10-21）
 
 | 证据批次 | 当前官方原文及结果 |

@@ -546,8 +546,8 @@
       ],
       "evidenceLocator": "Visa Navigator > CHINA P. R. > 관광 등 단기방문 > 90일이하 > 일반관광 C-3-9",
       "evidenceExcerpt": "일반관광 C-3-9: 휴가 또는 여가를 이용하여 대한민국을 관광할 목적으로 방문하는 자. The detailed result lists an embassy application route and passport among required documents.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "kr-hk-hksar-tourism-keta",
@@ -626,8 +626,8 @@
       ],
       "evidenceLocator": "Visa Navigator > HONG KONG D.I. > 관광 등 단기방문 > 90일이하; K-ETA eligible-country table",
       "evidenceExcerpt": "The Visa Navigator returns 일반관광 C-3-9 for HONG KONG D.I., while the K-ETA table separately lists CHINA P. R.(HONG KONG) and does not list HONG KONG D.I.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ae-cn-prc-ordinary-tourism-voa",
