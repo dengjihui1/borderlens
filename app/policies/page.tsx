@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { ArrowLeft, Database, ExternalLink, FileSearch } from 'lucide-react';
-import { filterPolicyCatalog, getCatalogPage, getReviewQueue, modeNames, parseCatalogFilters, purposeNames, reviewReasonNames } from '@/lib/policy-catalog';
+import { ArrowLeft, Database, FileSearch } from 'lucide-react';
+import { filterPolicyCatalog, getCatalogPage, getReviewQueue, modeNames, parseCatalogFilters, purposeNames } from '@/lib/policy-catalog';
 import { getPolicyCatalog, policyDestinations } from '@/lib/policy-data';
+import { PolicyCard } from '@/components/policy-card';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'BorderLens｜证件规则查询与复核队列' };
@@ -34,7 +35,7 @@ export default async function PoliciesPage({ searchParams }: { searchParams: Pro
           <Link href="/policies">全部 {entries.length} 条</Link>
           <Link href="/policies?state=current">当前可展示结论 {entries.length - queue.length} 条</Link>
           <Link href="/policies?state=review">复核队列 {queue.length} 条</Link>
-          <Link href="/">逐段路线演示</Link>
+          <Link href="/">逐段行程自查</Link>
         </nav>
       </section>
       <section className="policy-content">
@@ -54,17 +55,7 @@ export default async function PoliciesPage({ searchParams }: { searchParams: Pro
         <div className="policy-results-heading"><h2>匹配 {results.length} 条规则</h2><span>逐条核验日期，不使用全库统一日期</span></div>
         {errors.length > 0 && <p className="policy-empty" role="alert">筛选参数无效或重复：{errors.join('、')}。未返回宽泛结果，请重置筛选。</p>}
         {!errors.length && !results.length && <div className="policy-empty"><h3>这组条件尚无受控规则</h3><p>请前往目的地政府或使领馆核对；不要从“无结果”推断签证要求。特殊旅行证件不能套用普通护照规则，学习 / 工作不能套用旅游规则。</p><Link href="/coverage">查看已登记官方入口</Link></div>}
-        <div className="policy-results">{(!errors.length ? pagination.entries : []).map((entry) => (
-          <article className="policy-card" key={entry.id} id={entry.id}>
-            <div className="policy-card-title"><div><small>{entry.documentName}</small><h3>{entry.destinationName}</h3></div><span className={`source-status ${entry.status === 'current' ? 'source-verified' : 'source-blocked'}`}>{entry.status === 'current' ? '当前证据有效' : 'REVIEW'}</span></div>
-            <p className="policy-scope">{purposeNames[entry.purpose] ?? entry.purpose} · {modeNames[entry.borderMode] ?? entry.borderMode}</p>
-            {entry.conclusion ? <div className="policy-conclusion"><h4>{entry.conclusion.label}</h4>{entry.conclusion.product && <p>{entry.conclusion.product}</p>}{entry.conclusion.stay.map((line) => <p key={line}>{line}</p>)}</div> : <div className="policy-conclusion policy-review"><h4>{reviewReasonNames[entry.reason!]}</h4><p>不提供确定签证或停留结论。先按实际证件、口岸和个人条件核对下列官方入口。</p></div>}
-            <p className="policy-dates">核验 {entry.checkedAt} · 复核截止 {entry.reviewDueAt}（UTC 当日结束）{entry.effectiveUntil && <> · 临时政策截止 {entry.effectiveUntil}</>}</p>
-            {entry.evidence && <><h4>全部适用条件</h4><ul className="policy-conditions">{entry.evidence.conditions.map((condition) => <li key={condition}>{condition}</li>)}</ul><details><summary>查看官方证据定位与摘录</summary><p>{entry.evidence.locator}</p><blockquote>{entry.evidence.excerpt}</blockquote></details></>}
-            <div className="policy-sources">{entry.sources.map((source) => <a key={source.id} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.status === 'blocked' && '（访问受阻，需人工核对）'}<ExternalLink size={12} /></a>)}</div>
-            <small className="policy-rule-id">规则 ID：{entry.id}</small>
-          </article>
-        ))}</div>
+        <div className="policy-results">{(!errors.length ? pagination.entries : []).map((entry) => <PolicyCard key={entry.id} entry={entry} />)}</div>
         {!errors.length && results.length > 0 && <nav className="policy-pagination" aria-label="规则查询分页">
           {pagination.page > 1 && <Link href={pageUrl(pagination.page - 1)}>← 上一页</Link>}
           <span>第 {pagination.page} / {pagination.totalPages} 页 · 每页最多 12 条</span>

@@ -9,7 +9,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
-    "lint": "oxlint app lib",
+    "lint": "oxlint app lib components/journey-workbench.tsx components/policy-card.tsx",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "data:countries": "node scripts/build-country-catalog.mjs",
     "data:validate": "node --experimental-strip-types scripts/validate-global-data.mjs",

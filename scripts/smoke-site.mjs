@@ -6,8 +6,9 @@ if (!['localhost', '127.0.0.1', '[::1]'].includes(origin.hostname) || origin.pro
 const policies = JSON.parse(await readFile(new URL('../data/policies.seed.json', import.meta.url), 'utf8'));
 const bhId = policies.rules.find((rule) => rule.destinationJurisdictionId === 'bh').id;
 const checks = [
-  { path: '/', text: ['逐段演示规则已过期，历史结论已隐藏', '查询全部已录入证件规则'] },
-  { path: '/coverage', text: ['Phase 72', '各组规则的当前状态'] },
+  { path: '/', text: ['把证件和行程，逐段对上。', '生成逐段自查清单', '添加返程目的地', '仅当前页面，不保存'] },
+  { path: '/demo', text: ['逐段演示规则已过期，历史结论已隐藏', '查询全部已录入证件规则'] },
+  { path: '/coverage', text: ['Phase 73', '各组规则的当前状态'] },
   { path: '/policies', text: ['已有规则，真正查得到。', '下一页'], cards: 12 },
   { path: '/policies?page=12', text: ['上一页'], cards: 11 },
   { path: '/policies?destination=jp&document=hk%3Ahksar_passport', text: ['当前证据有效', 'id="jp-hk-hksar-tourism-short-stay"'], cards: 1 },
@@ -39,7 +40,7 @@ for (const check of checks) {
   for (const text of check.text) assert.ok(html.includes(text), `${check.path}: missing ${text}`);
   for (const text of check.noText ?? []) assert.ok(!html.includes(text), `${check.path}: unexpected ${text}`);
   if (check.cards !== undefined) assert.equal(html.split('class="policy-card"').length - 1, check.cards, `${check.path}: card count`);
-  if (check.path.startsWith('/policies') || check.path === '/coverage') assert.match(response.headers.get('cache-control') ?? '', /no-store/);
+  if (check.path.startsWith('/policies') || check.path === '/coverage' || check.path === '/') assert.match(response.headers.get('cache-control') ?? '', /no-store/);
   console.log(`PASS ${check.path}`);
 }
 console.log(`${checks.length} production Worker smoke checks passed`);
