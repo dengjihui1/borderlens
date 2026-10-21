@@ -126,7 +126,8 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "eta_required",
-      "maxStayDays": 90,
+      "maxStayDays": null,
+      "maxStayMonths": 3,
       "visaProductName": "New Zealand Electronic Travel Authority (NZeTA)",
       "conditions": [
         "仅适用于香港居民使用香港特区护照。",
@@ -150,7 +151,8 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "eta_required",
-      "maxStayDays": 90,
+      "maxStayDays": null,
+      "maxStayMonths": 3,
       "visaProductName": "New Zealand Electronic Travel Authority (NZeTA)",
       "conditions": [
         "仅适用于澳门居民使用澳门特区护照。",

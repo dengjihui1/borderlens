@@ -1,5 +1,11 @@
 # BorderLens 规则重新核验日志
 
+## Phase 69 · 查询接入时的期限口径审计（2026-10-21）
+
+直接重新读取新西兰移民局 [Visa Waiver Visitor Visa](https://www.immigration.govt.nz/visas/visa-waiver-visitor-visa/) 当前正文，HTTP 200。`How long you can stay` 明确写明 `You can stay for up to 3 months`；`Applicants from Hong Kong` 与 `Applicants from Macau` 分别保留居民及特区护照条件，`Authority to travel` 要求 NZeTA 及同一本护照旅行。
+
+因此将港澳两条规则的固定 `maxStayDays: 90` 改为 `maxStayDays: null, maxStayMonths: 3`，避免把日历月错误折算成固定天数。核验日期与复核截止维持当天已核验的 2026-10-21 / 2026-11-20；没有扩大适用证件或中国普通护照的澳大利亚出发例外。当前证据总数仍为 77，明确可展示结论为 76，另 1 条个体条件仍需 REVIEW。
+
 ## Phase 63 · 2026-10-21
 
 本批采用“先访问当前官方来源，再更新 `checkedAt` / `reviewDueAt`”的方式。每条规则仍保留证件类型、目的、边界和官方证据定位；没有当前证据的规则不续期。

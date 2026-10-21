@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import { isPolicyRuleCurrent } from '../lib/policy-freshness.ts';
 
 const countries = JSON.parse(await readFile(new URL('../data/countries.un-m49.json', import.meta.url), 'utf8'));
 const registry = JSON.parse(await readFile(new URL('../data/official-source-registry.json', import.meta.url), 'utf8'));
@@ -23,10 +24,7 @@ const verifiedSourceIds = new Set(registry.sources.filter((item) => item.status 
 const policyZoneIds = new Set(policyZones.zones.map((item) => item.id));
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
 const now = new Date();
-const isCurrent = (rule) => rule.status === 'verified'
-  && Number.isFinite(Date.parse(`${rule.reviewDueAt}T23:59:59Z`))
-  && now.getTime() <= Date.parse(`${rule.reviewDueAt}T23:59:59.999Z`)
-  && (rule.effectiveUntil === undefined || now.getTime() <= Date.parse(rule.effectiveUntil));
+const isCurrent = (rule) => isPolicyRuleCurrent(rule, now);
 
 for (const zone of policyZones.zones) {
   if (new Set(zone.members).size !== zone.members.length) errors.push(`${zone.id}: duplicate policy-zone member`);

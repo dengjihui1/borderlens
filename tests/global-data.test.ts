@@ -1,22 +1,11 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
+import type { CatalogRule } from '../lib/policy-catalog.ts';
 
 const readJson = async (relativePath: string) => JSON.parse(await readFile(new URL(relativePath, import.meta.url), 'utf8'));
 
-interface PolicyFixture {
-  id: string;
-  outcome: string;
-  status: string;
-  maxStayDays: number | null;
-  maxStayMonths?: number;
-  maxStayDaysPerVisaYear?: number;
-  effectiveUntil?: string;
-  conditions: string[];
-  documentType: string;
-  destinationJurisdictionId?: string;
-  destinationPolicyZoneId?: string;
-}
+type PolicyFixture = CatalogRule;
 
 test('联合国 M49 目录包含全球法域且代码唯一', async () => {
   const catalog = await readJson('../data/countries.un-m49.json');
@@ -66,13 +55,15 @@ test('新西兰规则区分港澳护照与中国护照的澳大利亚例外', as
   const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
   assert.deepEqual(
     [byId.get('nz-hk-hksar-tourism-visa-waiver')!.outcome, byId.get('nz-hk-hksar-tourism-visa-waiver')!.maxStayDays],
-    ['eta_required', 90],
+    ['eta_required', null],
   );
   assert.deepEqual(
     [byId.get('nz-mo-macao-sar-tourism-visa-waiver')!.outcome, byId.get('nz-mo-macao-sar-tourism-visa-waiver')!.maxStayDays],
-    ['eta_required', 90],
+    ['eta_required', null],
   );
   assert.equal(byId.get('nz-cn-prc-ordinary-tourism-exception-review')!.outcome, 'manual_review');
+  assert.equal(byId.get('nz-hk-hksar-tourism-visa-waiver')!.maxStayMonths, 3);
+  assert.equal(byId.get('nz-mo-macao-sar-tourism-visa-waiver')!.maxStayMonths, 3);
 });
 
 test('申根短期规则保留 90/180 与护照类型边界', async () => {
@@ -210,7 +201,7 @@ test('越南官方电子签接口与菲律宾 eVisa 政策确认中国普通护�
   const policies = await readJson('../data/policies.seed.json');
   const vietnam = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'vn');
   assert.equal(vietnam.length, 3);
-  const byType = new Map(vietnam.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(vietnam.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_required', 90]);
   assert.equal(byType.get('ordinary_passport')!.visaProductName, 'Vietnam e-Visa');
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('CHN') && condition.includes('EVISA')));
@@ -225,7 +216,7 @@ test('越南官方电子签接口与菲律宾 eVisa 政策确认中国普通护�
 
   const philippines = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ph');
   assert.equal(philippines.length, 3);
-  const philippinesByType = new Map(philippines.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const philippinesByType = new Map<string, PolicyFixture>(philippines.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([philippinesByType.get('ordinary_passport')!.status, philippinesByType.get('ordinary_passport')!.outcome, philippinesByType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_free', 14]);
   assert.ok(philippinesByType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('2026 年 1 月 16 日') && condition.includes('非延期')));
   assert.ok(philippinesByType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('马尼拉') && condition.includes('宿务')));
@@ -303,7 +294,7 @@ test('印度官方来源确认中国普通与港澳特区护照旅游签证路�
   const policies = await readJson('../data/policies.seed.json');
   const india = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'in');
   assert.equal(india.length, 3);
-  const byType = new Map(india.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(india.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_required', null]);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('中国身份证')));
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('Tourist Visa')));
@@ -334,7 +325,7 @@ test('尼泊尔中国及 HKSAR 护照需免费签证，澳门走官方落地签�
   const policies = await readJson('../data/policies.seed.json');
   const nepal = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'np');
   assert.equal(nepal.length, 3);
-  const byType = new Map(nepal.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(nepal.map((rule: PolicyFixture) => [rule.documentType, rule]));
   for (const documentType of ['ordinary_passport', 'hksar_passport']) {
     assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['verified', 'visa_required', null]);
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('需签证') && condition.includes('免费')));
@@ -355,7 +346,7 @@ test('孟加拉国中国普通护照落地签有直接证据，港澳费用行�
   const policies = await readJson('../data/policies.seed.json');
   const bangladesh = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'bd');
   assert.equal(bangladesh.length, 3);
-  const byType = new Map(bangladesh.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(bangladesh.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_on_arrival', 30]);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('中国') && condition.includes('30 天')));
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('500 美元') && condition.includes('返程票')));
@@ -415,7 +406,7 @@ test('土耳其规则区分中国普通、香港特区与澳门特区护照免�
   const policies = await readJson('../data/policies.seed.json');
   const turkey = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'tr');
   assert.equal(turkey.length, 3);
-  const byType = new Map(turkey.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(turkey.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['visa_free', 90]);
   assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', 90]);
   assert.deepEqual([byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['visa_free', 30]);
@@ -426,7 +417,7 @@ test('埃及按中国普通、香港和澳门特区护照区分旅游路线', as
   const policies = await readJson('../data/policies.seed.json');
   const egypt = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'eg');
   assert.equal(egypt.length, 3);
-  const byType = new Map(egypt.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(egypt.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.equal(byType.get('ordinary_passport')!.maxStayDays, null);
   assert.deepEqual([byType.get('hksar_passport')!.status, byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['verified', 'visa_free', 90]);
@@ -442,7 +433,7 @@ test('墨西哥按中国普通、香港和澳门特区护照区分路线', async
   const policies = await readJson('../data/policies.seed.json');
   const mexico = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'mx');
   assert.equal(mexico.length, 3);
-  const byType = new Map(mexico.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(mexico.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['visa_required', null]);
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
     assert.deepEqual([byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['visa_free', 90]);
@@ -454,7 +445,7 @@ test('巴西按中国普通、香港和澳门特区护照区分路线', async ()
   const policies = await readJson('../data/policies.seed.json');
   const brazil = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'br');
   assert.equal(brazil.length, 3);
-  const byType = new Map(brazil.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(brazil.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['visa_required', null]);
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
     assert.deepEqual([byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['visa_free', 90]);
@@ -466,7 +457,7 @@ test('秘鲁区分中国第三国签证例外、香港免签与澳门需旅游�
   const policies = await readJson('../data/policies.seed.json');
   const peru = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'pe');
   assert.equal(peru.length, 3);
-  const byType = new Map(peru.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(peru.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('6 个月') && condition.includes('申根')));
   assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', null]);
@@ -479,7 +470,7 @@ test('哥伦比亚区分中国条件免签、香港短期免签与澳门需签�
   const policies = await readJson('../data/policies.seed.json');
   const colombia = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'co');
   assert.equal(colombia.length, 3);
-  const byType = new Map(colombia.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(colombia.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('美国或申根')));
   assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', 90]);
@@ -492,7 +483,7 @@ test('智利区分中国条件免签与港澳特区护照停留期', async () =>
   const policies = await readJson('../data/policies.seed.json');
   const chile = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'cl');
   assert.equal(chile.length, 3);
-  const byType = new Map(chile.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(chile.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('加拿大或美国') && condition.includes('6 个月')));
   assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', 90]);
@@ -503,7 +494,7 @@ test('阿根廷区分中国普通护照签证与港澳普通游客路线', async
   const policies = await readJson('../data/policies.seed.json');
   const argentina = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ar');
   assert.equal(argentina.length, 3);
-  const byType = new Map(argentina.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(argentina.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('Visa EEUU') && condition.includes('Green CARD')));
   assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', null]);
@@ -514,7 +505,7 @@ test('乌拉圭内政部官方签证制度表核验中国及港澳普通护照�
   const policies = await readJson('../data/policies.seed.json');
   const uruguay = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'uy');
   assert.equal(uruguay.length, 3);
-  const byType = new Map(uruguay.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(uruguay.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_required', null]);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('Carrasco') && condition.includes('Montevideo')));
   assert.deepEqual([byType.get('hksar_passport')!.status, byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['verified', 'visa_free', null]);
@@ -527,7 +518,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
   const policies = await readJson('../data/policies.seed.json');
   const ecuador = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ec');
   assert.equal(ecuador.length, 3);
-  const byType = new Map(ecuador.map((rule: PolicyFixture) => [rule.documentType, rule]));
+  const byType = new Map<string, PolicyFixture>(ecuador.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('República Popular China')));
   assert.deepEqual([byType.get('hksar_passport')!.status, byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['verified', 'visa_free', 90]);

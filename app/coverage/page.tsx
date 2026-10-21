@@ -13,8 +13,8 @@ export default function CoveragePage() {
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 68</div>
-        <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 69</div>
+        <Link className="plain-link" href="/policies"><ArrowLeft size={14} /> 查询证件规则</Link>
       </header>
 
       <section className="coverage-hero">
@@ -42,8 +42,8 @@ export default function CoveragePage() {
         </section>
 
         <section className="batch-card">
-          <div><p className="step-kicker">LATEST POLICY BATCH</p><h2>本批已经能回答什么</h2></div>
-          <div className="batch-grid">{latestPolicyBatch.map((item) => <article key={item.id}><strong>{item.label}</strong><span>{item.verifiedRuleCount} 已核验 · {item.reviewRuleCount} 待复核</span><p>{item.note}</p></article>)}</div>
+          <div><p className="step-kicker">RECORDED POLICY GROUPS</p><h2>各组规则的当前状态</h2><p><Link href="/policies?state=review">查看逐条复核队列（含证据有效但个人条件未决的路线） →</Link></p></div>
+          <div className="batch-grid">{latestPolicyBatch.map((item) => <article key={item.id}><strong>{item.label}</strong><span>{item.verifiedRuleCount} 已核验 · {item.reviewRuleCount} 待复核</span><p>{item.note}</p><Link href={`/policies?destination=${item.id}`}>查看具体证件规则 →</Link></article>)}</div>
         </section>
 
         <section className="registry-card">
@@ -71,7 +71,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · Phase 68</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 69</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }

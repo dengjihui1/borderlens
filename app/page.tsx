@@ -17,6 +17,7 @@ import {
 import {
   DATA_CHECKED_AT,
   evaluateJourney,
+  isJourneyInput,
   placeName,
   type JourneyInput,
   type JourneyResult,
@@ -84,11 +85,13 @@ function StatusPill({ status }: { status: Status }) {
 export default function Home() {
   const [input, setInput] = useState<JourneyInput>(initialInput);
   const [result, setResult] = useState<JourneyResult>(() => evaluateJourney(initialInput));
-  const routeText = useMemo(() => [input.origin, input.transit, input.destination].filter(Boolean).map((p) => placeName(p as Place)).join(' → '), [input]);
+  const [submittedInput, setSubmittedInput] = useState<JourneyInput>(initialInput);
+  const routeText = useMemo(() => [submittedInput.origin, submittedInput.transit, submittedInput.destination].filter(Boolean).map((p) => placeName(p as Place)).join(' → '), [submittedInput]);
+  const dirty = JSON.stringify(input) !== JSON.stringify(submittedInput);
 
   const update = <K extends keyof JourneyInput>(key: K, value: JourneyInput[K]) => setInput((current) => ({ ...current, [key]: value }));
   const toggleExtra = (value: string) => update('extras', input.extras.includes(value) ? input.extras.filter((item) => item !== value) : [...input.extras, value]);
-  const applyPreset = (value: JourneyInput) => { setInput(value); setResult(evaluateJourney(value)); };
+  const applyPreset = (value: JourneyInput) => { setInput(value); setSubmittedInput(value); setResult(evaluateJourney(value)); };
 
   useEffect(() => {
     const modelContext = (document as Document & {
@@ -122,12 +125,13 @@ export default function Home() {
       annotations: { readOnlyHint: false, untrustedContentHint: false },
       execute(raw: unknown) {
         const candidate = raw as JourneyInput;
-        if (!candidate || !documentValues.includes(candidate.document) || !placeValues.includes(candidate.origin) || !placeValues.includes(candidate.destination) || !Array.isArray(candidate.extras)) {
+        const next = candidate && { ...candidate, transit: candidate.transit ?? '' };
+        if (!isJourneyInput(next)) {
           throw new Error('旅行路线参数无效。');
         }
-        const next: JourneyInput = { ...candidate, transit: candidate.transit || '' };
         const nextResult = evaluateJourney(next);
         setInput(next);
+        setSubmittedInput(next);
         setResult(nextResult);
         return { status: nextResult.status, headline: nextResult.headline, steps: nextResult.steps.map((step) => ({ route: step.title, status: step.status })) };
       },
@@ -139,8 +143,8 @@ export default function Home() {
     <main>
       <header className="topbar">
         <a className="brand" href="#top" aria-label="BorderLens 首页"><span className="brand-mark"><Route size={19} /></span><span>BorderLens</span></a>
-        <div className="source-note"><ShieldCheck size={15} /> 规则来自官方来源 · 核验于 {DATA_CHECKED_AT}</div>
-        <Link className="plain-link" href="/coverage">全球数据 <ArrowRight size={14} /></Link>
+        <div className="source-note"><ShieldCheck size={15} /> 逐段演示规则核验于 {DATA_CHECKED_AT} · 完整规则逐条核验</div>
+        <Link className="plain-link" href="/policies">证件规则查询 <ArrowRight size={14} /></Link>
       </header>
 
       <section className="intro" id="top">
@@ -157,8 +161,10 @@ export default function Home() {
         {presets.map((preset) => <button key={preset.name} type="button" onClick={() => applyPreset(preset.value)}><strong>{preset.name}</strong><small>{preset.hint}</small></button>)}
       </section>
 
+      <section className="catalog-entry"><div><strong>查询全部已录入证件规则</strong><p>完整规则库现已独立开放查询，支持目的地、实际证件、目的与交通方式筛选，并逐条展示证据和有效期。下方保留最早的逐段行程演示，不代表完整规则覆盖。</p></div><Link href="/policies">进入规则查询 →</Link></section>
+
       <section className="workspace">
-        <form className="input-panel" onSubmit={(event) => { event.preventDefault(); setResult(evaluateJourney(input)); }}>
+        <form className="input-panel" onSubmit={(event) => { event.preventDefault(); setSubmittedInput(input); setResult(evaluateJourney(input)); }}>
           <div className="panel-heading"><div><p className="step-kicker">01 / BUILD YOUR ROUTE</p><h2>告诉我你实际怎么走</h2></div><MapPin size={22} /></div>
           <div className="form-grid">
             <Field label="主要旅行证件"><select value={input.document} onChange={(e) => update('document', e.target.value as JourneyInput['document'])}><option value="hksar-passport">香港特区护照</option><option value="macao-passport">澳门特区护照</option><option value="prc-passport">中国普通护照</option><option value="other-passport">其他护照/旅行证件</option></select></Field>
@@ -181,9 +187,10 @@ export default function Home() {
         </form>
 
         <section className="result-panel" aria-live="polite">
+          {dirty && <output className="stale-warning">表单已修改；下方仍是上次生成的结果，请重新生成路线图。</output>}
           <div className="result-top"><div><p className="step-kicker">02 / DOCUMENT ROUTE</p><h2>{routeText}</h2></div><StatusPill status={result.status} /></div>
           <div className={`result-summary summary-${result.status}`}><span>{result.status === 'ready' ? <Check /> : result.status === 'action' ? <AlertTriangle /> : <CircleHelp />}</span><div><strong>{result.headline}</strong><p>{result.summary}</p></div></div>
-          {result.stale && <div className="stale-warning"><AlertTriangle size={16} />规则核验已超过 30 天，请重新查看全部官方来源。</div>}
+          {result.stale && <div className="stale-warning"><AlertTriangle size={16} /><span>逐段演示规则已过期，历史结论已隐藏。<Link href="/policies">前往完整规则查询</Link>查看逐条有效的官方证据。</span></div>}
           <div className="timeline">
             {result.steps.map((step, index) => <article className="route-step" key={`${step.from}-${step.to}-${index}`}>
               <div className="timeline-mark"><span>{index + 1}</span></div>

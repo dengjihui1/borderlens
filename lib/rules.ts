@@ -96,7 +96,22 @@ export function placeName(place: Place) {
 
 export function isRuleDataStale(checkedAt: string, now = new Date()): boolean {
   const checked = new Date(`${checkedAt}T00:00:00Z`);
-  return now.getTime() - checked.getTime() > 30 * 24 * 60 * 60 * 1000;
+  return !Number.isFinite(checked.getTime()) || !Number.isFinite(now.getTime())
+    || checked.getTime() > now.getTime()
+    || now.getTime() - checked.getTime() > 30 * 24 * 60 * 60 * 1000;
+}
+
+export function isJourneyInput(value: unknown): value is JourneyInput {
+  if (!value || typeof value !== 'object') return false;
+  const input = value as Record<string, unknown>;
+  const places = Object.keys(placeNames);
+  return ['hksar-passport', 'macao-passport', 'prc-passport', 'other-passport'].includes(input.document as string)
+    && places.includes(input.origin as string) && places.includes(input.destination as string)
+    && (input.transit === '' || places.includes(input.transit as string))
+    && ['tourism', 'business', 'study-work', 'other'].includes(input.purpose as string)
+    && ['yes', 'no', 'unknown'].includes(input.transitEntry as string)
+    && Array.isArray(input.extras) && input.extras.every((item) => ['hk-id', 'macao-id', 'home-return-permit', 'uk-residence'].includes(item))
+    && typeof input.documentsValid === 'boolean' && typeof input.includeReturn === 'boolean';
 }
 
 function baseStep(from: Place, to: Place): RouteStep {
@@ -205,6 +220,10 @@ function evaluateLeg(input: JourneyInput, from: Place, to: Place): RouteStep {
 }
 
 export function evaluateJourney(input: JourneyInput, now = new Date()): JourneyResult {
+  if (!isJourneyInput(input)) return {
+    status: 'review', headline: '路线参数不完整', summary: '请使用表单中的证件、地点与旅行目的重新生成，不依据无效输入提供结论。',
+    steps: [], stale: true, checkedAt: DATA_CHECKED_AT,
+  };
   const points: Place[] = [input.origin];
   if (input.transit) points.push(input.transit);
   points.push(input.destination);
@@ -222,6 +241,15 @@ export function evaluateJourney(input: JourneyInput, now = new Date()): JourneyR
     transitStep.verify.unshift('确认是否需要提取行李、换机场或通过边检。');
   }
 
+  if (input.transit && input.transitEntry === 'no') {
+    const transitStep = steps[0];
+    transitStep.status = 'review';
+    transitStep.summary = '空侧转机不能直接套用入境规则；本演示尚未覆盖该转机条件。';
+    transitStep.bring = ['实际旅行证件', '全程机票及续程安排'];
+    transitStep.actions = [];
+    transitStep.verify = ['向机场及承运人确认是否全程空侧、是否需提取行李，以及是否需要过境签证。'];
+  }
+
   if (!input.documentsValid) {
     for (const step of steps) {
       step.status = 'action';
@@ -234,10 +262,11 @@ export function evaluateJourney(input: JourneyInput, now = new Date()): JourneyR
   const stale = isRuleDataStale(DATA_CHECKED_AT, now);
   if (stale) {
     for (const step of steps) {
-      if (step.status === 'ready') step.status = 'review';
-      if (!step.verify.some((item) => item.includes('核验日期'))) {
-        step.verify.unshift('该节点的核验日期已超过 30 天，重新查看对应官方来源并向承运人确认。');
-      }
+      step.status = input.documentsValid ? 'review' : 'action';
+      step.summary = '该节点的逐段演示规则已过复核期限，历史签证、免签与停留结论已隐藏。';
+      step.bring = ['本次实际使用的有效旅行证件'];
+      step.actions = input.documentsValid ? [] : ['确认所有旅行证件在整个行程期间有效，并满足剩余有效期要求。'];
+      step.verify = ['进入完整规则查询页，按实际证件查看逐条核验日期与全部条件。', '该节点的核验日期已超过 30 天，重新查看对应官方来源并向承运人确认。'];
     }
   }
 

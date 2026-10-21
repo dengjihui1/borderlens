@@ -58,3 +58,10 @@ test('空批次不会因为没有过期项而展示确定结论', () => {
   assert.match(summary.note, /暂不提供当前签证结论/);
   assert.ok(!summary.note.includes(historicalConclusion));
 });
+
+test('未来核验日期、无效日历日期和缺少时区的临时截止均不能成为当前结论', () => {
+  assert.equal(isPolicyRuleCurrent({ ...current, checkedAt: '2026-10-22' }, now), false);
+  assert.equal(isPolicyRuleCurrent({ ...current, checkedAt: '2026-02-30' }, now), false);
+  assert.equal(isPolicyRuleCurrent({ ...current, reviewDueAt: '2026-11-31' }, now), false);
+  assert.equal(isPolicyRuleCurrent({ ...current, effectiveUntil: '2026-12-31T23:59:59' }, now), false);
+});

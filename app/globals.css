@@ -156,3 +156,36 @@ footer { min-height:70px; display:flex; justify-content:space-between; align-ite
 @media (max-width:1000px) { .source-note{display:none}.topbar{grid-template-columns:1fr 1fr}.intro{grid-template-columns:1fr}.intro-visual{min-height:300px}.workspace{grid-template-columns:1fr;width:min(760px,calc(100% - 36px))}.input-panel{position:static}.method{grid-template-columns:1fr;gap:30px} }
 @media (max-width:1000px) { .coverage-hero{grid-template-columns:1fr;gap:30px;align-items:center}.metric-grid{grid-template-columns:1fr 1fr}.batch-grid{grid-template-columns:1fr 1fr}.pipeline-card ol{grid-template-columns:1fr 1fr}.registry-card{overflow-x:auto}.registry-table{min-width:900px} }
 @media (max-width:640px) { .topbar{padding:0 18px}.intro-copy{padding:48px 22px 55px}.intro h1{font-size:38px}.preset-row{padding:0 18px;overflow-x:auto}.preset-row button{min-width:165px}.form-grid,.check-grid{grid-template-columns:1fr}.result-panel,.input-panel{padding:20px 16px}.detail-columns{grid-template-columns:1fr}.method{padding:50px 24px}.method h2{font-size:31px}footer{padding:20px 24px;align-items:flex-start;flex-direction:column}.disclaimer{margin-left:0}.coverage-hero{padding:50px 22px 70px}.coverage-content{width:calc(100% - 32px);margin-top:-35px}.metric-grid{grid-template-columns:1fr}.batch-card{padding:24px 20px}.batch-grid{grid-template-columns:1fr}.registry-heading{align-items:flex-start;flex-direction:column}.pipeline-card{padding:24px 20px}.pipeline-card ol{grid-template-columns:1fr}.pipeline-card li{border-bottom:1px solid var(--line);padding-bottom:18px} }
+
+.catalog-entry { max-width:1376px; margin:0 auto 26px; padding:20px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; border:1px solid #b6cef4; border-radius:14px; background:#eaf2ff; }
+.catalog-entry strong { font-size:18px; }.catalog-entry p { margin:7px 0 0; color:var(--muted); font-size:13px; line-height:1.6; }
+.catalog-entry a { color:var(--blue); font-weight:750; white-space:nowrap; }
+.policy-heading { padding:52px max(24px,calc((100% - 1180px)/2)) 30px; background:var(--navy); color:white; }
+.policy-heading h1 { margin:0 0 18px; font-size:clamp(32px,4vw,52px); letter-spacing:-.04em; }
+.policy-heading>p:not(.eyebrow) { color:#c2d1e2; line-height:1.8; max-width:780px; }
+.policy-tabs { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+.policy-tabs a { color:#dbeaff; border:1px solid #49688c; border-radius:8px; padding:9px 12px; font-size:13px; text-decoration:none; }
+.policy-tabs a:hover { background:#244e7e; }
+.policy-content { width:min(1180px,calc(100% - 40px)); margin:26px auto 52px; }
+.policy-boundary { border:1px solid #edc691; background:#fff8ed; padding:20px 24px; border-radius:12px; color:#77400b; }
+.policy-boundary p { font-size:13px; line-height:1.75; margin:8px 0 0; }
+.policy-filters { margin-top:24px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; padding:24px; background:white; border:1px solid var(--line); border-radius:14px; }
+.policy-filters select { font-size:13px; min-height:44px; }.policy-filters .field>span { font-size:12px; }
+.policy-filter-actions { display:flex; align-items:end; gap:16px; }.policy-filter-actions .primary-button { width:auto; min-height:44px; box-shadow:none; }
+.policy-filter-actions>a { white-space:nowrap; color:var(--blue); font-size:13px; padding:12px 0; }
+.policy-results-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:28px 0 16px; }.policy-results-heading h2 { font-size:22px; margin:0; }.policy-results-heading span { font-size:12px; color:var(--muted); }
+.policy-results { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; align-items:start; }
+.policy-card { background:white; border:1px solid var(--line); border-radius:14px; padding:24px; overflow-wrap:anywhere; }
+.policy-card-title { display:flex; align-items:start; justify-content:space-between; gap:16px; }.policy-card-title small { color:var(--muted); font-size:12px; line-height:1.7; }.policy-card-title h3 { margin:6px 0 0; font-size:24px; }.policy-card-title .source-status { flex:0 0 auto; }
+.policy-scope { font-size:12px; color:var(--muted); line-height:1.7; margin:14px 0; }
+.policy-conclusion { background:#eef8f4; padding:16px; border-radius:10px; border:1px solid #cce7db; }.policy-conclusion h4 { margin:0 0 8px; font-size:16px; color:#08614e; }.policy-conclusion p { font-size:13px; line-height:1.7; margin:5px 0 0; }
+.policy-review { background:#fff8ed; border-color:#f0dab9; }.policy-review h4 { color:#77400b; }
+.policy-dates { font-size:11px; color:var(--muted); line-height:1.8; margin:16px 0; }.policy-card>h4 { font-size:13px; margin:16px 0 8px; }
+.policy-conditions { padding-left:19px; margin:0; font-size:13px; line-height:1.8; }.policy-conditions li { margin-bottom:7px; }
+.policy-card details { margin:18px 0; font-size:12px; line-height:1.8; }.policy-card summary { cursor:pointer; color:var(--blue); font-weight:700; }.policy-card blockquote { margin:12px 0 0; padding:12px; background:#f4f7fb; border-left:3px solid #b6cef4; }
+.policy-sources { display:grid; gap:10px; margin:18px 0; padding-top:16px; border-top:1px solid var(--line); }.policy-sources a { display:flex; align-items:start; gap:7px; color:var(--blue); font-size:12px; line-height:1.6; }.policy-sources svg { margin-top:3px; flex:0 0 auto; }
+.policy-rule-id { display:block; font-size:10px; color:#718095; }.policy-empty { padding:26px; border:1px solid var(--line); border-radius:12px; background:white; line-height:1.8; }.policy-empty a { color:var(--blue); }
+.policy-pagination { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:20px; padding:28px 0 0; font-size:13px; }.policy-pagination a { color:var(--blue); padding:10px 14px; background:white; border:1px solid var(--line); border-radius:8px; }
+a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid #83b1ff; outline-offset:4px; }
+@media(max-width:900px) { .policy-filters { grid-template-columns:repeat(2,minmax(0,1fr)); }.catalog-entry { margin-left:18px; margin-right:18px; } }
+@media(max-width:640px) { .policy-filters,.policy-results { grid-template-columns:1fr; }.policy-card { padding:20px; }.policy-results-heading,.catalog-entry { align-items:start; flex-direction:column; }.policy-boundary { padding:18px; }.policy-heading { padding-top:36px; }.policy-filter-actions { flex-wrap:wrap; } }

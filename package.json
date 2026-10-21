@@ -12,7 +12,11 @@
     "lint": "oxlint app lib",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "data:countries": "node scripts/build-country-catalog.mjs",
-    "data:validate": "node scripts/validate-global-data.mjs",
+    "data:validate": "node --experimental-strip-types scripts/validate-global-data.mjs",
+    "data:review": "node --experimental-strip-types scripts/review-queue.mjs",
+    "typecheck": "tsc --noEmit --incremental false",
+    "smoke": "node scripts/smoke-site.mjs",
+    "check": "npm test && npm run lint && npm run typecheck && npm run data:validate && npm run build",
     "db:generate": "drizzle-kit generate",
     "format": "oxfmt"
   },
