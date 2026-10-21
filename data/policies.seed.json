@@ -3007,16 +3007,17 @@
       "maxStayDays": null,
       "visaProductName": "Argentina tourist visa",
       "conditions": [
-        "阿根廷国家移民局官方 Regimen de Visas 表格将 REPUBLICA POPULAR CHINA 在 Pasaporte Ordinario (Turista) 栏标为 REQUIERE VISA。",
-        "同一官方表格在 Visa EEUU 与 Green CARD (EEUU) 栏对中国标为 HABILITADO；这只说明存在对应的美国签证或 Green Card 资格分支，具体条件、停留期和是否需要预先授权仍须按官方路线确认。",
-        "本条只覆盖中国普通护照旅游基础路线，不把外交/服务护照或美国证件分支误套为普遍免签。"
+        "阿根廷国家移民局当前 Regimen de Visas 矩阵将中国普通护照在 Pasaporte Ordinario (Turista) 栏标为 REQUIERE VISA；不符合下列明文例外者须向阿根廷领事机构申请签证。",
+        "阿根廷 Resolución 316/2025 规定：中国普通护照持有人如持有与赴阿移民类别相同、有效且在有效期内的美国签证，可免阿根廷领事签证及 AVE；旅游和商务类别最多停留 30 天，不得转换移民类别，DNM 可审批一次相同期限的延期。",
+        "当前 DNM AVE 页面称中国公民持美国签证或 Green Card 可免办 AVE；但 Resolución 316/2025 的明文例外写的是同类别美国签证。本条不把 Green Card 单独扩展为普遍免领事签证待遇，需按 DNM 对具体证件的现行规则核验。",
+        "本条只覆盖中国普通护照旅游基础路线，不把例外条件误套为普遍免签，也不扩展到外交/服务护照。"
       ],
       "status": "verified",
-      "sourceIds": ["ar-dnm-regimen-visas"],
-      "evidenceLocator": "Argentina National Migration Directorate > Regimen de Visas > REPUBLICA POPULAR CHINA",
-      "evidenceExcerpt": "The official table marks REPUBLICA POPULAR CHINA as REQUIERE VISA under Pasaporte Ordinario (Turista), while the Visa EEUU and Green CARD (EEUU) columns are marked HABILITADO.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": ["ar-dnm-regimen-visas", "ar-resolution-316-2025", "ar-dnm-ave"],
+      "evidenceLocator": "Argentina DNM > Regimen de Visas > REPUBLICA POPULAR CHINA; Resolución 316/2025 arts. 1–2; DNM AVE > Importante",
+      "evidenceExcerpt": "The current DNM matrix marks the ordinary tourist passport as visa-required. Resolución 316/2025 provides a 30-day tourism/business exception for a matching valid US visa; the current AVE page separately mentions a US Green Card for AVE purposes.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ar-hk-hksar-tourism-visa-exemption",
@@ -3026,18 +3027,18 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "visa_free",
-      "maxStayDays": null,
+      "maxStayDays": 90,
       "conditions": [
-        "阿根廷国家移民局官方 Regimen de Visas 表格列出 HONG KONG (REPUBLICA CHINA)，其 Pasaporte Ordinario (Turista) 栏没有 REQUIERE VISA 标记。",
-        "本次审阅的官方表格未给出香港特区护照的具体最长停留期，因此不填写天数；短期旅游的准入期限须按阿根廷官方入境许可核验。",
+        "阿根廷国家移民局当前 Regimen de Visas 矩阵列出 HONG KONG (REPUBLICA CHINA)，其 Pasaporte Ordinario (Turista) 栏未标 REQUIERE VISA；本结论仅适用于香港特区护照。",
+        "香港入境处 2026-10-16 更新的 HKSAR 护照参考表将阿根廷列为最多 90 天；该表把免签与落地签合并列示并声明仅供参考，90 天为官方参考上限而非个人获准停留保证，出发前仍应向阿根廷主管机关确认。",
         "本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件。"
       ],
       "status": "verified",
-      "sourceIds": ["ar-dnm-regimen-visas"],
-      "evidenceLocator": "Argentina National Migration Directorate > Regimen de Visas > HONG KONG (REPUBLICA CHINA)",
-      "evidenceExcerpt": "The official visa-regime table lists HONG KONG (REPUBLICA CHINA) and shows no REQUIERE VISA marker in the Pasaporte Ordinario (Turista) column; no stay period is shown for this row.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": ["ar-dnm-regimen-visas", "hk-immd-visa-free-list-2026-10-16"],
+      "evidenceLocator": "Argentina DNM > Regimen de Visas > HONG KONG (REPUBLICA CHINA); Hong Kong Immigration Department PDF > Argentina, updated 2026-10-16",
+      "evidenceExcerpt": "Argentina's current DNM matrix lists Hong Kong without a REQUIERE VISA marker for ordinary tourist passports; the current HKSAR reference list reports Argentina up to 90 days but combines visa-free and visa-on-arrival routes.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ar-mo-macao-sar-tourism-visa-exemption",
@@ -3047,18 +3048,18 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "visa_free",
-      "maxStayDays": null,
+      "maxStayDays": 30,
       "conditions": [
-        "阿根廷国家移民局官方 Regimen de Visas 表格列出 MACAO (REPUBLICA CHINA)，其 Pasaporte Ordinario (Turista) 栏没有 REQUIERE VISA 标记。",
-        "本次审阅的官方表格未给出澳门特区护照的具体最长停留期，因此不填写天数；短期旅游的准入期限须按阿根廷官方入境许可核验。",
-        "本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件。"
+        "阿根廷政府公告明确：澳门居住的中国籍人士持澳门特区签发的有效护照，可因旅游或商务免签入境，连续停留 30 天，并可申请延期；本条限于公告写明的证件和资格范围。",
+        "澳门身份证明局当前 Macao SAR 护照待遇页面也将阿根廷列为 30 天，并标注为澳门特区政府与相关国家/地区间的免签计划；不采用搜索结果中错配到厄瓜多尔的 90 天。",
+        "本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件；实际停留和延期仍由阿根廷主管机关决定。"
       ],
       "status": "verified",
-      "sourceIds": ["ar-dnm-regimen-visas"],
-      "evidenceLocator": "Argentina National Migration Directorate > Regimen de Visas > MACAO (REPUBLICA CHINA)",
-      "evidenceExcerpt": "The official visa-regime table lists MACAO (REPUBLICA CHINA) and shows no REQUIERE VISA marker in the Pasaporte Ordinario (Turista) column; no stay period is shown for this row.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": ["ar-dnm-regimen-visas", "ar-macao-visa-waiver-2019", "mo-dsi-macao-passport-visa-list"],
+      "evidenceLocator": "Argentina government announcement 2019-10-14; Macao DSI > Macao SAR passport > Argentina; Argentina DNM > MACAO (REPUBLICA CHINA)",
+      "evidenceExcerpt": "Argentina states that qualifying Chinese Macao residents with a valid Macao SAR-issued passport are visa-exempt for tourism/business for 30 consecutive days; Macao DSI independently lists 30 days under its visa-waiver program.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "uy-cn-prc-ordinary-tourism-review",

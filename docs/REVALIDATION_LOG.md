@@ -171,3 +171,13 @@
 - 孟加拉国页面在检索服务超时、Node 默认证书链校验失败后，改用操作系统信任库的 HTTPS 客户端成功返回 200；全程保留证书验证，没有采用关闭验证的请求。印度驻港改版页面亦经正常验证读取。
 - 尼泊尔落地签入口当前返回 SPA 外壳；未由空壳页面推断国籍或停留期。澳门国籍字段直接取自上述官方公开接口，领馆正文另给一般游客及年度累计规则。
 - 本批所有已确认规则复核期至 2026-11-20。剩余队列继续包含中国内地证件、韩国未复核证件、中东、拉美及先前受阻路线；官方证据不足的项目不机械续期。
+
+## Phase 74 · 阿根廷中国、香港与澳门普通护照复核（2026-10-21）
+
+| 护照路线 | 当前官方一手证据 | 更新及边界 |
+|---|---|---|
+| 中国普通护照旅游 | 阿根廷 DNM [Regimen de Visas](https://www.migraciones.gob.ar/accesible/indexdnm.php?visas)；[Resolución 316/2025](https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-316-2025-415345/texto)；DNM [AVE 页面](https://www.migraciones.gob.ar/ave/) | DNM 当前矩阵将中国普通护照游客标为需签证。法规第 1 条为同类别有效美国签证设免领事签证及 AVE 例外，旅游/商务最多 30 天；第 2 条禁止变更类别、允许经 DNM 审批延期一次。AVE 页面另称美国 Green Card 持有人可免办 AVE，但法规明文例外写的是同类别美国签证；不把 Green Card 扩展为普遍免领事签证。 |
+| 香港特区护照 | 阿根廷 DNM 上述普通护照矩阵；香港入境处 2026-10-16 [HKSAR 护照名单 PDF](https://www.immd.gov.hk/pdf/Visa-free%20Access%20or%20Visa-on-arrival%20for%20HKSAR%20passport%20list_Eng.pdf) | DNM 表列香港且普通游客栏无需签证标记；HKSAR 名单明确将 Argentina 对应最多 90 天。后者将免签与落地签合并列示并提示目的地主管机关决定最终入境/停留，因此 90 天仅作官方参考上限，不作个人获准停留保证；不扩展至香港签证身份书。 |
+| 澳门特区护照 | 阿根廷政府 2019 年[互免签公告](https://www.argentina.gob.ar/noticias/turistas-de-argentina-y-de-la-region-china-de-macao-podran-viajar-sin-visado)；澳门 DSI [Macao SAR passport Argentina detail](https://www.dsi.gov.mo/Mobile/visa/visa_all_e.jsp?visa_id=149) | 两个官方来源都支持 30 天，而非此前因动态国家详情错配到 Ecuador 的 90 天。阿根廷公告限定澳门居住、中国籍、持澳门特区签发有效护照并因旅游或商务前往，可申请延期；DSI 将 Argentina 列在澳门特区护照待遇中、最多 30 天并标注协议免签。规则按这些资格条件记录，不扩展至澳门旅行证。 |
+
+本批将 3 条阿根廷路线的 `checkedAt` 更新为 2026-10-21，复核至 2026-11-20；新增 5 个官方来源记录。全库仍为 143 条路线，来源 116 个；111 条证据在核验窗口内，其中 3 条个人条件仍需人工确认；29 条历史到期、3 条证据待解；查询为 108 条当前结论和 35 条 REVIEW。未解决的阿联酋/澳门来源冲突及孟加拉国港澳证据缺口仍保留 REVIEW。

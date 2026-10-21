@@ -591,9 +591,18 @@ test('阿根廷区分中国普通护照签证与港澳普通游客路线', async
   assert.equal(argentina.length, 3);
   const byType = new Map<string, PolicyFixture>(argentina.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
-  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('Visa EEUU') && condition.includes('Green CARD')));
-  assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', null]);
-  assert.deepEqual([byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['visa_free', null]);
+  const china = byType.get('ordinary_passport')!;
+  assert.ok(china.sourceIds.includes('ar-resolution-316-2025'));
+  assert.ok(china.sourceIds.includes('ar-dnm-ave'));
+  assert.ok(china.conditions.some((condition: string) => condition.includes('相同') && condition.includes('美国签证') && condition.includes('30 天')));
+  assert.ok(china.conditions.some((condition: string) => condition.includes('Green Card') && condition.includes('不把') && condition.includes('普遍')));
+  assert.deepEqual([byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['visa_free', 90]);
+  assert.ok(byType.get('hksar_passport')!.sourceIds.includes('hk-immd-visa-free-list-2026-10-16'));
+  assert.ok(byType.get('hksar_passport')!.conditions.some((condition: string) => condition.includes('合并') && condition.includes('90 天')));
+  assert.deepEqual([byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['visa_free', 30]);
+  assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('ar-macao-visa-waiver-2019'));
+  assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('mo-dsi-macao-passport-visa-list'));
+  assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('中国籍') && condition.includes('澳门居住') && condition.includes('30 天')));
 });
 
 test('乌拉圭内政部官方签证制度表核验中国及港澳普通护照路线', async () => {
@@ -629,7 +638,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 111);
+  assert.equal(registry.sources.length, 116);
   assert.equal(policies.rules.length, 143);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 140);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);

@@ -73,9 +73,9 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 | 智利 | 中国普通护照 | 通常需要临时停留签证/授权，申请停留上限 90 天；有美/加签证或 Green Card 条件豁免 | 当前官方 JSON 中国行 visa SI、上限 90；注 6 排除美国 C 类或过境签，相关证件至少 6 个月有效；费用 0 不等于免签，上限不保证个人获批 |
 | 智利 | 香港特区护照 | 免签，最多 90 天 | 官方领事选择器注明 Hong Kong 特别行政区国民；不扩展到香港签证身份书 |
 | 智利 | 澳门特区护照 | 免签，最多 30 天 | 官方领事选择器注明 Macao 特别行政区国民；不扩展到澳门旅行证 |
-| 阿根廷 | 中国普通护照 | 需要旅游签证；官方表格另有美国签证/Green Card 资格列 | 具体美国证件条件、停留期和是否需要预先授权仍须按官方路线确认 |
-| 阿根廷 | 香港特区护照 | 官方普通游客表格未标需签证 | 本次官方表格未显示具体最长停留期；不扩展到香港签证身份书 |
-| 阿根廷 | 澳门特区护照 | 官方普通游客表格未标需签证 | 本次官方表格未显示具体最长停留期；不扩展到澳门旅行证 |
+| 阿根廷 | 中国普通护照 | 普通游客基线需签证；同类别有效美国签证可适用 30 天旅游/商务免领事签证及 AVE 例外 | 不符合例外者需向领事机构申请；不得转换移民类别，延期须 DNM 审批。DNM AVE 页面另提 Green Card 免办 AVE，但不据此扩展免领事签证结论 |
+| 阿根廷 | 香港特区护照 | 免签，官方参考上限 90 天 | DNM 普通游客矩阵未标需签证；香港入境处 2026-10-16 表列阿根廷 90 天，但合并免签/落地签且只作参考；不扩展到香港签证身份书 |
+| 阿根廷 | 澳门特区护照 | 符合资格者免签，最多 30 天 | 阿根廷公告及澳门 DSI 均列 30 天；阿根廷公告限定澳门居住、中国籍、持有效澳门特区签发护照及旅游/商务用途；不扩展到澳门旅行证 |
 | 乌拉圭 | 中国普通护照 | 需要签证；符合条件的第三国签证与指定首入港口可触发例外 | 内政部表格将中国普通护照列为需签证；脚注 (10) 列出美国、加拿大、英国或欧盟签证及指定首入港口条件 |
 | 乌拉圭 | 香港特区护照 | 免签，期限待官方表格进一步确认 | 仅 Pte. HKSAR；脚注 (4) 要求护照显示 HKSAR 或 OVERSEAS |
 | 乌拉圭 | 澳门特区护照 | 免签，期限待官方表格进一步确认 | 脚注 (11) 明确澳门特区普通护照免签；本条不扩展到其他证件 |
@@ -213,7 +213,12 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 - [Colombia Ministry of Foreign Affairs：Entry to Colombia and Courtesy Visa Information](https://www.cancilleria.gov.co/sites/default/files/FOTOS2024/ENTRY%20TO%20COLOMBIA%20AND%20COURTESY%20VISA%20INFORMATION.pdf)
 - [Consulate General of Colombia in Hong Kong：30 frequently asked questions regarding visa applications and issuance for foreigners](https://hongkong.consulado.gov.co/sala-de-prensa/noticias/30-preguntas-frecuentes-relativas-la-solicitud-y-expedicion-de-visas-extranjeros-para-colombia)
 - [Chile Ministry of Foreign Affairs, Consular Services：Visas para ingresar a Chile](https://serviciosconsulares.cl/tramites/site/tax/port/all/taxport_14___1.html)
-- [Argentina National Migration Directorate：Regimen de Visas](https://www.migraciones.gob.ar/accesos/regimenvisas.php)
+- [Argentina National Migration Directorate：Regimen de Visas](https://www.migraciones.gob.ar/accesible/indexdnm.php?visas)（中国普通护照游客标需签证；港澳行无需签证标记，不提供停留期限）
+- [Argentina：Resolución 316/2025](https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-316-2025-415345/texto)（同类别有效美国签证的中国普通护照旅游/商务例外，最多 30 天）
+- [Argentina DNM：AVE](https://www.migraciones.gob.ar/ave/)（中国持美国签证或 Green Card 的免 AVE 说明；Green Card 不扩展为普遍免领事签证）
+- [Hong Kong Immigration Department：HKSAR passport list](https://www.immd.gov.hk/pdf/Visa-free%20Access%20or%20Visa-on-arrival%20for%20HKSAR%20passport%20list_Eng.pdf)（2026-10-16 更新，阿根廷最多 90 天；免签/落地签合并列示）
+- [Argentina：Macao mutual visa-waiver announcement](https://www.argentina.gob.ar/noticias/turistas-de-argentina-y-de-la-region-china-de-macao-podran-viajar-sin-visado)（限公告描述的中国籍澳门居民、有效澳门特区护照、旅游/商务 30 天）
+- [Macao DSI：Macao SAR passport visa-free/arrival list — Argentina](https://www.dsi.gov.mo/Mobile/visa/visa_all_e.jsp?visa_id=149)（30 天，协议免签计划）
 - [Uruguay Ministry of Foreign Affairs, Consulate General in Hong Kong：Visas](https://www.gub.uy/ministerio-relaciones-exteriores/en/consulate-general-of-the-oriental-republic-of-uruguay-in-hong-kong/consular-services/visas)
 - [Ecuador Ministry of Foreign Affairs：List of countries requiring a visa to enter Ecuador](https://www.cancilleria.gob.ec/2020/06/30/lista-de-paises-que-deben-presentar-visa-al-ingresar-al-ecuador/)
 - [Ecuador Ministry of Foreign Affairs：Ministerial Agreement No. 0000064](https://www.cancilleria.gob.ec/wp-content/uploads/2024/07/0000064.pdf)
