@@ -10,7 +10,7 @@ export default function CoveragePage() {
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 62</div>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 63</div>
         <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
       </header>
 
@@ -29,7 +29,7 @@ export default function CoveragePage() {
         <div className="metric-grid">
           <article><span><Globe2 /></span><strong>{coverageSummary.jurisdictionCount}</strong><p>联合国 M49 国家与地区</p><small>另建 {coverageSummary.policyZoneCount} 个跨境政策区域</small></article>
           <article><span><FileSearch /></span><strong>{coverageSummary.officialSourceCount}</strong><p>官方来源入口</p><small>只记录政府、超国家与许可系统</small></article>
-          <article><span><Database /></span><strong>{coverageSummary.verifiedPolicyRuleCount}</strong><p>已核验的受控规则</p><small>另有 {coverageSummary.reviewPolicyRuleCount} 条明确留在 REVIEW</small></article>
+          <article><span><Database /></span><strong>{coverageSummary.verifiedPolicyRuleCount}</strong><p>当前有效的受控规则</p><small>另有 {coverageSummary.reviewPolicyRuleCount} 条已过期或待复核（库内曾核验 {coverageSummary.storedVerifiedPolicyRuleCount} 条）</small></article>
           <article><span><ShieldAlert /></span><strong>{format.format(coverageSummary.minimumPolicyCells)}</strong><p>最低政策组合规模</p><small>目的地 × 证件签发地 × 7 类目的</small></article>
         </div>
 
@@ -68,7 +68,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · Phase 62</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 63</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }

@@ -22,6 +22,10 @@ const sourceIds = new Set(registry.sources.map((item) => item.id));
 const verifiedSourceIds = new Set(registry.sources.filter((item) => item.status === 'verified').map((item) => item.id));
 const policyZoneIds = new Set(policyZones.zones.map((item) => item.id));
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
+const now = new Date();
+const isCurrent = (rule) => rule.status === 'verified'
+  && Number.isFinite(Date.parse(`${rule.reviewDueAt}T23:59:59Z`))
+  && now.getTime() <= Date.parse(`${rule.reviewDueAt}T23:59:59Z`);
 
 for (const zone of policyZones.zones) {
   if (new Set(zone.members).size !== zone.members.length) errors.push(`${zone.id}: duplicate policy-zone member`);
@@ -63,4 +67,16 @@ if (errors.length) {
 }
 
 const statusCounts = Object.groupBy(registry.sources, (source) => source.status);
-console.log(JSON.stringify({ jurisdictions: countries.count, policyZones: policyZones.zones.length, sources: registry.sources.length, verifiedPolicyRules: policies.rules.filter((rule) => rule.status === 'verified').length, reviewPolicyRules: policies.rules.filter((rule) => rule.status !== 'verified').length, sourceStatuses: Object.fromEntries(Object.entries(statusCounts).map(([key, value]) => [key, value.length])) }, null, 2));
+const storedVerifiedPolicyRules = policies.rules.filter((rule) => rule.status === 'verified').length;
+const currentVerifiedPolicyRules = policies.rules.filter(isCurrent).length;
+console.log(JSON.stringify({
+  asOf: now.toISOString().slice(0, 10),
+  jurisdictions: countries.count,
+  policyZones: policyZones.zones.length,
+  sources: registry.sources.length,
+  storedVerifiedPolicyRules,
+  currentVerifiedPolicyRules,
+  staleStoredVerifiedPolicyRules: storedVerifiedPolicyRules - currentVerifiedPolicyRules,
+  reviewPolicyRules: policies.rules.filter((rule) => rule.status !== 'verified').length,
+  sourceStatuses: Object.fromEntries(Object.entries(statusCounts).map(([key, value]) => [key, value.length])),
+}, null, 2));

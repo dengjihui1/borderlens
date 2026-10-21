@@ -43,6 +43,13 @@ test('规则核验超过 30 天会标记 stale', () => {
   assert.equal(isRuleDataStale('2026-09-08', new Date('2026-10-08T00:00:00Z')), false);
 });
 
+test('过期规则不会继续给出 READY', () => {
+  const result = evaluateJourney(base, new Date('2026-10-21T00:00:00Z'));
+  assert.equal(result.stale, true);
+  assert.equal(result.status, 'review');
+  assert.equal(result.steps[0].status, 'review');
+});
+
 test('未确认全程有效时任何分支都不能降级成 review 或 ready', () => {
   const result = evaluateJourney({ ...base, origin: 'macao', destination: 'mainland-china', extras: ['macao-id', 'home-return-permit'], documentsValid: false });
   assert.equal(result.status, 'action');

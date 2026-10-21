@@ -21,6 +21,12 @@ export const jurisdictions = countryCatalog.territories;
 export const registeredSources = sourceRegistry.sources as RegisteredSource[];
 export const policyZones = policyZoneCatalog.zones;
 
+export function isPolicyRuleCurrent(rule: { status: string; reviewDueAt: string }, now = new Date()) {
+  if (rule.status !== 'verified') return false;
+  const dueAt = Date.parse(`${rule.reviewDueAt}T23:59:59Z`);
+  return Number.isFinite(dueAt) && now.getTime() <= dueAt;
+}
+
 const rulesByDestination = (destinationId: string, isZone = false) => policySeed.rules.filter((rule) => (
   isZone ? 'destinationPolicyZoneId' in rule && rule.destinationPolicyZoneId === destinationId : 'destinationJurisdictionId' in rule && rule.destinationJurisdictionId === destinationId
 ));
@@ -57,8 +63,8 @@ export const latestPolicyBatch = [
   const rules = rulesByDestination(item.id);
   return {
     ...item,
-    verifiedRuleCount: rules.filter((rule) => rule.status === 'verified').length,
-    reviewRuleCount: rules.filter((rule) => rule.status !== 'verified').length,
+    verifiedRuleCount: rules.filter((rule) => isPolicyRuleCurrent(rule)).length,
+    reviewRuleCount: rules.filter((rule) => !isPolicyRuleCurrent(rule)).length,
   };
 });
 
@@ -71,8 +77,9 @@ export const coverageSummary = {
   reachableSourceCount: registeredSources.filter((source) => source.status === 'reachable').length,
   blockedSourceCount: registeredSources.filter((source) => source.status === 'blocked').length,
   checkedAt: sourceRegistry.checkedAt,
-  verifiedPolicyRuleCount: policySeed.rules.filter((rule) => rule.status === 'verified').length,
-  reviewPolicyRuleCount: policySeed.rules.filter((rule) => rule.status !== 'verified').length,
+  verifiedPolicyRuleCount: policySeed.rules.filter((rule) => isPolicyRuleCurrent(rule)).length,
+  reviewPolicyRuleCount: policySeed.rules.filter((rule) => !isPolicyRuleCurrent(rule)).length,
+  storedVerifiedPolicyRuleCount: policySeed.rules.filter((rule) => rule.status === 'verified').length,
   minimumPolicyCells: countryCatalog.count * countryCatalog.count * 7,
 };
 

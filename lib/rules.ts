@@ -231,6 +231,16 @@ export function evaluateJourney(input: JourneyInput, now = new Date()): JourneyR
     }
   }
 
+  const stale = isRuleDataStale(DATA_CHECKED_AT, now);
+  if (stale) {
+    for (const step of steps) {
+      if (step.status === 'ready') step.status = 'review';
+      if (!step.verify.some((item) => item.includes('核验日期'))) {
+        step.verify.unshift('该节点的核验日期已超过 30 天，重新查看对应官方来源并向承运人确认。');
+      }
+    }
+  }
+
   const status: Status = steps.some((step) => step.status === 'action')
     ? 'action'
     : steps.some((step) => step.status === 'review')
@@ -248,7 +258,7 @@ export function evaluateJourney(input: JourneyInput, now = new Date()): JourneyR
     headline: copy[status][0],
     summary: copy[status][1],
     steps,
-    stale: isRuleDataStale(DATA_CHECKED_AT, now),
+    stale,
     checkedAt: DATA_CHECKED_AT,
   };
 }
