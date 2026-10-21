@@ -10,9 +10,9 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 
 ## 最近政策证据
 
-核验日期：2026-10-21（最新 Phase 77 复核沙特 HKSAR 普通护照落地签路线；Phase 72 续期智利、秘鲁、哥伦比亚 9 条；哥斯达黎加 3 条仅校正历史记录、不续期）；其他规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
+核验日期：2026-10-21（最新 Phase 78 复核缅甸中国、香港及澳门特区普通护照电子签与航空落地签路线；Phase 77 为沙特 HKSAR 落地签）；其他规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
 
-截至 Phase 77，当前有效证据 117 条，其中 3 条需个体条件核验；另有 23 条历史到期和 3 条显式证据问题。查询口径为 114 条当前结论、29 条 REVIEW。最新批次只更新沙特 HKSAR 普通护照落地签路线；中国与澳门沙特路线仍因完整入境要求证据不足而过期。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决。证据定位和下一步要求见 `REVALIDATION_LOG.md`。
+截至 Phase 78，当前有效证据 122 条，其中 3 条需个体条件核验；另有 21 条历史到期和 3 条显式证据问题。查询口径为 119 条当前结论、27 条 REVIEW。缅甸 eVisa 与机场落地签作为独立路线记录；中国及香港落地签试行期仍有效，澳门此前试行期于 2026-10-20 到期，未发现续期材料，故历史 VOA 记录进入 REVIEW，但澳门 eVisa 仍为单独当前路线。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决。证据定位和下一步要求见 `REVALIDATION_LOG.md`。
 
 下表保留结构化规则的历史范围，不代表每一行目前仍有效；当日是否可用以规则自身的 `reviewDueAt` 和运行时门禁为准。覆盖率卡片含过期或待复核路线时，不展示旧的整组确定性结论。
 
@@ -110,6 +110,9 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 | 柬埔寨 | 中国普通护照、香港/澳门特区护照 | Visa T 电子签，单次入境，停留 1 个月 | USD 30；签发日起 3 个月有效；护照超过 6 个月有效；另填 Cambodia e-Arrival。中国游客 2026-06-15 至 10-15 临时免签已过期，不用于当前路线 |
 | 老挝 | 中国普通护照、香港/澳门特区护照 | T-B3 旅游电子签，停留 30 天 | 批准信 60 天有效；只接受普通护照；须从 9 个指定口岸之一入境并打印批准信 |
 | 缅甸 | 中国普通护照、香港/澳门特区护照 | 旅游电子签，停留 28 天 | 批准信 90 天有效；单次入境；仅 3 个国际机场与 Kawthaung 陆路口岸，海港不适用；旅行证件不接受 |
+| 缅甸 | 中国普通护照 | 航空旅游落地签试行，停留 30 天 | USD 50、护照至少有效 6 个月、2 张照片；官方续期至 2027-08-29；机场路线与 eVisa 分开 |
+| 缅甸 | 香港特区护照 | 航空旅游落地签试行，停留 30 天 | USD 50、护照至少有效 6 个月、2 张照片；驻港总领馆续期至 2027-03-10；机场路线与 eVisa 分开 |
+| 缅甸 | 澳门特区护照 | eVisa 当前路线；历史航空 VOA 复核中 | VOA 试行原定至 2026-10-20；未找到官方延期材料，不把历史 30 天条件当当前结论 |
 | 文莱 | 香港/澳门特区护照 | 免签，最多 14 天 | 超期、商务或专业访问需另办签证 |
 | 文莱 | 中国普通护照 | D3 免签，最多 14 天 | 外交部当前 China > Ordinary Passport 直接链接 Category D3；D3 正文确认无需签证、最多停留 14 天 |
 | 东帝汶 | 中国普通护照、香港/澳门特区护照 | 旅游落地签，停留 30 天 | 正式航空、陆路、海路口岸均可申请；USD 30 现金；护照至少 6 个月；通常可延长一次 30 天 |
@@ -174,6 +177,11 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 - [Lao PDR MOFA：Who can apply for Lao eVisa](https://laoevisa.gov.la/article/who_can_apply)
 - [Lao PDR MOFA：eVisa Terms and Conditions](https://laoevisa.gov.la/term)
 - [Myanmar Ministry of Immigration and Population：Notice to Tourist](https://evisa.moip.gov.mm/notice/tourist)
+- [Myanmar Ministry of Hotels and Tourism：Electronic Visa](https://tourism.gov.mm/en/e-visa)
+- [Myanmar Ministry of Hotels and Tourism：Visa on Arrival](https://tourism.gov.mm/en/information-pages/visa-on-arrival)
+- [Myanmar Ministry of Hotels and Tourism：2026 China/India Tourist VOA extension](https://tourism.gov.mm/en/announcements/extension-of-visa-on-arrival-tourist-for-chinese-and-indian-tourists)
+- [Myanmar Consulate General in Hong Kong：2026 HKSAR Tourist VOA extension](https://myanmarconsulatehk.org/extension-of-tourist-visa-on-arrival-in-myanmar-for-the-hong-kong-passport-holders/)
+- [Myanmar Ministry of Hotels and Tourism：2025 Macau Tourist VOA extension](https://tourism.gov.mm/mm/announcements/aaksanhngatlungeyaeyaawankyitaannhngat-hotenhngatkhyaithwalayaewankyitaan-pyitaawinsuwankyi-jeng-phang-nawtawin-nepyitawhotezonyahi-hotemyaamh-lonkhyonyaewantaanmyaa-e-sunsaawinyaimyhngattinyaesaoinyaa-myanmayaoyaathointhintansainpwe-akhananatho-tetyaawet)
 - [Brunei MFA：Visa Information by Country / Region](https://www.mfa.gov.bn/Pages/visa-information.aspx)
 - [Brunei MFA：Category D3 — 14-day visa waiver](https://www.mfa.gov.bn/Pages/D3---D14.aspx)
 - [Timor-Leste Migration Service：Tourist Visa](https://migracao.gov.tl/wp/tourist-visa/)

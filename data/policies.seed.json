@@ -1568,6 +1568,87 @@
       "reviewDueAt": "2026-10-08"
     },
     {
+      "id": "mm-cn-prc-ordinary-tourism-voa",
+      "destinationJurisdictionId": "mm",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "air",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": 30,
+      "visaProductName": "Myanmar Tourist Visa on Arrival (pilot)",
+      "conditions": [
+        "仅适用于中国普通护照游客乘飞机抵达缅甸国际机场；官方公告将该试行期延长至 2027-08-29，当前核验日处于有效期内。",
+        "每人费用 USD 50，最多停留 30 天；仅旅游目的，不得延期，逾期按官方规定缴纳罚款。",
+        "护照入境时至少有 6 个月有效期；须填写落地签申请表并提交 2 张彩色照片，最终是否准予入境由缅甸主管机关决定。",
+        "本条仅记录航空落地签替代路线；eVisa 是另一条独立路线，适用口岸不同。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mm-tourist-voa-general",
+        "mm-cn-india-voa-extension-2026"
+      ],
+      "evidenceLocator": "Myanmar Ministry of Hotels and Tourism > Visa on Arrival for China & India Nationals; 2026-09-15 extension announcement image",
+      "evidenceExcerpt": "Chinese tourists arriving by air are granted Tourist Visa on Arrival for a third one-year trial period from 30 August 2026 to 29 August 2027. The current VOA information page states USD 50, stay up to 30 days, airport arrival, six-month passport validity, and no extension.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "effectiveUntil": "2027-08-29T23:59:59+06:30"
+    },
+    {
+      "id": "mm-hk-hksar-tourism-voa",
+      "destinationJurisdictionId": "mm",
+      "documentIssuerJurisdictionId": "hk",
+      "documentType": "hksar_passport",
+      "purpose": "tourism",
+      "borderMode": "air",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": 30,
+      "visaProductName": "Myanmar Tourist Visa on Arrival (pilot)",
+      "conditions": [
+        "仅适用于香港特区护照持有人乘飞机抵达缅甸国际机场；驻港总领馆公告将试行期延长至 2027-03-10，当前核验日处于有效期内。",
+        "费用 USD 50，停留 30 天；仅限旅游目的，不得延期。",
+        "护照入境时至少有 6 个月有效期；须填写落地签申请表并提交 2 张彩色照片，最终是否准予入境由缅甸主管机关决定。",
+        "本条仅记录航空落地签替代路线；eVisa 是另一条独立路线，适用口岸不同。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mm-tourist-voa-general",
+        "mm-hk-voa-extension-2026"
+      ],
+      "evidenceLocator": "Myanmar Consulate General in Hong Kong > 2026-06-19 Extension of Tourist Visa on Arrival announcement image; Ministry of Hotels and Tourism > Visa on Arrival conditions",
+      "evidenceExcerpt": "The Consulate General extended the Hong Kong passport tourist VOA for one year from 11 March 2026 to 10 March 2027. The official VOA information page states airport arrival, USD 50, 30 days, six-month passport validity, two photos, and no extension.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "effectiveUntil": "2027-03-10T23:59:59+06:30"
+    },
+    {
+      "id": "mm-mo-macao-sar-tourism-voa",
+      "destinationJurisdictionId": "mm",
+      "documentIssuerJurisdictionId": "mo",
+      "documentType": "macao_sar_passport",
+      "purpose": "tourism",
+      "borderMode": "air",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": 30,
+      "visaProductName": "Myanmar Tourist Visa on Arrival (pilot)",
+      "conditions": [
+        "缅甸官方 2025-11 公告将澳门特区护照游客的航空落地签试行期延至 2026-10-20；该试行期现已结束。",
+        "本次在官方缅甸旅游部公告目录及澳门政府消息中未找到后续延期材料；这不能证明已永久停止，出行前须向主管机关确认当前状态。",
+        "历史公告记载 USD 50、最多停留 30 天、需 6 个月有效期护照及 2 张照片；这些已过期的历史条件不作为当前入境结论。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "mm-tourist-voa-general",
+        "mm-mo-voa-extension-2025",
+        "mo-myanmar-voa-notice-2024"
+      ],
+      "evidenceLocator": "Myanmar Ministry of Hotels and Tourism > 2025-11-19 extension notice; Consulate General in Hong Kong > 2025-10-30 notice",
+      "evidenceExcerpt": "The official notice extends the tourist VOA pilot for Macau SAR, Japan and Korea from 21 October 2025 through 20 October 2026. No later extension was found in the checked official announcement pages on 21 October 2026; current status therefore requires reconfirmation.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "effectiveUntil": "2026-10-20T23:59:59+06:30"
+    },
+    {
       "id": "mm-cn-prc-ordinary-tourism-evisa",
       "destinationJurisdictionId": "mm",
       "documentIssuerJurisdictionId": "cn",
@@ -1588,8 +1669,8 @@
       ],
       "evidenceLocator": "Myanmar eVisa > Notice to Tourist > eligibility list (China), processing information and permitted ports",
       "evidenceExcerpt": "China is eligible to apply Tourist Visa. The approval letter is valid 90 days; length of stay is 28 days; eVisa is single entry and accepted only at the listed three airports and Kawthaung land checkpoint, not seaports.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mm-hk-hksar-tourism-evisa",
@@ -1612,8 +1693,8 @@
       ],
       "evidenceLocator": "Myanmar eVisa > Notice to Tourist > eligibility list (Hong Kong Special Administrative Region of China), processing information and permitted ports",
       "evidenceExcerpt": "Hong Kong Special Administrative Region of China is eligible to apply Tourist Visa. The approval letter is valid 90 days; length of stay is 28 days; eVisa is single entry and accepted only at the listed three airports and Kawthaung land checkpoint, not seaports.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mm-mo-macao-sar-tourism-evisa",
@@ -1636,8 +1717,8 @@
       ],
       "evidenceLocator": "Myanmar eVisa > Notice to Tourist > eligibility list (Macao Special Administrative Region of China), processing information and permitted ports",
       "evidenceExcerpt": "Macao Special Administrative Region of China is eligible to apply Tourist Visa. The approval letter is valid 90 days; length of stay is 28 days; eVisa is single entry and accepted only at the listed three airports and Kawthaung land checkpoint, not seaports.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bn-cn-prc-ordinary-tourism-review",

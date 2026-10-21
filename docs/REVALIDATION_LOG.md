@@ -1,5 +1,17 @@
 # BorderLens 规则重新核验日志
 
+## Phase 78 · 缅甸中港澳电子签与航空落地签路线（2026-10-21）
+
+重新打开缅甸旅游部电子签与落地签页面、2026 年中国/印度试行延期公告、缅甸驻港总领馆 HKSAR 延期公告，以及澳门政府和缅甸官方澳门试行公告。电子签页面当前仍列 China、Hong Kong SAR、Macao SAR 普通护照游客可申请 Tourist eVisa：批准信有效 90 天、单次入境后停留 28 天，仅限仰光/曼德勒/内比都国际机场及 Kawthaung 陆路口岸，不接受海港。三条 eVisa 路线更新核验日为 2026-10-21，复核至 2026-11-20。
+
+中国和香港的落地签与 eVisa 分开建模，避免以航空试行路线覆盖陆路 eVisa 条件。旅游部 2026-09-15 公告附图确认中国游客航空 VOA 第三期为 2026-08-30 至 2027-08-29；驻港总领馆 2026-06-19 公告附图确认 HKSAR 护照 VOA 延期至 2027-03-10。旅游部当前一般 VOA 页面支持 USD 50、最多 30 天、国际机场、护照至少 6 个月有效、2 张照片且不可延期等条件。两条在当前试行期内建立 `air` 落地签路线，并用带缅甸时区的 `effectiveUntil` 门禁。
+
+澳门特区护照 VOA 的缅甸官方延期公告只覆盖 2025-10-21 至 2026-10-20。澳门政府原始通知也只证明 2024 首期开始；在本轮核对的澳门政府与缅甸旅游部官方公告中未找到 2026-10-20 之后的延期材料。这不是“永久停止”的证据，因此将过期 VOA 路线保留为 REVIEW，不展示历史落地签结论；澳门当前 eVisa 路线另行保留，不受 VOA 试行期到期影响。
+
+来源：[缅甸旅游部 Electronic Visa](https://tourism.gov.mm/en/e-visa)、[缅甸旅游部 Visa on Arrival](https://tourism.gov.mm/en/information-pages/visa-on-arrival)、[中国/印度游客 VOA 续期公告](https://tourism.gov.mm/en/announcements/extension-of-visa-on-arrival-tourist-for-chinese-and-indian-tourists)、[缅甸驻港总领馆 HKSAR VOA 续期公告](https://myanmarconsulatehk.org/extension-of-tourist-visa-on-arrival-in-myanmar-for-the-hong-kong-passport-holders/)、[澳门 VOA 缅甸官方续期公告](https://tourism.gov.mm/mm/announcements/aaksanhngatlungeyaeyaawankyitaannhngat-hotenhngatkhyaithwalayaewankyitaan-pyitaawinsuwankyi-jeng-phang-nawtawin-nepyitawhotezonyahi-hotemyaamh-lonkhyonyaewantaanmyaa-e-sunsaawinyaimyhngattinyaesaoinyaa-myanmayaoyaathointhintansainpwe-akhananatho-tetyaawet)、[澳门政府原始通知](https://www.gov.mo/en/news/346835/)。
+
+本批新增 3 条独立 VOA 路线，核验至 2026-11-20；中国与 HKSAR 为当前航空落地签，澳门历史路线按有效期门禁转入 REVIEW。三条 eVisa 路线均恢复当前核验。完整测试、统计和发布结果见 `docs/BUILD_LOG.md` Phase 78。
+
 ## Phase 77 · 沙特 HKSAR 普通护照落地签路线（2026-10-21）
 
 香港入境处当前《Visa-free Access or Visa-on-arrival for HKSAR passport list》在 Saudi Arabia 第 138 项及 Remark 30 记载：依据沙特驻港总领馆通知，HKSAR 护照可在六个指定口岸申请旅游落地签，单次签有效 90 天、最多停留 30 天；多次签有效一年、最多停留 90 天；也可行前申请 eVisa。香港政府 2025-01-14 公告记录收到总领馆通知，入境处当前清单复述相同安排。故仅香港特区普通护照路线更新为 `visa_on_arrival`，核验日期 2026-10-21、复核截止 2026-11-20，期限字段记可申请产品中的最高 90 天，并把六口岸、两种停留期及 eVisa 替代通道列为条件。

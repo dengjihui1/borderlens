@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import type { CatalogRule } from '../lib/policy-catalog.ts';
+import { isPolicyRuleCurrent } from '../lib/policy-freshness.ts';
 
 const readJson = async (relativePath: string) => JSON.parse(await readFile(new URL(relativePath, import.meta.url), 'utf8'));
 
@@ -358,15 +359,25 @@ test('老挝电子签对中国与港澳特区护照保留 30 天和指定口岸�
   }
 });
 
-test('缅甸电子签区分护照与旅行证并限制入境口岸', async () => {
+test('缅甸电子签与航空落地签分开建模并执行试行期限门禁', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const myanmar = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'mm');
-  assert.equal(myanmar.length, 3);
-  for (const rule of myanmar) {
+  assert.equal(myanmar.length, 6);
+  const byId = new Map<string, PolicyFixture>(myanmar.map((rule: PolicyFixture) => [rule.id, rule]));
+  for (const id of ['mm-cn-prc-ordinary-tourism-evisa', 'mm-hk-hksar-tourism-evisa', 'mm-mo-macao-sar-tourism-evisa']) {
+    const rule = byId.get(id)!;
     assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', 28]);
     assert.ok(rule.conditions.some((condition: string) => condition.includes('旅行证件') && condition.includes('不获接受')));
     assert.ok(rule.conditions.some((condition: string) => condition.includes('海港')));
   }
+  const chineseVoa = byId.get('mm-cn-prc-ordinary-tourism-voa')!;
+  const hongKongVoa = byId.get('mm-hk-hksar-tourism-voa')!;
+  const macaoVoa = byId.get('mm-mo-macao-sar-tourism-voa')!;
+  assert.deepEqual([chineseVoa.borderMode, chineseVoa.outcome, chineseVoa.maxStayDays, chineseVoa.effectiveUntil], ['air', 'visa_on_arrival', 30, '2027-08-29T23:59:59+06:30']);
+  assert.deepEqual([hongKongVoa.borderMode, hongKongVoa.outcome, hongKongVoa.maxStayDays, hongKongVoa.effectiveUntil], ['air', 'visa_on_arrival', 30, '2027-03-10T23:59:59+06:30']);
+  assert.equal(isPolicyRuleCurrent(chineseVoa, new Date('2026-10-21T12:00:00Z')), true);
+  assert.equal(isPolicyRuleCurrent(hongKongVoa, new Date('2026-10-21T12:00:00Z')), true);
+  assert.equal(isPolicyRuleCurrent(macaoVoa, new Date('2026-10-21T12:00:00Z')), false);
 });
 
 test('文莱中国普通及港澳特区护照均为 D3 14 天免签', async () => {
@@ -665,9 +676,9 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 118);
-  assert.equal(policies.rules.length, 143);
-  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 140);
+  assert.equal(registry.sources.length, 123);
+  assert.equal(policies.rules.length, 146);
+  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 143);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);
   assert.equal(registry.sources.filter((source: { id: string }) => source.id === 'hk-gov-ecuador-visa-free-90').length, 1);
 });
