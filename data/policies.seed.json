@@ -2780,16 +2780,19 @@
       "maxStayDays": null,
       "visaProductName": "Peru tourist visa",
       "conditions": [
-        "秘鲁官方领事页面说明，中国公民只有在入境秘鲁时持有入境前至少还有 6 个月有效期的英国、加拿大、澳大利亚、申根或美国签证，才可免旅游签证入境。",
-        "未满足该例外时，中国普通护照应按秘鲁旅游签证路线继续办理；本条不推断签证签发期限。",
-        "第三国签证例外必须与实际护照、有效期和入境时状态同时核验，不能仅凭持有过相关签证推断免签。"
+        "中国普通护照旅游的一般签证要求存在两类明确例外：持美国、加拿大、英国、澳大利亚或申根国家签证且入境时至少还有 6 个月有效期，或者持上述地区永久居留。临时居留或曾持有签证不能自动满足该条件。",
+        "官方普通护照表第 3 页脚注 a、b 分别列签证及永久居留，任一合格条件即可；第 5 页另列太平洋联盟永久居民旅游豁免，应按真实身份和原文核验。",
+        "不满足适用例外时，按秘鲁旅游签证路线办理。表中有条件例外的天数不写成所有签证旅客的统一停留许可；最终入境和停留由秘鲁主管机关决定。"
       ],
       "status": "verified",
-      "sourceIds": ["pe-consulado-tourism-visas"],
-      "evidenceLocator": "Peru Consulate in London > Tourism Visas > Asia > Chinese nationals",
-      "evidenceExcerpt": "Chinese nationals may enter Peru without a visa only if they have a UK, Canada, Australia, Schengen or US visa valid for a minimum of 6 months at the moment of entry to Peru.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "pe-consulado-tourism-visas",
+        "pe-mre-ordinary-passport-visa-table"
+      ],
+      "evidenceLocator": "Peru current consular Tourism Visas > Asia; official ordinary-passport table PDF p.3 China SI/NO and footnotes a/b, p.5 Pacific Alliance residence exemption",
+      "evidenceExcerpt": "The ordinary-passport table marks PRC SI/NO. Footnote a exempts holders of qualifying US/Canada/UK/Australia/Schengen visas valid at least six months; footnote b independently exempts permanent residents in those places. Page 5 provides a separate Pacific Alliance permanent-resident tourist exemption.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "pe-hk-hksar-tourism-visa-exemption",
@@ -2799,18 +2802,21 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "visa_free",
-      "maxStayDays": null,
+      "maxStayDays": 90,
       "conditions": [
-        "秘鲁官方领事页面将 Hong Kong 列入亚洲旅游免签国家；本条仅覆盖香港特区护照，不扩展到香港签证身份书。",
-        "该页面未在本次审阅中稳定给出香港路线的具体最长停留天数，因此不填写天数，出行前应按秘鲁官方领事渠道确认。",
-        "免签不等于保证入境，仍须满足护照、行程和抵达时移民审查条件。"
+        "秘鲁外交部普通护照表第 5 页 Otros Territorios 中，Hong Kong 的 Turista 为 NO、Hasta 为 90；驻伦敦领馆当前旅游免签名单也列 Hong Kong。",
+        "本条仅覆盖香港特区普通护照旅游，最多 90 天；同一表的 Negocios 商务栏为 SI，不能把旅游待遇扩展到商务、学习、工作或香港签证身份书。",
+        "表列上限不是保证获准停留天数，仍须满足实际护照、行程及口岸审查条件。"
       ],
       "status": "verified",
-      "sourceIds": ["pe-consulado-tourism-visas"],
-      "evidenceLocator": "Peru Consulate in London > Tourism Visas > Asia country list > Hong Kong",
-      "evidenceExcerpt": "The official tourism-visa page includes Hong Kong in the Asia list of nationalities that do not require a tourist visa; the page does not provide a stable Hong Kong-specific maximum stay in the reviewed text.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "pe-consulado-tourism-visas",
+        "pe-mre-ordinary-passport-visa-table"
+      ],
+      "evidenceLocator": "Peru official ordinary-passport table PDF p.5 > OTROS TERRITORIOS > Hong Kong: TURISTA NO, HASTA 90, NEGOCIOS SI",
+      "evidenceExcerpt": "Under OTROS TERRITORIOS, Hong Kong is NO in TURISTA with HASTA 90, while NEGOCIOS is SI. The current London consular tourist-visa list separately includes Hong Kong.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "pe-mo-macao-sar-tourism-visa-required",
@@ -2823,16 +2829,19 @@
       "maxStayDays": null,
       "visaProductName": "Peru tourist visa",
       "conditions": [
-        "秘鲁外交部官方普通护照签证表在“其他地区”部分将 Macao 的 Tourist 栏标为 SI，即需要旅游签证。",
-        "该官方表格没有为 Macao 旅游签证路线给出准许停留期，因此不填写天数；签证签发期限和材料仍须按秘鲁官方领事渠道确认。",
-        "本条仅适用于澳门特区普通护照，不扩展到澳门旅行证、其他旅行证件或外交/公务护照。"
+        "秘鲁外交部普通护照表第 5 页 Otros Territorios 中，Macao 的 Tourist/Turista 栏为 SI，表示普通旅游基础路线需签证；表中没有给澳门该路线的停留天数。",
+        "同一页 DS 061-2016-RE 另列太平洋联盟永久居民的旅游豁免，不能将 Macao 的 SI 解释为不存在任何独立例外；必须核对实际永久居留和适用条款。",
+        "本条仅适用于澳门特区普通护照，不扩展到澳门旅行证或其他旅行证件；不直接继承针对中国普通护照的第三国签证例外。"
       ],
       "status": "verified",
-      "sourceIds": ["pe-mre-ordinary-passport-visa-table"],
-      "evidenceLocator": "Peru Ministry of Foreign Affairs > Requerimientos y exoneración de visas para ciudadanos extranjeros en pasaportes ordinarios > Otros territorios > Macao > Turista",
-      "evidenceExcerpt": "In the official ordinary-passport table under OTROS TERRITORIOS, Macao is marked SI in the TURISTA column; SI means that a visa is required.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "pe-consulado-tourism-visas",
+        "pe-mre-ordinary-passport-visa-table"
+      ],
+      "evidenceLocator": "Peru official ordinary-passport table PDF p.5 > OTROS TERRITORIOS > Macao TURISTA SI; DS 061-2016-RE independent Pacific Alliance resident exemption",
+      "evidenceExcerpt": "Macao is SI in the TURISTA column with no stay period. The same page separately exempts visa-required third-country nationals proving permanent residence in Pacific Alliance territories; that exception must be checked independently.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "co-cn-prc-ordinary-tourism-visa-conditional-exemption",
@@ -2847,14 +2856,17 @@
       "conditions": [
         "哥伦比亚外交部官方入境信息将中国列入有条件免 Visitor (V) 签证的国籍；入境时必须证明持有美国或申根区国家签发的永久居留许可，或有效期超过 6 个月的签证。",
         "未满足上述条件时，中国普通护照应按哥伦比亚 Visitor (V) 签证路线办理；本条不把外交、官方或公务护照协定例外扩展到普通护照。",
-        "第三国居留或签证的签发地、剩余有效期和入境时证明必须逐项核验，不能仅凭曾经持有相关签证推断免签。"
+        "第三国居留或签证的签发地、剩余有效期和入境时证明必须逐项核验，不能仅凭曾经持有相关签证推断免签。",
+        "官方 PDF 第 2 页另明确：能证明持太平洋联盟（智利、墨西哥、秘鲁）或安第斯共同体（玻利维亚、厄瓜多尔、秘鲁）永久居留的外国人，不论国籍另有 Visitor 签证豁免；该独立条件也须核验。"
       ],
       "status": "verified",
-      "sourceIds": ["co-mre-entry-visa-information"],
-      "evidenceLocator": "Colombia MFA > Entry to Colombia and Courtesy Visa Information > Conditional Visa Exemption",
-      "evidenceExcerpt": "The visa exemption is applicable to nationals of the People's Republic of China who prove at arrival a permanent residence permit or a visa valid for more than six months issued by the United States or a Schengen country; otherwise they must obtain a visa.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "co-mre-entry-visa-information"
+      ],
+      "evidenceLocator": "Colombia MFA entry-information PDF p.2 > Conditional Visa Exemption > PRC and independent Pacific Alliance / Andean permanent-residence exemption",
+      "evidenceExcerpt": "PRC nationals qualify with a US/Schengen permanent residence permit or visa valid for more than six months. Separately, proven permanent residents of Pacific Alliance (Chile, Mexico, Peru) or Andean Community (Bolivia, Ecuador, Peru) countries are exempt regardless of nationality.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "co-hk-hksar-tourism-visa-exemption",
@@ -2864,18 +2876,21 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "visa_free",
-      "maxStayDays": 90,
+      "maxStayDays": null,
       "conditions": [
         "哥伦比亚外交部官方入境信息将 Hong Kong — SAR Special Administrative Region of the People's Republic of China 列为短期 Visitor (V) 免签的特殊地区；本条仅覆盖香港特区护照。",
-        "该官方材料将短期访问描述为少于 90 天，适用于不领取哥伦比亚境内报酬的访问；工作、学习或其他活动另行核验。",
+        "该 PDF 将 short stay 描述为少于 90 天；本条不把严格小于写成包含第 90 天的统一许可，实际获准期限须另核。当前驻港领馆 FAQ 同时明确香港护照短期旅游或过境无需签证，其他目的另行核验。",
         "香港签证身份书等其他旅行证件不能自动继承香港特区护照待遇，仍须按证件类型核验。"
       ],
       "status": "verified",
-      "sourceIds": ["co-mre-entry-visa-information"],
-      "evidenceLocator": "Colombia MFA > Entry to Colombia and Courtesy Visa Information > Passports from special territories exempt from Visitor (V) visa",
-      "evidenceExcerpt": "Hong Kong — SAR Special Administrative Region of the People's Republic of China is listed among special territories exempt from the Visitor (V) visa for short stay; short stay is described as less than 90 days.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "co-mre-entry-visa-information",
+        "co-hk-consulate-visa-faq"
+      ],
+      "evidenceLocator": "Colombia MFA PDF pp.1-2 > short stay less than 90 days, Hong Kong SAR special territory; current Hong Kong consular FAQ tourist/transit question",
+      "evidenceExcerpt": "Hong Kong SAR is listed as a special territory exempt for short stay; the PDF describes short stay as less than 90 days, not an inclusive 90-day grant. The current consular FAQ confirms Hong Kong passport tourist/transit visa exemption.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "co-mo-macao-sar-tourism-visa-required",
@@ -2888,16 +2903,20 @@
       "maxStayDays": null,
       "visaProductName": "Colombia Visitor visa",
       "conditions": [
-        "哥伦比亚驻香港总领事馆官方 FAQ 直接说明，澳门签发的护照持有人赴哥伦比亚旅游、参加活动、商务或过境，均须在入境前申请签证。",
+        "未符合独立豁免时，哥伦比亚驻港领馆当前 FAQ 明确：澳门签发护照赴哥伦比亚旅游、参加活动、商务或过境，须在入境前申请签证。",
         "签证申请应通过哥伦比亚外交部官方平台办理；本条不推断签证类别、签发期限或获准停留期。",
-        "本条仅适用于澳门特区护照，不扩展到澳门旅行证、其他旅行证件或外交/公务护照。"
+        "本条仅适用于澳门特区护照，不扩展到澳门旅行证、其他旅行证件或外交/公务护照。",
+        "外交部 PDF 第 2 页另给不限国籍的永久居留豁免：太平洋联盟（智利、墨西哥、秘鲁）或安第斯共同体（玻利维亚、厄瓜多尔、秘鲁）永久居民须按真实证件核验；不能仅凭 Macao 基础条目排除该例外。"
       ],
       "status": "verified",
-      "sourceIds": ["co-hk-consulate-visa-faq"],
-      "evidenceLocator": "Colombia Consulate General in Hong Kong > 30 frequently asked questions > 'My passport is issued by Macau. Do I need a visa for Colombia?'",
-      "evidenceExcerpt": "My passport is issued by Macau. Do I need a visa for Colombia? Yes. Whether you are traveling for tourism, to attend events, on business, or in transit, you must apply for a visa at the Colombian consulate in Hong Kong prior to entering Colombia.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "co-hk-consulate-visa-faq",
+        "co-mre-entry-visa-information"
+      ],
+      "evidenceLocator": "Colombia Hong Kong consular FAQ > Macao passport; MFA PDF p.2 independent nationality-neutral regional permanent-residence exemption",
+      "evidenceExcerpt": "The consular FAQ requires Macao passport visitors to obtain a visa. The MFA PDF separately exempts proven permanent residents of Pacific Alliance or Andean Community countries regardless of nationality, so the Macao requirement is a baseline rather than an exceptionless claim.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "cl-cn-prc-ordinary-tourism-visa-conditional-exemption",
@@ -2907,19 +2926,23 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "visa_required",
-      "maxStayDays": null,
+      "maxStayDays": 90,
       "visaProductName": "Chile temporary stay visa / prior authorization",
       "conditions": [
-        "智利外交部领事服务官方国籍选择器将 China, Rep. Popular 标为需要签证；普通护照旅游应先确认适用的临时停留签证或授权路线。",
-        "官方备注显示，持加拿大或美国签发的签证（除 C 类或过境签）或 Green Card，且自 2019-04-01 起至少还有 6 个月有效期的中国公民可适用临时停留免签例外。",
-        "第三国签证类别、剩余有效期和入境时证明必须逐项核验；该例外不扩展到其他签发地或其他旅行证件。"
+        "智利官方国籍数据 China, Rep. Popular 的 visa 字段为 SI；未符合独立例外的中国普通护照旅客，应先取得适用的临时停留签证或授权。费用字段为 0 不等于免签。",
+        "官方注释 6 自 2019-04-01 实施：持加拿大或美国签发的签证（不含 C 类或过境签），或 Green Card，并符合至少 6 个月有效期等条件，可适用临时停留免签例外；必须按真实第三国证件核验。",
+        "该国籍行的单次和多次临时停留上限均列 90 天；这是上限，不是每位旅客必获 90 天。须证明合法维生资金，许可不得超过护照或旅行证件有效期，且不覆盖有报酬活动。"
       ],
       "status": "verified",
-      "sourceIds": ["cl-consular-visa-selector"],
-      "evidenceLocator": "Chile Consular Services > Visas para ingresar a Chile > China, Rep. Popular",
-      "evidenceExcerpt": "China, Rep. Popular: visa required; the official note exempts nationals holding a visa issued by Canada or the United States, except C or transit visas, or a Green Card, with at least 6 months validity from 2019-04-01.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "cl-consular-visa-selector",
+        "cl-minrel-visa-data",
+        "cl-minrel-visa-notes"
+      ],
+      "evidenceLocator": "Chile official ArancelesVisas.class page script > info_visas.json > CHINA, REP. POPULAR; notas_visas.json > notes 1,2,6,17",
+      "evidenceExcerpt": "CHINA, REP. POPULAR: visa SI, simple and multiple maximum stay 90. Note 6 exempts qualifying PRC nationals holding Canada/US visas (except C or transit) or Green Card with at least six months validity, effective 2019-04-01. A zero tariff is not a visa waiver.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "cl-hk-hksar-tourism-visa-exemption",
@@ -2933,14 +2956,19 @@
       "conditions": [
         "智利外交部领事服务官方国籍选择器将 Hong Kong 标为不需要签证，并注明该行适用于香港特别行政区国民。",
         "临时停留许可官方说明适用于旅游等非定居目的，期限最多 90 天；工作、定居或其他受限活动另行核验。",
-        "本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件。"
+        "本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件。",
+        "本次按页面实际加载的官方数据和注释核验；以国籍行的具体天数为准，不用通用注释的 90 天覆盖澳门行的 30 天。实际许可不得超过旅行证件有效期，并须证明合法维生资金。"
       ],
       "status": "verified",
-      "sourceIds": ["cl-consular-visa-selector"],
-      "evidenceLocator": "Chile Consular Services > Visas para ingresar a Chile > Hong Kong",
-      "evidenceExcerpt": "Hong Kong: visa not required, 90-day simple and multiple-entry stay rows; the official note states the route is for nationals of the Hong Kong Special Administrative Region.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "cl-consular-visa-selector",
+        "cl-minrel-visa-data",
+        "cl-minrel-visa-notes"
+      ],
+      "evidenceLocator": "Chile official ArancelesVisas.class page script > info_visas.json > HONG KONG; notas_visas.json > notes 1,2,8,17",
+      "evidenceExcerpt": "HONG KONG: visa NO, simple and multiple maximum stay 90 days; note 8 restricts the row to nationals of the corresponding Special Administrative Region.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "cl-mo-macao-sar-tourism-visa-exemption",
@@ -2954,14 +2982,19 @@
       "conditions": [
         "智利外交部领事服务官方国籍选择器将 Macao 标为不需要签证，并注明该行适用于澳门特别行政区国民。",
         "官方数据将单次和多次入境的最长临时停留期列为 30 天；工作、定居或其他受限活动另行核验。",
-        "本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件。"
+        "本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件。",
+        "本次按页面实际加载的官方数据和注释核验；以国籍行的具体天数为准，不用通用注释的 90 天覆盖澳门行的 30 天。实际许可不得超过旅行证件有效期，并须证明合法维生资金。"
       ],
       "status": "verified",
-      "sourceIds": ["cl-consular-visa-selector"],
-      "evidenceLocator": "Chile Consular Services > Visas para ingresar a Chile > Macao",
-      "evidenceExcerpt": "Macao: visa not required; the official selector lists a maximum transitory-stay period of 30 days for both simple and multiple entry and notes that the row applies to nationals of the Macao Special Administrative Region.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "cl-consular-visa-selector",
+        "cl-minrel-visa-data",
+        "cl-minrel-visa-notes"
+      ],
+      "evidenceLocator": "Chile official ArancelesVisas.class page script > info_visas.json > MACAO; notas_visas.json > notes 1,2,13,17",
+      "evidenceExcerpt": "MACAO: visa NO, simple and multiple maximum stay 30 days; note 13 restricts the row to nationals of the corresponding Special Administrative Region.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ar-cn-prc-ordinary-tourism-visa-required",
@@ -3317,15 +3350,20 @@
       "maxStayDays": null,
       "visaProductName": "Costa Rica consular visa — Group 3",
       "conditions": [
-        "哥斯达黎加移民局官方 Visas 页面说明，签证指引按外国人国籍决定是否需要签证、适用例外和入境要求，并链接 2025 年 11 月官方 Directriz General de Visas PDF。",
-        "2025 年 11 月 17 日官方《Gaceta》AJ-484-11-2025 将 República Popular China 列入第三组，规定该组为领事签证入境，签证一次入境，签发后须在 60 天内使用；领事签证通常最多准许停留 30 天，可按规定延长至 90 天。",
+        "本条保留 2025-11-17 官方公报历史证据；2026-10-21 中央 Visas 入口仍受阻，未证实该日期副本仍为现行版本，因此不续期，继续 REVIEW。",
+        "2025 年公报将中国列为第三组领事签证；该组一般最多停留 30 个自然日，可依法延长至 90 个自然日。未成年人及独立豁免另有分支，不能一律走成年普通领事路线。",
         "同一正式指引为中国公民设有临时旅游例外：成年、持北京或上海签发的护照，并符合 Protocolo Temporal para la promoción de Turismo de China 的，可免签入境，停留期限按旅行团安排且不超过 30 天；该例外不改变一般中国普通护照路线的领事签证要求。",
-        "另有条件例外：符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家居留，或申根 C/D 类多次入境签证，可能免办领事/受限签证；美国 C1/C2/C3 过境签不接受。"
+        "另有条件例外：符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家居留，或申根 C/D 类多次入境签证，可能免办领事/受限签证；美国 C1/C2/C3 过境签不接受。",
+        "该历史公报第三组写明护照至少 180 个自然日有效、盖章后在 60 个工作日（días hábiles）内使用；不能把工作日写成自然日，也不能把获准使用签证的窗口当作停留期限。",
+        "中国籍未成年人申请由受限签证委员会审理，不能套用成年人的一般领事签证流程；原文保留适用独立入境豁免的可能。成年人北京/上海护照的临时旅游便利另有旅行团条件，不能泛化。",
+        "历史例外须按原文核对：美国/加拿大多次签证或居留的有效状态、C1/C2/C3 排除、所列欧洲居留条件及申根 C/D 多次签证已生效等，不自动认定个体资格。"
       ],
       "status": "verified",
-      "sourceIds": ["cr-dgme-visas", "cr-gaceta-directrices-2025"],
-      "evidenceLocator": "Costa Rica official Gazette, AJ-484-11-2025, China and administrative-regions section, pp. 8-11",
-      "evidenceExcerpt": "The official guideline places China in the third group requiring a consular visa and separately describes a temporary tourism exception for adults with passports issued in Beijing or Shanghai, limited to the tour and no more than 30 days.",
+      "sourceIds": [
+        "cr-gaceta-directrices-2025"
+      ],
+      "evidenceLocator": "2025 Gazette AJ-484-11-2025 PDF pp.8-9 group III, p.12 China/SAR/minors, pp.14-16 exceptions; historical text reviewed, current applicability NOT renewed",
+      "evidenceExcerpt": "The official guideline places China in the third group requiring a consular visa and separately describes a temporary tourism exception for adults with passports issued in Beijing or Shanghai, limited to the tour and no more than 30 days. Historical PDF p.8 says 60 working days after stamping, not 60 calendar days; p.12 routes Chinese minors to the restricted-visa commission. The central current-version router remains blocked, so rule check/review dates are unchanged.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -3340,15 +3378,20 @@
       "maxStayDays": null,
       "visaProductName": "Costa Rica consular visa",
       "conditions": [
-        "哥斯达黎加移民局官方 Visas 页面说明，签证指引按外国人国籍决定是否需要签证、适用例外和入境要求，并链接 2025 年 11 月官方 Directriz General de Visas PDF。",
+        "本条保留 2025-11-17 官方公报历史证据；2026-10-21 中央 Visas 入口仍受阻，未证实该日期副本仍为现行版本，因此不续期，继续 REVIEW。",
         "2025 年 11 月 17 日官方《Gaceta》AJ-484-11-2025 的“中国及行政区域”条款明确：香港国民如不持有效英国护照，需领事签证，并适用中华人民共和国对应规定；香港特区护照不等同于该条提到的英国护照。",
         "符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家居留，或申根 C/D 类多次入境签证，可能触发免办领事/受限签证的例外；美国 C1/C2/C3 过境签不接受。",
-        "本条只覆盖香港特区普通护照，不扩展到香港签证身份书或其他旅行证件；正式指引未为该证件单独列出最长停留期。"
+        "本条只覆盖香港特区普通护照，不扩展到香港签证身份书或其他旅行证件；正式指引未为该证件单独列出最长停留期。",
+        "该历史公报第三组写明护照至少 180 个自然日有效、盖章后在 60 个工作日（días hábiles）内使用；不能把工作日写成自然日，也不能把获准使用签证的窗口当作停留期限。",
+        "中国籍未成年人申请由受限签证委员会审理，不能套用成年人的一般领事签证流程；原文保留适用独立入境豁免的可能。成年人北京/上海护照的临时旅游便利另有旅行团条件，不能泛化。",
+        "历史例外须按原文核对：美国/加拿大多次签证或居留的有效状态、C1/C2/C3 排除、所列欧洲居留条件及申根 C/D 多次签证已生效等，不自动认定个体资格。"
       ],
       "status": "verified",
-      "sourceIds": ["cr-dgme-visas", "cr-gaceta-directrices-2025"],
-      "evidenceLocator": "Costa Rica official Gazette, AJ-484-11-2025, China and administrative-regions section, p. 11",
-      "evidenceExcerpt": "The official guideline states that Hong Kong nationals without the referenced valid British passport require a consular visa and are subject to the corresponding China provisions; this rule is recorded for the HKSAR ordinary passport only.",
+      "sourceIds": [
+        "cr-gaceta-directrices-2025"
+      ],
+      "evidenceLocator": "2025 Gazette AJ-484-11-2025 PDF pp.8-9 group III, p.12 China/SAR/minors, pp.14-16 exceptions; historical text reviewed, current applicability NOT renewed",
+      "evidenceExcerpt": "The official guideline states that Hong Kong nationals without the referenced valid British passport require a consular visa and are subject to the corresponding China provisions; this rule is recorded for the HKSAR ordinary passport only. Historical PDF p.8 says 60 working days after stamping, not 60 calendar days; p.12 routes Chinese minors to the restricted-visa commission. The central current-version router remains blocked, so rule check/review dates are unchanged.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     },
@@ -3363,15 +3406,20 @@
       "maxStayDays": null,
       "visaProductName": "Costa Rica consular visa",
       "conditions": [
-        "哥斯达黎加移民局官方 Visas 页面说明，签证指引按外国人国籍决定是否需要签证、适用例外和入境要求，并链接 2025 年 11 月官方 Directriz General de Visas PDF。",
+        "本条保留 2025-11-17 官方公报历史证据；2026-10-21 中央 Visas 入口仍受阻，未证实该日期副本仍为现行版本，因此不续期，继续 REVIEW。",
         "2025 年 11 月 17 日官方《Gaceta》AJ-484-11-2025 的“中国及行政区域”条款明确：澳门国民如不持有效葡萄牙护照，需领事签证，并适用中华人民共和国对应规定；澳门特区护照不等同于该条提到的葡萄牙护照。",
         "符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家居留，或申根 C/D 类多次入境签证，可能触发免办领事/受限签证的例外；具体资格仍须按入境时有效文件核验。",
-        "本条只覆盖澳门特区普通护照，不扩展到澳门旅行证或其他旅行证件；正式指引未为该证件单独列出最长停留期。"
+        "本条只覆盖澳门特区普通护照，不扩展到澳门旅行证或其他旅行证件；正式指引未为该证件单独列出最长停留期。",
+        "该历史公报第三组写明护照至少 180 个自然日有效、盖章后在 60 个工作日（días hábiles）内使用；不能把工作日写成自然日，也不能把获准使用签证的窗口当作停留期限。",
+        "中国籍未成年人申请由受限签证委员会审理，不能套用成年人的一般领事签证流程；原文保留适用独立入境豁免的可能。成年人北京/上海护照的临时旅游便利另有旅行团条件，不能泛化。",
+        "历史例外须按原文核对：美国/加拿大多次签证或居留的有效状态、C1/C2/C3 排除、所列欧洲居留条件及申根 C/D 多次签证已生效等，不自动认定个体资格。"
       ],
       "status": "verified",
-      "sourceIds": ["cr-dgme-visas", "cr-gaceta-directrices-2025"],
-      "evidenceLocator": "Costa Rica official Gazette, AJ-484-11-2025, China and administrative-regions section, p. 11",
-      "evidenceExcerpt": "The official guideline states that Macao nationals without the referenced valid Portuguese passport require a consular visa and are subject to the corresponding China provisions; this rule is recorded for the Macao SAR ordinary passport only.",
+      "sourceIds": [
+        "cr-gaceta-directrices-2025"
+      ],
+      "evidenceLocator": "2025 Gazette AJ-484-11-2025 PDF pp.8-9 group III, p.12 China/SAR/minors, pp.14-16 exceptions; historical text reviewed, current applicability NOT renewed",
+      "evidenceExcerpt": "The official guideline states that Macao nationals without the referenced valid Portuguese passport require a consular visa and are subject to the corresponding China provisions; this rule is recorded for the Macao SAR ordinary passport only. Historical PDF p.8 says 60 working days after stamping, not 60 calendar days; p.12 routes Chinese minors to the restricted-visa commission. The central current-version router remains blocked, so rule check/review dates are unchanged.",
       "checkedAt": "2026-09-11",
       "reviewDueAt": "2026-10-11"
     }

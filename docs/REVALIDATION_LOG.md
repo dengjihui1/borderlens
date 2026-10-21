@@ -1,5 +1,24 @@
 # BorderLens 规则重新核验日志
 
+## Phase 72 · 拉美条件分支、期限单位与历史边界（2026-10-21）
+
+处理智利、秘鲁、哥伦比亚、哥斯达黎加共 12 条，其余 131 条不变。前三国 9 条取得当前证据，核验日期为 2026-10-21、复核截止为 2026-11-20；哥斯达黎加 3 条只校正历史条款，保留 2026-09-11 / 2026-10-11，不机械续期。全库 143 条、111 来源，108 条证据有效，32 条历史到期、3 条显式证据问题；有效证据中另有 3 条个体条件未决，查询为 105 当前结论、38 REVIEW。
+
+| 官方来源 | 本次直接证据与处理 |
+|---|---|
+| [智利领事选择器](https://serviciosconsulares.cl/tramites/site/tax/port/all/taxport_14___1.html)、其实际脚本加载的 [info_visas.json](https://serviciosconsulares.cl/consulados/stat/info_visas/info_visas.json) 和 [notas_visas.json](https://serviciosconsulares.cl/consulados/site/edic/base/port/notas_visas.json) | 三项当前公开数据正常读取。CHINA, REP. POPULAR 为 visa SI、上限 90 天；HONG KONG 为 NO / 90，MACAO 为 NO / 30。注 6 列中国符合条件美/加签证（排除 C 类/过境）或 Green Card、至少 6 个月有效的独立豁免。费用 0 不当免签，通用注释 90 天不覆盖澳门行 30 天；中国上限不是个人获批保证。登记两个新数据来源，三条均追溯选择器及两端点 |
+| [秘鲁驻伦敦领馆](https://www.consulado.pe/es/londres/tramite/Paginas/Visas/Issuance-of-Tourist-Visa.aspx) 与 [外交部普通护照要求表](https://www.consulado.pe/Documents/visas/Requerimientos_de_visa_para_ciudadanos_extranjeros.pdf) | 当前页面和 PDF 正常读取。PDF 物理第 3 页中国 SI/NO (*)，脚注 a 是列示第三国签证至少 6 个月，b 为上述地区永久居留；补上旧记录遗漏的 b。第 5 页 Hong Kong 为 TURISTA NO / HASTA 90 / NEGOCIOS SI，补旅游 90 天、不推广至商务；Macao 为 TURISTA SI，另有太平洋联盟永久居民独立旅游豁免。中国普通护照不将条件分支 180 天当所有访客统一许可 |
+| [哥伦比亚外交部入境 PDF](https://www.cancilleria.gov.co/sites/default/files/FOTOS2024/ENTRY%20TO%20COLOMBIA%20AND%20COURTESY%20VISA%20INFORMATION.pdf) 与 [驻港 FAQ](https://hongkong.consulado.gov.co/sala-de-prensa/noticias/30-preguntas-frecuentes-relativas-la-solicitud-y-expedicion-de-visas-extranjeros-para-colombia) | 正常读取。PDF 物理第 1/2 页中国美国/申根永久居留或相关签证超过 6 个月；另有不限国籍的太平洋联盟（智利/墨西哥/秘鲁）或安第斯共同体（玻利维亚/厄瓜多尔/秘鲁）永久居民豁免，补到中国和澳门。FAQ 明确香港旅游/过境免签、澳门一般需预先签证，但不排除独立永久居留分支。short stay 为 less than 90 days，香港 maxStayDays 改 null 并保留“少于 90 天”，不写包含第 90 天的统一许可或擅填 89 |
+| [哥斯达黎加中央入口](https://migracion.go.cr/visas/) 与 [ICODER 政府保存的 2025-11-17 指引副本](https://www.icoder.go.cr/fileadmin/documentos/tramites/visas/Directrices-Generales-de-Visas-Noviembre-2025-Alcance-148-Gaceta-N_-216-17-11-2025.pdf) | 中央入口正常 HTTPS 与 HTTP/1.1 均返回 Cloudflare 403，没有绕过。2025 PDF 可读但不能单独证明仍现行。物理第 8/12/15 页核对第三组护照 180 自然日、盖章后 60 工作日内使用（不是停留期），中国籍未成年人由受限签证委员会审理；北京/上海成年旅行团及第三国证件仍是独立例外。修正三条历史条件，来源仅引用历史 PDF，原日期保持过期，中央入口状态标 blocked |
+
+### 原文存证与视觉核验
+
+已渲染检查秘鲁物理第 3/5 页、哥伦比亚第 1/2 页、哥斯达黎加第 8/12/15 页的表头、脚注及关键文字；未只凭关键词命中形成结论。只读研究文件保存在忽略目录 `work/phase72/pdfs/`，不收入 Git 或部署包。SHA-256：
+
+- `pe-requirements.pdf`：`EF900088922311992182EEDA5C7FF1487CD75558334B6975DD0B1B0D0D71EE81`
+- `co-entry.pdf`：`8A0D9ACAEB5AB93B16938ADFA4C61B2FD12534F22A7389C75CC7B9A29D80E517`
+- `cr-directives.pdf`：`6F17796468E1441F560943B67D3483627D852E6ABD76AD15411C8BE29F6434A8`
+
 ## Phase 71 · 拉美四国与中国籍回乡证来源恢复（2026-10-21）
 
 复核墨西哥、巴拉圭、玻利维亚、巴西各三条，以及中国籍港澳居民回乡证两条，共 14 条；其余 129 条政策不变。全库 99 条证据有效、41 条历史到期、3 条明确证据问题。当前有效证据中有新西兰例外及港澳回乡证共 3 条个体条件仍需 REVIEW，因此查询为 96 条当前结论、47 条 REVIEW，不是将 14 条都自动放行。统一复核截止 2026-11-20。
