@@ -364,14 +364,22 @@ test('巴林当前官方落地签与在线签证名单共同支持中港澳三�
   }
 });
 
-test('老挝电子签对中国与港澳特区护照保留 30 天和指定口岸限制', async () => {
+test('老挝电子签边界与中国普通护照落地签分别建模', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const laos = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'la');
-  assert.equal(laos.length, 3);
-  for (const rule of laos) {
+  assert.equal(laos.length, 4);
+  const evisaRules = laos.filter((rule: PolicyFixture) => rule.id.endsWith('-evisa'));
+  assert.equal(evisaRules.length, 3);
+  for (const rule of evisaRules) {
     assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', 30]);
     assert.ok(rule.conditions.some((condition: string) => condition.includes('指定') && condition.includes('口岸')));
+    assert.ok(rule.sourceIds.includes('la-evisa-eligibility') && rule.sourceIds.includes('la-evisa-terms'));
   }
+  const chinaVoa = laos.find((rule: PolicyFixture) => rule.id === 'la-cn-prc-ordinary-tourism-voa')!;
+  assert.deepEqual([chinaVoa.status, chinaVoa.outcome, chinaVoa.maxStayDays, chinaVoa.checkedAt, chinaVoa.reviewDueAt], ['verified', 'visa_on_arrival', 30, '2026-10-21', '2026-11-20']);
+  assert.ok(chinaVoa.conditions.some((condition: string) => condition.includes('磨丁铁路口岸')));
+  assert.ok(chinaVoa.conditions.some((condition: string) => condition.includes('不得将此中国因私护照规则扩展')));
+  assert.ok(chinaVoa.sourceIds.includes('la-cn-consulate-private-passport-voa'));
 });
 
 test('缅甸电子签与航空落地签分开建模并执行试行期限门禁', async () => {
@@ -691,9 +699,9 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 126);
-  assert.equal(policies.rules.length, 146);
-  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 143);
+  assert.equal(registry.sources.length, 127);
+  assert.equal(policies.rules.length, 147);
+  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 144);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);
   assert.equal(registry.sources.filter((source: { id: string }) => source.id === 'hk-gov-ecuador-visa-free-90').length, 1);
 });

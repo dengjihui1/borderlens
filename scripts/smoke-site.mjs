@@ -8,10 +8,11 @@ const bhId = policies.rules.find((rule) => rule.destinationJurisdictionId === 'b
 const checks = [
   { path: '/', text: ['把证件和行程，逐段对上。', '生成逐段自查清单', '添加返程目的地', '仅当前页面，不保存'] },
   { path: '/demo', text: ['逐段演示规则已过期，历史结论已隐藏', '查询全部已录入证件规则'] },
-  { path: '/coverage', text: ['Phase 73', '各组规则的当前状态'] },
+  { path: '/coverage', text: ['Phase 82', '各组规则的当前状态'] },
   { path: '/policies', text: ['已有规则，真正查得到。', '下一页'], cards: 12 },
   { path: '/policies?page=12', text: ['上一页', '下一页'], cards: 12 },
-  { path: '/policies?page=13', text: ['上一页'], cards: 2 },
+  { path: '/policies?page=13', text: ['上一页'], cards: 3 },
+  { path: '/policies?destination=la&document=cn%3Aordinary_passport', text: ['la-cn-prc-ordinary-tourism-voa', 'USD 20', '磨丁铁路口岸'], cards: 2 },
   { path: '/policies?destination=jp&document=hk%3Ahksar_passport', text: ['当前证据有效', 'id="jp-hk-hksar-tourism-short-stay"'], cards: 1 },
   { path: '/policies?destination=bd&document=hk%3Ahksar_passport', text: ['证据不足、冲突或记录不完整', 'id="bd-hk-hksar-tourism-review"'], cards: 1, noText: ['查看官方证据定位与摘录'] },
   { path: '/policies?destination=bh', text: ['可按条件申请落地签', 'eVisa or visa on arrival', `id="${bhId}"`], cards: 3 },

@@ -1514,8 +1514,32 @@
       ],
       "evidenceLocator": "Lao eVisa > Who can apply: China; Terms IV, VI, VIII and IX",
       "evidenceExcerpt": "China appears in the official eligible-country list. Only ordinary passports are applicable; passport validity must be at least 6 months. Tourist Visa T-B3 permits 30 days, the approval letter is valid for 60 days, and entry is limited to designated ports.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
+    },
+    {
+      "id": "la-cn-prc-ordinary-tourism-voa",
+      "destinationJurisdictionId": "la",
+      "documentIssuerJurisdictionId": "cn",
+      "documentType": "ordinary_passport",
+      "purpose": "tourism",
+      "borderMode": "any",
+      "outcome": "visa_on_arrival",
+      "maxStayDays": 30,
+      "visaProductName": "Tourist Visa (B3) visa on arrival",
+      "conditions": [
+        "中国驻琅勃拉邦总领馆 2026-01-07 领事指南明确说明，中国公民持因私护照可在所列 13 个国际口岸申请 B3 落地旅游签；磨丁铁路口岸明确不办理落地签。出行前应按实际口岸复核。",
+        "指南列明落地签费用为 USD 20、入境后停留 30 天；护照须剩余有效期超过 6 个月、至少有 2 页空白页（不含备注页），并备 2 张近半年白底 35×45 mm 照片及现场填写的申请表和入境卡。",
+        "这是可申请的签证渠道，不保证签发或入境；不得将此中国因私护照规则扩展到香港或澳门特区护照。"
+      ],
+      "status": "verified",
+      "sourceIds": [
+        "la-cn-consulate-private-passport-voa"
+      ],
+      "evidenceLocator": "Consular guide > 签证入境 > 三、“B3”落地旅游签",
+      "evidenceExcerpt": "The consular guide lists 13 international ports for B3 tourist visa on arrival for Chinese citizens, excludes Boten Railway, and states USD 20 and 30 days; it specifies passport, blank-page and photo requirements.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "la-hk-hksar-tourism-evisa",
