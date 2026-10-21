@@ -2,6 +2,12 @@
 
 这份日志记录从点子到可运行产品的关键决策，重点不是手写代码，而是如何指挥 Codex 把高风险 Agent 做得可靠。
 
+## Phase 82｜老挝中国普通护照 B3 落地签（2026-10-21）
+
+新增中国普通护照 B3 落地签独立路线：官方领事指南确认 13 个可办口岸、磨丁铁路除外、USD 20、30 天及证件材料；eVisa 仍作为独立可申请路线。港澳只保留 eVisa 资格证据，因未找到同等级的港澳护照 VOA/整体免签结论仍在 REVIEW。覆盖页阶段标签、路线分页、总库统计和来源记录已同步更新。完整证据边界见 `docs/REVALIDATION_LOG.md` Phase 82。
+
+验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建）；本地构建 Worker 的 30 项 HTTP smoke 全部通过；`git diff --check` 通过。数据库为 248 个法域、127 个来源、147 条路线、131 条当前有效证据、128 条当前结论、19 条 REVIEW（13 条到期、3 条证据问题、3 条个体条件审核）。阶段提交 `cce1f05c4186ecea97aba623306349c621b721f5` 已推送 GitHub `main` 与 Sites 源仓库；仅所有者可见的 Site v82（saved version `appgprj_6a9f8a13f44481919bb7396f22ef6e1d~appgver_c0f6a1efcefc819199aa3ea809ff2352`，deployment `appgdep_6ad8f6c710fc8191978827030d11d396`）部署成功，URL 为 `https://borderlens-travel.dengjihuiii.chatgpt.site`。访问权限保持 custom allowlist 仅站点所有者，无外部访客。
+
 ## Phase 81｜巴林中国、香港与澳门旅游签证途径复核（2026-10-21）
 
 此前官方 eVisa 在线/落地签名单在研究端返回 403，因此三条历史路线进入 REVIEW。本轮重新读取两份官方国籍名单，确认 China、Hong Kong, China、Macao, China 同时出现在在线申请及落地签名单。三条路线改为有条件 `visa_on_arrival`，并保留在线 eVisa 备选；两页要求另行核对具体条款，故未猜测停留天数或个人获签资格。完整来源定位见 `docs/REVALIDATION_LOG.md` Phase 81。
