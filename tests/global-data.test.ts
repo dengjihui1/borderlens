@@ -52,11 +52,10 @@ test('Phase 70 当前官方证据续期八条路线并保留内地通行证的�
   }
 });
 
-test('受阻入口不机械续期；沙特中国与澳门路线由当前官方证据续期', async () => {
+test('不机械续期受阻路线；沙特及巴林按当前官方证据更新', async () => {
   const policies = await readJson('../data/policies.seed.json');
   for (const rule of (policies.rules as PolicyFixture[]).filter((rule) => rule.destinationJurisdictionId === 'bh')) {
-    assert.equal(rule.checkedAt, '2026-09-08');
-    assert.equal(rule.reviewDueAt, '2026-10-08');
+    assert.deepEqual([rule.outcome, rule.checkedAt, rule.reviewDueAt], ['visa_on_arrival', '2026-10-21', '2026-11-20']);
   }
   const saudiHongKong = (policies.rules as PolicyFixture[]).find((rule) => rule.id === 'sa-hk-hksar-tourism-evisa')!;
   assert.equal(saudiHongKong.outcome, 'visa_on_arrival');
@@ -348,14 +347,21 @@ test('柬埔寨 Visa T 保留电子签、护照有效期与 e-Arrival 要求', a
   }
 });
 
-test('巴林官网拒绝当前国籍表访问时不续期历史规则', async () => {
+test('巴林当前官方落地签与在线签证名单共同支持中港澳三类路线', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  const source = registry.sources.find((item: { id: string }) => item.id === 'bh-npra-online-visa-countries');
-  assert.deepEqual([source.status, source.checkedAt, source.lastAttemptedAt], ['verified', '2026-09-08', '2026-10-21']);
+  const online = registry.sources.find((item: { id: string }) => item.id === 'bh-npra-online-visa-countries');
+  const arrival = registry.sources.find((item: { id: string }) => item.id === 'bh-npra-onarrival-visa-countries');
+  assert.deepEqual([online.status, online.checkedAt, online.nextReviewAt], ['verified', '2026-10-21', '2026-11-20']);
+  assert.deepEqual([arrival.status, arrival.checkedAt, arrival.nextReviewAt], ['verified', '2026-10-21', '2026-11-20']);
   const bahrain = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'bh');
   assert.equal(bahrain.length, 3);
-  for (const rule of bahrain) assert.deepEqual([rule.checkedAt, rule.reviewDueAt], ['2026-09-08', '2026-10-08']);
+  for (const rule of bahrain) {
+    assert.deepEqual([rule.status, rule.outcome, rule.checkedAt, rule.reviewDueAt], ['verified', 'visa_on_arrival', '2026-10-21', '2026-11-20']);
+    assert.ok(rule.sourceIds.includes('bh-npra-online-visa-countries') && rule.sourceIds.includes('bh-npra-onarrival-visa-countries'));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('按条件') && condition.includes('具体资格')));
+    assert.equal(rule.maxStayDays, null);
+  }
 });
 
 test('老挝电子签对中国与港澳特区护照保留 30 天和指定口岸限制', async () => {
@@ -685,7 +691,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 125);
+  assert.equal(registry.sources.length, 126);
   assert.equal(policies.rules.length, 146);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 143);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);

@@ -2399,19 +2399,19 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
+      "outcome": "visa_on_arrival",
       "maxStayDays": null,
-      "visaProductName": "Bahrain online visa",
+      "visaProductName": "Bahrain visit visa (eVisa or visa on arrival)",
       "conditions": [
-        "巴林 NPRA 官方在线签证国家名单明确列出 China；在线名单页面提示须点击国家名称查看具体资格和条款。",
+        "巴林 NPRA 当前官方落地签名单明确列出 China，可按条件申请抵达签发；在线签证国家名单也列出 China。两个列表均提示条款适用并要求进一步核对具体资格，本条不代表无条件获签。",
         "巴林官方免责声明说明签证不保证入境，最终仍须满足抵达时的全部入境条件；本条不猜测停留天数。"
       ],
       "status": "verified",
-      "sourceIds": ["bh-npra-online-visa-countries"],
-      "evidenceLocator": "Bahrain eVisa > Countries Eligible to Get Visa Online > China",
-      "evidenceExcerpt": "The official online-visa country list includes China and says terms and conditions apply; the official disclaimer states that holding a visa does not guarantee entry.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["bh-npra-online-visa-countries", "bh-npra-onarrival-visa-countries"],
+      "evidenceLocator": "Bahrain eVisa > Countries Eligible to Get Visa on-Arrival > China; Countries Eligible to Get Visa Online > China",
+      "evidenceExcerpt": "Both current official route lists include China; the on-arrival list labels eligible nationalities for visa issuance on arrival and both pages require checking the country-specific terms.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bh-hk-hksar-tourism-evisa",
@@ -2420,19 +2420,19 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
+      "outcome": "visa_on_arrival",
       "maxStayDays": null,
-      "visaProductName": "Bahrain online visa",
+      "visaProductName": "Bahrain visit visa (eVisa or visa on arrival)",
       "conditions": [
-        "巴林 NPRA 官方在线签证国家名单明确列出 Hong Kong, China；在线名单页面提示须点击国家名称查看具体资格和条款。",
+        "巴林 NPRA 当前官方落地签名单明确列出 Hong Kong, China，可按条件申请抵达签发；在线签证国家名单也列出 Hong Kong, China。两个列表均提示条款适用并要求进一步核对具体资格，本条不代表无条件获签。",
         "巴林官方免责声明说明签证不保证入境，最终仍须满足抵达时的全部入境条件；本条不猜测停留天数。"
       ],
       "status": "verified",
-      "sourceIds": ["bh-npra-online-visa-countries"],
-      "evidenceLocator": "Bahrain eVisa > Countries Eligible to Get Visa Online > Hong Kong, China",
-      "evidenceExcerpt": "The official online-visa country list includes Hong Kong, China and says terms and conditions apply; the official disclaimer states that holding a visa does not guarantee entry.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["bh-npra-online-visa-countries", "bh-npra-onarrival-visa-countries"],
+      "evidenceLocator": "Bahrain eVisa > Countries Eligible to Get Visa on-Arrival > Hong Kong, China; Countries Eligible to Get Visa Online > Hong Kong, China",
+      "evidenceExcerpt": "Both current official route lists include Hong Kong, China; the on-arrival list labels eligible nationalities for visa issuance on arrival and both pages require checking the country-specific terms.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bh-mo-macao-sar-tourism-evisa",
@@ -2441,19 +2441,19 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
+      "outcome": "visa_on_arrival",
       "maxStayDays": null,
-      "visaProductName": "Bahrain online visa",
+      "visaProductName": "Bahrain visit visa (eVisa or visa on arrival)",
       "conditions": [
-        "巴林 NPRA 官方在线签证国家名单明确列出 Macao, China；在线名单页面提示须点击国家名称查看具体资格和条款。",
+        "巴林 NPRA 当前官方落地签名单明确列出 Macao, China，可按条件申请抵达签发；在线签证国家名单也列出 Macao, China。两个列表均提示条款适用并要求进一步核对具体资格，本条不代表无条件获签。",
         "巴林官方免责声明说明签证不保证入境，最终仍须满足抵达时的全部入境条件；本条不猜测停留天数。"
       ],
       "status": "verified",
-      "sourceIds": ["bh-npra-online-visa-countries"],
-      "evidenceLocator": "Bahrain eVisa > Countries Eligible to Get Visa Online > Macao, China",
-      "evidenceExcerpt": "The official online-visa country list includes Macao, China and says terms and conditions apply; the official disclaimer states that holding a visa does not guarantee entry.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["bh-npra-online-visa-countries", "bh-npra-onarrival-visa-countries"],
+      "evidenceLocator": "Bahrain eVisa > Countries Eligible to Get Visa on-Arrival > Macao, China; Countries Eligible to Get Visa Online > Macao, China",
+      "evidenceExcerpt": "Both current official route lists include Macao, China; the on-arrival list labels eligible nationalities for visa issuance on arrival and both pages require checking the country-specific terms.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "om-cn-prc-ordinary-tourism-review",

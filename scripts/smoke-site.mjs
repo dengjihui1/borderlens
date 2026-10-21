@@ -14,7 +14,7 @@ const checks = [
   { path: '/policies?page=13', text: ['上一页'], cards: 2 },
   { path: '/policies?destination=jp&document=hk%3Ahksar_passport', text: ['当前证据有效', 'id="jp-hk-hksar-tourism-short-stay"'], cards: 1 },
   { path: '/policies?destination=bd&document=hk%3Ahksar_passport', text: ['证据不足、冲突或记录不完整', 'id="bd-hk-hksar-tourism-review"'], cards: 1, noText: ['查看官方证据定位与摘录'] },
-  { path: '/policies?destination=bh', text: ['已过复核期限或日期无效', `id="${bhId}"`], cards: 3, noText: ['查看官方证据定位与摘录'] },
+  { path: '/policies?destination=bh', text: ['可按条件申请落地签', 'eVisa or visa on arrival', `id="${bhId}"`], cards: 3 },
   { path: '/policies?destination=qa', text: ['免签路线', '可选申请路线', '至少还有 3 个月'], cards: 3, noText: ['QAR 100'] },
   { path: '/policies?destination=om', text: ['免签路线', '最多 14 天', '不可延期'], cards: 3, noText: ['26A/26B'] },
   { path: '/policies?destination=mm&document=cn%3Aordinary_passport&mode=air', text: ['mm-cn-prc-ordinary-tourism-evisa', 'mm-cn-prc-ordinary-tourism-voa', '可按条件申请落地签'], cards: 2 },

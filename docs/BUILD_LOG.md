@@ -2,6 +2,12 @@
 
 这份日志记录从点子到可运行产品的关键决策，重点不是手写代码，而是如何指挥 Codex 把高风险 Agent 做得可靠。
 
+## Phase 81｜巴林中国、香港与澳门旅游签证途径复核（2026-10-21）
+
+此前官方 eVisa 在线/落地签名单在研究端返回 403，因此三条历史路线进入 REVIEW。本轮重新读取两份官方国籍名单，确认 China、Hong Kong, China、Macao, China 同时出现在在线申请及落地签名单。三条路线改为有条件 `visa_on_arrival`，并保留在线 eVisa 备选；两页要求另行核对具体条款，故未猜测停留天数或个人获签资格。完整来源定位见 `docs/REVALIDATION_LOG.md` Phase 81。
+
+新增 1 个官方来源记录，三条过期路线续期；全库现为 248 个法域、126 个来源、146 条路线、129 条当前有效证据、126 条当前结论、20 条 REVIEW（14 条过期、3 条证据问题、3 条个体条件审核）。`npm run check`（92 项测试、lint、TypeScript、数据校验、生产构建）与构建 Worker 的 29 项 HTTP smoke 均通过；`git diff --check` 通过。提交与 owner-only Site 部署结果随后补记。
+
 ## Phase 80｜沙特中国普通护照与澳门特区护照（2026-10-21）
 
 复核沙特中国普通护照与澳门特区护照两条旅游路线。沙特《旅游签证条例》现行正文第 2、4、5 条分别支持原则上须持签证（除非依法豁免）、落地签/eVisa/使馆等签发渠道及护照至少 6 个月有效；沙特 eVisa 官方条款当前将 China（including Hong Kong and Macau）列为可申请对象，并将旅游 eVisa 限为一年多次、最多 90 天。中国普通护照仍为 `visa_required`，但仅记录 eVisa 是已证实渠道，不声称必须提前申请或 eVisa 是唯一方式。澳门 DSI 目的地页明确澳门特区护照可落地签或在线申请，参考停留 90 天，故该路线改为 `visa_on_arrival`，并注明最终签发及停留由目的地主管机关决定。证据定位见 `docs/REVALIDATION_LOG.md` Phase 80。

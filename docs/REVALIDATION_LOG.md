@@ -1,5 +1,11 @@
 # BorderLens 规则重新核验日志
 
+## Phase 81 · 巴林中国、香港及澳门路线（2026-10-21）
+
+此前 Phase 68 在官方 eVisa 国籍名单均返回 403 时保留三条历史规则并让其进入 REVIEW。本次重新打开 [NPRA 在线签证国籍名单](https://www.evisa.gov.bh/list-of-online-visa-country.html) 和[落地签国籍名单](https://www.evisa.gov.bh/list-of-onarrival-visa-country.html)，两页当前均可读取。落地签表第 10–12 行提示条款适用、须进一步点击国家名称核对资格；第 37 行列 China、第 12 行列 Hong Kong, China、第 39 行列 Macao, China。在线名单相同地列出这三项（第 32、57、59 行）。[官方 eVisa 首页免责声明](https://www.evisa.gov.bh/)另说明签证及申请费用不保证获批或入境。
+
+据此三条路线更新为 `verified / visa_on_arrival`，并记录在线 eVisa 是并行申请途径；不写入单次停留天数，也不把国家名单当作无条件获签或确切个人资格。每条均连接上述两份路线名单，复核至 2026-11-20。此前“HTTP 403、不可续期”的记载保留为 2026-10-21 较早时点的历史访问记录，以体现官方源可达状态在同日发生变化。
+
 ## Phase 79 · 厄瓜多尔香港及澳门特区护照免签复核（2026-10-21）
 
 重新核对香港政府 1999-09-03 公告：厄瓜多尔与香港特区的免签安排自 1999-10-03 生效，HKSAR 护照访问最多 90 天；香港入境处当前对外参考表仍列 Ecuador、90 days，并明确最终以目的地入境机关决定。澳门政府《澳门年鉴 2025》附录九 America > Ecuador 行仍列 Macao SAR Passport 最长停留 90 天，而 Macao SAR Travel Permit 不适用；澳门政府 2017-03-27 公告记录厄瓜多尔驻华使馆通知澳门特区护照免签最多 90 天。
