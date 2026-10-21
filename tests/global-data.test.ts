@@ -27,13 +27,32 @@ test('Phase 70 当前官方证据续期八条路线并保留内地通行证的�
 
 test('受阻入口与未解决证据不机械续期或伪装为确定结论', async () => {
   const policies = await readJson('../data/policies.seed.json');
-  for (const rule of (policies.rules as PolicyFixture[]).filter((rule) => ['bh', 'sa'].includes(rule.destinationJurisdictionId ?? '') || rule.documentType === 'home_return_permit')) {
+  for (const rule of (policies.rules as PolicyFixture[]).filter((rule) => ['bh', 'sa'].includes(rule.destinationJurisdictionId ?? ''))) {
     assert.equal(rule.checkedAt, '2026-09-08');
     assert.equal(rule.reviewDueAt, '2026-10-08');
   }
   const conflicts = (policies.rules as PolicyFixture[]).filter((rule) => rule.status === 'draft');
   assert.equal(conflicts.length, 3);
   assert.ok(conflicts.every((rule) => rule.outcome === 'manual_review'));
+});
+
+test('Phase 71 复核拉美十二条及中国籍回乡证两条，回乡证仍为人工核验', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const registry = await readJson('../data/official-source-registry.json');
+  const rules = (policies.rules as PolicyFixture[]).filter((rule) => ['mx', 'py', 'bo', 'br'].includes(rule.destinationJurisdictionId ?? '') || rule.documentType === 'home_return_permit');
+  assert.equal(rules.length, 14);
+  for (const rule of rules) {
+    assert.equal(rule.checkedAt, '2026-10-21');
+    assert.equal(rule.reviewDueAt, '2026-11-20');
+  }
+  for (const rule of rules.filter((rule) => rule.documentType === 'home_return_permit')) {
+    assert.equal(rule.outcome, 'manual_review');
+    assert.deepEqual(rule.sourceIds, ['cn-nia-mainland-travel-permit']);
+    assert.ok(rule.conditions.some((line) => line.includes('符合申领条件不等于已持证')));
+  }
+  const source = registry.sources.find((source: { id: string }) => source.id === 'cn-nia-mainland-travel-permit');
+  assert.equal(source.url, 'https://www.nia.gov.cn/n741445/n741604/n1787219/n1795772/c1792480/content.html');
+  assert.match(source.notes, /gatjm.json/);
 });
 
 test('联合国 M49 目录包含全球法域且代码唯一', async () => {
@@ -477,6 +496,9 @@ test('墨西哥按中国普通、香港和澳门特区护照区分路线', async
   assert.equal(mexico.length, 3);
   const byType = new Map<string, PolicyFixture>(mexico.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['visa_required', null]);
+  assert.ok(byType.get('ordinary_passport')!.sourceIds.includes('mx-consulate-hk-visa-exemptions'));
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((line) => line.includes('不适用独立免签例外')));
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((line) => line.includes('有效多次入境') && line.includes('180 天')));
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
     assert.deepEqual([byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['visa_free', 90]);
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('护照')));
@@ -590,6 +612,7 @@ test('巴拉圭官方使馆页确认三类普通护照均需出发前签证', as
   for (const rule of paraguay) {
     assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', null]);
     assert.ok(rule.conditions.some((condition: string) => condition.includes('出发前') && condition.includes('签证')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('6 个月') && condition.includes('不是要求所有旅客到日本办理')));
   }
   assert.ok(paraguay.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('不扩展')) || rule.documentType === 'ordinary_passport'));
 });

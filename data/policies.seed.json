@@ -80,18 +80,17 @@
       "conditions": [
         "仅适用于具有中国国籍并符合回乡证申领条件的香港居民。",
         "香港居民身份证、香港特区护照与港澳居民来往内地通行证是不同证件，不能互相替代。",
-        "系统当前仍需结合实际口岸与证件有效状态人工确认。"
+        "系统当前仍需结合实际口岸与证件有效状态人工确认。",
+        "必须实际持有有效通行证；符合申领条件不等于已持证，非中国籍通行证也不能与本条混用。口岸、通道及证件状态仍须人工核验。"
       ],
       "status": "verified",
       "sourceIds": [
-        "cn-nia-mainland-travel-permit",
-        "hk-immd-travel-doc",
-        "global-iata-timatic"
+        "cn-nia-mainland-travel-permit"
       ],
-      "evidenceLocator": "国家移民管理局政务服务平台 > 港澳居民来往内地通行证签发服务指南 > 适用范围、申请条件及申请材料",
-      "evidenceExcerpt": "本指南适用于港澳居民申请港澳居民来往内地通行证；申请条件分别列明具有中国国籍的香港或澳门居民，并将居民身份证、特区护照和通行证作为不同证件处理。",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "国家移民管理局现行 港澳居民来往内地通行证签发服务指南 > 五、申请条件；七、申请材料",
+      "evidenceExcerpt": "现行政务平台公开 gatjm.json 目录指向本指南。五、申请条件分别列明具有中国国籍的港澳永久性居民、经批准赴港澳定居人员、已确立港澳永久身份的中国籍居民及加入/恢复中国国籍人员；七、材料将居民身份证、国籍证明、特区护照及通行证分别列示。申请条件本身不保证特定口岸或自动通道资格。",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "cn-mo-home-return-permit-route",
@@ -105,18 +104,17 @@
       "conditions": [
         "仅适用于具有中国国籍并符合回乡证申领条件的澳门居民。",
         "澳门居民身份证、澳门特区护照与港澳居民来往内地通行证是不同证件，不能互相替代。",
-        "实际口岸、通道及自动通关登记仍需复核。"
+        "实际口岸、通道及自动通关登记仍需复核。",
+        "必须实际持有有效通行证；符合申领条件不等于已持证，非中国籍通行证也不能与本条混用。口岸、通道及证件状态仍须人工核验。"
       ],
       "status": "verified",
       "sourceIds": [
-        "cn-nia-mainland-travel-permit",
-        "mo-gov-immigration",
-        "global-iata-timatic"
+        "cn-nia-mainland-travel-permit"
       ],
-      "evidenceLocator": "国家移民管理局政务服务平台 > 港澳居民来往内地通行证签发服务指南 > 适用范围、申请条件及申请材料",
-      "evidenceExcerpt": "本指南适用于港澳居民申请港澳居民来往内地通行证；申请条件分别列明具有中国国籍的香港或澳门居民，并将居民身份证、特区护照和通行证作为不同证件处理。",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "国家移民管理局现行 港澳居民来往内地通行证签发服务指南 > 五、申请条件；七、申请材料",
+      "evidenceExcerpt": "现行政务平台公开 gatjm.json 目录指向本指南。五、申请条件分别列明具有中国国籍的港澳永久性居民、经批准赴港澳定居人员、已确立港澳永久身份的中国籍居民及加入/恢复中国国籍人员；七、材料将居民身份证、国籍证明、特区护照及通行证分别列示。申请条件本身不保证特定口岸或自动通道资格。",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "nz-hk-hksar-tourism-visa-waiver",
@@ -2639,16 +2637,20 @@
       "maxStayDays": null,
       "visaProductName": "Visitor visa without permission to perform remunerated activities",
       "conditions": [
-        "墨西哥国家移民局官方页面的需签证国家名单包含 China，并说明名单所列国家国民在任何入境条件下前往墨西哥均须取得签证。",
-        "旅游、商务或其他非营利活动应按官方说明申请不允许从事有报酬活动的访问者签证；本条不推断具体签发期限。",
-        "官方页面同时要求抵达时持有效护照或符合国际法的旅行证件，并提示陆路入境需填写 FMM；具体入境材料由移民官按行程核验。"
+        "本条为不适用独立免签例外的中国普通护照旅客的一般路线：墨西哥国家移民局需签证国家名单明确列出 China，非营利旅游等应按适用访问者签证办理。",
+        "驻港领馆当前同时列明：持有效多次入境美、加、日、英或申根签证，或领馆所列国家的永久居留证明等，可能按独立豁免路线以旅游或商务目的访问最多 180 天。必须核对原文列明的证件、有效状态和用途，不能由国籍或英国居留勾选项自动判断。",
+        "APEC 商务旅行卡（背面 MEX）、航空机组及船员证明等另有专门分支，须按真实证件和用途核验；这些例外不能与港澳特区护照自身 90 天安排混为一谈。",
+        "本条不替旅客认定第三国资格，也不把例外的 180 天写成签证访客的统一停留期限；口岸材料和最终准许停留仍由墨西哥移民机关决定。"
       ],
       "status": "verified",
-      "sourceIds": ["mx-inm-visa-required"],
-      "evidenceLocator": "Mexico INM > Países y regiones que requieren visa para viajar a México > official country-list image; visitor without permission for remunerated activities",
-      "evidenceExcerpt": "The official INM page says nationals of the listed countries or regions must obtain a visa under any entry condition; the attached list includes China. For tourism, business or other unpaid activities it directs applicants to a visitor visa without permission to perform remunerated activities.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "mx-inm-visa-required",
+        "mx-consulate-hk-visa-exemptions"
+      ],
+      "evidenceLocator": "INM Países y regiones que requieren visa > China; Mexico Consulate Hong Kong > Mexican Visa Exemptions > any foreign national, points a-e",
+      "evidenceExcerpt": "INM lists China among visa-required nationalities. The consular page also states that any foreign national with specified valid multiple-entry visas or listed permanent-residence documents will not require a Mexican tourist/business visa for up to 180 days, with separate ABTC and crew branches. Hong Kong and Macao passport holders have their own up-to-90-day exemption.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mx-hk-hksar-tourism-visa-exemption",
@@ -2665,11 +2667,13 @@
         "免签不等于保证入境，仍须在口岸满足墨西哥移民机关的入境条件。"
       ],
       "status": "verified",
-      "sourceIds": ["mx-consulate-hk-visa-exemptions"],
+      "sourceIds": [
+        "mx-consulate-hk-visa-exemptions"
+      ],
       "evidenceLocator": "Consulate General of Mexico in Hong Kong > Mexican Visa Exemptions",
       "evidenceExcerpt": "Hong Kong and Macao passport holders do not require a visa to enter Mexico for up to 90 days for tourism, transit or business purposes.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mx-mo-macao-sar-tourism-visa-exemption",
@@ -2686,11 +2690,13 @@
         "免签不等于保证入境，仍须在口岸满足墨西哥移民机关的入境条件。"
       ],
       "status": "verified",
-      "sourceIds": ["mx-consulate-hk-visa-exemptions"],
+      "sourceIds": [
+        "mx-consulate-hk-visa-exemptions"
+      ],
       "evidenceLocator": "Consulate General of Mexico in Hong Kong > Mexican Visa Exemptions",
       "evidenceExcerpt": "Hong Kong and Macao passport holders do not require a visa to enter Mexico for up to 90 days for tourism, transit or business purposes.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "br-cn-prc-ordinary-tourism-visa-required",
@@ -2708,11 +2714,14 @@
         "具体材料、领区、有效期和最终入境条件仍须按巴西外交部及对应领事馆的最新要求核验。"
       ],
       "status": "verified",
-      "sourceIds": ["br-mre-visa-requirements-country-list", "br-mre-hk-tourist-visa"],
+      "sourceIds": [
+        "br-mre-visa-requirements-country-list",
+        "br-mre-hk-tourist-visa"
+      ],
       "evidenceLocator": "Brazil MFA > Visa requirements by country > China; Consulate General of Brazil in Hong Kong > Tourist Visa > Who can apply",
       "evidenceExcerpt": "The official China entry says diplomatic and official passport holders have a stated exemption, while all other passport types require a visa before entering Brazil. The official tourist-visa page identifies VIVIS for tourism and other unpaid visitor activities.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "br-hk-hksar-tourism-visa-exemption",
@@ -2729,11 +2738,13 @@
         "官方页面明确香港特区签证身份书持有人仍需申请入境签证。"
       ],
       "status": "verified",
-      "sourceIds": ["br-mre-hk-tourist-visa"],
+      "sourceIds": [
+        "br-mre-hk-tourist-visa"
+      ],
       "evidenceLocator": "Consulate General of Brazil in Hong Kong > Tourist Visa > Exemptions",
       "evidenceExcerpt": "Holders of Hong Kong SAR passports are exempt from Visitor Visa for tourism, transit or business purposes for stays of up to 90 days; holders of the Hong Kong SAR Document of Identity for Visa Purposes require an entry visa.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "br-mo-macao-sar-tourism-visa-exemption",
@@ -2750,11 +2761,13 @@
         "官方页面明确澳门旅行证持有人仍需申请入境签证。"
       ],
       "status": "verified",
-      "sourceIds": ["br-mre-hk-tourist-visa"],
+      "sourceIds": [
+        "br-mre-hk-tourist-visa"
+      ],
       "evidenceLocator": "Consulate General of Brazil in Hong Kong > Tourist Visa > Exemptions",
       "evidenceExcerpt": "Holders of Macao SAR passports are exempt from Visitor Visa for tourism, transit or business purposes for stays of up to 90 days; holders of a Macao Travel Permit require an entry visa.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "pe-cn-prc-ordinary-tourism-visa-exception",
@@ -3159,14 +3172,17 @@
       "conditions": [
         "巴拉圭驻日本大使馆官方签证页列出短期免签国籍名单，并规定未列入名单的国籍必须在出发前取得签证。",
         "该官方页面将 People's Republic of China 列入签证申请要求所覆盖的居住地/申请人范围；中国普通护照旅游应按巴拉圭非居民签证路线办理。",
-        "本条只确认普通护照基础路线需要预先签证，不推断签证签发期限、获准停留期或最终入境裁量。"
+        "本条只确认普通护照基础路线需要预先签证，不推断签证签发期限、获准停留期或最终入境裁量。",
+        "本页一般要求护照自入境巴拉圭之日起至少还有 6 个月有效期。日本使馆所列领区及面见流程不是要求所有旅客到日本办理；须按真实居住地确认适用领馆。"
       ],
       "status": "verified",
-      "sourceIds": ["py-embassy-japan-visa"],
-      "evidenceLocator": "Paraguay Embassy in Japan > Visa > Non-resident visa > III. Countries not mentioned above",
-      "evidenceExcerpt": "The official embassy page says nationals of countries not listed in the short-visit exemption section must obtain a visa before travel, and names the People's Republic of China among places covered by the consular application requirements.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "py-embassy-japan-visa"
+      ],
+      "evidenceLocator": "Paraguay Embassy Japan > COMMON PASSPORT HOLDER > NON-RESIDENT VISA I (closed exemption list), II (VOA list), III (countries not mentioned above), passport-validity rule",
+      "evidenceExcerpt": "The ordinary-passport page provides the full visa-exempt and visa-on-arrival lists, then explicitly states that nationals of countries not mentioned above MUST OBTAIN A VISA prior to travel. PRC, Hong Kong and Macao are not in either list and are named in the consular application scope. As a general rule passports must be valid for six months beyond the entry date.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "py-hk-hksar-tourism-visa-required",
@@ -3181,14 +3197,17 @@
       "conditions": [
         "巴拉圭驻日本大使馆官方短期免签名单未列 Hong Kong；同一页面规定未列入名单的国籍必须在出发前取得签证。",
         "该官方页面在签证申请要求中明确提到 Hong Kong；本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件。",
-        "页面未给出本路线签发期限或获准停留期，因此不填写天数；最终入境仍由巴拉圭边境机关决定。"
+        "页面未给出本路线签发期限或获准停留期，因此不填写天数；最终入境仍由巴拉圭边境机关决定。",
+        "本页一般要求护照自入境巴拉圭之日起至少还有 6 个月有效期。日本使馆所列领区及面见流程不是要求所有旅客到日本办理；须按真实居住地确认适用领馆。"
       ],
       "status": "verified",
-      "sourceIds": ["py-embassy-japan-visa"],
-      "evidenceLocator": "Paraguay Embassy in Japan > Visa > Non-resident visa > III. Countries not mentioned above; application requirements mention Hong Kong",
-      "evidenceExcerpt": "Hong Kong is not in the official short-visit visa-exemption list; the page states that nationals of countries not mentioned there must obtain a visa before travel and includes Hong Kong in the consular application requirements.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "py-embassy-japan-visa"
+      ],
+      "evidenceLocator": "Paraguay Embassy Japan > COMMON PASSPORT HOLDER > NON-RESIDENT VISA I (closed exemption list), II (VOA list), III (countries not mentioned above), passport-validity rule",
+      "evidenceExcerpt": "The ordinary-passport page provides the full visa-exempt and visa-on-arrival lists, then explicitly states that nationals of countries not mentioned above MUST OBTAIN A VISA prior to travel. PRC, Hong Kong and Macao are not in either list and are named in the consular application scope. As a general rule passports must be valid for six months beyond the entry date.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "py-mo-macao-sar-tourism-visa-required",
@@ -3203,14 +3222,17 @@
       "conditions": [
         "巴拉圭驻日本大使馆官方短期免签名单未列 Macao；同一页面规定未列入名单的国籍必须在出发前取得签证。",
         "该官方页面在签证申请要求中明确提到 Macao；本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件。",
-        "页面未给出本路线签发期限或获准停留期，因此不填写天数；最终入境仍由巴拉圭边境机关决定。"
+        "页面未给出本路线签发期限或获准停留期，因此不填写天数；最终入境仍由巴拉圭边境机关决定。",
+        "本页一般要求护照自入境巴拉圭之日起至少还有 6 个月有效期。日本使馆所列领区及面见流程不是要求所有旅客到日本办理；须按真实居住地确认适用领馆。"
       ],
       "status": "verified",
-      "sourceIds": ["py-embassy-japan-visa"],
-      "evidenceLocator": "Paraguay Embassy in Japan > Visa > Non-resident visa > III. Countries not mentioned above; application requirements mention Macao",
-      "evidenceExcerpt": "Macao is not in the official short-visit visa-exemption list; the page states that nationals of countries not mentioned there must obtain a visa before travel and includes Macao in the consular application requirements.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "py-embassy-japan-visa"
+      ],
+      "evidenceLocator": "Paraguay Embassy Japan > COMMON PASSPORT HOLDER > NON-RESIDENT VISA I (closed exemption list), II (VOA list), III (countries not mentioned above), passport-validity rule",
+      "evidenceExcerpt": "The ordinary-passport page provides the full visa-exempt and visa-on-arrival lists, then explicitly states that nationals of countries not mentioned above MUST OBTAIN A VISA prior to travel. PRC, Hong Kong and Macao are not in either list and are named in the consular application scope. As a general rule passports must be valid for six months beyond the entry date.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bo-cn-prc-ordinary-tourism-visa-required",
@@ -3228,11 +3250,13 @@
         "本条仅确认中国普通护照的旅游签证申请路线；该页面没有给出 Group II 获准停留期或确定费用，因此不补填天数。"
       ],
       "status": "verified",
-      "sourceIds": ["bo-embassy-uk-visa-groups"],
+      "sourceIds": [
+        "bo-embassy-uk-visa-groups"
+      ],
       "evidenceLocator": "Embassy of Bolivia in London > Visa Grupos 1-2-3 > Tourist Visa Group II; country table row China (including Hong Kong, Taiwan, Macao)",
       "evidenceExcerpt": "The official embassy page lists CHINA (INCLUDING HONG KONG, TAIWAN, MACAO) under Tourist Visa Group II and provides the Group II application requirements and consular appointment process.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bo-hk-hksar-tourism-visa-required",
@@ -3250,11 +3274,13 @@
         "本条仅覆盖香港特区护照，不扩展到香港签证身份书或其他旅行证件；页面没有给出 Group II 获准停留期，因此不补填天数。"
       ],
       "status": "verified",
-      "sourceIds": ["bo-embassy-uk-visa-groups"],
+      "sourceIds": [
+        "bo-embassy-uk-visa-groups"
+      ],
       "evidenceLocator": "Embassy of Bolivia in London > Visa Grupos 1-2-3 > Tourist Visa Group II; country table row China (including Hong Kong, Taiwan, Macao)",
       "evidenceExcerpt": "The official embassy page lists CHINA (INCLUDING HONG KONG, TAIWAN, MACAO) under Tourist Visa Group II and provides the Group II application requirements and consular appointment process.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bo-mo-macao-sar-tourism-visa-required",
@@ -3272,11 +3298,13 @@
         "本条仅覆盖澳门特区护照，不扩展到澳门旅行证或其他旅行证件；页面没有给出 Group II 获准停留期，因此不补填天数。"
       ],
       "status": "verified",
-      "sourceIds": ["bo-embassy-uk-visa-groups"],
+      "sourceIds": [
+        "bo-embassy-uk-visa-groups"
+      ],
       "evidenceLocator": "Embassy of Bolivia in London > Visa Grupos 1-2-3 > Tourist Visa Group II; country table row China (including Hong Kong, Taiwan, Macao)",
       "evidenceExcerpt": "The official embassy page lists CHINA (INCLUDING HONG KONG, TAIWAN, MACAO) under Tourist Visa Group II and provides the Group II application requirements and consular appointment process.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "cr-cn-prc-ordinary-tourism-visa-required",

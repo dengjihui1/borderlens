@@ -1,5 +1,23 @@
 # BorderLens 规则重新核验日志
 
+## Phase 71 · 拉美四国与中国籍回乡证来源恢复（2026-10-21）
+
+复核墨西哥、巴拉圭、玻利维亚、巴西各三条，以及中国籍港澳居民回乡证两条，共 14 条；其余 129 条政策不变。全库 99 条证据有效、41 条历史到期、3 条明确证据问题。当前有效证据中有新西兰例外及港澳回乡证共 3 条个体条件仍需 REVIEW，因此查询为 96 条当前结论、47 条 REVIEW，不是将 14 条都自动放行。统一复核截止 2026-11-20。
+
+| 官方来源 | 本次证据与处理 |
+|---|---|
+| [墨西哥 INM 需签证名单](https://www.inm.gob.mx/gobmx/word/index.php/paises-requieren-visa-para-mexico/) 与 [驻港签证豁免](https://consulmex.sre.gob.mx/hongkong/index.php/for-foreigners/visa-exemptions) | 两页已正常 HTTPS 返回 200 并读取正文。China 在一般需签证名单，港澳护照在领馆条目为旅游/过境/商务最多 90 天免签。同一领馆页另明确任何外籍旅客持列示有效多次入境美/加/日/英/申根签证、指定国家永久居留等独立豁免路径，最长 180 天。中国普通护照条目不再是无例外的强制签证结论；不将例外停留期写成所有签证访客的统一期限，也不自动认定用户持有第三国资格 |
+| [巴拉圭驻日本使馆 Visa](https://embapar.jp/en/sc/visa/) | HTTP 200，读取 COMMON PASSPORT HOLDER 的完整 I 免签表、II 落地签表及 III catch-all 要求。中国、香港、澳门不在前两张有限列表中，III 明确未列国籍必须出发前签证；不是仅凭居住地/领区材料清单推断。页面一般要求护照入境日起至少 6 个月，领区和面见流程不等于所有中国旅客必须到日本办签；没有据他国条目补填停留期 |
+| [玻利维亚驻英国使馆分组表](https://bolivianembassy.co.uk/visa-grupos-1-2-3/) | HTTP 200，明确 TOURIST VISA GROUP II 下列 CHINA (INCLUYENDO HONG KONG, TAIWAN, MACAO)，并有六个月护照有效期、航班、住宿/邀请、银行记录、黄热病证明、照片及预约要求。三类普通护照继续 Group II 申请路线；Group I 的免签和 Group III 的天数/费用不能套用 |
+| [巴西外交部国别表](https://www.gov.br/mre/pt-br/embaixada-abu-dhabi/abu-dhabi-arquivos/english/consular-services/visa/visa-requirements-by-country/visa-requirements-by-country-list-of-countries) 与 [驻港 Tourist Visa](https://www.gov.br/mre/pt-br/consulado-hong-kong/english/consular-services/visas/tourist-visa) | HTTP 200。China 段明确外交/公务护照以外其他类型须签证，VIVIS 用于无巴西公司报酬的旅游等访问。驻港原文明确港澳 SAR 护照最多 90 天免 Visitor Visa，香港身份书/澳门旅行证必须签证；本批不扩展到这些特殊证件。该领馆 HKID/Macao BIR 申请领区条件不是对所有免签入境旅客的附加居留要求 |
+| [国家移民管理局现行签发指南](https://www.nia.gov.cn/n741445/n741604/n1787219/n1795772/c1792480/content.html) | 原旧地址 404 后，跟随政务首页实际 meta redirect 到 `/zwfwpt/`，从页面发布的 `niaService` 模块找到公开 [港澳台目录 JSON](https://s.nia.gov.cn/zwfwpt/api/newsapi/gatjm.json)，再跟随目录中精确的指南 URL。现行指南 HTTP 200；五、申请条件明确中国国籍及港澳居民类别，七、材料分别处理居民身份证、国籍证明、特区护照和通行证。更新原来源 URL，不新建重复来源；两条证据续期但继续 `manual_review`，申请资格不等于实际持证或自动通关许可 |
+
+### 访问和未解决边界
+
+- 墨西哥领馆首次读取成功并取得以上正文，后续补读发生传输 EOF；最后用正常证书验证的 curl HTTP/1.1 成功完整读取 a-e，确认包括航空及船舶机组专门分支，页面标注更新于 2026-01-11。没有关闭证书验证或伪装所有请求成功。
+- 阿根廷当前国别表可读取，普通旅游列对中国为 REQUIERE VISA、美国签证/Green CARD 列为 HABILITADO；港澳行为空。仅凭空格或未解释的 HABILITADO 不能给出完整现行豁免结论，因此三条原日期保留，未机械续期。
+- 本批公开 JSON 仅用于找到国家移民管理局正式公开指南，没有登录、提交、办理、上传或调用个人证件接口。
+
 ## Phase 70 · 修正产品查询误读与继续复核（2026-10-21）
 
 确认阿曼 3 条、卡塔尔 3 条、内地非中国籍港澳永久居民通行证 2 条，共 8 条当前规则。全库仍为 143 条，85 条证据在窗口内（其中 1 条个人条件仍需核验）、55 条历史到期、3 条明确证据问题；查询为 84 条当前结论和 59 条 REVIEW。八条规则统一复核截止 2026-11-20，其余 135 条保持原样。
