@@ -10,7 +10,7 @@
 
 三条规则与来源台账同步更新，新增五个官方来源记录；规则查询从 105 条当前结论/38 条 REVIEW 更新为 108 条/35 条。全库 143 条路线、116 个来源；111 条证据在复核窗口内（包括 3 条个人条件仍需人工核验），29 条历史到期，3 条证据问题仍保留 REVIEW。
 
-验证：`npm run check` 通过（91 项测试、lint、TypeScript、数据校验、生产构建）；`git diff --check` 通过。正式构建 Worker 的 26 项 HTTP smoke 全部通过，覆盖首页、旧演示、覆盖页、规则查询及分页/参数边界。正式 GitHub 推送与私有 Site 部署状态在本阶段交付时确认。
+验证：`npm run check` 通过（91 项测试、lint、TypeScript、数据校验、生产构建）；`git diff --check` 通过。正式构建 Worker 的 26 项 HTTP smoke 全部通过，覆盖首页、旧演示、覆盖页、规则查询及分页/参数边界。阶段提交 `0ac54f0ec709b53fd0e88f1096ce32d0affdd2e7` 已推送并核实在 GitHub `origin/main`。Sites 源仓库同步与私有部署未完成：两次 Sites source helper 均因当前环境无法连接 `git.chatgpt-team.site:443` 超时退出；Sites 最新版本仍为 72，源 SHA 仍是上一阶段 `dce1b988a7ff88e7f5d60406d8a7f5f6d3f0294b`。站点访问策略核验为 owner-only custom allowlist。未创建 Phase 74 Site 归档或部署；需在 Sites Git remote 可达后以本阶段完整 SHA 重试同步、打包和 owner-private 发布。
 
 ## Phase 73｜统筹交付：完整库逐段自查闭环（2026-10-21）
 
