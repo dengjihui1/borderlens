@@ -53,10 +53,20 @@ test('Phase 70 当前官方证据续期八条路线并保留内地通行证的�
 
 test('受阻入口与未解决证据不机械续期或伪装为确定结论', async () => {
   const policies = await readJson('../data/policies.seed.json');
-  for (const rule of (policies.rules as PolicyFixture[]).filter((rule) => ['bh', 'sa'].includes(rule.destinationJurisdictionId ?? ''))) {
+  for (const rule of (policies.rules as PolicyFixture[]).filter((rule) => rule.destinationJurisdictionId === 'bh'
+    || rule.id === 'sa-cn-prc-ordinary-tourism-evisa' || rule.id === 'sa-mo-macao-sar-tourism-evisa')) {
     assert.equal(rule.checkedAt, '2026-09-08');
     assert.equal(rule.reviewDueAt, '2026-10-08');
   }
+  const saudiHongKong = (policies.rules as PolicyFixture[]).find((rule) => rule.id === 'sa-hk-hksar-tourism-evisa')!;
+  assert.equal(saudiHongKong.outcome, 'visa_on_arrival');
+  assert.equal(saudiHongKong.maxStayDays, 90);
+  assert.deepEqual([saudiHongKong.checkedAt, saudiHongKong.reviewDueAt], ['2026-10-21', '2026-11-20']);
+  assert.deepEqual(saudiHongKong.sourceIds, ['hk-immd-saudi-visa-on-arrival', 'hk-immd-visa-free-list-2026-10-16']);
+  assert.ok(saudiHongKong.conditions.some((line) => line.includes('6 个指定口岸')));
+  assert.ok(saudiHongKong.conditions.some((line) => line.includes('单次') && line.includes('30 天') && line.includes('多次') && line.includes('90 天')));
+  const registry = await readJson('../data/official-source-registry.json');
+  for (const sourceId of saudiHongKong.sourceIds) assert.ok(registry.sources.some((source: { id: string; status: string }) => source.id === sourceId && source.status === 'verified'));
   const conflicts = (policies.rules as PolicyFixture[]).filter((rule) => rule.status === 'draft');
   assert.equal(conflicts.length, 3);
   assert.ok(conflicts.every((rule) => rule.outcome === 'manual_review'));
@@ -479,7 +489,9 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
     assert.ok(!JSON.stringify(rule).includes('QAR 100'));
   }
   assert.deepEqual([byId.get('sa-cn-prc-ordinary-tourism-evisa')!.outcome, byId.get('sa-cn-prc-ordinary-tourism-evisa')!.maxStayDays], ['visa_required', 90]);
-  assert.equal(byId.get('sa-hk-hksar-tourism-evisa')!.conditions.some((condition: string) => condition.includes('Hong Kong')), true);
+  assert.deepEqual([byId.get('sa-hk-hksar-tourism-evisa')!.outcome, byId.get('sa-hk-hksar-tourism-evisa')!.maxStayDays], ['visa_on_arrival', 90]);
+  assert.ok(byId.get('sa-hk-hksar-tourism-evisa')!.conditions.some((condition: string) => condition.includes('6 个指定口岸')));
+  assert.ok(byId.get('sa-mo-macao-sar-tourism-evisa')!.reviewDueAt < '2026-10-21');
   const oman = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'om');
   assert.equal(oman.length, 3);
   assert.deepEqual([byId.get('om-cn-prc-ordinary-tourism-review')!.status, byId.get('om-cn-prc-ordinary-tourism-review')!.outcome, byId.get('om-cn-prc-ordinary-tourism-review')!.maxStayDays], ['verified', 'visa_free', 14]);
@@ -653,7 +665,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 117);
+  assert.equal(registry.sources.length, 118);
   assert.equal(policies.rules.length, 143);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 140);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);

@@ -10,9 +10,9 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 
 ## 最近政策证据
 
-核验日期：2026-10-21（Phase 72 续期智利、秘鲁、哥伦比亚 9 条；哥斯达黎加 3 条仅校正历史记录、不续期）；既有规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
+核验日期：2026-10-21（最新 Phase 77 复核沙特 HKSAR 普通护照落地签路线；Phase 72 续期智利、秘鲁、哥伦比亚 9 条；哥斯达黎加 3 条仅校正历史记录、不续期）；其他规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
 
-截至本批当前有效证据 108 条，其中新西兰例外及港澳回乡证共 3 条需个体条件核验；另有 32 条历史到期和 3 条显式证据问题。查询口径为 105 条当前结论、38 条 REVIEW。本批九条续期至 2026-11-20，补全秘鲁、哥伦比亚的永久居留独立分支，按智利当前官方 JSON 核对各护照及备注；哥斯达黎加中央入口受阻，2025 年有日期副本不单独证明现行版本。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决。证据定位和下一步要求见 `REVALIDATION_LOG.md`。
+截至 Phase 77，当前有效证据 117 条，其中 3 条需个体条件核验；另有 23 条历史到期和 3 条显式证据问题。查询口径为 114 条当前结论、29 条 REVIEW。最新批次只更新沙特 HKSAR 普通护照落地签路线；中国与澳门沙特路线仍因完整入境要求证据不足而过期。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决。证据定位和下一步要求见 `REVALIDATION_LOG.md`。
 
 下表保留结构化规则的历史范围，不代表每一行目前仍有效；当日是否可用以规则自身的 `reviewDueAt` 和运行时门禁为准。覆盖率卡片含过期或待复核路线时，不展示旧的整组确定性结论。
 
@@ -44,7 +44,8 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 | 阿联酋 | 香港特区护照 | 当前外交部卡片标为 Visa Free；期限未填 | 不扩展到签证身份书或其他证件；卡片未给出停留期限 |
 | 阿联酋 | 澳门特区护照 | REVIEW：官方证据冲突 | 阿联酋外交部当前卡片标为 Visa Required，澳门官方年鉴列 30 天免签；须确认后才能给出结论 |
 | 卡塔尔 | 中国普通护照、香港/澳门特区护照 | 免签入境，或可选 Hayya A1 | 三个国籍选项均映射 A1-3，其独立条件块明确 Enter visa-free；护照至少 3 个月有效，停留天数未给，不套用其他分支的费用与酒店要求 |
-| 沙特 | 中国普通护照、香港/澳门特区护照 | 旅游电子签，最多 90 天 | 官方 Eligible Countries 写明 China including Hong Kong and Macau；一年多次入境，Umrah 不含 Hajj |
+| 沙特 | 香港特区护照 | 可在指定口岸申请落地旅游签，最多 90 天 | 六个指定口岸；单次最多 30 天/多次最多 90 天；亦可行前申请 eVisa；以沙特现行要求和入境官裁量为准 |
+| 沙特 | 中国普通护照、澳门特区护照 | REVIEW（历史结论已过期） | eVisa 资格或澳门历史待遇不能单独证明完整当前入境路线；不与 HKSAR 护照互相类推 |
 | 巴林 | 中国普通护照、香港/澳门特区护照 | 官方在线签证路线 | NPRA 在线国家名单分别列出 China、Hong Kong, China、Macao, China；具体条款和入境仍需复核 |
 | 阿曼 | 中国普通护照 | 有条件免签，最多 14 天 | 外交部第一组包含 China；护照至少 6 个月、返程票、酒店、健康保险和资金，14 天不可延期或转换；电子签产品查询不等于必须办签 |
 | 阿曼 | 香港特区护照 | 有条件免签，最多 14 天 | 外交部第一组 China 明确包括 Hong Kong；同样保留护照、票据、酒店、保险、资金及不可延期/转换条件，不扩展到身份书 |
@@ -195,6 +196,8 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 - [Maldives Immigration：Traveller Declaration](https://www.immigration.gov.mv/traveller-declaration)
 - [Visit Qatar：Qatar Visa Check](https://visitqatar.com/intl-en/plan-your-trip/visas)
 - [Saudi eVisa：Official tourist visa portal](https://visa.visitsaudi.com/)
+- [Hong Kong Government：Visa-on-arrival access to Saudi Arabia for HKSAR passport holders](https://www.info.gov.hk/gia/general/202501/14/P2025011400185.htm)
+- [Hong Kong Immigration Department：Visa-free Access or Visa-on-arrival for HKSAR passport list](https://www.immd.gov.hk/pdf/Visa-free%20Access%20or%20Visa-on-arrival%20for%20HKSAR%20passport%20list_Eng.pdf)
 - [Bahrain eVisa / NPRA：Countries Eligible to Get Visa Online](https://www.evisa.gov.bh/list-of-online-visa-country.html)
 - [Royal Oman Police：eVisa View Visa Types](https://evisa.rop.gov.om/en/types-of-visa)
 - [Royal Oman Police：eVisa Visa Eligibility Wizard](https://evisa.rop.gov.om/en/visa-eligibility)

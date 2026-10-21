@@ -2272,19 +2272,20 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
+      "outcome": "visa_on_arrival",
       "maxStayDays": 90,
-      "visaProductName": "Saudi tourist eVisa",
+      "visaProductName": "Saudi tourist visa on arrival / eVisa",
       "conditions": [
-        "沙特官方 eVisa 门户将 Hong Kong 纳入 China（including Hong Kong and Macau）的合资格范围。",
-        "旅游电子签为一年多次入境，允许在沙特停留最多 90 天；适用于旅游、活动、探亲访友和 Umrah（不含 Hajj），不覆盖学习等活动。"
+        "香港入境处根据沙特驻港总领馆通知确认：HKSAR 普通护照可在沙特 6 个指定口岸申请落地旅游签。",
+        "可申请单次签（有效 90 天、最多停留 30 天）或多次签（有效 1 年、最多停留 90 天）；也可行前申请 eVisa。",
+        "落地签仅限已列明的 6 个口岸；具体签发和停留由沙特主管机关决定，出发前向沙特驻港总领馆核对。"
       ],
       "status": "verified",
-      "sourceIds": ["sa-visitsaudi-evisa"],
-      "evidenceLocator": "Saudi eVisa official portal > Eligible Countries > Asia: China (including Hong Kong and Macau)",
-      "evidenceExcerpt": "The official portal lists CHINA (INCLUDING HONG KONG AND MACAU) as an eligible Asian country. The eVisa is one-year, multiple-entry and allows tourists to spend up to 90 days in the country.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["hk-immd-saudi-visa-on-arrival", "hk-immd-visa-free-list-2026-10-16"],
+      "evidenceLocator": "HKSAR Immigration Department > Visa-free Access or Visa-on-arrival list > Saudi Arabia, Remark 30",
+      "evidenceExcerpt": "The current HKSAR passport list says holders may apply for single-entry tourist visas (90-day validity, stay up to 30 days) or multiple-entry tourist visas (one-year validity, stay up to 90 days) at six named Saudi control points, and may also apply for an eVisa before travel.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "sa-mo-macao-sar-tourism-evisa",
