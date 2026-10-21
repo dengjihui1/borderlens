@@ -942,8 +942,8 @@
       ],
       "evidenceLocator": "Thailand MFA Visa Exemption (60 Days), country list: China; TDAC Guide and FAQ",
       "evidenceExcerpt": "China appears in the Ministry of Foreign Affairs list of countries and territories entitled to the 60-day Visa Exemption Scheme. Foreigners are required to submit arrival card information within 3 days before arrival in Thailand.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "th-hk-hksar-tourism-visa-exemption",
@@ -965,8 +965,8 @@
       ],
       "evidenceLocator": "Thailand MFA Visa Exemption (60 Days), country list: Hong Kong; TDAC Guide",
       "evidenceExcerpt": "Hong Kong appears in the Ministry of Foreign Affairs list of countries and territories entitled to the 60-day Visa Exemption Scheme; TDAC applies to non-Thai nationals entering by air, land or sea.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "th-mo-macao-sar-tourism-visa-exemption",
@@ -988,8 +988,8 @@
       ],
       "evidenceLocator": "Thailand MFA Visa Exemption (60 Days), country list: Macao; TDAC Guide",
       "evidenceExcerpt": "Macao appears in the Ministry of Foreign Affairs list of countries and territories entitled to the 60-day Visa Exemption Scheme; TDAC applies to non-Thai nationals entering by air, land or sea.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "my-cn-prc-ordinary-tourism-visa-exemption",
@@ -1010,8 +1010,8 @@
       ],
       "evidenceLocator": "Immigration Department FAQ Malaysia–China mutual visa exemption agreement > permitted stay and purposes",
       "evidenceExcerpt": "Visa-free entry is allowed for up to 30 days per entry for the listed short-visit purposes under the Malaysia-China mutual visa exemption agreement.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "my-hk-hksar-tourism-visa-exemption",
@@ -1032,8 +1032,8 @@
       ],
       "evidenceLocator": "Visa Requirement Information table > HONG KONG / PASSPORT; Important Notes",
       "evidenceExcerpt": "HONG KONG — PASSPORT — 90 days. Passport MUST remain valid for more than 6 months from the entry date. The MDAC must be completed no later than three days before scheduled arrival.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "my-mo-macao-sar-tourism-visa-exemption",
@@ -1054,8 +1054,8 @@
       ],
       "evidenceLocator": "Visa Requirement Information table > MACAO / PASSPORT; Important Notes",
       "evidenceExcerpt": "MACAO — PASSPORT — 30 days. Hong Kong and Macao passport holders must select Hong Kong or Macao as nationality during MDAC registration.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "my-hk-document-of-identity-tourism",
@@ -1075,8 +1075,8 @@
       ],
       "evidenceLocator": "Visa Requirement Information table > HONG KONG / CERTIFICATE OF IDENTITY or DOCUMENT OF IDENTITY",
       "evidenceExcerpt": "HONG KONG — CERTIFICATE OF IDENTITY (C.I) or DOCUMENT OF IDENTITY (D.I) — VISA IS REQUIRED.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "my-mo-macao-travel-permit-tourism",
@@ -1097,8 +1097,8 @@
       ],
       "evidenceLocator": "Visa Requirement Information table > MACAO / TRAVEL PERMIT or PORTUGAL CERTIFICATE OF IDENTITY",
       "evidenceExcerpt": "MACAO — TRAVEL PERMIT or PORTUGAL CERTIFICATE OF IDENTITY (C.I) — 14 days.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "id-cn-prc-ordinary-tourism-b1-voa",
@@ -1626,8 +1626,8 @@
       ],
       "evidenceLocator": "Brunei MFA > Visa Information by Country / Region > China > Ordinary Passport > Category D3; Category D3 page",
       "evidenceExcerpt": "The current official country router links China's Ordinary Passport to Category D3. The Category D3 page states that foreign nationals under this category do not require visas to enter Brunei Darussalam and may stay up to 14 days.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bn-hk-hksar-tourism-visa-waiver",
@@ -1649,8 +1649,8 @@
       ],
       "evidenceLocator": "Brunei MFA > Visa Application by Country / Region > Hongkong > D3; Category D3 waiver page",
       "evidenceExcerpt": "Hongkong links to Category D3. Foreign nationals under Category D3 do not require a visa and are allowed to stay for up to 14 days; a visa is required for a longer stay or business/professional visits.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bn-mo-macao-sar-tourism-visa-waiver",
@@ -1672,8 +1672,8 @@
       ],
       "evidenceLocator": "Brunei MFA > Visa Application by Country / Region > Macau > D3; Category D3 waiver page",
       "evidenceExcerpt": "Macau links to Category D3. Foreign nationals under Category D3 do not require a visa and are allowed to stay for up to 14 days; a visa is required for a longer stay or business/professional visits.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "tl-cn-prc-ordinary-tourism-voa",
@@ -1849,8 +1849,8 @@
       ],
       "evidenceLocator": "Sri Lanka ETA official site > Home requirement; Fees > 40-country free list: CHINA and 30-day double-entry table",
       "evidenceExcerpt": "All foreign nationals are required to obtain ETA prior to arrival. CHINA is in the 40-country free-of-charge list; Tourist ETA is valid for 30 days with double entry.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "lk-hk-hksar-tourism-eta",
@@ -1874,8 +1874,8 @@
       ],
       "evidenceLocator": "Sri Lanka ETA official site > Home requirement; Fees > all other countries tourist ETA and 30-day double-entry table",
       "evidenceExcerpt": "All foreign nationals are required to obtain ETA prior to arrival. ETA charges for all other countries apply; Tourist Visa with Double Entry is for 30 days.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "lk-mo-macao-sar-tourism-eta",
@@ -1899,8 +1899,8 @@
       ],
       "evidenceLocator": "Sri Lanka ETA official site > Home requirement; Fees > all other countries tourist ETA and 30-day double-entry table",
       "evidenceExcerpt": "All foreign nationals are required to obtain ETA prior to arrival. ETA charges for all other countries apply; Tourist Visa with Double Entry is for 30 days.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "np-cn-prc-ordinary-tourism-review",
@@ -2068,8 +2068,8 @@
       ],
       "evidenceLocator": "Maldives Immigration > Tourist Visa On Arrival; Traveller Declaration > FREE Self-Declaration Form",
       "evidenceExcerpt": "Tourist visa is granted on arrival to the Maldives. Foreigners traveling as tourists do not require pre-approval. The Traveller Declaration is completely free and should be submitted through the official IMUGA portal.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mv-hk-hksar-tourism-voa",
@@ -2093,8 +2093,8 @@
       ],
       "evidenceLocator": "Maldives Immigration > Tourist Visa On Arrival; Traveller Declaration > FREE Self-Declaration Form",
       "evidenceExcerpt": "Tourist visa is granted on arrival to the Maldives. Foreigners traveling as tourists do not require pre-approval. The Traveller Declaration is completely free and should be submitted through the official IMUGA portal.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mv-mo-macao-sar-tourism-voa",
@@ -2118,8 +2118,8 @@
       ],
       "evidenceLocator": "Maldives Immigration > Tourist Visa On Arrival; Traveller Declaration > FREE Self-Declaration Form",
       "evidenceExcerpt": "Tourist visa is granted on arrival to the Maldives. Foreigners traveling as tourists do not require pre-approval. The Traveller Declaration is completely free and should be submitted through the official IMUGA portal.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "qa-cn-prc-ordinary-tourism-voa",
