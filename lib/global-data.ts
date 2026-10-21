@@ -2,6 +2,9 @@ import countryCatalog from '@/data/countries.un-m49.json';
 import sourceRegistry from '@/data/official-source-registry.json';
 import policySeed from '@/data/policies.seed.json';
 import policyZoneCatalog from '@/data/policy-zones.json';
+import { isPolicyRuleCurrent, summarizePolicyBatch } from './policy-freshness';
+
+export { isPolicyRuleCurrent } from './policy-freshness';
 
 export type SourceStatus = 'verified' | 'reachable' | 'blocked';
 
@@ -21,17 +24,14 @@ export const jurisdictions = countryCatalog.territories;
 export const registeredSources = sourceRegistry.sources as RegisteredSource[];
 export const policyZones = policyZoneCatalog.zones;
 
-export function isPolicyRuleCurrent(rule: { status: string; reviewDueAt: string }, now = new Date()) {
-  if (rule.status !== 'verified') return false;
-  const dueAt = Date.parse(`${rule.reviewDueAt}T23:59:59Z`);
-  return Number.isFinite(dueAt) && now.getTime() <= dueAt;
-}
-
 const rulesByDestination = (destinationId: string, isZone = false) => policySeed.rules.filter((rule) => (
   isZone ? 'destinationPolicyZoneId' in rule && rule.destinationPolicyZoneId === destinationId : 'destinationJurisdictionId' in rule && rule.destinationJurisdictionId === destinationId
 ));
 
 export const latestPolicyBatch = [
+  { id: 'gb', label: '英国', note: '中国普通护照需 Standard Visitor visa；港澳特区护照需 ETA 或签证，护照须覆盖全程有效期' },
+  { id: 'ca', label: '加拿大', note: '中国普通及澳门特区护照需访客签证；香港特区护照航空需 eTA，一般陆海路豁免，Saint-Pierre-et-Miquelon 非邮轮船班另行核验' },
+  { id: 'tl', label: '东帝汶', note: '三类普通护照可在符合条件的正式口岸申请 30 天落地签；保留护照、资金或担保及提前申请例外' },
   { id: 'uy', label: '乌拉圭', note: '中国普通护照需签证但有条件例外；香港与澳门特区护照免签，期限待官方表格进一步确认' },
   { id: 'mn', label: '蒙古', note: '中国、香港、澳门列入官方 VISA FREE COUNTRIES；页面未给出停留天数' },
   { id: 'ph', label: '菲律宾', note: '中国普通护照旅游/商务免签 14 天，但仅限马尼拉与宿务两个机场；港澳特区护照 9A 初始 14 天' },
@@ -63,8 +63,7 @@ export const latestPolicyBatch = [
   const rules = rulesByDestination(item.id);
   return {
     ...item,
-    verifiedRuleCount: rules.filter((rule) => isPolicyRuleCurrent(rule)).length,
-    reviewRuleCount: rules.filter((rule) => !isPolicyRuleCurrent(rule)).length,
+    ...summarizePolicyBatch(rules, item.note),
   };
 });
 

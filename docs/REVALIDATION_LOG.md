@@ -41,3 +41,27 @@
 | 菲律宾 | [Bureau of Immigration Visa Waiver](https://immigration.gov.ph/visas/visa-waiver/) 与 [DFA eVisa policy](https://evisa.gov.ph/page/policy) | 3 | 中国普通护照旅游/商务 14 天免签但限机场与条件；港澳特区护照 9A 初始 14 天 |
 
 本批新增 12 条规则，统一复核截止日为 2026-11-20；累计当前有效规则 46 条。越南页面本轮返回了极短的入口响应，虽官方 API 可访问，但港澳路线还依赖官方国籍 PDF，因此本批未机械续期越南三条规则；埃及 eVisa FAQ 当前自动访问受阻，未续期中国普通护照 eVisa 路线。
+
+## Phase 66 · 英国、加拿大与东帝汶（2026-10-21）
+
+本批直接读取官方网页正文。英国问答和东帝汶页面在检索服务无法读取时，改用直接 HTTPS 获取成功的正文；不以搜索摘要代替规则证据。
+
+| 来源组 | 当前官方证据及定位 | 更新规则 | 本批保留或补全的边界 |
+|---|---|---:|---|
+| 英国 | GOV.UK 三条完整问答路径：[China](https://www.gov.uk/check-uk-visa/y/china/no/tourism/no)、[Hong Kong passport](https://www.gov.uk/check-uk-visa/y/hong-kong/no/passport/tourism)、[Macao passport](https://www.gov.uk/check-uk-visa/y/macao/no/passport/tourism)；逐页确认 Your answers 和最终结果 | 3 | 中国普通护照需 Standard Visitor visa；港澳特区护照需 ETA 或 Standard Visitor visa。保留非英爱双重公民、passport 证件和中国家庭关系问答条件；护照须全程有效，Common Travel Area 出发路线另行核验 |
+| 加拿大 | [IRCC What you need to enter Canada](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/entry-requirements-country.html) 的 visa-required、eTA-required、land/sea、Saint-Pierre-et-Miquelon 和身份例外段落 | 5 | 中国普通/澳门特区护照一般需访客签证；香港特区护照航空需 eTA，一般陆海路豁免。Saint-Pierre-et-Miquelon 非邮轮船班须 eTA；加拿大公民/永久居民和美国永久居民按专门身份规则处理 |
+| 东帝汶 | Migration Service 的 [Tourist Visa](https://migracao.gov.tl/wp/tourist-visa/)（How and where to apply、Criteria、Documentary requirements、Fee、Conditions）和 [Visa exemptions](https://migracao.gov.tl/wp/visa-exemptions/)；两页直接 HTTPS 均返回 200 并含完整政策正文 | 3 | 符合条件的正式航空、陆路、海路口岸可申请 30 天旅游落地签，USD 30 现金、护照至少 6 个月有效。曾拒入/遣返/排除或欠罚款须提前申请；每次入境 USD 100 加每日 USD 50，或符合资格的食宿担保；Oecussi 行程可酌情获多次入境 |
+
+本批续期 11 条规则，`checkedAt` 为 2026-10-21、`reviewDueAt` 为 2026-11-20；累计当前有效 57 条，另有 86 条历史规则仍过期。未增加来源或法域数量。
+
+### 本批访问但未续期
+
+| 来源组 | 实际观察 | 处理与下一次证据要求 |
+|---|---|---|
+| 老挝 | 原 `/article/who_can_apply` 返回 PAGE NOT FOUND。恢复的 [Who can Apply](https://laoevisa.gov.la/article/Who%20can%20Apply%20for%20Lao%20eVisa) 正文明确列出中国、香港和澳门；[Terms](https://laoevisa.gov.la/term) 确认 30 天停留、60 天批准信、普通护照及 9 个指定口岸 | 修复注册表 URL 并记录本次成功访问；三条规则不续期。申请资格表不能单独证明必须取得电子签，后续须核对各类证件适用的签证或免签要求 |
+| 缅甸 | 官方 `/notice/tourist` 一次返回 200，但可提取内容只有应用标题；后续直接请求失败，未取得可同时核对证件、期限和口岸的完整正文 | 三条规则保留原日期和历史证据，由 freshness gate 继续计入 REVIEW；下一步读取渲染后官方政策内容或同机构替代官方页面 |
+| 柬埔寨 | 原 Visa T 详情入口在检索服务发生重定向循环，直接请求亦失败。检索到的官方临时免签公告日期为 2026-06-15 至 2026-10-15，正文未在本批稳定取得 | 三条规则不续期；不将已结束的检索公告当作 2026-10-21 的免签证据。下一步取得临时安排结束后的官方签证要求、证件范围和口岸规定 |
+
+### 覆盖率结论门禁
+
+发现 `/coverage` 原来仅按到期日过滤计数，卡片说明仍展示旧的整组确定性结论。本批将卡片说明和数量使用同一时效判断：只有整组规则均当前有效时才展示政策摘要；过期、混合或空批次显示复核提示。回归测试覆盖截止日、草稿/无效日期、全部有效、全部过期、混合和空批次。

@@ -148,6 +148,11 @@ test('加拿大规则按航空、陆路与海路区分香港特区护照', async
   assert.equal(hksar.find((rule: { borderMode: string }) => rule.borderMode === 'air')!.outcome, 'eta_required');
   assert.equal(hksar.find((rule: { borderMode: string }) => rule.borderMode === 'land')!.outcome, 'visa_free');
   assert.equal(hksar.find((rule: { borderMode: string }) => rule.borderMode === 'sea')!.outcome, 'visa_free');
+  for (const rule of canada) {
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('美国永久居民') && condition.includes('加拿大公民')));
+  }
+  const sea = hksar.find((rule: { borderMode: string }) => rule.borderMode === 'sea')!;
+  assert.ok(sea.conditions.some((condition: string) => condition.includes('Saint-Pierre-et-Miquelon') && condition.includes('邮轮除外') && condition.includes('eTA')));
 });
 
 test('泰国规则把 60 天免签与 TDAC 要求同时保留', async () => {
@@ -266,6 +271,8 @@ test('东帝汶三类护照均保留落地签、30 天与全口岸条件', async
     assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_on_arrival', 30]);
     assert.ok(rule.conditions.some((condition: string) => condition.includes('航空') && condition.includes('陆路') && condition.includes('海路')));
     assert.ok(rule.conditions.some((condition: string) => condition.includes('USD 30')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('拒绝入境') && condition.includes('提前申请')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('USD 100') && condition.includes('USD 50') && condition.includes('担保')));
   }
 });
 

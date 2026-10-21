@@ -466,7 +466,8 @@
       "visaProductName": "Standard Visitor visa",
       "conditions": [
         "官方问答路径假设：护照国籍为 China、非英爱双重公民、旅游/探亲目的，且不是与伴侣或家人同行或前往探访伴侣/家人。",
-        "家庭关系或其他目的必须重新运行官方检查器。"
+        "家庭关系或其他目的必须重新运行官方检查器。",
+        "护照须在整个英国停留期间有效；从爱尔兰、泽西、根西或马恩岛出发的路线按官方另行规定核验。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -474,8 +475,8 @@
       ],
       "evidenceLocator": "/check-uk-visa/y/china/no/tourism/no",
       "evidenceExcerpt": "You'll need a visa to come to the UK. Apply for a Standard Visitor visa.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "gb-hk-hksar-tourism",
@@ -489,7 +490,8 @@
       "visaProductName": "UK Electronic Travel Authorisation or Standard Visitor visa",
       "conditions": [
         "官方问答路径假设：Hong Kong nationality、非英爱双重公民、使用 Hong Kong passport、旅游或探亲目的。",
-        "有犯罪记录或曾被拒绝入境等情况，官方提示可改申请 Standard Visitor visa。"
+        "有犯罪记录或曾被拒绝入境等情况，官方提示可改申请 Standard Visitor visa。",
+        "护照须在整个英国停留期间有效；从爱尔兰、泽西、根西或马恩岛出发的路线按官方另行规定核验。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -497,8 +499,8 @@
       ],
       "evidenceLocator": "/check-uk-visa/y/hong-kong/no/passport/tourism",
       "evidenceExcerpt": "You'll need an electronic travel authorisation (ETA) or a visa. You must apply for either an electronic travel authorisation (ETA) or a Standard Visitor visa.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "gb-mo-macao-sar-tourism",
@@ -512,7 +514,8 @@
       "visaProductName": "UK Electronic Travel Authorisation or Standard Visitor visa",
       "conditions": [
         "官方问答路径假设：Macao nationality、非英爱双重公民、使用 Macao passport、旅游或探亲目的。",
-        "有犯罪记录或曾被拒绝入境等情况，官方提示可改申请 Standard Visitor visa。"
+        "有犯罪记录或曾被拒绝入境等情况，官方提示可改申请 Standard Visitor visa。",
+        "护照须在整个英国停留期间有效；从爱尔兰、泽西、根西或马恩岛出发的路线按官方另行规定核验。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -520,8 +523,8 @@
       ],
       "evidenceLocator": "/check-uk-visa/y/macao/no/passport/tourism",
       "evidenceExcerpt": "You'll need an electronic travel authorisation (ETA) or a visa. You must apply for either an electronic travel authorisation (ETA) or a Standard Visitor visa.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "kr-cn-prc-ordinary-tourism",
@@ -820,7 +823,8 @@
       "visaProductName": "Canadian visitor visa",
       "conditions": [
         "Canada.ca 的需签证名单明确列出 China, People's Republic of，且没有附加可改走 eTA 的条件标记。",
-        "访客签证适用于航空、陆路和海路；符合特定无签证过境项目者不属于本条普通旅游规则。"
+        "访客签证适用于航空、陆路和海路；符合特定无签证过境项目者不属于本条普通旅游规则。",
+        "本条仅适用于一般外国访客；加拿大公民（含双重国籍）、加拿大永久居民及美国永久居民须按各自身份规则核验，不套用本条。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -828,8 +832,8 @@
       ],
       "evidenceLocator": "Travellers who need a visa > Visa-required countries or territories > China, People's Republic of",
       "evidenceExcerpt": "If you're a citizen of any of the countries or territories listed below, you need a valid visitor visa and a valid passport to visit or transit through Canada. The list includes China, People's Republic of.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ca-mo-macao-sar-tourism",
@@ -843,7 +847,8 @@
       "visaProductName": "Canadian visitor visa",
       "conditions": [
         "Canada.ca 的需签证名单明确列出 Macao Special Administrative Region。",
-        "访客签证适用于航空、陆路和海路。"
+        "访客签证适用于航空、陆路和海路。",
+        "本条仅适用于一般外国访客；加拿大公民（含双重国籍）、加拿大永久居民及美国永久居民须按各自身份规则核验，不套用本条。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -851,8 +856,8 @@
       ],
       "evidenceLocator": "Travellers who need a visa > Visa-required countries or territories > Macao Special Administrative Region",
       "evidenceExcerpt": "If you're a citizen of any of the countries or territories listed below, you need a valid visitor visa and a valid passport to visit or transit through Canada. The list includes Macao Special Administrative Region.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ca-hk-hksar-tourism-air",
@@ -866,7 +871,8 @@
       "visaProductName": "Canadian electronic travel authorization (eTA)",
       "conditions": [
         "仅适用于香港特区签发的护照。",
-        "乘飞机前往或经加拿大机场转机时需要 eTA 和有效护照；eTA 不保证准予入境。"
+        "乘飞机前往或经加拿大机场转机时需要 eTA 和有效护照；eTA 不保证准予入境。",
+        "本条仅适用于一般外国访客；加拿大公民（含双重国籍）、加拿大永久居民及美国永久居民须按各自身份规则核验，不套用本条。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -874,8 +880,8 @@
       ],
       "evidenceLocator": "Travellers who need an eTA > If you're travelling by air > eTA-required countries > Hong Kong SAR",
       "evidenceExcerpt": "You need an eTA and a valid passport to board your flight to Canada. The list includes Hong Kong Special Administrative Region ... must have a passport issued by Hong Kong SAR.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ca-hk-hksar-tourism-land",
@@ -888,7 +894,8 @@
       "maxStayDays": null,
       "conditions": [
         "仅适用于香港特区签发的护照。",
-        "从陆路抵达不需要 eTA，但仍需有效护照并接受边境审查。"
+        "从陆路抵达不需要 eTA，但仍需有效护照并接受边境审查。",
+        "本条仅适用于一般外国访客；加拿大公民（含双重国籍）、加拿大永久居民及美国永久居民须按各自身份规则核验，不套用本条。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -896,8 +903,8 @@
       ],
       "evidenceLocator": "Travellers who need an eTA > If you're travelling by land or sea; eTA-required countries > Hong Kong SAR",
       "evidenceExcerpt": "If you're a citizen of an eTA-required country ... and arriving by car, bus or train, you don't need an eTA to enter Canada. You still need a valid passport.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ca-hk-hksar-tourism-sea",
@@ -910,16 +917,17 @@
       "maxStayDays": null,
       "conditions": [
         "仅适用于香港特区签发的护照。",
-        "一般从海路抵达不需要 eTA，但仍需有效护照；从 Saint-Pierre-et-Miquelon 乘船的特殊分支另行核验。"
+        "一般从海路抵达不需要 eTA，但仍需有效护照；从 Saint-Pierre-et-Miquelon 乘船（邮轮除外）出发时须持 eTA，不适用一般海路豁免。",
+        "本条仅适用于一般外国访客；加拿大公民（含双重国籍）、加拿大永久居民及美国永久居民须按各自身份规则核验，不套用本条。"
       ],
       "status": "verified",
       "sourceIds": [
         "ca-ircc-entry-requirements"
       ],
       "evidenceLocator": "Travellers who need an eTA > If you're travelling by land or sea; sea from Saint-Pierre-et-Miquelon exception",
-      "evidenceExcerpt": "If you're a citizen of an eTA-required country ... and arriving by boat (including a cruise ship), you don't need an eTA to enter Canada. You still need a valid passport. A separate rule applies to boats from Saint-Pierre-et-Miquelon.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceExcerpt": "HKSAR passport holders normally do not need an eTA when arriving by land or sea. Boats departing Saint-Pierre-et-Miquelon require an eTA, except cruise ships; travellers still need a valid passport. Canadian citizens, Canadian permanent residents and US permanent residents follow separate status-specific rules.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "th-cn-prc-ordinary-tourism-visa-exemption",
@@ -1688,7 +1696,9 @@
       "conditions": [
         "可在设有移民服务的正式航空、陆路或海路口岸申请；曾被拒绝入境、遣返、排除或有未缴罚款者须提前申请。",
         "护照入境时至少还有 6 个月有效期，完成入境申报；必要时出示住宿、离境安排和足够资金。",
-        "费用为 USD 30 现金，停留 30 天，通常可再延长一次 30 天；旅游签证不得从事任何有偿或无偿职业活动。"
+        "费用为 USD 30 现金，停留 30 天，通常可再延长一次 30 天；旅游签证不得从事任何有偿或无偿职业活动。",
+        "官方资金标准为每次入境 USD 100 加每日 USD 50；持符合资格的当地公民、居留许可/特别停留许可持有人或注册法人出具的食宿担保时可获豁免。",
+        "通常单次入境；前往 Oecussi 并向签证官说明行程时，可酌情获多次入境。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -1697,8 +1707,8 @@
       ],
       "evidenceLocator": "Timor-Leste Migration Service > Tourist Visa > How and where to apply, Documentary requirements, Fee and Conditions; Visa exemptions lists",
       "evidenceExcerpt": "The tourist visa may be obtained on arrival at official air, land or sea border posts. It allows a 30-day single entry, costs US$30 cash, requires a travel document valid at least 6 months, and may normally be extended once for 30 days. China, Hong Kong SAR and Macao SAR are not in the published exemption groups.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "tl-hk-hksar-tourism-voa",
@@ -1713,7 +1723,9 @@
       "conditions": [
         "可在设有移民服务的正式航空、陆路或海路口岸申请；曾被拒绝入境、遣返、排除或有未缴罚款者须提前申请。",
         "护照入境时至少还有 6 个月有效期，完成入境申报；必要时出示住宿、离境安排和足够资金。",
-        "费用为 USD 30 现金，停留 30 天，通常可再延长一次 30 天；旅游签证不得从事任何有偿或无偿职业活动。"
+        "费用为 USD 30 现金，停留 30 天，通常可再延长一次 30 天；旅游签证不得从事任何有偿或无偿职业活动。",
+        "官方资金标准为每次入境 USD 100 加每日 USD 50；持符合资格的当地公民、居留许可/特别停留许可持有人或注册法人出具的食宿担保时可获豁免。",
+        "通常单次入境；前往 Oecussi 并向签证官说明行程时，可酌情获多次入境。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -1722,8 +1734,8 @@
       ],
       "evidenceLocator": "Timor-Leste Migration Service > Tourist Visa > How and where to apply, Documentary requirements, Fee and Conditions; Visa exemptions lists",
       "evidenceExcerpt": "The tourist visa may be obtained on arrival at official air, land or sea border posts. It allows a 30-day single entry, costs US$30 cash, requires a travel document valid at least 6 months, and may normally be extended once for 30 days. China, Hong Kong SAR and Macao SAR are not in the published exemption groups.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "tl-mo-macao-sar-tourism-voa",
@@ -1738,7 +1750,9 @@
       "conditions": [
         "可在设有移民服务的正式航空、陆路或海路口岸申请；曾被拒绝入境、遣返、排除或有未缴罚款者须提前申请。",
         "护照入境时至少还有 6 个月有效期，完成入境申报；必要时出示住宿、离境安排和足够资金。",
-        "费用为 USD 30 现金，停留 30 天，通常可再延长一次 30 天；旅游签证不得从事任何有偿或无偿职业活动。"
+        "费用为 USD 30 现金，停留 30 天，通常可再延长一次 30 天；旅游签证不得从事任何有偿或无偿职业活动。",
+        "官方资金标准为每次入境 USD 100 加每日 USD 50；持符合资格的当地公民、居留许可/特别停留许可持有人或注册法人出具的食宿担保时可获豁免。",
+        "通常单次入境；前往 Oecussi 并向签证官说明行程时，可酌情获多次入境。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -1747,8 +1761,8 @@
       ],
       "evidenceLocator": "Timor-Leste Migration Service > Tourist Visa > How and where to apply, Documentary requirements, Fee and Conditions; Visa exemptions lists",
       "evidenceExcerpt": "The tourist visa may be obtained on arrival at official air, land or sea border posts. It allows a 30-day single entry, costs US$30 cash, requires a travel document valid at least 6 months, and may normally be extended once for 30 days. China, Hong Kong SAR and Macao SAR are not in the published exemption groups.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "in-cn-prc-ordinary-tourism-review",
