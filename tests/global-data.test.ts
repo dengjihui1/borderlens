@@ -52,10 +52,9 @@ test('Phase 70 当前官方证据续期八条路线并保留内地通行证的�
   }
 });
 
-test('受阻入口与未解决证据不机械续期或伪装为确定结论', async () => {
+test('受阻入口不机械续期；沙特中国与澳门路线由当前官方证据续期', async () => {
   const policies = await readJson('../data/policies.seed.json');
-  for (const rule of (policies.rules as PolicyFixture[]).filter((rule) => rule.destinationJurisdictionId === 'bh'
-    || rule.id === 'sa-cn-prc-ordinary-tourism-evisa' || rule.id === 'sa-mo-macao-sar-tourism-evisa')) {
+  for (const rule of (policies.rules as PolicyFixture[]).filter((rule) => rule.destinationJurisdictionId === 'bh')) {
     assert.equal(rule.checkedAt, '2026-09-08');
     assert.equal(rule.reviewDueAt, '2026-10-08');
   }
@@ -66,8 +65,18 @@ test('受阻入口与未解决证据不机械续期或伪装为确定结论', as
   assert.deepEqual(saudiHongKong.sourceIds, ['hk-immd-saudi-visa-on-arrival', 'hk-immd-visa-free-list-2026-10-16']);
   assert.ok(saudiHongKong.conditions.some((line) => line.includes('6 个指定口岸')));
   assert.ok(saudiHongKong.conditions.some((line) => line.includes('单次') && line.includes('30 天') && line.includes('多次') && line.includes('90 天')));
+  const saudiChina = (policies.rules as PolicyFixture[]).find((rule) => rule.id === 'sa-cn-prc-ordinary-tourism-evisa')!;
+  assert.deepEqual([saudiChina.outcome, saudiChina.maxStayDays, saudiChina.checkedAt, saudiChina.reviewDueAt], ['visa_required', 90, '2026-10-21', '2026-11-20']);
+  assert.ok(saudiChina.conditions.some((line) => line.includes('不据此声称电子签是唯一办理方式')));
+  assert.ok(saudiChina.sourceIds.includes('sa-tourist-visa-regulation'));
+  const saudiMacao = (policies.rules as PolicyFixture[]).find((rule) => rule.id === 'sa-mo-macao-sar-tourism-evisa')!;
+  assert.deepEqual([saudiMacao.outcome, saudiMacao.maxStayDays, saudiMacao.checkedAt, saudiMacao.reviewDueAt], ['visa_on_arrival', 90, '2026-10-21', '2026-11-20']);
+  assert.ok(saudiMacao.conditions.some((line) => line.includes('落地签或在线 eVisa')));
+  assert.ok(saudiMacao.sourceIds.includes('mo-dsi-saudi-visa-route'));
   const registry = await readJson('../data/official-source-registry.json');
   for (const sourceId of saudiHongKong.sourceIds) assert.ok(registry.sources.some((source: { id: string; status: string }) => source.id === sourceId && source.status === 'verified'));
+  for (const sourceId of saudiChina.sourceIds) assert.ok(registry.sources.some((source: { id: string; status: string }) => source.id === sourceId && source.status === 'verified'));
+  for (const sourceId of saudiMacao.sourceIds) assert.ok(registry.sources.some((source: { id: string; status: string }) => source.id === sourceId && source.status === 'verified'));
   const conflicts = (policies.rules as PolicyFixture[]).filter((rule) => rule.status === 'draft');
   assert.equal(conflicts.length, 3);
   assert.ok(conflicts.every((rule) => rule.outcome === 'manual_review'));
@@ -502,7 +511,7 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
   assert.deepEqual([byId.get('sa-cn-prc-ordinary-tourism-evisa')!.outcome, byId.get('sa-cn-prc-ordinary-tourism-evisa')!.maxStayDays], ['visa_required', 90]);
   assert.deepEqual([byId.get('sa-hk-hksar-tourism-evisa')!.outcome, byId.get('sa-hk-hksar-tourism-evisa')!.maxStayDays], ['visa_on_arrival', 90]);
   assert.ok(byId.get('sa-hk-hksar-tourism-evisa')!.conditions.some((condition: string) => condition.includes('6 个指定口岸')));
-  assert.ok(byId.get('sa-mo-macao-sar-tourism-evisa')!.reviewDueAt < '2026-10-21');
+  assert.deepEqual([byId.get('sa-mo-macao-sar-tourism-evisa')!.outcome, byId.get('sa-mo-macao-sar-tourism-evisa')!.reviewDueAt], ['visa_on_arrival', '2026-11-20']);
   const oman = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'om');
   assert.equal(oman.length, 3);
   assert.deepEqual([byId.get('om-cn-prc-ordinary-tourism-review')!.status, byId.get('om-cn-prc-ordinary-tourism-review')!.outcome, byId.get('om-cn-prc-ordinary-tourism-review')!.maxStayDays], ['verified', 'visa_free', 14]);
@@ -676,7 +685,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 123);
+  assert.equal(registry.sources.length, 125);
   assert.equal(policies.rules.length, 146);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 143);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);

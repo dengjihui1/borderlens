@@ -10,9 +10,9 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 
 ## 最近政策证据
 
-核验日期：2026-10-21（最新 Phase 79 复核厄瓜多尔香港、澳门特区普通护照 90 天免签依据；Phase 78 复核缅甸中港澳电子签与航空落地签）；其他规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
+核验日期：2026-10-21（最新 Phase 80 复核沙特中国普通护照与澳门特区护照路线；Phase 79 复核厄瓜多尔港澳普通护照 90 天免签依据）；其他规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
 
-截至 Phase 79，当前有效证据 124 条，其中 3 条需个体条件核验；另有 19 条历史到期和 3 条显式证据问题。查询口径为 121 条当前结论、25 条 REVIEW。缅甸 eVisa 与机场落地签作为独立路线记录；中国及香港落地签试行期仍有效，澳门此前试行期于 2026-10-20 到期，未发现续期材料，故历史 VOA 记录进入 REVIEW，但澳门 eVisa 仍为单独当前路线。厄瓜多尔港澳普通护照记录分别由香港政府免签协定公告及澳门《2025 年鉴》支持，均限定最多停留 90 天；港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决。证据定位和下一步要求见 `REVALIDATION_LOG.md`。
+截至 Phase 80，当前有效证据 126 条，其中 3 条需个体条件核验；另有 17 条历史到期和 3 条显式证据问题。查询口径为 123 条当前结论、23 条 REVIEW。缅甸 eVisa 与机场落地签作为独立路线记录；中国及香港落地签试行期仍有效，澳门此前试行期于 2026-10-20 到期，未发现续期材料，故历史 VOA 记录进入 REVIEW，但澳门 eVisa 仍为单独当前路线。厄瓜多尔港澳普通护照记录分别由香港政府免签协定公告及澳门《2025 年鉴》支持，均限定最多停留 90 天。沙特中国普通护照记录为需签证、但不宣称 eVisa 是唯一渠道；澳门特区护照保留落地签及在线 eVisa 两条已核实路线。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决。证据定位和下一步要求见 `REVALIDATION_LOG.md`。
 
 下表保留结构化规则的历史范围，不代表每一行目前仍有效；当日是否可用以规则自身的 `reviewDueAt` 和运行时门禁为准。覆盖率卡片含过期或待复核路线时，不展示旧的整组确定性结论。
 
@@ -204,9 +204,12 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 - [Maldives Immigration：Traveller Declaration](https://www.immigration.gov.mv/traveller-declaration)
 - [Visit Qatar：Qatar Visa Check](https://visitqatar.com/intl-en/plan-your-trip/visas)
 - [Saudi eVisa：Official tourist visa portal](https://visa.visitsaudi.com/)
+- [Saudi Ministry of Tourism / Umm Al-Qura：Tourist Visa Regulations](https://www.uqn.gov.sa/details?p=19990)（第 2 条规定旅游签证原则，第 4 条列出落地签、eVisa 和使馆办理渠道，第 5 条规定护照有效期）
+- [Macao Identification Services Bureau：Saudi Arabia entry route for Macao SAR passport holders](https://www.dsi.gov.mo/Mobile/visa/visa_region_e.jsp?visa_id=153)（参考 90 天，落地签或在线 eVisa；目的地主管机关决定入境和实际停留）
 - [Hong Kong Government：Visa-on-arrival access to Saudi Arabia for HKSAR passport holders](https://www.info.gov.hk/gia/general/202501/14/P2025011400185.htm)
 - [Hong Kong Immigration Department：Visa-free Access or Visa-on-arrival for HKSAR passport list](https://www.immd.gov.hk/pdf/Visa-free%20Access%20or%20Visa-on-arrival%20for%20HKSAR%20passport%20list_Eng.pdf)
 - [Bahrain eVisa / NPRA：Countries Eligible to Get Visa Online](https://www.evisa.gov.bh/list-of-online-visa-country.html)
+- [Bahrain eVisa / NPRA：On Arrival Visa Eligibility](https://www.evisa.gov.bh/list-of-onarrival-visa-country.html)（中国、香港、澳门均在国籍名单中；页面提示具体条款仍需逐项核对）
 - [Royal Oman Police：eVisa View Visa Types](https://evisa.rop.gov.om/en/types-of-visa)
 - [Royal Oman Police：eVisa Visa Eligibility Wizard](https://evisa.rop.gov.om/en/visa-eligibility)
 - [Jordan Ministry of Interior：Countries requiring prior approval](https://moi.gov.jo/Ar/Pages/%D8%A7%D9%84%D8%AF%D9%88%D9%84_%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9_%D9%88%D8%BA%D9%8A%D8%B1_%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AF%D8%A9)

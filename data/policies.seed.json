@@ -2336,15 +2336,16 @@
       "maxStayDays": 90,
       "visaProductName": "Saudi tourist eVisa",
       "conditions": [
-        "沙特官方 eVisa 门户的 Eligible Countries 明确列出 China（including Hong Kong and Macau）。",
-        "旅游电子签为一年多次入境，允许在沙特停留最多 90 天；适用于旅游、活动、探亲访友和 Umrah（不含 Hajj），不覆盖学习等活动。"
+        "沙特《旅游签证条例》第 2 条规定旅游入境须持有效签证，除非其入境依法无需签证；第 4 条列出落地签、电子签及沙特驻外机构办理渠道。",
+        "沙特官方 eVisa 条款的现行 Permitted Country 名单明确列出 China（including Hong Kong and Macau）；该电子旅游签为一年多次入境，累计停留最多 90 天，适用于旅游、活动、探亲访友和 Umrah（不含 Hajj），不覆盖学习等活动。",
+        "本规则记录可用的电子签路线，不据此声称电子签是唯一办理方式或每位旅客均须提前申请；普通护照有效期至少 6 个月。"
       ],
       "status": "verified",
-      "sourceIds": ["sa-visitsaudi-evisa"],
-      "evidenceLocator": "Saudi eVisa official portal > What is the Saudi eVisa? and Eligible Countries > Asia",
-      "evidenceExcerpt": "The official portal lists CHINA (INCLUDING HONG KONG AND MACAU) as an eligible Asian country. The eVisa is one-year, multiple-entry and allows tourists to spend up to 90 days in the country.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["sa-tourist-visa-regulation", "sa-visitsaudi-evisa"],
+      "evidenceLocator": "Umm Al-Qura Tourist Visa Regulations arts. 2, 4 and 5; Saudi eVisa Terms and Conditions §§3-4 and official portal > Eligible Countries > Asia",
+      "evidenceExcerpt": "Saudi Arabia's current tourist-visa regulation requires a valid tourist visa unless the visitor's entry is exempt, and recognizes visa on arrival, eVisa and Saudi-mission channels. The current official eVisa terms list China (including Hong Kong and Macau) as a permitted country; the tourist eVisa is valid for one year, multiple entry, with stays up to 90 days.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "sa-hk-hksar-tourism-evisa",
@@ -2375,19 +2376,21 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
+      "outcome": "visa_on_arrival",
       "maxStayDays": 90,
-      "visaProductName": "Saudi tourist eVisa",
+      "visaProductName": "Saudi tourist visa on arrival / eVisa",
       "conditions": [
-        "沙特官方 eVisa 门户将 Macau 纳入 China（including Hong Kong and Macau）的合资格范围。",
-        "旅游电子签为一年多次入境，允许在沙特停留最多 90 天；适用于旅游、活动、探亲访友和 Umrah（不含 Hajj），不覆盖学习等活动。"
+        "澳门身份证明局当前 Macao SAR passport 目的地资料将 Saudi Arabia 列为可申请落地签或在线 eVisa 的路线，参考最长停留 90 天；该资料为参考，签发及实际停留由沙特主管机关决定。",
+        "沙特《旅游签证条例》第 2 条规定旅游入境须持有效签证，除非其入境依法无需签证；第 4 条列出落地签、电子签及沙特驻外机构办理渠道。",
+        "沙特官方 eVisa 条款也将 China（including Hong Kong and Macau）列为合资格范围；电子旅游签为一年多次入境，累计停留最多 90 天，适用于旅游、活动、探亲访友和 Umrah（不含 Hajj），不覆盖学习等活动。",
+        "澳门来源建议旅客另向目的地主管机关核对最新规定；不将其参考停留上限表述为保证入境或获准停留期限。"
       ],
       "status": "verified",
-      "sourceIds": ["sa-visitsaudi-evisa"],
-      "evidenceLocator": "Saudi eVisa official portal > Eligible Countries > Asia: China (including Hong Kong and Macau)",
-      "evidenceExcerpt": "The official portal lists CHINA (INCLUDING HONG KONG AND MACAU) as an eligible Asian country. The eVisa is one-year, multiple-entry and allows tourists to spend up to 90 days in the country.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": ["mo-dsi-saudi-visa-route", "sa-tourist-visa-regulation", "sa-visitsaudi-evisa"],
+      "evidenceLocator": "Macao DSI > Visa-free access / visa-on-arrival destination detail, Saudi Arabia (visa_id=153); Umm Al-Qura Tourist Visa Regulations arts. 2 and 4; Saudi eVisa Terms and Conditions §3",
+      "evidenceExcerpt": "Macao DSI's current Macao SAR passport entry says Saudi Arabia, maximum stay 90 days, with visa granted upon arrival or eVisa obtained online. Saudi Arabia's tourist-visa regulation provides the visa-on-arrival/eVisa channels, and the official eVisa terms independently list China including Macau as a permitted country.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bh-cn-prc-ordinary-tourism-evisa",
