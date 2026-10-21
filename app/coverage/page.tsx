@@ -13,7 +13,7 @@ export default function CoveragePage() {
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 67</div>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 68</div>
         <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
       </header>
 
@@ -71,7 +71,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · Phase 67</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 68</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }

@@ -38,6 +38,9 @@ for (const zone of policyZones.zones) {
 if (policyZoneIds.size !== policyZones.zones.length) errors.push('Duplicate policy zone id');
 
 for (const rule of policies.rules) {
+  if (rule.maxStayDaysPerVisaYear !== undefined && (!Number.isInteger(rule.maxStayDaysPerVisaYear) || rule.maxStayDaysPerVisaYear <= 0 || (rule.maxStayDays !== null && rule.maxStayDays > rule.maxStayDaysPerVisaYear))) {
+    errors.push(`${rule.id}: invalid visa-year aggregate stay limit or single stay above annual limit`);
+  }
   if (rule.maxStayMonths !== undefined && (!Number.isInteger(rule.maxStayMonths) || rule.maxStayMonths <= 0 || rule.maxStayDays !== null)) {
     errors.push(`${rule.id}: calendar-month limit must be positive and must not be converted to a day limit`);
   }

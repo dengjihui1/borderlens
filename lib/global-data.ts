@@ -29,6 +29,7 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
 ));
 
 const policyBatchDescriptions = [
+  { id: 'id', label: '印度尼西亚', note: '中国普通护照 B1 落地签最多 30 天，可再延长 30 天；港澳特区护照 A1 免签最多 30 天、不能延期' },
   { id: 'au', label: '澳大利亚', note: '香港特区护照可申请 ETA 601，每次最多 3 个日历月；中国普通及澳门特区护照需其他适用签证，Visitor 600 仅为候选路线' },
   { id: 'us', label: '美国', note: '三类普通护照一般旅游需 B-2 或 B-1/B-2；ESTA 不替代签证，关岛/北马里亚纳群岛和其他国籍或居留身份另行核验' },
   { id: 'kr', label: '韩国', note: '港澳特区普通护照短期访问的 K-ETA 临时豁免截至 2026 年 12 月 31 日韩国时间；其他证件和路线分别核验' },
@@ -58,10 +59,10 @@ const policyBatchDescriptions = [
   { id: 'tr', label: '土耳其', note: '中国普通护照 90 天、香港特区护照 90 天、澳门特区护照 30 天免签' },
   { id: 'eg', label: '埃及', note: '中国普通护照可走官方电子签；香港与澳门特区普通护照均有官方 90 天免签证据' },
 /* PHASE_06_BATCH */
-  { id: 'in', label: '印度', note: '中国普通、香港和澳门特区普通护照均需 Indian Tourist Visa；港澳费用表均列 HKD 335' },
+  { id: 'in', label: '印度', note: '三类普通护照均需取得适用印度签证；港澳领区正规旅游签证按改版官网要求办理，电子签资格、收费及实际停留期另核' },
   { id: 'lk', label: '斯里兰卡', note: '30 天双次 ETA；中国进入免费名单' },
-  { id: 'np', label: '尼泊尔', note: '中国普通及 HKSAR 护照需签证但免费，年度累计最多 150 天；澳门特区护照可进入官方落地签申请路线' },
-  { id: 'bd', label: '孟加拉国', note: '中国普通护照可按官方条件申请最多 30 天落地签；香港和澳门特区普通护照需 Bangladesh Tourist Visa' },
+  { id: 'np', label: '尼泊尔', note: '中国普通及 HKSAR 护照需签证但免费；澳门可进入官方落地签申请路线。旅游签证年度累计上限 150 天，单次期限须另核' },
+  { id: 'bd', label: '孟加拉国', note: '中国普通护照可按条件申请最多 30 天落地签；港澳特区护照待遇仍需专属证据，不能仅凭费用表给出确定结论' },
   { id: 'mv', label: '马尔代夫', note: '旅游落地签与免费 IMUGA 申报并存' },
 ];
 

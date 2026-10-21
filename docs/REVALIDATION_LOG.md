@@ -87,3 +87,24 @@
 - `/coverage` 改为动态页面，在每次请求内生成统计和卡片快照；不再在模块首次载入时冻结有效状态。
 - 美国国务院原 VWP 入口本批已恢复完整访问，来源状态恢复 verified。DHS、CBP 旧入口本次均返回 403，阿联酋原领馆入口返回 404；三者保留历史核验日期并记录本次访问失败，不作为本批结论的当前证据。
 - 其余未在本批取得完整证据的路线仍保持待复核，下一批继续处理印度尼西亚、南亚与中东剩余队列。
+
+## Phase 68 · 印尼与南亚复核（2026-10-21）
+
+本批读取并处理 12 条路线，确认其中 10 条可按当前窄证据使用：印尼 3 条、尼泊尔 3 条、印度 3 条、孟加拉国中国普通护照 1 条。港澳赴孟加拉国两条明确为 `draft / manual_review`，因为已有申请材料和费用记录不能证明必须预先办签。全库 143 条路线不变；来源增至 109 个，当前有效 77 条、过期历史规则 63 条、显式 REVIEW 3 条。
+
+| 来源组 | 当前一手证据及定位 | 本批处理 |
+|---|---|---|
+| 印度尼西亚 | [官方 e-Visa 选择器](https://evisa.imigrasi.go.id/web/visa-selection)；页面自带的 `/web/visa-selection/data` 只读产品查询，依次使用页面实际提供的 General, Family, or Social、Tourism, Family Visit, and Transit、CHINA / HONG KONG SAR / MACAO SAR 值 | 按国籍筛选的 `data` 返回中国 B1、港澳 A1；随后读取各实际产品详情。B1 最多 30 天、可再延长 30 天、Rp500,000；A1 最多 30 天、不可延期。护照至少 6 个月有效、离境票据及足够费用。查询响应的 `all` 是未过滤的全产品目录，不能用来判断某个国籍的资格；本批未调用申请、付款或提交接口 |
+| 尼泊尔 | [驻港领馆 Visa](https://hkg.nepalconsulate.gov.np/pages/nepal-visa/) 的 Chinese and HKSAR passport、Tourist Visa、Visa Extension；[Nepaliport 落地签入口](https://nepaliport.immigration.gov.np/on-arrival/IO01)；[官方游客签证国籍 API](https://backend.immigration.gov.np/api/v1/countries-for-tourist-visa) | 中国/HKSAR 护照需签证但免费；游客每签证年度累计上限为 150 天。改用 `maxStayDaysPerVisaYear: 150`，单次停留日数字段为 null。接口当前返回澳门 MAC、id 44、`blacklisted: false`，支持其申请路线，不推出澳门免费、自动获签或特定单次停留期 |
+| 印度 | [中央 Indian Visa Online](https://indianvisaonline.gov.in/) 的一般护照和签证要求；[北京 Tourist Visa-Info](https://www.eoibeijing.gov.in/page/tourist-visa/)；改版后的驻港 [Visa Information](https://cgihk.gov.in/pages/Njk0) 的 Tourist Visa J(i). (T-1) 与 [General Instructions](https://cgihk.gov.in/pages/MTA2Mg,,) | 直接读取现行正文确认正规旅游签证路线，港澳领区护照 180 天、连续两页空白页及身份/居住地材料。旧 `/page/visa-information/`、`/page/General_Information/` 及旧费用 PDF 均失效：前两项更新为现官网实际菜单链接，旧 PDF 标为受阻。移除旧金额和三个月单次签发表述，不把 eVisa 是否可申请或 e-Arrival 混入一般签证结论 |
+| 孟加拉国中国普通护照 | [北京 Visa on Arrival](https://beijing.mofa.gov.bd/pages/static-pages/6952668b35ce18e1c05a9eb1) 的资格第 3 项及要求；[官方在线落地签/过境签指南](https://beijing.mofa.gov.bd/pages/static-pages/6952668735ce18e1c05a9d03) | 中国被明确列入可按条件申请的国籍，最长 30 天，返程票、目的证明及至少 USD500/等值资金或信用卡。在线指南指向官方 `voa.specialbranch.gov.bd`；只记录流程入口，没有申请、付款、上传或提交行为 |
+
+### 港澳赴孟加拉国：费用记录不等于预先签证义务
+
+直接读取驻港 [Tourist Visa](https://hongkong.mofa.gov.bd/pages/static-pages/6952668735ce18e1c05a9d33) 和 [Visa Fees](https://hongkong.mofa.gov.bd/pages/static-pages/6952667c35ce18e1c05a97fc) 后，确认有 Hong Kong / Macau 身份材料及有金额的费用行；但同一表中的 China 也有金额费用行，而北京使馆同时明确中国普通护照可按条件申请落地签。这是费用记录不能排除其他办理路线的具体反例。因此撤回港澳“必须预先办签”的确定性推断，两条保留完整证据并明确 REVIEW；下一次须取得对应特区普通护照的入境要求、免签或落地签专属结果。
+
+### 访问与证据边界
+
+- 孟加拉国页面在检索服务超时、Node 默认证书链校验失败后，改用操作系统信任库的 HTTPS 客户端成功返回 200；全程保留证书验证，没有采用关闭验证的请求。印度驻港改版页面亦经正常验证读取。
+- 尼泊尔落地签入口当前返回 SPA 外壳；未由空壳页面推断国籍或停留期。澳门国籍字段直接取自上述官方公开接口，领馆正文另给一般游客及年度累计规则。
+- 本批所有已确认规则复核期至 2026-11-20。剩余队列继续包含中国内地证件、韩国未复核证件、中东、拉美及先前受阻路线；官方证据不足的项目不机械续期。

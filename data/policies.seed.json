@@ -1135,16 +1135,17 @@
       "conditions": [
         "印尼官方选择器路径为 CHINA → General, Family, or Social → Tourism, Family Visit, and Transit → B1。",
         "最多停留 30 天，可再延长 30 天；费用为 Rp500,000。",
-        "入境查验时护照须至少还有 6 个月有效期，并出示离开印尼的机票或其他离境票据。"
+        "入境查验时护照须至少还有 6 个月有效期，并出示离开印尼的机票或其他离境票据。",
+        "本条为按 CHINA 国籍过滤后返回的 B1 路线；其他长期或多次旅游产品需要单独核验，不能据通用产品目录推定 A1 免签。"
       ],
       "status": "verified",
       "sourceIds": [
         "id-immigration-visa-selector"
       ],
-      "evidenceLocator": "Official e-Visa selector path CHINA > General, Family, or Social > Tourism, Family Visit, and Transit > B1 > Detail & Apply",
+      "evidenceLocator": "Official e-Visa selector > General, Family, or Social > Tourism, Family Visit, and Transit > nationality-filtered data product list (not all catalog) > B1 > step 2 visaType terms",
       "evidenceExcerpt": "Type of Visa B1 — Stay up to 30 days (extendable for another 30 days); cost Rp500,000. Document Requirement: passport valid for at least 6 months and outbound ticket from Indonesia.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "id-hk-hksar-tourism-a1-exemption",
@@ -1154,20 +1155,22 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "visa_free",
-      "maxStayDays": null,
+      "maxStayDays": 30,
       "visaProductName": "A1 Visa Exemption Tourism",
       "conditions": [
-        "印尼官方选择器在 HONG KONG SAR 的旅游路径中提供 A1 Visa Exemption Tourism。",
-        "本次直接页面未稳定呈现 A1 的停留期限，因此不输出具体天数；出发前仍需复核当前 A1 条件和适用口岸。"
+        "印尼官方选择器在 HONG KONG SAR 的旅游路径中，按国籍筛选的可用产品明确包含 A1 Visa Exemption Tourism。",
+        "A1 官方产品详情规定最多停留 30 天，不能延期；不把其他旅游签证的可延期安排套用到 A1。",
+        "入境查验时护照须至少还有 6 个月有效期，并准备离开印尼的票据及足够生活费用；出发前仍须核对适用口岸，最终准予入境由移民机关决定。",
+        "免签旅游不允许销售商品或服务、收取印尼个人或企业报酬，不能扩展为工作许可。"
       ],
       "status": "verified",
       "sourceIds": [
         "id-immigration-visa-selector"
       ],
-      "evidenceLocator": "Official e-Visa selector path HONG KONG SAR > General, Family, or Social > Tourism, Family Visit, and Transit > visa product list",
-      "evidenceExcerpt": "For HONG KONG SAR, the official selector lists A1 - Visa Exemption Tourism as an available tourism product.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Official e-Visa selector > General, Family, or Social > Tourism, Family Visit, and Transit > nationality-filtered data product list (not all catalog) > A1 > step 2 visaType terms",
+      "evidenceExcerpt": "For HONG KONG SAR, the official nationality-filtered product list contains A1 Visa Exemption Tourism. Its actual A1 details state up to 30 days, not extendable, a passport valid at least six months, and an outbound ticket. The unfiltered all-products catalog is not used to infer nationality eligibility.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "id-mo-macao-sar-tourism-a1-exemption",
@@ -1177,20 +1180,22 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "visa_free",
-      "maxStayDays": null,
+      "maxStayDays": 30,
       "visaProductName": "A1 Visa Exemption Tourism",
       "conditions": [
-        "印尼官方选择器在 MACAO SAR 的旅游路径中提供 A1 Visa Exemption Tourism。",
-        "本次直接页面未稳定呈现 A1 的停留期限，因此不输出具体天数；出发前仍需复核当前 A1 条件和适用口岸。"
+        "印尼官方选择器在 MACAO SAR 的旅游路径中，按国籍筛选的可用产品明确包含 A1 Visa Exemption Tourism。",
+        "A1 官方产品详情规定最多停留 30 天，不能延期；不把其他旅游签证的可延期安排套用到 A1。",
+        "入境查验时护照须至少还有 6 个月有效期，并准备离开印尼的票据及足够生活费用；出发前仍须核对适用口岸，最终准予入境由移民机关决定。",
+        "免签旅游不允许销售商品或服务、收取印尼个人或企业报酬，不能扩展为工作许可。"
       ],
       "status": "verified",
       "sourceIds": [
         "id-immigration-visa-selector"
       ],
-      "evidenceLocator": "Official e-Visa selector path MACAO SAR > General, Family, or Social > Tourism, Family Visit, and Transit > visa product list",
-      "evidenceExcerpt": "For MACAO SAR, the official selector lists A1 - Visa Exemption Tourism as an available tourism product.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Official e-Visa selector > General, Family, or Social > Tourism, Family Visit, and Transit > nationality-filtered data product list (not all catalog) > A1 > step 2 visaType terms",
+      "evidenceExcerpt": "For MACAO SAR, the official nationality-filtered product list contains A1 Visa Exemption Tourism. Its actual A1 details state up to 30 days, not extendable, a passport valid at least six months, and an outbound ticket. The unfiltered all-products catalog is not used to infer nationality eligibility.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "vn-cn-prc-ordinary-tourism-review",
@@ -1790,16 +1795,19 @@
       "conditions": [
         "印度驻北京大使馆官方 Tourist Visa-Info 页面明确说明 Tourist Visa 用于旅游、观光、探亲访友等短期旅游目的。",
         "该页面针对中国申请人列出中国身份证、护照复印件、返程/联程机票、资金承诺、行程和银行资金证明等材料，并要求普通护照至少 6 个月有效、本人递交申请。",
-        "本条仅适用于中国普通护照；该使馆页面未给出香港或澳门特区护照的独立结论，电子签名单缺席也不被扩展为其他证件结论。"
+        "本条仅适用于中国普通护照；该使馆页面未给出香港或澳门特区护照的独立结论，电子签名单缺席也不被扩展为其他证件结论。",
+        "印度中央官方签证门户要求外国入境者持有效护照和适用签证或获准电子签；本条不把 e-Arrival 入境申报当作签证，不判断 OCI 等独立身份。"
       ],
       "status": "verified",
       "sourceIds": [
-        "in-eoi-beijing-tourist-visa"
+        "in-eoi-beijing-tourist-visa",
+        "in-boi-entry-visa-requirement"
       ],
       "evidenceLocator": "Embassy of India, Beijing > Tourist Visa-Info > General requirements and Documents Required for Chinese applicants",
       "evidenceExcerpt": "Tourist Visa is issued for tourism and related short visits. The China-specific checklist includes a Chinese ID card, passport copy, return/onward ticket, financial undertaking, itinerary and financial evidence; the passport must be valid for at least six months.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "visaProductName": "Indian Tourist Visa"
     },
     {
       "id": "in-hk-hksar-tourism-review",
@@ -1812,21 +1820,21 @@
       "maxStayDays": null,
       "visaProductName": "Indian Tourist Visa",
       "conditions": [
-        "印度驻港总领事馆官方 General Instructions 要求签证申请人填写印度签证申请、提交打印申请表和相关类别要求的支持材料，并明确申请人应为香港或澳门特区居民；非居民申请须逐案审查。",
-        "该总领事馆 Tourist Visa 页面提供香港/澳门领区的旅游签证申请路线：需护照资料、香港/澳门身份证明或当地有效签证，原护照至少还有 180 天有效期并有连续两页空白页。",
-        "印度驻港总领事馆官方费用表将 Hong Kong 列入 Tourist Visa 费用表，费用为 HKD 335，并说明签证通常签发 3 个月、单次入境；本条确认香港特区普通护照应走正规印度旅游签证路线，但不把签证有效期误写成入境后的准许停留期。"
+        "印度中央官方签证门户要求外国入境者持有效护照及适用签证或有限类别电子签；本条确认正规旅游签证路线，不从电子签名单缺席推断国籍待遇，也不扩展到 OCI 等独立身份。",
+        "印度驻港总领馆改版后的 General Instructions 要求填写申请、提交打印表和支持材料，申请人应为香港或澳门特区居民；非居民申请逐案审查。",
+        "改版后的 Visa Information > Tourist Visa J(i). (T-1) 列明港澳领区的护照及本地身份材料；原护照须至少还有 180 天有效期并有连续两页空白页。",
+        "当前读取的页面没有确认统一停留天数或原费用表的收费及签发期限，因此不沿用旧金额和三个月单次签发表述；电子签是否适用须单独核验。"
       ],
       "status": "verified",
       "sourceIds": [
-        "in-boi-evisa",
+        "in-boi-entry-visa-requirement",
         "in-cgihk-tourist-visa",
-        "in-cgihk-visa-fee-schedule",
         "in-cgihk-general-info"
       ],
-      "evidenceLocator": "Consulate General of India, Hong Kong > General Instructions; Visa Information > Tourist Visa > J(i). (T-1); Indian visa fee schedule for all nationalities > Tourist Visa Fee Schedule > Hong Kong",
-      "evidenceExcerpt": "The official consulate requires visa applicants to complete and print the Indian visa application, states that applicants must be residents of Hong Kong or Macau SARs, and publishes a Tourist Visa route requiring passport and local identity evidence. Its fee schedule lists Hong Kong at HKD 335 and says tourist visas are normally issued for 3 months with a single entry.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Indian Visa Online central entry requirement; CGI Hong Kong current Visa Information pages/Njk0 > Tourist Visa J(i). (T-1); current General Instructions pages/MTA2Mg,,",
+      "evidenceExcerpt": "The central Indian visa portal requires a valid national passport with an applicable visa or limited-category eVisa. The current Hong Kong consulate provides the Tourist Visa T-1 route, passport/local-residency evidence and 180-day passport validity with two consecutive blank pages. Its general instructions require Hong Kong/Macao residency or case-specific scrutiny; old fee and issuance-duration claims are not retained.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "in-mo-macao-sar-tourism-review",
@@ -1839,21 +1847,21 @@
       "maxStayDays": null,
       "visaProductName": "Indian Tourist Visa",
       "conditions": [
-        "印度驻港总领事馆官方 General Instructions 要求签证申请人填写印度签证申请、提交打印申请表和相关类别要求的支持材料，并明确申请人应为香港或澳门特区居民；非居民申请须逐案审查。",
-        "该总领事馆 Tourist Visa 页面提供香港/澳门领区的旅游签证申请路线：需护照资料、香港/澳门身份证明或当地有效签证，原护照至少还有 180 天有效期并有连续两页空白页。",
-        "印度驻港总领事馆官方费用表将 Macau 列入 Tourist Visa 费用表，费用为 HKD 335，并说明签证通常签发 3 个月、单次入境；本条确认澳门特区普通护照应走正规印度旅游签证路线，但不把签证有效期误写成入境后的准许停留期。"
+        "印度中央官方签证门户要求外国入境者持有效护照及适用签证或有限类别电子签；本条确认正规旅游签证路线，不从电子签名单缺席推断国籍待遇，也不扩展到 OCI 等独立身份。",
+        "印度驻港总领馆改版后的 General Instructions 要求填写申请、提交打印表和支持材料，申请人应为香港或澳门特区居民；非居民申请逐案审查。",
+        "改版后的 Visa Information > Tourist Visa J(i). (T-1) 列明港澳领区的护照及本地身份材料；原护照须至少还有 180 天有效期并有连续两页空白页。",
+        "当前读取的页面没有确认统一停留天数或原费用表的收费及签发期限，因此不沿用旧金额和三个月单次签发表述；电子签是否适用须单独核验。"
       ],
       "status": "verified",
       "sourceIds": [
-        "in-boi-evisa",
+        "in-boi-entry-visa-requirement",
         "in-cgihk-tourist-visa",
-        "in-cgihk-visa-fee-schedule",
         "in-cgihk-general-info"
       ],
-      "evidenceLocator": "Consulate General of India, Hong Kong > General Instructions; Visa Information > Tourist Visa > J(i). (T-1); Indian visa fee schedule for all nationalities > Tourist Visa Fee Schedule > Macau",
-      "evidenceExcerpt": "The official consulate requires visa applicants to complete and print the Indian visa application, states that applicants must be residents of Hong Kong or Macau SARs, and publishes a Tourist Visa route requiring passport and local identity evidence. Its fee schedule lists Macau at HKD 335 and says tourist visas are normally issued for 3 months with a single entry.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Indian Visa Online central entry requirement; CGI Hong Kong current Visa Information pages/Njk0 > Tourist Visa J(i). (T-1); current General Instructions pages/MTA2Mg,,",
+      "evidenceExcerpt": "The central Indian visa portal requires a valid national passport with an applicable visa or limited-category eVisa. The current Hong Kong consulate provides the Tourist Visa T-1 route, passport/local-residency evidence and 180-day passport validity with two consecutive blank pages. Its general instructions require Hong Kong/Macao residency or case-specific scrutiny; old fee and issuance-duration claims are not retained.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "lk-cn-prc-ordinary-tourism-eta",
@@ -1938,11 +1946,11 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "visa_required",
-      "maxStayDays": 150,
+      "maxStayDays": null,
       "conditions": [
-        "尼泊尔驻香港总领事馆官方 Nepal Visa 页面明确写明中国普通护照需签证，但签证免费。",
-        "该页面的旅游签证说明写明一个签证年度内游客在尼泊尔累计停留不得超过 150 天；该字段表示年度累计上限，不把免签表的外交/官方/服务护照待遇套用于普通护照。",
-        "本条仅适用于中国普通护照；实际签发方式、入境许可和口岸要求仍须满足尼泊尔移民及边境机关要求。"
+        "尼泊尔驻香港总领事馆当前 Visa 页面明确写明中国普通护照需签证，但签证免费；免费不等于免签。",
+        "每个签证年度旅游者累计在尼泊尔不得超过 150 天。本条把该值单列为年度累计上限，不把它当作单次入境自动获准停留天数。",
+        "可按官方条件通过领馆或抵达时办理；领馆申请须有超过 6 个月有效期及至少三页空白页的护照。实际签发、口岸和准许停留期限须另行确认。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -1950,8 +1958,9 @@
       ],
       "evidenceLocator": "Consulate General of Nepal, Hong Kong > Nepal Visa > Chinese and HKSAR passport holders; Tourist Visa Fee Structure; annual stay limit",
       "evidenceExcerpt": "Chinese and HKSAR passport holders require visas but the visa is free of cost. A tourist cannot stay in Nepal more than cumulative 150 days in a visa year.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "maxStayDaysPerVisaYear": 150
     },
     {
       "id": "np-hk-hksar-tourism-review",
@@ -1961,11 +1970,11 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "visa_required",
-      "maxStayDays": 150,
+      "maxStayDays": null,
       "conditions": [
-        "尼泊尔驻香港总领事馆官方 Nepal Visa 页面明确写明 HKSAR 特区护照需签证，但签证免费。",
-        "该页面的旅游签证说明写明一个签证年度内游客在尼泊尔累计停留不得超过 150 天；本条仅适用于 HKSAR 特区护照。",
-        "实际签发方式、入境许可和口岸要求仍须满足尼泊尔移民及边境机关要求。"
+        "尼泊尔驻香港总领事馆当前 Visa 页面明确写明HKSAR 特区护照需签证，但签证免费；免费不等于免签。",
+        "每个签证年度旅游者累计在尼泊尔不得超过 150 天。本条把该值单列为年度累计上限，不把它当作单次入境自动获准停留天数。",
+        "可按官方条件通过领馆或抵达时办理；领馆申请须有超过 6 个月有效期及至少三页空白页的护照。实际签发、口岸和准许停留期限须另行确认。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -1973,8 +1982,9 @@
       ],
       "evidenceLocator": "Consulate General of Nepal, Hong Kong > Nepal Visa > Chinese and HKSAR passport holders; annual stay limit",
       "evidenceExcerpt": "Chinese and HKSAR passport holders require visas but the visa is free of cost. A tourist cannot stay in Nepal more than cumulative 150 days in a visa year.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "maxStayDaysPerVisaYear": 150
     },
     {
       "id": "np-mo-macao-sar-tourism-review",
@@ -1988,16 +1998,20 @@
       "conditions": [
         "尼泊尔政府 Nepaliport 官方 On-arrival Visa Application 旅游落地签入口按护照签发国提供申请表和 Tourist Visa 选项。",
         "该入口使用的官方国家列表将 Macao Special Administrative Region of China 列为护照签发地（代码 MAC，blacklisted 为 false），因此澳门特区护照可进入旅游落地签申请路线。",
-        "官方入口确认可申请不等于自动签发或保证入境；本条不从该入口推断澳门特区护照的准许停留天数，抵达时仍须接受尼泊尔移民机关审查。"
+        "官方入口确认可申请不等于自动签发或保证入境；本条不从该入口推断澳门特区护照的准许停留天数，抵达时仍须接受尼泊尔移民机关审查。",
+        "尼泊尔领馆当前一般游客规则另设每个签证年度累计 150 天上限；这不代表单次落地签可停留 150 天，也不证明澳门特区护照享有与中国普通/HKSAR 护照相同的免费待遇。"
       ],
       "status": "verified",
       "sourceIds": [
-        "np-nepaliport-on-arrival"
+        "np-nepaliport-on-arrival",
+        "np-immigration-tourist-countries-api",
+        "np-hkg-consulate-tourist-visa"
       ],
-      "evidenceLocator": "Nepaliport official On-arrival Visa Application > passport issuing country selector; official countries-for-tourist-visa response > Macao Special Administrative Region of China",
-      "evidenceExcerpt": "The official Nepaliport on-arrival tourist-visa application lists Macao Special Administrative Region of China (code MAC, id 44) in the passport issuing country selector with blacklisted false. This confirms the tourist visa-on-arrival application route, not guaranteed issuance, entry or a specific stay period.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Nepaliport official on-arrival route; Department of Immigration countries-for-tourist-visa API > Macao Special Administrative Region of China (MAC, blacklisted false); Nepal Hong Kong consulate > Visa Extension annual aggregate limit",
+      "evidenceExcerpt": "The current official tourist-visa countries API returns Macao (MAC, id 44) with blacklisted false, alongside the available official on-arrival portal. The consulate's general tourist rules cap cumulative stay at 150 days per visa year. Neither the selector nor this annual cap establishes a single-entry duration or free-visa entitlement for Macao.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "maxStayDaysPerVisaYear": 150
     },
     {
       "id": "bd-cn-prc-ordinary-tourism-review",
@@ -2011,16 +2025,18 @@
       "conditions": [
         "孟加拉驻北京使馆官方 Visa on Arrival 页面规定，符合条件的外国人可在孟加拉国国际机场和陆路口岸申请最长 30 天的落地签；页面明确把中国列入可因旅游、官方公务、商务或投资申请的国籍。",
         "落地签不是自动准入：须接受移民机关对旅行文件和访问真实性的审查；通常需持返程票、能够证明访问目的的材料，以及至少 500 美元或等值外币现金或信用卡。",
-        "签证费以外币支付并按互惠原则适用；抵达时是否签发及后续延期仍由孟加拉国移民与护照主管机关按现行政策决定。"
+        "签证费以外币支付并按互惠原则适用；抵达时是否签发及后续延期仍由孟加拉国移民与护照主管机关按现行政策决定。",
+        "驻北京使馆另提供官方在线落地签/过境签入口；出发前须按该官方流程核对办理步骤，网上填表不等于已获签证或保证入境。"
       ],
       "status": "verified",
       "sourceIds": [
-        "bd-beijing-visa-on-arrival"
+        "bd-beijing-visa-on-arrival",
+        "bd-beijing-online-voa-guide"
       ],
       "evidenceLocator": "Embassy of Bangladesh in Beijing > Visa on Arrival > Eligibility item 3 and requirements",
       "evidenceExcerpt": "The official embassy page states that certain foreign nationals may receive a visa on arrival for a maximum of 30 days at international airports and land ports, and item 3 expressly includes citizens of China for tourism, official duty, business and investment, subject to document, return-ticket, funds and immigration-authority conditions.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bd-hk-hksar-tourism-review",
@@ -2029,24 +2045,24 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
+      "outcome": "manual_review",
       "maxStayDays": null,
-      "visaProductName": "Bangladesh Tourist Visa",
+      "visaProductName": "Confirm passport-specific Bangladesh visa requirements",
       "conditions": [
-        "孟加拉驻港总领事馆官方 Tourist Visa 页面规定，具有与孟加拉国外交关系国家的外国人以及旅游者可申请旅游签证；材料包括在线申请、往返行程、住宿、银行流水、护照资料和香港/澳门身份证明。",
-        "同一总领事馆官方 Rate of Visa Fees 表将 Hong Kong 单列为有金额的单次/双次入境签证费行；该表把 Visa on Arrival、No visa required 和有金额的签证行分开列示，因此本条确认香港特区普通护照的正规旅游签证路线。",
-        "官方材料未给出该旅游签证的统一准许停留期；签证费、签发和最终入境仍须按申请时的官方流程及边境审查确认。"
+        "驻港领馆 Tourist Visa 页面确认提供港澳领区的正规旅游签申请材料，费用表也列有 Hong Kong 签证费，但这些证据没有明确排除该特区护照的落地签或其他待遇。",
+        "同一驻港费用表也列有 China 有金额签证费，而驻北京使馆明确中国旅客可按条件申请落地签；这证明仅凭有金额的费用行，不能推出必须预先办签。",
+        "本条因此明确为 REVIEW：需取得 Hong Kong 特区普通护照专属的当前签证、落地签或免签要求，确认前不输出确定结论，也不补填停留天数。"
       ],
-      "status": "verified",
+      "status": "draft",
       "sourceIds": [
-        "bd-online-mrv",
         "bd-hk-tourist-visa",
-        "bd-hk-visa-fees"
+        "bd-hk-visa-fees",
+        "bd-beijing-visa-on-arrival"
       ],
-      "evidenceLocator": "Consulate General of Bangladesh in Hong Kong > Tourist Visa; Visa Fees > Rate of Visa Fees > Hong Kong",
-      "evidenceExcerpt": "The official consulate states that foreign nationals of countries having diplomatic relations with Bangladesh and people travelling for tourism are eligible for a Tourist Visa, and requires passport and Hong Kong / Macau identity evidence. Its fee table lists Hong Kong with numeric single-entry and double-entry visa fees, rather than a Visa on Arrival or No visa required label.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Bangladesh Hong Kong Tourist Visa; Visa Fees > Hong Kong and China numeric fee rows; Beijing Visa on Arrival > eligibility item 3 (China counterexample only)",
+      "evidenceExcerpt": "The Hong Kong consulate provides a tourist-visa application route and numeric Hong Kong fee rows. Its China row also has numeric fees, while the Beijing embassy explicitly permits qualifying Chinese visitors to use visa on arrival. Thus fee rows cannot prove mandatory advance visas for Hong Kong SAR passports; passport-specific eligibility remains manual review.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "bd-mo-macao-sar-tourism-review",
@@ -2055,24 +2071,24 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
+      "outcome": "manual_review",
       "maxStayDays": null,
-      "visaProductName": "Bangladesh Tourist Visa",
+      "visaProductName": "Confirm passport-specific Bangladesh visa requirements",
       "conditions": [
-        "孟加拉驻港总领事馆官方 Tourist Visa 页面规定，具有与孟加拉国外交关系国家的外国人以及旅游者可申请旅游签证；材料包括在线申请、往返行程、住宿、银行流水、护照资料和香港/澳门身份证明。",
-        "同一总领事馆官方 Rate of Visa Fees 表将 Macau 单列为有金额的单次/双次/多次入境签证费行；该表把 Visa on Arrival、No visa required 和有金额的签证行分开列示，因此本条确认澳门特区普通护照的正规旅游签证路线。",
-        "官方材料未给出该旅游签证的统一准许停留期；签证费、签发和最终入境仍须按申请时的官方流程及边境审查确认。"
+        "驻港领馆 Tourist Visa 页面确认提供港澳领区的正规旅游签申请材料，费用表也列有 Macau 签证费，但这些证据没有明确排除该特区护照的落地签或其他待遇。",
+        "同一驻港费用表也列有 China 有金额签证费，而驻北京使馆明确中国旅客可按条件申请落地签；这证明仅凭有金额的费用行，不能推出必须预先办签。",
+        "本条因此明确为 REVIEW：需取得 Macau 特区普通护照专属的当前签证、落地签或免签要求，确认前不输出确定结论，也不补填停留天数。"
       ],
-      "status": "verified",
+      "status": "draft",
       "sourceIds": [
-        "bd-online-mrv",
         "bd-hk-tourist-visa",
-        "bd-hk-visa-fees"
+        "bd-hk-visa-fees",
+        "bd-beijing-visa-on-arrival"
       ],
-      "evidenceLocator": "Consulate General of Bangladesh in Hong Kong > Tourist Visa; Visa Fees > Rate of Visa Fees > Macau",
-      "evidenceExcerpt": "The official consulate states that foreign nationals of countries having diplomatic relations with Bangladesh and people travelling for tourism are eligible for a Tourist Visa, and requires passport and Hong Kong / Macau identity evidence. Its fee table lists Macau with numeric single-entry, double-entry and multiple-entry visa fees, rather than a Visa on Arrival or No visa required label.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Bangladesh Hong Kong Tourist Visa; Visa Fees > Macau and China numeric fee rows; Beijing Visa on Arrival > eligibility item 3 (China counterexample only)",
+      "evidenceExcerpt": "The Hong Kong consulate provides a tourist-visa application route and numeric Macau fee rows. Its China row also has numeric fees, while the Beijing embassy explicitly permits qualifying Chinese visitors to use visa on arrival. Thus fee rows cannot prove mandatory advance visas for Macau SAR passports; passport-specific eligibility remains manual review.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mv-cn-prc-ordinary-tourism-voa",
