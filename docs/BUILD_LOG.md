@@ -6,7 +6,7 @@
 
 此前官方 eVisa 在线/落地签名单在研究端返回 403，因此三条历史路线进入 REVIEW。本轮重新读取两份官方国籍名单，确认 China、Hong Kong, China、Macao, China 同时出现在在线申请及落地签名单。三条路线改为有条件 `visa_on_arrival`，并保留在线 eVisa 备选；两页要求另行核对具体条款，故未猜测停留天数或个人获签资格。完整来源定位见 `docs/REVALIDATION_LOG.md` Phase 81。
 
-新增 1 个官方来源记录，三条过期路线续期；全库现为 248 个法域、126 个来源、146 条路线、129 条当前有效证据、126 条当前结论、20 条 REVIEW（14 条过期、3 条证据问题、3 条个体条件审核）。`npm run check`（92 项测试、lint、TypeScript、数据校验、生产构建）与构建 Worker 的 29 项 HTTP smoke 均通过；`git diff --check` 通过。提交与 owner-only Site 部署结果随后补记。
+新增 1 个官方来源记录，三条过期路线续期；全库现为 248 个法域、126 个来源、146 条路线、129 条当前有效证据、126 条当前结论、20 条 REVIEW（14 条过期、3 条证据问题、3 条个体条件审核）。`npm run check`（92 项测试、lint、TypeScript、数据校验、生产构建）与构建 Worker 的 29 项 HTTP smoke 均通过；`git diff --check` 通过。Phase 80 规则提交 `1e459c4dfd1a476c141cfc22eb4787f9a9757f72`、Phase 81 规则提交 `d8c1818eeb8882af3ec25004ac371c46e3bfd657` 均已推送 GitHub `main` 与 Sites 源仓库。最终源码及构建包部署为 Site v80（saved version `appgprj_6a9f8a13f44481919bb7396f22ef6e1d~appgver_c6475800f2a08191af3387f55f8ddefa`，deployment `appgdep_6ad8d2ce07ac8191a2babaffbed49c95`）；状态 `succeeded`。访问权限保持 custom allowlist 仅站点所有者、无外部访客。
 
 ## Phase 80｜沙特中国普通护照与澳门特区护照（2026-10-21）
 
