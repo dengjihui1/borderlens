@@ -1268,8 +1268,8 @@
       ],
       "evidenceLocator": "Philippine eVisa official website > Visa Policy > Visa Policy for Chinese Nationals > Visa-Free Entry for Chinese Nationals Effective 16 January 2026",
       "evidenceExcerpt": "The official eVisa policy states that effective 16 January 2026 Chinese nationals may enter visa-free for tourism and business for a non-extendible and non-convertible 14-day period, through Ninoy Aquino International Airport or Mactan-Cebu International Airport, subject to passport, hotel, onward-ticket and immigration-record conditions; transit to a third country requires a Philippine transit visa.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ph-hk-hksar-tourism-review",
@@ -1291,8 +1291,8 @@
       ],
       "evidenceLocator": "Philippines Bureau of Immigration > Visa Waiver; HONG KONG / MACAU SAR PASSPORT row and Note 1",
       "evidenceExcerpt": "HONG KONG / MACAU SAR PASSPORT — 14 days initial admission; Note 1 states Hong Kong SAR — 9A 14 days under FSC Circular 125-10 (year 2010).",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ph-mo-macao-sar-tourism-review",
@@ -1314,8 +1314,8 @@
       ],
       "evidenceLocator": "Philippines Bureau of Immigration > Visa Waiver; HONG KONG / MACAU SAR PASSPORT row and Note 2",
       "evidenceExcerpt": "HONG KONG / MACAU SAR PASSPORT — 14 days initial admission; Note 2 states Macau SAR — 9A 14 days under FSC Circular 112-11 (year 2011).",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mn-cn-prc-ordinary-tourism-visa-free",
@@ -1336,8 +1336,8 @@
       ],
       "evidenceLocator": "Mongolia Electronic Visa Application System > VISA FREE COUNTRIES list; The People's Republic of China entry",
       "evidenceExcerpt": "The People's Republic of China is listed in the official system's VISA FREE COUNTRIES list.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mn-hk-hksar-tourism-visa-free",
@@ -1358,8 +1358,8 @@
       ],
       "evidenceLocator": "Mongolia Electronic Visa Application System > VISA FREE COUNTRIES list; Hong Kong SAR (China) entry",
       "evidenceExcerpt": "Hong Kong SAR (China) is listed in the official system's VISA FREE COUNTRIES list.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mn-mo-macao-sar-tourism-visa-free",
@@ -1380,8 +1380,8 @@
       ],
       "evidenceLocator": "Mongolia Electronic Visa Application System > VISA FREE COUNTRIES list; Macau SAR (China) entry",
       "evidenceExcerpt": "Macau SAR (China) is listed in the official system's VISA FREE COUNTRIES list.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "kh-cn-prc-ordinary-tourism-evisa",
@@ -2539,8 +2539,8 @@
       "sourceIds": ["hk-gov-egypt-visa-free-90", "hk-immd-visa-free-arrival-list"],
       "evidenceLocator": "Hong Kong Government Information Services notice > Visiting Egypt easier for HKSAR citizens; Hong Kong Immigration Department > HKSAR Passport reference table > Egypt",
       "evidenceExcerpt": "The Hong Kong Government notice records that the Egyptian Government extended the visa-free period for HKSAR passport holders to 90 days. The current HKSAR Immigration Department reference also lists Egypt for 90 days, while advising travellers to confirm with Egyptian authorities.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "eg-mo-macao-sar-tourism-review",
@@ -2560,8 +2560,8 @@
       "sourceIds": ["mo-yearbook-2025-visa-treatment"],
       "evidenceLocator": "Macao Yearbook 2025, Section 09 > visa treatment table > Egypt",
       "evidenceExcerpt": "The official Macao Yearbook 2025 visa-treatment table lists Egypt with a 90-day visa-free treatment for Macao SAR passport holders and marks the Macao Travel Permit as not applicable.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mx-cn-prc-ordinary-tourism-visa-required",
@@ -2968,8 +2968,8 @@
       "sourceIds": ["uy-mi-regimen-visas-admision"],
       "evidenceLocator": "Uruguay Ministry of the Interior > Régimen de visas de admisión; China República Popular row and footnote (10)",
       "evidenceExcerpt": "China República Popular — Pasaporte común: Necesita Visa (5) (10). Footnote (10) provides the US, Canada, UK or EU visa exception when first entering through Carrasco, Montevideo, Colonia or Laguna del Sauce.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "uy-hk-hksar-tourism-review",
@@ -2990,8 +2990,8 @@
       "sourceIds": ["uy-mi-regimen-visas-admision"],
       "evidenceLocator": "Uruguay Ministry of the Interior > Régimen de visas de admisión; Hong Kong row and footnote (4)",
       "evidenceExcerpt": "Hong Kong — Pasaporte común: No necesita Visa (solo Pte. HKSAR) (4). Footnote (4) says the passport must display HKSAR or OVERSEAS.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "uy-mo-macao-sar-tourism-review",
@@ -3012,8 +3012,8 @@
       "sourceIds": ["uy-mi-regimen-visas-admision"],
       "evidenceLocator": "Uruguay Ministry of the Interior > Régimen de visas de admisión; Macao row and footnote (11)",
       "evidenceExcerpt": "Macao — Pasaporte común: No necesita Visa (11). Footnote (11) exempts common passports and travel documents of the Macao SAR of the People's Republic of China.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ec-cn-prc-ordinary-tourism-visa-required",
@@ -3034,8 +3034,8 @@
       "sourceIds": ["ec-mre-visa-required-list", "ec-mre-ministerial-decree-0000064"],
       "evidenceLocator": "Ecuador MFA > Entry visa list > República Popular China; Ministerial Agreement No. 0000064, 1 July 2024",
       "evidenceExcerpt": "The official list includes República Popular China among countries whose nationals must present a visa to enter Ecuador. The 2024 ministerial order establishes a prior visa requirement for nationals of the People's Republic of China and separately excepts public, official or diplomatic passports and applicable visa-exemption agreements.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ec-hk-hksar-tourism-review",
