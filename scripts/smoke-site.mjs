@@ -4,15 +4,18 @@ import { readFile } from 'node:fs/promises';
 const origin = new URL(process.argv[2] ?? 'http://127.0.0.1:4179');
 if (!['localhost', '127.0.0.1', '[::1]'].includes(origin.hostname) || origin.protocol !== 'http:') throw new Error('Smoke checks accept only a local HTTP preview; do not bypass production authentication');
 const policies = JSON.parse(await readFile(new URL('../data/policies.seed.json', import.meta.url), 'utf8'));
-const qaId = policies.rules.find((rule) => rule.destinationJurisdictionId === 'qa').id;
+const bhId = policies.rules.find((rule) => rule.destinationJurisdictionId === 'bh').id;
 const checks = [
   { path: '/', text: ['逐段演示规则已过期，历史结论已隐藏', '查询全部已录入证件规则'] },
-  { path: '/coverage', text: ['Phase 69', '各组规则的当前状态'] },
+  { path: '/coverage', text: ['Phase 70', '各组规则的当前状态'] },
   { path: '/policies', text: ['已有规则，真正查得到。', '下一页'], cards: 12 },
   { path: '/policies?page=12', text: ['上一页'], cards: 11 },
   { path: '/policies?destination=jp&document=hk%3Ahksar_passport', text: ['当前证据有效', 'id="jp-hk-hksar-tourism-short-stay"'], cards: 1 },
   { path: '/policies?destination=bd&document=hk%3Ahksar_passport', text: ['证据不足、冲突或记录不完整', 'id="bd-hk-hksar-tourism-review"'], cards: 1, noText: ['查看官方证据定位与摘录'] },
-  { path: '/policies?destination=qa', text: ['已过复核期限或日期无效', `id="${qaId}"`], cards: 3, noText: ['查看官方证据定位与摘录'] },
+  { path: '/policies?destination=bh', text: ['已过复核期限或日期无效', `id="${bhId}"`], cards: 3, noText: ['查看官方证据定位与摘录'] },
+  { path: '/policies?destination=qa', text: ['免签路线', '可选申请路线', '至少还有 3 个月'], cards: 3, noText: ['QAR 100'] },
+  { path: '/policies?destination=om', text: ['免签路线', '最多 14 天', '不可延期'], cards: 3, noText: ['26A/26B'] },
+  { path: '/policies?destination=cn&document=hk%3Amainland_travel_permit_non_chinese', text: ['当前证据有效', '每次停留不超过 90 日', '依法登记住宿'], cards: 1 },
   { path: '/policies?destination=nz&document=cn%3Aordinary_passport', text: ['证据有效，但个体条件仍需人工核验', 'REVIEW'], cards: 1 },
   { path: '/policies?purpose=study-work', text: ['这组条件尚无受控规则'], cards: 0 },
   { path: '/policies?document=hk%3Ahksar_document_of_identity&destination=jp', text: ['这组条件尚无受控规则'], cards: 0 },

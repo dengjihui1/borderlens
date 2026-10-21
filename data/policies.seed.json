@@ -717,16 +717,17 @@
       "conditions": [
         "仅适用于香港永久性居民中的非中国籍人员，并须已经取得有效通行证。",
         "通行证有效期为 5 年，可多次来往内地，每次停留不超过 90 日。",
-        "不得凭该通行证在内地工作、学习或从事新闻采访；这些目的需另办签证或停居留证件。"
+        "不得凭该通行证在内地工作、学习或从事新闻采访；这些目的需另办签证或停居留证件。",
+        "在内地停留期间应依法登记住宿；快捷通道须先在口岸履行指纹等采集手续，不能仅因持有通行证就保证自动通关。超过 90 日须依法申请延期，不会自动延长。"
       ],
       "status": "verified",
       "sourceIds": [
         "cn-nia-non-chinese-mainland-permit"
       ],
-      "evidenceLocator": "政策问与答 Q1、Q3、Q5",
-      "evidenceExcerpt": "非中国籍港澳永久性居民因旅游等短期入境事由可申请通行证；通行证有效期5年，持证人可以在证件有效期内多次来往内地，每次停留不超过90日。",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "国家移民管理局 政策问与答 Q1（适用人员、5年、多次、每次90日）、Q3（用途限制）、Q5（指纹及快捷通道）、Q6（住宿及延期）",
+      "evidenceExcerpt": "非中国籍港澳永久性居民因旅游等短期事由可申请通行证；有效期5年，每次停留不超过90日。不得持证工作、学习或从事新闻采访；口岸完成指纹等手续后可使用快捷通道，停留期间应依法登记住宿。超过90日需依法申请延期。",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "cn-mo-non-chinese-mainland-permit-tourism",
@@ -741,16 +742,17 @@
       "conditions": [
         "仅适用于澳门永久性居民中的非中国籍人员，并须已经取得有效通行证。",
         "通行证有效期为 5 年，可多次来往内地，每次停留不超过 90 日。",
-        "不得凭该通行证在内地工作、学习或从事新闻采访；这些目的需另办签证或停居留证件。"
+        "不得凭该通行证在内地工作、学习或从事新闻采访；这些目的需另办签证或停居留证件。",
+        "在内地停留期间应依法登记住宿；快捷通道须先在口岸履行指纹等采集手续，不能仅因持有通行证就保证自动通关。超过 90 日须依法申请延期，不会自动延长。"
       ],
       "status": "verified",
       "sourceIds": [
         "cn-nia-non-chinese-mainland-permit"
       ],
-      "evidenceLocator": "政策问与答 Q1、Q3、Q5",
-      "evidenceExcerpt": "非中国籍港澳永久性居民因旅游等短期入境事由可申请通行证；通行证有效期5年，持证人可以在证件有效期内多次来往内地，每次停留不超过90日。",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "国家移民管理局 政策问与答 Q1（适用人员、5年、多次、每次90日）、Q3（用途限制）、Q5（指纹及快捷通道）、Q6（住宿及延期）",
+      "evidenceExcerpt": "非中国籍港澳永久性居民因旅游等短期事由可申请通行证；有效期5年，每次停留不超过90日。不得持证工作、学习或从事新闻采访；口岸完成指纹等手续后可使用快捷通道，停留期间应依法登记住宿。超过90日需依法申请延期。",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "us-cn-prc-ordinary-tourism",
@@ -2174,19 +2176,22 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_on_arrival",
+      "outcome": "visa_free",
       "maxStayDays": null,
-      "visaProductName": "Qatar Visa on Arrival / Hayya A1 e-visa",
+      "visaProductName": "Qatar visa-free entry / optional Hayya A1",
       "conditions": [
-        "Visit Qatar 官方 Visa Check 将 China 列入 A1-3 路线；官方页面摘要说明可在机场以 QAR 100 申请落地签，或在线选择 Hayya A1 电子签。",
-        "本条只覆盖短期旅游的签证路线，不推断停留天数；出发前需按当前官方页面和承运人要求复核。"
+        "Visit Qatar 当前国籍选择项 China 的 value 为 A1-3/cn，对应 citizenship^=A1-3 分支明确为 Enter visa-free，或另行选择 Hayya A1 Entry Visa。",
+        "该分支要求护照自抵达卡塔尔之日起至少还有 3 个月有效期；Hayya A1 是可选申请路线，不是本分支全部旅客的强制要求。",
+        "仅覆盖中国普通护照短期旅游；当前分支未给停留天数，因此不补填期限，也不沿用旧的付费落地签结论。其他证件、实际口岸及个人条件仍需核验。"
       ],
       "status": "verified",
-      "sourceIds": ["qa-visitqatar-visa-check"],
-      "evidenceLocator": "Visit Qatar > Visa Check: China; official page result text: Visa on arrival QAR 100 or Hayya A1",
-      "evidenceExcerpt": "The official Visa Check lists China under A1-3. The Visit Qatar page states: Visa on arrival for a fee (QAR 100) at the airport; alternatively apply for a Hayya A1 visa online.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": [
+        "qa-visitqatar-visa-check"
+      ],
+      "evidenceLocator": "Visit Qatar Visa Check > vq-select-option China: A1-3/cn > root vq-form-conditional-block condition=\"citizenship^=A1-3\"",
+      "evidenceExcerpt": "The China option maps to A1-3/cn. Its citizenship^=A1-3 result states: Enter visa-free OR apply now for a Hayya A1 Entry Visa. The visitor's passport must be valid for at least three months from the date of arrival in Qatar.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "qa-hk-hksar-tourism-voa",
@@ -2195,19 +2200,22 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_on_arrival",
+      "outcome": "visa_free",
       "maxStayDays": null,
-      "visaProductName": "Qatar Visa on Arrival / Hayya A1 e-visa",
+      "visaProductName": "Qatar visa-free entry / optional Hayya A1",
       "conditions": [
-        "Visit Qatar 官方 Visa Check 将 Hong Kong 列入 A1-3 路线；官方页面摘要说明可在机场以 QAR 100 申请落地签，或在线选择 Hayya A1 电子签。",
-        "本条只覆盖短期旅游的签证路线，不推断停留天数；出发前需按当前官方页面和承运人要求复核。"
+        "Visit Qatar 当前国籍选择项 Hong Kong 的 value 为 A1-3/hk，对应 citizenship^=A1-3 分支明确为 Enter visa-free，或另行选择 Hayya A1 Entry Visa。",
+        "该分支要求护照自抵达卡塔尔之日起至少还有 3 个月有效期；Hayya A1 是可选申请路线，不是本分支全部旅客的强制要求。",
+        "仅覆盖香港特区普通护照短期旅游；当前分支未给停留天数，因此不补填期限，也不沿用旧的付费落地签结论。其他证件、实际口岸及个人条件仍需核验。"
       ],
       "status": "verified",
-      "sourceIds": ["qa-visitqatar-visa-check"],
-      "evidenceLocator": "Visit Qatar > Visa Check: Hong Kong; official page result text: Visa on arrival QAR 100 or Hayya A1",
-      "evidenceExcerpt": "The official Visa Check lists Hong Kong under A1-3. The Visit Qatar page states: Visa on arrival for a fee (QAR 100) at the airport; alternatively apply for a Hayya A1 visa online.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": [
+        "qa-visitqatar-visa-check"
+      ],
+      "evidenceLocator": "Visit Qatar Visa Check > vq-select-option Hong Kong: A1-3/hk > root vq-form-conditional-block condition=\"citizenship^=A1-3\"",
+      "evidenceExcerpt": "The Hong Kong option maps to A1-3/hk. Its citizenship^=A1-3 result states: Enter visa-free OR apply now for a Hayya A1 Entry Visa. The visitor's passport must be valid for at least three months from the date of arrival in Qatar.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "qa-mo-macao-sar-tourism-voa",
@@ -2216,19 +2224,22 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_on_arrival",
+      "outcome": "visa_free",
       "maxStayDays": null,
-      "visaProductName": "Qatar Visa on Arrival / Hayya A1 e-visa",
+      "visaProductName": "Qatar visa-free entry / optional Hayya A1",
       "conditions": [
-        "Visit Qatar 官方 Visa Check 将 Macau 列入 A1-3 路线；官方页面摘要说明可在机场以 QAR 100 申请落地签，或在线选择 Hayya A1 电子签。",
-        "本条只覆盖短期旅游的签证路线，不推断停留天数；出发前需按当前官方页面和承运人要求复核。"
+        "Visit Qatar 当前国籍选择项 Macau 的 value 为 A1-3/mo，对应 citizenship^=A1-3 分支明确为 Enter visa-free，或另行选择 Hayya A1 Entry Visa。",
+        "该分支要求护照自抵达卡塔尔之日起至少还有 3 个月有效期；Hayya A1 是可选申请路线，不是本分支全部旅客的强制要求。",
+        "仅覆盖澳门特区普通护照短期旅游；当前分支未给停留天数，因此不补填期限，也不沿用旧的付费落地签结论。其他证件、实际口岸及个人条件仍需核验。"
       ],
       "status": "verified",
-      "sourceIds": ["qa-visitqatar-visa-check"],
-      "evidenceLocator": "Visit Qatar > Visa Check: Macau; official page result text: Visa on arrival QAR 100 or Hayya A1",
-      "evidenceExcerpt": "The official Visa Check lists Macau under A1-3. The Visit Qatar page states: Visa on arrival for a fee (QAR 100) at the airport; alternatively apply for a Hayya A1 visa online.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "sourceIds": [
+        "qa-visitqatar-visa-check"
+      ],
+      "evidenceLocator": "Visit Qatar Visa Check > vq-select-option Macau: A1-3/mo > root vq-form-conditional-block condition=\"citizenship^=A1-3\"",
+      "evidenceExcerpt": "The Macau option maps to A1-3/mo. Its citizenship^=A1-3 result states: Enter visa-free OR apply now for a Hayya A1 Entry Visa. The visitor's passport must be valid for at least three months from the date of arrival in Qatar.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "sa-cn-prc-ordinary-tourism-evisa",
@@ -2363,19 +2374,22 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
-      "maxStayDays": 30,
-      "visaProductName": "Oman 26A/26B Tourist Visit Visa",
+      "outcome": "visa_free",
+      "maxStayDays": 14,
       "conditions": [
-        "阿曼皇家警察官方 Visa Eligibility Wizard 选择 CHINA、GCC 居民 No 后返回 26A Tourist Visit Visa（10 天，OMR 5）和 26B Tourist Visit Visa（30 天，OMR 20）。",
-        "26A 官方条件要求申请人在阿曼境外、护照入境时至少还有 6 个月有效期且无需担保人；26A/26B 均须按官方申请页选择对应产品，签证不保证入境，最终由口岸 ROP 官员决定。"
+        "阿曼外交部当前 Entry visas 页面将 China（includes Hong Kong and Macau）列入第一组，适用访客可有条件免签停留最多 14 天。",
+        "护照入境时至少还有 6 个月有效期，并须持返程票、确认的酒店预订、健康保险及足够承担停留生活的资金。",
+        "14 天免签停留不可延期，也不能转换成其他居留签证；第二组国籍的第三国居留或签证条件不套用于第一组。",
+        "仅适用于本条实际使用的中国普通护照，其他旅行证件另核；电子签产品查询并不能证明必须预先办签，最终仍由阿曼边境机关决定。"
       ],
       "status": "verified",
-      "sourceIds": ["om-rop-visa-types", "om-rop-visa-eligibility"],
-      "evidenceLocator": "Royal Oman Police eVisa > Visa Eligibility Wizard > CHINA > GCC resident: No",
-      "evidenceExcerpt": "The official wizard returns 26A Tourist Visit Visa (10 days, OMR 5) and 26B Tourist Visit Visa (30 days, OMR 20) after selecting CHINA and No for GCC residence; the same route was rechecked on 2026-09-11.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "om-fm-entry-visas"
+      ],
+      "evidenceLocator": "Oman Foreign Ministry > Entry visas > First group: China (includes Hong Kong and Macau); Full text of the regulations",
+      "evidenceExcerpt": "Visitors from more than 100 countries and regions are exempt from entry visas for stays up to 14 days. First group: China (includes Hong Kong and Macau). Passport valid for no less than six months, return ticket, confirmed hotel reservation, health insurance and funds are required. The 14 days cannot be extended or transferred to any type of residence visa.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "om-hk-hksar-tourism-review",
@@ -2384,19 +2398,22 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
-      "maxStayDays": 30,
-      "visaProductName": "Oman 26A/26B Tourist Visit Visa",
+      "outcome": "visa_free",
+      "maxStayDays": 14,
       "conditions": [
-        "阿曼皇家警察官方 Visa Eligibility Wizard 选择 HONG KONG、GCC 居民 No 后返回 26A Tourist Visit Visa（10 天，OMR 5）和 26B Tourist Visit Visa（30 天，OMR 20）。",
-        "26A 官方条件要求申请人在阿曼境外、护照入境时至少还有 6 个月有效期且无需担保人；26A/26B 均须按官方申请页选择对应产品，签证不保证入境，最终由口岸 ROP 官员决定。"
+        "阿曼外交部当前 Entry visas 页面将 China（includes Hong Kong and Macau）列入第一组，适用访客可有条件免签停留最多 14 天。",
+        "护照入境时至少还有 6 个月有效期，并须持返程票、确认的酒店预订、健康保险及足够承担停留生活的资金。",
+        "14 天免签停留不可延期，也不能转换成其他居留签证；第二组国籍的第三国居留或签证条件不套用于第一组。",
+        "仅适用于本条实际使用的香港特区普通护照，其他旅行证件另核；电子签产品查询并不能证明必须预先办签，最终仍由阿曼边境机关决定。"
       ],
       "status": "verified",
-      "sourceIds": ["om-rop-visa-types", "om-rop-visa-eligibility"],
-      "evidenceLocator": "Royal Oman Police eVisa > Visa Eligibility Wizard > HONG KONG > GCC resident: No",
-      "evidenceExcerpt": "The official wizard returns 26A Tourist Visit Visa (10 days, OMR 5) and 26B Tourist Visit Visa (30 days, OMR 20) after selecting HONG KONG and No for GCC residence; the same route was rechecked on 2026-09-11.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "om-fm-entry-visas"
+      ],
+      "evidenceLocator": "Oman Foreign Ministry > Entry visas > First group: China (includes Hong Kong and Macau); Full text of the regulations",
+      "evidenceExcerpt": "Visitors from more than 100 countries and regions are exempt from entry visas for stays up to 14 days. First group: China (includes Hong Kong and Macau). Passport valid for no less than six months, return ticket, confirmed hotel reservation, health insurance and funds are required. The 14 days cannot be extended or transferred to any type of residence visa.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "om-mo-macao-sar-tourism-review",
@@ -2408,17 +2425,19 @@
       "outcome": "visa_free",
       "maxStayDays": 14,
       "conditions": [
-        "阿曼外交部官方 Entry visas 页面将 China（包括 Hong Kong 和 Macau）列入第一组，访客免签入境最多 14 天。",
-        "该免签便利要求护照入境时至少还有 6 个月有效期、返程票、确认的酒店预订、健康保险和足以承担停留生活的资金；14 天不可延期或转换为其他居留签证。",
-        "ROP Visa Eligibility Wizard 在 MACAU、GCC 居民 No 分支只返回 12B Truck Driver Visa 和 33A Property Owner Visa，未返回 26A/26B Tourist Visit Visa；该结果对应电子签产品路径，不否定外交部页面列明的第一组免签路径。",
-        "本条仅适用于澳门特区普通护照，不扩展到澳门旅行证或其他旅行证件；最终入境仍由阿曼边境机关按当时规则决定。"
+        "阿曼外交部当前 Entry visas 页面将 China（includes Hong Kong and Macau）列入第一组，适用访客可有条件免签停留最多 14 天。",
+        "护照入境时至少还有 6 个月有效期，并须持返程票、确认的酒店预订、健康保险及足够承担停留生活的资金。",
+        "14 天免签停留不可延期，也不能转换成其他居留签证；第二组国籍的第三国居留或签证条件不套用于第一组。",
+        "仅适用于本条实际使用的澳门特区普通护照，其他旅行证件另核；电子签产品查询并不能证明必须预先办签，最终仍由阿曼边境机关决定。"
       ],
       "status": "verified",
-      "sourceIds": ["om-fm-entry-visas", "om-rop-visa-types", "om-rop-visa-eligibility"],
-      "evidenceLocator": "Oman Foreign Ministry > Visitors > Entry visas > First group (China includes Hong Kong and Macau) and visa-free entry controls",
-      "evidenceExcerpt": "The current official Foreign Ministry page places China (including Hong Kong and Macau) in the first group exempt from entry visas for stays up to 14 days and lists the applicable passport, return-ticket, hotel, insurance, funds and non-extension conditions.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "sourceIds": [
+        "om-fm-entry-visas"
+      ],
+      "evidenceLocator": "Oman Foreign Ministry > Entry visas > First group: China (includes Hong Kong and Macau); Full text of the regulations",
+      "evidenceExcerpt": "Visitors from more than 100 countries and regions are exempt from entry visas for stays up to 14 days. First group: China (includes Hong Kong and Macau). Passport valid for no less than six months, return ticket, confirmed hotel reservation, health insurance and funds are required. The 14 days cannot be extended or transferred to any type of residence visa.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "jo-cn-prc-ordinary-tourism-review",

@@ -1,5 +1,25 @@
 # BorderLens 规则重新核验日志
 
+## Phase 70 · 修正产品查询误读与继续复核（2026-10-21）
+
+确认阿曼 3 条、卡塔尔 3 条、内地非中国籍港澳永久居民通行证 2 条，共 8 条当前规则。全库仍为 143 条，85 条证据在窗口内（其中 1 条个人条件仍需核验）、55 条历史到期、3 条明确证据问题；查询为 84 条当前结论和 59 条 REVIEW。八条规则统一复核截止 2026-11-20，其余 135 条保持原样。
+
+| 官方证据 | 本次直接读取结果 | 修正 / 保留边界 |
+|---|---|---|
+| [阿曼外交部 Entry visas](https://www.fm.gov.om/visitors/entry-visas/) | HTTP 200，页面标注 last updated 2026-09-22；First group 写明 China (includes Hong Kong and Macau)，全文规定最多 14 天、护照至少 6 个月、返程票、酒店、健康保险及资金，不可延期或转居留 | 中国和香港不再仅凭 26A/26B 产品列表被判为必须签证；三类普通护照均采用当前外交部条件免签。产品存在不能排除其他免签路径，不沿用未经本轮复核的 ROP 细节 |
+| [Visit Qatar Visa Check](https://visitqatar.com/intl-en/plan-your-trip/visas) | HTTP 200；官方 HTML 的 `vq-select-option` 分别为 China=`A1-3/cn`、Hong Kong=`A1-3/hk`、Macau=`A1-3/mo`；根级 `vq-form-conditional-block condition="citizenship^=A1-3"` 原文：`Enter visa-free OR apply now for a Hayya A1 Entry Visa`，并要求护照抵达时至少 3 个月有效 | 不把页面其他国籍/居民分支的 QAR 100 落地签文字套到 A1-3；本组三条更正为免签，Hayya A1 为可选路线。该条件块没有停留期限，不补填，也不混入联合签证等其他分支 |
+| [国家移民管理局通行证政策问答](https://www.nia.gov.cn/n794014/n1050181/n1050484/c1659464/content.html) | HTTP 200，中英正文 Q1 确认非中国籍港澳永久性居民、5 年证件有效期、多次、每次不超过 90 日；Q3 禁止工作/学习/新闻；Q5 快捷通道须口岸指纹等采集；Q6 住宿登记及依法申请延期 | 两条保留“已持有效通行证”前提，补上住宿和快捷通道边界；不将 5 年当停留期限、不将可申请当作已持证、不将其他国籍身份自动匹配本规则 |
+
+卡塔尔规则保留既有 ID（含历史 `voa` 后缀）以维持追溯，当前结论只取结构化 `outcome` 与当前原文，不从 ID 推断签证类别。HTML 中的条件块由标准 HTML parser 按元素和属性读取，并确认没有额外父条件；没有使用全文某段包含国名的文字代替路由。
+
+### 本轮未续期与仍需解决的项目
+
+- 阿联酋外交部当前 Macao 卡片再次读到 `visa-required` / `Visa Required`，没有取得能消解既有澳门官方资料冲突的新证据；保持 REVIEW。
+- 孟加拉国驻港 Tourist Visa 当前 HTTP 200，仍仅有港澳身份材料和办理步骤，不足以排除其他入境路线；两条保持 REVIEW。
+- 巴林在线资格列表与沙特 eVisa 门户本次直接访问均 HTTP 403；不更新相关六条规则的核验日期。来源的历史转录状态不被当作本次访问成功。
+- 中国籍港澳居民回乡证原服务指南本次 HTTP 404，两条旧日期保留；非中国籍通行证问答不能替代它们。
+- 约旦内政部限制国籍表当前可读，但未列入限制名单仍不能独立证明落地签、费用和期限；既有路线不续期。
+
 ## Phase 69 · 查询接入时的期限口径审计（2026-10-21）
 
 直接重新读取新西兰移民局 [Visa Waiver Visitor Visa](https://www.immigration.govt.nz/visas/visa-waiver-visitor-visa/) 当前正文，HTTP 200。`How long you can stay` 明确写明 `You can stay for up to 3 months`；`Applicants from Hong Kong` 与 `Applicants from Macau` 分别保留居民及特区护照条件，`Authority to travel` 要求 NZeTA 及同一本护照旅行。

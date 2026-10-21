@@ -84,14 +84,14 @@ test('复核队列按证据问题、到期、个体条件排序且稳定', () =>
   assert.deepEqual(getReviewQueue(entries).map((entry) => entry.id), ['draft', 'expired', 'manual']);
 });
 
-test('真实库 143 条全部可查；77 证据有效不等于 77 个自动结论', async () => {
+test('真实库 143 条全部可查；85 证据有效不等于 85 个自动结论', async () => {
   const readJson = async (path: string) => JSON.parse(await readFile(new URL(path, import.meta.url), 'utf8'));
   const [policies, registry] = await Promise.all([readJson('../data/policies.seed.json'), readJson('../data/official-source-registry.json')]);
   const entries = buildPolicyCatalog(policies.rules, registry.sources, now);
   assert.equal(entries.length, 143);
-  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 77);
-  assert.equal(entries.filter((entry) => entry.conclusion).length, 76);
-  assert.equal(getReviewQueue(entries).length, 67);
+  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 85);
+  assert.equal(entries.filter((entry) => entry.conclusion).length, 84);
+  assert.equal(getReviewQueue(entries).length, 59);
   assert.equal(entries.find((entry) => entry.id === 'bd-hk-hksar-tourism-review')!.evidence, null);
   assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T00:00:00Z')).filter((entry) => entry.conclusion).length, 0);
 });

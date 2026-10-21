@@ -7,6 +7,35 @@ const readJson = async (relativePath: string) => JSON.parse(await readFile(new U
 
 type PolicyFixture = CatalogRule;
 
+test('Phase 70 当前官方证据续期八条路线并保留内地通行证的操作边界', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  const rules = (policies.rules as PolicyFixture[]).filter((rule) => ['qa', 'om'].includes(rule.destinationJurisdictionId ?? '')
+    || rule.documentType === 'mainland_travel_permit_non_chinese');
+  assert.equal(rules.length, 8);
+  for (const rule of rules) {
+    assert.equal(rule.checkedAt, '2026-10-21');
+    assert.equal(rule.reviewDueAt, '2026-11-20');
+    assert.equal(rule.status, 'verified');
+  }
+  for (const rule of rules.filter((rule) => rule.destinationJurisdictionId === 'cn')) {
+    assert.equal(rule.maxStayDays, 90);
+    assert.ok(rule.conditions.some((line) => line.includes('非中国籍') && line.includes('有效通行证')));
+    assert.ok(rule.conditions.some((line) => line.includes('住宿') && line.includes('指纹') && line.includes('不会自动延长')));
+    assert.ok(rule.conditions.some((line) => line.includes('工作、学习') && line.includes('新闻采访')));
+  }
+});
+
+test('受阻入口与未解决证据不机械续期或伪装为确定结论', async () => {
+  const policies = await readJson('../data/policies.seed.json');
+  for (const rule of (policies.rules as PolicyFixture[]).filter((rule) => ['bh', 'sa'].includes(rule.destinationJurisdictionId ?? '') || rule.documentType === 'home_return_permit')) {
+    assert.equal(rule.checkedAt, '2026-09-08');
+    assert.equal(rule.reviewDueAt, '2026-10-08');
+  }
+  const conflicts = (policies.rules as PolicyFixture[]).filter((rule) => rule.status === 'draft');
+  assert.equal(conflicts.length, 3);
+  assert.ok(conflicts.every((rule) => rule.outcome === 'manual_review'));
+});
+
 test('联合国 M49 目录包含全球法域且代码唯一', async () => {
   const catalog = await readJson('../data/countries.un-m49.json');
   assert.equal(catalog.count, 248);
@@ -379,17 +408,30 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
     assert.ok(rules.every((rule: PolicyFixture) => rule.status === 'verified'));
     assert.ok(rules.every((rule: PolicyFixture) => rule.conditions.length >= 2));
   }
-  assert.deepEqual([byId.get('qa-cn-prc-ordinary-tourism-voa')!.outcome, byId.get('qa-cn-prc-ordinary-tourism-voa')!.maxStayDays], ['visa_on_arrival', null]);
+  assert.deepEqual([byId.get('qa-cn-prc-ordinary-tourism-voa')!.outcome, byId.get('qa-cn-prc-ordinary-tourism-voa')!.maxStayDays], ['visa_free', null]);
+  for (const rule of (policies.rules as PolicyFixture[]).filter((rule) => rule.destinationJurisdictionId === 'qa')) {
+    assert.equal(rule.outcome, 'visa_free');
+    assert.equal(rule.maxStayDays, null);
+    assert.match(rule.evidenceLocator, new RegExp(`A1-3/${rule.documentIssuerJurisdictionId}`));
+    assert.match(rule.evidenceExcerpt, /Enter visa-free OR apply now for a Hayya A1/);
+    assert.ok(rule.conditions.some((line) => line.includes('可选') && line.includes('不是')));
+    assert.ok(!JSON.stringify(rule).includes('QAR 100'));
+  }
   assert.deepEqual([byId.get('sa-cn-prc-ordinary-tourism-evisa')!.outcome, byId.get('sa-cn-prc-ordinary-tourism-evisa')!.maxStayDays], ['visa_required', 90]);
   assert.equal(byId.get('sa-hk-hksar-tourism-evisa')!.conditions.some((condition: string) => condition.includes('Hong Kong')), true);
   const oman = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'om');
   assert.equal(oman.length, 3);
-  assert.deepEqual([byId.get('om-cn-prc-ordinary-tourism-review')!.status, byId.get('om-cn-prc-ordinary-tourism-review')!.outcome, byId.get('om-cn-prc-ordinary-tourism-review')!.maxStayDays], ['verified', 'visa_required', 30]);
-  assert.deepEqual([byId.get('om-hk-hksar-tourism-review')!.status, byId.get('om-hk-hksar-tourism-review')!.outcome, byId.get('om-hk-hksar-tourism-review')!.maxStayDays], ['verified', 'visa_required', 30]);
+  assert.deepEqual([byId.get('om-cn-prc-ordinary-tourism-review')!.status, byId.get('om-cn-prc-ordinary-tourism-review')!.outcome, byId.get('om-cn-prc-ordinary-tourism-review')!.maxStayDays], ['verified', 'visa_free', 14]);
+  assert.deepEqual([byId.get('om-hk-hksar-tourism-review')!.status, byId.get('om-hk-hksar-tourism-review')!.outcome, byId.get('om-hk-hksar-tourism-review')!.maxStayDays], ['verified', 'visa_free', 14]);
   assert.deepEqual([byId.get('om-mo-macao-sar-tourism-review')!.status, byId.get('om-mo-macao-sar-tourism-review')!.outcome, byId.get('om-mo-macao-sar-tourism-review')!.maxStayDays], ['verified', 'visa_free', 14]);
-  assert.ok(byId.get('om-cn-prc-ordinary-tourism-review')!.conditions.some((condition: string) => condition.includes('26A')));
+  assert.ok(byId.get('om-cn-prc-ordinary-tourism-review')!.conditions.some((condition: string) => condition.includes('不能证明必须预先办签')));
   assert.ok(byId.get('om-mo-macao-sar-tourism-review')!.conditions.some((condition: string) => condition.includes('第一组') && condition.includes('14 天')));
-  assert.ok(byId.get('om-mo-macao-sar-tourism-review')!.conditions.some((condition: string) => condition.includes('12B') && condition.includes('33A') && condition.includes('电子签产品路径')));
+  for (const rule of oman as PolicyFixture[]) {
+    assert.deepEqual(rule.sourceIds, ['om-fm-entry-visas']);
+    assert.equal(rule.maxStayDays, 14);
+    assert.ok(rule.conditions.some((condition) => condition.includes('6 个月') && condition.includes('健康保险') && condition.includes('资金')));
+    assert.ok(rule.conditions.some((condition) => condition.includes('不可延期') && condition.includes('不能转换')));
+  }
   const jordan = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'jo');
   assert.equal(jordan.length, 3);
   for (const rule of jordan) {
