@@ -6,7 +6,7 @@
 
 分别核对缅甸旅游部当前 eVisa、Visa on Arrival 页面，中国/印度游客 2026-09-15 延期公告原图，缅甸驻港总领馆 2026-06-19 HKSAR 延期公告原图，以及澳门此前 VOA 试行延期公告。三条 eVisa 路线更新到 2026-10-21；新增中国及 HKSAR 航空 VOA 路线，分别受 2027-08-29 与 2027-03-10 的缅甸时区截止门禁控制。澳门旧 VOA 记录已于 2026-10-20 到期，进入 REVIEW；澳门 eVisa 保持独立当前路线。没有将未找到延期公告推断为永久取消。
 
-验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建）；固定日期复核队列为 146 条路线、122 条当前证据、119 条可展示结论、27 条 REVIEW（21 条过期、3 条证据问题、3 条个体条件审核）。更新分页 smoke 并增加中/澳门多路线检查后，生产 Worker 29 项 HTTP smoke 全部通过；`git diff --check` 通过。仓库与仅所有者可见 Site 的发布闭环状态及精确 SHA/版本将在发布完成后补录。
+验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建）；固定日期复核队列为 146 条路线、122 条当前证据、119 条可展示结论、27 条 REVIEW（21 条过期、3 条证据问题、3 条个体条件审核）。更新分页 smoke 并增加中/澳门多路线检查后，生产 Worker 29 项 HTTP smoke 全部通过；`git diff --check` 通过。阶段代码及证据记录提交 `ce9f2174f7706db9f562bfe68541d8a641b7208c` 已推送 GitHub `main` 与 Sites 源仓库，并打包为 `outputs/borderlens-phase-78.tar.gz`；以仅所有者可见方式成功部署为 Site v76，saved version `appgprj_6a9f8a13f44481919bb7396f22ef6e1d~appgver_1a23836d5e0c819185f884a9ede7acda`，deployment `appgdep_6ad88b727b308191879ab6c0638671a6`。站点访问权限保持只允许所有者。
 
 ## Phase 77｜复核沙特 HKSAR 普通护照落地签（2026-10-21）
 
