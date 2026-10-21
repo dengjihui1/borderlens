@@ -1,5 +1,16 @@
 # BorderLens 规则重新核验日志
 
+## Phase 75 · 阿联酋/孟加拉国冲突复查与柬埔寨临时豁免到期（2026-10-21）
+
+| 证据批次 | 当前官方原文及结果 |
+|---|---|
+| 澳门特区护照 → 阿联酋 | 重新读取 [UAE MOFA 国籍待遇卡](https://www.mofa.gov.ae/en/visa-exemptions-for-non-citizen/)：Macao 卡仍是 Visa Required。另读取 [澳门政府/身份证明局 2019 公告](https://www.gov.mo/en/news/114215/)；公告称澳门政府曾正式收到 UAE 政府通知，澳门特区护照入境 UAE 免签最多 30 天。澳门《年鉴 2025》附录九第 523 页也列 30 天；第 528 页脚注仅限旅行证。当前主管机关卡片和澳门政府记录的对方官方通知直接冲突，继续 `draft / manual_review`，期限 null；新增澳门政府公告源，不把旧通知当作现行 UAE 核准。 |
+| 香港/澳门特区护照 → 孟加拉国 | 重新核对香港总领馆 [Tourist Visa](https://hongkong.mofa.gov.bd/pages/static-pages/6952668735ce18e1c05a9d33) 与 [Visa Fees](https://hongkong.mofa.gov.bd/pages/static-pages/6952667c35ce18e1c05a97fc)：两页提供申请路径、香港/澳门身份证明要求及独立收费行，但不单独证明必须预先办签。另查孟加拉驻哥本哈根使馆 [Visa on Arrival](https://copenhagen.mofa.gov.bd/pages/static-pages/visa-on-arrival-7030f0-695266a835ce18e1c05aa9f3)，该页检索到的官方正文（页面注明 2026-09-09 更新）在有条件 VOA 国籍组列 China；驻北京使馆页也列中国。两者均未写 HKSAR/Macao passport 是否纳入 China 项。香港总领馆页的直接网页读取超时，使用官方页面解析文本复核，不把检索摘要独立当成结论依据。港澳两条维持 REVIEW。 |
+| 中国、香港、澳门普通护照 → 柬埔寨 | [官方 Visa T 页面](https://www.evisa.gov.kh/information/visa_type/4)列单次入境、USD 30、签发日起 3 个月有效、停留 1 个月及护照剩余有效期超过 6 个月；免签名单不含中港澳。[官方服务首页](https://www.evisa.gov.kh/home)显示临时 PRC 护照免签公告：包含内地、香港、澳门、最多 14 天，生效期 2026-06-15 至 2026-10-15；本轮核验日 10 月 21 日已过期，因此不延用该例外，三条路线按 Visa T 基线续核至 2026-11-20。[Cambodia e-Arrival](https://arrival.gov.kh/)说明所有旅客（含已获签者）仍须填报，并可在抵达前 7 天内提交。研究客户端对 e-Visa 页面返回重定向循环；本轮逐项复核了官方页面解析出的条款，并在来源记录中注明读取方式。 |
+| 中国及港澳普通护照 → 巴林 | 官方 [NPRA 在线签证国家页](https://www.evisa.gov.bh/list-of-online-visa-country.html)与[落地签国家页](https://www.evisa.gov.bh/list-of-onarrival-visa-country.html)本轮均返回 HTTP 403；[门户首页](https://www.evisa.gov.bh/)可读取并明确为官方唯一签证申请站，但不含国籍待遇。来源保留 2026-09-08 的 verified 历史内容和核验日期，另记本轮 HTTP 403 尝试时间 2026-10-21；三条路线不续期，继续作为过期 REVIEW。 |
+
+变更仅涉及柬埔寨 3 条过期路线恢复当前核验状态；阿联酋澳门增加一条可追溯的对方政府通知证据但不改 REVIEW 结论；孟加拉国港澳不改 REVIEW；巴林三条不改政策日期。来源总数 117；102 verified、7 reachable、8 blocked（巴林旧内容的历史核验保留，当前 HTTP 403 单独记尝试）。全库 143 条，当前证据 114 条、可展示结论 111 条、历史过期 26 条、证据问题 REVIEW 3 条，查询总 REVIEW 32 条。具体测试和构建结果见 `docs/BUILD_LOG.md` Phase 75。
+
 ## Phase 72 · 拉美条件分支、期限单位与历史边界（2026-10-21）
 
 处理智利、秘鲁、哥伦比亚、哥斯达黎加共 12 条，其余 131 条不变。前三国 9 条取得当前证据，核验日期为 2026-10-21、复核截止为 2026-11-20；哥斯达黎加 3 条只校正历史条款，保留 2026-09-11 / 2026-10-11，不机械续期。全库 143 条、111 来源，108 条证据有效，32 条历史到期、3 条显式证据问题；有效证据中另有 3 条个体条件未决，查询为 105 当前结论、38 REVIEW。

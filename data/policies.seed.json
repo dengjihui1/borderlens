@@ -689,16 +689,18 @@
       "visaProductName": "Official-source conflict: confirm visa requirements",
       "conditions": [
         "阿联酋外交部现行 Visa Exemptions for Non Citizen 页面将 Macao Special Administrative Region 卡片明确标为 Visa Required。",
-        "澳门政府《澳门年鉴 2025》附录九第 523 页列出阿拉伯联合酋长国 30 天免签待遇；脚注 f) 仅说明不向澳门旅行证发出签证，不能消除普通护照结论冲突。",
-        "两份官方证据冲突，本条不提供免签、落地签或预先签证的确定结论；须向阿联酋主管机关确认澳门特区普通护照的当前要求。"
+        "澳门政府《澳门年鉴 2025》附录九第 523 页列出阿拉伯联合酋长国 30 天免签；澳门政府 2019-06-27 公告称其曾正式收到阿联酋政府关于澳门特区护照免签 30 天的通知。",
+        "年鉴第 528 页脚注 f) 仅说明不向澳门旅行证发出签证，不能消除当前澳门特区普通护照结论冲突。",
+        "当前阿联酋外交部卡片与澳门政府记录的阿联酋官方通知相冲突；本条不提供免签、落地签或预先签证的确定结论，须向阿联酋主管机关确认当前要求。"
       ],
       "status": "draft",
       "sourceIds": [
         "ae-mofa-visa-exemptions-non-citizen",
-        "mo-yearbook-2025-visa-treatment"
+        "mo-yearbook-2025-visa-treatment",
+        "mo-govmo-uae-visa-free-notice"
       ],
-      "evidenceLocator": "UAE MOFA > Visa Exemptions for Non Citizen > Macao card (visa-required); Macao Yearbook 2025 Appendix 09, printed page 523 and footnote f on page 528",
-      "evidenceExcerpt": "The current UAE MOFA Macao card explicitly says Visa Required, while the official 2025 Macao Yearbook lists UAE 30-day visa-free treatment for SAR passports. Footnote f concerns travel permits, not a resolution of the SAR passport conflict. The route therefore remains manual review with no asserted stay period.",
+      "evidenceLocator": "UAE MOFA > Visa Exemptions for Non Citizen > Macao card (visa-required); Macao Government Portal > DSI notice published 2019-06-27; Macao Yearbook 2025 Appendix 09, printed page 523 and footnote f on page 528",
+      "evidenceExcerpt": "The current UAE MOFA Macao card says Visa Required. The Macao SAR Government reports that it was officially informed by the UAE Government on visa-free entry for Macao SAR passport holders for up to 30 days, and the 2025 yearbook repeats 30-day treatment. The conflicting official records do not resolve the current requirement; the route remains manual review with no asserted stay period.",
       "checkedAt": "2026-10-21",
       "reviewDueAt": "2026-11-20"
     },
@@ -1425,7 +1427,8 @@
       "conditions": [
         "柬埔寨官方 e-Visa 的 Visa T 为单次入境，签发日起 3 个月内有效，入境后停留 1 个月，费用 USD 30。",
         "入境时护照剩余有效期须超过 6 个月，并准备近期电子证件照和在线支付卡。",
-        "所有旅客（包括已获签证者）仍须提交 Cambodia e-Arrival；官方建议抵达前 7 天内在线完成。"
+        "所有旅客（包括已获签证者）仍须提交 Cambodia e-Arrival；官方建议抵达前 7 天内在线完成。",
+        "柬埔寨官方 e-Visa 站公布的中国游客临时免签（包括内地、香港、澳门 PRC 护照，最多 14 天）仅适用于 2026-06-15 至 2026-10-15；本次核验日已过期，不作为当前路线依据。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -1433,9 +1436,9 @@
         "kh-evisa-home"
       ],
       "evidenceLocator": "Cambodia e-Visa > Visa Type Information > Visa T; official home > Get e-Visa Approval / Submit e-Arrival",
-      "evidenceExcerpt": "Visa T: single entry, USD 30, validity 3 months, length of stay 1 month, passport validity of more than six months. The exemption list does not include China, Hong Kong SAR or Macao SAR; all travelers are required to fill in Cambodia e-Arrival.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceExcerpt": "Official Visa T terms remain single entry, USD 30, three-month validity, one-month stay and more than six months passport validity. The official site also records a PRC-passport exemption including mainland China, Hong Kong and Macao, valid only 2026-06-15 through 2026-10-15; it had expired by the 2026-10-21 review. All travelers still need e-Arrival.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "kh-hk-hksar-tourism-evisa",
@@ -1450,7 +1453,8 @@
       "conditions": [
         "柬埔寨官方 e-Visa 的 Visa T 为单次入境，签发日起 3 个月内有效，入境后停留 1 个月，费用 USD 30。",
         "入境时护照剩余有效期须超过 6 个月，并准备近期电子证件照和在线支付卡。",
-        "所有旅客（包括已获签证者）仍须提交 Cambodia e-Arrival；官方建议抵达前 7 天内在线完成。"
+        "所有旅客（包括已获签证者）仍须提交 Cambodia e-Arrival；官方建议抵达前 7 天内在线完成。",
+        "柬埔寨官方 e-Visa 站公布的中国游客临时免签（包括内地、香港、澳门 PRC 护照，最多 14 天）仅适用于 2026-06-15 至 2026-10-15；本次核验日已过期，不作为当前路线依据。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -1458,9 +1462,9 @@
         "kh-evisa-home"
       ],
       "evidenceLocator": "Cambodia e-Visa > Visa Type Information > Visa T; official home > Get e-Visa Approval / Submit e-Arrival",
-      "evidenceExcerpt": "Visa T: single entry, USD 30, validity 3 months, length of stay 1 month, passport validity of more than six months. The exemption list does not include China, Hong Kong SAR or Macao SAR; all travelers are required to fill in Cambodia e-Arrival.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceExcerpt": "Official Visa T terms remain single entry, USD 30, three-month validity, one-month stay and more than six months passport validity. The official site also records a PRC-passport exemption including mainland China, Hong Kong and Macao, valid only 2026-06-15 through 2026-10-15; it had expired by the 2026-10-21 review. All travelers still need e-Arrival.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "kh-mo-macao-sar-tourism-evisa",
@@ -1475,7 +1479,8 @@
       "conditions": [
         "柬埔寨官方 e-Visa 的 Visa T 为单次入境，签发日起 3 个月内有效，入境后停留 1 个月，费用 USD 30。",
         "入境时护照剩余有效期须超过 6 个月，并准备近期电子证件照和在线支付卡。",
-        "所有旅客（包括已获签证者）仍须提交 Cambodia e-Arrival；官方建议抵达前 7 天内在线完成。"
+        "所有旅客（包括已获签证者）仍须提交 Cambodia e-Arrival；官方建议抵达前 7 天内在线完成。",
+        "柬埔寨官方 e-Visa 站公布的中国游客临时免签（包括内地、香港、澳门 PRC 护照，最多 14 天）仅适用于 2026-06-15 至 2026-10-15；本次核验日已过期，不作为当前路线依据。"
       ],
       "status": "verified",
       "sourceIds": [
@@ -1483,9 +1488,9 @@
         "kh-evisa-home"
       ],
       "evidenceLocator": "Cambodia e-Visa > Visa Type Information > Visa T; official home > Get e-Visa Approval / Submit e-Arrival",
-      "evidenceExcerpt": "Visa T: single entry, USD 30, validity 3 months, length of stay 1 month, passport validity of more than six months. The exemption list does not include China, Hong Kong SAR or Macao SAR; all travelers are required to fill in Cambodia e-Arrival.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceExcerpt": "Official Visa T terms remain single entry, USD 30, three-month validity, one-month stay and more than six months passport validity. The official site also records a PRC-passport exemption including mainland China, Hong Kong and Macao, valid only 2026-06-15 through 2026-10-15; it had expired by the 2026-10-21 review. All travelers still need e-Arrival.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "la-cn-prc-ordinary-tourism-evisa",

@@ -203,7 +203,8 @@ test('阿联酋按当前外交部卡片核验，澳门官方来源冲突必须 R
   }
   const macao = byId.get('ae-mo-macao-sar-tourism-advance-visa')!;
   assert.deepEqual([macao.status, macao.outcome, macao.maxStayDays], ['draft', 'manual_review', null]);
-  assert.ok(macao.conditions.some((condition) => condition.includes('两份官方证据冲突')));
+  assert.ok(macao.conditions.some((condition) => condition.includes('当前阿联酋外交部卡片') && condition.includes('澳门政府记录')));
+  assert.ok(macao.sourceIds.includes('mo-govmo-uae-visa-free-notice'));
 });
 
 test('中国内地非中国籍港澳永久居民通行证规则限制为短期用途', async () => {
@@ -318,9 +319,21 @@ test('柬埔寨 Visa T 保留电子签、护照有效期与 e-Arrival 要求', a
   assert.equal(cambodia.length, 3);
   for (const rule of cambodia) {
     assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', 30]);
+    assert.deepEqual([rule.checkedAt, rule.reviewDueAt], ['2026-10-21', '2026-11-20']);
     assert.ok(rule.conditions.some((condition: string) => condition.includes('e-Arrival')));
     assert.ok(rule.conditions.some((condition: string) => condition.includes('6 个月')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('2026-10-15') && condition.includes('已过期')));
   }
+});
+
+test('巴林官网拒绝当前国籍表访问时不续期历史规则', async () => {
+  const registry = await readJson('../data/official-source-registry.json');
+  const policies = await readJson('../data/policies.seed.json');
+  const source = registry.sources.find((item: { id: string }) => item.id === 'bh-npra-online-visa-countries');
+  assert.deepEqual([source.status, source.checkedAt, source.lastAttemptedAt], ['verified', '2026-09-08', '2026-10-21']);
+  const bahrain = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'bh');
+  assert.equal(bahrain.length, 3);
+  for (const rule of bahrain) assert.deepEqual([rule.checkedAt, rule.reviewDueAt], ['2026-09-08', '2026-10-08']);
 });
 
 test('老挝电子签对中国与港澳特区护照保留 30 天和指定口岸限制', async () => {
@@ -638,7 +651,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 116);
+  assert.equal(registry.sources.length, 117);
   assert.equal(policies.rules.length, 143);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 140);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);
