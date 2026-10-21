@@ -25,7 +25,8 @@ const millisecondsPerDay = 24 * 60 * 60 * 1000;
 const now = new Date();
 const isCurrent = (rule) => rule.status === 'verified'
   && Number.isFinite(Date.parse(`${rule.reviewDueAt}T23:59:59Z`))
-  && now.getTime() <= Date.parse(`${rule.reviewDueAt}T23:59:59Z`);
+  && now.getTime() <= Date.parse(`${rule.reviewDueAt}T23:59:59.999Z`)
+  && (rule.effectiveUntil === undefined || now.getTime() <= Date.parse(rule.effectiveUntil));
 
 for (const zone of policyZones.zones) {
   if (new Set(zone.members).size !== zone.members.length) errors.push(`${zone.id}: duplicate policy-zone member`);
@@ -37,6 +38,12 @@ for (const zone of policyZones.zones) {
 if (policyZoneIds.size !== policyZones.zones.length) errors.push('Duplicate policy zone id');
 
 for (const rule of policies.rules) {
+  if (rule.maxStayMonths !== undefined && (!Number.isInteger(rule.maxStayMonths) || rule.maxStayMonths <= 0 || rule.maxStayDays !== null)) {
+    errors.push(`${rule.id}: calendar-month limit must be positive and must not be converted to a day limit`);
+  }
+  if (rule.effectiveUntil !== undefined && (typeof rule.effectiveUntil !== 'string' || !/T.*(?:Z|[+-]\d{2}:\d{2})$/.test(rule.effectiveUntil) || !Number.isFinite(Date.parse(rule.effectiveUntil)))) {
+    errors.push(`${rule.id}: effectiveUntil must be an ISO timestamp with an explicit time zone`);
+  }
   const hasJurisdiction = typeof rule.destinationJurisdictionId === 'string';
   const hasPolicyZone = typeof rule.destinationPolicyZoneId === 'string';
   if (hasJurisdiction === hasPolicyZone) errors.push(`${rule.id}: must have exactly one destination jurisdiction or policy zone`);

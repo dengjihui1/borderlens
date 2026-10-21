@@ -1,16 +1,19 @@
 import { ArrowLeft, Database, ExternalLink, FileSearch, Globe2, ShieldAlert } from 'lucide-react';
 import Link from 'next/link';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { coverageSummary, latestPolicyBatch, registeredSources, sourceStatusCopy } from '@/lib/global-data';
+import { getCoverageSnapshot, registeredSources, sourceStatusCopy } from '@/lib/global-data';
+
+export const dynamic = 'force-dynamic';
 
 const format = new Intl.NumberFormat('zh-CN');
 
 export default function CoveragePage() {
+  const { coverageSummary, latestPolicyBatch } = getCoverageSnapshot();
   return (
     <main className="coverage-page">
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
-        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 66</div>
+        <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · Phase 67</div>
         <Link className="plain-link" href="/"><ArrowLeft size={14} /> 返回路线工具</Link>
       </header>
 
@@ -68,7 +71,7 @@ export default function CoveragePage() {
           </ol>
         </section>
       </section>
-      <footer><span>BorderLens Global Policy DB · Phase 66</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
+      <footer><span>BorderLens Global Policy DB · Phase 67</span><span>来源可追溯 · 规则可过期 · 未验证不作答</span></footer>
     </main>
   );
 }

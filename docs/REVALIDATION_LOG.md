@@ -65,3 +65,25 @@
 ### 覆盖率结论门禁
 
 发现 `/coverage` 原来仅按到期日过滤计数，卡片说明仍展示旧的整组确定性结论。本批将卡片说明和数量使用同一时效判断：只有整组规则均当前有效时才展示政策摘要；过期、混合或空批次显示复核提示。回归测试覆盖截止日、草稿/无效日期、全部有效、全部过期、混合和空批次。
+
+## Phase 67 · 澳大利亚、美国、韩国与阿联酋（2026-10-21）
+
+本批确认 10 条规则：澳大利亚 3 条、美国 3 条、韩国港澳特区护照 2 条、阿联酋中国/香港普通护照 2 条。另将澳门赴阿联酋的官方来源冲突明确记为 `draft / manual_review`，不续用原来的确定签证结论。库内仍为 143 条路线、248 个法域；来源增至 106 个，当前有效 67 条、已过期历史记录 75 条、显式 REVIEW 1 条。
+
+| 来源组 | 当前官方证据及定位 | 本批结论与边界 |
+|---|---|---|
+| 澳大利亚 | [Home Affairs 入境要求](https://immi.homeaffairs.gov.au/entering-and-leaving-australia/entering-australia/can-i-go-to-australia)；[ETA 601](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/electronic-travel-authority-601) 的隐藏字段 `PageSchemaHiddenField` JSON：`applicant.eligibility.criteria[0]`、`applicant.aboutVisa.content[1]` 和 Other ways to apply | 直接解码当前网页自带的页面内容 JSON，确认 HKSAR 合资格、其他旅行证件不适用、兼具澳大利亚国籍者不能申请 ETA、每次最多 3 个日历月。中国普通/澳门特区护照须取得其他适用签证，Visitor 600 只是候选产品，不推定 stream 或批准期限。`maxStayDays` 改为 null，新增 `maxStayMonths: 3`，避免把 3 个日历月当作 90 天 |
+| 美国 | 国务院 [VWP](https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visa-waiver-program.html) 的 Must Be a Citizen or National of a VWP Designated Country；[Visitor Visa](https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html) 的 Overview / Tourism (B-2) | 当前可访问的国务院正文同时证明一般外国访客的签证要求、旅游 B-2/组合 B-1-B-2，以及 VWP 仅限封闭列明的国籍；三类目标普通护照不属该范围。保留关岛/北马里亚纳、美国公民/永久居民及其他合资格国籍护照的独立边界；不为签证统一补填入境停留天数 |
+| 韩国 | [K-ETA 合资格表](https://www.k-eta.go.kr/portal/guide/viewetaalification.do)；法务部 [2026 临时豁免延期公告](https://www.k-eta.go.kr/portal/board/viewboarddetail.do?bbsSn=299707&esntlPnotiMtYn=Y&locale=EN)；韩国驻瑞士使馆 [适用国家/地区名单](https://overseas.mofa.go.kr/ch-en/brd/m_23429/view.do?seq=22)（直接 HTTPS 200） | 资格表港澳各为 90 天。现行延期公告与使馆名单共同确认 Hong Kong、Macao 的 K-ETA 临时豁免截至 2026-12-31 韩国时间；将原来的 `eta_required` 更正为此期限内的 `visa_free`。自愿 K-ETA 仍收费，入境申报及最终审查仍需满足。中国普通护照和香港签证身份书未在本批重跑 Visa Navigator，原日期保留，不续期 |
+| 阿联酋 | 外交部 [Visa Exemptions for Non Citizen](https://www.mofa.gov.ae/en/visa-exemptions-for-non-citizen/) 的实际国家卡片 HTML，不使用搜索下拉名单判断签证要求 | PRC 与 Hong Kong 卡片明确标为 Visa Free；卡片没有期限、延期或收费条件，故本批只保留窄豁免结论，不继承原上海领馆页的 30 天及延期表述。旧上海领馆地址当前跳转至明确 404 页，标为受阻 |
+
+### 澳门赴阿联酋：保留官方来源冲突
+
+阿联酋外交部当前 Macao 卡片具有 `visa-required` 分类且正文为 Visa Required；澳门政府 [《澳门年鉴 2025》附录九](https://yearbook.gcs.gov.mo/yearbook_pdf/2025/myb2025cAP09.pdf) 印刷第 523 页则列出阿拉伯联合酋长国 30 天免签。印刷第 528 页脚注 f) 仅说明“不对特区旅行证发出签证”，并不能消解澳门特区普通护照的冲突。因此本条保留双方证据、停留日数为 null、状态明确 REVIEW，待阿联酋主管机关给出当前护照专属结论。
+
+### 时效与来源访问状态
+
+- 普通 `reviewDueAt` 截止到 UTC 当日最后 1 毫秒；临时安排可用带时区的 `effectiveUntil` 施加更早截止。本批韩国两条规则为 `2026-12-31T23:59:59.999+09:00`，即使复核期限后来被延长，也不会自动延长这项临时豁免。
+- `/coverage` 改为动态页面，在每次请求内生成统计和卡片快照；不再在模块首次载入时冻结有效状态。
+- 美国国务院原 VWP 入口本批已恢复完整访问，来源状态恢复 verified。DHS、CBP 旧入口本次均返回 403，阿联酋原领馆入口返回 404；三者保留历史核验日期并记录本次访问失败，不作为本批结论的当前证据。
+- 其余未在本批取得完整证据的路线仍保持待复核，下一批继续处理印度尼西亚、南亚与中东剩余队列。

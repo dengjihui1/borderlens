@@ -9,6 +9,8 @@ interface PolicyFixture {
   outcome: string;
   status: string;
   maxStayDays: number | null;
+  maxStayMonths?: number;
+  effectiveUntil?: string;
   conditions: string[];
   documentType: string;
   destinationJurisdictionId?: string;
@@ -42,7 +44,10 @@ test('来源发现状态不被误写成规则已验证', async () => {
   const reachable = registry.sources.filter((source: { status: string }) => source.status === 'reachable');
   const blocked = registry.sources.filter((source: { status: string }) => source.status === 'blocked');
   assert.ok(reachable.length >= 8);
-  assert.equal(blocked.length, 4);
+  for (const id of ['ae-mofa-shanghai-visas', 'us-dhs-vwp-countries', 'us-cbp-esta']) {
+    assert.ok(blocked.some((source: { id: string }) => source.id === id));
+  }
+  assert.equal(registry.sources.find((source: { id: string }) => source.id === 'us-state-vwp').status, 'verified');
 });
 
 test('申根作为政策区域建模，当前成员范围不混入爱尔兰与塞浦路斯', async () => {
@@ -98,27 +103,40 @@ test('澳大利亚与英国规则保留电子许可和普通签证差异', async
   const policies = await readJson('../data/policies.seed.json');
   const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
   assert.equal(byId.get('au-hk-hksar-tourism-eta-601')!.outcome, 'eta_required');
+  assert.equal(byId.get('au-hk-hksar-tourism-eta-601')!.maxStayDays, null);
+  assert.equal(byId.get('au-hk-hksar-tourism-eta-601')!.maxStayMonths, 3);
+  assert.ok(byId.get('au-hk-hksar-tourism-eta-601')!.conditions.some((condition) => condition.includes('日历月') && condition.includes('身份书')));
   assert.equal(byId.get('au-cn-prc-ordinary-tourism-visa-route')!.outcome, 'visa_required');
   assert.equal(byId.get('gb-cn-prc-ordinary-tourism')!.outcome, 'visa_required');
   assert.equal(byId.get('gb-hk-hksar-tourism')!.outcome, 'eta_required');
   assert.equal(byId.get('gb-mo-macao-sar-tourism')!.outcome, 'eta_required');
 });
 
-test('韩国规则区分港澳特区护照、普通护照与香港签证身份书', async () => {
+test('韩国港澳护照的临时 K-ETA 豁免不扩展到普通护照或香港签证身份书', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
-  assert.deepEqual([byId.get('kr-hk-hksar-tourism-keta')!.outcome, byId.get('kr-hk-hksar-tourism-keta')!.maxStayDays], ['eta_required', 90]);
-  assert.deepEqual([byId.get('kr-mo-macao-sar-tourism-keta')!.outcome, byId.get('kr-mo-macao-sar-tourism-keta')!.maxStayDays], ['eta_required', 90]);
+  for (const id of ['kr-hk-hksar-tourism-keta', 'kr-mo-macao-sar-tourism-keta']) {
+    const rule = byId.get(id)!;
+    assert.deepEqual([rule.outcome, rule.maxStayDays], ['visa_free', 90]);
+    assert.equal(rule.effectiveUntil, '2026-12-31T23:59:59.999+09:00');
+    assert.ok(rule.conditions.some((condition) => condition.includes('自愿') && condition.includes('不能写成必办')));
+    assert.ok(rule.conditions.some((condition) => condition.includes('韩国时间之后') && condition.includes('重新核对')));
+  }
   assert.equal(byId.get('kr-cn-prc-ordinary-tourism')!.outcome, 'visa_required');
   assert.equal(byId.get('kr-hk-document-of-identity-tourism')!.outcome, 'visa_required');
 });
 
-test('阿联酋规则保留落地签和预先签证差异', async () => {
+test('阿联酋按当前外交部卡片核验，澳门官方来源冲突必须 REVIEW', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
-  assert.deepEqual([byId.get('ae-cn-prc-ordinary-tourism-voa')!.outcome, byId.get('ae-cn-prc-ordinary-tourism-voa')!.maxStayDays], ['visa_on_arrival', 30]);
-  assert.deepEqual([byId.get('ae-hk-hksar-tourism-voa')!.outcome, byId.get('ae-hk-hksar-tourism-voa')!.maxStayDays], ['visa_on_arrival', 30]);
-  assert.equal(byId.get('ae-mo-macao-sar-tourism-advance-visa')!.outcome, 'visa_required');
+  for (const id of ['ae-cn-prc-ordinary-tourism-voa', 'ae-hk-hksar-tourism-voa']) {
+    const rule = byId.get(id)!;
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_free', null]);
+    assert.ok(rule.conditions.some((condition) => condition.includes('未给出') && condition.includes('不沿用')));
+  }
+  const macao = byId.get('ae-mo-macao-sar-tourism-advance-visa')!;
+  assert.deepEqual([macao.status, macao.outcome, macao.maxStayDays], ['draft', 'manual_review', null]);
+  assert.ok(macao.conditions.some((condition) => condition.includes('两份官方证据冲突')));
 });
 
 test('中国内地非中国籍港澳永久居民通行证规则限制为短期用途', async () => {
@@ -511,13 +529,13 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
   assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('澳门旅行证') && condition.includes('不扩展')));
 });
 
-test('厄瓜多尔升级后全库统计与来源注册表保持一致', async () => {
+test('全库保留结构化路线和已记录的官方证据冲突', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 102);
+  assert.equal(registry.sources.length, 106);
   assert.equal(policies.rules.length, 143);
-  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 143);
-  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').length, 0);
+  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 142);
+  assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id), ['ae-mo-macao-sar-tourism-advance-visa']);
   assert.equal(registry.sources.filter((source: { id: string }) => source.id === 'hk-gov-ecuador-visa-free-90').length, 1);
 });
 

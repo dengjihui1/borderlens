@@ -1,12 +1,15 @@
 interface PolicyValidity {
   status: string;
   reviewDueAt: string;
+  effectiveUntil?: string;
 }
 
 export function isPolicyRuleCurrent(rule: PolicyValidity, now = new Date()) {
   if (rule.status !== 'verified') return false;
-  const dueAt = Date.parse(`${rule.reviewDueAt}T23:59:59Z`);
-  return Number.isFinite(dueAt) && now.getTime() <= dueAt;
+  const dueAt = Date.parse(`${rule.reviewDueAt}T23:59:59.999Z`);
+  const effectiveUntil = rule.effectiveUntil === undefined ? Infinity : Date.parse(rule.effectiveUntil);
+  return Number.isFinite(dueAt) && !Number.isNaN(effectiveUntil)
+    && now.getTime() <= Math.min(dueAt, effectiveUntil);
 }
 
 export function summarizePolicyBatch(rules: PolicyValidity[], verifiedNote: string, now = new Date()) {

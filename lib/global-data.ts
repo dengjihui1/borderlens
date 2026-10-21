@@ -28,7 +28,11 @@ const rulesByDestination = (destinationId: string, isZone = false) => policySeed
   isZone ? 'destinationPolicyZoneId' in rule && rule.destinationPolicyZoneId === destinationId : 'destinationJurisdictionId' in rule && rule.destinationJurisdictionId === destinationId
 ));
 
-export const latestPolicyBatch = [
+const policyBatchDescriptions = [
+  { id: 'au', label: '澳大利亚', note: '香港特区护照可申请 ETA 601，每次最多 3 个日历月；中国普通及澳门特区护照需其他适用签证，Visitor 600 仅为候选路线' },
+  { id: 'us', label: '美国', note: '三类普通护照一般旅游需 B-2 或 B-1/B-2；ESTA 不替代签证，关岛/北马里亚纳群岛和其他国籍或居留身份另行核验' },
+  { id: 'kr', label: '韩国', note: '港澳特区普通护照短期访问的 K-ETA 临时豁免截至 2026 年 12 月 31 日韩国时间；其他证件和路线分别核验' },
+  { id: 'ae', label: '阿联酋', note: '中国和香港普通护照当前外交部卡片标为 Visa Free；澳门特区护照存在官方来源冲突，须复核' },
   { id: 'gb', label: '英国', note: '中国普通护照需 Standard Visitor visa；港澳特区护照需 ETA 或签证，护照须覆盖全程有效期' },
   { id: 'ca', label: '加拿大', note: '中国普通及澳门特区护照需访客签证；香港特区护照航空需 eTA，一般陆海路豁免，Saint-Pierre-et-Miquelon 非邮轮船班另行核验' },
   { id: 'tl', label: '东帝汶', note: '三类普通护照可在符合条件的正式口岸申请 30 天落地签；保留护照、资金或担保及提前申请例外' },
@@ -59,15 +63,9 @@ export const latestPolicyBatch = [
   { id: 'np', label: '尼泊尔', note: '中国普通及 HKSAR 护照需签证但免费，年度累计最多 150 天；澳门特区护照可进入官方落地签申请路线' },
   { id: 'bd', label: '孟加拉国', note: '中国普通护照可按官方条件申请最多 30 天落地签；香港和澳门特区普通护照需 Bangladesh Tourist Visa' },
   { id: 'mv', label: '马尔代夫', note: '旅游落地签与免费 IMUGA 申报并存' },
-].map((item) => {
-  const rules = rulesByDestination(item.id);
-  return {
-    ...item,
-    ...summarizePolicyBatch(rules, item.note),
-  };
-});
+];
 
-export const coverageSummary = {
+const coverageCatalogSummary = {
   jurisdictionCount: countryCatalog.count,
   policyZoneCount: policyZones.length,
   schengenMemberCount: policyZones.find((zone) => zone.id === 'eu-schengen')?.members.length ?? 0,
@@ -76,11 +74,24 @@ export const coverageSummary = {
   reachableSourceCount: registeredSources.filter((source) => source.status === 'reachable').length,
   blockedSourceCount: registeredSources.filter((source) => source.status === 'blocked').length,
   checkedAt: sourceRegistry.checkedAt,
-  verifiedPolicyRuleCount: policySeed.rules.filter((rule) => isPolicyRuleCurrent(rule)).length,
-  reviewPolicyRuleCount: policySeed.rules.filter((rule) => !isPolicyRuleCurrent(rule)).length,
   storedVerifiedPolicyRuleCount: policySeed.rules.filter((rule) => rule.status === 'verified').length,
   minimumPolicyCells: countryCatalog.count * countryCatalog.count * 7,
 };
+
+export function getCoverageSnapshot(now = new Date()) {
+  const verifiedPolicyRuleCount = policySeed.rules.filter((rule) => isPolicyRuleCurrent(rule, now)).length;
+  return {
+    coverageSummary: {
+      ...coverageCatalogSummary,
+      verifiedPolicyRuleCount,
+      reviewPolicyRuleCount: policySeed.rules.length - verifiedPolicyRuleCount,
+    },
+    latestPolicyBatch: policyBatchDescriptions.map((item) => ({
+      ...item,
+      ...summarizePolicyBatch(rulesByDestination(item.id), item.note, now),
+    })),
+  };
+}
 
 export const sourceStatusCopy: Record<SourceStatus, { label: string; description: string }> = {
   verified: { label: '规则已核验', description: '至少一条实际规则已经从该官方来源转录并检查。' },

@@ -386,21 +386,23 @@
       "purpose": "tourism",
       "borderMode": "any",
       "outcome": "eta_required",
-      "maxStayDays": 90,
+      "maxStayDays": null,
       "visaProductName": "Electronic Travel Authority (subclass 601)",
       "conditions": [
         "须持有效香港特区护照，从澳大利亚境外通过 Australian ETA App 申请。",
         "ETA 通常 12 个月内可多次入境，每次最多停留 3 个月；护照更早到期时以护照有效期为限。",
-        "刑事定罪、健康要求等情况可能需要 Visitor visa 600。"
+        "刑事定罪、健康要求等情况可能需要 Visitor visa 600。",
+        "官方停留期限为每次 3 个日历月，不固定换算成 90 天；非公民护照、身份书及其他旅行证件不适用，兼具澳大利亚国籍者不能申请 ETA。"
       ],
       "status": "verified",
       "sourceIds": [
         "au-home-affairs-eta-601"
       ],
-      "evidenceLocator": "Subclass 601 > Overview, How long you can stay and Eligibility > Have an eligible passport",
+      "evidenceLocator": "Home Affairs Can I go to Australia?; Subclass 601 > PageSchemaHiddenField JSON > applicant.eligibility.criteria[0], applicant.aboutVisa.content[1], applicant.stepGuide.steps > Other ways to apply",
       "evidenceExcerpt": "You must hold a valid passport from one of these countries or jurisdictions ... Hong Kong (SAR of China). You can remain in Australia for 3 months after each entry.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "maxStayMonths": 3
     },
     {
       "id": "au-cn-prc-ordinary-tourism-visa-route",
@@ -414,19 +416,18 @@
       "visaProductName": "Visitor visa (subclass 600) candidate route",
       "conditions": [
         "中国普通护照不在 ETA 601 合资格护照名单内。",
-        "应通过 Visa Finder 核对适用签证；Visitor visa 600 是官方列出的可能路线，具体 stream、期限与批准条件不能自动推断。"
+        "应通过 Visa Finder 核对适用签证；Visitor visa 600 是官方列出的可能路线，具体 stream、期限与批准条件不能自动推断。",
+        "本条适用于一般外国访客，澳大利亚公民和其他既有入境身份需单独核验；不能从候选 Visitor 600 路线推断某个 stream 已获批准。"
       ],
       "status": "verified",
       "sourceIds": [
         "au-home-affairs-entry-eligibility",
-        "au-home-affairs-eta-601",
-        "au-home-affairs-visitor-600",
-        "au-home-affairs-visa-finder"
+        "au-home-affairs-eta-601"
       ],
-      "evidenceLocator": "Can I go to Australia? > visa requirement; Subclass 601 > Eligibility passport list and Step by step > Other ways to apply",
+      "evidenceLocator": "Home Affairs Can I go to Australia?; Subclass 601 > PageSchemaHiddenField JSON > applicant.eligibility.criteria[0], applicant.aboutVisa.content[1], applicant.stepGuide.steps > Other ways to apply",
       "evidenceExcerpt": "All other passport holders need the right visa to come to Australia. You also need to get your visa before you travel to Australia. The ETA-eligible passport list does not include China; other passport holders may be eligible for Visitor 600.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "au-mo-macao-sar-tourism-visa-route",
@@ -440,19 +441,18 @@
       "visaProductName": "Visitor visa (subclass 600) candidate route",
       "conditions": [
         "澳门特区护照不在 ETA 601 合资格护照名单内。",
-        "应通过 Visa Finder 核对适用签证；Visitor visa 600 是官方列出的可能路线，具体 stream、期限与批准条件不能自动推断。"
+        "应通过 Visa Finder 核对适用签证；Visitor visa 600 是官方列出的可能路线，具体 stream、期限与批准条件不能自动推断。",
+        "本条适用于一般外国访客，澳大利亚公民和其他既有入境身份需单独核验；不能从候选 Visitor 600 路线推断某个 stream 已获批准。"
       ],
       "status": "verified",
       "sourceIds": [
         "au-home-affairs-entry-eligibility",
-        "au-home-affairs-eta-601",
-        "au-home-affairs-visitor-600",
-        "au-home-affairs-visa-finder"
+        "au-home-affairs-eta-601"
       ],
-      "evidenceLocator": "Can I go to Australia? > visa requirement; Subclass 601 > Eligibility passport list and Step by step > Other ways to apply",
+      "evidenceLocator": "Home Affairs Can I go to Australia?; Subclass 601 > PageSchemaHiddenField JSON > applicant.eligibility.criteria[0], applicant.aboutVisa.content[1], applicant.stepGuide.steps > Other ways to apply",
       "evidenceExcerpt": "All other passport holders need the right visa to come to Australia. You also need to get your visa before you travel to Australia. The ETA-eligible passport list does not include Macao; other passport holders may be eligible for Visitor 600.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "gb-cn-prc-ordinary-tourism",
@@ -556,22 +556,26 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "eta_required",
+      "outcome": "visa_free",
       "maxStayDays": 90,
-      "visaProductName": "Korea Electronic Travel Authorization (K-ETA)",
+      "visaProductName": "Visa-free short visit with temporary K-ETA exemption",
       "conditions": [
-        "仅适用于 K-ETA 页面列出的 CHINA P. R.(HONG KONG) 护照分支。",
-        "17 岁及以下、65 岁及以上，以及外交公务护照、ABTC、转机旅客、已持韩国签证或完成外国人登记等官方列明情形可能豁免申请 K-ETA。",
-        "K-ETA 不保证最终准予入境。"
+        "仅适用于香港特区普通护照的短期旅游；K-ETA 官方资格表给出最长 90 天，不扩展到身份书、旅行证件、工作或长期停留。",
+        "韩国法务部临时豁免 K-ETA 的安排适用于 2026 年 1 月 1 日至 2026 年 12 月 31 日（韩国时间）；官方驻瑞士使馆现行名单同时列出 Hong Kong 和 Macao。",
+        "临时豁免期间 K-ETA 可自愿申请并收费，不能写成必办；不免除适用的入境申报或口岸审查，既有 K-ETA 可使用至自身有效期届满。",
+        "2026 年 12 月 31 日韩国时间之后不能沿用本条临时豁免结论，需重新核对官方后续政策。"
       ],
       "status": "verified",
       "sourceIds": [
-        "kr-keta-eligibility"
+        "kr-keta-eligibility",
+        "kr-keta-temporary-exemption-2026",
+        "kr-mofa-exemption-country-list-2026"
       ],
-      "evidenceLocator": "Eligible Countries / Applicants table > CHINA P. R.(HONG KONG); Applicant; Those eligible for application exemption",
-      "evidenceExcerpt": "You can apply for K-ETA if you hold a passport from countries or regions listed below. CHINA P. R.(HONG KONG) — Allowed Period of Stay: 90 Days. Applicants are foreigners intending to enter without a visa for a short period and not eligible for an application exemption.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "K-ETA > Eligible Countries / Applicants > CHINA P. R.(HONG KONG) 90 Days; notice bbsSn=299707; ROK Embassy Switzerland > seq=22 > Asia exemption list",
+      "evidenceExcerpt": "The K-ETA eligibility table allows 90 days for this SAR passport branch. The Ministry of Justice notice extends the temporary exemption through 31 December 2026 KST; the Korean Embassy in Switzerland explicitly includes Hong Kong and Macao. K-ETA applications during the exemption are voluntary and fee-paying, not mandatory.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "effectiveUntil": "2026-12-31T23:59:59.999+09:00"
     },
     {
       "id": "kr-mo-macao-sar-tourism-keta",
@@ -580,22 +584,26 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "eta_required",
+      "outcome": "visa_free",
       "maxStayDays": 90,
-      "visaProductName": "Korea Electronic Travel Authorization (K-ETA)",
+      "visaProductName": "Visa-free short visit with temporary K-ETA exemption",
       "conditions": [
-        "仅适用于 K-ETA 页面列出的 CHINA P. R.(MACAO) 护照分支。",
-        "17 岁及以下、65 岁及以上，以及外交公务护照、ABTC、转机旅客、已持韩国签证或完成外国人登记等官方列明情形可能豁免申请 K-ETA。",
-        "K-ETA 不保证最终准予入境。"
+        "仅适用于澳门特区普通护照的短期旅游；K-ETA 官方资格表给出最长 90 天，不扩展到身份书、旅行证件、工作或长期停留。",
+        "韩国法务部临时豁免 K-ETA 的安排适用于 2026 年 1 月 1 日至 2026 年 12 月 31 日（韩国时间）；官方驻瑞士使馆现行名单同时列出 Hong Kong 和 Macao。",
+        "临时豁免期间 K-ETA 可自愿申请并收费，不能写成必办；不免除适用的入境申报或口岸审查，既有 K-ETA 可使用至自身有效期届满。",
+        "2026 年 12 月 31 日韩国时间之后不能沿用本条临时豁免结论，需重新核对官方后续政策。"
       ],
       "status": "verified",
       "sourceIds": [
-        "kr-keta-eligibility"
+        "kr-keta-eligibility",
+        "kr-keta-temporary-exemption-2026",
+        "kr-mofa-exemption-country-list-2026"
       ],
-      "evidenceLocator": "Eligible Countries / Applicants table > CHINA P. R.(MACAO); Applicant; Those eligible for application exemption",
-      "evidenceExcerpt": "You can apply for K-ETA if you hold a passport from countries or regions listed below. CHINA P. R.(MACAO) — Allowed Period of Stay: 90 Days. Applicants are foreigners intending to enter without a visa for a short period and not eligible for an application exemption.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "K-ETA > Eligible Countries / Applicants > CHINA P. R.(MACAO) 90 Days; notice bbsSn=299707; ROK Embassy Switzerland > seq=22 > Asia exemption list",
+      "evidenceExcerpt": "The K-ETA eligibility table allows 90 days for this SAR passport branch. The Ministry of Justice notice extends the temporary exemption through 31 December 2026 KST; the Korean Embassy in Switzerland explicitly includes Hong Kong and Macao. K-ETA applications during the exemption are voluntary and fee-paying, not mandatory.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "effectiveUntil": "2026-12-31T23:59:59.999+09:00"
     },
     {
       "id": "kr-hk-document-of-identity-tourism",
@@ -628,21 +636,22 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_on_arrival",
-      "maxStayDays": 30,
+      "outcome": "visa_free",
+      "maxStayDays": null,
       "conditions": [
-        "中国普通护照须至少还有 6 个月有效期。",
-        "官方驻上海总领馆页面称首次 30 天免费，并可按阿联酋规定付费延长一次相同期限；延期不能视为自动获准。"
+        "阿联酋外交部当前 Visa Exemptions for Non Citizen 页面将 Peoples Republic of China 卡片明确标为 Visa Free。",
+        "当前卡片未给出普通护照的停留天数、延期或收费条款，本条不沿用已失效上海领馆页的 30 天/延期表述；出发前核对 ICP 或目的地主管机关的实际入境要求。",
+        "仅作为对应普通护照的签证豁免证据，不扩展到香港签证身份书、澳门旅行证或其他证件；最终准予入境和停留期限仍由阿联酋主管机关决定。"
       ],
       "status": "verified",
       "sourceIds": [
-        "ae-mofa-shanghai-visas",
-        "ae-icp-visas"
+        "ae-mofa-visa-exemptions-non-citizen"
       ],
-      "evidenceLocator": "Holders of Ordinary Passports > first paragraph; application steps",
-      "evidenceExcerpt": "Chinese nationals holding ordinary passports are exempted from prior visa to enter the UAE ... free of charge for staying 30 days and can be extended ... for a similar period once. Minimum validity of the passport should not be less than 6 months.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "UAE MOFA > Visa Exemptions for Non Citizen > Peoples Republic of China > Visa Free card",
+      "evidenceExcerpt": "The current UAE Ministry of Foreign Affairs nationality card explicitly marks Peoples Republic of China as Visa Free. It supplies no stay period or extension terms, so this rule does not carry over the old Shanghai consular page duration.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "visaProductName": "UAE MOFA nationality-based visa exemption"
     },
     {
       "id": "ae-hk-hksar-tourism-voa",
@@ -651,21 +660,22 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_on_arrival",
-      "maxStayDays": 30,
+      "outcome": "visa_free",
+      "maxStayDays": null,
       "conditions": [
-        "仅适用于官方普通护照列表中的 Hong Kong 条目。",
-        "该页将此分支描述为抵达后一个月、不可续期的签证；护照须至少还有 6 个月有效期。"
+        "阿联酋外交部当前 Visa Exemptions for Non Citizen 页面将 Hong Kong Special Administrative Region of the Peoples Republic of China 卡片明确标为 Visa Free。",
+        "当前卡片未给出普通护照的停留天数、延期或收费条款，本条不沿用已失效上海领馆页的 30 天/延期表述；出发前核对 ICP 或目的地主管机关的实际入境要求。",
+        "仅作为对应普通护照的签证豁免证据，不扩展到香港签证身份书、澳门旅行证或其他证件；最终准予入境和停留期限仍由阿联酋主管机关决定。"
       ],
       "status": "verified",
       "sourceIds": [
-        "ae-mofa-shanghai-visas",
-        "ae-icp-visas"
+        "ae-mofa-visa-exemptions-non-citizen"
       ],
-      "evidenceLocator": "Holders of Ordinary Passports > one-month non-renewable visa country list",
-      "evidenceExcerpt": "Nationals of the countries listed below do not require a prior visa ... Those visitors will be granted upon arrival a one-month non-renewable visa. The list includes Hong Kong.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "UAE MOFA > Visa Exemptions for Non Citizen > Hong Kong Special Administrative Region of the Peoples Republic of China > Visa Free card",
+      "evidenceExcerpt": "The current UAE Ministry of Foreign Affairs nationality card explicitly marks Hong Kong Special Administrative Region of the Peoples Republic of China as Visa Free. It supplies no stay period or extension terms, so this rule does not carry over the old Shanghai consular page duration.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20",
+      "visaProductName": "UAE MOFA nationality-based visa exemption"
     },
     {
       "id": "ae-mo-macao-sar-tourism-advance-visa",
@@ -674,22 +684,23 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
+      "outcome": "manual_review",
       "maxStayDays": null,
-      "visaProductName": "Pre-arranged visit visa",
+      "visaProductName": "Official-source conflict: confirm visa requirements",
       "conditions": [
-        "澳门未列入该官方页面的免预先签证普通护照名单。",
-        "需在出发前通过旅行社、酒店、阿联酋境内个人或其他符合条件的担保人办理；实际产品和期限应在 ICP 再核验。"
+        "阿联酋外交部现行 Visa Exemptions for Non Citizen 页面将 Macao Special Administrative Region 卡片明确标为 Visa Required。",
+        "澳门政府《澳门年鉴 2025》附录九第 523 页列出阿拉伯联合酋长国 30 天免签待遇；脚注 f) 仅说明不向澳门旅行证发出签证，不能消除普通护照结论冲突。",
+        "两份官方证据冲突，本条不提供免签、落地签或预先签证的确定结论；须向阿联酋主管机关确认澳门特区普通护照的当前要求。"
       ],
-      "status": "verified",
+      "status": "draft",
       "sourceIds": [
-        "ae-mofa-shanghai-visas",
-        "ae-icp-visas"
+        "ae-mofa-visa-exemptions-non-citizen",
+        "mo-yearbook-2025-visa-treatment"
       ],
-      "evidenceLocator": "Holders of Ordinary Passports > country list and 'All other nationalities' paragraph",
-      "evidenceExcerpt": "All other nationalities who wish to visit the UAE must obtain a visit visa in advance through a sponsor. Macao is not included in the preceding ordinary-passport visa-on-arrival list.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "UAE MOFA > Visa Exemptions for Non Citizen > Macao card (visa-required); Macao Yearbook 2025 Appendix 09, printed page 523 and footnote f on page 528",
+      "evidenceExcerpt": "The current UAE MOFA Macao card explicitly says Visa Required, while the official 2025 Macao Yearbook lists UAE 30-day visa-free treatment for SAR passports. Footnote f concerns travel permits, not a resolution of the SAR passport conflict. The route therefore remains manual review with no asserted stay period.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "cn-hk-non-chinese-mainland-permit-tourism",
@@ -748,20 +759,21 @@
       "borderMode": "any",
       "outcome": "visa_required",
       "maxStayDays": null,
-      "visaProductName": "Visitor visa",
+      "visaProductName": "Visitor visa B-2 / B-1-B-2",
       "conditions": [
-        "中国不在 DHS 当前 42 个 Visa Waiver Program 国家名单中。",
-        "本条不覆盖关岛—北马里亚纳群岛的单独免签计划，也不覆盖已持有效美国签证者的 EVUS 等后续要求。"
+        "中国普通护照不属于美国国务院 VWP 页面封闭列明的合资格证件国籍；该页明确必须具备列示国籍才可使用 VWP，ESTA 不能替代本条一般旅游签证。",
+        "本条不覆盖关岛—北马里亚纳群岛的单独免签计划，也不覆盖已持有效美国签证者的 EVUS 等后续要求。",
+        "一般旅游使用 B-2 或 B-1/B-2；美国公民、美国永久居民及使用其他合资格国籍护照者按其对应身份核验。签证有效期不等于准许停留期，停留期留待口岸决定。"
       ],
       "status": "verified",
       "sourceIds": [
-        "us-dhs-vwp-countries",
-        "us-cbp-esta"
+        "us-state-vwp",
+        "us-state-visitor-visa"
       ],
-      "evidenceLocator": "DHS U.S. Visa Waiver Program > Current Program Countries; CBP ESTA overview",
-      "evidenceExcerpt": "The VWP permits citizens of designated countries to travel for business or tourism for up to 90 days without a visa. The current-country table does not include China; ESTA only determines eligibility to travel under the VWP.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "U.S. Department of State > Visa Waiver Program > Must Be a Citizen or National of a VWP Designated Country; Visitor Visa > Overview / Tourism (B-2)",
+      "evidenceExcerpt": "The State Department requires a designated nationality for VWP travel; its closed list excludes the PRC, Hong Kong and Macao. Its Visitor Visa overview establishes the general visa requirement for foreign visitors and identifies B-2 for tourism or B-1/B-2 for combined visits. Separate Guam-CNMI arrangements and US citizenship/residency cases are outside this rule.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "us-hk-hksar-tourism",
@@ -772,20 +784,21 @@
       "borderMode": "any",
       "outcome": "visa_required",
       "maxStayDays": null,
-      "visaProductName": "Visitor visa",
+      "visaProductName": "Visitor visa B-2 / B-1-B-2",
       "conditions": [
-        "Hong Kong 不在 DHS 当前 42 个 Visa Waiver Program 国家名单中，因此不能申请 ESTA 代替签证。",
-        "本条不覆盖关岛—北马里亚纳群岛的单独免签计划。"
+        "香港特区护照不属于美国国务院 VWP 页面封闭列明的合资格证件国籍；该页明确必须具备列示国籍才可使用 VWP，ESTA 不能替代本条一般旅游签证。",
+        "本条不覆盖关岛—北马里亚纳群岛的单独免签计划。",
+        "一般旅游使用 B-2 或 B-1/B-2；美国公民、美国永久居民及使用其他合资格国籍护照者按其对应身份核验。签证有效期不等于准许停留期，停留期留待口岸决定。"
       ],
       "status": "verified",
       "sourceIds": [
-        "us-dhs-vwp-countries",
-        "us-cbp-esta"
+        "us-state-vwp",
+        "us-state-visitor-visa"
       ],
-      "evidenceLocator": "DHS U.S. Visa Waiver Program > Current Program Countries; CBP ESTA overview",
-      "evidenceExcerpt": "The VWP country table does not include Hong Kong. ESTA determines eligibility only for travel under the VWP and does not determine admissibility.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "U.S. Department of State > Visa Waiver Program > Must Be a Citizen or National of a VWP Designated Country; Visitor Visa > Overview / Tourism (B-2)",
+      "evidenceExcerpt": "The State Department requires a designated nationality for VWP travel; its closed list excludes the PRC, Hong Kong and Macao. Its Visitor Visa overview establishes the general visa requirement for foreign visitors and identifies B-2 for tourism or B-1/B-2 for combined visits. Separate Guam-CNMI arrangements and US citizenship/residency cases are outside this rule.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "us-mo-macao-sar-tourism",
@@ -796,20 +809,21 @@
       "borderMode": "any",
       "outcome": "visa_required",
       "maxStayDays": null,
-      "visaProductName": "Visitor visa",
+      "visaProductName": "Visitor visa B-2 / B-1-B-2",
       "conditions": [
-        "Macao 不在 DHS 当前 42 个 Visa Waiver Program 国家名单中，因此不能申请 ESTA 代替签证。",
-        "本条不覆盖关岛—北马里亚纳群岛的单独免签计划。"
+        "澳门特区护照不属于美国国务院 VWP 页面封闭列明的合资格证件国籍；该页明确必须具备列示国籍才可使用 VWP，ESTA 不能替代本条一般旅游签证。",
+        "本条不覆盖关岛—北马里亚纳群岛的单独免签计划。",
+        "一般旅游使用 B-2 或 B-1/B-2；美国公民、美国永久居民及使用其他合资格国籍护照者按其对应身份核验。签证有效期不等于准许停留期，停留期留待口岸决定。"
       ],
       "status": "verified",
       "sourceIds": [
-        "us-dhs-vwp-countries",
-        "us-cbp-esta"
+        "us-state-vwp",
+        "us-state-visitor-visa"
       ],
-      "evidenceLocator": "DHS U.S. Visa Waiver Program > Current Program Countries; CBP ESTA overview",
-      "evidenceExcerpt": "The VWP country table does not include Macao. ESTA determines eligibility only for travel under the VWP and does not determine admissibility.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "U.S. Department of State > Visa Waiver Program > Must Be a Citizen or National of a VWP Designated Country; Visitor Visa > Overview / Tourism (B-2)",
+      "evidenceExcerpt": "The State Department requires a designated nationality for VWP travel; its closed list excludes the PRC, Hong Kong and Macao. Its Visitor Visa overview establishes the general visa requirement for foreign visitors and identifies B-2 for tourism or B-1/B-2 for combined visits. Separate Guam-CNMI arrangements and US citizenship/residency cases are outside this rule.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "ca-cn-prc-ordinary-tourism",
