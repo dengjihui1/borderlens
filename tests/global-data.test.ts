@@ -87,8 +87,8 @@ test('Phase 71 复核拉美十二条及中国籍回乡证两条，回乡证仍�
   const rules = (policies.rules as PolicyFixture[]).filter((rule) => ['mx', 'py', 'bo', 'br'].includes(rule.destinationJurisdictionId ?? '') || rule.documentType === 'home_return_permit');
   assert.equal(rules.length, 14);
   for (const rule of rules) {
-    assert.equal(rule.checkedAt, '2026-10-21');
-    assert.equal(rule.reviewDueAt, '2026-11-20');
+    assert.equal(rule.checkedAt, rule.documentType === 'home_return_permit' ? '2026-10-22' : '2026-10-21');
+    assert.equal(rule.reviewDueAt, rule.documentType === 'home_return_permit' ? '2026-11-21' : '2026-11-20');
   }
   for (const rule of rules.filter((rule) => rule.documentType === 'home_return_permit')) {
     assert.equal(rule.outcome, 'manual_review');
@@ -97,6 +97,8 @@ test('Phase 71 复核拉美十二条及中国籍回乡证两条，回乡证仍�
   }
   const source = registry.sources.find((source: { id: string }) => source.id === 'cn-nia-mainland-travel-permit');
   assert.equal(source.url, 'https://www.nia.gov.cn/n741445/n741604/n1787219/n1795772/c1792480/content.html');
+  assert.equal(source.checkedAt, '2026-10-22');
+  assert.equal(source.nextReviewAt, '2026-11-21');
   assert.match(source.notes, /gatjm.json/);
 });
 

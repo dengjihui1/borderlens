@@ -144,8 +144,9 @@ test('日历月和年度累计照原口径显示，不按后续节点推算个�
 test('真实库支持多证件逐段与回乡证 manual review，无需维护第二套路线规则', async () => {
   const readJson = async (path: string) => JSON.parse(await readFile(new URL(path, import.meta.url), 'utf8'));
   const [policies, registry] = await Promise.all([readJson('../data/policies.seed.json'), readJson('../data/official-source-registry.json')]);
-  const entries = buildPolicyCatalog(policies.rules, registry.sources, now);
-  const result = evaluateCatalogJourney({ ...input, documents: ['hk:hksar_passport', 'mo:home_return_permit'], legs: [leg, { ...leg, destination: 'cn', document: 'mo:home_return_permit', purpose: 'other', mode: 'land' }] }, entries, options, now).result!;
+  const asOf = new Date('2026-10-22T12:00:00Z');
+  const entries = buildPolicyCatalog(policies.rules, registry.sources, asOf);
+  const result = evaluateCatalogJourney({ ...input, documents: ['hk:hksar_passport', 'mo:home_return_permit'], legs: [leg, { ...leg, destination: 'cn', document: 'mo:home_return_permit', purpose: 'other', mode: 'land' }] }, entries, options, asOf).result!;
   assert.equal(result.steps[0].policies[0].id, 'jp-hk-hksar-tourism-short-stay');
   assert.equal(result.steps[1].policies[0].reason, 'conditional_review');
   assert.equal(result.steps[1].status, 'review');
