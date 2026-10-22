@@ -438,6 +438,8 @@ test('缅甸电子签与航空落地签分开建模并执行试行期限门禁',
   assert.equal(isPolicyRuleCurrent(hongKongVoa, new Date('2026-10-21T12:00:00Z')), true);
   assert.deepEqual([macaoVoa.checkedAt, macaoVoa.reviewDueAt], ['2026-10-22', '2026-11-21']);
   assert.ok(macaoVoa.sourceIds.includes('mm-cn-india-voa-extension-2026'));
+  assert.ok(macaoVoa.sourceIds.includes('mm-consulate-hk-announcement-index'));
+  assert.ok(macaoVoa.conditions.some((condition: string) => condition.includes('不得仅凭公告目录未列延期推断永久取消')));
   assert.equal(isPolicyRuleCurrent(macaoVoa, new Date('2026-10-21T12:00:00Z')), false);
   assert.equal(isPolicyRuleCurrent(macaoVoa, new Date('2026-10-22T12:00:00Z')), false);
 });
@@ -755,7 +757,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 138);
+  assert.equal(registry.sources.length, 139);
   assert.equal(policies.rules.length, 147);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 144);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);

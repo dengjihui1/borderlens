@@ -1673,14 +1673,15 @@
       "conditions": [
         "缅甸官方 2025-11 公告将澳门特区护照游客的航空落地签试行期延至 2026-10-20；该试行期现已结束。",
         "缅甸旅游部 2026-09 公告将中国和印度游客的另一轮试行延至 2027-08-29，但未提及澳门特区护照，不能据此延长本路线。",
-        "本次复读旅游部当前英文 VOA 页面和官方公告后，未找到澳门路线的后续延期材料；这不能证明已永久停止，出行前仍须向主管机关确认当前状态。",
+        "缅甸驻港总领馆当前公告目录仍列 2025-10-30 澳门、日本、韩国通知；2026-06-19 的另一份续期仅针对香港护照。不得仅凭公告目录未列延期推断永久取消，出行前仍须向主管机关确认当前状态。",
         "历史公告记载 USD 50、最多停留 30 天、需 6 个月有效期护照及 2 张照片；这些已过期的历史条件不作为当前入境结论。"
       ],
       "status": "verified",
       "sourceIds": [
         "mm-tourist-voa-general",
         "mm-mo-voa-extension-2025",
-    "mm-cn-india-voa-extension-2026",
+        "mm-cn-india-voa-extension-2026",
+        "mm-consulate-hk-announcement-index",
         "mo-myanmar-voa-notice-2024"
       ],
   "evidenceLocator": "Myanmar Ministry of Hotels and Tourism > current English Visa on Arrival page, Macao pilot and deadline; 2025-11-19 extension notice; 2026-09-15 China and India extension (scope exclusion)",

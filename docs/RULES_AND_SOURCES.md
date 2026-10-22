@@ -14,7 +14,11 @@ Phase 99（2026-10-22）：根据越南政府公报现行合并法 62/VBHN-VPQH 
 
 Phase 98（2026-10-22）：新增孟加拉国内政部《Visa Policy 2026》作为当前中央政策来源。其第 12 条列出 China 的特定条件 VOA，但未单列或解释 HKSAR/Macao SAR 是否包括于 China 类别；两条港澳路线保持 REVIEW，不推断必签、免签或停留天数。
 
-核验日期：2026-10-22（Phase 97 补核澳门 DSI 官方清单索引；PDF 直连 404，澳门赴阿联酋来源冲突仍未解决；本日期只适用于本轮涉及的来源和规则，其他规则保留各自核验日）。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
+Phase 102（2026-10-22）：重读缅甸驻港总领馆公告目录；当前目录保留 2025 年澳门 VOA 通知，另列 2026 年香港护照续期，但未列新的澳门续期。目录未列不证明政策永久取消，过期澳门路线继续 REVIEW。
+
+核验日期：2026-10-22（Phase 101 复试澳门 DSI PDF 两条直链均 404；Phase 102 核读缅甸驻港总领馆当前公告目录；澳门赴阿联酋来源冲突仍未解决）。本日期只适用于本轮涉及的来源和规则，其他规则保留各自核验日。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
+
+Phase 102 最新统计：139 个来源、147 条路线、143 条当前证据、139 条当前可展示结论和 8 条 REVIEW。
 
 截至 Phase 99，当前有效证据 143 条、当前可展示结论 139 条，另有 8 条 REVIEW（3 条证据缺口、1 条历史到期和 4 条条件复核）。越南中国普通护照临时团体免签仍受人数、持牌旅行社、直飞金兰、同一口岸、庆和行程及 30 天上限约束，系统不自动判断资格；香港、澳门特区普通护照的越南旅游基线为需签证，可申请 e-Visa，停留期限未确认。富国岛对外国护照存在独立区域免签条件，须核实具体行程。e-Visa 有效期不替代获准停留期。约旦旅游局现行国籍表将中国、香港和澳门均列为可抵达办理签证、费用 40 JOD；未声明准许停留天数，因此期限留空，仅适用于对应普通护照，不外推至 Travel Pass 或其他旅行证件。老挝中国普通护照有独立 B3 落地签路线（13 个指定口岸、磨丁铁路除外），eVisa 是另一条可申请路线；不把 VOA 结论外推到港澳。老挝外交部名单列有港澳 eVisa 申请资格，但条款及资格页不能证明港澳整体入境要求，因此两条均为 `manual_review`。缅甸 eVisa 与机场落地签作为独立路线记录；中国及香港落地签试行期仍有效，澳门此前试行期于 2026-10-20 到期，未发现续期材料，故历史 VOA 记录进入 REVIEW，但澳门 eVisa 仍为单独当前路线。厄瓜多尔港澳普通护照记录分别由香港政府免签协定公告及澳门《2025 年鉴》支持，均限定最多停留 90 天。沙特中国普通护照记录为需签证、但不宣称 eVisa 是唯一渠道；澳门特区护照保留落地签及在线 eVisa 两条已核实路线。巴林中港澳国籍现同时列于 NPRA 落地签和在线申请名单，结论保留条款限制且不推断停留期限。哥斯达黎加三条路线由 2025-11-17 官方公报 AJ-484-11-2025 续核；埃及中国普通护照 eVisa 路线按内政部当前 FAQ 更新，未推断港澳 eVisa 资格。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决；其余路线详情见 `REVALIDATION_LOG.md` 及实时队列。
 
@@ -194,6 +198,7 @@ Phase 98（2026-10-22）：新增孟加拉国内政部《Visa Policy 2026》作�
 - [Myanmar Ministry of Hotels and Tourism：Visa on Arrival](https://tourism.gov.mm/en/information-pages/visa-on-arrival)
 - [Myanmar Ministry of Hotels and Tourism：2026 China/India Tourist VOA extension](https://tourism.gov.mm/en/announcements/extension-of-visa-on-arrival-tourist-for-chinese-and-indian-tourists)
 - [Myanmar Consulate General in Hong Kong：2026 HKSAR Tourist VOA extension](https://myanmarconsulatehk.org/extension-of-tourist-visa-on-arrival-in-myanmar-for-the-hong-kong-passport-holders/)
+- [Myanmar Consulate General in Hong Kong：Current announcement index](https://myanmarconsulatehk.org/announcement/)（用于核对澳门专属通知时间线；目录缺项不证明政策永久取消）
 - [Myanmar Ministry of Hotels and Tourism：2025 Macau Tourist VOA extension](https://tourism.gov.mm/mm/announcements/aaksanhngatlungeyaeyaawankyitaannhngat-hotenhngatkhyaithwalayaewankyitaan-pyitaawinsuwankyi-jeng-phang-nawtawin-nepyitawhotezonyahi-hotemyaamh-lonkhyonyaewantaanmyaa-e-sunsaawinyaimyhngattinyaesaoinyaa-myanmayaoyaathointhintansainpwe-akhananatho-tetyaawet)
 - [Brunei MFA：Visa Information by Country / Region](https://www.mfa.gov.bn/Pages/visa-information.aspx)
 - [Brunei MFA：Category D3 — 14-day visa waiver](https://www.mfa.gov.bn/Pages/D3---D14.aspx)

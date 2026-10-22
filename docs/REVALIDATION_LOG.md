@@ -1,10 +1,16 @@
 # BorderLens 规则重新核验日志
 
+## Phase 102 · 缅甸驻港总领馆澳门 VOA 公告目录复核（2026-10-22）
+
+从实时 REVIEW 队列继续复核已到期的澳门特区护照赴缅甸航空旅游 VOA。直接打开缅甸驻港总领馆当前公告索引：索引列出 2026-07-14 的最新一般公告、2026-06-19 的香港护照专属续期，以及 2025-10-30 的澳门/日本/韩国 VOA 通知；未显示后续澳门续期。该目录只证明页面当前列出的公告时间线，不以“未列出”推断试行永久取消，也不把香港续期扩展到澳门。
+
+因此澳门 VOA 路线继续 `verified` 但已过 `effectiveUntil`，实际查询仍输出 REVIEW；历史 30 天和费用不作为当前结论，澳门 eVisa 仍是独立路线。将总领馆公告索引加入来源注册与该规则的来源链，增加回归断言；来源总数增至 139，路线、当前证据及 REVIEW 数量不变。
+
 ## Phase 101 · 澳门 DSI PDF 直链复查与发布状态校准（2026-10-22）
 
 按 Phase 97 的发现重试澳门身份证明局英文护照清单 PDF：旧直链 `https://www.dsi.gov.mo/download/visa_free_list_e.pdf` 与候选新路径 `https://www.dsi.gov.mo/dsi/download/visa_free_list_e.pdf` 均由直接 HTTPS GET 返回 404。搜索索引仍可检索到一份标注 2026-01-23 的 DSI 一手 PDF 文本，其中将 United Arab Emirates 列为最多 30 天、无备注；但本轮未能直接取得该 PDF，索引摘录不冒充原件读取。UAE 外交部当前国籍卡仍标 Macao 为 Visa Required，因此澳门特区护照赴 UAE 继续 `draft / manual_review`，停留期限留空。
 
-在来源注册表记录两条直链的本轮访问失败，并保持 blocked；同步项目计划与 Phase 100 发布记录：Site 当前为仅所有者可访问的 v104，Site 源仓库与 GitHub 当前版本为 `75a8ad7a6397dbce710e66982d8d650619f01455`。未改变路线结论、来源数量或覆盖计数。
+在来源注册表记录两条直链的本轮访问失败，并保持 blocked；核对 Phase 100 完成后的基线是仅所有者可访问的 Site v104（SHA `75a8ad7a6397dbce710e66982d8d650619f01455`）。Phase 101 提交 `9e43b4cd3e8df57aca53f5f9585a1a2f552885f7` 已推送 GitHub/Site 源仓库并成功部署为仅所有者可访问的 Site v105。未改变路线结论、来源数量或覆盖计数。
 
 ## Phase 99 · 越南港澳普通护照旅游入境基线（2026-10-22）
 
