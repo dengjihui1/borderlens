@@ -1666,19 +1666,21 @@
       "visaProductName": "Myanmar Tourist Visa on Arrival (pilot)",
       "conditions": [
         "缅甸官方 2025-11 公告将澳门特区护照游客的航空落地签试行期延至 2026-10-20；该试行期现已结束。",
-        "本次在官方缅甸旅游部公告目录及澳门政府消息中未找到后续延期材料；这不能证明已永久停止，出行前须向主管机关确认当前状态。",
+        "缅甸旅游部 2026-09 公告将中国和印度游客的另一轮试行延至 2027-08-29，但未提及澳门特区护照，不能据此延长本路线。",
+        "本次复读旅游部当前英文 VOA 页面和官方公告后，未找到澳门路线的后续延期材料；这不能证明已永久停止，出行前仍须向主管机关确认当前状态。",
         "历史公告记载 USD 50、最多停留 30 天、需 6 个月有效期护照及 2 张照片；这些已过期的历史条件不作为当前入境结论。"
       ],
       "status": "verified",
       "sourceIds": [
         "mm-tourist-voa-general",
         "mm-mo-voa-extension-2025",
+    "mm-cn-india-voa-extension-2026",
         "mo-myanmar-voa-notice-2024"
       ],
-      "evidenceLocator": "Myanmar Ministry of Hotels and Tourism > 2025-11-19 extension notice; Consulate General in Hong Kong > 2025-10-30 notice",
-      "evidenceExcerpt": "The official notice extends the tourist VOA pilot for Macau SAR, Japan and Korea from 21 October 2025 through 20 October 2026. No later extension was found in the checked official announcement pages on 21 October 2026; current status therefore requires reconfirmation.",
-      "checkedAt": "2026-10-21",
-      "reviewDueAt": "2026-11-20",
+  "evidenceLocator": "Myanmar Ministry of Hotels and Tourism > current English Visa on Arrival page, Macao pilot and deadline; 2025-11-19 extension notice; 2026-09-15 China and India extension (scope exclusion)",
+  "evidenceExcerpt": "The current official English page shows the Macao SAR pilot ran from 21 October 2025 for one year, ending 20 October 2026. A separate 2026 extension applies only to China and India, not Macao SAR. With no Macao extension found, keep the expired VOA hidden and reconfirm current status before travel.",
+  "checkedAt": "2026-10-22",
+  "reviewDueAt": "2026-11-21",
       "effectiveUntil": "2026-10-20T23:59:59+06:30"
     },
     {

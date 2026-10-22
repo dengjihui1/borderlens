@@ -1,5 +1,9 @@
 # BorderLens 规则重新核验日志
 
+## Phase 90 · 缅甸澳门航空落地签试行期到期复核（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-22）
+
+重读缅甸旅游部当前英文 [Visa on Arrival](https://tourism.gov.mm/en/information-pages/visa-on-arrival) 页面：澳门特区护照游客的航空 VOA 仍只列出 2025-10-21 起为期一年的试行，已于 2026-10-20 结束。另读旅游部 2026-09-15 [中国和印度游客 VOA 延期公告](https://tourism.gov.mm/en/announcements/extension-of-visa-on-arrival-tourist-for-chinese-and-indian-tourists)：该延期仅写中国和印度，不包括澳门特区护照，不能跨路线套用。没有找到澳门专项后续延期，因此不恢复历史 USD 50 / 30 天结论；保留 expired / REVIEW，并记录最新核验日 2026-10-22。到期不等于永久停止，旅行前仍需向主管机关确认。
+
 ## Phase 89 · 老挝港澳特区普通护照 eVisa 路线确认（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-22）
 
 复核老挝两条证据待补路线。老挝外交部当前 eVisa 资格页分别列出 Hongkong SAR, China 与 Macao SAR, China；其条款明确该产品只适用于普通护照，旅游 T-B3 获批后停留 30 天、批准信有效 60 天，护照至少剩余 6 个月有效期并留至少 1 页空白页，且须从 9 个指定口岸之一入境并携带打印件。外交部签证豁免总表将香港 14 天单方豁免限定为外交及公务护照，不涵盖普通 HKSAR 护照；该完整表未列澳门特区普通护照豁免。
