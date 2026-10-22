@@ -1208,23 +1208,25 @@
       "documentType": "ordinary_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
-      "maxStayDays": 90,
-      "visaProductName": "Vietnam e-Visa",
+      "outcome": "manual_review",
+      "maxStayDays": null,
       "conditions": [
-        "越南移民局官方国籍接口中 CHN / China 返回 status=EVISA、qtHanChe=0；本条仅适用于中国普通护照。",
-        "官方电子签页面说明最长 90 天，可单次或多次入境；电子签申请人为越南境外外国人，须持有效护照或国际旅行证件。",
-        "电子签只能经越南政府指定的国际边境口岸出入；获签不等于保证入境，仍须满足越南法律规定的入境条件。"
+        "越南移民局官方国籍 API 将 CHN / China 标为 EVISA，说明中国普通护照可申请 Vietnam e-Visa；这项产品资格本身不等于完整入境结论。",
+        "越南政府第 325/NQ-CP 号决议另设临时团体旅游免签：仅中国普通护照、至少 2 人、参加越南持牌国际旅行社组织的全包旅游团、行程限庆和省、从中国大陆直飞金兰国际机场并经同一口岸入出境，旅游不超过 30 天；截至 2027-12-31。港澳特区护照明确不适用。",
+        "申请人是否满足团体免签的旅行团、航线、口岸和行程条件尚未结构化判定，因此路线保留 REVIEW；不把其他普通旅游情形自动判为免签或需签证。",
+        "e-Visa 页面所述最长 90 天是签证有效期上限，不在缺少明确停留许可依据时换算为准许停留天数；申请须在越南境外、持有效护照或国际旅行证件，并经政府指定国际口岸出入。"
       ],
       "status": "verified",
       "sourceIds": [
         "vn-immigration-evisa",
-        "vn-immigration-evisa-api"
+        "vn-immigration-evisa-api",
+        "vn-gov-resolution-325",
+        "vn-icd-resolution-325"
       ],
-      "evidenceLocator": "Vietnam National Electronic Visa system > For outside Viet Nam > Foreigners personally applying for e-Visa; public API /client-service/public/dm-qt/get-all, record CHN",
-      "evidenceExcerpt": "The official nationality API returns CHN / China with status EVISA and qtHanChe 0. The official e-Visa page states a maximum validity of 90 days, single or multiple entry, application from outside Viet Nam, valid passport or international travel document, and entry and exit through Government-designated international border gates.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Government Resolution 325/NQ-CP, Articles 1–3; Vietnam International Cooperation Department implementation notice dated 2026-10-12; Immigration Department nationality API record CHN; e-Visa application conditions",
+      "evidenceExcerpt": "The government notice says the exemption covers valid ordinary PRC passport holders (excluding Hong Kong and Macao SAR passport holders) in groups of at least two on all-inclusive tours organized by Vietnamese international travel businesses, flying directly from mainland China to Cam Ranh International Airport, entering and exiting through that same checkpoint, visiting Khanh Hoa for no more than 30 days, through 2027-12-31. The separate e-Visa nationality API marks CHN as EVISA.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "vn-hk-hksar-tourism-review",
@@ -1233,24 +1235,25 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
-      "maxStayDays": 90,
-      "visaProductName": "Vietnam e-Visa",
+      "outcome": "manual_review",
+      "maxStayDays": null,
       "conditions": [
-        "越南移民局官方 e-Visa 国籍名单的 CHN / China 行明确包含 Hong Kong SAR passport holders；同一行排除 Chinese e-passport holders，因此本条仅适用于香港特区普通护照，不扩展到中国电子普通护照。",
-        "官方电子签页面说明最长 90 天，可单次或多次入境；电子签申请人为越南境外外国人，须持有效护照或国际旅行证件。",
-        "电子签只能经越南政府指定的国际边境口岸出入；获签不等于保证入境，仍须满足越南法律规定的入境条件。"
+        "越南移民局官方 e-Visa 国籍名单的 CHN / China 行明确包含 Hong Kong SAR passport holders，并排除 Chinese e-passport holders；该名单证明香港特区普通护照可申请 e-Visa，不单独证明完整入境要求。",
+        "越南政府第 325/NQ-CP 号决议的中国团体旅游免签明确排除香港特区护照；越南官方免签名单未提供足以确定本证件全部旅游入境待遇的专属结论，因此保留 REVIEW。",
+        "e-Visa 最长有效期不直接换算为准许停留天数；申请条件、指定口岸和最终入境决定仍须核实。"
       ],
       "status": "verified",
       "sourceIds": [
         "vn-immigration-evisa",
         "vn-immigration-evisa-api",
-        "vn-immigration-evisa-nationality-list"
+        "vn-immigration-evisa-nationality-list",
+        "vn-gov-resolution-325",
+        "vn-gov-visa-exemption-list"
       ],
-      "evidenceLocator": "Vietnam Immigration Department > official e-Visa nationality list, PDF p. 3, CHN / China row; official e-Visa page and public API",
-      "evidenceExcerpt": "The official list is titled 'List of countries whose citizens may be granted e-Visas'. Its CHN / China row says 'Including Hong Kong SAR and Macao SAR passport holders' and 'Not apply to Chinese e-passport holders'. The official e-Visa page states a maximum of 90 days, single or multiple entry, outside-Viet-Nam application and designated international border gates.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Vietnam Immigration Department e-Visa nationality list, p. 3, CHN row; Government Resolution 325/NQ-CP and implementation notice; Vietnam MOFA current visa-exemption list",
+      "evidenceExcerpt": "The Immigration Department list says the CHN row includes Hong Kong SAR passport holders and excludes Chinese e-passport holders, establishing e-Visa application eligibility. Resolution 325/NQ-CP expressly excludes HKSAR passports from its narrow PRC group-tour waiver. The current MOFA exemption list does not provide a complete HKSAR-passport tourism determination, so no overall visa-required/free conclusion is asserted.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "vn-mo-macao-sar-tourism-review",
@@ -1259,24 +1262,26 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
-      "maxStayDays": 90,
-      "visaProductName": "Vietnam e-Visa",
+      "outcome": "manual_review",
+      "maxStayDays": null,
       "conditions": [
-        "越南移民局官方 e-Visa 国籍名单的 CHN / China 行明确包含 Macao SAR passport holders；同一行排除 Chinese e-passport holders，因此本条仅适用于澳门特区普通护照，不扩展到中国电子普通护照。",
-        "官方电子签页面说明最长 90 天，可单次或多次入境；电子签申请人为越南境外外国人，须持有效护照或国际旅行证件。",
-        "电子签只能经越南政府指定的国际边境口岸出入；获签不等于保证入境，仍须满足越南法律规定的入境条件。"
+        "越南移民局官方 e-Visa 国籍名单的 CHN / China 行明确包含 Macao SAR passport holders，并排除 Chinese e-passport holders；澳门特区政府身份证明局也将越南列为澳门特区护照可申请电子/网上签证的目的地。以上只证明申请路径，不单独证明完整入境要求。",
+        "越南政府第 325/NQ-CP 号决议的中国团体旅游免签明确排除澳门特区护照；越南官方免签名单未提供足以确定本证件全部旅游入境待遇的专属结论，因此保留 REVIEW。",
+        "e-Visa 最长有效期不直接换算为准许停留天数；申请条件、指定口岸和最终入境决定仍须核实。"
       ],
       "status": "verified",
       "sourceIds": [
         "vn-immigration-evisa",
         "vn-immigration-evisa-api",
-        "vn-immigration-evisa-nationality-list"
+        "vn-immigration-evisa-nationality-list",
+        "vn-gov-resolution-325",
+        "vn-gov-visa-exemption-list",
+        "mo-dsi-evisa-list"
       ],
-      "evidenceLocator": "Vietnam Immigration Department > official e-Visa nationality list, PDF p. 3, CHN / China row; official e-Visa page and public API",
-      "evidenceExcerpt": "The official list is titled 'List of countries whose citizens may be granted e-Visas'. Its CHN / China row says 'Including Hong Kong SAR and Macao SAR passport holders' and 'Not apply to Chinese e-passport holders'. The official e-Visa page states a maximum of 90 days, single or multiple entry, outside-Viet-Nam application and designated international border gates.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Vietnam Immigration Department e-Visa nationality list, p. 3, CHN row; Macao SAR Identification Services Bureau e-visa destination list; Government Resolution 325/NQ-CP; Vietnam MOFA current visa-exemption list",
+      "evidenceExcerpt": "The Immigration Department list includes Macao SAR passport holders in the CHN row and excludes Chinese e-passport holders. Macao DSI's official e-visa destination list includes Vietnam. Resolution 325/NQ-CP expressly excludes Macao SAR passports from its narrow PRC group-tour waiver. These product and exception records do not by themselves determine the passport's complete tourism entry treatment.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "ph-cn-prc-ordinary-tourism-review",

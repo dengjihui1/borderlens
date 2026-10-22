@@ -10,9 +10,9 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 
 ## 最近政策证据
 
-核验日期：2026-10-22（Phase 86 续核约旦中国及港澳普通护照落地签；此前 Phase 85 续核埃及中国普通护照 eVisa）；其他规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
+核验日期：2026-10-22（Phase 87 复核越南中国及港澳普通护照旅游路线；此前 Phase 86 续核约旦中国及港澳普通护照落地签）；其他规则的最近核验日保留在各条记录中。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
 
-截至 Phase 86，当前有效证据 138 条，其中 3 条需个体条件核验；另有 4 条历史到期和 5 条显式证据问题。查询口径为 135 条当前结论、12 条 REVIEW。约旦旅游局现行国籍表将中国、香港和澳门均列为可抵达办理签证、费用 40 JOD；未声明准许停留天数，因此期限留空，仅适用于对应普通护照，不外推至 Travel Pass 或其他旅行证件。老挝中国普通护照有独立 B3 落地签路线（13 个指定口岸、磨丁铁路除外），eVisa 是另一条可申请路线；不把 VOA 结论外推到港澳。老挝外交部名单列有港澳 eVisa 申请资格，但条款及资格页不能证明港澳整体入境必须办理该 eVisa，因此两条均改为 `manual_review`，不再展示签证类别或停留期。缅甸 eVisa 与机场落地签作为独立路线记录；中国及香港落地签试行期仍有效，澳门此前试行期于 2026-10-20 到期，未发现续期材料，故历史 VOA 记录进入 REVIEW，但澳门 eVisa 仍为单独当前路线。厄瓜多尔港澳普通护照记录分别由香港政府免签协定公告及澳门《2025 年鉴》支持，均限定最多停留 90 天。沙特中国普通护照记录为需签证、但不宣称 eVisa 是唯一渠道；澳门特区护照保留落地签及在线 eVisa 两条已核实路线。巴林中港澳国籍现同时列于 NPRA 落地签和在线申请名单，结论保留条款限制且不推断停留期限。哥斯达黎加三条路线由 2025-11-17 官方公报 AJ-484-11-2025 续核；埃及中国普通护照 eVisa 路线按内政部当前 FAQ 更新，未推断港澳 eVisa 资格。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决。证据定位和下一步要求见 `REVALIDATION_LOG.md`。
+截至 Phase 87，当前有效证据 141 条，其中 6 条需个体/整体条件复核；另有 1 条历史到期和 5 条显式证据问题。查询口径为 135 条当前结论、12 条 REVIEW。越南中国普通护照临时团体免签受人数、持牌旅行社、直飞金兰、同一口岸、庆和行程及 30 天上限约束，系统不自动判断资格；香港、澳门特区护照路线仅确认可申请 Vietnam e-Visa，整体入境待遇保留 REVIEW。旧 90 天字段不再用 e-Visa 有效期代替获准停留期。约旦旅游局现行国籍表将中国、香港和澳门均列为可抵达办理签证、费用 40 JOD；未声明准许停留天数，因此期限留空，仅适用于对应普通护照，不外推至 Travel Pass 或其他旅行证件。老挝中国普通护照有独立 B3 落地签路线（13 个指定口岸、磨丁铁路除外），eVisa 是另一条可申请路线；不把 VOA 结论外推到港澳。老挝外交部名单列有港澳 eVisa 申请资格，但条款及资格页不能证明港澳整体入境要求，因此两条均为 `manual_review`。缅甸 eVisa 与机场落地签作为独立路线记录；中国及香港落地签试行期仍有效，澳门此前试行期于 2026-10-20 到期，未发现续期材料，故历史 VOA 记录进入 REVIEW，但澳门 eVisa 仍为单独当前路线。厄瓜多尔港澳普通护照记录分别由香港政府免签协定公告及澳门《2025 年鉴》支持，均限定最多停留 90 天。沙特中国普通护照记录为需签证、但不宣称 eVisa 是唯一渠道；澳门特区护照保留落地签及在线 eVisa 两条已核实路线。巴林中港澳国籍现同时列于 NPRA 落地签和在线申请名单，结论保留条款限制且不推断停留期限。哥斯达黎加三条路线由 2025-11-17 官方公报 AJ-484-11-2025 续核；埃及中国普通护照 eVisa 路线按内政部当前 FAQ 更新，未推断港澳 eVisa 资格。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决。证据定位和下一步要求见 `REVALIDATION_LOG.md`。
 
 下表保留结构化规则的历史范围，不代表每一行目前仍有效；当日是否可用以规则自身的 `reviewDueAt` 和运行时门禁为准。覆盖率卡片含过期或待复核路线时，不展示旧的整组确定性结论。
 
@@ -99,8 +99,8 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 | 马来西亚 | 香港签证身份书 / 澳门旅行证 | 前者需签证；后者最多 14 天免签 | 两类证件均不能继承对应特区护照待遇 |
 | 印度尼西亚 | 中国普通护照 | B1 落地签，最多 30 天，可延长一次 30 天 | 护照至少 6 个月有效、离境票据、Rp500,000 |
 | 印度尼西亚 | 香港/澳门特区护照 | A1 旅游免签，最多 30 天、不可延期 | 按国籍筛选的产品列表与 A1 详情共同核验；护照至少 6 个月有效、离境票据，禁止工作或收取当地报酬 |
-| 越南 | 中国普通护照 | Vietnam e-Visa，最长 90 天，可单次或多次入境 | 官方国籍 API 将 CHN / China 标为 EVISA；申请须在越南境外，需有效护照或国际旅行证件，并经政府指定国际边境口岸出入 |
-| 越南 | 香港/澳门特区护照 | Vietnam e-Visa，最长 90 天，可单次或多次入境 | 官方 e-Visa 国籍名单的 CHN 行明确包含 Hong Kong SAR 和 Macao SAR passport holders，并排除 Chinese e-passport holders；仍须从指定国际口岸出入 |
+| 越南 | 中国普通护照 | REVIEW：一般 e-Visa 路径与 325/NQ-CP 限定团体免签并存 | 免签仅限至少 2 人的持牌全包团、庆和省、从中国大陆直飞金兰并经同一口岸往返、最多 30 天、截至 2027-12-31；系统不自动判断资格。e-Visa 最长有效期不代替准许停留期限 |
+| 越南 | 香港/澳门特区护照 | REVIEW：官方来源确认可申请 Vietnam e-Visa，但完整入境要求未结论化 | 移民局 CHN 行明确包含港澳特区护照并排除中国电子护照；澳门 DSI 亦列出越南 e-Visa 申请入口。325/NQ-CP 团体免签明确排除港澳，不据此推断其他待遇 |
 | 蒙古 | 中国普通护照 | 免签，期限待官方入口进一步核验 | 蒙古电子签官方系统的 VISA FREE COUNTRIES 名单列出 The People's Republic of China；当前页未说明停留天数与特殊证件 |
 | 蒙古 | 香港特区护照 | 免签，期限待官方入口进一步核验 | 官方名单列出 Hong Kong SAR (China)；当前页未说明停留天数与香港签证身份书 |
 | 蒙古 | 澳门特区护照 | 免签，期限待官方入口进一步核验 | 官方名单列出 Macau SAR (China)；当前页未说明停留天数与澳门旅行证 |
@@ -167,6 +167,10 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 - [Vietnam Immigration：National Electronic Visa system](https://evisa.gov.vn/e-visa/foreigners)
 - [Vietnam Immigration：public nationality and border-gate APIs](https://api.evisa.gov.vn/client-service/public/dm-qt/get-all)
 - [Vietnam Immigration：e-Visa nationality list](https://evisa.xuatnhapcanh.gov.vn/documents/20181/117155/Vietnam-Evisa-nation-list-Vi.pdf/7611c905-0370-45e9-8080-cd0dec11df95)
+- [Government of Viet Nam：Resolution 325/NQ-CP](https://vanban.chinhphu.vn/?docid=219955&orggroupid=2&pageid=27160)
+- [Vietnam International Cooperation Department：Resolution 325 implementation conditions](https://icd.gov.vn/thi-diem-mien-thi-thuc-cho-khach-trung-quoc-di-du-lich-theo-doan-den-khanh-hoa/)
+- [Vietnam Ministry of Foreign Affairs：Viet Nam's visa exemption list](https://vnembassy-bangkok.mofa.gov.vn/web/guest/tin-chi-tiet/chi-tiet/viet-nam-39-s-visa-exemption-list-57163-596.html)
+- [Macao Identification Services Bureau：e-visa destinations for Macao SAR passport holders](https://www.dsi.gov.mo/Mobile/visa/evisa_list_e.jsp?visa_id=31)
 - [Philippines DFA Beijing：General Information](https://beijingpe.dfa.gov.ph/general-information)（本轮安全验证阻挡，`blocked`）
 - [Philippines Bureau of Immigration：Visa Waiver](https://immigration.gov.ph/visas/visa-waiver/)
 - [Philippine eVisa：Visa Policy](https://evisa.gov.ph/page/policy)

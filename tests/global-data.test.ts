@@ -294,22 +294,27 @@ test('印度尼西亚区分中国普通护照 B1 落地签与港澳 A1 免签', 
   }
 });
 
-test('越南官方电子签接口与菲律宾 eVisa 政策确认中国普通护照路线', async () => {
+test('越南电子签产品资格与第325号决议的条件免签不自动合并为入境结论', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const vietnam = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'vn');
   assert.equal(vietnam.length, 3);
   const byType = new Map<string, PolicyFixture>(vietnam.map((rule: PolicyFixture) => [rule.documentType, rule]));
-  assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_required', 90]);
-  assert.equal(byType.get('ordinary_passport')!.visaProductName, 'Vietnam e-Visa');
-  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('CHN') && condition.includes('EVISA')));
-  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('指定的国际边境口岸')));
+  const chinesePassport = byType.get('ordinary_passport')!;
+  assert.deepEqual([chinesePassport.status, chinesePassport.outcome, chinesePassport.maxStayDays], ['verified', 'manual_review', null]);
+  assert.ok(chinesePassport.conditions.some((condition: string) => condition.includes('CHN / China') && condition.includes('EVISA')));
+  assert.ok(chinesePassport.conditions.some((condition: string) => condition.includes('至少 2 人') && condition.includes('金兰国际机场') && condition.includes('2027-12-31')));
+  assert.ok(chinesePassport.conditions.some((condition: string) => condition.includes('港澳特区护照明确不适用')));
+  assert.ok(chinesePassport.sourceIds.includes('vn-gov-resolution-325'));
+  assert.ok(chinesePassport.sourceIds.includes('vn-icd-resolution-325'));
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
-    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['verified', 'visa_required', 90]);
-    assert.equal(byType.get(documentType)!.visaProductName, 'Vietnam e-Visa');
-    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('明确包含') && condition.includes('passport holders')));
-    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('Chinese e-passport holders')));
-    assert.ok(byType.get(documentType)!.sourceIds.includes('vn-immigration-evisa-nationality-list'));
+    const rule = byType.get(documentType)!;
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'manual_review', null]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('不单独证明完整入境要求')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('明确排除')));
+    assert.ok(rule.sourceIds.includes('vn-immigration-evisa-nationality-list'));
+    assert.ok(rule.sourceIds.includes('vn-gov-visa-exemption-list'));
   }
+  assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('mo-dsi-evisa-list'));
 
   const philippines = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'ph');
   assert.equal(philippines.length, 3);
@@ -711,7 +716,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 127);
+  assert.equal(registry.sources.length, 131);
   assert.equal(policies.rules.length, 147);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 142);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review', 'la-hk-hksar-tourism-evisa', 'la-mo-macao-sar-tourism-evisa']);

@@ -8,7 +8,7 @@ const bhId = policies.rules.find((rule) => rule.destinationJurisdictionId === 'b
 const checks = [
   { path: '/', text: ['把证件和行程，逐段对上。', '生成逐段自查清单', '添加返程目的地', '仅当前页面，不保存'] },
   { path: '/demo', text: ['逐段演示规则已过期，历史结论已隐藏', '查询全部已录入证件规则'] },
-  { path: '/coverage', text: ['Phase 86', '当前有效的受控规则', '各组规则的当前状态'] },
+  { path: '/coverage', text: ['Phase 87', '当前有效的受控规则', '各组规则的当前状态'] },
   { path: '/policies', text: ['已有规则，真正查得到。', '下一页'], cards: 12 },
   { path: '/policies?page=12', text: ['上一页', '下一页'], cards: 12 },
   { path: '/policies?page=13', text: ['上一页'], cards: 3 },

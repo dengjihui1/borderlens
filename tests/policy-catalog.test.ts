@@ -89,7 +89,7 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
   const [policies, registry] = await Promise.all([readJson('../data/policies.seed.json'), readJson('../data/official-source-registry.json')]);
   const entries = buildPolicyCatalog(policies.rules, registry.sources, now);
   assert.equal(entries.length, 147);
-  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 138);
+  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 141);
   assert.equal(entries.filter((entry) => entry.conclusion).length, 135);
   assert.equal(getReviewQueue(entries).length, 12);
   for (const id of ['la-hk-hksar-tourism-evisa', 'la-mo-macao-sar-tourism-evisa']) {
@@ -97,7 +97,7 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
     assert.equal(entry.conclusion, null);
     assert.equal(entry.reason, 'evidence_pending');
   }
-  assert.equal(entries.filter((entry) => entry.reason === 'conditional_review').length, 3);
+  assert.equal(entries.filter((entry) => entry.reason === 'conditional_review').length, 6);
   assert.equal(entries.find((entry) => entry.id === 'cn-hk-home-return-permit-route')!.conclusion, null);
   assert.equal(entries.find((entry) => entry.id === 'bd-hk-hksar-tourism-review')!.evidence, null);
   for (const id of ['ec-hk-hksar-tourism-review', 'ec-mo-macao-sar-tourism-review']) {
