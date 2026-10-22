@@ -1548,23 +1548,23 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
-      "maxStayDays": 30,
-      "visaProductName": "Tourist Visa (T-B3) eVisa",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": "Confirm passport-specific Lao visa requirements",
       "conditions": [
-        "官方资格名单明确包含 Hongkong SAR, China。",
-        "只接受普通护照；护照须从抵达日起至少还有 6 个月有效期并至少留 1 页空白页。",
-        "eVisa 批准信自收到起 60 天有效，入境后停留 30 天；须打印批准信并使用 9 个指定航空、陆路或铁路口岸之一。"
+        "老挝外交部 eVisa 资格名单包含 Hongkong SAR, China，但资格名单只能证明可申请该产品。",
+        "eVisa 条款只列普通护照及该产品的期限、材料和口岸条件，不能单独证明 HKSAR 护照必须或可以通过该产品入境。",
+        "目前没有足够的老挝主管机关证据确认 HKSAR 普通护照的整体旅游入境要求；保持 REVIEW，不推断免签、落地签或必须预先办签。"
       ],
-      "status": "verified",
+      "status": "draft",
       "sourceIds": [
         "la-evisa-eligibility",
         "la-evisa-terms"
       ],
-      "evidenceLocator": "Lao eVisa > Who can apply: Hongkong SAR, China; Terms IV, VI, VIII and IX",
-      "evidenceExcerpt": "Hongkong SAR, China appears in the official eligible-country list. Only ordinary passports are applicable; passport validity must be at least 6 months. Tourist Visa T-B3 permits 30 days, the approval letter is valid for 60 days, and entry is limited to designated ports.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Lao eVisa eligibility list > Hongkong SAR, China; terms IV, VI, VIII and IX; neither source states HKSAR passport's overall entry requirement",
+      "evidenceExcerpt": "The official eligibility list includes Hongkong SAR, China, while the terms describe the ordinary-passport eVisa product. These sources do not establish whether an HKSAR passport holder must or may use this product as the route for entry; keep the passport-specific conclusion in REVIEW.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "la-mo-macao-sar-tourism-evisa",
@@ -1573,23 +1573,23 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "visa_required",
-      "maxStayDays": 30,
-      "visaProductName": "Tourist Visa (T-B3) eVisa",
+      "outcome": "manual_review",
+      "maxStayDays": null,
+      "visaProductName": "Confirm passport-specific Lao visa requirements",
       "conditions": [
-        "官方资格名单明确包含 Macao SAR, China。",
-        "只接受普通护照；护照须从抵达日起至少还有 6 个月有效期并至少留 1 页空白页。",
-        "eVisa 批准信自收到起 60 天有效，入境后停留 30 天；须打印批准信并使用 9 个指定航空、陆路或铁路口岸之一。"
+        "老挝外交部 eVisa 资格名单包含 Macao SAR, China，但资格名单只能证明可申请该产品。",
+        "eVisa 条款只列普通护照及该产品的期限、材料和口岸条件，不能单独证明 Macao SAR 护照必须或可以通过该产品入境。",
+        "目前没有足够的老挝主管机关证据确认 Macao SAR 普通护照的整体旅游入境要求；保持 REVIEW，不推断免签、落地签或必须预先办签。"
       ],
-      "status": "verified",
+      "status": "draft",
       "sourceIds": [
         "la-evisa-eligibility",
         "la-evisa-terms"
       ],
-      "evidenceLocator": "Lao eVisa > Who can apply: Macao SAR, China; Terms IV, VI, VIII and IX",
-      "evidenceExcerpt": "Macao SAR, China appears in the official eligible-country list. Only ordinary passports are applicable; passport validity must be at least 6 months. Tourist Visa T-B3 permits 30 days, the approval letter is valid for 60 days, and entry is limited to designated ports.",
-      "checkedAt": "2026-09-08",
-      "reviewDueAt": "2026-10-08"
+      "evidenceLocator": "Lao eVisa eligibility list > Macao SAR, China; terms IV, VI, VIII and IX; neither source states Macao SAR passport's overall entry requirement",
+      "evidenceExcerpt": "The official eligibility list includes Macao SAR, China, while the terms describe the ordinary-passport eVisa product. These sources do not establish whether a Macao SAR passport holder must or may use this product as the route for entry; keep the passport-specific conclusion in REVIEW.",
+      "checkedAt": "2026-10-21",
+      "reviewDueAt": "2026-11-20"
     },
     {
       "id": "mm-cn-prc-ordinary-tourism-voa",

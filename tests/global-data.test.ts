@@ -77,7 +77,7 @@ test('不机械续期受阻路线；沙特及巴林按当前官方证据更新',
   for (const sourceId of saudiChina.sourceIds) assert.ok(registry.sources.some((source: { id: string; status: string }) => source.id === sourceId && source.status === 'verified'));
   for (const sourceId of saudiMacao.sourceIds) assert.ok(registry.sources.some((source: { id: string; status: string }) => source.id === sourceId && source.status === 'verified'));
   const conflicts = (policies.rules as PolicyFixture[]).filter((rule) => rule.status === 'draft');
-  assert.equal(conflicts.length, 3);
+  assert.equal(conflicts.length, 5);
   assert.ok(conflicts.every((rule) => rule.outcome === 'manual_review'));
 });
 
@@ -370,13 +370,17 @@ test('老挝电子签边界与中国普通护照落地签分别建模', async ()
   assert.equal(laos.length, 4);
   const evisaRules = laos.filter((rule: PolicyFixture) => rule.id.endsWith('-evisa'));
   assert.equal(evisaRules.length, 3);
-  for (const rule of evisaRules) {
-    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', 30]);
-    assert.ok(rule.conditions.some((condition: string) => condition.includes('指定') && condition.includes('口岸')));
+  const chinaEvisa = evisaRules.find((rule: PolicyFixture) => rule.id === 'la-cn-prc-ordinary-tourism-evisa')!;
+  assert.deepEqual([chinaEvisa.status, chinaEvisa.outcome, chinaEvisa.maxStayDays], ['verified', 'visa_required', 30]);
+  assert.ok(chinaEvisa.conditions.some((condition: string) => condition.includes('指定') && condition.includes('口岸')));
+  assert.ok(chinaEvisa.sourceIds.includes('la-evisa-eligibility') && chinaEvisa.sourceIds.includes('la-evisa-terms'));
+  assert.deepEqual([chinaEvisa.checkedAt, chinaEvisa.reviewDueAt], ['2026-10-21', '2026-11-20']);
+  for (const id of ['la-hk-hksar-tourism-evisa', 'la-mo-macao-sar-tourism-evisa']) {
+    const rule = evisaRules.find((candidate: PolicyFixture) => candidate.id === id)!;
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays, rule.checkedAt, rule.reviewDueAt], ['draft', 'manual_review', null, '2026-10-21', '2026-11-20']);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('不能单独证明')));
     assert.ok(rule.sourceIds.includes('la-evisa-eligibility') && rule.sourceIds.includes('la-evisa-terms'));
   }
-  const chinaEvisa = evisaRules.find((rule: PolicyFixture) => rule.id === 'la-cn-prc-ordinary-tourism-evisa')!;
-  assert.deepEqual([chinaEvisa.checkedAt, chinaEvisa.reviewDueAt], ['2026-10-21', '2026-11-20']);
   const chinaVoa = laos.find((rule: PolicyFixture) => rule.id === 'la-cn-prc-ordinary-tourism-voa')!;
   assert.deepEqual([chinaVoa.status, chinaVoa.outcome, chinaVoa.maxStayDays, chinaVoa.checkedAt, chinaVoa.reviewDueAt], ['verified', 'visa_on_arrival', 30, '2026-10-21', '2026-11-20']);
   assert.ok(chinaVoa.conditions.some((condition: string) => condition.includes('磨丁铁路口岸')));
@@ -703,8 +707,8 @@ test('全库保留结构化路线及有明确原因的人工复核记录', async
   const policies = await readJson('../data/policies.seed.json');
   assert.equal(registry.sources.length, 127);
   assert.equal(policies.rules.length, 147);
-  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 144);
-  assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);
+  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 142);
+  assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review', 'la-hk-hksar-tourism-evisa', 'la-mo-macao-sar-tourism-evisa']);
   assert.equal(registry.sources.filter((source: { id: string }) => source.id === 'hk-gov-ecuador-visa-free-90').length, 1);
 });
 
