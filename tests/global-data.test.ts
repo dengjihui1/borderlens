@@ -438,8 +438,10 @@ test('缅甸电子签与航空落地签分开建模并执行试行期限门禁',
   const macaoVoa = byId.get('mm-mo-macao-sar-tourism-voa')!;
   assert.deepEqual([chineseVoa.borderMode, chineseVoa.outcome, chineseVoa.maxStayDays, chineseVoa.effectiveUntil], ['air', 'visa_on_arrival', 30, '2027-08-29T23:59:59+06:30']);
   assert.deepEqual([hongKongVoa.borderMode, hongKongVoa.outcome, hongKongVoa.maxStayDays, hongKongVoa.effectiveUntil], ['air', 'visa_on_arrival', 30, '2027-03-10T23:59:59+06:30']);
+  assert.deepEqual([hongKongVoa.checkedAt, hongKongVoa.reviewDueAt], ['2026-10-22', '2026-11-21']);
   assert.equal(isPolicyRuleCurrent(chineseVoa, new Date('2026-10-21T12:00:00Z')), true);
-  assert.equal(isPolicyRuleCurrent(hongKongVoa, new Date('2026-10-21T12:00:00Z')), true);
+  assert.equal(isPolicyRuleCurrent(hongKongVoa, new Date('2026-10-22T12:00:00Z')), true);
+  assert.equal(isPolicyRuleCurrent(hongKongVoa, new Date('2026-11-22T00:00:00Z')), false);
   assert.deepEqual([macaoVoa.checkedAt, macaoVoa.reviewDueAt], ['2026-10-22', '2026-11-21']);
   assert.ok(macaoVoa.sourceIds.includes('mm-cn-india-voa-extension-2026'));
   assert.ok(macaoVoa.sourceIds.includes('mm-consulate-hk-announcement-index'));
