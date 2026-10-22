@@ -2167,6 +2167,7 @@
       "visaProductName": "Confirm passport-specific Bangladesh visa requirements",
       "conditions": [
         "驻港领馆 Tourist Visa 页面确认提供港澳领区的正规旅游签申请材料，费用表也列有 Hong Kong 签证费，但这些证据没有明确排除该特区护照的落地签或其他待遇。",
+        "孟加拉国特别分局当前 VOA 说明列出中国旅客可能符合落地签资格，但附有出发地等条件，签发由口岸移民官审查；页面没有说明香港特区护照是否按 China 类别处理。",
         "同一驻港费用表也列有 China 有金额签证费，而驻北京使馆明确中国旅客可按条件申请落地签；这证明仅凭有金额的费用行，不能推出必须预先办签。",
         "本条因此明确为 REVIEW：需取得 Hong Kong 特区普通护照专属的当前签证、落地签或免签要求，确认前不输出确定结论，也不补填停留天数。"
       ],
@@ -2174,12 +2175,13 @@
       "sourceIds": [
         "bd-hk-tourist-visa",
         "bd-hk-visa-fees",
-        "bd-beijing-visa-on-arrival"
+        "bd-beijing-visa-on-arrival",
+        "bd-special-branch-voa"
       ],
-      "evidenceLocator": "Bangladesh Hong Kong Tourist Visa; Visa Fees > Hong Kong and China numeric fee rows; Beijing Visa on Arrival > eligibility item 3 (China counterexample only)",
-      "evidenceExcerpt": "The Hong Kong consulate provides a tourist-visa application route and numeric Hong Kong fee rows. Its China row also has numeric fees, while the Beijing embassy explicitly permits qualifying Chinese visitors to use visa on arrival. Thus fee rows cannot prove mandatory advance visas for Hong Kong SAR passports; passport-specific eligibility remains manual review.",
-      "checkedAt": "2026-10-21",
-      "reviewDueAt": "2026-11-20"
+      "evidenceLocator": "Bangladesh Hong Kong Tourist Visa; Visa Fees > Hong Kong and China numeric fee rows; Beijing Embassy and Special Branch VOA eligibility > China category and qualifying-origin conditions",
+      "evidenceExcerpt": "The Hong Kong consulate provides a tourist-visa application route and numeric Hong Kong fee rows. Bangladesh Special Branch lists conditional VOA eligibility for China but does not state whether HKSAR passport holders qualify under that category. Fee rows therefore cannot prove mandatory advance visas; passport-specific eligibility remains manual review.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "bd-mo-macao-sar-tourism-review",
@@ -2193,6 +2195,7 @@
       "visaProductName": "Confirm passport-specific Bangladesh visa requirements",
       "conditions": [
         "驻港领馆 Tourist Visa 页面确认提供港澳领区的正规旅游签申请材料，费用表也列有 Macau 签证费，但这些证据没有明确排除该特区护照的落地签或其他待遇。",
+        "孟加拉国特别分局当前 VOA 说明列出中国旅客可能符合落地签资格，但附有出发地等条件，签发由口岸移民官审查；页面没有说明澳门特区护照是否按 China 类别处理。",
         "同一驻港费用表也列有 China 有金额签证费，而驻北京使馆明确中国旅客可按条件申请落地签；这证明仅凭有金额的费用行，不能推出必须预先办签。",
         "本条因此明确为 REVIEW：需取得 Macau 特区普通护照专属的当前签证、落地签或免签要求，确认前不输出确定结论，也不补填停留天数。"
       ],
@@ -2200,12 +2203,13 @@
       "sourceIds": [
         "bd-hk-tourist-visa",
         "bd-hk-visa-fees",
-        "bd-beijing-visa-on-arrival"
+        "bd-beijing-visa-on-arrival",
+        "bd-special-branch-voa"
       ],
-      "evidenceLocator": "Bangladesh Hong Kong Tourist Visa; Visa Fees > Macau and China numeric fee rows; Beijing Visa on Arrival > eligibility item 3 (China counterexample only)",
-      "evidenceExcerpt": "The Hong Kong consulate provides a tourist-visa application route and numeric Macau fee rows. Its China row also has numeric fees, while the Beijing embassy explicitly permits qualifying Chinese visitors to use visa on arrival. Thus fee rows cannot prove mandatory advance visas for Macau SAR passports; passport-specific eligibility remains manual review.",
-      "checkedAt": "2026-10-21",
-      "reviewDueAt": "2026-11-20"
+      "evidenceLocator": "Bangladesh Hong Kong Tourist Visa; Visa Fees > Macau and China numeric fee rows; Beijing Embassy and Special Branch VOA eligibility > China category and qualifying-origin conditions",
+      "evidenceExcerpt": "The Hong Kong consulate provides a tourist-visa application route and numeric Macau fee rows. Bangladesh Special Branch lists conditional VOA eligibility for China but does not state whether Macao SAR passport holders qualify under that category. Fee rows therefore cannot prove mandatory advance visas; passport-specific eligibility remains manual review.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "mv-cn-prc-ordinary-tourism-voa",
