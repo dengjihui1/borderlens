@@ -575,6 +575,8 @@ test('埃及按中国普通、香港和澳门特区护照区分旅游路线', as
   const byType = new Map<string, PolicyFixture>(egypt.map((rule: PolicyFixture) => [rule.documentType, rule]));
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome], ['verified', 'visa_required']);
   assert.equal(byType.get('ordinary_passport')!.maxStayDays, null);
+  assert.deepEqual([byType.get('ordinary_passport')!.checkedAt, byType.get('ordinary_passport')!.reviewDueAt], ['2026-10-22', '2026-11-21']);
+  assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('USD 30') && condition.includes('USD 65')));
   assert.deepEqual([byType.get('hksar_passport')!.status, byType.get('hksar_passport')!.outcome, byType.get('hksar_passport')!.maxStayDays], ['verified', 'visa_free', 90]);
   assert.ok(byType.get('hksar_passport')!.sourceIds.includes('hk-gov-egypt-visa-free-90'));
   assert.ok(byType.get('hksar_passport')!.sourceIds.includes('hk-immd-visa-free-arrival-list'));
@@ -582,6 +584,9 @@ test('埃及按中国普通、香港和澳门特区护照区分旅游路线', as
   assert.deepEqual([byType.get('macao_sar_passport')!.status, byType.get('macao_sar_passport')!.outcome, byType.get('macao_sar_passport')!.maxStayDays], ['verified', 'visa_free', 90]);
   assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('mo-yearbook-2025-visa-treatment'));
   assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('澳门旅行证不适用')));
+  const registry = await readJson('../data/official-source-registry.json');
+  const source = registry.sources.find((item: { id: string }) => item.id === 'eg-evisa-faq-eligibility')!;
+  assert.deepEqual([source.checkedAt, source.nextReviewAt, source.status], ['2026-10-22', '2026-11-21', 'verified']);
 });
 
 test('墨西哥按中国普通、香港和澳门特区护照区分路线', async () => {

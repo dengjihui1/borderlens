@@ -1,5 +1,13 @@
 # BorderLens 规则重新核验日志
 
+## Phase 85 · 埃及中国普通护照 eVisa（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-22）
+
+直接打开埃及内政部 [Electronic Visa Portal FAQ](https://visa2egypt.gov.eg/eVisa/FAQ)，本轮页面可读且显示 Ministry of Interior 版权标识。FAQ 第 32–43 行写明外国访客一般应先取得 eVisa，并将 China 列入可在官方门户申请、经审批签发的国籍；第 60–68 行列旅游 eVisa 单次 USD 30、多次 USD 65；第 71–81 行要求护照自抵达日起至少有效 6 个月、打印 eVisa、行程，并对游客列明酒店/访问地点信息。
+
+据此仅续核 `eg-cn-prc-ordinary-tourism-evisa` 的一般 `visa_required` / Egyptian electronic visa 路线。当前 FAQ 未给中国普通护照该项的签证期限，故 `maxStayDays` 继续为 null；保留签证需获批、口岸仍有最终决定权及费用可能调整等边界，不声称电子签为唯一办理渠道。香港、澳门未出现在该 eVisa 国籍表中；这个产品列表的缺席不用于推断其完整入境待遇，也不影响它们各自独立来源支持的免签路线。
+
+来源状态及路线核验日更新至 2026-10-22，复核截止 2026-11-21。没有创建账号、启动申请、付款或提交个人信息。全库 147 条路线不变；当前有效证据 135 条、历史到期 7 条、明确证据待复核 5 条，另有 3 条个体条件待人工核验；当前结论 132 条，REVIEW 15 条。
+
 ## Phase 84 · 哥斯达黎加中国及港澳路线（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-22）
 
 哥斯达黎加 Dirección General de Migración y Extranjería 中央 [Visas 入口](https://migracion.go.cr/visas/)此前对正常 HTTPS 客户端返回 403，不能以该入口本身续期。本轮改为直接访问哥斯达黎加 Imprenta Nacional 官方公报发布的 [AJ-484-11-2025 原始 PDF](https://www.imprentanacional.go.cr/pub/2025/11/17/ALCA148_17_11_2025.pdf)，HTTP 200，SHA-256 `D349B0650B3ECA48C568F4ABBB9B5D72DB48B7545CB6245AB4EB164583AF5A8D`。检索官方公报未发现截至 2026-10-22 的后续替代版；登记本次原始发布 URL、读取日期和复核截止，旧 ICODER 镜像不再作唯一来源。

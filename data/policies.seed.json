@@ -2688,15 +2688,16 @@
       "maxStayDays": null,
       "visaProductName": "Egyptian electronic visa",
       "conditions": [
-        "埃及内政部官方电子签证门户 FAQ 的签证资格表将中国列入可在该门户申请电子签证的国家。",
-        "本轮页面没有稳定显示中国普通护照路线的具体停留期限，因此不填写天数；出发前仍需按官方申请页面确认签证有效期、费用和入境条件。"
+        "埃及内政部官方电子签证门户当前 FAQ 说明外国访客一般须先取得 eVisa，并将 China 列为可在门户申请、获批后签发电子签的国籍；签证签发及最终入境仍由埃及主管机关决定。",
+        "当前 FAQ 列旅游 eVisa 单次 USD 30、多次 USD 65；入境材料包括自抵达日起至少 6 个月有效的护照、打印的 eVisa、行程以及旅游住宿信息。费用可变，出发前以官方申请页面为准。",
+        "官方页面未稳定给出中国普通护照路线的具体许可期限，因此不填写天数；不得把 eVisa 资格表当作获批保证或唯一办理途径。"
       ],
       "status": "verified",
       "sourceIds": ["eg-evisa-faq-eligibility"],
       "evidenceLocator": "Egypt Electronic Visa Portal > FAQ > Which people need a visa? > eligible nationality table",
-      "evidenceExcerpt": "The official eligibility table lists China among the nationalities whose citizens can apply for an Egyptian e-Visa through the portal; the FAQ lists USD 30 single-entry and USD 65 multiple-entry tourism fees and requires a passport valid at least 6 months, e-Visa printout and travel itinerary.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceExcerpt": "The current Ministry of Interior FAQ says foreign visitors generally must first obtain an e-Visa and lists China among nationalities that may be issued one upon application. Tourism fees are USD 30 single-entry and USD 65 multiple-entry; arrival requirements include a passport valid at least 6 months from arrival, printed e-Visa and itinerary. The FAQ gives no stay duration for this Chinese route.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "eg-hk-hksar-tourism-review",
