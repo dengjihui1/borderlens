@@ -6,7 +6,7 @@
 
 基于孟加拉国内政部《Visa Policy 2026》、驻北京使馆旅游 VOA 指引及港澳护照签发资格证据，将港澳两条路线升级为有条件的单次 VOA，最多 30 天；口岸审查、材料、资金和主管机关批准条件均保留，不作免签或保证入境表示。规则库共 147 条路线、143 个来源、145 条当前有效证据、141 条可展示结论及 6 条 REVIEW。
 
-验证：`npm run check` 通过（93 项测试、lint、TypeScript、数据校验、生产构建）；生产 Worker 本地 HTTP smoke 通过 32 项；`git diff --check` 通过。源码提交 `04b5ce3814b8e4019912915c7a50041d192aad1c` 已同步至 Sites 源仓库并部署为仅所有者可访问的 Site v115，版本记录确认绑定该完整 SHA。GitHub `origin/main` 仍停留在 Phase 108 的 `4b673e80`；本机到 GitHub HTTPS 远端的读取因持续低速超时，尚未完成同步，本阶段不标记为 GitHub 已推送。
+验证：`npm run check` 通过（93 项测试、lint、TypeScript、数据校验、生产构建）；生产 Worker 本地 HTTP smoke 通过 32 项；`git diff --check` 通过。源码提交 `04b5ce3814b8e4019912915c7a50041d192aad1c` 已同步至 Sites 源仓库并部署为仅所有者可访问的 Site v115，版本记录确认绑定该完整 SHA。文档提交后，Phase 109 源码与文档均已推送 GitHub；`origin/main` 当前为 `afe363a2807dc5f76d770d62f37a8003b110c5e8`，远端读取已确认。
 
 ## Phase 108｜旧版演示回乡证 READY 边界修正（2026-10-22）
 
