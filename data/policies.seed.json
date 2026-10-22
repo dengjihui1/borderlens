@@ -2561,7 +2561,7 @@
       "outcome": "visa_on_arrival",
       "maxStayDays": null,
       "conditions": [
-        "约旦旅游局官方 Visas To Jordan 表将 China 列为 On-Arrival Applicable，并说明签证可在抵达时取得，费用为 40 JOD。",
+        "2026-10-22 重新读取约旦旅游局官方 Visas To Jordan 国籍表，China 列为 On-Arrival Applicable，并说明签证可在抵达时取得，费用为 40 JOD。",
         "该官方表没有给出中国普通护照的准许停留天数，因此本条不填期限；落地签签发与最终入境仍须由约旦主管机关按抵达时规则决定。",
         "约旦内政部官方页面另说明除梵蒂冈外的 Travel Pass 旅行证件受限制；本条仅适用于中国普通护照，不扩展到旅行证件或其他证件。"
       ],
@@ -2569,8 +2569,8 @@
       "sourceIds": ["jo-visitjordan-visas", "jo-moi-prior-approval"],
       "evidenceLocator": "Jordan Tourism Board > Visas To Jordan > nationality table > China",
       "evidenceExcerpt": "The official table lists China as On-Arrival Applicable and states: Visa can be obtained upon arrival, it will cost a total of 40 JOD. The table does not state the permitted stay period.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "jo-hk-hksar-tourism-review",
@@ -2582,7 +2582,7 @@
       "outcome": "visa_on_arrival",
       "maxStayDays": null,
       "conditions": [
-        "约旦旅游局官方 Visas To Jordan 表将 Hong Kong 列为 On-Arrival Applicable，并说明签证可在抵达时取得，费用为 40 JOD。",
+        "2026-10-22 重新读取约旦旅游局官方 Visas To Jordan 国籍表，Hong Kong 列为 On-Arrival Applicable，并说明签证可在抵达时取得，费用为 40 JOD。",
         "该官方表没有给出香港特区护照的准许停留天数，因此本条不填期限；落地签签发与最终入境仍须由约旦主管机关按抵达时规则决定。",
         "约旦内政部官方页面另说明除梵蒂冈外的 Travel Pass 旅行证件受限制；本条仅适用于香港特区普通护照，不扩展到香港签证身份书、旅行证件或其他证件。"
       ],
@@ -2590,8 +2590,8 @@
       "sourceIds": ["jo-visitjordan-visas", "jo-moi-prior-approval"],
       "evidenceLocator": "Jordan Tourism Board > Visas To Jordan > nationality table > Hong Kong",
       "evidenceExcerpt": "The official table lists Hong Kong as On-Arrival Applicable and states: Visa can be obtained upon arrival, it will cost a total of 40 JOD. The table does not state the permitted stay period.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "jo-mo-macao-sar-tourism-review",
@@ -2603,7 +2603,7 @@
       "outcome": "visa_on_arrival",
       "maxStayDays": null,
       "conditions": [
-        "约旦旅游局官方 Visas To Jordan 表将 Macau 列为 On-Arrival Applicable，并说明签证可在抵达时取得，费用为 40 JOD。",
+        "2026-10-22 重新读取约旦旅游局官方 Visas To Jordan 国籍表，Macau 列为 On-Arrival Applicable，并说明签证可在抵达时取得，费用为 40 JOD。",
         "该官方表没有给出澳门特区护照的准许停留天数，因此本条不填期限；落地签签发与最终入境仍须由约旦主管机关按抵达时规则决定。",
         "约旦内政部官方页面另说明除梵蒂冈外的 Travel Pass 旅行证件受限制；本条仅适用于澳门特区普通护照，不扩展到澳门旅行证、旅行证件或其他证件。"
       ],
@@ -2611,8 +2611,8 @@
       "sourceIds": ["jo-visitjordan-visas", "jo-moi-prior-approval"],
       "evidenceLocator": "Jordan Tourism Board > Visas To Jordan > nationality table > Macau",
       "evidenceExcerpt": "The official table lists Macau as On-Arrival Applicable and states: Visa can be obtained upon arrival, it will cost a total of 40 JOD. The table does not state the permitted stay period.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "tr-cn-prc-ordinary-tourism-visa-waiver",

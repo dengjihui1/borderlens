@@ -89,9 +89,9 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
   const [policies, registry] = await Promise.all([readJson('../data/policies.seed.json'), readJson('../data/official-source-registry.json')]);
   const entries = buildPolicyCatalog(policies.rules, registry.sources, now);
   assert.equal(entries.length, 147);
-  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 135);
-  assert.equal(entries.filter((entry) => entry.conclusion).length, 132);
-  assert.equal(getReviewQueue(entries).length, 15);
+  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 138);
+  assert.equal(entries.filter((entry) => entry.conclusion).length, 135);
+  assert.equal(getReviewQueue(entries).length, 12);
   for (const id of ['la-hk-hksar-tourism-evisa', 'la-mo-macao-sar-tourism-evisa']) {
     const entry = entries.find((candidate) => candidate.id === id)!;
     assert.equal(entry.conclusion, null);
@@ -105,7 +105,7 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
     assert.equal(entry.conclusion?.label, '免签路线');
     assert.match(entry.conclusion?.stay.join(' ') ?? '', /90 天/);
   }
-  assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T00:00:00Z')).filter((entry) => entry.conclusion).length, 4);
+  assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T00:00:00Z')).filter((entry) => entry.conclusion).length, 7);
 });
 
 test('分页覆盖全部记录，不重复、不丢失，错误页码不退回宽泛结果', () => {

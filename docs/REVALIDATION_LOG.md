@@ -1,5 +1,13 @@
 # BorderLens 规则重新核验日志
 
+## Phase 86 · 约旦中国及港澳普通护照（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-22）
+
+重新读取约旦旅游局官方 [Visas To Jordan](https://fr.visitjordan.com/page/4/visas-to-jordan/) 国籍表。当前页面逐项列出 China、Hong Kong、Macau，三行均为 `On-Arrival: Applicable`，程序说明可在抵达时取得签证并收取 40 JOD。对应行没有给出准许停留天数；本轮不将其他通用边境介绍或旧的香港入境处“免签/落地签”合并参考期限挪用到目的地规则。
+
+同时重读约旦内政部[受限及非受限国籍页](https://moi.gov.jo/EN/Pages/Restricted_and_Non_Restricted_Countries_Nationalities)：页面定义非受限国籍为无需预先批准，受限亚洲名单未列中国、香港或澳门；页面还明确提示各国签发的 `Travel Pass` 通常受限，梵蒂冈签发件除外。该来源仅用于交叉核对预先批准及证件范围，不单独推导落地签资格。三条既有旅游路线因此续核为普通中国护照、HKSAR 普通护照及 Macao SAR 普通护照 `visa_on_arrival`，费用条件记录为 40 JOD，`maxStayDays` 为空；不扩展到旅行证件或 Travel Pass，也不保证落地签一定获发或最终准予入境。
+
+两项来源及三条路线核验日更新至 2026-10-22，复核截止 2026-11-21。没有申请、付款或提交个人信息。来源表未声明准许停留天数，因此仍需出行前向约旦主管机关核实具体停留期限。
+
 ## Phase 85 · 埃及中国普通护照 eVisa（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-22）
 
 直接打开埃及内政部 [Electronic Visa Portal FAQ](https://visa2egypt.gov.eg/eVisa/FAQ)，本轮页面可读且显示 Ministry of Interior 版权标识。FAQ 第 32–43 行写明外国访客一般应先取得 eVisa，并将 China 列入可在官方门户申请、经审批签发的国籍；第 60–68 行列旅游 eVisa 单次 USD 30、多次 USD 65；第 71–81 行要求护照自抵达日起至少有效 6 个月、打印 eVisa、行程，并对游客列明酒店/访问地点信息。

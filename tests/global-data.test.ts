@@ -549,6 +549,7 @@ test('中东第一批保留签证产品、证件边界与人工复核状态', as
   assert.equal(jordan.length, 3);
   for (const rule of jordan) {
     assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_on_arrival', null]);
+    assert.deepEqual([rule.checkedAt, rule.reviewDueAt], ['2026-10-22', '2026-11-21']);
     assert.ok(rule.sourceIds.includes('jo-visitjordan-visas'));
     assert.ok(rule.conditions.some((condition: string) => condition.includes('40 JOD') && condition.includes('抵达')));
     assert.ok(rule.conditions.some((condition: string) => condition.includes('没有给出') && condition.includes('停留天数')));
