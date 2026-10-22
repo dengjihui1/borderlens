@@ -147,7 +147,7 @@ test('申根作为政策区域建模，当前成员范围不混入爱尔兰与�
 });
 
 test('新西兰规则区分港澳护照与中国护照的澳大利亚例外', async () => {
-  const policies = await readJson('../data/policies.seed.json');
+  const [policies, registry] = await Promise.all([readJson('../data/policies.seed.json'), readJson('../data/official-source-registry.json')]);
   const byId = new Map<string, PolicyFixture>((policies.rules as PolicyFixture[]).map((rule) => [rule.id, rule]));
   assert.deepEqual(
     [byId.get('nz-hk-hksar-tourism-visa-waiver')!.outcome, byId.get('nz-hk-hksar-tourism-visa-waiver')!.maxStayDays],
@@ -157,7 +157,16 @@ test('新西兰规则区分港澳护照与中国护照的澳大利亚例外', as
     [byId.get('nz-mo-macao-sar-tourism-visa-waiver')!.outcome, byId.get('nz-mo-macao-sar-tourism-visa-waiver')!.maxStayDays],
     ['eta_required', null],
   );
-  assert.equal(byId.get('nz-cn-prc-ordinary-tourism-exception-review')!.outcome, 'manual_review');
+  const china = byId.get('nz-cn-prc-ordinary-tourism-exception-review')!;
+  assert.equal(china.outcome, 'manual_review');
+  assert.deepEqual(china.sourceIds, ['nz-immigration-waiver', 'nz-immigration-china-australia-pilot']);
+  assert.equal(china.checkedAt, '2026-10-22');
+  assert.equal(china.reviewDueAt, '2026-11-21');
+  assert.ok(china.conditions.some((condition) => condition.includes('转机不符合条件')));
+  assert.ok(china.conditions.some((condition) => condition.includes('有效 NZeTA')));
+  const chinaPilot = registry.sources.find((source: { id: string }) => source.id === 'nz-immigration-china-australia-pilot');
+  assert.equal(chinaPilot.status, 'verified');
+  assert.match(chinaPilot.url, /immigration\.govt\.nz\/visit\/what-you-need-to-visit-new-zealand\/chinese-and-pacific-island-visitors-travelling-from-australia/);
   assert.equal(byId.get('nz-hk-hksar-tourism-visa-waiver')!.maxStayMonths, 3);
   assert.equal(byId.get('nz-mo-macao-sar-tourism-visa-waiver')!.maxStayMonths, 3);
 });
@@ -725,7 +734,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 134);
+  assert.equal(registry.sources.length, 135);
   assert.equal(policies.rules.length, 147);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 144);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);

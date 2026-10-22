@@ -177,17 +177,20 @@
       "maxStayDays": null,
       "conditions": [
         "中国普通护照不能仅按国籍直接判定。",
-        "只有从澳大利亚前往新西兰且持符合条件的澳大利亚签证时，才可能进入该页的签证豁免分支。",
-        "其他情况必须改查适用访客签证。"
+        "中国游客试点分支须直接从澳大利亚前往新西兰；旅客必须已入境澳大利亚并从澳大利亚机场乘机，途经澳大利亚转机不符合条件。",
+        "须持该官方页面列出的适用澳大利亚签证，并在飞往新西兰值机时仍有效；还须持有效 NZeTA。系统不判断个人澳大利亚签证类别、有效期或 NZeTA 状态。",
+        "移民局当前称 2025-11-03 开始的 12 个月试点在评估期间可继续使用至另行通知；获准入境后边境签发访客签证，单次可停留最多 3 个月。出发前应复核试点状态与完整条件。",
+        "不满足上述条件时不得使用该试点免签分支，应核对适用的新西兰访客签证要求。"
       ],
       "status": "verified",
       "sourceIds": [
-        "nz-immigration-waiver"
+        "nz-immigration-waiver",
+        "nz-immigration-china-australia-pilot"
       ],
-      "evidenceLocator": "Visa Waiver Visitor Visa overview and eligibility > Chinese visitors travelling from Australia",
-      "evidenceExcerpt": "To apply you must be travelling on a passport from a visa waiver country or territory, or travelling from Australia on a passport from China and with an eligible Australian visa.",
-      "checkedAt": "2026-10-21",
-      "reviewDueAt": "2026-11-20"
+      "evidenceLocator": "Chinese and Pacific Island visitors travelling from Australia > continuation notice; Who can apply; direct travel; Eligible Australian visas; Apply for an NZeTA; Visa Waiver Visitor Visa > Chinese visitors from Australia",
+      "evidenceExcerpt": "Immigration New Zealand says the 12-month pilot that began 2025-11-03 continues until further notice while it is evaluated. A Chinese-passport visitor must travel directly from Australia after entering Australia, fly from an Australian airport, hold an eligible Australian visa valid at check-in, and hold a valid NZeTA. Transit through Australia does not qualify. If entry is granted, a visitor visa is issued at the border; an NZeTA permits stays of up to 3 months at a time.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "schengen-cn-prc-ordinary-short-stay",
