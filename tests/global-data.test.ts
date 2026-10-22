@@ -312,7 +312,7 @@ test('印度尼西亚区分中国普通护照 B1 落地签与港澳 A1 免签', 
   }
 });
 
-test('越南电子签产品资格与第325号决议的条件免签不自动合并为入境结论', async () => {
+test('越南港澳普通护照按现行入境法要求签证，e-Visa资格与区域免签条件单独注明', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const vietnam = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'vn');
   assert.equal(vietnam.length, 3);
@@ -326,11 +326,14 @@ test('越南电子签产品资格与第325号决议的条件免签不自动合�
   assert.ok(chinesePassport.sourceIds.includes('vn-icd-resolution-325'));
   for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
     const rule = byType.get(documentType)!;
-    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'manual_review', null]);
-    assert.ok(rule.conditions.some((condition: string) => condition.includes('不单独证明完整入境要求')));
+    assert.deepEqual([rule.status, rule.outcome, rule.maxStayDays], ['verified', 'visa_required', null]);
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('62/VBHN-VPQH') && condition.includes('第 20 条')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('e-Visa 国籍名单')));
+    assert.ok(rule.conditions.some((condition: string) => condition.includes('富国岛区域免签') && condition.includes('30 天')));
     assert.ok(rule.conditions.some((condition: string) => condition.includes('明确排除')));
     assert.ok(rule.sourceIds.includes('vn-immigration-evisa-nationality-list'));
     assert.ok(rule.sourceIds.includes('vn-gov-visa-exemption-list'));
+    assert.ok(rule.sourceIds.includes('vn-gov-consolidated-immigration-law-2026'));
   }
   assert.ok(byType.get('macao_sar_passport')!.sourceIds.includes('mo-dsi-evisa-list'));
 
@@ -749,7 +752,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 137);
+  assert.equal(registry.sources.length, 138);
   assert.equal(policies.rules.length, 147);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 144);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);

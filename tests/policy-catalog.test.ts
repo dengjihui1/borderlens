@@ -90,8 +90,8 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
   const entries = buildPolicyCatalog(policies.rules, registry.sources, now);
   assert.equal(entries.length, 147);
   assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 143);
-  assert.equal(entries.filter((entry) => entry.conclusion).length, 137);
-  assert.equal(getReviewQueue(entries).length, 10);
+  assert.equal(entries.filter((entry) => entry.conclusion).length, 139);
+  assert.equal(getReviewQueue(entries).length, 8);
   for (const id of ['la-hk-hksar-tourism-evisa', 'la-mo-macao-sar-tourism-evisa']) {
     const entry = entries.find((candidate) => candidate.id === id)!;
     assert.equal(entry.evidenceCurrent, true);
@@ -99,7 +99,7 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
     assert.match(entry.conclusion?.product ?? '', /T-B3\).*eVisa/);
     assert.ok(entry.conclusion?.stay.some((line) => line.includes('30 天')));
   }
-  assert.equal(entries.filter((entry) => entry.reason === 'conditional_review').length, 6);
+  assert.equal(entries.filter((entry) => entry.reason === 'conditional_review').length, 4);
   assert.equal(entries.find((entry) => entry.id === 'cn-hk-home-return-permit-route')!.conclusion, null);
   assert.equal(entries.find((entry) => entry.id === 'bd-hk-hksar-tourism-review')!.evidence, null);
   for (const id of ['ec-hk-hksar-tourism-review', 'ec-mo-macao-sar-tourism-review']) {
@@ -107,7 +107,7 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
     assert.equal(entry.conclusion?.label, '免签路线');
     assert.match(entry.conclusion?.stay.join(' ') ?? '', /90 天/);
   }
-  assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T00:00:00Z')).filter((entry) => entry.conclusion).length, 9);
+  assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T00:00:00Z')).filter((entry) => entry.conclusion).length, 11);
 });
 
 test('分页覆盖全部记录，不重复、不丢失，错误页码不退回宽泛结果', () => {

@@ -1239,23 +1239,24 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_required",
       "maxStayDays": null,
       "conditions": [
-        "越南移民局官方 e-Visa 国籍名单的 CHN / China 行明确包含 Hong Kong SAR passport holders，并排除 Chinese e-passport holders；该名单证明香港特区普通护照可申请 e-Visa，不单独证明完整入境要求。",
-        "越南政府第 325/NQ-CP 号决议的中国团体旅游免签明确排除香港特区护照；越南官方免签名单未提供足以确定本证件全部旅游入境待遇的专属结论，因此保留 REVIEW。",
-        "e-Visa 最长有效期不直接换算为准许停留天数；申请条件、指定口岸和最终入境决定仍须核实。"
+        "越南现行《外国人入境、出境、过境和居留法》合并文本 62/VBHN-VPQH（2026）第 20 条规定，外国人入境须持护照/国际旅行证件和签证，法律规定的免签情形除外。越南外交部按护照类型公布的免签表没有 HKSAR 普通护照免签项；中越协定相关豁免限外交、公务及公务用途普通护照。第 325/NQ-CP 号决议的中国团体免签试点也明确排除 HKSAR 护照。",
+        "越南移民局官方 e-Visa 国籍名单 CHN / China 行明确包含 Hong Kong SAR passport holders、排除 Chinese e-passport holders；因此可申请 e-Visa。签证有效期不等于准许停留天数，本规则不填未由当前证据确认的停留期。",
+        "例外：所有外国护照可适用的富国岛区域免签条件可能覆盖特定行程（停留不超过 30 天，含经其他越南国际口岸中转前往富国岛的情形）；本规则不判断具体行程是否符合。电子签持有人须经政府指定国际口岸入出境。"
       ],
       "status": "verified",
       "sourceIds": [
         "vn-immigration-evisa",
         "vn-immigration-evisa-api",
         "vn-immigration-evisa-nationality-list",
+        "vn-gov-consolidated-immigration-law-2026",
         "vn-gov-resolution-325",
         "vn-gov-visa-exemption-list"
       ],
-      "evidenceLocator": "Vietnam Immigration Department e-Visa nationality list, p. 3, CHN row; Government Resolution 325/NQ-CP and implementation notice; Vietnam MOFA current visa-exemption list",
-      "evidenceExcerpt": "The Immigration Department list says the CHN row includes Hong Kong SAR passport holders and excludes Chinese e-passport holders, establishing e-Visa application eligibility. Resolution 325/NQ-CP expressly excludes HKSAR passports from its narrow PRC group-tour waiver. The current MOFA exemption list does not provide a complete HKSAR-passport tourism determination, so no overall visa-required/free conclusion is asserted.",
+      "evidenceLocator": "Integrated Document 62/VBHN-VPQH (2026), Article 20(1)(a); Vietnam MOFA visa-exemption table, China passport-type row and China bilateral arrangement; Resolution 325/NQ-CP and implementation notice; Immigration Department e-Visa nationality list, p. 3, CHN row",
+      "evidenceExcerpt": "Article 20 establishes the general visa requirement except for statutory exemptions. The MOFA passport-type table gives China visa exemption for diplomatic, official/service/special, and ordinary passports for official purpose, but not ordinary tourism; Resolution 325's narrow group-tour exemption excludes HKSAR passports. The Immigration Department e-Visa list includes HKSAR passport holders in the CHN row, establishing an application route. No stay duration is inferred; the Phu Quoc regional exception remains conditional on itinerary.",
       "checkedAt": "2026-10-22",
       "reviewDueAt": "2026-11-21"
     },
@@ -1266,24 +1267,25 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
+      "outcome": "visa_required",
       "maxStayDays": null,
       "conditions": [
-        "越南移民局官方 e-Visa 国籍名单的 CHN / China 行明确包含 Macao SAR passport holders，并排除 Chinese e-passport holders；澳门特区政府身份证明局也将越南列为澳门特区护照可申请电子/网上签证的目的地。以上只证明申请路径，不单独证明完整入境要求。",
-        "越南政府第 325/NQ-CP 号决议的中国团体旅游免签明确排除澳门特区护照；越南官方免签名单未提供足以确定本证件全部旅游入境待遇的专属结论，因此保留 REVIEW。",
-        "e-Visa 最长有效期不直接换算为准许停留天数；申请条件、指定口岸和最终入境决定仍须核实。"
+        "越南现行《外国人入境、出境、过境和居留法》合并文本 62/VBHN-VPQH（2026）第 20 条规定，外国人入境须持护照/国际旅行证件和签证，法律规定的免签情形除外。越南外交部按护照类型公布的免签表没有澳门特区普通护照免签项；中越协定相关豁免限外交、公务及公务用途普通护照。第 325/NQ-CP 号决议的中国团体免签试点也明确排除澳门特区护照。",
+        "越南移民局官方 e-Visa 国籍名单 CHN / China 行明确包含 Macao SAR passport holders、排除 Chinese e-passport holders；澳门特区政府身份证明局也将越南列为澳门特区护照可申请电子/网上签证的目的地。签证有效期不等于准许停留天数，本规则不填未由当前证据确认的停留期。",
+        "例外：所有外国护照可适用的富国岛区域免签条件可能覆盖特定行程（停留不超过 30 天，含经其他越南国际口岸中转前往富国岛的情形）；本规则不判断具体行程是否符合。电子签持有人须经政府指定国际口岸入出境。"
       ],
       "status": "verified",
       "sourceIds": [
         "vn-immigration-evisa",
         "vn-immigration-evisa-api",
         "vn-immigration-evisa-nationality-list",
+        "vn-gov-consolidated-immigration-law-2026",
         "vn-gov-resolution-325",
         "vn-gov-visa-exemption-list",
         "mo-dsi-evisa-list"
       ],
-      "evidenceLocator": "Vietnam Immigration Department e-Visa nationality list, p. 3, CHN row; Macao SAR Identification Services Bureau e-visa destination list; Government Resolution 325/NQ-CP; Vietnam MOFA current visa-exemption list",
-      "evidenceExcerpt": "The Immigration Department list includes Macao SAR passport holders in the CHN row and excludes Chinese e-passport holders. Macao DSI's official e-visa destination list includes Vietnam. Resolution 325/NQ-CP expressly excludes Macao SAR passports from its narrow PRC group-tour waiver. These product and exception records do not by themselves determine the passport's complete tourism entry treatment.",
+      "evidenceLocator": "Integrated Document 62/VBHN-VPQH (2026), Article 20(1)(a); Vietnam MOFA visa-exemption table, China passport-type row and China bilateral arrangement; Resolution 325/NQ-CP and implementation notice; Immigration Department e-Visa nationality list, p. 3, CHN row; Macao DSI e-visa destination list",
+      "evidenceExcerpt": "Article 20 establishes the general visa requirement except for statutory exemptions. The MOFA passport-type table gives China visa exemption for diplomatic, official/service/special, and ordinary passports for official purpose, but not ordinary tourism; Resolution 325's narrow group-tour exemption excludes Macao SAR passports. The Immigration Department e-Visa list includes Macao SAR passport holders in the CHN row, establishing an application route, also listed by Macao DSI. No stay duration is inferred; the Phu Quoc regional exception remains conditional on itinerary.",
       "checkedAt": "2026-10-22",
       "reviewDueAt": "2026-11-21"
     },
