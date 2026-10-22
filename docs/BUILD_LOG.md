@@ -2,6 +2,10 @@
 
 这份日志记录从点子到可运行产品的关键决策，重点不是手写代码，而是如何指挥 Codex 把高风险 Agent 做得可靠。
 
+## Phase 96｜孟加拉国官方 MRV 门户复核（2026-10-22）
+
+直接读取孟加拉国官方 Online MRV Portal 的当前说明及费用表，确认它提供 NEW VISA、EXTENSION、NVR、ON ARRIVAL VISA 等申请表，并分别列出 Hong Kong 与 Macau 的费用。门户申请类别/费用记录不说明护照专属入境待遇，也没有解释 Special Branch VOA 页面中的 China 是否包括 HKSAR/Macao。两条路线继续 REVIEW。验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建），生产 Worker `npm run smoke -- http://127.0.0.1:4179` 31 项检查通过，`git diff --check` 通过；队列仍为 147 条路线、135 个来源、143 条当前有效证据、137 条当前结论、10 条 REVIEW。
+
 ## Phase 95｜阿联酋—澳门官方资料冲突续核（2026-10-22）
 
 直接重读阿联酋外交部当前澳门国籍卡、澳门政府 2019 年正式通知公告及《澳门年鉴 2025》相关页。新读到的 UAE 卡片仍称 Visa Required，澳门官方记录仍列澳门特区护照 30 天免签；出境页面的 UAE 公民赴澳门信息不用于证明澳门护照入境待遇。没有找到能消除冲突的 UAE 当前护照专属说明，故保持 REVIEW 和空停留期限，只更新来源/规则核验日期。验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建），`npm run smoke` 31 项生产 Worker HTTP 检查通过，`git diff --check` 通过；队列仍为 147 条路线、135 个来源、143 条当前证据、137 条当前结论、10 条 REVIEW。

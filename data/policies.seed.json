@@ -2176,6 +2176,7 @@
       "visaProductName": "Confirm passport-specific Bangladesh visa requirements",
       "conditions": [
         "驻港领馆 Tourist Visa 页面确认提供港澳领区的正规旅游签申请材料，费用表也列有 Hong Kong 签证费，但这些证据没有明确排除该特区护照的落地签或其他待遇。",
+        "孟加拉国官方 Online MRV 门户当前同时提供 NEW VISA 和 ON ARRIVAL VISA 表格，并分别列出 Hong Kong 与 Macau 的申请费；表格/费用入口本身不判定特定护照是否符合 VOA 或必须出发前办签。",
         "孟加拉国特别分局当前 VOA 说明列出中国旅客可能符合落地签资格，但附有出发地等条件，签发由口岸移民官审查；页面没有说明香港特区护照是否按 China 类别处理。",
         "孟加拉国驻巴黎使馆援引 Visa Policy 2026 的当前 VOA 指引也将 China 列入适用国籍，但未分别列出香港特区或澳门特区护照，也未说明是否包含于 China 类别；该页面不能解决证件专属范围。",
         "同一驻港费用表也列有 China 有金额签证费，而驻北京使馆明确中国旅客可按条件申请落地签；这证明仅凭有金额的费用行，不能推出必须预先办签。",
@@ -2185,12 +2186,13 @@
       "sourceIds": [
         "bd-hk-tourist-visa",
         "bd-hk-visa-fees",
+        "bd-online-mrv",
         "bd-paris-voa-policy-2026",
         "bd-beijing-visa-on-arrival",
         "bd-special-branch-voa"
       ],
-      "evidenceLocator": "Bangladesh Hong Kong Tourist Visa; Visa Fees > Hong Kong and China numeric fee rows; Paris Embassy Visa Policy 2026 VOA guidance > named China category; Beijing Embassy and Special Branch VOA eligibility > China category and qualifying-origin conditions",
-      "evidenceExcerpt": "The Hong Kong consulate provides a tourist-visa application route and numeric Hong Kong fee rows. The Paris Embassy's current 2026 VOA guidance names China but does not separately identify HKSAR or explain whether it falls under China. Bangladesh Special Branch likewise does not state whether HKSAR passport holders qualify. Fee rows cannot prove mandatory advance visas; passport-specific eligibility remains manual review.",
+      "evidenceLocator": "Bangladesh Online MRV Portal > What you need? (NEW VISA/OAV forms and mission-submission process); current fee table > Hong Kong; Hong Kong Consulate Tourist Visa and Visa Fees; Paris Embassy Visa Policy 2026 VOA guidance > named China category; Special Branch VOA eligibility > China category and qualifying-origin conditions",
+      "evidenceExcerpt": "The current official MRV portal offers both new-visa and on-arrival-visa forms and separately lists Hong Kong application fees, but this does not determine passport-specific eligibility. The Paris Embassy's current 2026 VOA guidance names China but does not separately identify HKSAR or explain whether it falls under China. Bangladesh Special Branch likewise does not state whether HKSAR passport holders qualify; fee and form routes cannot establish mandatory advance visas.",
       "checkedAt": "2026-10-22",
       "reviewDueAt": "2026-11-21"
     },
@@ -2206,6 +2208,7 @@
       "visaProductName": "Confirm passport-specific Bangladesh visa requirements",
       "conditions": [
         "驻港领馆 Tourist Visa 页面确认提供港澳领区的正规旅游签申请材料，费用表也列有 Macau 签证费，但这些证据没有明确排除该特区护照的落地签或其他待遇。",
+        "孟加拉国官方 Online MRV 门户当前同时提供 NEW VISA 和 ON ARRIVAL VISA 表格，并分别列出 Hong Kong 与 Macau 的申请费；表格/费用入口本身不判定特定护照是否符合 VOA 或必须出发前办签。",
         "孟加拉国特别分局当前 VOA 说明列出中国旅客可能符合落地签资格，但附有出发地等条件，签发由口岸移民官审查；页面没有说明澳门特区护照是否按 China 类别处理。",
         "孟加拉国驻巴黎使馆援引 Visa Policy 2026 的当前 VOA 指引也将 China 列入适用国籍，但未分别列出香港特区或澳门特区护照，也未说明是否包含于 China 类别；该页面不能解决证件专属范围。",
         "同一驻港费用表也列有 China 有金额签证费，而驻北京使馆明确中国旅客可按条件申请落地签；这证明仅凭有金额的费用行，不能推出必须预先办签。",
@@ -2215,12 +2218,13 @@
       "sourceIds": [
         "bd-hk-tourist-visa",
         "bd-hk-visa-fees",
+        "bd-online-mrv",
         "bd-paris-voa-policy-2026",
         "bd-beijing-visa-on-arrival",
         "bd-special-branch-voa"
       ],
-      "evidenceLocator": "Bangladesh Hong Kong Tourist Visa; Visa Fees > Macau and China numeric fee rows; Paris Embassy Visa Policy 2026 VOA guidance > named China category; Beijing Embassy and Special Branch VOA eligibility > China category and qualifying-origin conditions",
-      "evidenceExcerpt": "The Hong Kong consulate provides a tourist-visa application route and numeric Macau fee rows. The Paris Embassy's current 2026 VOA guidance names China but does not separately identify Macao SAR or explain whether it falls under China. Bangladesh Special Branch likewise does not state whether Macao SAR passport holders qualify. Fee rows cannot prove mandatory advance visas; passport-specific eligibility remains manual review.",
+      "evidenceLocator": "Bangladesh Online MRV Portal > What you need? (NEW VISA/OAV forms and mission-submission process); current fee table > Macau; Hong Kong Consulate Tourist Visa and Visa Fees; Paris Embassy Visa Policy 2026 VOA guidance > named China category; Special Branch VOA eligibility > China category and qualifying-origin conditions",
+      "evidenceExcerpt": "The current official MRV portal offers both new-visa and on-arrival-visa forms and separately lists Macau application fees, but this does not determine passport-specific eligibility. The Paris Embassy's current 2026 VOA guidance names China but does not separately identify Macao SAR or explain whether it falls under China. Bangladesh Special Branch likewise does not state whether Macao SAR passport holders qualify; fee and form routes cannot establish mandatory advance visas.",
       "checkedAt": "2026-10-22",
       "reviewDueAt": "2026-11-21"
     },

@@ -1,5 +1,11 @@
 # BorderLens 规则重新核验日志
 
+## Phase 96 · 孟加拉国官方 MRV 门户与港澳护照边界（2026-10-22）
+
+直接打开孟加拉国[Online MRV Portal](https://visa.gov.bd/)现行页面。门户说明可提交 NEW VISA、EXTENSION、NVR 和 ON ARRIVAL VISA 表单，并须打印申请后向签证办公室/驻外使领馆提交；当页费用表分列 Hong Kong（单次/再入境/多次 USD 21/21/30）和 Macau（HKD 100/177/350）。这证明门户具有申请表类别和地区分开的费用记录，但并不说明任何具体护照是否免签、符合落地签，或必须预先办理签证。孟加拉国警察特别分局当前 VOA 页面仍只把 China 列入特定出发地条件分支，并由口岸移民官审核；未明确 HKSAR/Macao 是否属于 China。
+
+将门户来源复核日期更新至 2026-10-22，并将其作为两条 REVIEW 路线的辅助证据。香港、澳门仍为 `draft / manual_review`，不填停留天数；不从签证费行或通用 OAV 表单推断签证要求。147 条路线、135 个来源、143 条当前有效证据、137 条当前结论及 10 条 REVIEW 均不变。
+
 ## Phase 95 · 阿联酋—澳门官方资料冲突续核（2026-10-22）
 
 直接重读阿联酋外交部[非公民签证豁免国籍卡](https://www.mofa.gov.ae/en/visa-exemptions-for-non-citizen/)：当前渲染内容将 “Macao Special Administrative Region of the Peoples Republic of China” 标为 `Visa Required`；香港卡片单独标为 `Visa Free`。未将外交部[按目的地出境信息](https://www.mofa.gov.ae/en/travel-updates?code=mac)中“Tourism: 30 days”误作澳门护照入境 UAE 的证据，该页面是 UAE 公民前往澳门的要求。

@@ -520,10 +520,14 @@ test('孟加拉国中国普通护照落地签有直接证据，港澳费用行�
     assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('China') && condition.includes('不能推出必须预先办签')));
     assert.ok(byType.get(documentType)!.sourceIds.includes('bd-hk-visa-fees'));
+    assert.ok(byType.get(documentType)!.sourceIds.includes('bd-online-mrv'));
     assert.ok(byType.get(documentType)!.sourceIds.includes('bd-special-branch-voa'));
     assert.ok(byType.get(documentType)!.sourceIds.includes('bd-paris-voa-policy-2026'));
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('Visa Policy 2026') && condition.includes('未分别列出')));
   }
+  const mrv = (await readJson('../data/official-source-registry.json')).sources.find((source: { id: string }) => source.id === 'bd-online-mrv');
+  assert.deepEqual([mrv.checkedAt, mrv.nextReviewAt], ['2026-10-22', '2026-11-21']);
+  assert.match(mrv.notes, /NEW VISA, EXTENSION, NVR and ON ARRIVAL VISA/);
   assert.ok(byType.get('hksar_passport')!.evidenceExcerpt.includes('Hong Kong'));
   assert.ok(byType.get('macao_sar_passport')!.evidenceExcerpt.includes('Macau'));
 });
