@@ -6,7 +6,7 @@
 
 复核越南新颁布的 325/NQ-CP 团体旅游免签决议，并重新查看移民局 e-Visa 国籍 PDF、越南外交部免签清单及澳门 DSI 电子签目的地清单。决议只允许符合人数、旅行社、庆和省、直飞金兰、同一口岸往返和 30 天期限的中国普通护照团体免签，明确排除港澳特区护照；系统不自动判断个人是否满足全部条件。三条越南路线均保留当前证据与 `manual_review` 结论，原 90 天字段留空，不把 e-Visa 有效期上限误写成准许停留期。更新来源注册、查询覆盖说明、规则表、交付计划、README 和回归测试。
 
-全库保持 147 条路线、131 个官方/国际来源；当前证据 141 条，其中 6 条 `manual_review`，1 条历史到期、5 条证据问题；查询为 135 条当前结论、12 条 REVIEW。验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建）；生产 Worker 31 项 HTTP smoke 全部通过；`git diff --check` 通过。GitHub/Sites 推送与私有部署结果记录在本节后续追加。
+全库保持 147 条路线、131 个官方/国际来源；当前证据 141 条，其中 6 条 `manual_review`，1 条历史到期、5 条证据问题；查询为 135 条当前结论、12 条 REVIEW。验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建）；生产 Worker 31 项 HTTP smoke 全部通过；`git diff --check` 通过。政策提交 `8332280dfeb4023c071b01beaf5371cccd106514` 已推送 GitHub `main` 与 Sites 源分支，并成功部署为 `appgver_0e74a6c38c148191a496dafc7592c74f`（部署 ID `appgdep_6ad97208a51881918d2473c766d5bd48`）。站点保持 custom owner-only 访问，外部访客为 0；随后本日志回执更新也经过完整发布链同步。
 
 ## Phase 85｜埃及中国普通护照 eVisa 路线续核（2026-10-22）
 
