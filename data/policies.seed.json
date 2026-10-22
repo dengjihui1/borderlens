@@ -1553,23 +1553,25 @@
       "documentType": "hksar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
-      "visaProductName": "Confirm passport-specific Lao visa requirements",
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Tourist Visa (T-B3) eVisa",
       "conditions": [
-        "老挝外交部 eVisa 资格名单包含 Hongkong SAR, China，但资格名单只能证明可申请该产品。",
-        "eVisa 条款只列普通护照及该产品的期限、材料和口岸条件，不能单独证明 HKSAR 护照必须或可以通过该产品入境。",
-        "目前没有足够的老挝主管机关证据确认 HKSAR 普通护照的整体旅游入境要求；保持 REVIEW，不推断免签、落地签或必须预先办签。"
+        "老挝外交部 eVisa 资格名单明确列出 Hongkong SAR, China；条款规定该旅游 eVisa 仅适用于普通护照，因此适用于本条 HKSAR 普通护照路线。",
+        "老挝外交部免签总表中的香港 14 天单方豁免明确限定外交及公务护照；不覆盖普通 HKSAR 护照。",
+        "旅游 T-B3 eVisa 获批后可停留 30 天，批准信自签发起 60 天有效；护照自抵达日起至少有效 6 个月、至少 1 页空白页，且须在 9 个指定口岸之一入境并携带打印批准信。",
+        "本条确认 eVisa 办理路径，不声称其为唯一签证渠道，也不保证获签或最终入境；边检机关保留最终决定权。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
         "la-evisa-eligibility",
-        "la-evisa-terms"
+        "la-evisa-terms",
+        "la-mofa-visa-exemption-list"
       ],
-      "evidenceLocator": "Lao eVisa eligibility list > Hongkong SAR, China; terms IV, VI, VIII and IX; neither source states HKSAR passport's overall entry requirement",
-      "evidenceExcerpt": "The official eligibility list includes Hongkong SAR, China, while the terms describe the ordinary-passport eVisa product. These sources do not establish whether an HKSAR passport holder must or may use this product as the route for entry; keep the passport-specific conclusion in REVIEW.",
-      "checkedAt": "2026-10-21",
-      "reviewDueAt": "2026-11-20"
+      "evidenceLocator": "Lao eVisa eligibility list > Hongkong SAR, China; terms IV, VI, VIII and IX; MOFA exemption list > Hong Kong (China), diplomatic and service passports only",
+      "evidenceExcerpt": "The Lao MOFA eVisa list includes Hongkong SAR, China and its terms limit the T-B3 eVisa to ordinary passports. The separate MOFA exemption list limits Hong Kong's 14-day exemption to diplomatic and service passports. The ordinary HKSAR passport route is therefore recorded as the 30-day T-B3 eVisa path.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "la-mo-macao-sar-tourism-evisa",
@@ -1578,23 +1580,25 @@
       "documentType": "macao_sar_passport",
       "purpose": "tourism",
       "borderMode": "any",
-      "outcome": "manual_review",
-      "maxStayDays": null,
-      "visaProductName": "Confirm passport-specific Lao visa requirements",
+      "outcome": "visa_required",
+      "maxStayDays": 30,
+      "visaProductName": "Tourist Visa (T-B3) eVisa",
       "conditions": [
-        "老挝外交部 eVisa 资格名单包含 Macao SAR, China，但资格名单只能证明可申请该产品。",
-        "eVisa 条款只列普通护照及该产品的期限、材料和口岸条件，不能单独证明 Macao SAR 护照必须或可以通过该产品入境。",
-        "目前没有足够的老挝主管机关证据确认 Macao SAR 普通护照的整体旅游入境要求；保持 REVIEW，不推断免签、落地签或必须预先办签。"
+        "老挝外交部 eVisa 资格名单明确列出 Macao SAR, China；条款规定该旅游 eVisa 仅适用于普通护照，因此适用于本条澳门特区普通护照路线。",
+        "老挝外交部完整免签总表未列 Macao SAR 护照豁免；与 eVisa 资格名单及普通护照限制共同核对后，记录明确的普通护照 eVisa 路径。",
+        "旅游 T-B3 eVisa 获批后可停留 30 天，批准信自签发起 60 天有效；护照自抵达日起至少有效 6 个月、至少 1 页空白页，且须在 9 个指定口岸之一入境并携带打印批准信。",
+        "本条确认 eVisa 办理路径，不声称其为唯一签证渠道，也不保证获签或最终入境；边检机关保留最终决定权。"
       ],
-      "status": "draft",
+      "status": "verified",
       "sourceIds": [
         "la-evisa-eligibility",
-        "la-evisa-terms"
+        "la-evisa-terms",
+        "la-mofa-visa-exemption-list"
       ],
-      "evidenceLocator": "Lao eVisa eligibility list > Macao SAR, China; terms IV, VI, VIII and IX; neither source states Macao SAR passport's overall entry requirement",
-      "evidenceExcerpt": "The official eligibility list includes Macao SAR, China, while the terms describe the ordinary-passport eVisa product. These sources do not establish whether a Macao SAR passport holder must or may use this product as the route for entry; keep the passport-specific conclusion in REVIEW.",
-      "checkedAt": "2026-10-21",
-      "reviewDueAt": "2026-11-20"
+      "evidenceLocator": "Lao eVisa eligibility list > Macao SAR, China; terms IV, VI, VIII and IX; MOFA exemption list > complete visa-exemption categories",
+      "evidenceExcerpt": "The Lao MOFA eVisa list includes Macao SAR, China and its terms limit the T-B3 eVisa to ordinary passports. Macao SAR is not included in the MOFA visa-exemption list. The ordinary Macao SAR passport route is therefore recorded as the 30-day T-B3 eVisa path.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "mm-cn-prc-ordinary-tourism-voa",

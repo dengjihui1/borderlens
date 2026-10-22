@@ -1,5 +1,11 @@
 # BorderLens 规则重新核验日志
 
+## Phase 89 · 老挝港澳特区普通护照 eVisa 路线确认（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-22）
+
+复核老挝两条证据待补路线。老挝外交部当前 eVisa 资格页分别列出 Hongkong SAR, China 与 Macao SAR, China；其条款明确该产品只适用于普通护照，旅游 T-B3 获批后停留 30 天、批准信有效 60 天，护照至少剩余 6 个月有效期并留至少 1 页空白页，且须从 9 个指定口岸之一入境并携带打印件。外交部签证豁免总表将香港 14 天单方豁免限定为外交及公务护照，不涵盖普通 HKSAR 护照；该完整表未列澳门特区普通护照豁免。
+
+两条路线现记录为 `verified / visa_required`，指向明确的 T-B3 eVisa 路径，`maxStayDays` 设为 30。条件明确 eVisa 不是唯一渠道，且不保证签发或入境；不把签证有效期误写为停留期限。新增外交部豁免总表来源和中港澳规则回归断言。来源页当前读取分别见 [eVisa Eligible Applicants](https://laoevisa.gov.la/article/Who%20can%20Apply%20for%20Lao%20eVisa)、[Terms and Conditions](https://laoevisa.gov.la/term) 与[外交部免签总表](https://www.mofa.gov.la/gweb/gweb/backend/web/index.php?file=_J372876QbPE3GhiLGXCOH%2F69b314431b38bc64d10fc927ad4127cd.pdf&r=site%2Fdownloadfile)。
+
 ## Phase 88 · 孟加拉国港澳普通护照证据边界（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-22）
 
 从复核队列继续检查孟加拉国—香港及澳门特区普通护照旅游路线。读取孟加拉国警察特别分局当前 [Visa on Arrival](https://voa.specialbranch.gov.bd/public/voa-info.html) 页面：列明中国旅客在满足来源地等条件时可能获得 VOA，停留最多 30 天、单次入境，并由口岸移民官审核；页面没有说明 HKSAR 或 Macao SAR 护照是否属于该 China 类别。驻港领馆当前 [Tourist Visa](https://hongkong.mofa.gov.bd/pages/static-pages/6952668735ce18e1c05a9d33) 与 [Visa Fees](https://hongkong.mofa.gov.bd/pages/static-pages/6952667c35ce18e1c05a97fc) 可证明港澳领区存在申请渠道及费用记录，但收费行不能排除条件性 VOA，也不能证明必须提前申请。
