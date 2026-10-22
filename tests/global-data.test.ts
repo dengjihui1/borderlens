@@ -533,7 +533,9 @@ test('孟加拉国中国普通护照落地签有直接证据，港澳费用行�
     assert.ok(byType.get(documentType)!.sourceIds.includes('bd-special-branch-voa'));
     assert.ok(byType.get(documentType)!.sourceIds.includes('bd-paris-voa-policy-2026'));
     assert.ok(byType.get(documentType)!.sourceIds.includes('bd-moha-visa-policy-2026'));
+    assert.ok(byType.get(documentType)!.sourceIds.includes('bd-moha-visa-waiver-agreements-2026-08'));
     assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('内政部') && condition.includes('未说明') && condition.includes('China')));
+    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('双边免签协议清单') && condition.includes('不能确定') && condition.includes('普通护照待遇')));
   }
   const mrv = (await readJson('../data/official-source-registry.json')).sources.find((source: { id: string }) => source.id === 'bd-online-mrv');
   assert.deepEqual([mrv.checkedAt, mrv.nextReviewAt], ['2026-10-22', '2026-11-21']);
@@ -543,6 +545,10 @@ test('孟加拉国中国普通护照落地签有直接证据，港澳费用行�
   const policy = (await readJson('../data/official-source-registry.json')).sources.find((source: { id: string }) => source.id === 'bd-moha-visa-policy-2026');
   assert.deepEqual([policy.status, policy.checkedAt, policy.nextReviewAt], ['verified', '2026-10-22', '2026-11-21']);
   assert.match(policy.notes, /August 2026.*immediate effect/);
+  const waiverList = (await readJson('../data/official-source-registry.json')).sources.find((source: { id: string }) => source.id === 'bd-moha-visa-waiver-agreements-2026-08');
+  assert.deepEqual([waiverList.status, waiverList.checkedAt, waiverList.nextReviewAt], ['verified', '2026-10-22', '2026-11-21']);
+  assert.ok(waiverList.notes.includes('bilateral-agreement list'));
+  assert.ok(waiverList.notes.includes('do not determine HKSAR/Macao ordinary-passport entry treatment'));
 });
 
 test('马尔代夫三类护照均为落地签并保留 IMUGA 申报', async () => {
@@ -757,7 +763,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 139);
+  assert.equal(registry.sources.length, 140);
   assert.equal(policies.rules.length, 147);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 144);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);

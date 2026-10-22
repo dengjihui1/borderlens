@@ -2184,6 +2184,7 @@
         "孟加拉国特别分局当前 VOA 说明列出中国旅客可能符合落地签资格，但附有出发地等条件，签发由口岸移民官审查；页面没有说明香港特区护照是否按 China 类别处理。",
         "孟加拉国驻巴黎使馆援引 Visa Policy 2026 的当前 VOA 指引也将 China 列入适用国籍，但未分别列出香港特区或澳门特区护照，也未说明是否包含于 China 类别；该页面不能解决证件专属范围。",
         "孟加拉国内政部 2026 年 8 月发布、即时生效的《Visa Policy 2026》设有普通旅游 T 类签证，并规定特定国籍/目的可申请 30 天单次 VOA；其中列出 China，但没有单列 HKSAR，且另有从无孟加拉外交机构国家抵达的个案 VOA 条款。政策未说明 HKSAR 护照是否按 China 类别处理，也未给出本证件完整入境结论。",
+        "孟加拉国内政部 2026-08-24 发布、截至 2026-07-01 的 34 项双边免签协议清单将 31 项限定外交/公务护照、2 项限定外交护照，另有马尔代夫全护照协议。中国协议只列外交、公务及普通政府服务/公务（gratis）护照，未单列 HKSAR；该清单只记录双边协议，未列不证明不存在单边豁免或落地签，也不能确定香港特区普通护照待遇。",
         "同一驻港费用表也列有 China 有金额签证费，而驻北京使馆明确中国旅客可按条件申请落地签；这证明仅凭有金额的费用行，不能推出必须预先办签。",
         "本条因此明确为 REVIEW：需取得 Hong Kong 特区普通护照专属的当前签证、落地签或免签要求，确认前不输出确定结论，也不补填停留天数。"
       ],
@@ -2194,11 +2195,12 @@
         "bd-online-mrv",
         "bd-paris-voa-policy-2026",
         "bd-moha-visa-policy-2026",
+        "bd-moha-visa-waiver-agreements-2026-08",
         "bd-beijing-visa-on-arrival",
         "bd-special-branch-voa"
       ],
-      "evidenceLocator": "Bangladesh Ministry of Home Affairs, Visa Policy 2026, published August 2026, clauses 12(b)-(c), effective immediately; Online MRV Portal > NEW VISA/OAV forms and current fee table > Hong Kong; Hong Kong Consulate Tourist Visa; Paris Embassy and Special Branch current VOA guidance",
-      "evidenceExcerpt": "The current Ministry of Home Affairs Visa Policy 2026 provides a Tourist (T) visa category and clause 12 allows 30-day single-entry VOA for listed nationalities and purposes, naming China but not HKSAR. It separately allows case-specific VOA for arrivals from countries without a Bangladesh diplomatic mission. The MRV portal and Hong Kong Consulate list Hong Kong application and fee information, but the policy does not say whether HKSAR passports fall under China or specify their complete entry treatment; these application routes do not prove mandatory advance visas.",
+      "evidenceLocator": "Bangladesh Ministry of Home Affairs > Visa Policy 2026, clauses 12(b)-(c); List of countries bound by visa waiver agreement till 01/07/2026, pages 1-2 > China agreement passport categories; Online MRV Portal > NEW VISA/OAV forms and current fee table > Hong Kong; Hong Kong Consulate Tourist Visa; Paris Embassy and Special Branch current VOA guidance",
+      "evidenceExcerpt": "The current Ministry of Home Affairs Visa Policy 2026 names China for specified VOA purposes but does not name HKSAR. Its 2026 visa-waiver agreement list restricts the China agreement to diplomatic, official, and ordinary government-service/gratis passports and does not list HKSAR separately. The list covers bilateral agreements only; it cannot establish that no unilateral exemption or VOA route exists. The MRV portal lists Hong Kong application routes and fee rows, but these do not settle the HKSAR ordinary-passport entry result.",
       "checkedAt": "2026-10-22",
       "reviewDueAt": "2026-11-21"
     },
@@ -2218,6 +2220,7 @@
         "孟加拉国特别分局当前 VOA 说明列出中国旅客可能符合落地签资格，但附有出发地等条件，签发由口岸移民官审查；页面没有说明澳门特区护照是否按 China 类别处理。",
         "孟加拉国驻巴黎使馆援引 Visa Policy 2026 的当前 VOA 指引也将 China 列入适用国籍，但未分别列出香港特区或澳门特区护照，也未说明是否包含于 China 类别；该页面不能解决证件专属范围。",
         "孟加拉国内政部 2026 年 8 月发布、即时生效的《Visa Policy 2026》设有普通旅游 T 类签证，并规定特定国籍/目的可申请 30 天单次 VOA；其中列出 China，但没有单列 Macao SAR，且另有从无孟加拉外交机构国家抵达的个案 VOA 条款。政策未说明澳门特区护照是否按 China 类别处理，也未给出本证件完整入境结论。",
+        "孟加拉国内政部 2026-08-24 发布、截至 2026-07-01 的 34 项双边免签协议清单将 31 项限定外交/公务护照、2 项限定外交护照，另有马尔代夫全护照协议。中国协议只列外交、公务及普通政府服务/公务（gratis）护照，未单列 Macao SAR；该清单只记录双边协议，未列不证明不存在单边豁免或落地签，也不能确定澳门特区普通护照待遇。",
         "同一驻港费用表也列有 China 有金额签证费，而驻北京使馆明确中国旅客可按条件申请落地签；这证明仅凭有金额的费用行，不能推出必须预先办签。",
         "本条因此明确为 REVIEW：需取得 Macau 特区普通护照专属的当前签证、落地签或免签要求，确认前不输出确定结论，也不补填停留天数。"
       ],
@@ -2228,11 +2231,12 @@
         "bd-online-mrv",
         "bd-paris-voa-policy-2026",
         "bd-moha-visa-policy-2026",
+        "bd-moha-visa-waiver-agreements-2026-08",
         "bd-beijing-visa-on-arrival",
         "bd-special-branch-voa"
       ],
-      "evidenceLocator": "Bangladesh Ministry of Home Affairs, Visa Policy 2026, published August 2026, clauses 12(b)-(c), effective immediately; Online MRV Portal > NEW VISA/OAV forms and current fee table > Macau; Hong Kong Consulate Tourist Visa; Paris Embassy and Special Branch current VOA guidance",
-      "evidenceExcerpt": "The current Ministry of Home Affairs Visa Policy 2026 provides a Tourist (T) visa category and clause 12 allows 30-day single-entry VOA for listed nationalities and purposes, naming China but not Macao SAR. It separately allows case-specific VOA for arrivals from countries without a Bangladesh diplomatic mission. The MRV portal and Hong Kong Consulate list Macau application and fee information, but the policy does not say whether Macao SAR passports fall under China or specify their complete entry treatment; these application routes do not prove mandatory advance visas.",
+      "evidenceLocator": "Bangladesh Ministry of Home Affairs > Visa Policy 2026, clauses 12(b)-(c); List of countries bound by visa waiver agreement till 01/07/2026, pages 1-2 > China agreement passport categories; Online MRV Portal > NEW VISA/OAV forms and current fee table > Macau; Hong Kong Consulate Tourist Visa; Paris Embassy and Special Branch current VOA guidance",
+      "evidenceExcerpt": "The current Ministry of Home Affairs Visa Policy 2026 names China for specified VOA purposes but does not name Macao SAR. Its 2026 visa-waiver agreement list restricts the China agreement to diplomatic, official, and ordinary government-service/gratis passports and does not list Macao SAR separately. The list covers bilateral agreements only; it cannot establish that no unilateral exemption or VOA route exists. The MRV portal lists Macau application routes and fee rows, but these do not settle the Macao SAR ordinary-passport entry result.",
       "checkedAt": "2026-10-22",
       "reviewDueAt": "2026-11-21"
     },
