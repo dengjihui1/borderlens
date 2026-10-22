@@ -1,12 +1,12 @@
 # BorderLens 规则重新核验日志
 
-## Phase 82 · 老挝中国普通护照 B3 落地签（2026-10-21）
+## Phase 82 · 老挝中国普通护照 B3 落地签（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-21）
 
 中国驻琅勃拉邦总领馆 2026-01-07《赴老挝须知》明确区分因私护照的使领馆签证、eVisa 与 B3 落地旅游签：中国公民持因私护照可在列明的 13 个国际口岸申请 B3 落地签，费用 USD 20、停留 30 天；磨丁铁路口岸不办理 VOA。指南还列明护照剩余有效期超过 6 个月、至少 2 页空白页（不含备注页）、两张近半年白底 35×45 mm 照片及现场填写申请表和入境卡。故为中国普通护照单独新增 `visa_on_arrival` 路线，不再让 eVisa 成为资料呈现中唯一可见的签证渠道。
 
 老挝外交部 eVisa 当前条款仍仅适用于普通护照，T-B3 停留 30 天、批准信有效 60 天、要求打印并仅可从 9 个指定口岸入境。电子签与落地签保持为独立途径，不将落地签13口岸、费用或材料套用到 eVisa；领事指南旧有 8 个 eVisa 口岸列表不覆盖 MOFA 当前条款新增的 Khamsavath Railway Station。指南只直接覆盖中国公民因私护照，本次不外推到 HKSAR/Macao SAR 护照；港澳路线仍处于过期 REVIEW，直至取得目的地主管机关针对各证件的充分材料。
 
-本批新增 1 条 VOA 来源与路线，并续核中国普通护照 eVisa 记录；复核截止为 2026-11-20。当前有效证据 131 条（128 条可展示结论、3 条个体条件审核）、13 条历史到期、3 条明确证据问题；查询 REVIEW 共 19 条。来源：[中国驻琅勃拉邦总领事馆《赴老挝须知》](https://luangprabang.china-consulate.gov.cn/chn/lsfw/flwxz/202601/t20260107_11807949.htm)、[Lao eVisa 当前适用国籍名单](https://laoevisa.gov.la/article/Who%20can%20Apply%20for%20Lao%20eVisa)、[Lao eVisa 条款](https://laoevisa.gov.la/term)。
+本批新增 1 条 VOA 来源与路线，并续核中国普通护照 eVisa 记录；两条规则的核验日期按 UTC 记为 2026-10-21，复核截止为 2026-11-20。当前有效证据 131 条（128 条可展示结论、3 条个体条件审核）、13 条历史到期、3 条明确证据问题；查询 REVIEW 共 19 条。来源：[中国驻琅勃拉邦总领事馆《赴老挝须知》](https://luangprabang.china-consulate.gov.cn/chn/lsfw/flwxz/202601/t20260107_11807949.htm)、[Lao eVisa 当前适用国籍名单](https://laoevisa.gov.la/article/Who%20can%20Apply%20for%20Lao%20eVisa)、[Lao eVisa 条款](https://laoevisa.gov.la/term)。
 
 ## Phase 81 · 巴林中国、香港及澳门路线（2026-10-21）
 

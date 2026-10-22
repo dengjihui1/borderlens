@@ -375,6 +375,8 @@ test('老挝电子签边界与中国普通护照落地签分别建模', async ()
     assert.ok(rule.conditions.some((condition: string) => condition.includes('指定') && condition.includes('口岸')));
     assert.ok(rule.sourceIds.includes('la-evisa-eligibility') && rule.sourceIds.includes('la-evisa-terms'));
   }
+  const chinaEvisa = evisaRules.find((rule: PolicyFixture) => rule.id === 'la-cn-prc-ordinary-tourism-evisa')!;
+  assert.deepEqual([chinaEvisa.checkedAt, chinaEvisa.reviewDueAt], ['2026-10-21', '2026-11-20']);
   const chinaVoa = laos.find((rule: PolicyFixture) => rule.id === 'la-cn-prc-ordinary-tourism-voa')!;
   assert.deepEqual([chinaVoa.status, chinaVoa.outcome, chinaVoa.maxStayDays, chinaVoa.checkedAt, chinaVoa.reviewDueAt], ['verified', 'visa_on_arrival', 30, '2026-10-21', '2026-11-20']);
   assert.ok(chinaVoa.conditions.some((condition: string) => condition.includes('磨丁铁路口岸')));
