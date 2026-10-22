@@ -8,7 +8,7 @@ const readJson = async (relativePath: string) => JSON.parse(await readFile(new U
 
 type PolicyFixture = CatalogRule;
 
-test('Phase 72 仅智利哥伦比亚秘鲁九条续期，哥斯达黎加历史校正不续期', async () => {
+test('Phase 72 仅智利哥伦比亚秘鲁九条续期，Phase 84 直接复核公报后续期哥斯达黎加', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const fresh = (policies.rules as PolicyFixture[]).filter((rule) => ['cl', 'co', 'pe'].includes(rule.destinationJurisdictionId ?? ''));
   assert.equal(fresh.length, 9);
@@ -16,7 +16,7 @@ test('Phase 72 仅智利哥伦比亚秘鲁九条续期，哥斯达黎加历史�
   const historical = (policies.rules as PolicyFixture[]).filter((rule) => rule.destinationJurisdictionId === 'cr');
   assert.equal(historical.length, 3);
   for (const rule of historical) {
-    assert.deepEqual([rule.checkedAt, rule.reviewDueAt], ['2026-09-11', '2026-10-11']);
+    assert.deepEqual([rule.checkedAt, rule.reviewDueAt], ['2026-10-22', '2026-11-21']);
     assert.ok(rule.conditions.some((line) => line.includes('60 个工作日') && line.includes('180 个自然日')));
     assert.ok(rule.conditions.some((line) => line.includes('未成年人') && line.includes('受限签证委员会')));
   }
@@ -740,10 +740,14 @@ test('哥斯达黎加官方公报核验中国及港澳普通护照领事签证�
   const costaRica = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'cr');
   assert.equal(costaRica.length, 3);
   assert.ok(costaRica.every((rule: PolicyFixture) => rule.status === 'verified' && rule.outcome === 'visa_required' && rule.maxStayDays === null));
+  assert.ok(costaRica.every((rule: PolicyFixture) => rule.checkedAt === '2026-10-22' && rule.reviewDueAt === '2026-11-21'));
   assert.ok(costaRica.every((rule: PolicyFixture) => rule.sourceIds.includes('cr-gaceta-directrices-2025')));
   assert.ok(costaRica.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('领事签证'))));
   assert.ok(costaRica.every((rule: PolicyFixture) => rule.conditions.some((condition: string) => condition.includes('美国/加拿大') && condition.includes('申根'))));
   assert.ok(costaRica.find((rule: PolicyFixture) => rule.documentType === 'ordinary_passport')!.conditions.some((condition: string) => condition.includes('北京或上海') && condition.includes('30 天')));
   assert.ok(costaRica.find((rule: PolicyFixture) => rule.documentType === 'hksar_passport')!.conditions.some((condition: string) => condition.includes('有效英国护照')));
   assert.ok(costaRica.find((rule: PolicyFixture) => rule.documentType === 'macao_sar_passport')!.conditions.some((condition: string) => condition.includes('有效葡萄牙护照')));
+  const gazette = await readJson('../data/official-source-registry.json');
+  const source = gazette.sources.find((item: { id: string }) => item.id === 'cr-gaceta-directrices-2025')!;
+  assert.deepEqual([source.url, source.checkedAt, source.nextReviewAt, source.status], ['https://www.imprentanacional.go.cr/pub/2025/11/17/ALCA148_17_11_2025.pdf', '2026-10-22', '2026-11-21', 'verified']);
 });

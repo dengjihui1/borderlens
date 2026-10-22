@@ -3465,22 +3465,22 @@
       "maxStayDays": null,
       "visaProductName": "Costa Rica consular visa — Group 3",
       "conditions": [
-        "本条保留 2025-11-17 官方公报历史证据；2026-10-21 中央 Visas 入口仍受阻，未证实该日期副本仍为现行版本，因此不续期，继续 REVIEW。",
+        "2026-10-22 直接复核哥斯达黎加《官方公报》发布的 AJ-484-11-2025；本条按当日已定位的现行官方指引更新核验日期。中央 Visas 路由器曾返回 403，不以绕过方式访问。",
         "2025 年公报将中国列为第三组领事签证；该组一般最多停留 30 个自然日，可依法延长至 90 个自然日。未成年人及独立豁免另有分支，不能一律走成年普通领事路线。",
         "同一正式指引为中国公民设有临时旅游例外：成年、持北京或上海签发的护照，并符合 Protocolo Temporal para la promoción de Turismo de China 的，可免签入境，停留期限按旅行团安排且不超过 30 天；该例外不改变一般中国普通护照路线的领事签证要求。",
         "另有条件例外：符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家居留，或申根 C/D 类多次入境签证，可能免办领事/受限签证；美国 C1/C2/C3 过境签不接受。",
-        "该历史公报第三组写明护照至少 180 个自然日有效、盖章后在 60 个工作日（días hábiles）内使用；不能把工作日写成自然日，也不能把获准使用签证的窗口当作停留期限。",
+        "现行指引第三组写明护照至少 180 个自然日有效、盖章后在 60 个工作日（días hábiles）内使用；不能把工作日写成自然日，也不能把获准使用签证的窗口当作停留期限。",
         "中国籍未成年人申请由受限签证委员会审理，不能套用成年人的一般领事签证流程；原文保留适用独立入境豁免的可能。成年人北京/上海护照的临时旅游便利另有旅行团条件，不能泛化。",
-        "历史例外须按原文核对：美国/加拿大多次签证或居留的有效状态、C1/C2/C3 排除、所列欧洲居留条件及申根 C/D 多次签证已生效等，不自动认定个体资格。"
+        "现行指引例外须按原文核对：美国/加拿大多次签证或居留的有效状态、C1/C2/C3 排除、所列欧洲居留条件及申根 C/D 多次签证已生效等，不自动认定个体资格。"
       ],
       "status": "verified",
       "sourceIds": [
         "cr-gaceta-directrices-2025"
       ],
-      "evidenceLocator": "2025 Gazette AJ-484-11-2025 PDF pp.8-9 group III, p.12 China/SAR/minors, pp.14-16 exceptions; historical text reviewed, current applicability NOT renewed",
-      "evidenceExcerpt": "The official guideline places China in the third group requiring a consular visa and separately describes a temporary tourism exception for adults with passports issued in Beijing or Shanghai, limited to the tour and no more than 30 days. Historical PDF p.8 says 60 working days after stamping, not 60 calendar days; p.12 routes Chinese minors to the restricted-visa commission. The central current-version router remains blocked, so rule check/review dates are unchanged.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Official Gazette AJ-484-11-2025 PDF physical pp.98-99 group III and China list, p.102 China/SAR/minors/tour group; pp.104-105 visa exceptions",
+      "evidenceExcerpt": "The official Gazette places China in group III for consular visas; separately, adult Chinese nationals with Beijing- or Shanghai-issued passports may use the China-tour protocol, with stay limited to the acquired tour and no more than 30 days. Group III terms specify 180 calendar days of passport validity, use within 60 working days after stamping, and a stay up to 30 days extendable to 90. Chinese minors are handled by the restricted-visa commission.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "cr-hk-hksar-tourism-visa-required",
@@ -3493,22 +3493,22 @@
       "maxStayDays": null,
       "visaProductName": "Costa Rica consular visa",
       "conditions": [
-        "本条保留 2025-11-17 官方公报历史证据；2026-10-21 中央 Visas 入口仍受阻，未证实该日期副本仍为现行版本，因此不续期，继续 REVIEW。",
-        "2025 年 11 月 17 日官方《Gaceta》AJ-484-11-2025 的“中国及行政区域”条款明确：香港国民如不持有效英国护照，需领事签证，并适用中华人民共和国对应规定；香港特区护照不等同于该条提到的英国护照。",
+        "2026-10-22 直接复核哥斯达黎加《官方公报》发布的 AJ-484-11-2025；本条按当日已定位的现行官方指引更新核验日期。中央 Visas 路由器曾返回 403，不以绕过方式访问。",
+        "官方《Gaceta》AJ-484-11-2025 的“中国及行政区域”条款明确：香港国民如不持有效英国护照，需领事签证，并适用中华人民共和国对应规定；香港特区护照不等同于该条提到的英国护照。",
         "符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家居留，或申根 C/D 类多次入境签证，可能触发免办领事/受限签证的例外；美国 C1/C2/C3 过境签不接受。",
         "本条只覆盖香港特区普通护照，不扩展到香港签证身份书或其他旅行证件；正式指引未为该证件单独列出最长停留期。",
-        "该历史公报第三组写明护照至少 180 个自然日有效、盖章后在 60 个工作日（días hábiles）内使用；不能把工作日写成自然日，也不能把获准使用签证的窗口当作停留期限。",
+        "现行指引第三组写明护照至少 180 个自然日有效、盖章后在 60 个工作日（días hábiles）内使用；不能把工作日写成自然日，也不能把获准使用签证的窗口当作停留期限。",
         "中国籍未成年人申请由受限签证委员会审理，不能套用成年人的一般领事签证流程；原文保留适用独立入境豁免的可能。成年人北京/上海护照的临时旅游便利另有旅行团条件，不能泛化。",
-        "历史例外须按原文核对：美国/加拿大多次签证或居留的有效状态、C1/C2/C3 排除、所列欧洲居留条件及申根 C/D 多次签证已生效等，不自动认定个体资格。"
+        "现行指引例外须按原文核对：美国/加拿大多次签证或居留的有效状态、C1/C2/C3 排除、所列欧洲居留条件及申根 C/D 多次签证已生效等，不自动认定个体资格。"
       ],
       "status": "verified",
       "sourceIds": [
         "cr-gaceta-directrices-2025"
       ],
-      "evidenceLocator": "2025 Gazette AJ-484-11-2025 PDF pp.8-9 group III, p.12 China/SAR/minors, pp.14-16 exceptions; historical text reviewed, current applicability NOT renewed",
-      "evidenceExcerpt": "The official guideline states that Hong Kong nationals without the referenced valid British passport require a consular visa and are subject to the corresponding China provisions; this rule is recorded for the HKSAR ordinary passport only. Historical PDF p.8 says 60 working days after stamping, not 60 calendar days; p.12 routes Chinese minors to the restricted-visa commission. The central current-version router remains blocked, so rule check/review dates are unchanged.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Official Gazette AJ-484-11-2025 PDF physical pp.98-99 group III, p.102 China/SAR provisions, pp.104-105 visa exceptions",
+      "evidenceExcerpt": "The official Gazette states that Hong Kong nationals not travelling on a qualifying valid British passport require a consular visa and are subject to the corresponding China provisions; the HKSAR passport route does not by itself meet the British-passport exception. Group III terms specify 180 calendar days of passport validity, use within 60 working days after stamping, and a stay up to 30 days extendable to 90.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     },
     {
       "id": "cr-mo-macao-sar-tourism-visa-required",
@@ -3521,22 +3521,22 @@
       "maxStayDays": null,
       "visaProductName": "Costa Rica consular visa",
       "conditions": [
-        "本条保留 2025-11-17 官方公报历史证据；2026-10-21 中央 Visas 入口仍受阻，未证实该日期副本仍为现行版本，因此不续期，继续 REVIEW。",
-        "2025 年 11 月 17 日官方《Gaceta》AJ-484-11-2025 的“中国及行政区域”条款明确：澳门国民如不持有效葡萄牙护照，需领事签证，并适用中华人民共和国对应规定；澳门特区护照不等同于该条提到的葡萄牙护照。",
+        "2026-10-22 直接复核哥斯达黎加《官方公报》发布的 AJ-484-11-2025；本条按当日已定位的现行官方指引更新核验日期。中央 Visas 路由器曾返回 403，不以绕过方式访问。",
+        "官方《Gaceta》AJ-484-11-2025 的“中国及行政区域”条款明确：澳门国民如不持有效葡萄牙护照，需领事签证，并适用中华人民共和国对应规定；澳门特区护照不等同于该条提到的葡萄牙护照。",
         "符合条件的美国/加拿大签证或居留、英国及指定欧洲国家或欧盟国家居留，或申根 C/D 类多次入境签证，可能触发免办领事/受限签证的例外；具体资格仍须按入境时有效文件核验。",
         "本条只覆盖澳门特区普通护照，不扩展到澳门旅行证或其他旅行证件；正式指引未为该证件单独列出最长停留期。",
-        "该历史公报第三组写明护照至少 180 个自然日有效、盖章后在 60 个工作日（días hábiles）内使用；不能把工作日写成自然日，也不能把获准使用签证的窗口当作停留期限。",
+        "现行指引第三组写明护照至少 180 个自然日有效、盖章后在 60 个工作日（días hábiles）内使用；不能把工作日写成自然日，也不能把获准使用签证的窗口当作停留期限。",
         "中国籍未成年人申请由受限签证委员会审理，不能套用成年人的一般领事签证流程；原文保留适用独立入境豁免的可能。成年人北京/上海护照的临时旅游便利另有旅行团条件，不能泛化。",
-        "历史例外须按原文核对：美国/加拿大多次签证或居留的有效状态、C1/C2/C3 排除、所列欧洲居留条件及申根 C/D 多次签证已生效等，不自动认定个体资格。"
+        "现行指引例外须按原文核对：美国/加拿大多次签证或居留的有效状态、C1/C2/C3 排除、所列欧洲居留条件及申根 C/D 多次签证已生效等，不自动认定个体资格。"
       ],
       "status": "verified",
       "sourceIds": [
         "cr-gaceta-directrices-2025"
       ],
-      "evidenceLocator": "2025 Gazette AJ-484-11-2025 PDF pp.8-9 group III, p.12 China/SAR/minors, pp.14-16 exceptions; historical text reviewed, current applicability NOT renewed",
-      "evidenceExcerpt": "The official guideline states that Macao nationals without the referenced valid Portuguese passport require a consular visa and are subject to the corresponding China provisions; this rule is recorded for the Macao SAR ordinary passport only. Historical PDF p.8 says 60 working days after stamping, not 60 calendar days; p.12 routes Chinese minors to the restricted-visa commission. The central current-version router remains blocked, so rule check/review dates are unchanged.",
-      "checkedAt": "2026-09-11",
-      "reviewDueAt": "2026-10-11"
+      "evidenceLocator": "Official Gazette AJ-484-11-2025 PDF physical pp.98-99 group III, p.102 China/SAR provisions, pp.104-105 visa exceptions",
+      "evidenceExcerpt": "The official Gazette states that Macao nationals not travelling on a qualifying valid Portuguese passport require a consular visa and are subject to the corresponding China provisions; the Macao SAR passport route does not by itself meet the Portuguese-passport exception. Group III terms specify 180 calendar days of passport validity, use within 60 working days after stamping, and a stay up to 30 days extendable to 90.",
+      "checkedAt": "2026-10-22",
+      "reviewDueAt": "2026-11-21"
     }
   ]
 }

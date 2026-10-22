@@ -105,7 +105,7 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
     assert.equal(entry.conclusion?.label, '免签路线');
     assert.match(entry.conclusion?.stay.join(' ') ?? '', /90 天/);
   }
-  assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T00:00:00Z')).filter((entry) => entry.conclusion).length, 0);
+  assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T00:00:00Z')).filter((entry) => entry.conclusion).length, 3);
 });
 
 test('分页覆盖全部记录，不重复、不丢失，错误页码不退回宽泛结果', () => {
