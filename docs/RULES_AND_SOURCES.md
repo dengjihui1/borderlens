@@ -10,6 +10,8 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 
 ## 最近政策证据
 
+Phase 98（2026-10-22）：新增孟加拉国内政部《Visa Policy 2026》作为当前中央政策来源。其第 12 条列出 China 的特定条件 VOA，但未单列或解释 HKSAR/Macao SAR 是否包括于 China 类别；两条港澳路线保持 REVIEW，不推断必签、免签或停留天数。
+
 核验日期：2026-10-22（Phase 97 补核澳门 DSI 官方清单索引；PDF 直连 404，澳门赴阿联酋来源冲突仍未解决；本日期只适用于本轮涉及的来源和规则，其他规则保留各自核验日）。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
 
 截至 Phase 97，当前有效证据 143 条，其中 6 条需个体/整体条件复核；另有 1 条历史到期和 3 条显式证据问题。查询口径为 137 条当前结论、10 条 REVIEW。越南中国普通护照临时团体免签受人数、持牌旅行社、直飞金兰、同一口岸、庆和行程及 30 天上限约束，系统不自动判断资格；香港、澳门特区护照路线仅确认可申请 Vietnam e-Visa，整体入境待遇保留 REVIEW。旧 90 天字段不再用 e-Visa 有效期代替获准停留期。约旦旅游局现行国籍表将中国、香港和澳门均列为可抵达办理签证、费用 40 JOD；未声明准许停留天数，因此期限留空，仅适用于对应普通护照，不外推至 Travel Pass 或其他旅行证件。老挝中国普通护照有独立 B3 落地签路线（13 个指定口岸、磨丁铁路除外），eVisa 是另一条可申请路线；不把 VOA 结论外推到港澳。老挝外交部名单列有港澳 eVisa 申请资格，但条款及资格页不能证明港澳整体入境要求，因此两条均为 `manual_review`。缅甸 eVisa 与机场落地签作为独立路线记录；中国及香港落地签试行期仍有效，澳门此前试行期于 2026-10-20 到期，未发现续期材料，故历史 VOA 记录进入 REVIEW，但澳门 eVisa 仍为单独当前路线。厄瓜多尔港澳普通护照记录分别由香港政府免签协定公告及澳门《2025 年鉴》支持，均限定最多停留 90 天。沙特中国普通护照记录为需签证、但不宣称 eVisa 是唯一渠道；澳门特区护照保留落地签及在线 eVisa 两条已核实路线。巴林中港澳国籍现同时列于 NPRA 落地签和在线申请名单，结论保留条款限制且不推断停留期限。哥斯达黎加三条路线由 2025-11-17 官方公报 AJ-484-11-2025 续核；埃及中国普通护照 eVisa 路线按内政部当前 FAQ 更新，未推断港澳 eVisa 资格。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决。3 条证据问题、1 条到期和 6 条条件复核路线继续保留 REVIEW；证据定位和下一步要求见 `REVALIDATION_LOG.md`。
@@ -128,8 +130,8 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 | 尼泊尔 | 香港特区护照 | 需签证，免费；签证年度累计最多 150 天 | 同样区分免费、免签、年度累计和单次停留；不扩展为澳门护照免费待遇 |
 | 尼泊尔 | 澳门特区护照 | 旅游落地签申请路线 | Nepaliport 官方 On-arrival Visa Application 的护照签发国列表列出 Macao Special Administrative Region of China（MAC，blacklisted=false）；确认可进入申请路线，但不保证签发、入境或停留天数 |
 | 孟加拉国 | 中国普通护照 | 旅游落地签，最多 30 天 | 官方驻北京使馆页面列明中国属于可按条件申请落地签的国籍；需返程票、访问证明、至少 500 美元或等值资金，最终由移民机关审查 |
-| 孟加拉国 | 香港特区护照 | REVIEW：护照专属签证要求待确认 | 费用表和旅游签申请材料不足以排除落地签；同一费用表中的中国有金额行并不排除中国旅客落地签，不能据此推断香港护照必须预先办签 |
-| 孟加拉国 | 澳门特区护照 | REVIEW：护照专属签证要求待确认 | 保留正规旅游签申请和费用证据，但不据此作完整签证结论，不补填准许停留天数 |
+| 孟加拉国 | 香港特区护照 | REVIEW：China 类别是否覆盖 HKSAR 未明 | 内政部《Visa Policy 2026》列出中国但未列 HKSAR；另有按出发国等条件的 VOA 分支。该政策未给香港特区护照完整结论 |
+| 孟加拉国 | 澳门特区护照 | REVIEW：China 类别是否覆盖 Macao SAR 未明 | 内政部《Visa Policy 2026》列出中国但未列 Macao SAR；另有按出发国等条件的 VOA 分支。该政策未给澳门特区护照完整结论 |
 | 马尔代夫 | 中国普通护照、香港/澳门特区护照 | 旅游落地签 | 无需预先签证批准；另通过官方 IMUGA 免费提交 Traveller Declaration；官网正文未稳定显示天数，本轮不猜期限 |
 | 其他组合 | 任意 | REVIEW | 不根据模型记忆或第三方聚合器猜测 |
 
@@ -208,6 +210,7 @@ Phase 73 首页接入完整规则库进行逐段查询及自查，旧版演示�
 - [Bangladesh Embassy in Beijing：Visa on Arrival](https://beijing.mofa.gov.bd/pages/static-pages/6952668b35ce18e1c05a9eb1)
 - [Bangladesh Consulate General in Hong Kong：Tourist Visa](https://hongkong.mofa.gov.bd/pages/static-pages/6952668735ce18e1c05a9d33)
 - [Bangladesh Consulate General in Hong Kong：Visa Fees](https://hongkong.mofa.gov.bd/pages/static-pages/6952667c35ce18e1c05a97fc)（Hong Kong/Macau 签证费率行；不补填统一停留期）
+- [Bangladesh Ministry of Home Affairs：Visa Policy 2026](https://moha.gov.bd/pages/static-pages/694032cb35ce18e1c05628ca)（内政部 2026 年 8 月发布、即时生效；旅游 T 类签证与 30 天 VOA 条款列 China，未说明是否包括 HKSAR/Macao SAR）
 - [Maldives Immigration：Tourist Visa — On Arrival](https://www.immigration.gov.mv/visa/tourist-visa)
 - [Maldives Immigration：Traveller Declaration](https://www.immigration.gov.mv/traveller-declaration)
 - [Visit Qatar：Qatar Visa Check](https://visitqatar.com/intl-en/plan-your-trip/visas)
