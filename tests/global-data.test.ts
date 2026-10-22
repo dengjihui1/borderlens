@@ -244,6 +244,9 @@ test('阿联酋按当前外交部卡片核验，澳门官方来源冲突必须 R
     assert.deepEqual([source.checkedAt, source.nextReviewAt], ['2026-10-22', '2026-11-21']);
   }
   assert.equal(registry.sources.find((source: { id: string }) => source.id === 'mo-dsi-macao-passport-visa-free-list-2026-01').status, 'blocked');
+  const dsiVisaList = registry.sources.find((source: { id: string }) => source.id === 'mo-dsi-macao-passport-visa-free-list-2026-01');
+  assert.equal(dsiVisaList.lastAttemptedAt, '2026-10-22');
+  assert.match(dsiVisaList.notes, /both .* returned 404/);
 });
 
 test('中国内地非中国籍港澳永久居民通行证规则限制为短期用途', async () => {

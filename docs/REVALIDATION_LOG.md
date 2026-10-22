@@ -1,5 +1,11 @@
 # BorderLens 规则重新核验日志
 
+## Phase 101 · 澳门 DSI PDF 直链复查与发布状态校准（2026-10-22）
+
+按 Phase 97 的发现重试澳门身份证明局英文护照清单 PDF：旧直链 `https://www.dsi.gov.mo/download/visa_free_list_e.pdf` 与候选新路径 `https://www.dsi.gov.mo/dsi/download/visa_free_list_e.pdf` 均由直接 HTTPS GET 返回 404。搜索索引仍可检索到一份标注 2026-01-23 的 DSI 一手 PDF 文本，其中将 United Arab Emirates 列为最多 30 天、无备注；但本轮未能直接取得该 PDF，索引摘录不冒充原件读取。UAE 外交部当前国籍卡仍标 Macao 为 Visa Required，因此澳门特区护照赴 UAE 继续 `draft / manual_review`，停留期限留空。
+
+在来源注册表记录两条直链的本轮访问失败，并保持 blocked；同步项目计划与 Phase 100 发布记录：Site 当前为仅所有者可访问的 v104，Site 源仓库与 GitHub 当前版本为 `75a8ad7a6397dbce710e66982d8d650619f01455`。未改变路线结论、来源数量或覆盖计数。
+
 ## Phase 99 · 越南港澳普通护照旅游入境基线（2026-10-22）
 
 打开越南政府公报 2026-03-23 发布的现行合并法 62/VBHN-VPQH。第 20 条规定外国人须持护照/国际旅行证件和签证入境，除法律规定的免签情形外；电子签证持有人还须满足一般入境条件并经政府指定国际口岸。越南外交部现行护照类别免签表中，中国行仅列外交、公务/专用及“公务用途普通护照”，没有普通旅游护照免签；表中亦无 HKSAR 或 Macao SAR 普通护照免签项。中越协议豁免仅覆盖表中列明证件类别；第 325/NQ-CP 号决议及实施说明另明确港澳护照不适用中国团体旅游免签试点。
