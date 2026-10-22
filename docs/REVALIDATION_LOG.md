@@ -1,5 +1,13 @@
 # BorderLens 规则重新核验日志
 
+## Phase 92 · 孟加拉国 Visa Policy 2026 VOA 指引复核（2026-10-22）
+
+继续检查孟加拉国—香港及澳门普通护照旅游 REVIEW。孟加拉国驻巴黎使馆现行 [Visa on Arrival (VoA) & Transit Visa 指引](https://paris.mofa.gov.bd/pages/static-pages/visa-on-arrival-72qplv-6a7f16eb18224a6f09fdd573) 标注依据 Visa Policy 2026，列出可申请 VOA 的国籍（其中包括 China），并说明最长 30 天、单次入境、限定口岸和移民官审核。本轮通过该使馆官方页面的搜索索引读取内容；页面直接打开超时，因此来源注册记录该访问限制。页面没有独立列出 HKSAR/Macao SAR，也没有定义其是否属于 China 项下，不能将中国普通护照待遇直接外推到特区护照。
+
+驻港使馆当前旅游签材料/费用表及孟加拉国警察特别分局 VOA 页面仍不能提供港澳护照专属最终分类。两条规则保持 `draft / manual_review`，`maxStayDays` 为空；新使馆级政策指引仅作为证据范围核对，不升级结论。当前队列仍为 3 条明确证据缺口/冲突（阿联酋—澳门 1 条、孟加拉国港澳 2 条）、1 条过期、6 条条件复核。
+
+同时发现阿联酋外交部 [Travel Updates by Destination](https://www.mofa.gov.ae/en/travel-updates?code=mac) 中“Tourism: 30 days”指 UAE 公民赴澳门的出境待遇，不是澳门护照入境 UAE 的要求；不将其加入澳门赴 UAE 规则证据或用来消解其与澳门官方记录的冲突。
+
 ## Phase 90 · 缅甸澳门航空落地签试行期到期复核（2026-10-22，Asia/Shanghai；规则日期按 UTC 记为 2026-10-22）
 
 重读缅甸旅游部当前英文 [Visa on Arrival](https://tourism.gov.mm/en/information-pages/visa-on-arrival) 页面：澳门特区护照游客的航空 VOA 仍只列出 2025-10-21 起为期一年的试行，已于 2026-10-20 结束。另读旅游部 2026-09-15 [中国和印度游客 VOA 延期公告](https://tourism.gov.mm/en/announcements/extension-of-visa-on-arrival-tourist-for-chinese-and-indian-tourists)：该延期仅写中国和印度，不包括澳门特区护照，不能跨路线套用。没有找到澳门专项后续延期，因此不恢复历史 USD 50 / 30 天结论；保留 expired / REVIEW，并记录最新核验日 2026-10-22。到期不等于永久停止，旅行前仍需向主管机关确认。
