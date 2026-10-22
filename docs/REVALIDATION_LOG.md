@@ -1,5 +1,13 @@
 # BorderLens 规则重新核验日志
 
+## Phase 110 · 缅甸澳门 VOA 到期后范围核验（2026-10-22）
+
+直接重读缅甸驻港总领馆 2026-10-15 [延期公告](https://myanmarconsulatehk.org/extension-of-trial-tourist-visa-on-arrival-for-china-india/) 及其[官方公告原图](https://myanmarconsulatehk.org/wp-content/uploads/2026/10/20261016-01.jpg)。原图将新一轮试行对象限定为中华人民共和国护照持有人和印度旅客乘飞机入境，期限为 2026-08-30 至 2027-08-29；没有明确写明澳门特区护照。缅甸旅游部当前 [Visa on Arrival 页面](https://tourism.gov.mm/en/information-pages/visa-on-arrival) 对澳门特区的独立试行仍写明自 2025-10-21 起一年，即于 2026-10-20 到期。
+
+因此仅新增来源并将其关联至澳门路线，明确新公告的对象范围不构成澳门续期证据。澳门路线继续受 `effectiveUntil` 门禁阻止展示；不恢复历史 30 天、USD 50 或材料条件，也不把公告目录未列事项当作永久取消的证明。新增范围断言；规则结论和 REVIEW 数量不变。
+
+验证：新增来源范围断言及相关回归测试通过；`npm run check` 通过（93 项测试、lint、TypeScript、数据校验、生产构建），本地生产 Worker 的 32 项 HTTP smoke 与 `git diff --check` 通过。提交、远端同步及私有 Site 发布记录待本阶段发布后补记。
+
 ## Phase 109 · 孟加拉国港澳普通护照 VOA 国籍范围收敛（2026-10-22）
 
 直接核读孟加拉国内政部 2026 年 8 月《Visa Policy 2026》第 12(c) 条及驻北京使馆现行 VOA 指引：政策按国籍列出 China，允许旅游/商务旅客申请单次、最多 30 天的 VOA；指定口岸移民机关须审查旅行材料并认可。驻北京使馆将中国公民列入旅游 VOA，要求返程票、访问目的证明及至少 USD 500 或等值资金，最终签发仍由移民机关决定。

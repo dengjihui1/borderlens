@@ -1676,8 +1676,8 @@
       "visaProductName": "Myanmar Tourist Visa on Arrival (pilot)",
       "conditions": [
         "缅甸官方 2025-11 公告将澳门特区护照游客的航空落地签试行期延至 2026-10-20；该试行期现已结束。",
-        "缅甸旅游部 2026-09 公告将中国和印度游客的另一轮试行延至 2027-08-29，但未提及澳门特区护照，不能据此延长本路线。",
-        "缅甸驻港总领馆当前公告目录仍列 2025-10-30 澳门、日本、韩国通知；2026-06-19 的另一份续期仅针对香港护照。不得仅凭公告目录未列延期推断永久取消，出行前仍须向主管机关确认当前状态。",
+        "缅甸驻港总领馆 2026-10-15 公告原图将中国 VOA 适用对象写为中华人民共和国护照持有人，并仅列中国和印度乘飞机旅客，试行期为 2026-08-30 至 2027-08-29；没有明确点名澳门特区护照，不能据此延长澳门的独立试行。",
+        "缅甸驻港总领馆当前公告目录仍列 2025-10-30 澳门、日本、韩国通知；2026-06-19 的另一份续期仅针对香港护照。公告目录仅作时间线，不得仅凭未列澳门延期推断政策永久取消；出行前仍须向主管机关确认当前状态。",
         "历史公告记载 USD 50、最多停留 30 天、需 6 个月有效期护照及 2 张照片；这些已过期的历史条件不作为当前入境结论。"
       ],
       "status": "verified",
@@ -1685,11 +1685,12 @@
         "mm-tourist-voa-general",
         "mm-mo-voa-extension-2025",
         "mm-cn-india-voa-extension-2026",
+        "mm-cn-india-voa-extension-consulate-2026",
         "mm-consulate-hk-announcement-index",
         "mo-myanmar-voa-notice-2024"
       ],
-  "evidenceLocator": "Myanmar Ministry of Hotels and Tourism > current English Visa on Arrival page, Macao pilot and deadline; 2025-11-19 extension notice; 2026-09-15 China and India extension (scope exclusion)",
-  "evidenceExcerpt": "The current official English page shows the Macao SAR pilot ran from 21 October 2025 for one year, ending 20 October 2026. A separate 2026 extension applies only to China and India, not Macao SAR. With no Macao extension found, keep the expired VOA hidden and reconfirm current status before travel.",
+  "evidenceLocator": "Myanmar Ministry of Hotels and Tourism > current English Visa on Arrival page, Macao pilot period; 2025-11 Macao extension notice; Myanmar Consulate General in Hong Kong > 2026-10-15 China and India extension notice image",
+  "evidenceExcerpt": "The ministry page states the Macao SAR pilot began on 21 October 2025 for one year, ending 20 October 2026. The consulate's 15 October 2026 notice extends a separate air-arrival pilot for PRC passport holders and Indian nationals through 29 August 2027; it does not explicitly name Macao SAR passports. This does not renew Macao's expired pilot; keep its historical conclusion hidden and reconfirm with the authority before travel.",
   "checkedAt": "2026-10-22",
   "reviewDueAt": "2026-11-21",
       "effectiveUntil": "2026-10-20T23:59:59+06:30"
