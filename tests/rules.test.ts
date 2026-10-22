@@ -28,6 +28,14 @@ test('香港居民进入内地缺少回乡证时给出明确动作', () => {
   assert.ok(result.steps[0].actions.some((item) => item.includes('回乡证')));
 });
 
+test('香港居民勾选回乡证仍需人工核实，不把勾选当入境授权', () => {
+  const result = evaluateJourney({ ...base, destination: 'mainland-china', extras: ['hk-id', 'home-return-permit'] }, freshDate);
+  assert.equal(result.status, 'review');
+  assert.equal(result.steps[0].status, 'review');
+  assert.match(result.steps[0].summary, /仍需人工核实/);
+  assert.ok(result.steps[0].sources.some((source) => source.url.includes('nia.gov.cn')));
+});
+
 test('澳门居民证件齐全时仍保留口岸级人工核验', () => {
   const result = evaluateJourney({ ...base, document: 'macao-passport', origin: 'macao', destination: 'mainland-china', extras: ['macao-id', 'home-return-permit'] }, freshDate);
   assert.equal(result.status, 'review');

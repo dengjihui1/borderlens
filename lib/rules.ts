@@ -73,6 +73,18 @@ export const SOURCES = {
     url: 'https://www.gov.mo/en/services/ps-1474/',
     checkedAt: DATA_CHECKED_AT,
   },
+  mainlandPermit: {
+    title: '国家移民管理局｜港澳居民来往内地通行证签发服务指南',
+    url: 'https://www.nia.gov.cn/n741445/n741604/n1787219/n1795772/c1792480/content.html',
+    checkedAt: '2026-10-22',
+    note: '签发资格不代表旅客已持有有效证件；口岸和通道资格需另行核实。',
+  },
+  smartClearance: {
+    title: '国家移民管理局｜2025年第4号公告（智能通关）',
+    url: 'https://www.nia.gov.cn/n794014/n794021/c1751080/content.html',
+    checkedAt: '2026-10-22',
+    note: '仅公告列明口岸，并须符合年龄、有效证件及生物信息核验条件。',
+  },
   uk: {
     title: 'GOV.UK｜Check if you need a UK visa',
     url: 'https://www.gov.uk/check-uk-visa',
@@ -166,12 +178,12 @@ function evaluateLeg(input: JourneyInput, from: Place, to: Place): RouteStep {
   if (to === 'mainland-china' && from === 'hong-kong') {
     const hasId = input.extras.includes('hk-id');
     const hasPermit = input.extras.includes('home-return-permit');
-    step.sources = [SOURCES.hongKong, SOURCES.iata];
+    step.sources = [SOURCES.mainlandPermit, SOURCES.smartClearance];
     step.bring = ['香港身份证', '港澳居民来往内地通行证（回乡证）'];
     if (hasId && hasPermit && input.documentsValid) {
-      step.status = 'ready';
-      step.summary = '已勾选香港身份证与回乡证，符合首版的基础证件组合。';
-      step.verify = ['确认所选口岸、通道及两份证件均可在行程日期使用。'];
+      step.status = 'review';
+      step.summary = '基础证件已勾选，但勾选不能验证身份、有效回乡证或实际口岸/通道资格；居民返境仍需人工核实。';
+      step.verify = ['确认本人持有与身份相符且有效的回乡证，并向实际口岸核实通关方式；智能快捷通道另有年龄及生物信息核验条件。'];
     } else {
       step.status = 'action';
       step.summary = '进入中国内地需要区分香港一侧身份证明与内地入境证件。';
@@ -184,7 +196,7 @@ function evaluateLeg(input: JourneyInput, from: Place, to: Place): RouteStep {
   if (to === 'mainland-china' && from === 'macao') {
     const hasId = input.extras.includes('macao-id');
     const hasPermit = input.extras.includes('home-return-permit');
-    step.sources = [SOURCES.macao, SOURCES.iata];
+    step.sources = [SOURCES.mainlandPermit, SOURCES.smartClearance];
     step.bring = ['澳门居民身份证', '与身份匹配的内地通行证件'];
     if (!hasId || !hasPermit) {
       step.status = 'action';
