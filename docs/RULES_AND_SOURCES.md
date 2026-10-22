@@ -21,11 +21,13 @@ Phase 105（2026-10-22）：新增国家移民管理局 2025 年第 4 号公告�
 
 Phase 108（2026-10-22）：重读国家移民管理局回乡证签发指南与 2025 年第 4 号公告。发现旧版 `/demo` 在香港居民勾选身份证、回乡证后返回 READY，与新版居民返境 REVIEW 边界不一致；修正为人工复核，并使用移民管理局来源。澳门分支本已为 REVIEW。该演示不验证国籍、实际持证状态或口岸资格，故勾选仍不是入境授权。
 
+Phase 109（2026-10-22）：补齐孟加拉国—港澳普通护照的国籍分类链。孟加拉国《Visa Policy 2026》第 12(c) 条及驻北京使馆页面将 China 列为旅游 VOA 国籍；香港入境处规定 HKSAR 护照申请人须为中国公民，澳门《2025 年鉴》规定澳门特区护照仅限中国籍澳门永久居民申请。因目的地规则按国籍表述、并非仅限 PRC 普通护照，将两条升级为有条件 VOA：单次、最多 30 天，仍须指定口岸、材料审查、资金/返程证明和移民机关批准；不标记免签或保证入境。
+
 Phase 106（2026-10-22）：直接复核缅甸驻港总领馆香港护照 VOA 延期公告原图，确认试行期为 2026-03-11 至 2027-03-10，路线结论与条件不变，仅刷新核验窗口。Phase 107（2026-10-22）：直接核读越南第 325/NQ-CP 号签署决议，并再次确认阿联酋外交部当前 Macao SAR 卡片与澳门政府历史免签记录冲突；越南团体例外仍需人工核验个人条件，阿联酋—澳门仍为 REVIEW。孟加拉国港澳路线继续因特区护照 VOA 分类未明而 REVIEW；缅甸澳门专属 VOA 试行已过期且未发现续期，继续 REVIEW。
 
 核验日期：2026-10-22（Phase 101 复试澳门 DSI PDF 两条直链均 404；Phase 102 核读缅甸驻港总领馆当前公告目录；澳门赴阿联酋来源冲突仍未解决）。本日期只适用于本轮涉及的来源和规则，其他规则保留各自核验日。所有规则最迟在对应 `reviewDueAt` 前复核；临时政策另受带时区的 `effectiveUntil` 限制。到期、官方证据冲突或证据不足的路线不得输出确定结论。
 
-Phase 107 最新统计：141 个来源、147 条路线、143 条当前证据、139 条当前可展示结论和 8 条 REVIEW。
+Phase 109 最新统计：143 个来源、147 条路线、145 条当前证据、141 条当前可展示结论和 6 条 REVIEW（1 条证据缺口、1 条历史到期、4 条条件复核）。
 
 截至 Phase 99，当前有效证据 143 条、当前可展示结论 139 条，另有 8 条 REVIEW（3 条证据缺口、1 条历史到期和 4 条条件复核）。越南中国普通护照临时团体免签仍受人数、持牌旅行社、直飞金兰、同一口岸、庆和行程及 30 天上限约束，系统不自动判断资格；香港、澳门特区普通护照的越南旅游基线为需签证，可申请 e-Visa，停留期限未确认。富国岛对外国护照存在独立区域免签条件，须核实具体行程。e-Visa 有效期不替代获准停留期。约旦旅游局现行国籍表将中国、香港和澳门均列为可抵达办理签证、费用 40 JOD；未声明准许停留天数，因此期限留空，仅适用于对应普通护照，不外推至 Travel Pass 或其他旅行证件。老挝中国普通护照有独立 B3 落地签路线（13 个指定口岸、磨丁铁路除外），eVisa 是另一条可申请路线；不把 VOA 结论外推到港澳。老挝外交部名单列有港澳 eVisa 申请资格，但条款及资格页不能证明港澳整体入境要求，因此两条均为 `manual_review`。缅甸 eVisa 与机场落地签作为独立路线记录；中国及香港落地签试行期仍有效，澳门此前试行期于 2026-10-20 到期，未发现续期材料，故历史 VOA 记录进入 REVIEW，但澳门 eVisa 仍为单独当前路线。厄瓜多尔港澳普通护照记录分别由香港政府免签协定公告及澳门《2025 年鉴》支持，均限定最多停留 90 天。沙特中国普通护照记录为需签证、但不宣称 eVisa 是唯一渠道；澳门特区护照保留落地签及在线 eVisa 两条已核实路线。巴林中港澳国籍现同时列于 NPRA 落地签和在线申请名单，结论保留条款限制且不推断停留期限。哥斯达黎加三条路线由 2025-11-17 官方公报 AJ-484-11-2025 续核；埃及中国普通护照 eVisa 路线按内政部当前 FAQ 更新，未推断港澳 eVisa 资格。港澳赴孟加拉国证据不足、澳门赴阿联酋来源冲突仍未解决；其余路线详情见 `REVALIDATION_LOG.md` 及实时队列。
 
@@ -143,8 +145,8 @@ Phase 107 最新统计：141 个来源、147 条路线、143 条当前证据、1
 | 尼泊尔 | 香港特区护照 | 需签证，免费；签证年度累计最多 150 天 | 同样区分免费、免签、年度累计和单次停留；不扩展为澳门护照免费待遇 |
 | 尼泊尔 | 澳门特区护照 | 旅游落地签申请路线 | Nepaliport 官方 On-arrival Visa Application 的护照签发国列表列出 Macao Special Administrative Region of China（MAC，blacklisted=false）；确认可进入申请路线，但不保证签发、入境或停留天数 |
 | 孟加拉国 | 中国普通护照 | 旅游落地签，最多 30 天 | 官方驻北京使馆页面列明中国属于可按条件申请落地签的国籍；需返程票、访问证明、至少 500 美元或等值资金，最终由移民机关审查 |
-| 孟加拉国 | 香港特区护照 | REVIEW：China 类别是否覆盖 HKSAR 未明 | 内政部《Visa Policy 2026》列出中国但未列 HKSAR；另有按出发国等条件的 VOA 分支。该政策未给香港特区护照完整结论 |
-| 孟加拉国 | 澳门特区护照 | REVIEW：China 类别是否覆盖 Macao SAR 未明 | 内政部《Visa Policy 2026》列出中国但未列 Macao SAR；另有按出发国等条件的 VOA 分支。该政策未给澳门特区护照完整结论 |
+| 孟加拉国 | 香港特区护照 | 有条件旅游 VOA，最多 30 天 | 目的地列中国公民；香港入境处限定 HKSAR 护照签发对象为中国公民。指定口岸、返程票、访问目的证明、至少 USD 500/等值资金及移民机关批准；非免签、非保证签发 |
+| 孟加拉国 | 澳门特区护照 | 有条件旅游 VOA，最多 30 天 | 目的地列中国公民；澳门《2025 年鉴》限定澳门特区护照申请者为中国籍澳门永久居民。指定口岸、返程票、访问目的证明、至少 USD 500/等值资金及移民机关批准；非免签、非保证签发 |
 | 马尔代夫 | 中国普通护照、香港/澳门特区护照 | 旅游落地签 | 无需预先签证批准；另通过官方 IMUGA 免费提交 Traveller Declaration；官网正文未稳定显示天数，本轮不猜期限 |
 | 其他组合 | 任意 | REVIEW | 不根据模型记忆或第三方聚合器猜测 |
 
@@ -226,6 +228,8 @@ Phase 107 最新统计：141 个来源、147 条路线、143 条当前证据、1
 - [Bangladesh Consulate General in Hong Kong：Tourist Visa](https://hongkong.mofa.gov.bd/pages/static-pages/6952668735ce18e1c05a9d33)
 - [Bangladesh Consulate General in Hong Kong：Visa Fees](https://hongkong.mofa.gov.bd/pages/static-pages/6952667c35ce18e1c05a97fc)（Hong Kong/Macau 签证费率行；不补填统一停留期）
 - [Bangladesh Ministry of Home Affairs：Visa Policy 2026](https://moha.gov.bd/pages/static-pages/694032cb35ce18e1c05628ca)（内政部 2026 年 8 月发布、即时生效；旅游 T 类签证与 30 天 VOA 条款列 China，未说明是否包括 HKSAR/Macao SAR）
+- [Hong Kong Immigration Department：Application for HKSAR Passport](https://www.immd.gov.hk/eng/service/travel_document/apply_for_hksar_passport.html)（护照资格要求中国公民身份）
+- [Macao Government：Macao Yearbook 2025 — Personal Identity Cards](https://yearbook.gcs.gov.mo/yearbook_pdf/2025/myb2025ePA01CH22.pdf)（澳门特区护照仅供中国籍澳门永久居民申请）
 - [Maldives Immigration：Tourist Visa — On Arrival](https://www.immigration.gov.mv/visa/tourist-visa)
 - [Maldives Immigration：Traveller Declaration](https://www.immigration.gov.mv/traveller-declaration)
 - [Visit Qatar：Qatar Visa Check](https://visitqatar.com/intl-en/plan-your-trip/visas)

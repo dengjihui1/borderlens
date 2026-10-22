@@ -77,7 +77,7 @@ test('不机械续期受阻路线；沙特及巴林按当前官方证据更新',
   for (const sourceId of saudiChina.sourceIds) assert.ok(registry.sources.some((source: { id: string; status: string }) => source.id === sourceId && source.status === 'verified'));
   for (const sourceId of saudiMacao.sourceIds) assert.ok(registry.sources.some((source: { id: string; status: string }) => source.id === sourceId && source.status === 'verified'));
   const conflicts = (policies.rules as PolicyFixture[]).filter((rule) => rule.status === 'draft');
-  assert.equal(conflicts.length, 3);
+  assert.equal(conflicts.length, 1);
   assert.ok(conflicts.every((rule) => rule.outcome === 'manual_review'));
 });
 
@@ -523,7 +523,7 @@ test('尼泊尔中国及 HKSAR 护照需免费签证，澳门走官方落地签�
   assert.ok(byType.get('macao_sar_passport')!.conditions.some((condition: string) => condition.includes('不等于自动签发') && condition.includes('停留天数')));
 });
 
-test('孟加拉国中国普通护照落地签有直接证据，港澳费用行不能证明必须预先办签', async () => {
+test('孟加拉国按中国公民国籍类别适用条件VOA，港澳护照映射有官方依据', async () => {
   const policies = await readJson('../data/policies.seed.json');
   const bangladesh = policies.rules.filter((rule: PolicyFixture) => rule.destinationJurisdictionId === 'bd');
   assert.equal(bangladesh.length, 3);
@@ -531,23 +531,21 @@ test('孟加拉国中国普通护照落地签有直接证据，港澳费用行�
   assert.deepEqual([byType.get('ordinary_passport')!.status, byType.get('ordinary_passport')!.outcome, byType.get('ordinary_passport')!.maxStayDays], ['verified', 'visa_on_arrival', 30]);
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('中国') && condition.includes('30 天')));
   assert.ok(byType.get('ordinary_passport')!.conditions.some((condition: string) => condition.includes('500 美元') && condition.includes('返程票')));
-  for (const documentType of ['hksar_passport', 'macao_sar_passport']) {
-    assert.deepEqual([byType.get(documentType)!.status, byType.get(documentType)!.outcome, byType.get(documentType)!.maxStayDays], ['draft', 'manual_review', null]);
-    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('China') && condition.includes('不能推出必须预先办签')));
-    assert.ok(byType.get(documentType)!.sourceIds.includes('bd-hk-visa-fees'));
-    assert.ok(byType.get(documentType)!.sourceIds.includes('bd-online-mrv'));
-    assert.ok(byType.get(documentType)!.sourceIds.includes('bd-special-branch-voa'));
-    assert.ok(byType.get(documentType)!.sourceIds.includes('bd-paris-voa-policy-2026'));
-    assert.ok(byType.get(documentType)!.sourceIds.includes('bd-moha-visa-policy-2026'));
-    assert.ok(byType.get(documentType)!.sourceIds.includes('bd-moha-visa-waiver-agreements-2026-08'));
-    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('内政部') && condition.includes('未说明') && condition.includes('China')));
-    assert.ok(byType.get(documentType)!.conditions.some((condition: string) => condition.includes('双边免签协议清单') && condition.includes('不能确定') && condition.includes('普通护照待遇')));
-  }
+  const hk = byType.get('hksar_passport')!;
+  assert.deepEqual([hk.status, hk.outcome, hk.maxStayDays], ['verified', 'visa_on_arrival', 30]);
+  assert.ok(hk.sourceIds.includes('hk-immd-hksar-passport-eligibility'));
+  assert.ok(hk.conditions.some((condition: string) => condition.includes('中国公民')));
+  assert.ok(hk.conditions.some((condition: string) => condition.includes('不能视为保证获准停留满 30 天')));
+  const macao = byType.get('macao_sar_passport')!;
+  assert.deepEqual([macao.status, macao.outcome, macao.maxStayDays], ['verified', 'visa_on_arrival', 30]);
+  assert.ok(macao.sourceIds.includes('mo-dsi-macao-passport-eligibility'));
+  assert.ok(macao.conditions.some((condition: string) => condition.includes('中国国籍')));
+  assert.ok(macao.conditions.some((condition: string) => condition.includes('不能视为保证获准停留满 30 天')));
   const mrv = (await readJson('../data/official-source-registry.json')).sources.find((source: { id: string }) => source.id === 'bd-online-mrv');
   assert.deepEqual([mrv.checkedAt, mrv.nextReviewAt], ['2026-10-22', '2026-11-21']);
   assert.match(mrv.notes, /NEW VISA, EXTENSION, NVR and ON ARRIVAL VISA/);
   assert.ok(byType.get('hksar_passport')!.evidenceExcerpt.includes('Hong Kong'));
-  assert.ok(byType.get('macao_sar_passport')!.evidenceExcerpt.includes('Macau'));
+  assert.ok(byType.get('macao_sar_passport')!.evidenceExcerpt.includes('Macao Yearbook'));
   const policy = (await readJson('../data/official-source-registry.json')).sources.find((source: { id: string }) => source.id === 'bd-moha-visa-policy-2026');
   assert.deepEqual([policy.status, policy.checkedAt, policy.nextReviewAt], ['verified', '2026-10-22', '2026-11-21']);
   assert.match(policy.notes, /August 2026.*immediate effect/);
@@ -769,10 +767,10 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 141);
+  assert.equal(registry.sources.length, 143);
   assert.equal(policies.rules.length, 147);
-  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 144);
-  assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);
+  assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 146);
+  assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa']);
   assert.equal(registry.sources.filter((source: { id: string }) => source.id === 'hk-gov-ecuador-visa-free-90').length, 1);
 });
 
