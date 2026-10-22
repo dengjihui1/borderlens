@@ -235,8 +235,14 @@ test('阿联酋按当前外交部卡片核验，澳门官方来源冲突必须 R
   }
   const macao = byId.get('ae-mo-macao-sar-tourism-advance-visa')!;
   assert.deepEqual([macao.status, macao.outcome, macao.maxStayDays], ['draft', 'manual_review', null]);
+  assert.deepEqual([macao.checkedAt, macao.reviewDueAt], ['2026-10-22', '2026-11-21']);
   assert.ok(macao.conditions.some((condition) => condition.includes('当前阿联酋外交部卡片') && condition.includes('澳门政府记录')));
   assert.ok(macao.sourceIds.includes('mo-govmo-uae-visa-free-notice'));
+  const registry = await readJson('../data/official-source-registry.json');
+  for (const id of ['ae-mofa-visa-exemptions-non-citizen', 'mo-yearbook-2025-visa-treatment', 'mo-govmo-uae-visa-free-notice']) {
+    const source = registry.sources.find((candidate: { id: string }) => candidate.id === id);
+    assert.deepEqual([source.checkedAt, source.nextReviewAt], ['2026-10-22', '2026-11-21']);
+  }
 });
 
 test('中国内地非中国籍港澳永久居民通行证规则限制为短期用途', async () => {

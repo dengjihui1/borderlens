@@ -1,5 +1,11 @@
 # BorderLens 规则重新核验日志
 
+## Phase 95 · 阿联酋—澳门官方资料冲突续核（2026-10-22）
+
+直接重读阿联酋外交部[非公民签证豁免国籍卡](https://www.mofa.gov.ae/en/visa-exemptions-for-non-citizen/)：当前渲染内容将 “Macao Special Administrative Region of the Peoples Republic of China” 标为 `Visa Required`；香港卡片单独标为 `Visa Free`。未将外交部[按目的地出境信息](https://www.mofa.gov.ae/en/travel-updates?code=mac)中“Tourism: 30 days”误作澳门护照入境 UAE 的证据，该页面是 UAE 公民前往澳门的要求。
+
+同时重读澳门政府[2019 年公告](https://www.gov.mo/en/news/114215/)（称澳门政府曾收到 UAE 政府正式通知，澳门特区护照可免签入境最多 30 天）及[《澳门年鉴 2025》附录九](https://yearbook.gcs.gov.mo/yearbook_pdf/2025/myb2025cAP09.pdf)印刷第 523 页（仍列 30 天；第 528 页脚注 f 只涉及特区旅行证）。新读到的 UAE 当前卡片与澳门政府公告/年鉴仍互相冲突，未发现当前 UAE 主管机关对澳门特区护照的专属说明可消解差异。三项来源和路线核验日期更新至 2026-10-22，复核截止 2026-11-21；保持 `draft / manual_review`、停留天数为空，不推断免签、落地签或预先签证。队列总数不变。
+
 ## Phase 94 · 新西兰中国普通护照赴澳试点条件续核（2026-10-22）
 
 重读新西兰移民局[中国及太平洋岛国访客从澳大利亚赴新西兰说明](https://www.immigration.govt.nz/visit/what-you-need-to-visit-new-zealand/chinese-and-pacific-island-visitors-travelling-from-australia/)及[免签访客签证规则](https://www.immigration.govt.nz/visas/visa-waiver-visitor-visa/)。官方当前说明：该试点自 2025-11-03 开始，虽按 12 个月评估，但评估期间可继续申请使用 NZeTA、直至另行通知。中国普通护照旅客须已入境澳大利亚并从澳洲机场直飞新西兰，持官方列举且值机时有效的澳大利亚签证，并有有效 NZeTA；途经澳洲转机不适用。获准入境后边境签发访客签证，NZeTA 分支每次最多停留 3 个月。官方页面列有可用签证类别/子类，但工具不检查个人持证状态、有效期、NZeTA 或边境许可。
