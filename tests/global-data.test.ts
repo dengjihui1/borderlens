@@ -239,10 +239,11 @@ test('阿联酋按当前外交部卡片核验，澳门官方来源冲突必须 R
   assert.ok(macao.conditions.some((condition) => condition.includes('当前阿联酋外交部卡片') && condition.includes('澳门政府记录')));
   assert.ok(macao.sourceIds.includes('mo-govmo-uae-visa-free-notice'));
   const registry = await readJson('../data/official-source-registry.json');
-  for (const id of ['ae-mofa-visa-exemptions-non-citizen', 'mo-yearbook-2025-visa-treatment', 'mo-govmo-uae-visa-free-notice']) {
+  for (const id of ['ae-mofa-visa-exemptions-non-citizen', 'mo-yearbook-2025-visa-treatment', 'mo-govmo-uae-visa-free-notice', 'mo-dsi-macao-passport-visa-free-list-2026-01']) {
     const source = registry.sources.find((candidate: { id: string }) => candidate.id === id);
     assert.deepEqual([source.checkedAt, source.nextReviewAt], ['2026-10-22', '2026-11-21']);
   }
+  assert.equal(registry.sources.find((source: { id: string }) => source.id === 'mo-dsi-macao-passport-visa-free-list-2026-01').status, 'blocked');
 });
 
 test('中国内地非中国籍港澳永久居民通行证规则限制为短期用途', async () => {
@@ -744,7 +745,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 135);
+  assert.equal(registry.sources.length, 136);
   assert.equal(policies.rules.length, 147);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 144);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);

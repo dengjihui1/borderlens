@@ -700,10 +700,11 @@
       "sourceIds": [
         "ae-mofa-visa-exemptions-non-citizen",
         "mo-yearbook-2025-visa-treatment",
-        "mo-govmo-uae-visa-free-notice"
+        "mo-govmo-uae-visa-free-notice",
+        "mo-dsi-macao-passport-visa-free-list-2026-01"
       ],
-      "evidenceLocator": "UAE MOFA > Visa Exemptions for Non Citizen > Macao card (visa-required); Macao Government Portal > DSI notice published 2019-06-27; Macao Yearbook 2025 Appendix 09, printed page 523 and footnote f on page 528",
-      "evidenceExcerpt": "The current UAE MOFA Macao card says Visa Required. The Macao SAR Government reports that it was officially informed by the UAE Government on visa-free entry for Macao SAR passport holders for up to 30 days, and the 2025 yearbook repeats 30-day treatment. The conflicting official records do not resolve the current requirement; the route remains manual review with no asserted stay period.",
+      "evidenceLocator": "UAE MOFA > Visa Exemptions for Non Citizen > Macao card (visa-required); Macao Government Portal > DSI notice published 2019-06-27; Macao Yearbook 2025 Appendix 09, printed page 523 and footnote f on page 528; Macao DSI > visa-free/visa-on-arrival list for Macao SAR passport holders, dated 23-01-2026 > Asia > United Arab Emirates (30 days)",
+      "evidenceExcerpt": "The current UAE MOFA Macao card says Visa Required. Macao's 2019 government notice, 2025 yearbook and DSI's 23-01-2026 passport list report visa-free access for up to 30 days. These official records still conflict with the current UAE MOFA card; the route remains manual review with no asserted stay period.",
       "checkedAt": "2026-10-22",
       "reviewDueAt": "2026-11-21"
     },

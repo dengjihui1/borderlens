@@ -2,6 +2,10 @@
 
 这份日志记录从点子到可运行产品的关键决策，重点不是手写代码，而是如何指挥 Codex 把高风险 Agent 做得可靠。
 
+## Phase 97｜澳门 DSI 免签清单冲突补证（2026-10-22）
+
+登记澳门 DSI 的 2026-01-23 官方护照免签清单检索记录：索引正文列 UAE 最多 30 天，但 PDF 当前直连返回 404，故来源标为 blocked、只作补充发现依据；不覆盖 UAE MOFA 当前 Visa Required 卡片，澳门路线继续 REVIEW。更新证据定位、来源状态测试和来源总数断言。验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建）；`npm run smoke` 31 项生产 Worker HTTP 检查通过；`git diff --check` 通过。路线 147、来源 136、当前有效证据 143、当前结论 137、REVIEW 10。
+
 ## Phase 96｜孟加拉国官方 MRV 门户复核（2026-10-22）
 
 直接读取孟加拉国官方 Online MRV Portal 的当前说明及费用表，确认它提供 NEW VISA、EXTENSION、NVR、ON ARRIVAL VISA 等申请表，并分别列出 Hong Kong 与 Macau 的费用。门户申请类别/费用记录不说明护照专属入境待遇，也没有解释 Special Branch VOA 页面中的 China 是否包括 HKSAR/Macao。两条路线继续 REVIEW。验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建），生产 Worker `npm run smoke -- http://127.0.0.1:4179` 31 项检查通过，`git diff --check` 通过；队列仍为 147 条路线、135 个来源、143 条当前有效证据、137 条当前结论、10 条 REVIEW。
