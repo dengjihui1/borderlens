@@ -92,14 +92,18 @@ test('Phase 71 复核拉美十二条及中国籍回乡证两条，回乡证仍�
   }
   for (const rule of rules.filter((rule) => rule.documentType === 'home_return_permit')) {
     assert.equal(rule.outcome, 'manual_review');
-    assert.deepEqual(rule.sourceIds, ['cn-nia-mainland-travel-permit']);
+    assert.deepEqual(rule.sourceIds, ['cn-nia-mainland-travel-permit', 'cn-nia-smart-clearance-2025']);
     assert.ok(rule.conditions.some((line) => line.includes('符合申领条件不等于已持证')));
+    assert.ok(rule.conditions.some((line) => line.includes('年满14周岁') && line.includes('面相/指纹核验')));
   }
   const source = registry.sources.find((source: { id: string }) => source.id === 'cn-nia-mainland-travel-permit');
   assert.equal(source.url, 'https://www.nia.gov.cn/n741445/n741604/n1787219/n1795772/c1792480/content.html');
   assert.equal(source.checkedAt, '2026-10-22');
   assert.equal(source.nextReviewAt, '2026-11-21');
   assert.match(source.notes, /gatjm.json/);
+  const smartClearance = registry.sources.find((source: { id: string }) => source.id === 'cn-nia-smart-clearance-2025');
+  assert.equal(smartClearance.url, 'https://www.nia.gov.cn/n794014/n794021/c1751080/content.html');
+  assert.match(smartClearance.notes, /port\/channel-specific/);
 });
 
 test('联合国 M49 目录包含全球法域且代码唯一', async () => {
@@ -763,7 +767,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 140);
+  assert.equal(registry.sources.length, 141);
   assert.equal(policies.rules.length, 147);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 144);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa', 'bd-hk-hksar-tourism-review', 'bd-mo-macao-sar-tourism-review']);
