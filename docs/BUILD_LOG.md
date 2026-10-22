@@ -4,7 +4,7 @@
 
 ## Phase 97｜澳门 DSI 免签清单冲突补证（2026-10-22）
 
-登记澳门 DSI 的 2026-01-23 官方护照免签清单检索记录：索引正文列 UAE 最多 30 天，但 PDF 当前直连返回 404，故来源标为 blocked、只作补充发现依据；不覆盖 UAE MOFA 当前 Visa Required 卡片，澳门路线继续 REVIEW。更新证据定位、来源状态测试和来源总数断言。验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建）；`npm run smoke` 31 项生产 Worker HTTP 检查通过；`git diff --check` 通过。路线 147、来源 136、当前有效证据 143、当前结论 137、REVIEW 10。
+登记澳门 DSI 的 2026-01-23 官方护照免签清单检索记录：索引正文列 UAE 最多 30 天，但 PDF 当前直连返回 404，故来源标为 blocked、只作补充发现依据；不覆盖 UAE MOFA 当前 Visa Required 卡片，澳门路线继续 REVIEW。更新证据定位、来源状态测试和来源总数断言，并将 README、项目计划、数据库计划及来源台账同步到 Phase 97 / 136 来源。验证：`npm run check` 通过（92 项测试、lint、TypeScript、数据校验、生产构建）；`npm run smoke` 31 项生产 Worker HTTP 检查通过；`git diff --check` 通过。路线 147、来源 136、当前有效证据 143、当前结论 137、REVIEW 10。
 
 ## Phase 96｜孟加拉国官方 MRV 门户复核（2026-10-22）
 
