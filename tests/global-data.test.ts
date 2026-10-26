@@ -442,14 +442,12 @@ test('缅甸电子签与航空落地签分开建模并执行试行期限门禁',
   assert.equal(isPolicyRuleCurrent(chineseVoa, new Date('2026-10-21T12:00:00Z')), true);
   assert.equal(isPolicyRuleCurrent(hongKongVoa, new Date('2026-10-22T12:00:00Z')), true);
   assert.equal(isPolicyRuleCurrent(hongKongVoa, new Date('2026-11-22T00:00:00Z')), false);
-  assert.deepEqual([macaoVoa.checkedAt, macaoVoa.reviewDueAt], ['2026-10-22', '2026-11-21']);
-  assert.ok(macaoVoa.sourceIds.includes('mm-cn-india-voa-extension-2026'));
-  assert.ok(macaoVoa.sourceIds.includes('mm-cn-india-voa-extension-consulate-2026'));
-  assert.ok(macaoVoa.sourceIds.includes('mm-consulate-hk-announcement-index'));
-  assert.ok(macaoVoa.conditions.some((condition: string) => condition.includes('中华人民共和国护照持有人') && condition.includes('不能据此延长澳门')));
-  assert.ok(macaoVoa.conditions.some((condition: string) => condition.includes('不得仅凭未列澳门延期推断政策永久取消')));
-  assert.equal(isPolicyRuleCurrent(macaoVoa, new Date('2026-10-21T12:00:00Z')), false);
-  assert.equal(isPolicyRuleCurrent(macaoVoa, new Date('2026-10-22T12:00:00Z')), false);
+  assert.deepEqual([macaoVoa.checkedAt, macaoVoa.reviewDueAt, macaoVoa.effectiveUntil], ['2026-10-26', '2026-11-25', '2027-10-20T23:59:59+06:30']);
+  assert.ok(macaoVoa.sourceIds.includes('mm-mo-voa-extension-consulate-2026'));
+  assert.ok(macaoVoa.conditions.some((condition: string) => condition.includes('澳门特区护照') && condition.includes('2027-10-20')));
+  assert.ok(macaoVoa.conditions.some((condition: string) => condition.includes('USD 50') && condition.includes('30 天')));
+  assert.equal(isPolicyRuleCurrent(macaoVoa, new Date('2026-10-26T12:00:00Z')), true);
+  assert.equal(isPolicyRuleCurrent({ ...macaoVoa, reviewDueAt: '2027-11-01' }, new Date('2027-10-20T17:30:00Z')), false);
 });
 
 test('文莱中国普通及港澳特区护照均为 D3 14 天免签', async () => {
@@ -769,7 +767,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 144);
+  assert.equal(registry.sources.length, 145);
   assert.equal(policies.rules.length, 147);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 146);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa']);

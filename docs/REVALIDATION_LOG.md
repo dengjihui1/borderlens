@@ -1,5 +1,11 @@
 # BorderLens 规则重新核验日志
 
+## Phase 111 · 澳门特区护照缅甸航空落地签第二年续期（2026-10-26）
+
+直接打开缅甸驻港总领馆[澳门、日本、韩国游客落地签试行续期公告](https://myanmarconsulatehk.org/announcement-on-the-extension-of-the-trial-period-for-the-tourist-visa-on-arrival-scheme-for-passport-holders-of-the-macao-special-administrative-region-of-the-peoples-republic-of-china-japan-and-t/)及其[官方公告原图](https://myanmarconsulatehk.org/wp-content/uploads/2026/10/20261023-03.jpg)。2026-10-22 公告明确点名澳门特区护照持有人乘飞机抵达，并将同一旅游落地签试行延长第二个一年期：2026-10-21 至 2027-10-20。它与 Phase 110 所读的中国/印度旅客公告是两项不同的续期。缅甸旅游部当前 [Visa on Arrival 条件页](https://tourism.gov.mm/en/information-pages/visa-on-arrival) 仍显示上一试行年份，但列有澳门路线的机场、USD 50、30 天、护照至少剩余 6 个月、申请表和 2 张彩色照片、不得延期等条件；新续期公告未重述操作条件，出行前须核对。
+
+将澳门航空 VOA 路线的临时有效截止更新至缅甸时间 2027-10-20 23:59:59，刷新核验窗口并关联新官方来源。仅允许澳门特区护照、旅游、航空入境分支；不扩展到澳门旅行证、陆路/海路、其他用途或缅甸 eVisa。回归测试覆盖来源、当前结论、到期门禁和全库计数；93 项测试、lint、类型检查、数据校验、构建及本地生产 Worker 32 项 HTTP smoke 通过。至 2026-10-26，145 个官方/国际来源、147 条路线、146 条当前证据、142 条当前可展示结论、5 条 REVIEW（1 条阿联酋—澳门冲突、4 条个人/整体条件复核）。
+
 ## Phase 110 · 缅甸澳门 VOA 到期后范围核验（2026-10-22）
 
 直接重读缅甸驻港总领馆 2026-10-15 [延期公告](https://myanmarconsulatehk.org/extension-of-trial-tourist-visa-on-arrival-for-china-india/) 及其[官方公告原图](https://myanmarconsulatehk.org/wp-content/uploads/2026/10/20261016-01.jpg)。原图将新一轮试行对象限定为中华人民共和国护照持有人和印度旅客乘飞机入境，期限为 2026-08-30 至 2027-08-29；没有明确写明澳门特区护照。缅甸旅游部当前 [Visa on Arrival 页面](https://tourism.gov.mm/en/information-pages/visa-on-arrival) 对澳门特区的独立试行仍写明自 2025-10-21 起一年，即于 2026-10-20 到期。

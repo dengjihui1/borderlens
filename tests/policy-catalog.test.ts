@@ -3,7 +3,7 @@ import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { buildPolicyCatalog, emptyFilters, filterPolicyCatalog, getCatalogPage, getReviewQueue, parseCatalogFilters, type CatalogRule } from '../lib/policy-catalog.ts';
 
-const now = new Date('2026-10-22T12:00:00Z');
+const now = new Date('2026-10-26T12:00:00Z');
 const rule: CatalogRule = {
   id: 'test-hk', destinationJurisdictionId: 'jp', documentIssuerJurisdictionId: 'hk', documentType: 'hksar_passport',
   purpose: 'tourism', borderMode: 'any', status: 'verified', outcome: 'visa_free', checkedAt: '2026-10-21', reviewDueAt: '2026-11-20',
@@ -89,9 +89,9 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
   const [policies, registry] = await Promise.all([readJson('../data/policies.seed.json'), readJson('../data/official-source-registry.json')]);
   const entries = buildPolicyCatalog(policies.rules, registry.sources, now);
   assert.equal(entries.length, 147);
-  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 145);
-  assert.equal(entries.filter((entry) => entry.conclusion).length, 141);
-  assert.equal(getReviewQueue(entries).length, 6);
+  assert.equal(entries.filter((entry) => entry.evidenceCurrent).length, 146);
+  assert.equal(entries.filter((entry) => entry.conclusion).length, 142);
+  assert.equal(getReviewQueue(entries).length, 5);
   for (const id of ['la-hk-hksar-tourism-evisa', 'la-mo-macao-sar-tourism-evisa']) {
     const entry = entries.find((candidate) => candidate.id === id)!;
     assert.equal(entry.evidenceCurrent, true);
@@ -116,7 +116,7 @@ test('真实库 147 条全部可查；证据有效、确定结论与 REVIEW 数�
     assert.equal(entry.conclusion?.label, '免签路线');
     assert.match(entry.conclusion?.stay.join(' ') ?? '', /90 天/);
   }
-  assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T23:59:59Z')).filter((entry) => entry.conclusion).length, 14);
+  assert.equal(buildPolicyCatalog(policies.rules, registry.sources, new Date('2026-11-21T23:59:59Z')).filter((entry) => entry.conclusion).length, 15);
 });
 
 test('分页覆盖全部记录，不重复、不丢失，错误页码不退回宽泛结果', () => {

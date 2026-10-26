@@ -1675,25 +1675,21 @@
       "maxStayDays": 30,
       "visaProductName": "Myanmar Tourist Visa on Arrival (pilot)",
       "conditions": [
-        "缅甸官方 2025-11 公告将澳门特区护照游客的航空落地签试行期延至 2026-10-20；该试行期现已结束。",
-        "缅甸驻港总领馆 2026-10-15 公告原图将中国 VOA 适用对象写为中华人民共和国护照持有人，并仅列中国和印度乘飞机旅客，试行期为 2026-08-30 至 2027-08-29；没有明确点名澳门特区护照，不能据此延长澳门的独立试行。",
-        "缅甸驻港总领馆当前公告目录仍列 2025-10-30 澳门、日本、韩国通知；2026-06-19 的另一份续期仅针对香港护照。公告目录仅作时间线，不得仅凭未列澳门延期推断政策永久取消；出行前仍须向主管机关确认当前状态。",
-        "历史公告记载 USD 50、最多停留 30 天、需 6 个月有效期护照及 2 张照片；这些已过期的历史条件不作为当前入境结论。"
+        "缅甸驻港总领馆 2026-10-22 公告原图明确将澳门特区护照、日本及韩国护照游客的航空落地签试行期再延一年，自 2026-10-21 至 2027-10-20；这与中国/印度旅客的另一项试行不同。",
+        "缅甸旅游部当前落地签条件页列明仅限国际机场入境的旅游落地签，费用 USD 50、停留 30 天、护照至少剩余 6 个月、提交申请表及 2 张彩色照片，不允许延期。新续期公告未重述这些操作条件，出发前应再次核对。",
+        "只适用于澳门特区护照持有人乘飞机抵达缅甸国际机场；不扩展到澳门旅行证、其他目的或陆路/海路口岸，最终准予入境由缅甸主管机关决定。eVisa 为另一路线。"
       ],
       "status": "verified",
       "sourceIds": [
         "mm-tourist-voa-general",
         "mm-mo-voa-extension-2025",
-        "mm-cn-india-voa-extension-2026",
-        "mm-cn-india-voa-extension-consulate-2026",
-        "mm-consulate-hk-announcement-index",
-        "mo-myanmar-voa-notice-2024"
+        "mm-mo-voa-extension-consulate-2026"
       ],
-  "evidenceLocator": "Myanmar Ministry of Hotels and Tourism > current English Visa on Arrival page, Macao pilot period; 2025-11 Macao extension notice; Myanmar Consulate General in Hong Kong > 2026-10-15 China and India extension notice image",
-  "evidenceExcerpt": "The ministry page states the Macao SAR pilot began on 21 October 2025 for one year, ending 20 October 2026. The consulate's 15 October 2026 notice extends a separate air-arrival pilot for PRC passport holders and Indian nationals through 29 August 2027; it does not explicitly name Macao SAR passports. This does not renew Macao's expired pilot; keep its historical conclusion hidden and reconfirm with the authority before travel.",
-  "checkedAt": "2026-10-22",
-  "reviewDueAt": "2026-11-21",
-      "effectiveUntil": "2026-10-20T23:59:59+06:30"
+      "evidenceLocator": "Myanmar Consulate General in Hong Kong > 2026-10-22 Macao/Japan/Korea tourist VOA extension announcement > official image 20261023-03.jpg; Ministry of Hotels and Tourism > Visa on Arrival > Macao conditions",
+      "evidenceExcerpt": "The consulate's 22 October 2026 notice explicitly extends the air-arrival tourist VOA trial for Macao SAR passport holders from 21 October 2026 to 20 October 2027. The ministry's current VOA page retains the airport-only tourist conditions: USD 50, 30-day stay, six-month passport validity, two photos and no extension; its pilot date text has not yet been updated.",
+      "checkedAt": "2026-10-26",
+      "reviewDueAt": "2026-11-25",
+      "effectiveUntil": "2027-10-20T23:59:59+06:30"
     },
     {
       "id": "mm-cn-prc-ordinary-tourism-evisa",

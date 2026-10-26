@@ -23,7 +23,7 @@ const checks = [
   { path: '/policies?destination=om', text: ['免签路线', '最多 14 天', '不可延期'], cards: 3, noText: ['26A/26B'] },
   { path: '/policies?destination=jo', text: ['当前证据有效', '可按条件申请落地签', '40 JOD', '复核截止', '停留天数'], cards: 3, noText: ['最多 14 天'] },
   { path: '/policies?destination=mm&document=cn%3Aordinary_passport&mode=air', text: ['mm-cn-prc-ordinary-tourism-evisa', 'mm-cn-prc-ordinary-tourism-voa', '可按条件申请落地签'], cards: 2 },
-  { path: '/policies?destination=mm&document=mo%3Amacao_sar_passport&mode=air', text: ['mm-mo-macao-sar-tourism-evisa', 'mm-mo-macao-sar-tourism-voa', '已过复核期限或日期无效'], cards: 2 },
+  { path: '/policies?destination=mm&document=mo%3Amacao_sar_passport&mode=air', text: ['mm-mo-macao-sar-tourism-evisa', 'mm-mo-macao-sar-tourism-voa', '可按条件申请落地签', '停留上限字段：30 天', '2027-10-20'], cards: 2, noText: ['已过复核期限或日期无效'] },
   { path: '/policies?destination=cn&document=hk%3Amainland_travel_permit_non_chinese', text: ['当前证据有效', '每次停留不超过 90 日', '依法登记住宿'], cards: 1 },
   { path: '/policies?destination=cn&document=hk%3Ahome_return_permit', text: ['证据有效，但个体条件仍需人工核验', '符合申领条件不等于已持证'], cards: 1, noText: ['已过复核期限或日期无效'] },
   { path: '/policies?destination=mx&document=cn%3Aordinary_passport', text: ['不适用独立免签例外', '有效多次入境', '180 天'], cards: 1 },
