@@ -198,7 +198,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid #
 .journey-hero-actions { display:flex; align-items:center; flex-wrap:wrap; gap:20px; margin-top:24px; }
 .journey-hero-actions .primary-button { width:auto; min-height:44px; text-decoration:none; box-shadow:none; }
 .journey-hero-actions .primary-button svg:last-child { margin-left:8px; }
-.journey-hero-actions>a:not(.primary-button) { color:#dbeaff; font-size:13px; font-weight:650; text-underline-offset:4px; }
 .journey-examples { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:18px 0; }
 .journey-examples>span { color:var(--muted); font-size:12px; margin-right:5px; }
 .journey-examples button,.journey-secondary { display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:11px 14px; border:1px solid #bdcfe7; background:white; color:var(--blue); border-radius:9px; cursor:pointer; font-size:12px; font-weight:650; min-height:42px; }

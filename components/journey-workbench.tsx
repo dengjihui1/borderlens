@@ -79,7 +79,7 @@ export function JourneyWorkbench({ entries, destinations, documents, today }: { 
     <section className="policy-heading journey-heading">
       <h1>逐段核对入境规则</h1>
       <p>选实际证件与行程，查看每段条件和官方来源。</p>
-      <div className="journey-hero-actions"><a className="primary-button" href="#journey-form">开始自查 <ArrowRight size={16} /></a><Link href="/policies">查单条规则</Link></div>
+      <div className="journey-hero-actions"><a className="primary-button" href="#journey-form">开始自查 <ArrowRight size={16} /></a></div>
     </section>
     <div className="journey-shell">
       <aside className="policy-boundary"><strong>仅供出发前自查，不是入境许可；REVIEW 须向官方核对。</strong><details><summary>查看适用边界</summary><p>空侧转机、居民 / 公民返境、出境要求及个人第三国资格保留人工复核。日期按 UTC 日终保守核验；超出证据复核窗口或临时条款截止，隐藏结论。勾选自查不会变成 READY，不计算历史 90/180 或年度累计。</p></details></aside>
