@@ -34,11 +34,11 @@ npm run lint
 npm run build
 ```
 
-完整质量门禁：`npm run check`。复核队列：`npm run data:review`（可追加 `-- 2026-10-21` 固定日期重放）。GitHub Actions 在 push / PR 时运行相同质量门禁。构建后启动本地 Worker，再运行 `npm run smoke -- http://127.0.0.1:4179` 可复现 40 项 HTTP 页面验收；该命令拒绝生产域名，避免绕过站点认证。
+完整质量门禁：`npm run check`。复核队列：`npm run data:review`（可追加 `-- 2026-10-21` 固定日期重放）。GitHub Actions 在 push / PR 时运行相同质量门禁。构建后启动本地 Worker，再运行 `npm run smoke -- http://127.0.0.1:4179` 可复现 42 项 HTTP 页面验收；该命令拒绝生产域名，避免绕过站点认证。
 
 统筹后的范围、验收和未完成项见 [项目交付计划](docs/PROJECT_PLAN.md)。证据核验有效不等于个人已满足全部条件，也不等于通关许可。
 
-中英文对外发布门槛与海内外宣发节奏见 [发布与宣发计划](docs/LAUNCH_PLAN.md)。本站目前保持仅所有者可访问，验收前不对外宣发。
+中英文直接公开后的发行节奏与海内外渠道见 [发布与宣发计划](docs/LAUNCH_PLAN.md)。网站已公开；社交平台发帖与付费投流仍需在各账号执行。
 
 ## 产品边界
 

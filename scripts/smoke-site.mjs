@@ -8,9 +8,11 @@ const sourceRegistry = JSON.parse(await readFile(new URL('../data/official-sourc
 const formattedSourceCount = new Intl.NumberFormat('zh-CN').format(sourceRegistry.sources.length);
 const bhId = policies.rules.find((rule) => rule.destinationJurisdictionId === 'bh').id;
 const checks = [
+  { path: '/robots.txt', text: ['Sitemap: https://borderlens-travel.dengjihuiii.chatgpt.site/sitemap.xml'] },
+  { path: '/sitemap.xml', text: ['<urlset', 'hreflang="zh-CN"', 'hreflang="en"', '/en/policies'], noText: ['/demo'] },
   { path: '/', text: ['<html lang="zh-CN">', '逐段核对入境规则', '生成逐段自查清单', '添加返程目的地', 'href="/en"'] },
   { path: '/en', text: ['<html lang="en">', 'Check every border on your route', 'Create leg-by-leg checklist', 'Add return destination', 'href="/"'], noText: ['逐段核对入境规则'] },
-  { path: '/demo', text: ['逐段演示规则已过期，历史结论已隐藏', '查询全部已录入证件规则'] },
+  { path: '/demo', text: ['逐段演示规则已过期，历史结论已隐藏', '查询全部已录入证件规则', 'name="robots" content="noindex, nofollow"'] },
   { path: '/coverage', text: ['全球政策数据库 · 当前官方来源状态', '当前有效的受控规则', '各组规则的当前状态'], noText: ['Phase 87'], sourceCount: true },
   { path: '/policies', text: ['证件规则查询', '下一页', 'href="/en/policies"'], cards: 12 },
   { path: '/en/policies', text: ['<html lang="en">', 'Travel-document rules', 'Next →', 'All recorded conditions' ], cards: 12 },
