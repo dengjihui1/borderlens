@@ -164,12 +164,14 @@ test('新西兰规则区分港澳护照与中国护照的澳大利亚例外', as
   const china = byId.get('nz-cn-prc-ordinary-tourism-exception-review')!;
   assert.equal(china.outcome, 'manual_review');
   assert.deepEqual(china.sourceIds, ['nz-immigration-waiver', 'nz-immigration-china-australia-pilot']);
-  assert.equal(china.checkedAt, '2026-10-22');
-  assert.equal(china.reviewDueAt, '2026-11-21');
+  assert.equal(china.checkedAt, '2026-10-26');
+  assert.equal(china.reviewDueAt, '2026-11-25');
   assert.ok(china.conditions.some((condition) => condition.includes('转机不符合条件')));
   assert.ok(china.conditions.some((condition) => condition.includes('有效 NZeTA')));
   const chinaPilot = registry.sources.find((source: { id: string }) => source.id === 'nz-immigration-china-australia-pilot');
   assert.equal(chinaPilot.status, 'verified');
+  assert.deepEqual([chinaPilot.checkedAt, chinaPilot.nextReviewAt], ['2026-10-26', '2026-11-25']);
+  assert.match(chinaPilot.notes, /October 2026 update/);
   assert.match(chinaPilot.url, /immigration\.govt\.nz\/visit\/what-you-need-to-visit-new-zealand\/chinese-and-pacific-island-visitors-travelling-from-australia/);
   assert.equal(byId.get('nz-hk-hksar-tourism-visa-waiver')!.maxStayMonths, 3);
   assert.equal(byId.get('nz-mo-macao-sar-tourism-visa-waiver')!.maxStayMonths, 3);
@@ -239,17 +241,22 @@ test('阿联酋按当前外交部卡片核验，澳门官方来源冲突必须 R
   }
   const macao = byId.get('ae-mo-macao-sar-tourism-advance-visa')!;
   assert.deepEqual([macao.status, macao.outcome, macao.maxStayDays], ['draft', 'manual_review', null]);
-  assert.deepEqual([macao.checkedAt, macao.reviewDueAt], ['2026-10-22', '2026-11-21']);
-  assert.ok(macao.conditions.some((condition) => condition.includes('当前阿联酋外交部卡片') && condition.includes('澳门政府记录')));
+  assert.deepEqual([macao.checkedAt, macao.reviewDueAt], ['2026-10-26', '2026-11-25']);
+  assert.ok(macao.conditions.some((condition) => condition.includes('当前两处阿联酋官方页面') && condition.includes('澳门政府记录')));
   assert.ok(macao.sourceIds.includes('mo-govmo-uae-visa-free-notice'));
+  assert.ok(macao.sourceIds.includes('ae-washington-embassy-non-us-visas'));
   const registry = await readJson('../data/official-source-registry.json');
-  for (const id of ['ae-mofa-visa-exemptions-non-citizen', 'mo-yearbook-2025-visa-treatment', 'mo-govmo-uae-visa-free-notice', 'mo-dsi-macao-passport-visa-free-list-2026-01']) {
+  for (const id of ['ae-mofa-visa-exemptions-non-citizen', 'ae-washington-embassy-non-us-visas']) {
+    const source = registry.sources.find((candidate: { id: string }) => candidate.id === id);
+    assert.deepEqual([source.checkedAt, source.nextReviewAt], ['2026-10-26', '2026-11-25']);
+  }
+  for (const id of ['mo-yearbook-2025-visa-treatment', 'mo-govmo-uae-visa-free-notice', 'mo-dsi-macao-passport-visa-free-list-2026-01']) {
     const source = registry.sources.find((candidate: { id: string }) => candidate.id === id);
     assert.deepEqual([source.checkedAt, source.nextReviewAt], ['2026-10-22', '2026-11-21']);
   }
   assert.equal(registry.sources.find((source: { id: string }) => source.id === 'mo-dsi-macao-passport-visa-free-list-2026-01').status, 'blocked');
   const dsiVisaList = registry.sources.find((source: { id: string }) => source.id === 'mo-dsi-macao-passport-visa-free-list-2026-01');
-  assert.equal(dsiVisaList.lastAttemptedAt, '2026-10-22');
+  assert.equal(dsiVisaList.lastAttemptedAt, '2026-10-26');
   assert.match(dsiVisaList.notes, /both .* returned 404/);
 });
 
@@ -767,7 +774,7 @@ test('厄瓜多尔区分中国普通护照签证与港澳特区护照 90 天免�
 test('全库保留结构化路线及有明确原因的人工复核记录', async () => {
   const registry = await readJson('../data/official-source-registry.json');
   const policies = await readJson('../data/policies.seed.json');
-  assert.equal(registry.sources.length, 145);
+  assert.equal(registry.sources.length, 146);
   assert.equal(policies.rules.length, 147);
   assert.equal(policies.rules.filter((rule: PolicyFixture) => rule.status === 'verified').length, 146);
   assert.deepEqual(policies.rules.filter((rule: PolicyFixture) => rule.status !== 'verified').map((rule: PolicyFixture) => rule.id).sort(), ['ae-mo-macao-sar-tourism-advance-visa']);

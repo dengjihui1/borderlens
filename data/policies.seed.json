@@ -183,7 +183,7 @@
         "中国普通护照不能仅按国籍直接判定。",
         "中国游客试点分支须直接从澳大利亚前往新西兰；旅客必须已入境澳大利亚并从澳大利亚机场乘机，途经澳大利亚转机不符合条件。",
         "须持该官方页面列出的适用澳大利亚签证，并在飞往新西兰值机时仍有效；还须持有效 NZeTA。系统不判断个人澳大利亚签证类别、有效期或 NZeTA 状态。",
-        "移民局当前称 2025-11-03 开始的 12 个月试点在评估期间可继续使用至另行通知；获准入境后边境签发访客签证，单次可停留最多 3 个月。出发前应复核试点状态与完整条件。",
+        "新西兰移民局 2026 年 10 月更新明确称符合条件的中国游客可继续以 NZeTA 从澳大利亚赴新西兰，直至另行通知；获准入境后边境签发访客签证，单次可停留最多 3 个月。出发前应复核试点状态与完整条件。",
         "不满足上述条件时不得使用该试点免签分支，应核对适用的新西兰访客签证要求。"
       ],
       "status": "verified",
@@ -191,10 +191,10 @@
         "nz-immigration-waiver",
         "nz-immigration-china-australia-pilot"
       ],
-      "evidenceLocator": "Chinese and Pacific Island visitors travelling from Australia > continuation notice; Who can apply; direct travel; Eligible Australian visas; Apply for an NZeTA; Visa Waiver Visitor Visa > Chinese visitors from Australia",
-      "evidenceExcerpt": "Immigration New Zealand says the 12-month pilot that began 2025-11-03 continues until further notice while it is evaluated. A Chinese-passport visitor must travel directly from Australia after entering Australia, fly from an Australian airport, hold an eligible Australian visa valid at check-in, and hold a valid NZeTA. Transit through Australia does not qualify. If entry is granted, a visitor visa is issued at the border; an NZeTA permits stays of up to 3 months at a time.",
-      "checkedAt": "2026-10-22",
-      "reviewDueAt": "2026-11-21"
+      "evidenceLocator": "Chinese and Pacific Island visitors travelling from Australia > Update: October 2026; Who can apply; Travelling directly from Australia; Eligible Australian visas; Apply for an NZeTA",
+      "evidenceExcerpt": "Immigration New Zealand's October 2026 update says eligible Chinese visitors can continue using NZeTA from Australia until further notice. The visitor must have entered Australia, fly directly from an Australian airport, hold an eligible Australian visa valid at check-in and a valid NZeTA. Transit through Australia does not qualify. If entry is granted, a visitor visa is issued at the border; the stated stay is up to 3 months at a time.",
+      "checkedAt": "2026-10-26",
+      "reviewDueAt": "2026-11-25"
     },
     {
       "id": "schengen-cn-prc-ordinary-short-stay",
@@ -696,21 +696,23 @@
       "visaProductName": "Official-source conflict: confirm visa requirements",
       "conditions": [
         "阿联酋外交部现行 Visa Exemptions for Non Citizen 页面将 Macao Special Administrative Region 卡片明确标为 Visa Required。",
+        "阿联酋驻美使馆当前非美国公民签证表的 Macao 行将 Regular 普通护照列为 Visa Required；此表与阿联酋外交部卡片一致，但该使馆页面含美国境内办理流程，不据此推断所有申请地点的手续。",
         "澳门政府《澳门年鉴 2025》附录九第 523 页列出阿拉伯联合酋长国 30 天免签；澳门政府 2019-06-27 公告称其曾正式收到阿联酋政府关于澳门特区护照免签 30 天的通知。",
         "年鉴第 528 页脚注 f) 仅说明不向澳门旅行证发出签证，不能消除当前澳门特区普通护照结论冲突。",
-        "当前阿联酋外交部卡片与澳门政府记录的阿联酋官方通知相冲突；本条不提供免签、落地签或预先签证的确定结论，须向阿联酋主管机关确认当前要求。"
+        "当前两处阿联酋官方页面与澳门政府记录的阿联酋官方通知相冲突；本条不提供免签、落地签或预先签证的确定结论，须向阿联酋主管机关及承运人确认当前要求，不应仅凭历史免签公告出发。"
       ],
       "status": "draft",
       "sourceIds": [
         "ae-mofa-visa-exemptions-non-citizen",
+        "ae-washington-embassy-non-us-visas",
         "mo-yearbook-2025-visa-treatment",
         "mo-govmo-uae-visa-free-notice",
         "mo-dsi-macao-passport-visa-free-list-2026-01"
       ],
-      "evidenceLocator": "UAE MOFA > Visa Exemptions for Non Citizen > Macao card (visa-required); Macao Government Portal > DSI notice published 2019-06-27; Macao Yearbook 2025 Appendix 09, printed page 523 and footnote f on page 528; Macao DSI > visa-free/visa-on-arrival list for Macao SAR passport holders, dated 23-01-2026 > Asia > United Arab Emirates (30 days)",
-      "evidenceExcerpt": "The current UAE MOFA Macao card says Visa Required. Macao's 2019 government notice, 2025 yearbook and DSI's 23-01-2026 passport list report visa-free access for up to 30 days. These official records still conflict with the current UAE MOFA card; the route remains manual review with no asserted stay period.",
-      "checkedAt": "2026-10-22",
-      "reviewDueAt": "2026-11-21"
+      "evidenceLocator": "UAE MOFA > Visa Exemptions for Non Citizen > Macao card (Visa Required); UAE Embassy in Washington > Visas for Non-US Citizens > Macao > Regular passport (Visa Required); Macao Government Portal > DSI notice published 2019-06-27; Macao Yearbook 2025 Appendix 09, printed page 523 and footnote f on page 528; Macao DSI > visa-free/visa-on-arrival list for Macao SAR passport holders, dated 23-01-2026 > Asia > United Arab Emirates (30 days)",
+      "evidenceExcerpt": "The current UAE MOFA Macao card and UAE Embassy's Macao Regular-passport row both say Visa Required. Macao's 2019 government notice, 2025 yearbook and indexed 23-01-2026 DSI list report visa-free access for up to 30 days. The official-source conflict remains unresolved; this route asserts neither visa exemption nor a definite advance-visa product or stay period.",
+      "checkedAt": "2026-10-26",
+      "reviewDueAt": "2026-11-25"
     },
     {
       "id": "cn-hk-non-chinese-mainland-permit-tourism",

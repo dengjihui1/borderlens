@@ -1,5 +1,13 @@
 # BorderLens 规则重新核验日志
 
+## Phase 112 · 剩余 REVIEW 队列复核与阿联酋使馆旁证（2026-10-26）
+
+当前 5 条 REVIEW 按 `npm run data:review -- 2026-10-26` 逐项核对。阿联酋外交部[非公民签证表](https://www.mofa.gov.ae/en/visa-exemptions-for-non-citizen/)仍将 Macao SAR 标为 Visa Required；阿联酋[驻美使馆按护照类别的表](https://www.uae-embassy.org/visas-for-non-us-citizens?page=8)在 Macao 行、Regular 普通护照列也标为 Visa Required。后者是新增的目的地官方旁证，但澳门政府[2019 年接获阿联酋免签通知的公告](https://www.gov.mo/en/news/114215/)和《澳门年鉴 2025》仍记载 30 天免签；DSI 2026-01 英文清单在检索索引中同样如此，但两条直链本次仍返回 404，不能当已取得 PDF。没有找到可解释双边记录差异的现行生效文书或阿联酋明确澄清，因此澳门路线继续 `draft / manual_review`，不自动输出“必签”或“免签”，并提醒旅客向阿联酋主管机关及承运人确认。使馆页面的美国境内签证办理说明不外推至其他申请地点。
+
+新西兰移民局[赴澳中国游客专页](https://www.immigration.govt.nz/visit/what-you-need-to-visit-new-zealand/chinese-and-pacific-island-visitors-travelling-from-australia/)现显示 2026 年 10 月更新：符合条件者可继续使用 NZeTA 从澳大利亚赴新西兰，直至另行通知。仍须已入境澳大利亚、直接从澳机场飞往新西兰、值机时持适用澳签及有效 NZeTA；转机不合格。刷新该条件分支的核验日期，但无法核验个人许可，继续 REVIEW。国家移民管理局[回乡证签发指南](https://www.nia.gov.cn/n741445/n741604/n1787219/n1795772/c1792480/content.html)及[指定口岸智能通关公告](https://www.nia.gov.cn/n794014/n794021/c1751080/content.html)抽查仍说明资格、实际持证和口岸/生物信息条件，香港、澳门两条继续 REVIEW。越南[第 325/NQ-CP 号决议入口](https://vanban.chinhphu.vn/?docid=219955&orggroupid=2&pageid=27160)及现有签署版核读记录仍支持狭窄的中国普通护照庆和团体旅游例外；个人团体、航线及行程条件未验证，继续 REVIEW。
+
+本阶段新增 1 个官方来源并刷新阿联酋—澳门、新西兰中国普通护照条件分支，未改动任何 REVIEW 结论。总量为 146 个来源、147 条路线、146 条当前证据、142 条当前可展示结论及 5 条 REVIEW（1 条官方冲突、4 条个体/整体条件复核）。93 项测试、lint、类型检查、数据校验、生产构建及 33 项本地 Worker HTTP smoke 通过。
+
 ## Phase 111 · 澳门特区护照缅甸航空落地签第二年续期（2026-10-26）
 
 直接打开缅甸驻港总领馆[澳门、日本、韩国游客落地签试行续期公告](https://myanmarconsulatehk.org/announcement-on-the-extension-of-the-trial-period-for-the-tourist-visa-on-arrival-scheme-for-passport-holders-of-the-macao-special-administrative-region-of-the-peoples-republic-of-china-japan-and-t/)及其[官方公告原图](https://myanmarconsulatehk.org/wp-content/uploads/2026/10/20261023-03.jpg)。2026-10-22 公告明确点名澳门特区护照持有人乘飞机抵达，并将同一旅游落地签试行延长第二个一年期：2026-10-21 至 2027-10-20。它与 Phase 110 所读的中国/印度旅客公告是两项不同的续期。缅甸旅游部当前 [Visa on Arrival 条件页](https://tourism.gov.mm/en/information-pages/visa-on-arrival) 仍显示上一试行年份，但列有澳门路线的机场、USD 50、30 天、护照至少剩余 6 个月、申请表和 2 张彩色照片、不得延期等条件；新续期公告未重述操作条件，出行前须核对。
