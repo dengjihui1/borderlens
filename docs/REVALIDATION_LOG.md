@@ -6,7 +6,7 @@
 
 因此仅新增来源并将其关联至澳门路线，明确新公告的对象范围不构成澳门续期证据。澳门路线继续受 `effectiveUntil` 门禁阻止展示；不恢复历史 30 天、USD 50 或材料条件，也不把公告目录未列事项当作永久取消的证明。新增范围断言；规则结论和 REVIEW 数量不变。
 
-验证：新增来源范围断言及相关回归测试通过；`npm run check` 通过（93 项测试、lint、TypeScript、数据校验、生产构建），本地生产 Worker 的 32 项 HTTP smoke 与 `git diff --check` 通过。提交、远端同步及私有 Site 发布记录待本阶段发布后补记。
+验证：新增来源范围断言及相关回归测试通过；`npm run check` 通过（93 项测试、lint、TypeScript、数据校验、生产构建），本地生产 Worker 的 32 项 HTTP smoke 与 `git diff --check` 通过。源码提交 `30b8557433e0fa59ef78c22b92f6281b18e8f61c` 于 2026-10-26 核实已推送 GitHub `main`；Site v116 的保存版本绑定同一 SHA，生产部署成功，访问范围仍仅所有者。
 
 ## Phase 109 · 孟加拉国港澳普通护照 VOA 国籍范围收敛（2026-10-22）
 
