@@ -1,8 +1,9 @@
-import Link from 'next/link';
+import Link from '@/components/local-link';
 import { ArrowLeft, Database, FileSearch } from 'lucide-react';
 import { filterPolicyCatalog, getCatalogPage, getReviewQueue, modeNames, parseCatalogFilters, purposeNames } from '@/lib/policy-catalog';
 import { getPolicyCatalog, policyDestinations } from '@/lib/policy-data';
 import { PolicyCard } from '@/components/policy-card';
+import { LanguageSwitch } from '@/components/language-switch';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'BorderLens｜证件规则查询与复核队列' };
@@ -25,7 +26,7 @@ export default async function PoliciesPage({ searchParams }: { searchParams: Pro
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens</span></Link>
         <div className="source-note">官方来源 · 逐条可查</div>
-        <Link className="plain-link" href="/"><ArrowLeft size={14} /> 逐段自查</Link>
+        <div className="header-actions"><LanguageSwitch locale="zh" path="/policies" query={Object.entries(params).filter(([, value]) => typeof value === 'string').length ? `?${new URLSearchParams(Object.entries(params).filter((entry): entry is [string, string] => typeof entry[1] === 'string'))}` : ''} /><Link className="plain-link" href="/"><ArrowLeft size={14} /> 逐段自查</Link></div>
       </header>
       <section className="policy-heading">
         <h1>证件规则查询</h1>

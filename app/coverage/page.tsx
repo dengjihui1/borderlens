@@ -1,7 +1,8 @@
 import { ArrowLeft, Database, ExternalLink, FileSearch, Globe2, ShieldAlert } from 'lucide-react';
-import Link from 'next/link';
+import Link from '@/components/local-link';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { getCoverageSnapshot, registeredSources, sourceStatusCopy } from '@/lib/global-data';
+import { LanguageSwitch } from '@/components/language-switch';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,7 +15,7 @@ export default function CoveragePage() {
       <header className="topbar coverage-nav">
         <Link className="brand" href="/"><span className="brand-mark"><Database size={19} /></span><span>BorderLens Data</span></Link>
         <div className="source-note"><Globe2 size={15} /> 全球政策数据库 · 当前官方来源状态</div>
-        <Link className="plain-link" href="/policies"><ArrowLeft size={14} /> 查询证件规则</Link>
+        <div className="header-actions"><LanguageSwitch locale="zh" path="/coverage" /><Link className="plain-link" href="/policies"><ArrowLeft size={14} /> 查询证件规则</Link></div>
       </header>
 
       <section className="coverage-hero">

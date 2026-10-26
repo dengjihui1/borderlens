@@ -14,6 +14,12 @@ button,a { -webkit-tap-highlight-color:transparent; }
 .brand-mark { width:34px; height:34px; display:grid; place-items:center; border-radius:10px; color:white; background:var(--blue); box-shadow:0 8px 20px rgba(21,89,214,.25); }
 .source-note { font-size:12px; color:var(--muted); display:flex; align-items:center; gap:7px; }
 .plain-link { justify-self:end; color:var(--ink); text-decoration:none; font-size:13px; font-weight:650; display:flex; align-items:center; gap:6px; }
+.header-actions { justify-self:end; display:flex; align-items:center; gap:22px; }
+.language-switch { display:flex; align-items:center; gap:5px; color:var(--muted); font-size:12px; white-space:nowrap; }
+.language-switch a { color:var(--muted); text-decoration:none; padding:7px 3px; }
+.language-switch a[aria-current=page] { color:var(--blue); font-weight:800; }
+.language-switch a:hover { color:var(--blue); text-decoration:underline; }
+.header-actions .plain-link { justify-self:auto; }
 
 .intro { min-height:390px; display:grid; grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr); background:var(--navy); color:white; overflow:hidden; }
 .intro-copy { padding:clamp(58px,7vw,92px) clamp(26px,6vw,92px); position:relative; z-index:2; }
@@ -185,6 +191,8 @@ footer { min-height:70px; display:flex; justify-content:space-between; align-ite
 .policy-review { background:#fff8ed; border-color:#f0dab9; }.policy-review h4 { color:#77400b; }
 .policy-dates { font-size:11px; color:var(--muted); line-height:1.8; margin:16px 0; }.policy-card>h4 { font-size:13px; margin:16px 0 8px; }
 .policy-conditions { padding-left:19px; margin:0; font-size:13px; line-height:1.8; }.policy-conditions li { margin-bottom:7px; }
+.policy-translation-note { font-size:12px; line-height:1.65; color:#77400b; background:#fff8ed; border-radius:8px; padding:10px 12px; margin:8px 0 14px; }
+.original-label { font-weight:700; }
 .policy-card details { margin:18px 0; font-size:12px; line-height:1.8; }.policy-card summary { cursor:pointer; color:var(--blue); font-weight:700; }.policy-card blockquote { margin:12px 0 0; padding:12px; background:#f4f7fb; border-left:3px solid #b6cef4; }
 .policy-sources { display:grid; gap:10px; margin:18px 0; padding-top:16px; border-top:1px solid var(--line); }.policy-sources a { display:flex; align-items:start; gap:7px; color:var(--blue); font-size:12px; line-height:1.6; }.policy-sources svg { margin-top:3px; flex:0 0 auto; }
 .policy-rule-id { display:block; font-size:10px; color:#718095; }.policy-empty { padding:26px; border:1px solid var(--line); border-radius:12px; background:white; line-height:1.8; }.policy-empty a { color:var(--blue); }

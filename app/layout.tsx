@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { headers } from 'next/headers';
 import './globals.css';
 
 const geistSans = Geist({
@@ -12,18 +13,21 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'BorderLens｜多身份旅行证件路线图',
-  description: '根据实际旅行证件、居留身份和完整行程，生成逐段证件路线图。',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await headers()).get('x-borderlens-locale');
+  return locale === 'en'
+    ? { title: 'BorderLens | Travel document and entry-rule checker', description: 'Check document-specific entry rules and official sources, one border at a time. Not an entry permit or a guarantee.' }
+    : { title: 'BorderLens｜多身份旅行证件路线图', description: '根据实际旅行证件和完整行程，逐段查询官方来源支持的入境规则。' };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = (await headers()).get('x-borderlens-locale');
   return (
-    <html lang="zh-CN">
+    <html lang={locale === 'en' ? 'en' : 'zh-CN'}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

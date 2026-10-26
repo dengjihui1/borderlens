@@ -8,10 +8,17 @@ const sourceRegistry = JSON.parse(await readFile(new URL('../data/official-sourc
 const formattedSourceCount = new Intl.NumberFormat('zh-CN').format(sourceRegistry.sources.length);
 const bhId = policies.rules.find((rule) => rule.destinationJurisdictionId === 'bh').id;
 const checks = [
-  { path: '/', text: ['把证件和行程，逐段对上。', '生成逐段自查清单', '添加返程目的地', '仅当前页面，不保存'] },
+  { path: '/', text: ['<html lang="zh-CN">', '逐段核对入境规则', '生成逐段自查清单', '添加返程目的地', 'href="/en"'] },
+  { path: '/en', text: ['<html lang="en">', 'Check every border on your route', 'Create leg-by-leg checklist', 'Add return destination', 'href="/"'], noText: ['逐段核对入境规则'] },
   { path: '/demo', text: ['逐段演示规则已过期，历史结论已隐藏', '查询全部已录入证件规则'] },
   { path: '/coverage', text: ['全球政策数据库 · 当前官方来源状态', '当前有效的受控规则', '各组规则的当前状态'], noText: ['Phase 87'], sourceCount: true },
-  { path: '/policies', text: ['已有规则，真正查得到。', '下一页'], cards: 12 },
+  { path: '/policies', text: ['证件规则查询', '下一页', 'href="/en/policies"'], cards: 12 },
+  { path: '/en/policies', text: ['<html lang="en">', 'Travel-document rules', 'Next →', 'All recorded conditions' ], cards: 12 },
+  { path: '/en/policies?destination=jp&document=hk%3Ahksar_passport', text: ['Visa-free route', 'All recorded conditions', 'id="jp-hk-hksar-tourism-short-stay"'], cards: 1 },
+  { path: '/en/policies?destination=ae&document=mo%3Amacao_sar_passport', text: ['REVIEW', 'No definite visa or stay outcome'], cards: 1, noText: ['Visa-free route', 'Applicable visa required'] },
+  { path: '/en/policies?purpose=study-work', text: ['No controlled rule for this combination'], cards: 0 },
+  { path: '/en/policies?mode=rocket', text: ['Invalid or duplicate filters'], cards: 0 },
+  { path: '/en/coverage', text: ['<html lang="en">', 'This is not complete global visa-rule coverage', 'Official entry points'], sourceCount: false },
   { path: '/policies?page=12', text: ['上一页', '下一页'], cards: 12 },
   { path: '/policies?page=13', text: ['上一页'], cards: 3 },
   { path: '/policies?destination=la&document=cn%3Aordinary_passport', text: ['la-cn-prc-ordinary-tourism-voa', 'USD 20', '磨丁铁路口岸'], cards: 2 },
@@ -50,7 +57,7 @@ for (const check of checks) {
   for (const text of check.noText ?? []) assert.ok(!html.includes(text), `${check.path}: unexpected ${text}`);
   if (check.sourceCount) assert.ok(html.includes(`<strong>${formattedSourceCount}</strong><p>官方来源入口</p>`), `${check.path}: displayed source count does not match the registry (${sourceRegistry.sources.length})`);
   if (check.cards !== undefined) assert.equal(html.split('class="policy-card"').length - 1, check.cards, `${check.path}: card count`);
-  if (check.path.startsWith('/policies') || check.path === '/coverage' || check.path === '/') assert.match(response.headers.get('cache-control') ?? '', /no-store/);
+  if (check.path.startsWith('/policies') || check.path.startsWith('/en') || check.path === '/coverage' || check.path === '/') assert.match(response.headers.get('cache-control') ?? '', /no-store/);
   console.log(`PASS ${check.path}`);
 }
 console.log(`${checks.length} production Worker smoke checks passed`);

@@ -1,11 +1,12 @@
 import { JourneyWorkbench } from '@/components/journey-workbench';
-import { getPolicyCatalog, policyDestinations } from '@/lib/policy-data';
+import { getPolicyCatalog, policyDestinationOptions, policyDocumentOptions } from '@/lib/policy-data';
+import type { Locale } from '@/lib/locale';
 
 export const dynamic = 'force-dynamic';
 
-export default function Home() {
+export function HomeView({ locale }: { locale: Locale }) {
   const entries = getPolicyCatalog();
-  const documents = [...new Map(entries.map((entry) => [entry.documentKey, entry.documentName])).entries()]
-    .map(([id, label]) => ({ id, label }));
-  return <JourneyWorkbench entries={entries} destinations={policyDestinations} documents={documents} today={new Date().toISOString().slice(0, 10)} />;
+  return <JourneyWorkbench entries={entries} destinations={policyDestinationOptions(locale)} documents={policyDocumentOptions(entries, locale)} today={new Date().toISOString().slice(0, 10)} locale={locale} />;
 }
+
+export default function Home() { return <HomeView locale="zh" />; }
